@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Country_Group__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(LEFT(BillingCountry,1),
+&quot;A&quot;, &quot;A-F&quot;,
+&quot;B&quot;, &quot;A-F&quot;,
+&quot;C&quot;, &quot;A-F&quot;,
+&quot;D&quot;, &quot;A-F&quot;,
+&quot;E&quot;, &quot;A-F&quot;,
+&quot;F&quot;, &quot;A-F&quot;,
+
+&quot;G&quot;, &quot;G-M&quot;,
+&quot;H&quot;, &quot;G-M&quot;,
+&quot;I&quot;, &quot;G-M&quot;,
+&quot;J&quot;, &quot;G-M&quot;,
+&quot;K&quot;, &quot;G-M&quot;,
+&quot;L&quot;, &quot;G-M&quot;,
+&quot;M&quot;, &quot;G-M&quot;,
+
+&quot;N&quot;, &quot;N-S&quot;,
+&quot;O&quot;, &quot;N-S&quot;,
+&quot;P&quot;, &quot;N-S&quot;,
+&quot;Q&quot;, &quot;N-S&quot;,
+&quot;R&quot;, &quot;N-S&quot;,
+&quot;S&quot;, &quot;N-S&quot;,
+
+&quot;T&quot;, &quot;T-Z&quot;,
+&quot;U&quot;, &quot;T-Z&quot;,
+&quot;V&quot;, &quot;T-Z&quot;,
+&quot;W&quot;, &quot;T-Z&quot;,
+&quot;X&quot;, &quot;T-Z&quot;,
+&quot;Y&quot;, &quot;T-Z&quot;,
+&quot;Z&quot;, &quot;T-Z&quot;,
+
+&quot;A-Z&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Country Group</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sell_Down_Period_Date__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF
+(
+  NOT(ISNULL(Actual_Close_Date__c)), 
+  DATE(
+    YEAR(ADDMONTHS(Actual_Close_Date__c,Distribution_Period_Months__c)),
+        MONTH(ADDMONTHS(Actual_Close_Date__c,Distribution_Period_Months__c)),
+  IF(
+    MONTH(ADDMONTHS(Actual_Close_Date__c,Distribution_Period_Months__c)) =12,
+    31,
+    DAY(
+      DATE(
+        YEAR(ADDMONTHS(Actual_Close_Date__c,Distribution_Period_Months__c)),
+        MONTH(ADDMONTHS(Actual_Close_Date__c,Distribution_Period_Months__c))+1,
+        1
+      )-1
+    )
+    )
+  ), 
+  Null
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>The date by which the mandated amount should be sold.</inlineHelpText>
+    <label>Sell Down Period Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

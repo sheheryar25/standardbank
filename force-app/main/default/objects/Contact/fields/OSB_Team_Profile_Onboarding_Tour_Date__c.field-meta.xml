@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OSB_Team_Profile_Onboarding_Tour_Date__c</fullName>
+    <description>OneHub: This field is used to store the Date &amp; Time a user has completed the Team Profile onboarding tour on the OneHub Community</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates the Date &amp; Time the user has completed the Team Profile onboarding tour</inlineHelpText>
+    <label>Team Profile Onboarding Tour Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>DateTime</type>
+</CustomField>

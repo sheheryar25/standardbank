@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SingletrackCMS__Alias_cannot_contain_quotes</fullName>
+    <active>false</active>
+    <description>Alias cannot contain a quote character</description>
+    <errorConditionFormula>CONTAINS(Alias, &quot;&apos;&quot;)</errorConditionFormula>
+    <errorMessage>Alias cannot contain a quote character</errorMessage>
+</ValidationRule>

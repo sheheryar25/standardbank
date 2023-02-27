@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Team_s_Interaction_Summaries_Week_Ago</fullName>
+    <columns>Name</columns>
+    <columns>InteractionPurpose</columns>
+    <columns>Account</columns>
+    <columns>Interaction</columns>
+    <columns>ConfidentialityType</columns>
+    <columns>Contact__c</columns>
+    <columns>Date_of_Next_Meeting__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>My Team&apos;s Interaction Summaries_Week Ago</label>
+    <sharedTo>
+        <roleAndSubordinatesInternal>BCC_AR_Uganda</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

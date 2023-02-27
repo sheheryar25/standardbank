@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Distribution_Fee__c</fullName>
+    <description>The fee to be earned by the investor OR fee purchased at
+SGPRT-3852</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The fee to be earned by the investor OR fee purchased at.</inlineHelpText>
+    <label>Distribution Fee (%)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>3</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Salesforce_Support_Today</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.CREATED_DATE</columns>
+    <columns>NAME</columns>
+    <columns>Main_Category__c</columns>
+    <columns>Sub_Category__c</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed</value>
+    </filters>
+    <filters>
+        <field>Sub_Category__c</field>
+        <operation>notEqual</operation>
+        <value>CIF Rejection</value>
+    </filters>
+    <filters>
+        <field>CASES.CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>TODAY</value>
+    </filters>
+    <label>Salesforce Support - Today</label>
+    <language>en_US</language>
+    <queue>Salesforce_Support</queue>
+    <sharedTo>
+        <group>CRM_IT_Team</group>
+    </sharedTo>
+</ListView>

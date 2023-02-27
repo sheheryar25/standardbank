@@ -1,0 +1,9 @@
+<aura:component description="SVC_NewCaseRecordNavigation" implements="lightning:availableForFlowScreens,flexipage:availableForAllPageTypes" access="global">
+    <lightning:workspaceAPI aura:id="caseRecordWorkspace"/>
+    <aura:attribute name="caseRecordId" type="String" access="global"/>
+    <aura:attribute name="accountRecordId" type="String" access="global"/>
+    <aura:attribute name="calledFrom" type="String" access="global"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <lightning:navigation aura:id="navService"/>
+    <lightning:spinner aura:id="spinnerCase" />
+</aura:component>

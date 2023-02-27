@@ -1,0 +1,92 @@
+<aura:component description="ExternalAttendees" implements="lightning:isUrlAddressable,force:hasRecordId"
+                controller="ExternalAttendeesController">
+    <aura:attribute name="attList" type="List"/>
+    <aura:attribute name="currentAttendees" type="List"/>
+    <aura:attribute name="iterator" type="Integer" default="1"/>
+    <aura:attribute name="showSpinner" type="Boolean" default="true"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler name="change" value="{!v.pageReference}" action="{!c.doInit}"/>
+
+    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+             aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-modal_large">
+        <ui:scrollerWrapper class="scrollerSize">
+            <div class="{!if($Browser.isPhone , '' , 'slds-modal__container')}">
+                <div style="max-height:90vh">
+                <header class="slds-modal__header">
+                    <button class="slds-button slds-button_icon-inverse slds-modal__close" onclick="{!c.onCancel}">
+                        <lightning:icon iconName="utility:close" size="medium" variant="bare" class="z-index:999"/>
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Add External
+                        Attendees</h2>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1" style="overflow:visible">
+                    <aura:if isTrue="{!v.showSpinner}">
+                        <lightning:spinner alternativeText="Loading" size="large" class=""/>
+                    </aura:if>
+                    <table class="slds-table slds-max-medium-table_stacked">
+                        <thead>
+                        <tr class="slds-text-title_caps">
+                            <th scope="col">
+                                <div class="slds-truncate" title="Add/Remove">Add/Remove</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Attendee Name">Attendee Name</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Title">Title</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Status">Status</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="CostPerAttendee">Cost Per Attendee</div>
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <aura:iteration items="{!v.attList}" var="cell">
+                            <tr class ="{!if(!cell.errorMessage, if(!cell.addRemove,'', 'slds-theme_shade'), 'slds-theme_error slds-text-color_default')}">
+                                <td scope="row" data-label="Add/Remove" class="slds-cell-shrink slds-cell-wrap">
+                                    <ui:inputCheckbox value="{!cell.addRemove}" disabled="{!cell.isOwner}"/>
+                                </td>
+                                <td scope="row" data-label="Attendee Name" style="overflow:visible">
+                                    <aura:if isTrue="{!not(cell.isOwner)}">
+                                        <c:recordField record="{!cell.sobjAttendee}"
+                                                       fieldName="Contact_id__c"
+                                                       showLabel="false"
+                                                       editMode="true"
+                                                       skipFls="true"/>
+                                        <aura:set attribute="else">
+                                            {!cell.sobjAttendee.Contact_id__r.Name}
+                                        </aura:set>
+                                    </aura:if>
+                                </td>
+                                <td scope="row"
+                                    data-label="Title">{!cell.sobjAttendee.Contact_id__r.Title}</td>
+                                <td scope="row" data-label="Status">
+                                    <c:recordField showLabel="false" fieldName="Status__c" record="{!cell.sobjAttendee}"
+                                                   editMode="true"/>
+                                </td>
+                                <td scope="row" data-label="Cost Per Attendee">
+                                    <c:recordField showLabel="false" fieldName="Costs_Per_Attendee__c" record="{!cell.sobjAttendee}" showHelptext="false"
+                                                   editMode="true"/>
+                                </td>
+                            </tr>
+                        </aura:iteration>
+                        </tbody>
+                    </table>
+
+                </div>
+                <footer class="slds-modal__footer" style="{!if($Browser.isPhone ,  'height:100px','')}">
+                    <lightning:button type="button" onclick="{!c.onCancel}" label="Cancel"/>
+                    <lightning:button type="button" onclick="{!c.addRow}" label="Add row"/>
+                    <lightning:button type="button" variant="brand" onclick="{!c.onSave}" label="Save"/>
+                </footer>
+            </div>
+            </div>
+        </ui:scrollerWrapper>
+    </section>
+    <div class="{!if($Browser.isPhone , '' , 'slds-backdrop slds-backdrop_open')}"></div>
+</aura:component>

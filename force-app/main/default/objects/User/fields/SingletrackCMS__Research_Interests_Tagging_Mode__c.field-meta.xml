@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SingletrackCMS__Research_Interests_Tagging_Mode__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The display mode for Research Interests tagging.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The display mode for Research Interests tagging.</inlineHelpText>
+    <label>Research Interests Tagging Mode</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Standard</fullName>
+                <default>false</default>
+                <label>Standard</label>
+            </value>
+            <value>
+                <fullName>Omnibox</fullName>
+                <default>false</default>
+                <label>Omnibox</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

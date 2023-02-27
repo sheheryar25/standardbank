@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>generate_introcert__c</fullName>
+    <description>Link to generate an Introcert Document (US-1375).</description>
+    <externalId>false</externalId>
+    <formula>HYPERLINK(&quot;/apex/GenerateIntrocert?id=&quot; &amp; Id, &quot;Generate Introcert&quot; , &quot;_self&quot;)</formula>
+    <inlineHelpText>Link to generate an Introcert Document.</inlineHelpText>
+    <label>Generate Introcert</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

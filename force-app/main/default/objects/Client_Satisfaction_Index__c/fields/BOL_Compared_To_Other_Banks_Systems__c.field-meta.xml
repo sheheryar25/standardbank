@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BOL_Compared_To_Other_Banks_Systems__c</fullName>
+    <description>BOL compared to other banks&apos; systems - US3617</description>
+    <externalId>false</externalId>
+    <inlineHelpText>How does Standard Bank&apos;s online banking system compare to that of other banks?</inlineHelpText>
+    <label>BOL Compared to Other Banks&apos; Systems</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

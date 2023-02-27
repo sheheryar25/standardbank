@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Motivation__c</fullName>
+    <description>Additional, pertinent information needed to support the concessions</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Additional, pertinent information needed to support the concessions</inlineHelpText>
+    <label>Motivation</label>
+    <length>2500</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

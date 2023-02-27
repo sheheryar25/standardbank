@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Block_Changing_Estimated_Amount</fullName>
+    <active>true</active>
+    <description>SFP-10316 VR blocks changing Estimated Amount after creation</description>
+    <errorConditionFormula>AND(
+  NOT(ISNEW()),
+  ISCHANGED( EstimatedAmount )
+)</errorConditionFormula>
+    <errorDisplayField>EstimatedAmount</errorDisplayField>
+    <errorMessage>The Estimated Amount field cannot be changed after saving.</errorMessage>
+</ValidationRule>

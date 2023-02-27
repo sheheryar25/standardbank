@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Additional_Transaction_Description__c</fullName>
+    <description>Detailed description of the transaction being contemplated.
+
+            For Type 3 and 4 transactions only, the 1-page Annexure may be used to provide additional information associated with the risk and complexity of the transaction.  Additional information or submissions exceeding the 1 page will not be accepted.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Max Characters: 3500</inlineHelpText>
+    <label>Additional Transaction Description</label>
+    <length>3500</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Html</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

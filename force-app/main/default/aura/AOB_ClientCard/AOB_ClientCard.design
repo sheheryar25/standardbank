@@ -1,0 +1,10 @@
+<design:component>
+    <design:attribute name="clientName" label="Client Name" />
+    <design:attribute name="CIFNumber" label="CIF Number"/>
+    <design:attribute name="clientCoordinator" label="Client Coordinator" />
+    <design:attribute name="primaryRelationshipHolder" label="Primary Relationship Holder" />
+    <design:attribute name="requestedBy" label="Requester Name"/>
+    <design:attribute name="requesterNumber" label="Requester Number"/>
+    <design:attribute name="KYCConsultant" label="KYC Consultant"/>
+    <design:attribute name="lastReviewedDate" label="Last Reviewed Date"/>
+</design:component>

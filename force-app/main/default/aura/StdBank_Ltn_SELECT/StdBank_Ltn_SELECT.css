@@ -1,0 +1,17 @@
+.THIS .borderLess {
+    border: 0px !important;
+}
+
+.THIS .slds-input[disabled] {
+    color: #16325c !important;
+    background: white !important;
+    border-color: #d8dde6 !important;
+}
+
+.THIS .info {
+    font-size: 8pt;
+}
+
+.THIS button.slds-button.slds-button_icon-border {
+    height: auto;
+}

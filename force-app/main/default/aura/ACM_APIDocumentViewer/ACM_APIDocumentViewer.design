@@ -1,0 +1,31 @@
+<design:component>
+   
+        <design:attribute name="headerText" label="Main Heading" />
+        <design:attribute name="ShieldType" label="Shield Type"/>
+        <design:attribute name="ShieldBackingicon1svg" label="Section image when shieldType is True"/>
+        
+        <!-- Section 1 -->
+        <design:attribute name="ACMHomepageicon1svg" label="Section 1- Image URL"/>
+        <design:attribute name="section1api" label="Section 1- API"/>
+        <design:attribute name="section1section" label="Section 1- Section (Optional)"/>
+        <design:attribute name="section1selectedPage" label="Section 1- Selected Page (Optional)"/>
+    
+        <!-- Section 2 -->
+        <design:attribute name="ACMHomepageicon2svg" label="Section 2- Image URL"/>
+        <design:attribute name="section2api" label="Section 2- API"/>
+        <design:attribute name="section2section" label="Section 2- Section (Optional)"/>
+        <design:attribute name="section2selectedPage" label="Section 2- Selected Page (Optional)"/>
+
+        <!-- Section 3 -->
+        <design:attribute name="ACMHomepageicon3svg" label="Section 3- Image URL"/>
+        <design:attribute name="section3api" label="Section 3- API"/>
+        <design:attribute name="section3section" label="Section 3- Section (Optional)"/>
+        <design:attribute name="section3selectedPage" label="Section 3- Selected Page (Optional)"/>
+
+        <!-- Section 4 -->
+        <design:attribute name="ACMHomepageicon4svg" label="Section 4- Image URL"/>
+        <design:attribute name="section4api" label="Section 4- API"/>
+        <design:attribute name="section4section" label="Section 4- Section (Optional)"/>
+        <design:attribute name="section4selectedPage" label="Section 4- Selected Page (Optional)"/>
+
+</design:component>

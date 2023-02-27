@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PolicyDescription</fullName>
+    <description>SFP-12591 - Provides more information on the policy</description>
+    <inlineHelpText>Please enter important information regarding the policy.</inlineHelpText>
+    <trackHistory>false</trackHistory>
+</CustomField>

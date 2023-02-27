@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Economic_Group_Client_Risk_Rating__c</fullName>
+    <description>Standard Bank Internal Risk Rating for the Economic Group Parent Client from Credit Risk (Source: CRS)</description>
+    <externalId>false</externalId>
+    <formula>IF(NOT(ISBLANK( Account__r.Economic_Group_Parent__c )),TEXT(Account__r.Economic_Group_Parent__r.Internal_Credit_Rating__c), TEXT(Account__r.Internal_Credit_Rating__c))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Standard Bank Internal Risk Rating for the Economic Group Parent Client from Credit Risk</inlineHelpText>
+    <label>Economic Group Client Risk Rating</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

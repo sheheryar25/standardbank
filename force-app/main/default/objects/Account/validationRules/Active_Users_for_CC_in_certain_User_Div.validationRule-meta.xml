@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Active_Users_for_CC_in_certain_User_Div</fullName>
+    <active>false</active>
+    <description>Validation to check that only active users with the following divisions:
+Commercial Banking,Client Coverage, Global Markets, Investment Banking, Transactional Products and Services, General Management, Real Estate can be added as a CC</description>
+    <errorConditionFormula>IF(
+
+   OR( $User.Alias = &quot;integt&apos;n&quot;, OwnerId  = $Setup.Environment_Variable__c.Salesforce_Administration_Id__c), FALSE,
+        OR(RecordType.Name==&quot;Potential Client&quot;,RecordType.Name==&quot;Potential (CIF)&quot;,RecordType.Name==&quot;Potential (Goldtier)&quot;) &amp;&amp;
+NOT( AND( Client_Co_ordinator__r.IsActive,NOT(Client_Co_ordinator__r.Frozen_Account__c),OR(
+CONTAINS( Client_Coordinator_Division__c ,&quot;Commercial Banking&quot; ) ,
+CONTAINS( Client_Coordinator_Division__c ,&quot;Client Coverage&quot; ) ,
+CONTAINS( Client_Coordinator_Division__c ,&quot;Global Markets&quot; ),
+CONTAINS( Client_Coordinator_Division__c ,&quot;Investment Banking&quot; ),
+CONTAINS( Client_Coordinator_Division__c ,&quot;Transactional Products and Services&quot; ),
+CONTAINS( Client_Coordinator_Division__c ,&quot;General Management&quot; ),
+CONTAINS( Client_Coordinator_Division__c ,&quot;Real Estate&quot;) ) ) ))</errorConditionFormula>
+    <errorDisplayField>Client_Co_ordinator__c</errorDisplayField>
+    <errorMessage>Only active users with the following divisions:
+        Commercial Banking,Client Coverage, Global Markets, Investment Banking, Transactional Products and Services, General Management, Real Estate can be added as a CC</errorMessage>
+</ValidationRule>

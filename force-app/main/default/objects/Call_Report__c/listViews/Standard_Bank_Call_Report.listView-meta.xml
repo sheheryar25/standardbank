@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Standard_Bank_Call_Report</fullName>
+    <filterScope>Queue</filterScope>
+    <label>Standard Bank</label>
+    <queue>Standard_Bank</queue>
+    <sharedTo>
+        <group>CRM_IT_Team</group>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Involved_Business_Unit__c</fullName>
+    <description>Case#1168 - 11/2011 - Rudolf Niehaus
+            The Business Unit(s) who is/are hosting the Campaign</description>
+    <externalId>false</externalId>
+    <label>Involved Business Unit</label>
+    <required>false</required>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bank Sector</fullName>
+                <default>false</default>
+                <label>Bank Sector</label>
+            </value>
+            <value>
+                <fullName>Business Acquisition</fullName>
+                <default>false</default>
+                <label>Business Acquisition</label>
+            </value>
+            <value>
+                <fullName>Buy-Side</fullName>
+                <default>false</default>
+                <label>Buy-Side</label>
+            </value>
+            <value>
+                <fullName>Capital Markets</fullName>
+                <default>false</default>
+                <label>Capital Markets</label>
+            </value>
+            <value>
+                <fullName>Commodities</fullName>
+                <default>false</default>
+                <label>Commodities</label>
+            </value>
+            <value>
+                <fullName>Corporates</fullName>
+                <default>false</default>
+                <label>Corporates</label>
+            </value>
+            <value>
+                <fullName>Cross-Border Debt &amp; Financial Advisory</fullName>
+                <default>false</default>
+                <label>Cross-Border Debt &amp; Financial Advisory</label>
+            </value>
+            <value>
+                <fullName>Debt Capital Markets</fullName>
+                <default>false</default>
+                <label>Debt Capital Markets</label>
+            </value>
+            <value>
+                <fullName>Debt Products</fullName>
+                <default>false</default>
+                <label>Debt Products</label>
+            </value>
+            <value>
+                <fullName>Diversified Industrials</fullName>
+                <default>false</default>
+                <label>Diversified Industrials</label>
+            </value>
+            <value>
+                <fullName>Diversified Lending &amp; Leverage</fullName>
+                <default>false</default>
+                <label>Diversified Lending &amp; Leverage</label>
+            </value>
+            <value>
+                <fullName>EB &amp; SI</fullName>
+                <default>false</default>
+                <label>EB &amp; SI</label>
+            </value>
+            <value>
+                <fullName>Equities</fullName>
+                <default>false</default>
+                <label>Equities</label>
+            </value>
+            <value>
+                <fullName>Equity Capital Markets</fullName>
+                <default>false</default>
+                <label>Equity Capital Markets</label>
+            </value>
+            <value>
+                <fullName>Financial Institutions</fullName>
+                <default>false</default>
+                <label>Financial Institutions</label>
+            </value>
+            <value>
+                <fullName>Foreign Exchange</fullName>
+                <default>false</default>
+                <label>Foreign Exchange</label>
+            </value>
+            <value>
+                <fullName>Global Structuring Group</fullName>
+                <default>false</default>
+                <label>Global Structuring Group</label>
+            </value>
+            <value>
+                <fullName>Investment Banking</fullName>
+                <default>false</default>
+                <label>Investment Banking</label>
+            </value>
+            <value>
+                <fullName>International Development Group</fullName>
+                <default>false</default>
+                <label>International Development Group</label>
+            </value>
+            <value>
+                <fullName>Investor Services</fullName>
+                <default>false</default>
+                <label>Investor Services</label>
+            </value>
+            <value>
+                <fullName>Loan Syndication</fullName>
+                <default>false</default>
+                <label>Loan Syndication</label>
+            </value>
+            <value>
+                <fullName>M &amp; A Advisory</fullName>
+                <default>false</default>
+                <label>M &amp; A Advisory</label>
+            </value>
+            <value>
+                <fullName>Management</fullName>
+                <default>false</default>
+                <label>Management</label>
+            </value>
+            <value>
+                <fullName>Mining, Energy &amp; Infrastructure</fullName>
+                <default>false</default>
+                <label>Mining, Energy &amp; Infrastructure</label>
+            </value>
+            <value>
+                <fullName>Money Markets</fullName>
+                <default>false</default>
+                <label>Money Markets</label>
+            </value>
+            <value>
+                <fullName>New Business Development</fullName>
+                <default>false</default>
+                <label>New Business Development</label>
+            </value>
+            <value>
+                <fullName>Non Banking Financial Institutions</fullName>
+                <default>false</default>
+                <label>Non Banking Financial Institutions</label>
+            </value>
+            <value>
+                <fullName>Non Performing Loans</fullName>
+                <default>false</default>
+                <label>Non Performing Loans</label>
+            </value>
+            <value>
+                <fullName>Oil &amp; Gas</fullName>
+                <default>false</default>
+                <label>Oil &amp; Gas</label>
+            </value>
+            <value>
+                <fullName>P &amp; I Advisory</fullName>
+                <default>false</default>
+                <label>P &amp; I Advisory</label>
+            </value>
+            <value>
+                <fullName>Power, Infrastructure &amp; Renewables</fullName>
+                <default>false</default>
+                <label>Power, Infrastructure &amp; Renewables</label>
+            </value>
+            <value>
+                <fullName>Property Finance Africa</fullName>
+                <default>false</default>
+                <label>Property Finance Africa</label>
+            </value>
+            <value>
+                <fullName>Property Finance SA</fullName>
+                <default>false</default>
+                <label>Property Finance SA</label>
+            </value>
+            <value>
+                <fullName>Property Group</fullName>
+                <default>false</default>
+                <label>Property Group</label>
+            </value>
+            <value>
+                <fullName>Public Sector</fullName>
+                <default>false</default>
+                <label>Public Sector</label>
+            </value>
+            <value>
+                <fullName>Real Estate Investments Africa</fullName>
+                <default>false</default>
+                <label>Real Estate Investments Africa</label>
+            </value>
+            <value>
+                <fullName>Real Estate Investments SA</fullName>
+                <default>false</default>
+                <label>Real Estate Investments SA</label>
+            </value>
+            <value>
+                <fullName>Securitisation</fullName>
+                <default>false</default>
+                <label>Securitisation</label>
+            </value>
+            <value>
+                <fullName>Structured Solutions</fullName>
+                <default>false</default>
+                <label>Structured Solutions</label>
+            </value>
+            <value>
+                <fullName>Structure Trade &amp; Commodity Finance</fullName>
+                <default>false</default>
+                <label>Structure Trade &amp; Commodity Finance</label>
+            </value>
+            <value>
+                <fullName>Telecoms &amp; Media</fullName>
+                <default>false</default>
+                <label>Telecoms &amp; Media</label>
+            </value>
+            <value>
+                <fullName>Top Tier</fullName>
+                <default>false</default>
+                <label>Top Tier</label>
+            </value>
+            <value>
+                <fullName>Trade</fullName>
+                <default>false</default>
+                <label>Trade</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

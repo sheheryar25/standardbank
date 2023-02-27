@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Client_Data_Change__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Created this field as a lookup to CDC object. EN-0676</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Refer to related approved request for the client data change details.</inlineHelpText>
+    <label>Client Data Change</label>
+    <referenceTo>Client_Data_Change__c</referenceTo>
+    <relationshipLabel>Cases</relationshipLabel>
+    <relationshipName>Cases</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

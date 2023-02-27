@@ -1,0 +1,20 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId,force:hasSObjectName">
+    <aura:attribute name="fieldsets" required="true" type="String" access="global" />
+    <aura:attribute name="noOfColumns" required="true" type="Integer" access="global" />
+    <aura:attribute name="textAlign" type="String" default="left" />
+    <aura:attribute name="title" type="String" access="global"/>
+	<aura:attribute name="showBorder" type="Boolean" default="true" />
+	<aura:attribute name="recordId" type="String" />
+    <aura:attribute name="sObjectName" type="String" />
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <div class="slds-section slds-is-open" style="padding-top: 0;" >
+        <aura:renderIf isTrue="{! v.title}">
+            <h3 class="slds-section__title slds-theme_shade">
+                <span class="slds-truncate slds-p-around" title="{!v.title}">{!v.title}</span>
+            </h3>
+        </aura:renderIf>
+        <div aria-hidden="false" aura:id="fieldset_container_root" class="slds-section__content slds-wrap slds-grid custom-grid" style=" align-items: stretch;">
+           <!--<lightning:spinner variant="brand" size="large"/>-->
+        </div>
+    </div>
+</aura:component>

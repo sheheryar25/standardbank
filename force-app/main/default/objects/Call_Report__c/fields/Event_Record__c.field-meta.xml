@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event_Record__c</fullName>
+    <description>This formula field contains link to the Event record detail page associated with this Call Report.</description>
+    <externalId>false</externalId>
+    <formula>HYPERLINK(&quot;/&quot; &amp;  EventId__c , &quot;Goto Event record page&quot;,&quot;_top&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Please click on the hyperlink to goto the Event record detail page.</inlineHelpText>
+    <label>Event Record</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

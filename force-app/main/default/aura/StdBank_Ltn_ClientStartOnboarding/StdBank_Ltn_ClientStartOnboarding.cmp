@@ -1,0 +1,53 @@
+<aura:component description="StdBank_Ltn_ClientStartOnboarding" controller="StdBank_Ltn_ClientQuickActions"
+                implements="force:lightningQuickAction,force:hasRecordId">
+    <aura:attribute name="recordId" type="Id"/>
+
+    <aura:attribute name="record" type="Account" default="{ 'Id': '','sobjectType': 'Account' }"/>
+
+    <aura:attribute name="isLoading" type="Boolean" default="true" access="private"/>
+
+    <aura:attribute name="errorMessage" type="String" access="private"/>
+
+    <lightning:navigation aura:id="navService"/>
+
+    <aura:if isTrue="{!v.recordId}">
+        <force:recordData aura:id="recordData"
+                          recordId="{!v.recordId}"
+                          mode="EDIT"
+                          fields="['KYC_Location__c', 'Relationship_Roles__c', 'Update_Path__c']"
+                          targetFields="{!v.record}"
+                          recordUpdated="{!c.refreshAccount}" />
+    </aura:if>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:if isTrue="{!v.isLoading}">
+        <div class="slds-spinner_brand slds-spinner slds-spinner_small" role="alert">
+            <span class="slds-assistive-text">Loading</span>
+            <div class="slds-spinner__dot-a"></div>
+            <div class="slds-spinner__dot-b"></div>
+        </div>
+        <aura:set attribute="else">
+
+            <div>
+                <aura:if isTrue="{! !empty(v.errorMessage)}">
+                    <div>
+                        <ui:message title="Error" severity="error" closable="false">
+                            <div>
+                                <lightning:outputField value="{!v.errorMessage}"/>
+                            </div>
+                        </ui:message>
+                    </div>
+                </aura:if>
+            </div>
+
+            <c:recordField required="true" fieldName="KYC_Location__c" record="{!v.record}" editMode="true" aura:id="KycLoc"/>
+            <br/>
+            <c:recordField required="true" record="{!v.record}" fieldName="Relationship_Roles__c" editMode="true" aura:id="RelRoles"/>
+            <br/>
+            <div style="float: right;">
+                <lightning:button class="slds-button_brand target" label="Proceed with Onboarding"
+                                  onclick="{!c.doSave}" aura:id="ProceedButton"/>
+            </div>
+        </aura:set>
+    </aura:if>
+</aura:component>

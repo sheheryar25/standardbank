@@ -1,0 +1,14 @@
+<design:component >
+    <design:attribute name="title" label="Section title" />
+    <design:attribute name="border" label="Show border" />
+    <design:attribute name="fieldset" label="Set of fields that define columns" />
+    <design:attribute name="customLabels" label="Override column headers (semi collon separated ;)" />
+
+    <design:attribute name="relationName" label="API name of relation to childs" />
+    <design:attribute name="parent" label="Optional relation to parent of context record" />
+    <design:attribute name="filters" label="SOQL syntrax based filters for fetching records. Example: 'CreatedDate = Today AND Name = 'Example Name' ' " />
+    <design:attribute name="parrentFilters" label="SOQL syntrax based filters for fetching parent records. (:immediateParents - all Immediate parents to records)" />
+    <design:attribute name="edit" label="Edit and Create records" />
+    <design:attribute name="defaults" label="Default values for new records" />
+    <design:attribute name="delete" label="Delete records" />
+</design:component>

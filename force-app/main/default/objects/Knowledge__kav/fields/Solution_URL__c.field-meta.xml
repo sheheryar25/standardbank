@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Solution_URL__c</fullName>
+    <description>OneHub: URL link to the Solution Landing page. (US-3979)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>URL for the Solution Website</inlineHelpText>
+    <label>Solution URL</label>
+    <required>false</required>
+    <type>Url</type>
+</CustomField>

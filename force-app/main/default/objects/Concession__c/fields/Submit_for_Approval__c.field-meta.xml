@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Submit_for_Approval__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>US-1630 CommB - CMS - 8 - RM Submits Request for Approval</description>
+    <externalId>false</externalId>
+    <label>Submit for Approval</label>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

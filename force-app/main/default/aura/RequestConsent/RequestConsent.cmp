@@ -1,0 +1,231 @@
+<!--
+ - Created by Nocks Mulea Emmanuel on 2020/06/10.
+ -->
+
+<aura:component controller="DigiSignConsent" description="RequestConsent" implements="force:lightningQuickActionWithoutHeader,force:hasRecordId,lightning:actionOverride">
+    <aura:attribute name="checkedContacts" type="String[]" access="private"/>
+    <aura:attribute name="contacts" type="Contact[]" access="private"/>
+    <aura:attribute name="enabledRequest" type="boolean" default="false" access="private"/>
+    <aura:attribute name="haveContact" type="boolean" default="false" access="private"/>
+    <aura:attribute name="isLoading" type="boolean" default="true" access="private"/>
+    <aura:attribute name="isConsentSent" type="boolean" default="false" access="private"/>
+    <aura:attribute name="isPreview" type="boolean" default="false" access="private"/>
+    <aura:attribute name="enabledConfrom" type="boolean" default="true" access="private"/>
+    <aura:attribute name="client" type="Object" access="private"/>
+    <aura:attribute name="clientFields" type="Object" access="private"/>
+    <aura:attribute name="clientError" type="String" access="private"/>
+    <aura:attribute name="selectedContact" type="String" access="private"/>
+    <aura:attribute name="recordId" type="String" access="public"/>
+    <aura:attribute name="id_number" type="String" access="private"/>
+    <aura:attribute name="isNotValidMobileNumber" type="boolean" default="false" access="public"/>
+    <aura:attribute name="requestType" type="String" default="Request Consent" access="private"/>
+    <lightning:notificationsLibrary aura:id="notifLib"/>
+    <force:recordData aura:id="clientRecordLoader"
+                      recordId="{!v.recordId}"
+                      fields="Name"
+                      targetRecord="{!v.client}"
+                      targetFields="{!v.clientFields}"
+                      targetError="{!v.clientError}"
+    />
+    <ltng:require scripts="{!$Resource.UTL_JavaScript}" afterScriptsLoaded="{!c.doInit}"/>
+    <aura:handler event="force:showToast" action="{!c.handleAfterContactCreatedToastEvent}"/>
+    <aura:html tag="style">
+        .slds-modal__container{
+        max-width: 100% !important;
+        width:80% !important;
+        }
+    </aura:html>
+    <div class="modal-header slds-modal__header">
+        <h2 class="title slds-text-heading--medium">Request Consent</h2>
+        <aura:if isTrue="{!v.isPreview}">
+            <h2 class="title slds-text-heading--small">Please confirm selected contacts for {!v.clientFields.Name}</h2>
+        <aura:set attribute="else">
+            <h2 class="title slds-text-heading--small">Select contacts to include for {!v.clientFields.Name}</h2>
+        </aura:set>
+        </aura:if>
+
+    </div>
+
+    <aura:if isTrue="{!v.isLoading}">
+        <div class="slds-spinner_container" style="position: relative; height: 4em;">
+             <lightning:spinner alternativeText="Loading" variant="brand" size="medium"/>
+        </div>
+        <aura:set attribute="else">
+
+            <aura:If isTrue="{! !v.haveContact}">
+                <div class="info_msg" role="alert">
+                  <h2>No Contact(s) </h2>
+                </div>
+            <aura:set attribute="else">
+            <table aria-multiselectable="true" class="slds-table slds-table_bordered slds-table_fixed-layout slds-table_resizable-cols" role="grid">
+            <thead>
+            <tr class="slds-line-height_reset">
+                <aura:if isTrue="{!v.isPreview}">
+                    <aura:if isTrue="{!!v.isConsentSent}">
+                    <th class="slds-text-align_right" scope="col">
+
+                        <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                            <span class="slds-truncate" title="Name">Initiating Director</span>
+                        </div>
+                    </th>
+                    </aura:if>
+                    <aura:set attribute="else">
+                        <th class="slds-text-align_right" scope="col" style="width:3.25rem">
+                            <span id="column-group-header" class="slds-assistive-text">Choose a row</span>
+
+                        </th>
+                    </aura:set>
+                </aura:if>
+                <th aria-label="Name" aria-sort="none" class="slds-is-resizable slds-is-sortable" scope="col">
+                    <a class="slds-th__action slds-text-link_reset" href="javascript:void(0);" role="button" tabindex="0">
+                        <span class="slds-assistive-text">Sort by: </span>
+                        <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                            <span class="slds-truncate" title="Name">Name</span>
+                        </div>
+                    </a>
+                </th>
+                <th aria-label="Account Name" aria-sort="none" class="slds-is-resizable slds-is-sortable" scope="col">
+                    <a class="slds-th__action slds-text-link_reset" href="javascript:void(0);" role="button" tabindex="0">
+                        <span class="slds-assistive-text">Sort by: </span>
+                        <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                            <span class="slds-truncate" title="Email">Email</span>
+                        </div>
+                    </a>
+                </th>
+                <th aria-label="Account Name" aria-sort="none" class="slds-is-resizable slds-is-sortable" scope="col">
+                    <a class="slds-th__action slds-text-link_reset" href="javascript:void(0);" role="button" tabindex="0">
+                        <span class="slds-assistive-text">Sort by: </span>
+                        <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                            <span class="slds-truncate" title="Contact Role">Contact Role</span>
+                        </div>
+                    </a>
+                </th>
+                <th aria-label="Account Name" aria-sort="none" style="width: 27%;" class="slds-is-resizable slds-is-sortable" scope="col">
+                    <a class="slds-th__action slds-text-link_reset" href="javascript:void(0);" role="button" tabindex="0">
+                        <span class="slds-assistive-text">Sort by: </span>
+                        <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                            <span class="slds-truncate" title="SA ID">SA ID/Passport Number</span>
+                        </div>
+                    </a>
+                </th>
+                <aura:if isTrue="{!!v.isConsentSent}">
+                <th aria-label="Account Name" aria-sort="none" style="width: 27%;" class="slds-is-resizable slds-is-sortable" scope="col">
+                    <a class="slds-th__action slds-text-link_reset" href="javascript:void(0);" role="button" tabindex="0">
+                        <span class="slds-assistive-text">Sort by: </span>
+                        <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                            <span class="slds-truncate" title="Mobile Number">Mobile Number</span>
+                        </div>
+                    </a>
+                </th>
+                </aura:if>
+                </tr>
+                </thead>
+
+                <tbody>
+                    <aura:if isTrue="{!v.isPreview}">
+                          <aura:iteration items="{!v.contacts}" var="con" indexVar="index">
+                        <aura:if isTrue="{!con.checked}">
+                                <tr aria-selected="false" class="slds-hint-parent">
+                                    <aura:if isTrue="{!!v.isConsentSent}">
+                                    <td class="slds-text-align_right" data-label="Select" role="gridcell">
+                                        <ui:inputRadio change="{!c.onRadioButton}" class="radio-button" value="{!con.initiatingDirector}"  aura:id="{!'radio-'+index}" name="initiatingDirector" text="{!index}"  />
+                                    </td>
+                                    </aura:if>
+                                    <th scope="row">
+                                        <div class="slds-truncate" title="{!con.Name}">
+                                            <a href="{!'/lightning/r/Contact/'+con.Id+'/view'}" target="_blank" tabindex="{!con.Id}">{!con.Name}</a>
+                                        </div>
+                                    </th>
+                                    <td role="gridcell">
+                                        <div class="slds-truncate" title="{!con.Email}">{!con.Email}</div>
+                                    </td>
+                                    <td role="gridcell">
+                                        <div class="slds-truncate" title="{!con.contactRoleClient}">{!con.contactRoleClient}</div>
+                                    </td>
+                                    <td class="slds-cell-edit" role="gridcell">
+                                          <span class="slds-grid slds-grid_align-spread">
+                                            <span class="slds-truncate" title="{!con.id_number}">{!con.id_number}</span>
+                                                <div class="" style="padding-left: 10px;margin-top: 4px;display: inline-flex;">
+                                          </div>
+                                          </span>
+                                    </td>
+                                    <aura:if isTrue="{!!v.isConsentSent}">
+                                    <td class="slds-cell-edit" role="gridcell">
+                                          <span class="slds-grid slds-grid_align-spread">
+                                            <span class="slds-truncate" title="{!con.mobileNumber}">{!con.mobileNumber}</span>
+                                                <div class="" style="padding-left: 10px;margin-top: 4px;display: inline-flex;">
+                                          </div>
+                                          </span>
+                                    </td>
+                                    </aura:if>
+                                </tr>
+                        </aura:if>
+                              </aura:iteration>
+                        <aura:set attribute="else">
+                          <aura:iteration items="{!v.contacts}" var="con" indexVar="index">
+                            <tr aria-selected="false" class="slds-hint-parent">
+                                <td class="slds-text-align_right" data-label="Select" role="gridcell">
+                                    <ui:inputcheckbox value="{!con.checked}"  text="{!index}" change="{!c.onCheckboxes}" />
+                                </td>
+                                <th scope="row">
+                                    <div class="slds-truncate" title="{!con.Name}">
+                                        <a href="{!'/lightning/r/Contact/'+con.Id+'/view'}" target="_blank" tabindex="{!con.Id}">{!con.Name}</a>
+                                    </div>
+                                </th>
+                                <td role="gridcell">
+                                    <div class="slds-truncate" title="{!con.Email}">{!con.Email}</div>
+                                </td>
+                                <td role="gridcell">
+                                    <div class="slds-truncate" title="{!con.contactRoleClient}">{!con.contactRoleClient}</div>
+                                </td>
+                                <td class="slds-cell-edit" role="gridcell">
+                                      <span class="slds-grid slds-grid_align-spread">
+                                           <input aura:id="input-name" value="{!con.id_number}" type="text" id="{!index}" class="slds-input slds-combobox__input" role="textbox" onblur="{!c.onBlurCheck}" onkeyup="{!c.onKeydown}" />
+                                      </span>
+                                        <p id="{!'error_'+index}" style="color:#c23934;white-space: pre-wrap; display: none;">The value is not a valid South African ID</p>
+                                        <p id="{!'min_error_'+index}" style="color:#c23934;white-space: pre-wrap; display: none;">A minimum of 8 characters is required </p>
+
+                                </td>
+                                <aura:if isTrue="{!!v.isConsentSent}">
+                                <td>
+                                    <c:ComboBoxMobileNumber index="{!index}" isNotValidMobileNumber="{!v.isNotValidMobileNumber}"  mobileNumber="{!con.mobileNumber}"/>
+                                </td>
+                                </aura:if>
+                            </tr>
+                          </aura:iteration>
+                        </aura:set>
+                    </aura:if>
+                </tbody>
+            </table>
+                </aura:set>
+            </aura:If>
+        </aura:set>
+    </aura:if>
+
+    <div class="slds-modal__footer">
+        <aura:if isTrue="{! v.isPreview}">
+            <lightning:button class="position_inherit" variant="neutral" label="Back" disabled="{!!v.enabledConfrom}" onclick="{!c.goBack}" />
+            <aura:if isTrue="{!!v.isConsentSent}">
+            <lightning:button class="position_inherit" variant="brand" label="Confirm" disabled="{!!v.enabledConfrom}" onclick="{!c.confirm}"/>
+                <aura:set attribute="else">
+                    <lightning:button class="position_inherit" variant="brand" label="Confirm" disabled="{!!v.enabledConfrom}" onclick="{!c.confirmResend}"/>
+                </aura:set>
+            </aura:if>
+        <aura:set attribute="else">
+
+            <lightning:button class="position_inherit" variant="neutral" label="{!$Label.c.Cancel}" onclick="{!c.cancel}" />
+            <aura:if isTrue="{!!v.isConsentSent}">
+            <lightning:button class="position_inherit" variant="brand" label="{!$Label.c.New_Contact}"  onclick="{!c.addNewContact}"/>
+            </aura:if>
+            <aura:if isTrue="{!!v.isConsentSent}">
+                <lightning:button class="position_inherit" variant="brand" label="{!$Label.c.Send_Request_Consent}" disabled="{!!v.enabledRequest}" onclick="{!c.requestConsent}"/>
+
+                <aura:set attribute="else">
+                    <lightning:button class="position_inherit" variant="brand" label="{!$Label.c.Resend_Request_Consent}" disabled="{!!v.enabledRequest}" onclick="{!c.re_requestConsent}"/>
+                </aura:set>
+            </aura:if>
+
+        </aura:set>
+        </aura:if>
+    </div>
+</aura:component>

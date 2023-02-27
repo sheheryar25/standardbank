@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Respond_Manually__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>SGPRT-1222 - Add attachments on resolution notification - Checkbox to identify if a user wants to respond/email manually when resolving a case</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Check this box to manually send a resolution email.</inlineHelpText>
+    <label>Respond Manually</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

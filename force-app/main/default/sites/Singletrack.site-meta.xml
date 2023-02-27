@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomSite xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowGuestPaymentsApi>false</allowGuestPaymentsApi>
+    <allowHomePage>false</allowHomePage>
+    <allowStandardAnswersPages>false</allowStandardAnswersPages>
+    <allowStandardIdeasPages>false</allowStandardIdeasPages>
+    <allowStandardLookups>false</allowStandardLookups>
+    <allowStandardPortalPages>true</allowStandardPortalPages>
+    <allowStandardSearch>false</allowStandardSearch>
+    <authorizationRequiredPage>SingletrackCMS__Unauthorized</authorizationRequiredPage>
+    <bandwidthExceededPage>SingletrackCMS__InMaintenance</bandwidthExceededPage>
+    <browserXssProtection>true</browserXssProtection>
+    <cachePublicVisualforcePagesInProxyServers>true</cachePublicVisualforcePagesInProxyServers>
+    <clickjackProtectionLevel>SameOriginOnly</clickjackProtectionLevel>
+    <contentSniffingProtection>true</contentSniffingProtection>
+    <description>Singletrack Site required to allow external download of research and download tracking.</description>
+    <enableAuraRequests>true</enableAuraRequests>
+    <fileNotFoundPage>SingletrackCMS__FileNotFound</fileNotFoundPage>
+    <genericErrorPage>SingletrackCMS__InMaintenance</genericErrorPage>
+    <inMaintenancePage>SingletrackCMS__InMaintenance</inMaintenancePage>
+    <inactiveIndexPage>SingletrackCMS__InMaintenance</inactiveIndexPage>
+    <indexPage>SingletrackCMS__DownloadDocument</indexPage>
+    <masterLabel>Singletrack</masterLabel>
+    <redirectToCustomDomain>false</redirectToCustomDomain>
+    <referrerPolicyOriginWhenCrossOrigin>true</referrerPolicyOriginWhenCrossOrigin>
+    <siteAdmin>appadmin+sbg@standardbank.co.za</siteAdmin>
+    <siteGuestRecordDefaultOwner>appadmin+sbg@standardbank.co.za</siteGuestRecordDefaultOwner>
+    <siteTemplate>SingletrackCMS__SiteTemplate</siteTemplate>
+    <siteType>Visualforce</siteType>
+    <subdomain>standardbank</subdomain>
+    <urlPathPrefix>Singletrack</urlPathPrefix>
+</CustomSite>

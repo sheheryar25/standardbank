@@ -1,0 +1,17 @@
+<aura:component implements="forceCommunity:layout" description="Custom Content Layout" access="global">
+    <aura:attribute name="row1" type="Aura.Component[]" required="false"></aura:attribute>
+    <aura:attribute name="row2" type="Aura.Component[]" required="false"></aura:attribute>
+    <aura:attribute name="row3" type="Aura.Component[]" required="false"></aura:attribute>
+    
+    <div class="container">
+         <div class="row">
+            {!v.row1}
+        </div>
+        <div class="row">
+            {!v.row2}
+        </div>
+        <div class="row last-row">
+            {!v.row3}
+        </div>
+    </div>
+</aura:component>

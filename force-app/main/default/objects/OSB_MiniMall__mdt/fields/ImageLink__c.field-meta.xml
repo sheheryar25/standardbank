@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ImageLink__c</fullName>
+    <description>SFP-10259: Link used for the image icons on the categories page OneHub</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Icon image on Onehub</inlineHelpText>
+    <label>ImageLink</label>
+    <required>false</required>
+    <type>Url</type>
+</CustomField>

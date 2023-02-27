@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Closed_Date_in_Past_for_Open_Oppy_dd</fullName>
+    <active>true</active>
+    <description>This rule applies to all users with the exception of those assigned to the System Administrator and Business Administrator profiles.
+Case4366:CRein:23/04/12
+Updated for SGPRT-4189 to check for a drawdown</description>
+    <errorConditionFormula>IF(($Profile.Name=&quot;System Administrator&quot;||$Profile.Name=&quot;Business Administrator&quot;||$Profile.Name=&quot;Api User&quot;), False,
+(CloseDate&lt;TODAY())&amp;&amp;
+NOT(ISBLANK(Earliest_Draw_Date_Rollup__c)) &amp;&amp;
+Not(IsClosed)&amp;&amp;
+NOT(ISCHANGED(IgnoreDrawDownValidation__c)
+))</errorConditionFormula>
+    <errorDisplayField>CloseDate</errorDisplayField>
+    <errorMessage>Please be aware that you are entering a historic Estimated Close Date. Please select a future date which will adjust the draw down profile automatically.</errorMessage>
+</ValidationRule>

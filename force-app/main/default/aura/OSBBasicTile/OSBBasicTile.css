@@ -1,0 +1,28 @@
+.THIS {
+    display: flex;
+    flex-direction: column;
+}
+
+.THIS .basicTile {
+    height: 100%;
+    padding: 16px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.THIS .basicTile__content {
+    color: #999999;
+    font-size: 15px;
+    line-height: 24px;
+}
+
+.THIS .basicTile__caseCreated{
+	height: 24px;
+	width: 236px;
+	color: #0E8A00;
+	font-family: BentonSans;
+	font-size: 15px;
+	line-height: 24px;
+}

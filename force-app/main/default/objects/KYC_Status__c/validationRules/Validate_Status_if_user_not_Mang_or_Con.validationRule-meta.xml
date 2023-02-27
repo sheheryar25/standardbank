@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validate_Status_if_user_not_Mang_or_Con</fullName>
+    <active>true</active>
+    <description>Validates if the user is does not have title containing manager or senior and checks KYC Review Status value being changed</description>
+    <errorConditionFormula>NOT( $Setup.Environment_Variable__c.Ignore_Validation_Rule__c ) 
+
+&amp;&amp; 
+
+(	
+	(($Profile.Name = &apos;Custom KYC User&apos; || $Profile.Name = &apos;Custom KYC User Mobile&apos;)  
+	&amp;&amp; 
+	(NOT(CONTAINS($User.Title, &apos;Senior&apos;)) || ISBLANK($User.Title))
+	&amp;&amp; 
+	(NOT(CONTAINS($User.Title, &apos;Manager&apos;)) || ISBLANK($User.Title))
+	) 
+	|| 
+	$User.Id =  KYC_Consultant__c 
+) 
+
+&amp;&amp; 
+ISCHANGED( KYC_Review_Status__c ) 
+&amp;&amp; 
+OR((ISPICKVAL(KYC_Review_Status__c,&apos;Compliant&apos;)),(ISPICKVAL(KYC_Review_Status__c,&apos;Suspended&apos;)),(ISPICKVAL(KYC_Review_Status__c,&apos;Closed&apos;)),(ISPICKVAL(KYC_Review_Status__c,&apos;Migrated to PBB&apos;)),
+(ISPICKVAL(KYC_Review_Status__c,&apos;Client Risk Committee Approval Outstanding&apos;)))</errorConditionFormula>
+    <errorMessage>Please select a different value or contact the Reviewer for assistance</errorMessage>
+</ValidationRule>

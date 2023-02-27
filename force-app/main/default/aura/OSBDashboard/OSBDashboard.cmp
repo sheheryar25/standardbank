@@ -1,0 +1,101 @@
+<aura:component implements="c:OSBOnboardingHandler,forceCommunity:availableForAllPageTypes" controller="OSB_Dashboard_CTRL">
+<aura:attribute name="registeredApps" type="Object[]" access="private"/>
+<aura:attribute name="cbaseURL" type="String" access="private"/>
+<aura:attribute name="selectedNavItem" type="String" default="BeHeard" access="private"/>
+<aura:attribute name="authorisation" type="Boolean" default="false" access="private"/>
+<aura:attribute name="currentTab" type="String" default="Dashboard" access="private"/>
+<aura:attribute name="isLoading" type="Boolean" default="true" access="private"/>
+
+<aura:attribute name="isNominatedPerson" type="Boolean" access="private"/>
+<aura:attribute name="isAdditionalOnboardingRequired" type="Boolean" access="private"/>
+<aura:attribute name="shouldDisplayOnboardingModal" type="Boolean" default="false" access="private"/>
+<aura:attribute name="userContactId" type="String" access="private"/>
+<aura:attribute name="userId" type="String" access="private"/>
+<aura:attribute name="showToast" type="Boolean" default="false" access="private"/>
+<aura:attribute name="deviceNotRegistered" type="Boolean" default="true" access="private"/>
+<aura:attribute name="showToastFail" type="Boolean" default="false" access="private"/>
+<aura:attribute name="displaySecondModalButton" type="Boolean" default="false" access="private"/>
+<aura:attribute name="modalTitle" type="String" access="private"/>
+<aura:attribute name="modalContent" type="String" access="private"/>
+<aura:attribute name="firstModalButtonLabel" type="String" default="Let's get started" access="private"/>
+<aura:attribute name="mobileMenuToggled" type="Boolean" default="false" access="private"/>
+
+<aura:handler name="init" value="{!this}" action="{!c.init}"/>
+<aura:handler name="errorEvent" event="c:OSBErrorFiredEvent" action="{!c.handleErrorFired}"/>
+<aura:handler name="closePopUpEvent" event="c:OSBClosePopUpEvent" action="{!c.handlePopupClose}"/>
+<aura:handler name="change" value="{!v.popUpCurrentPage}" action="{!c.handlePopupPageChange}"/>
+<aura:handler event="c:OSBChangeTabEvent" action="{!c.handleTabChange}"/>
+<aura:handler event="c:OSBMobileMenuToggledEvent" action="{!c.handleMenuToggled}"/>
+<aura:handler event="c:OSBBreadcrumbEvent" action="{!c.handleBreadcrumbEvent}"/>
+
+<aura:registerEvent name="adjustBreadcrumb" type="c:OSBBreadcrumbEvent"/>
+<aura:registerEvent name="navigationEvent" type="c:OSBNavigationEvent"/>
+<lightning:navigation aura:id="navService"/>
+
+<div>
+    <div class="{!v.mobileMenuToggled ? 'hidden' : 'dashboard-container'}"> 
+        <aura:if isTrue="{!v.isLoading}">
+            <c:OSBLoadingScreen />
+        </aura:if>
+        <div class="hiding_selector">
+        <aura:if isTrue="{!v.currentTab == 'Dashboard'}">
+            <aura:if isTrue="{!v.showToast}">
+                <c:OSBToastComponent closePopup="{!v.showToast}" toastType="success" top="12px" left="50%"
+                                    toastMessage="Your password has been changed successfully."/>
+            </aura:if>
+            <aura:if isTrue="{!v.showToastFail}">
+                    <c:OSBToastComponent closePopup="{!v.showToastFail}" toastType="warning" top="12px" left="50%"
+                                            toastMessage="An unexpected error occured."/>
+                </aura:if>
+            <div class="solutionTitle">
+                <aura:if isTrue="{!v.registeredApps.length == 1}">
+                    <h2 class="tile__header">Your Solution</h2>
+                    <aura:set attribute="else">
+                        <aura:if isTrue="{!v.registeredApps.length >= 2}">
+                            <h2 class="tile__header">Your Solutions</h2>
+                        </aura:if>
+                    </aura:set>
+                </aura:if>   
+            </div>
+            <div class="dashboardSecOne" aura:id="dashboardSecOne">
+                <aura:if isTrue="{!v.registeredApps.length > 0}">
+                    <aura:iteration items="{!v.registeredApps}" var="registeredApp" >
+                        <c:OSBYourSolutionTile aura:id="yourSolutionTile" solutionId="{!registeredApp.Id}" title="{!registeredApp.Solution__r.Title}" requiresMfa="{!registeredApp.Solution__r.Requires_MFA__c}" logo="{!registeredApp.Solution__r.Large_Solution_Logo__c}" url="{!registeredApp.Solution__r.SSO_Redirect_URL__c}"/>
+                    </aura:iteration>
+                </aura:if>
+            </div>
+            <div class="dashboard" aura:id="dashboard">
+                <c:OSBAPIProducts aura:id="apiProducts" class="slds-order_2 " tile="true" currentTab="{!v.currentTab}"/>
+                <c:OSBSolutionShowcase aura:id="solutionShowcase"  class="slds-order_1 " tile="true" currentTab="{! v.currentTab}"/>
+                <c:OSBInsightsHub aura:id="insightsHub"  class="slds-order_3 " tile="true" />
+            </div>
+            <aura:set attribute="else">
+                <c:OSBMarketPlaceCommunity selectedNavItem="BeHeard"/>
+            </aura:set>
+        </aura:if>
+        <c:OSBPopUp title="{!v.popUpTitle}"
+                    content="{!v.popUpContent}"
+                    previousLabel="{!v.popUpPreviousLabel}"
+                    positionElement="{!v.popUpElement}"
+                    displayPopUp="{!v.showPopUp}"
+                    pageNumber="{!v.popUpCurrentPage}"
+                    showPageNumber="{!v.showPageNumber}"
+                    maxPages="{!v.popUpMaxPages}"/>
+        <aura:if isTrue="{!v.shouldDisplayOnboardingModal}"  >
+           <c:OSBModal isOpen="{!v.shouldDisplayOnboardingModal}" modalIsComingSoon="{!false}"
+                    modalTitle="{!v.modalTitle}" modalType="secondLevel" apiDocAvailable="{!false}"
+                    modalContent="{!v.modalContent}"
+                    firstButtonLabel="{!v.firstModalButtonLabel}"
+                    modalIsSolution="{!false}"
+                    displaySecondButton="{!v.displaySecondModalButton}"
+                    currentTab="{! v.currentTab}" isProductHighlight="false"/>
+                        <aura:set attribute="else">
+                            <aura:if isTrue="{!v.deviceNotRegistered == false}">
+                                <c:OSBNewDeviceModal isOpen="{!v.deviceNotRegistered}" onDashboard= "true" />
+                            </aura:if>
+                        </aura:set>
+        </aura:if>            
+        </div>
+    </div>
+</div>
+</aura:component>

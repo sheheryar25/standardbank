@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CR_Development_Start_Date_Required</fullName>
+    <active>true</active>
+    <description>Development Start Date is mandatory when status is changed to &apos;Development&apos; for all Cases of type Change Request
+
+CRM-Enhanced Cases for Change Request Functionality (C Reinecke 2010/08)</description>
+    <errorConditionFormula>( $RecordType.Name = &apos;Change Request&apos;) &amp;&amp;  (TEXT(Status) = &apos;Development&apos;) &amp;&amp;  ISBLANK( Development_Start_Date__c )</errorConditionFormula>
+    <errorDisplayField>Development_Start_Date__c</errorDisplayField>
+    <errorMessage>You must provide a development start date when the status is changed to &apos;Development&apos;</errorMessage>
+</ValidationRule>

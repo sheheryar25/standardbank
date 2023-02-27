@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Initiative_Not_Allowed</fullName>
+    <active>true</active>
+    <description>Initiative can not be selected for record type other than Initiative_Resourcing [SFP-4978]</description>
+    <errorConditionFormula>AND(RecordType.DeveloperName &lt;&gt; &apos;Initiative_Resourcing&apos;,
+				NOT( ISBLANK(TEXT(Initiative__c)) ))</errorConditionFormula>
+    <errorMessage>Initiative is allowed on initiative resourcing records only</errorMessage>
+</ValidationRule>

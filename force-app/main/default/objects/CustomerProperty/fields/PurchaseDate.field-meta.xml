@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PurchaseDate</fullName>
+    <description>SFP-12614  - Date Asset was purchased.</description>
+    <inlineHelpText>Date Asset was purchased.</inlineHelpText>
+    <trackHistory>false</trackHistory>
+</CustomField>

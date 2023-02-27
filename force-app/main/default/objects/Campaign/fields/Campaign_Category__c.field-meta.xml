@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Campaign_Category__c</fullName>
+    <description>Case#1168 - 11/2011 - Rudolf Niehaus
+            The campaign category that defines the campaign</description>
+    <externalId>false</externalId>
+    <label>Campaign Category</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Type</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1 - Bespoke</fullName>
+                <default>false</default>
+                <label>1 - Bespoke</label>
+            </value>
+            <value>
+                <fullName>2 - Value Add</fullName>
+                <default>false</default>
+                <label>2 - Value Add</label>
+            </value>
+            <value>
+                <fullName>3 - Brought to you by CIB</fullName>
+                <default>false</default>
+                <label>3 - Brought to you by CIB</label>
+            </value>
+            <value>
+                <fullName>4 - Group Event</fullName>
+                <default>false</default>
+                <label>4 - Group Event</label>
+            </value>
+            <value>
+                <fullName>5 - Of Interest</fullName>
+                <default>false</default>
+                <label>5 - Of Interest</label>
+            </value>
+            <value>
+                <fullName>6 - Sponsorship</fullName>
+                <default>false</default>
+                <label>6 - Sponsorship</label>
+            </value>
+            <value>
+                <fullName>7 - PA Event</fullName>
+                <default>false</default>
+                <label>7 - PA Event</label>
+            </value>
+            <value>
+                <fullName>Survey</fullName>
+                <default>false</default>
+                <label>Survey</label>
+            </value>
+            <value>
+                <fullName>Operational Mailer</fullName>
+                <default>false</default>
+                <label>Operational Mailer</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Client Research</controllingFieldValue>
+            <valueName>Survey</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Marketing Event</controllingFieldValue>
+            <valueName>1 - Bespoke</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Marketing Event</controllingFieldValue>
+            <valueName>2 - Value Add</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Marketing Event</controllingFieldValue>
+            <valueName>3 - Brought to you by CIB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Marketing Event</controllingFieldValue>
+            <valueName>4 - Group Event</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Marketing Event</controllingFieldValue>
+            <valueName>5 - Of Interest</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Marketing Event</controllingFieldValue>
+            <valueName>6 - Sponsorship</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Marketing Event</controllingFieldValue>
+            <valueName>7 - PA Event</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Direct Marketing</controllingFieldValue>
+            <valueName>Operational Mailer</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Host_SWIFT__c</fullName>
+    <description>CDCS-135 Parameter used for authenticating requests. Host on the request changes after request goes through the DataPower. New value has to be used to create authentication token.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Host SWIFT</label>
+    <required>true</required>
+    <type>Url</type>
+</CustomField>

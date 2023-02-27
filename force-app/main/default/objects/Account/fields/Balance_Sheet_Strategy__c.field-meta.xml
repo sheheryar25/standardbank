@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Balance_Sheet_Strategy__c</fullName>
+    <description>SFP-9319 [c] Field that contains detail around our strategy in terms of the customer&apos;s contribution to balance sheet objectives and how exposure, recoveries and collections are managed</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Contribution to Balance Sheet objectives?
+If borrowing, how do you ensure exposure is performing and effectively managed?
+Exposure at risk, and what corrective measures? 
+Management of write-back/recovery?
+Collections strategy?</inlineHelpText>
+    <label>Balance Sheet Strategy</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

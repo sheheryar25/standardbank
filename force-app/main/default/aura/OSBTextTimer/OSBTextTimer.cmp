@@ -1,0 +1,16 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome" access="global">
+
+    <aura:attribute name="perText" type="String" default="0" access="public" description="Text to display inside circle. It is auto calculated field and used internally" />
+    <aura:attribute name="totalProgress" type="String" default="180" access="public" description="Total progress. It can be number OR API name of field" />
+    <aura:attribute name="actualProgress" type="String" default="180" access="public" description="Actual progress. It can be number OR API name of field" />
+    <aura:attribute name="intervalId" type="String" default="0" access="private" description="Size of Circular Progress Bar. Possible values are small, medium, big" />
+    
+    <aura:registerEvent name="timerEvent" type="c:OSBTimerEvent"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler event="c:OSBTimerEvent" action="{!c.resetTimer}"/>
+
+    <div>
+        <span>{!v.perText} min</span> 
+    </div>
+
+</aura:component>

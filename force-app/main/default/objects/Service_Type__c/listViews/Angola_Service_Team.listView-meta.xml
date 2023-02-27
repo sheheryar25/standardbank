@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Angola_Service_Team</fullName>
+    <columns>NAME</columns>
+    <columns>ServiceType__c</columns>
+    <columns>Category__c</columns>
+    <columns>Sub_Category__c</columns>
+    <columns>Entitlement__c</columns>
+    <columns>CIB_Service_Tier__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>User_Team__c</field>
+        <operation>equals</operation>
+        <value>Africa Regions-Client Services-Service Team-Service</value>
+    </filters>
+    <label>Angola Service Team</label>
+    <sharedTo>
+        <roleAndSubordinatesInternal>Service_Team_Customer_Contact_Centre_Angola_Division</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

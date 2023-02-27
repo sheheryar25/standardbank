@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SVC_NetPromoterScoreRating__c</fullName>
+    <description>SFP-10420 Indicates how likely the customer is to recommend Standard Bank to their friends and family.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please rate how likely you are to recommend Standard Bank to friends and family based on your experience on this interaction on a scale of 0 to 10?</inlineHelpText>
+    <label>Net Promoter Score Rating</label>
+    <precision>2</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

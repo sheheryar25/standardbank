@@ -1,0 +1,359 @@
+.MainInterestedInSection {
+  height: auto;
+  width: 100% !important;
+}
+.FeaturedSolutionsSection {
+  padding: 32px 135px 32px 135px;
+  height: auto;
+  width: 100% !important;
+}
+.HeadingSection {
+  height: 27px;
+  width: 100% !important;
+  color: #0a2240;
+  font-family: "BentonSans";
+  font-size: 20px;
+  letter-spacing: 1px;
+  line-height: 27px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.slds-grid {
+  width: 100% !important;
+}
+
+.ApplicationSection {
+  padding-top: 24px;
+  height: auto;
+  width: 100% !important;
+  background-color: inherit;
+}
+.tmClass {
+  position: relative;
+  font-size: 40%;
+  line-height: 0;
+  vertical-align: baseline;
+  top: -1.2em;
+}
+
+.AppOne {
+  z-index: 0;
+  position: relative;
+  height: 348px;
+  border-radius: 2px;
+  background-color: #ffffff;
+  box-shadow: 0 6px 25px 0 rgba(0, 0, 0, 0.1);
+  margin-right: 7.34px;
+}
+
+.SolutionTag {
+  position: absolute;
+  z-index: 10;
+  top: -10px;
+  left: -1px;
+}
+
+.SolutionTagThird {
+  position: absolute;
+  z-index: 10;
+  top: -10px;
+  left: -1px;
+  filter: invert(43%) sepia(70%) saturate(2175%) hue-rotate(10deg)
+    brightness(102%) contrast(97%);
+}
+
+.AppTwo {
+  z-index: 0;
+  position: relative;
+  height: 348px;
+  border-radius: 2px;
+  background-color: #ffffff;
+  margin-left: 7.34px;
+  box-shadow: 0 6px 25px 0 rgba(0, 0, 0, 0.1);
+}
+
+.ImageSection {
+  height: 163px;
+  width: 100% !important;
+  background-color: #3c4b6c;
+}
+
+.SolutionImage {
+  width: 100%;
+  object-fit: cover;
+  height: inherit;
+}
+
+.TextSection {
+  height: 175px;
+  width: 100% !important;
+}
+
+.HeaderTextSection {
+  height: 54px;
+  width: 100% !important;
+  font-family: "BentonSans";
+  font-weight: 500;
+  color: #3c4b6c;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: 25px;
+  padding: 29px 40.89px 0px 16px;
+}
+
+.HeaderTextSection p {
+  height: 25px;
+  width: 100% !important;
+  margin: 0;
+}
+
+.DescriptionTextSection {
+  padding: 9px 16px 0px 16px;
+  height: 83px;
+  width: 100% !important;
+  color: #0a2240;
+  font-family: "BentonSans";
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 20px;
+}
+
+.DescriptionTextSection p {
+  height: 74px;
+  width: 100% !important;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.ReadLinkSection {
+  padding: 0px 16px 15px 16px;
+  height: 38px;
+  width: 100% !important;
+  color: #0089ff;
+  font-family: "BentonSans";
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: 23px;
+  position: absolute;
+  bottom: 0px;
+}
+
+.ReadLinkSection a {
+  height: 23px;
+  width: 100% !important;
+  margin: 0;
+}
+
+.ReadMoreArrow {
+  padding-left: 18px;
+  vertical-align: baseline;
+}
+
+@media only screen and (max-width: 1390px) {
+  .HeaderTextSection {
+    height: 44px;
+    padding: 19px 16px 0px 16px;
+  }
+
+  .HeaderTextSection p {
+    height: 25px;
+    width: 100% !important;
+    margin: 0;
+  }
+
+  .DescriptionTextSection {
+    padding: 9px 16px 0px 16px;
+    height: 93px;
+  }
+
+  .DescriptionTextSection p {
+    height: 84px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .FeaturedSolutionsSection {
+    padding: 30.1px 50px 31.82px 50px;
+  }
+
+  .HeadingSection {
+    height: 14.18px;
+    line-height: 14.18px;
+  }
+
+  .ApplicationSection {
+    padding-top: 18.1px;
+  }
+
+  .AppOne {
+    height: 257px;
+    border-radius: 1.05px;
+  }
+
+  .AppTwo {
+    height: 257px;
+    border-radius: 1.05px;
+  }
+
+  .SolutionTag {
+    height: 11px;
+    width: 64.57px;
+    top: -5px;
+    left: -0.5px;
+  }
+
+  .SolutionTagThird {
+    height: 11px;
+    width: 64.57px;
+    top: -5px;
+    left: -0.5px;
+  }
+
+  .ImageSection {
+    height: 91px;
+    width: 100% !important;
+  }
+
+  .TextSection {
+    height: 160.18px;
+    width: 100% !important;
+  }
+
+  .HeaderTextSection {
+    padding: 10.08px 16.3px 0px 16.3px;
+    width: 100% !important;
+    height: auto;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: 25px;
+  }
+  .HeaderTextSection p {
+    height: auto;
+  }
+
+  .DescriptionTextSection {
+    height: 88.1px;
+    padding: 8.1px 16.3px 0px 16.3px;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 20px;
+  }
+
+  .DescriptionTextSection p {
+    height: 80px;
+    -webkit-line-clamp: 4;
+  }
+
+  .ReadLinkSection {
+    font-size: 11.77px;
+    line-height: 18.05px;
+  }
+
+  .ReadLinkSection a {
+    height: 19px;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .ReadLinkSection {
+    padding: 0px 16.3px 14px 16.3px;
+    height: 33px;
+    font-size: 11.77px;
+    line-height: 18.05px;
+  }
+
+  .ReadLinkSection a {
+    height: 19px;
+  }
+  .DescriptionTextSection {
+    height: 68.1px;
+  }
+
+  .DescriptionTextSection p {
+    height: 60px;
+    -webkit-line-clamp: 3;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .AppOne {
+    width: 100% !important;
+    height: 257px;
+    border-radius: 1.05px;
+    margin-right: 0px;
+  }
+
+  .AppTwo {
+    margin-left: 0px;
+    margin-top: 15px;
+    width: 100% !important;
+    height: 272px;
+    border-radius: 1.05px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .AppTwo {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .FeaturedSolutionsSection {
+    padding: 24px 20px 14px 20px;
+  }
+
+  .HeadingSection {
+    height: 20px;
+    font-size: 18px;
+    letter-spacing: 1.13px;
+    line-height: 20px;
+  }
+
+  .AppOne {
+    height: 326px;
+    border-radius: none;
+    background-color: inherit;
+    box-shadow: none;
+  }
+
+  .ImageSection {
+    height: 140px;
+  }
+
+  .TextSection {
+    height: 186px;
+  }
+  .HeaderTextSection {
+    padding: 16px 0px 0px 0px;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 25px;
+  }
+  .DescriptionTextSection {
+    padding: 8px 0px 0px 0px;
+    height: 108px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .DescriptionTextSection p {
+    height: 100px;
+    -webkit-line-clamp: 5;
+  }
+
+  .ReadLinkSection {
+    padding: 16px 0px 0px 0px;
+    height: 37px;
+    font-size: 13.64px;
+    line-height: 20.91px;
+  }
+  .ReadLinkSection a {
+    height: 21px;
+  }
+}

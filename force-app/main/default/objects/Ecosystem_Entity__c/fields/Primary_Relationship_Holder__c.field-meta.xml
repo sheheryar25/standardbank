@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Primary_Relationship_Holder__c</fullName>
+    <externalId>false</externalId>
+    <label>Primary Relationship Holder</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Affluent Clients</fullName>
+                <default>false</default>
+                <label>Affluent Clients</label>
+            </value>
+            <value>
+                <fullName>Business Banking</fullName>
+                <default>false</default>
+                <label>Business Banking</label>
+            </value>
+            <value>
+                <fullName>Commercial Banking</fullName>
+                <default>false</default>
+                <label>Commercial Banking</label>
+            </value>
+            <value>
+                <fullName>Enterprise Banking</fullName>
+                <default>false</default>
+                <label>Enterprise Banking</label>
+            </value>
+            <value>
+                <fullName>Entrepreneur</fullName>
+                <default>false</default>
+                <label>Entrepreneur</label>
+            </value>
+            <value>
+                <fullName>Private Clients</fullName>
+                <default>false</default>
+                <label>Private Clients</label>
+            </value>
+            <value>
+                <fullName>Wealth &amp; Investment Clients</fullName>
+                <default>false</default>
+                <label>Wealth &amp; Investment Clients</label>
+            </value>
+            <value>
+                <fullName>Corporate and Investment Banking</fullName>
+                <default>false</default>
+                <label>Corporate and Investment Banking</label>
+            </value>
+            <value>
+                <fullName>Youth Clients</fullName>
+                <default>false</default>
+                <label>Youth Clients</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

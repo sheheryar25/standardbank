@@ -1,0 +1,144 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" controller="OSB_HeaderDropdown_CTRL">
+    <aura:attribute name="showTeamProfile" type="Boolean" default="true" access="private"/>
+    <aura:attribute name="displayedUnreadNotifications" type="String" access="private"/>
+    <aura:attribute name="mobileMenuToggled" type="Boolean" default="false" access="private"/>
+    <aura:attribute name="currentTab" type="String" default="Dashboard" access="public"/>
+    <aura:attribute name="unreadNotificationsNumber" type="Integer" default="1" />
+    <aura:attribute name="overviewClicked" type="Boolean" default="true" access="private"/>
+    <aura:attribute name="teamProfileClicked" type="Boolean" default="true" access="private"/>
+    <aura:attribute name="profileAndSettingsClicked" type="Boolean" default="true" access="private"/>
+    <aura:attribute name="communityClicked" type="Boolean" default="false" access="private"/>
+    <aura:attribute name="collaborateClicked" type="Boolean" default="false" access="private"/>
+    <aura:attribute name="InsightUrl" type="String" access="private"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    <aura:handler event="c:OSBChangeTabEvent" action="{!c.handleTabChange}"/>
+    <aura:handler event="c:OSBMobileMenuToggledEvent" action="{!c.handleMenuToggled}"/>
+
+    <lightning:navigation aura:id="navService"/>
+    
+    <aura:registerEvent name="marketplaceTabChosen" type="c:OSBMarketplaceTabEvent"/>
+    <aura:registerEvent name="menuToggledEvent" type="c:OSBMobileMenuToggledEvent"/>
+    <aura:registerEvent name="profileAndSettingsTabChosen" type="c:OSBProfileAndSettingsEvent"/>
+
+    <div class="header-dropdown mobile__menu">
+        <div class="header__line-mobile header-container">
+            <button class="slds-dropdown-trigger slds-button header__mobile-menu-cont cross_buton">
+                <div id="headerCross">
+                    <img src="{!$Resource.OSBCloseIcon}" class="close" onclick="{! c.closeMobileMenu}" data-id="uitlink_link" data-text="Modal | Close Icon"/>
+                </div>
+            </button>
+        </div>
+        <div class="header_dropdown_elements">
+            <aura:if isTrue="{!v.currentTab == 'Dashboard'}">
+                <div class="header__account_dropdown">
+                    <div class="header_dropdown-full-menu">
+                        <div class="links__container">
+                                <div class="menu_chevron">
+                                    <div class="uit_link" data-id="uitlink_link" data-text="Header | Overview" onclick="{!c.openDashboard}"><lightning:menuItem class="header_menu_item header_menu_item--border link_style" value="editProfile" label="Dashboard"/></div>                                 
+                                </div>
+                                <div class="dropdown_link-with-notification uit_link" data-id="uitlink_link" data-text="Header | Notifications" onclick="{!c.clickedNotifications}"><lightning:menuItem class="header_menu_item header_menu_item--border link_style" value="notifications" label="Notifications"/>
+                                    <aura:if isTrue="{!v.unreadNotificationsNumber > 0}">
+                                        <div class="header__unread-notifications-container">
+                                            <div class="header__unread-notifications">
+                                                <div class="{!v.unreadNotificationsNumber > 99 ? 'header__unread-notification three__digits' : (v.unreadNotificationsNumber > 9 ? 'header__unread-notification two__digits' : 'header__unread-notification')}">
+                                                    <div class="header__unread-notification-number">
+                                                        {!v.displayedUnreadNotifications}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </aura:if>
+                                </div>
+                                <div class="menu_chevron">
+                                    <div class="uit_link" data-id="uitlink_link" data-text="Header | Profile and Settings" onclick="{!c.clickedProfileandSettings}"><lightning:menuItem class="header_menu_item header_menu_item--border link_style" value="editProfileAndSettings" label="Profile and Settings" /></div>
+                                    <aura:if isTrue="{!v.profileAndSettingsClicked}"> 
+                                        <lightning:icon class="chevron_menu" iconName="utility:chevronup" alternativeText="profile and settings" title="Profile and Settings"  onclick="{!c.clickedPandS}"/>
+                                        <aura:set attribute="else">
+                                            <lightning:icon class="chevron_menu" iconName="utility:chevrondown" alternativeText="profile and settings" title="Profile and Settings"  onclick="{!c.clickedPandS}"/>
+                                        </aura:set>
+                                    </aura:if>
+                                    
+                                </div>
+                                <aura:if isTrue="{!v.profileAndSettingsClicked}"> 
+                                    <div class="inside_links_team">
+                                        <div class="uit_link_inner" data-id="uitlink_link" data-text="Header | Profile" onclick="{!c.clickedProfile}"><lightning:menuItem class="header_menu_item header_menu_item--border link_style" value="EditProfile" label="Profile"/></div>
+                                        <div class="uit_link_inner" data-id="uitlink_link" data-text="Header | Device Management" onclick="{!c.clickedDeviceManagement}"><lightning:menuItem class="header_menu_item header_menu_item--border link_style" value="DeviceManagement" label="Device Management"/></div>
+                                        
+                                    </div>
+                                    
+                                </aura:if>
+                            <div class="uit_link" data-id="uitlink_link" data-text="Header | Profile" onclick="{!c.clickedProfile}"><lightning:menuItem class="header_menu_item header_menu_item--border link_style" value="editProfile" label="Profile" /></div>
+                                        <div class="menu_chevron">
+                                            <div class="uit_link" data-id="uitlink_link" data-text="Header | Team Profile" onclick="{!c.clickedTeamProfileLink}"><lightning:menuItem class="header_menu_item header_menu_item--border link_style" value="teamProfile" label="Team Profile"/></div>
+                                            <aura:if isTrue="{!v.teamProfileClicked}"> 
+                                                    <lightning:icon class="chevron_menu" iconName="utility:chevronup" alternativeText="team profile" title="Team profile"  onclick="{!c.clickedTeamProfile}"/>
+                                                    <aura:set attribute="else">
+                                                        <lightning:icon class="chevron_menu" iconName="utility:chevrondown" alternativeText="team profile" title="Team profile"  onclick="{!c.clickedTeamProfile}"/>
+                                                    </aura:set>
+                                            </aura:if>
+                                        </div>
+                                        <aura:if isTrue="{!v.teamProfileClicked}">
+                                            <div class="inside_links_team">
+                                                <div class="uit_link_inner" data-id="uitlink_link" data-text="Header | Invite team members" onclick="{!c.clickedInviteTeamMembers}"><lightning:menuItem class="header_menu_item header_menu_item--border link_style" value="editProfile" label="Invite team members"/></div>
+                                                <div class="uit_link_inner" data-id="uitlink_link" data-text="Header | Pending approvals" onclick="{!c.clickedPendingApprovals}"><lightning:menuItem class="header_menu_item header_menu_item--border link_style" value="editProfile" label="Pending approvals"/></div>
+                                                <div class="uit_link_inner" data-id="uitlink_link" data-text="Header | Team details" onclick="{!c.clickedTeamDetails}"><lightning:menuItem class="header_menu_item header_menu_item--border link_style" value="editProfile" label="Team details"/></div>
+                                            </div>
+                                        </aura:if>
+                            
+                            <div class="uit_link" data-id="uitlink_link" data-text="Header | Change Password" onclick="{!c.clickedChangePassword}"><lightning:menuItem class="header_menu_item header_menu_item--border link_style" value="changePasswordPing" label="Change Password"/></div>
+                            <div class="uit_link" data-id="uitlink_link" data-text="Header | Code of Conduct" onclick="{!c.clickedCodeOfConduct}"><lightning:menuItem class="header_menu_item header_menu_item--border link_style" value="codeconduct" label="Code of Conduct"/></div>
+                            <div class="uit_link" data-id="uitlink_link" data-text="Header | Terms and Conditions " onclick="{!c.clickedConditions}"><lightning:menuItem class="header_menu_item header_menu_item--border link_style" value="conditions" label="Terms &amp; Conditions"/></div>
+                            <div class="uit_link" data-id="uitlink_link" data-text="Header | Contact us " onclick="{!c.clickedContactUs}"><lightning:menuItem class="header_menu_item header_menu_item--border link_style" value="contactUs" label="Contact us"/></div>
+                            <div class="uit_link" data-id="uitlink_link" data-text="Header | Sign Out" onclick="{!c.clickedSignOut}"><lightning:menuItem class="header_menu_item link_style" value="signOut" label="Sign out" /></div>
+                        </div>
+                    </div>
+                </div>
+                <aura:set attribute="else">
+                    <div class="header__account_dropdown">
+                        <div class="header_dropdown-full-menu">
+                            <div class="links__container">
+                                    <div class="menu_chevron" onclick="{!c.clickedCommunity}">
+                                        <div class="uit_link" data-id="uitlink_link" data-text="Header | Community"><lightning:menuItem class="header_menu_item header_menu_item--border link_style" value="editProfile" label="Community"/></div>
+                                        <aura:if isTrue="{!v.communityClicked}">
+                                            <lightning:icon class="chevron_menu" iconName="utility:chevronup" alternativeText="overview" title="overview"/>
+                                            <aura:set attribute="else">
+                                                <lightning:icon class="chevron_menu" iconName="utility:chevrondown" alternativeText="overview" title="overview" />
+                                            </aura:set>
+                                        </aura:if>                         
+                                    </div>
+                                    <aura:if isTrue="{!v.communityClicked}">
+                                        <div class="inside_links_overview">
+                                            <div class="uit_link_inner" data-id="uitlink_link" data-text="Header | Be Heard" onclick="{!c.clickedBeHeard}"><lightning:menuItem class="header_menu_item header_menu_item--border link_style" value="editProfile" label="Be Heard"/></div>
+                                            <div class="uit_link_inner" data-id="uitlink_link" data-text="Header | Activity" onclick="{!c.clickedActivity}"><lightning:menuItem class="header_menu_item header_menu_item--border link_style" value="editProfile" label="Activity"/></div>
+                                            <div class="uit_link_inner" data-id="uitlink_link" data-text="Header | Bookmarks" onclick="{!c.clickedBookmarks}"><lightning:menuItem class="header_menu_item header_menu_item--border link_style" value="editProfile" label="Bookmarks"/></div>
+                                        </div>
+                                    </aura:if>
+                                        <div class="menu_chevron" onclick="{!c.clickedCollaborate}">
+                                            <div class="uit_link" data-id="uitlink_link" data-text="Header | Let's Collaborate"><lightning:menuItem class="header_menu_item header_menu_item--border link_style" value="teamProfile" label="Let's Collaborate"/> 
+                                                <aura:if isTrue="{!v.collaborateClicked}"> 
+                                                    <lightning:icon class="chevron_menu" iconName="utility:chevronup" alternativeText="overview" title="overview"/>
+                                                    <aura:set attribute="else">
+                                                        <lightning:icon class="chevron_menu" iconName="utility:chevrondown" alternativeText="overview" title="overview" />
+                                                    </aura:set>
+                                                </aura:if>
+                                            </div>
+                                        </div>
+                                        <aura:if isTrue="{!v.collaborateClicked}">
+                                            <div class="inside_links_team">
+                                                <div class="uit_link_inner" data-id="uitlink_link" data-text="Header | Submit an Idea" onclick="{!c.clickedSubmitIdea}"><lightning:menuItem class="header_menu_item header_menu_item--border link_style" value="editProfile" label="Submit an Idea"/></div>
+                                                <div class="uit_link_inner" data-id="uitlink_link" data-text="Header | Submit a business problem" onclick="{!c.clickedSubmitProblem}"><lightning:menuItem class="header_menu_item header_menu_item--border link_style" value="editProfile" label="Submit a business problem"/></div>
+                                            </div>
+                                        </aura:if>
+                                <div class="uit_link" data-id="uitlink_link" data-text="Header | Code of Conduct" onclick="{!c.clickedCodeOfConduct}"><lightning:menuItem class="header_menu_item header_menu_item--border link_style" value="codeconduct" label="Code of Conduct"/></div>
+                                <div class="uit_link" data-id="uitlink_link" data-text="Header | Terms and Conditions " onclick="{!c.clickedConditions}"><lightning:menuItem class="header_menu_item header_menu_item--border link_style" value="conditions" label="Terms &amp; Conditions"/></div>
+                                <div class="uit_link" data-id="uitlink_link" data-text="Header | Contact us " onclick="{!c.clickedContactUs}"><lightning:menuItem class="header_menu_item header_menu_item--border link_style" value="contactUs" label="Contact us"/></div>
+                                <div class="uit_link" data-id="uitlink_link" data-text="Header | Sign Out" onclick="{!c.clickedSignOut}"><lightning:menuItem class="header_menu_item link_style" value="signOut" label="Sign out" /></div>
+                            </div>
+                        </div>
+                    </div>
+                </aura:set>
+            </aura:if>
+        </div>
+    </div>
+</aura:component>

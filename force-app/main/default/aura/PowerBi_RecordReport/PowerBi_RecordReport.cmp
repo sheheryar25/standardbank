@@ -1,0 +1,20 @@
+<!--
+ - Created by mpesko on 05.07.2021.
+ -->
+
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId" description="PowerBi_RecordReport" controller="PowerBI_ReportController">
+    <aura:attribute access="private" name="iframeUrl" type="String"
+                    default="https://app.powerbi.com/reportEmbed?reportId="/>
+    <aura:attribute access="private" name="powerBiReportId" type="String"/>
+    <aura:attribute access="private" name="urlParams" type="String" default="&amp;autoAuth=true&amp;ctid=7369e6ec-faa6-42fa-bc0e-4f332da5b1db&amp;config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLW5vcnRoLWV1cm9wZS1lLXByaW1hcnktcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQvIn0%3D"/>
+    <aura:attribute access="private" name="width" type="String" default="100%"/>
+    <aura:attribute access="private" name="height" type="String" default="550"/>
+    <aura:attribute access="private" name="allowFullScreen" type="String" default="true"/>
+    <aura:attribute access="private" name="frameBorder" type="String" default="0"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <iframe src="{!v.iframeUrl}"
+            width="{!v.width}"
+            height="{!v.height}"
+            allowfullscreen="{!v.allowFullScreen}"
+            frameBorder="{!v.frameBorder}"/>
+</aura:component>

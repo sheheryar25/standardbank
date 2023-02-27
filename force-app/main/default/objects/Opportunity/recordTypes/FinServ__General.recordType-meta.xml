@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FinServ__General</fullName>
+    <active>false</active>
+    <businessProcess>FinServ__Opportunity Process</businessProcess>
+    <label>General</label>
+    <picklistValues>
+        <picklist>Approval_Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting for Next Approver</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Submitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Committee_Approved__c</picklist>
+        <values>
+            <fullName>Awaiting Response</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Applicable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Competitor__c</picklist>
+        <values>
+            <fullName>Global Market</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Local Market</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Competitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Regional Market</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Current_known_conflict_of_interest__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DB_Competitor__c</picklist>
+        <values>
+            <fullName>Competitor A</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Competitor B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Competitor C</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Entrepreneur_Forum_Required__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ForecastCategoryName</picklist>
+        <values>
+            <fullName>Best Case</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Omitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pipeline</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GCCR_Status__c</picklist>
+        <values>
+            <fullName>Awaiting Response from the Conflicts Control Room</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cleared</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cleared with Conditions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Cleared</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Required</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Re-submitted for Conflicts Clearing as Key Information has been Modified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted for Conflicts Clearing</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Is_Opportunity_part_of_Client_Budget__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LeadSource</picklist>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Lead_Source__c</picklist>
+        <values>
+            <fullName>Client Engagement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client Plan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cross Sell</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Ecosystem Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Game Changer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Implementation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lead Analytics Tool</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Request for Proposal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Research</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Mandated__c</picklist>
+        <values>
+            <fullName>Mandated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not mandated</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Opportunity_Sector__c</picklist>
+        <values>
+            <fullName>Consumer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Institutions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Industrials</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal %2F Grouped</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mining %26 Metals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oil %26 Gas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Power and Infrastructure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Real Estate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sovereign %2F Public Sector</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telecoms %26 Media</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority__c</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>RFP__c</picklist>
+        <values>
+            <fullName>Due Date</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ReasonForWinLossPickList__c</picklist>
+        <values>
+            <fullName>Bank Strategy not Aligned to Client Strategy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Captured in Error %2F Duplicate %2F Expired</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client Irrelevance %2F Unfavourable Relationship</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client Relevance %2F Relationship</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client Strategy Change</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Compliance Risk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Favourable Response Time</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fewer Products Available and Poor Product Fit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Greater Product Mix and Exact Product Fit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Most Competitive Market Pricing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unfavorable Returns from Pricing Structure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unfavourable Market Pricing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unfavourable Response Time</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unfavourable Returns from Pricing Structure</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason_Won_Lost_Detail__c</picklist>
+        <values>
+            <fullName>Appetite for Client %2F Sector</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client %2F Transaction Risk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client Governance %2F Regulatory Restrictions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client bid too low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client not Aligned with SB Geographic Footprint</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delays in Credit Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delays in Implementation Phase</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Efficiencies in Banking Platforms%2C Systems and Channels</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Favourable Client Onboarding %28KYC%29 Turnaround</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Individual Excellence and Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inefficiencies in Banking Platforms%2C Systems and Channels</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inefficient Interaction and Service from  Opportunity Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inefficient Interaction and Service from Key Business Rep</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insufficient Security</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Key Relationship Bank</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mandate terminated%2Fexpired</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Clients Primary Relationship Bank</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Offer received too low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Opportunity Team Excellence and Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Poor Response from Opportunity Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pricing too high</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Process abandoned</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prompt Credit Approval Process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SB Geographic Footprint</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seamless Implementation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Swift Response from Opportunity Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unfavourable Client Onboarding %28KYC%29 Turnaround</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Relevant_Committee__c</picklist>
+        <values>
+            <fullName>Credit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Equity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mandates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Applicable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reputational Risk Committee</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Request_for_Proposal_Type__c</picklist>
+        <values>
+            <fullName>New</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Retention</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Stage_Detail__c</picklist>
+        <values>
+            <fullName>Awaiting Collateral Perfection</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Origination</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Returned to Business or Reworked</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>With Credit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>With POR Awaiting Client Information</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Submitted_to_Committee__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Applicable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

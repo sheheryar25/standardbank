@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Subsidiaries__c</fullName>
+    <description>SFP-9319 [c]  Are there any subsidiaries to the customer’s organisation?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Are there any subsidiaries to the customer’s organisation?</inlineHelpText>
+    <label>Subsidiaries</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>TextArea</type>
+</CustomField>

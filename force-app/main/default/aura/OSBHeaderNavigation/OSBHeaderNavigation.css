@@ -1,0 +1,18 @@
+.THIS {
+    display: flex;
+    align-items: center;
+}
+
+.THIS li { 
+    color: #fff;
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+.THIS li:first-child {
+    display: none;
+}
+
+.THIS .slds-is-active {
+    font-weight: 400;
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Category_Reporting__c</fullName>
+    <description>SGPRT-373 - Reporting field showing the Sub Category value</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field represents the Sub Category value of the Service Type record used to classify the case.</inlineHelpText>
+    <label>Sub Category</label>
+    <length>100</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

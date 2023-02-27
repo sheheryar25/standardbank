@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Relationship_Group_Number</fullName>
+    <active>true</active>
+    <description>This is used to make the Relationship Group Number field required.(SFP-4992)</description>
+    <errorConditionFormula>ISBLANK(Relationship_Group_Number__c)</errorConditionFormula>
+    <errorDisplayField>Relationship_Group_Number__c</errorDisplayField>
+    <errorMessage>Please fill in the Relationship Group Number field.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CY_Revenue_and_Total_Revenue</fullName>
+    <active>true</active>
+    <description>Current Year Revenue should always be less than or equal to Total Revenue (Amount) (EN-896).</description>
+    <errorConditionFormula>AND(
+OR(
+NOT(ISBLANK(Current_Year_CommB_Revenue__c)),
+NOT(ISBLANK(total_revenue_amount__c))),
+OR((Current_Year_CommB_Revenue__c &gt; total_revenue_amount__c),(ISBLANK(total_revenue_amount__c)))) &amp;&amp; ($RecordType.DeveloperName = &quot;Commercial_Banking&quot; || $RecordType.DeveloperName = &quot;CommB_Lending&quot;)</errorConditionFormula>
+    <errorMessage>Current Year Revenue should always be less than or equal to Total Revenue (Amount).</errorMessage>
+</ValidationRule>

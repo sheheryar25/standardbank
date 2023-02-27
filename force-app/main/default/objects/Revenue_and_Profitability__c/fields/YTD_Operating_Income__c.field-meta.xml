@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>YTD_Operating_Income__c</fullName>
+    <description>The resulting profit that is deduced from the total revenue less all direct and indirect costs for current year period, US-4424</description>
+    <externalId>false</externalId>
+    <label>YTD Operating Income</label>
+    <precision>17</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

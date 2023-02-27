@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This event is published when the client status changes in salesforce e.g. When a prospective client has been successfully on-boarded it is assigned a CIF number and this event is published</description>
+    <eventType>StandardVolume</eventType>
+    <label>Client Status</label>
+    <pluralLabel>Clients Status</pluralLabel>
+    <publishBehavior>PublishImmediately</publishBehavior>
+</CustomObject>

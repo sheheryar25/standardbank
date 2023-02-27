@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CIF_Client_Type__c</fullName>
+    <description>This Field has been created to reflect the &quot;R&quot; or &quot;W&quot; value from the CIF feed into Salesforce. R = Retail (clients owned by Personal Business Banking and W = Wholesale (clients owned by CIB Coverage) Case #252</description>
+    <externalId>false</externalId>
+    <inlineHelpText>R = Retail (PBB) and W = Wholesale (CIB)</inlineHelpText>
+    <label>CIF Client Type</label>
+    <length>10</length>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

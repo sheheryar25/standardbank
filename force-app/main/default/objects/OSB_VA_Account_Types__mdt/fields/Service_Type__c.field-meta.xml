@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Service_Type__c</fullName>
+    <description>CDCS-185 - Type of service for which account type is available</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Type of service for which account type is available</inlineHelpText>
+    <label>Service Type</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Balance inquiry</fullName>
+                <default>true</default>
+                <label>Balance inquiry</label>
+            </value>
+            <value>
+                <fullName>Email statement</fullName>
+                <default>false</default>
+                <label>Email statement</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,106 @@
+<!-- **
+* @description  : SBG Common Theme Layout.
+*/ -->
+<aura:component implements="forceCommunity:themeLayout" access="global">
+
+  <aura:attribute name="isUserLoggedIn" type="Boolean" default="false" access="public" />
+  <aura:attribute name="showHeroFullWidth" type="Boolean" default="false" access="public" />
+
+  <aura:attribute name="fullWidthBanner" type="Aura.Component[]" access="public" />
+  <aura:attribute name="adobeAnalytics" type="String" default="https://assets.adobedtm.com/45b28ee1a4af/49c2f428e3e9/launch-cb5dac3d7cfe-development.min.js" access="public" />
+  <aura:attribute name="apiCountryUrl" type="String" default="/countries" access="public" />
+  <aura:attribute name="hideCountrySelection" type="Boolean" default="false" access="public" />
+
+  <aura:attribute name="otherNotices" type="Aura.Component[]" access="public" />
+  <aura:attribute name="importantNotices" type="Aura.Component[]" access="public" />
+
+  <aura:attribute name="pageTitle" type="Aura.Component[]" access="public" />
+  <aura:attribute name="themeHeader" type="Aura.Component[]" access="public" />
+  <aura:attribute name="useCompactHeader" type="Boolean" default="false" access="public" />
+
+  <aura:attribute name="headerWithNavigation" type="Aura.Component[]" access="public" />
+  <aura:attribute name="themeHero" type="Aura.Component[]" access="public" />
+  <aura:attribute name="showHero" type="Boolean" default="true" access="public" />
+
+  <aura:attribute name="showFullWidthBlueFirstRow" type="Boolean" default="true" access="public" />
+  <aura:attribute name="fullWidthBlueRow" type="Aura.Component[]" access="public" />
+
+  <aura:attribute name="body" type="Aura.Component[]" access="public" />
+  <aura:attribute name="themeFooter" type="Aura.Component[]" access="public" />
+  <!-- standard containers -->
+  <aura:attribute name="search" type="Aura.Component[]" required="false" access="public" />
+  <aura:attribute name="navBar" type="Aura.Component[]" required="false" access="public" />
+  <aura:attribute name="profileMenu" type="Aura.Component[]" required="false" access="public" />
+
+  <aura:handler name="init" value="{!this}" action="{!c.init}" />
+
+  <div class="theme-page">
+
+    <header>
+      <aura:if isTrue="{! !v.isUserLoggedIn}">
+        <div role="group" aria-label="Other notices">{! v.importantNotices }</div>
+      </aura:if>
+      <aura:if isTrue="{!v.useCompactHeader}">
+        <div class="slds_grid" style="display: flex;">
+          <div class="slds-col slds-small-size_12-of-12 slds-medium-size_9-of-12 slds-large-size_10-of-12 ">
+            <div role="group" aria-label="Other notices">
+              <div role="group" aria-label="Header with main navigation">
+                    {!v.themeHeader}
+              </div>
+            </div>
+          </div>
+          <aura:if isTrue="{!v.hideCountrySelection}">
+            <div class="slds-col slds-small-size_12-of-12 slds-medium-size_3-of-12 slds-large-size_2-of-12  slds-show_medium" style="background-color: #0033aa; line-height: 5;"></div>
+            <aura:set attribute="else">
+              <div class="slds-col slds-small-size_12-of-12 slds-medium-size_3-of-12 slds-large-size_2-of-12  slds-show_medium" style="background-color: #0033aa; line-height: 5;">
+                <div role="group" aria-label="Other notices">
+                  <a class="api-countries" href="{!v.apiCountryUrl}">
+                    <img src="/sfsites/c/file-asset/globeiconpng?v=1" />API countries</a>
+                </div>
+              </div>
+            </aura:set>
+          </aura:if>
+        </div>
+      <aura:set attribute="else">
+        <c:ACM_NavigationMenu hideCountrySelection="{!v.hideCountrySelection }" profileMenu="{! v.profileMenu }" search="{!v.search}" adobeAnalyticsUrl="{!v.adobeAnalytics}" apiCountryUrl="{!v.apiCountryUrl}"></c:ACM_NavigationMenu>
+      </aura:set>
+        <div class="slds_grid" style="display: flex;">
+          <div class="slds-col slds-hide_medium slds-small-size_8-of-12" style="background-color: #0a2240; height: 40px;">
+            <a class="api-countries" href="{!v.apiCountryUrl}">
+              <img src="/sfsites/c/file-asset/globeiconpng?v=1" />API countries</a>
+          </div>
+          
+        </div>
+      </aura:if>
+    </header>
+    <!-- Mobile view header -->
+    
+    <!-- end here -->
+    <div role="main">
+      <div class="theme-full-width-banner">
+        <aura:if isTrue="{!v.fullWidthBanner}">{!v.fullWidthBanner}</aura:if>
+      </div>
+      <aura:if isTrue="{!v.pageTitle}">
+        <div class="theme-container">{!v.pageTitle}</div>
+      </aura:if>
+      <aura:if isTrue="{!v.showHero}">
+        <div role="group" aria-label="Hero" class="{! v.showHeroFullWidth?'':'theme-container' }">{! v.themeHero }</div>
+      </aura:if>
+      <aura:if isTrue="{!v.showFullWidthBlueFirstRow}">
+        <div class="fullWidthBlueFirstRow">
+          <div class="theme-container">{!v.fullWidthBlueRow}</div>
+        </div>
+      </aura:if>
+
+
+      <div class="theme-container">{!v.body}</div>
+    </div>
+
+    <footer class="footer">
+      {!v.themeFooter}
+    </footer>
+
+    <c:acm_AdobeAnalytics></c:acm_AdobeAnalytics>
+  </div>
+
+</aura:component>

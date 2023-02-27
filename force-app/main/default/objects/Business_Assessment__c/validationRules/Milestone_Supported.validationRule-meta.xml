@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Milestone_Supported</fullName>
+    <active>true</active>
+    <description>US 2440: DM NBAC: Milestone Process - Update Milestone Value
+US-4492 - Adapted and cleaned up rule for Joint Ventures</description>
+    <errorConditionFormula>IF(RecordType.DeveloperName = &apos;NBAC_CommB&apos;, False,
+			/* not NBAC_CommB */
+			ISCHANGED(Milestone__c) &amp;&amp;
+			ISPICKVAL(Milestone__c , &apos;Supported&apos;) &amp;&amp;
+			(ISPICKVAL(PRIORVALUE(Milestone__c), &apos;Transaction Overview&apos;) ||
+				ISPICKVAL(PRIORVALUE(Milestone__c), &apos;Stakeholder Contribution&apos;) ||
+				ISPICKVAL(PRIORVALUE(Milestone__c), &apos;Finalisation&apos;)) &amp;&amp;
+			(ISBLANK(Business_Sponsor__c) ||
+				/* check prev stages */
+				Completed_Client_Details_New__c=FALSE ||
+				Completed_Transaction_Counterparties__c=FALSE ||
+				Completed_Transaction_Parties_New__c=FALSE ||
+				Completed_Transaction_Profile__c=FALSE ||
+				Completed_Strategic_Rationale__c=FALSE ||
+				Completed_Financial_Analysis_New__c=FALSE ||
+				Completed_Treasury_and_CapMan__c=FALSE ||
+				Completed_Distribution_And_RiskMan__c=FALSE ||
+				Completed_Compliance__c=FALSE ||
+				Completed_Environmental_Assessment__c=FALSE ||
+				IF(ISPICKVAL( Submission_Type__c, &apos;2&apos;), Completed_Annexure_Rationale__c&lt;&gt;TRUE, FALSE) ||
+				IF(ISPICKVAL( Submission_Type__c, &apos;3&apos;), Completed_Annexure_Description__c&lt;&gt;TRUE, FALSE) ||
+				IF(ISPICKVAL( Submission_Type__c, &apos;4&apos;), OR(Completed_Annexure_Rationale__c&lt;&gt;TRUE, Completed_Annexure_Description__c&lt;&gt;TRUE ), FALSE))
+		)</errorConditionFormula>
+    <errorMessage>You have not completed all the requirements for this Milestone. Please consult the Guidance for Success text by clicking on the arrow to the left of the Milestone path for details on how to complete this Milestone</errorMessage>
+</ValidationRule>

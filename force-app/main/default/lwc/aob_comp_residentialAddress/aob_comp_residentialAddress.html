@@ -1,0 +1,93 @@
+<!--
+@description       : 
+@author            : layton.matyila@standardbank.co.za
+@group             : 
+@last modified on  : 29-28-2021
+@last modified by  : layton.matyila@standardbank.co.za
+
+Modifications Log 
+Ver   Date         Author                   Modification
+1.0   28-09-2021   layton.matyila@standardbank.co.za
+  Initial Version
+-->
+<template>
+    <div if:false={failing}>
+        <div class="aob_card_container slds-p-horizontal_large slds-p-vertical_x-large ao-border-radius">
+            <img if:true={isShowingCloseButton} alt="Close button Icon" src={closeIcon}
+                class="aob_modal_close_button slds-m-right_xx-small slds-m-left_large"
+                onclick={handleOpenClosePageModal}>
+
+     <template if:true={isLoaded}>
+            <c-aob_comp_screen-header  title={label.AOB_Title} sub-title={label.AOB_Subtitle}>
+            </c-aob_comp_screen-header>
+       
+     <form class="aob_form" novalidate autocomplete="off">  
+        <div class="slds-grid aob_form_row slds-gutters_large slds-wrap">
+            <div class="aob_form_input slds-col slds-m-top_small slds-size_1-of-2">
+                <label class="aob_screen-field-label slds-m-bottom_none">{label.AOB_StreetNumberAndName}</label>
+                <lightning-input type="text" variant="label-hidden"  placeholder="e.g 134 Raglan street" name="StreetNumberAndName"
+                  onchange={genericInputOnChange} value={StreetNumberAndName} required ="Complete this field">
+                </lightning-input>         
+            </div>     
+            <div class="aob_form_input slds-col slds-m-top_small slds-size_1-of-2">
+               <label class="aob_screen-field-label slds-m-bottom_none">{label.AOB_UnitNumber}</label>
+                <lightning-input type="text" variant="label-hidden"   placeholder="e.g 12" name="unitNumber"
+                onchange={genericInputOnChange} value={UnitNumber}>
+            </lightning-input>         
+            </div>       
+        </div>
+           <div class="slds-grid aob_form_row slds-gutters_large slds-wrap">                
+                <div class="aob_form_input slds-col slds-m-top_small slds-size_1-of-2">
+                    <label class="aob_screen-field-label slds-m-bottom_none">{label.AOB_ComplexBuildingName} </label>
+                    <lightning-input type="text" variant="label-hidden" value={ComplexBuildingName}
+                        placeholder="e.g. Eye of Africa Estate" name="building Name"
+                        onchange={genericInputOnChange}>                      
+                    </lightning-input>
+                 </div>
+                 <div class="aob_form_input slds-col slds-m-top_small slds-size_1-of-2">
+                    <label class="aob_screen-field-label slds-m-bottom_none">{label.AOB_Suburb}</label>
+                    <lightning-combobox name="suburb" variant="label-hidden" value={suburb}
+                        placeholder={label.AOB_SelectionLabel} options={suburbOptions}
+                        onchange={genericInputOnChange} required></lightning-combobox>
+                </div> 
+           </div>
+           <div class="slds-grid aob_form_row slds-gutters_large slds-wrap">
+                <div class="aob_form_input slds-col slds-m-top_small slds-size_1-of-2">
+                    <label class="aob_screen-field-label slds-m-bottom_none">{label.AOB_CityTown}</label>
+                    <lightning-combobox name="city" variant="label-hidden" value={city}
+                        placeholder={label.AOB_SelectionLabel} options={cityOptions}
+                        onchange={genericInputOnChange} required></lightning-combobox>
+                </div>  
+                 <div class="aob_form_input slds-col slds-m-top_small slds-size_1-of-2">
+                    <label class="aob_screen-field-label slds-m-bottom_none">{label.AOB_Province}</label>
+                    <lightning-combobox name="province" variant="label-hidden" value={province}
+                        placeholder={label.AOB_SelectionLabel} options={provinceOptions}
+                        onchange={genericInputOnChange} required></lightning-combobox>
+                </div>  
+            </div>
+             <div class="slds-grid aob_form_row slds-gutters_large slds-wrap">     
+                <div class="aob_form_input slds-col slds-m-top_small slds-size_1-of-3">
+                    <label class="aob_screen-field-label slds-m-bottom_none">{label.AOB_PostalCode}</label>
+                    <lightning-input type="text" variant="label-hidden" value={postalCode}
+                        placeholder="e.g. 2192" name="postalCode" onchange={genericInputOnChange}
+                        pattern="[0-9]{4}" required min-length="4" max-length="4"
+                        message-when-value-missing="Please enter your Postal Code. The Postal Code field cannot be left blank."
+                        message-when-too-short="Please enter a 4-digit Postal Code."
+                        message-when-too-long="Please enter a 4-digit Postal Code."
+                        message-when-pattern-mismatch="A valid Postal Code does not contain letters">
+                    </lightning-input>
+                </div> 
+             </div>    
+
+             <!--Navigation Buttons-->
+            <div class="aob_display-flex aob_mobile_1_of_1 slds-size_1-of-1 aob_margin_horizontal_auto slds-m-vertical_small aob_navigation_buttons">
+               <lightning-button class="slds-size_1-of-2 aob_mobile_1_of_1 aob_margin_horizontal_auto slds-m-vertical_xx-small aob_text_align_center slds-p-horizontal_small" 
+                       variant="neutral" label="Back" title="Back" onclick={backToPreviousPage}></lightning-button> 
+               <lightning-button class="slds-size_1-of-2 aob_mobile_1_of_1 aob_margin_horizontal_auto slds-m-vertical_xx-small aob_text_align_center slds-p-horizontal_small" 
+                       variant="brand" label="continue" title="continue" onclick={continueToNextPage}></lightning-button>   
+            </div>
+            </form>   
+            </template>    
+        </div>
+     </div>  
+</template>

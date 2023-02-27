@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pro_rata_for_current_financial_year__c</fullName>
+    <description>SFP-5354 Calculation: Financial Year End - Inception date</description>
+    <externalId>false</externalId>
+    <formula>IF( Renewal__c ,
+  IF( 
+    AND(
+      Inception_Date__c &gt;= DATE(YEAR(TODAY()),1,1),
+      Inception_Date__c &lt;= DATE(YEAR(TODAY()),12,31)
+    ),
+    DATE(YEAR(TODAY()),12,31) - Inception_Date__c,
+    IF( 
+      AND(
+        Inception_Date__c &lt; DATE(YEAR(TODAY()),1,1),
+        Inception_Date__c &gt;= DATE(YEAR(TODAY()) - 1,1,1),
+        Renewal_Date__c &gt;= DATE(YEAR(TODAY()),1,1),
+        Renewal_Date__c &lt;= DATE(YEAR(TODAY()),12,31)
+      ),
+      Renewal_Date__c - DATE(YEAR(TODAY()),1,1),
+      0
+    )
+  ),
+  0
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Calculation to display Pro-rata for current Financial year in days.</inlineHelpText>
+    <label>Pro-rata for current financial year</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

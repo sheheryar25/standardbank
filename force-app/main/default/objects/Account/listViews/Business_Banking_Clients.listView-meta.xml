@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Banking_Clients</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.TYPE</columns>
+    <columns>Client_Record_Type__c</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Primary_Relationship_Holder__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Primary_Relationship_Holder__c</field>
+        <operation>equals</operation>
+        <value>Business Banking</value>
+    </filters>
+    <label>Business Banking Clients</label>
+</ListView>

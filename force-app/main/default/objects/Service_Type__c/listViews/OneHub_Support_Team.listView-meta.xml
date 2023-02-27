@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OneHub_Support_Team</fullName>
+    <columns>NAME</columns>
+    <columns>ServiceType__c</columns>
+    <columns>Category__c</columns>
+    <columns>Sub_Category__c</columns>
+    <columns>CIB_Service_Tier__c</columns>
+    <columns>Entitlement__c</columns>
+    <columns>Description__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>User_Team__c</field>
+        <operation>equals</operation>
+        <value>CIB Global-Digital-Digital-OneHub Support</value>
+    </filters>
+    <label>OneHub Support Team</label>
+    <sharedTo>
+        <roleAndSubordinates>CIB_Global_Digital_Division</roleAndSubordinates>
+    </sharedTo>
+</ListView>

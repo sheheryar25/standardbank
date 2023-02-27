@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Requestor_s_Business_Area__c</fullName>
+    <description>The primary business area concerned with the case and client</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Primary Business Area</inlineHelpText>
+    <label>Requestor&apos;s Business Area</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>All</fullName>
+                <default>false</default>
+                <label>All</label>
+            </value>
+            <value>
+                <fullName>Business</fullName>
+                <default>false</default>
+                <label>Business</label>
+            </value>
+            <value>
+                <fullName>Business Enabler</fullName>
+                <default>false</default>
+                <label>Business Enabler</label>
+            </value>
+            <value>
+                <fullName>Consultant</fullName>
+                <default>false</default>
+                <label>Consultant</label>
+            </value>
+            <value>
+                <fullName>Coverage</fullName>
+                <default>false</default>
+                <label>Coverage</label>
+            </value>
+            <value>
+                <fullName>Global Markets</fullName>
+                <default>false</default>
+                <label>Global Markets</label>
+            </value>
+            <value>
+                <fullName>Investment Banking</fullName>
+                <default>false</default>
+                <label>Investment Banking</label>
+            </value>
+            <value>
+                <fullName>IT</fullName>
+                <default>false</default>
+                <label>IT</label>
+            </value>
+            <value>
+                <fullName>PBB</fullName>
+                <default>false</default>
+                <label>PBB</label>
+            </value>
+            <value>
+                <fullName>TPS</fullName>
+                <default>false</default>
+                <label>TPS</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

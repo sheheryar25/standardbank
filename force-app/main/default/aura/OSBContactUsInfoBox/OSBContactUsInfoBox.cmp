@@ -1,0 +1,43 @@
+<aura:component >
+	<aura:attribute name="title" type="String" />
+    <aura:attribute name="content" type="String" />
+    <aura:attribute name="link" type="String" />
+    <aura:attribute name="id" type="String" default="1" />
+    <aura:attribute name="support" type="Boolean" />
+    <aura:attribute name="feedback" type="Boolean" />
+    <aura:attribute name="optl" type="Boolean" />
+    <aura:attribute name="optlEmail" type="String" default="onehub@standardbank.co.za" access="private"/>
+    <aura:attribute name="marketplaceEmail" type="String" default="marketplace@standardbank.co.za" access="private"/>
+    <div class="contactBox">
+        <aura:if isTrue="{!v.support}">
+            <div class="contactBox__title">
+        	Customer Support
+        </div>
+        <div class="our-operating-hours">
+            Our operating hours are:<br></br>Monday-Friday: 9:00 to 16:00
+        </div>
+            <div class="EmailSection">
+                <div class="email-us">Email us: </div>
+                <a class="oneplacetola" href="{!'mailto:'+v.optlEmail}"
+                data-id="uitlink_link" data-text="{! 'Contact Us Info Box | ' + v.optlEmail}">
+                    {!v.optlEmail}
+                </a>
+            </div>
+        </aura:if>
+        <aura:if isTrue="{!v.feedback == true}">
+            <div class="contactBox__title">
+        	Customer Feedback
+        </div>
+        <div class="our-operating-hours">
+            Our operating hours are:<br></br>Monday-Friday: 9:00 to 16:00
+        </div>
+            <div class="EmailSection">
+                <div class="email-us">Email us: </div>
+                <a class="oneplacetola" href="{!'mailto:'+v.optlEmail}"
+                data-id="uitlink_link" data-text="{! 'Contact Us Info Box | ' + v.optlEmail}">
+                    {!v.optlEmail}
+                </a>
+            </div>
+        </aura:if>
+    </div>
+</aura:component>

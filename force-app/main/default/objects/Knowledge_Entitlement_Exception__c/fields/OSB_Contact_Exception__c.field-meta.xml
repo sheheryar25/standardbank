@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OSB_Contact_Exception__c</fullName>
+    <description>This field is used to link the Knowledge Entitlement Exception record to the specific contact it is applicable to. (SGPRT-2974)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select the Contact this exception is applicable to.</inlineHelpText>
+    <label>Contact</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Knowledge Entitlement Exceptions</relationshipLabel>
+    <relationshipName>Knowledge_Entitlement_Exceptions</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

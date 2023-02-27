@@ -1,0 +1,52 @@
+/**
+ * Created by Chibuye Kunda on 2019/12/02.
+ */
+
+.THIS.c-container {
+    border: 1px solid #d8dde6;
+    margin: 10px 0 20px 0;
+    padding-left: 4px;
+    border-radius: 4px;
+}
+
+.THIS .page-section {
+    border: solid 1px #ccc;
+    padding: 1rem;
+    border-radius: 4px;
+}
+.THIS .page-header {
+    height: 68px;
+}
+.THIS .slds-card{
+    /*padding-left: 30px;*/
+}
+.THIS .card-padding-8{
+    padding: 8px;
+}
+.THIS .btn_center_header{
+    position: relative;
+    top: -42%;
+
+}
+.THIS .btn_center_header_back{
+    position: relative;
+    top: -35%;
+    margin-left: 14px;
+}
+.THIS .btn-footer{
+    text-align: center;
+}
+.THIS .page-section .btn-close{
+    margin-left: 93%;
+    margin-bottom: 1%;
+}
+.THIS .white-input .slds-form-element__control .slds-input{
+    background: white;
+}
+.THIS .white-input .slds-form-element__control .slds-select{
+    background: white;
+}
+
+.THIS .white-input .slds-form-element__control .slds-rich-text-editor__toolbar{
+    background: white;
+}

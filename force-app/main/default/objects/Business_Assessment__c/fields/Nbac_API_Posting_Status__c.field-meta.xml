@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Nbac_API_Posting_Status__c</fullName>
+    <defaultValue>&quot;Not yet posted&quot;</defaultValue>
+    <description>US-4434 - Stores callout success or failures messages</description>
+    <externalId>false</externalId>
+    <label>NBAC API Posting Status</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Validation</fullName>
+    <active>false</active>
+    <description>This rule checks if</description>
+    <errorConditionFormula>Financial_Account__r.Client__r.CIF__c  &lt;&gt;  Authorized_Person__r.CIF_Number__c</errorConditionFormula>
+    <errorMessage>Contact can have access to it&apos;s financial accounts linked to it&apos;s client</errorMessage>
+</ValidationRule>

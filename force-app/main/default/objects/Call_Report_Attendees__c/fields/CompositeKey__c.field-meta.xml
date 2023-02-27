@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CompositeKey__c</fullName>
+    <caseSensitive>true</caseSensitive>
+    <description>This field is updated by workflow field update when the attendee is inserted. It&apos;s value is derived from concatenating the Call_Report and the Contact Id&apos;s. These two fields make an attendee unique per call report
+
+Case 4296 - Event Report Enhancements</description>
+    <externalId>true</externalId>
+    <label>CompositeKey</label>
+    <length>36</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

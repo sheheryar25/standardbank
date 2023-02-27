@@ -1,0 +1,19 @@
+<aura:component controller="StdBank_Ltn_SendEmail">
+	<aura:attribute name="addresses" type="Object[]" access="private" />
+	<aura:attribute name="orgWideEmailAddressId" type="String" default="" />
+
+	<aura:handler name="init" action="{!c.doInit}" value="{!this}" />
+
+	<div class="slds-form-element">
+		<label class="slds-form-element__label">From</label>
+		<div class="slds-form-element__control">
+			<div class="slds-select_container">
+				<select aura:id="from" class="slds-select" onchange="{!c.onChange}">
+					<aura:iteration items="{!v.addresses}" var="address">
+						<option value="{!address.orgWideEmailAddressId == null ? '' : address.orgWideEmailAddressId}">{!address.name + ' &lt;' + address.email + '&gt;'}</option>
+					</aura:iteration>
+				</select>
+			</div>
+		</div>
+	</div>
+</aura:component>

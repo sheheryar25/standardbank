@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_CST_and_Hierarchy_update_required</fullName>
+    <active>true</active>
+    <description># CST Updates and # Client Hierarchy Updates required for user case record types if the Sub Category is Portfolio Project</description>
+    <errorConditionFormula>AND(
+$RecordType.Name =&apos;User Case&apos;,
+ISPICKVAL(Status,&quot;Closed&quot;),
+ISBLANK(TEXT(Client_Hierarchy_Updates__c)),
+ISBLANK(TEXT(CST_Updates__c)),
+ISPICKVAL(Sub_Category__c ,&quot;Portfolio Project&quot;)
+)</errorConditionFormula>
+    <errorMessage>Please specify Number of CST and Client Hierachy Updates before closing the case</errorMessage>
+</ValidationRule>

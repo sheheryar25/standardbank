@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Group__c</fullName>
+    <description>SFP-9327 [c] Similar products are grouped together in a Product Group</description>
+    <externalId>false</externalId>
+    <label>Product Group</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Acquiring</fullName>
+                <default>false</default>
+                <label>Acquiring</label>
+            </value>
+            <value>
+                <fullName>Bancassurance</fullName>
+                <default>false</default>
+                <label>Bancassurance</label>
+            </value>
+            <value>
+                <fullName>Business Transactional Product</fullName>
+                <default>false</default>
+                <label>Business Transactional Product</label>
+            </value>
+            <value>
+                <fullName>Corporate Card</fullName>
+                <default>false</default>
+                <label>Corporate Card</label>
+            </value>
+            <value>
+                <fullName>Credit Card</fullName>
+                <default>false</default>
+                <label>Credit Card</label>
+            </value>
+            <value>
+                <fullName>Current Account</fullName>
+                <default>false</default>
+                <label>Current Account</label>
+            </value>
+            <value>
+                <fullName>Digital</fullName>
+                <default>false</default>
+                <label>Digital</label>
+            </value>
+            <value>
+                <fullName>Global Markets</fullName>
+                <default>false</default>
+                <label>Global Markets</label>
+            </value>
+            <value>
+                <fullName>Home Loans</fullName>
+                <default>false</default>
+                <label>Home Loans</label>
+            </value>
+            <value>
+                <fullName>Loans</fullName>
+                <default>false</default>
+                <label>Loans</label>
+            </value>
+            <value>
+                <fullName>Online Banking</fullName>
+                <default>false</default>
+                <label>Online Banking</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Personal Loans</fullName>
+                <default>false</default>
+                <label>Personal Loans</label>
+            </value>
+            <value>
+                <fullName>Personal Markets</fullName>
+                <default>false</default>
+                <label>Personal Markets</label>
+            </value>
+            <value>
+                <fullName>Savings &amp; Investments</fullName>
+                <default>false</default>
+                <label>Savings &amp; Investments</label>
+            </value>
+            <value>
+                <fullName>Structured Working Capital Finance</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Structured Working Capital Finance</label>
+            </value>
+            <value>
+                <fullName>SWCF</fullName>
+                <default>false</default>
+                <label>SWCF</label>
+            </value>
+            <value>
+                <fullName>Trade</fullName>
+                <default>false</default>
+                <label>Trade</label>
+            </value>
+            <value>
+                <fullName>Trade Products</fullName>
+                <default>false</default>
+                <label>Trade Products</label>
+            </value>
+            <value>
+                <fullName>VAF</fullName>
+                <default>false</default>
+                <label>VAF</label>
+            </value>
+            <value>
+                <fullName>Vehicle and Asset Finance</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Vehicle and Asset Finance</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

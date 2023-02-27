@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CloseDate</fullName>
+    <inlineHelpText>The day the Opportunity should close. Cannot be a date in the past.</inlineHelpText>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+</CustomField>

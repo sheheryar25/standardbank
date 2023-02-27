@@ -1,0 +1,130 @@
+.THIS {
+    margin: 0 20px;
+    color: #fff;
+}
+
+.THIS .ui-text {
+    font-size: 14px;
+    line-height: 22px;
+    color: #0a2240;
+}
+
+.THIS .banner {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    margin: 0 auto;
+    padding-bottom: 88px;
+}
+
+.THIS button.btn-signin-options .label {
+    color: #0033aa;
+}
+
+.THIS .btn-signin-options {
+    background: #ededed;
+    border: none;
+    margin-bottom: 16px;
+}
+
+.THIS button.ui_button {
+    font-family: BentonSans;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    text-align: center;
+    height: 50px;
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.3);
+    border: 1px solid transparent;
+    text-shadow: none;
+}
+
+.THIS .modalSection{
+    position:absolute!important;
+}
+
+.THIS .ui-modal{
+    width: 500px;
+    box-shadow: 0 6px 25px 0 rgba(0,0,0,0.1);
+    background: #ffffff;
+    padding: 40px 40px 48px 40px;
+    border-radius: 4px;
+    overflow-y:auto;
+    /*max-height:90vh;*/
+    top: 9rem;
+    position: relative;
+}
+
+.THIS .modal-container{
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.THIS .ui_close{
+	float: right;
+    top: -2.5rem;
+    right: -1.5rem;
+    position: relative;
+}
+
+.THIS .banner__left {
+    background: linear-gradient(135deg, #0C2644 0%, #15437A 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 64px 24px;
+}
+
+.THIS .banner__title {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+  	line-height: 27px;
+    text-transform:uppercase;
+}
+
+.THIS .banner__content {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+}
+
+.THIS .banner__line {
+    background: linear-gradient(#695B3A 0%, #A48C5C 100%);
+    height: 2px;
+    width: 240px;
+    margin-left: -120px;
+}
+
+.THIS .banner__image {
+    height: 100%;
+    object-fit: cover;
+    object-position: 80%;
+}
+
+@media (max-width: 480px) {
+    .THIS .banner__right {
+        display: none;
+    }
+}
+
+@media(min-width: 480px) {
+    .THIS .banner__left {
+        padding: 120px 32px;
+    }
+}
+
+.THIS .banner__btn {
+    border-radius: 3px;
+  	background-color: #FFFFFF;
+    color: #0089FF;
+}

@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Parent_Product__c</fullName>
+    <description>SFP-12591 Used to group Insurance products</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select the appropriate product to be linked with the Policy</inlineHelpText>
+    <label>Parent Product</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Product_Type__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Agriculture</fullName>
+                <default>false</default>
+                <label>Agriculture</label>
+            </value>
+            <value>
+                <fullName>Aviation</fullName>
+                <default>false</default>
+                <label>Aviation</label>
+            </value>
+            <value>
+                <fullName>Commercial Property</fullName>
+                <default>false</default>
+                <label>Commercial Property</label>
+            </value>
+            <value>
+                <fullName>Construction &amp; Engineering</fullName>
+                <default>false</default>
+                <label>Construction &amp; Engineering</label>
+            </value>
+            <value>
+                <fullName>General</fullName>
+                <default>false</default>
+                <label>General</label>
+            </value>
+            <value>
+                <fullName>Guarantee</fullName>
+                <default>false</default>
+                <label>Guarantee</label>
+            </value>
+            <value>
+                <fullName>Health</fullName>
+                <default>false</default>
+                <label>Health</label>
+            </value>
+            <value>
+                <fullName>Life</fullName>
+                <default>false</default>
+                <label>Life</label>
+            </value>
+            <value>
+                <fullName>Marine</fullName>
+                <default>false</default>
+                <label>Marine</label>
+            </value>
+            <value>
+                <fullName>Motor vehicles and fleet</fullName>
+                <default>false</default>
+                <label>Motor vehicles and fleet</label>
+            </value>
+            <value>
+                <fullName>Multiperil or stand alone</fullName>
+                <default>false</default>
+                <label>Multiperil or stand alone</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Specialist</fullName>
+                <default>false</default>
+                <label>Specialist</label>
+            </value>
+            <value>
+                <fullName>VAF Other Assets</fullName>
+                <default>false</default>
+                <label>VAF Other Assets</label>
+            </value>
+            <value>
+                <fullName>VAF Motor</fullName>
+                <default>false</default>
+                <label>VAF Motor</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Motor Traders Internal</controllingFieldValue>
+            <controllingFieldValue>Motor VAPS (excess buy down and deposit protector)</controllingFieldValue>
+            <controllingFieldValue>Sectional title: Residential</controllingFieldValue>
+            <controllingFieldValue>Stated Benefits</controllingFieldValue>
+            <controllingFieldValue>Motor Warranty</controllingFieldValue>
+            <controllingFieldValue>Multiperil</controllingFieldValue>
+            <controllingFieldValue>Taxi and e-hailer</controllingFieldValue>
+            <controllingFieldValue>Office Contents</controllingFieldValue>
+            <controllingFieldValue>Bondsure</controllingFieldValue>
+            <controllingFieldValue>Buildings Combined</controllingFieldValue>
+            <controllingFieldValue>Business All Risks</controllingFieldValue>
+            <controllingFieldValue>Business Interruption</controllingFieldValue>
+            <controllingFieldValue>Theft</controllingFieldValue>
+            <controllingFieldValue>Accidental Damage</controllingFieldValue>
+            <controllingFieldValue>Accounts Receivable</controllingFieldValue>
+            <controllingFieldValue>Business multiperil (Packaged solutions - SME)</controllingFieldValue>
+            <controllingFieldValue>Commercial - Financed Assets stand-alone cover</controllingFieldValue>
+            <controllingFieldValue>Electronic Equipment</controllingFieldValue>
+            <controllingFieldValue>Employers Liability</controllingFieldValue>
+            <controllingFieldValue>Fidelity Guarantee</controllingFieldValue>
+            <controllingFieldValue>Fire &amp; Allied Perils</controllingFieldValue>
+            <controllingFieldValue>Glass</controllingFieldValue>
+            <controllingFieldValue>Goods in Transit</controllingFieldValue>
+            <controllingFieldValue>Group Personal Accident</controllingFieldValue>
+            <controllingFieldValue>Heavy commercial vehicles</controllingFieldValue>
+            <controllingFieldValue>Home-owners associations multiperil</controllingFieldValue>
+            <controllingFieldValue>Money</controllingFieldValue>
+            <controllingFieldValue>Public Liability</controllingFieldValue>
+            <controllingFieldValue>Motor Comprehensive</controllingFieldValue>
+            <controllingFieldValue>Motor Credit shortfall</controllingFieldValue>
+            <controllingFieldValue>Sectional title: Commercial and mixed use</controllingFieldValue>
+            <controllingFieldValue>Motor Fleet</controllingFieldValue>
+            <controllingFieldValue>Motor Personal Accident</controllingFieldValue>
+            <controllingFieldValue>Motor Traders external</controllingFieldValue>
+            <valueName>Multiperil or stand alone</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Security Liability</controllingFieldValue>
+            <controllingFieldValue>Stevedores Liability</controllingFieldValue>
+            <controllingFieldValue>Motor XOL</controllingFieldValue>
+            <controllingFieldValue>Aviation Liability</controllingFieldValue>
+            <controllingFieldValue>Bailees Liability</controllingFieldValue>
+            <controllingFieldValue>Bankers Blanket Bond</controllingFieldValue>
+            <controllingFieldValue>Broadform Liability</controllingFieldValue>
+            <controllingFieldValue>Trustees Indemnity</controllingFieldValue>
+            <controllingFieldValue>Umbrella Liability</controllingFieldValue>
+            <controllingFieldValue>Advertisers Liability</controllingFieldValue>
+            <controllingFieldValue>Warehousemans Liability</controllingFieldValue>
+            <controllingFieldValue>Airstrip / Helipad Liability</controllingFieldValue>
+            <controllingFieldValue>Wrongful arrest</controllingFieldValue>
+            <controllingFieldValue>Carriers Liability</controllingFieldValue>
+            <controllingFieldValue>Charterers Liability</controllingFieldValue>
+            <controllingFieldValue>Construction Liability</controllingFieldValue>
+            <controllingFieldValue>Container Lability</controllingFieldValue>
+            <controllingFieldValue>Cyber</controllingFieldValue>
+            <controllingFieldValue>Defective workmanship</controllingFieldValue>
+            <controllingFieldValue>Directors &amp; Officers</controllingFieldValue>
+            <controllingFieldValue>Employers Liability</controllingFieldValue>
+            <controllingFieldValue>Environmental Liability</controllingFieldValue>
+            <controllingFieldValue>Event Insurance</controllingFieldValue>
+            <controllingFieldValue>Events Liability</controllingFieldValue>
+            <controllingFieldValue>Freight Forwarders Liability</controllingFieldValue>
+            <controllingFieldValue>Kidnap and Ransom</controllingFieldValue>
+            <controllingFieldValue>Liability: Passenger</controllingFieldValue>
+            <controllingFieldValue>Marine Liability</controllingFieldValue>
+            <controllingFieldValue>Medical Malpractise</controllingFieldValue>
+            <controllingFieldValue>Products Guarantee</controllingFieldValue>
+            <controllingFieldValue>Products Liability</controllingFieldValue>
+            <controllingFieldValue>Products recall</controllingFieldValue>
+            <controllingFieldValue>Professional Indemnity</controllingFieldValue>
+            <controllingFieldValue>Project PI</controllingFieldValue>
+            <controllingFieldValue>Public Liability</controllingFieldValue>
+            <valueName>Specialist</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Short term Coupon</controllingFieldValue>
+            <controllingFieldValue>Political Violence &amp; Terrorism</controllingFieldValue>
+            <controllingFieldValue>Travel</controllingFieldValue>
+            <controllingFieldValue>Workers Compensation</controllingFieldValue>
+            <controllingFieldValue>Art &amp; Specie</controllingFieldValue>
+            <controllingFieldValue>Assets All Risks incl BI</controllingFieldValue>
+            <controllingFieldValue>Commercial Crime</controllingFieldValue>
+            <controllingFieldValue>Confiscation, Expropriation, Nationaliation, Deprivation (CEND)</controllingFieldValue>
+            <controllingFieldValue>Deterioration of stock</controllingFieldValue>
+            <controllingFieldValue>Fuel Guarantee</controllingFieldValue>
+            <controllingFieldValue>Group Household</controllingFieldValue>
+            <controllingFieldValue>Machinery Breakdown incl BI</controllingFieldValue>
+            <controllingFieldValue>SASRIA Standalone</controllingFieldValue>
+            <valueName>General</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SME Life</controllingFieldValue>
+            <controllingFieldValue>BLP</controllingFieldValue>
+            <controllingFieldValue>BVLP</controllingFieldValue>
+            <controllingFieldValue>Employee Protect</controllingFieldValue>
+            <controllingFieldValue>Group Funeral</controllingFieldValue>
+            <controllingFieldValue>Group Life &amp; Disability</controllingFieldValue>
+            <controllingFieldValue>Key Man insurance</controllingFieldValue>
+            <valueName>Life</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Stock Guarantee</controllingFieldValue>
+            <controllingFieldValue>Supply Guarantee</controllingFieldValue>
+            <controllingFieldValue>Utility Gurantee</controllingFieldValue>
+            <controllingFieldValue>Construction Guarantee</controllingFieldValue>
+            <controllingFieldValue>Credit Guarantee</controllingFieldValue>
+            <controllingFieldValue>Guarantee: Rental</controllingFieldValue>
+            <controllingFieldValue>Guarantee: Rental deposit</controllingFieldValue>
+            <controllingFieldValue>Guarantee other</controllingFieldValue>
+            <valueName>Guarantee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Stock throughput</controllingFieldValue>
+            <controllingFieldValue>Cash in Transit</controllingFieldValue>
+            <controllingFieldValue>Marine Cargo (with option of ALOP cover)</controllingFieldValue>
+            <controllingFieldValue>Marine Cargo Exports</controllingFieldValue>
+            <controllingFieldValue>Marine Cargo Imports</controllingFieldValue>
+            <controllingFieldValue>Marine hull</controllingFieldValue>
+            <controllingFieldValue>Marine Inland Transit</controllingFieldValue>
+            <valueName>Marine</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Orchard</controllingFieldValue>
+            <controllingFieldValue>Orchard Insurance</controllingFieldValue>
+            <controllingFieldValue>Plant All Risks</controllingFieldValue>
+            <controllingFieldValue>Plantation insurance</controllingFieldValue>
+            <controllingFieldValue>Bloodstock</controllingFieldValue>
+            <controllingFieldValue>Agricultural equipment and implements</controllingFieldValue>
+            <controllingFieldValue>Crop Insurance</controllingFieldValue>
+            <controllingFieldValue>Farm Pack</controllingFieldValue>
+            <controllingFieldValue>Fire</controllingFieldValue>
+            <controllingFieldValue>Game insurance</controllingFieldValue>
+            <controllingFieldValue>Livestock insurance</controllingFieldValue>
+            <valueName>Agriculture</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Plant All Risks</controllingFieldValue>
+            <controllingFieldValue>Advanced Loss of Profits / Delay in start up</controllingFieldValue>
+            <controllingFieldValue>Contractors All Risks</controllingFieldValue>
+            <controllingFieldValue>Deterioration of stock</controllingFieldValue>
+            <controllingFieldValue>Electronic Equipment</controllingFieldValue>
+            <controllingFieldValue>Erection All Risks</controllingFieldValue>
+            <controllingFieldValue>Machinery Breakdown incl BI</controllingFieldValue>
+            <controllingFieldValue>Medical Equipment</controllingFieldValue>
+            <valueName>Construction &amp; Engineering</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Plant All Risks</controllingFieldValue>
+            <controllingFieldValue>Theft</controllingFieldValue>
+            <controllingFieldValue>Aviation hull</controllingFieldValue>
+            <controllingFieldValue>Fire &amp; Allied Perils</controllingFieldValue>
+            <controllingFieldValue>Marine hull</controllingFieldValue>
+            <controllingFieldValue>Property All Risks</controllingFieldValue>
+            <valueName>VAF Other Assets</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Buildings Combined</controllingFieldValue>
+            <controllingFieldValue>Contractors All Risks (with option of BI cover)</controllingFieldValue>
+            <controllingFieldValue>Fire &amp; Allied Perils (with option of BI cover)</controllingFieldValue>
+            <controllingFieldValue>Property All Risks (with option of BI cover)</controllingFieldValue>
+            <valueName>Commercial Property</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Aviation hull</controllingFieldValue>
+            <valueName>Aviation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Group Health</controllingFieldValue>
+            <valueName>Health</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Group Motor</controllingFieldValue>
+            <controllingFieldValue>Motor Comprehensive</controllingFieldValue>
+            <controllingFieldValue>Motor Third Party</controllingFieldValue>
+            <controllingFieldValue>Motor Third Party Fire &amp; theft</controllingFieldValue>
+            <valueName>Motor vehicles and fleet</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Motor Comprehensive</controllingFieldValue>
+            <valueName>VAF Motor</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

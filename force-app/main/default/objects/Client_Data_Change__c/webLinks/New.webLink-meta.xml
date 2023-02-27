@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New</fullName>
+    <availability>online</availability>
+    <description>Send the Client id on the VF page.</description>
+    <displayType>massActionButton</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>New</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <requireRowSelection>false</requireRowSelection>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/connection.js&quot;)}
+  
+var Query=sforce.connection.query(&quot;Select id,Status__c From Client_Data_Change__c where Client_Name__c=&apos;{!Account.Id}&apos; and Status__c=&apos;Submitted For Approval&apos; and RecordType.DeveloperName=&apos;Client_Coordinator_Request&apos;&quot;);
+
+records = Query.getArray(&quot;records&quot;);
+
+if(records.length&lt;1){
+window.parent.location.href = &quot;apex/ChangeRequestOnClientPage?ClientId={!Account.Id}&quot;
+}
+else {
+alert(&quot;The approval process is already in progress&quot;);
+}</url>
+</WebLink>

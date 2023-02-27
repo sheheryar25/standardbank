@@ -1,0 +1,136 @@
+.THIS {
+    align-self: normal;
+}
+
+.THIS .pagination {
+    padding: 80px 0;
+    max-width: 1224px;
+    margin: auto;
+	display: flex;
+    flex-direction: column;
+}
+
+.THIS .pagination--full {
+    align-items: center;
+}
+
+.THIS .product__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: minmax(300px, 1fr);
+    grid-column-gap: 24px;
+    grid-row-gap: 32px;
+}
+
+.THIS .solution__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-column-gap: 24px;
+    grid-row-gap: 32px;
+    align-self: normal;
+}
+
+.THIS .navigation-container{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    
+}
+
+.THIS .btnSec :not(:first-child){
+    margin-right: 5px;
+}
+
+.THIS .btnSec :first-child {
+    margin-right: 5px;
+}
+
+.THIS .btnSec{
+    min-width: 50%;
+    display: contents;
+    display: flex;
+    align-content: center;
+    align-self: center;
+    justify-content: center;
+}
+
+.THIS .navigation-element__chevron,
+.THIS .navigation-element{
+    height: 100%;
+    cursor: pointer;
+}
+
+.THIS .navigation-element__chevron {
+    font-size: 24px;
+    letter-spacing: 16px;
+    color: #0089ff;
+}
+
+.THIS .navigation-element__chevron-disabled {
+    color: rgb(87, 96, 107);
+    cursor: default;
+}
+
+.THIS .skipBtn{
+    filter: grayscale(100) brightness(1.7);
+}
+
+.THIS .LeftButtonSec{
+    display: contents;
+}
+.THIS .rightButtonSec{
+    display: contents;
+}
+
+.THIS .leftChev{
+    margin-top: -4px;
+}
+
+.THIS .rightChev{
+    margin-top: -4px;
+    margin-right: 10px
+}
+
+.THIS .navigation-pageButton {
+    background-color: #EDEDED;
+    transition: 0.3s;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 30px;
+    max-width: 30px;
+    border-radius:50%;
+    color: #3366CC;
+    width: -webkit-fill-available;
+}
+
+.THIS .grayscale { 
+    filter: grayscale(100%); 
+}
+
+.THIS .navigation-leftMostButton {
+    margin-top: 7px;
+    font-size: 24px;
+    transform: rotate(180deg);
+}
+
+.THIS .btnTrans{
+    transform: rotate(180deg);
+}
+
+.THIS .navigation-rightMostButton {
+    margin-top: -4px;
+    font-size: 24px;
+}
+
+.THIS .navigation-pageButton:hover{
+    color: #FFFFFF;
+    background: linear-gradient(135deg, #3366CC 0%, #3366CC 100%);
+}
+
+.THIS .navigation-pageButton_selected{
+    background-color: #3366CC;
+    color: #FFFFFF;
+    background: linear-gradient(135deg, #3366CC 0%, #3366CC 100%);
+}

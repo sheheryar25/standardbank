@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PremiumAmount</fullName>
+    <description>SFP-12591 - The amount the customer will pay periodically or once-off based on the product selected.</description>
+    <inlineHelpText>The amount the customer will pay,  including commission, periodically or once-off based on the product selected.</inlineHelpText>
+    <trackHistory>false</trackHistory>
+</CustomField>

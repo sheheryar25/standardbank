@@ -1,0 +1,181 @@
+.THIS {
+  margin: -48px -16px !important;
+  font-family: "Calibri" !important;
+  height: 1000px;
+}
+
+.THIS body {
+  overflow: unset !important;
+  font-family: "Calibri" !important;
+}
+
+.THIS .comm-page-custom-refinitiv-sign-up {
+  overflow: unset !important;
+}
+
+.THIS .rightImage {
+  background-color: #1768b0;
+  width: 50%;
+  min-height: calc(130vh - 250px);
+}
+
+.THIS .slds-input[readonly] {
+  padding-left: 12px !important;
+}
+
+.THIS .logoAuth {
+  top: 38%;
+  left: 54%;
+  position: absolute;
+}
+
+.THIS .inputSection {
+  margin: auto;
+  display: block;
+}
+
+.THIS .LogoImageSection {
+  margin-top: 75px;
+  font-family: "Calibri" !important;
+}
+
+.THIS .box {
+  position: relative;
+}
+
+.THIS .title {
+  color: #444444;
+  font-family: "Calibri" !important;
+  font-size: 40px;
+  letter-spacing: 0;
+  line-height: 48px;
+  text-align: center;
+  margin-bottom: 57px;
+  text-align: center;
+}
+
+.THIS .newRequest__form--input input,
+.THIS .newRequest__form--input textArea {
+  border: 1px solid #cccccc;
+  border-radius: 2px;
+  background-color: #ffffff;
+  width: 100%;
+  min-height: 53px;
+}
+
+.THIS .newRequest__form--input {
+  padding-top: 20px;
+  font-family: "Calibri" !important;
+}
+
+.THIS .newRequest__form--label {
+  text-align: left;
+}
+
+.THIS .btnStyle {
+  display: block;
+  height: 50px;
+  border: 0;
+  border-radius: 2px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 13px;
+  text-transform: uppercase;
+  text-align: center;
+  transition: all 0.15s ease-in;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #0068b6;
+  margin: auto;
+  width: 296px;
+  margin-top: 37px;
+  font-family: "Calibri" !important;
+}
+
+.THIS .signUp__tnc {
+  color: #0a2240;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.THIS .rectangle-black {
+  height: 38px;
+  background-color: #000000;
+  display: block;
+  position: absolute;
+  bottom: calc(1vh - 30rem);
+  right: -0.7rem;
+}
+
+.THIS .titleLogo {
+  color: #121dff;
+  font-size: 36px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 43px;
+  background-color: #ffffff;
+}
+
+.THIS .titleLogoR {
+  color: #121dff;
+  letter-spacing: 0;
+  line-height: 26px;
+  background-color: #ffffff;
+  font-size: 12px;
+}
+
+.THIS .rectangle-turquoise {
+  height: 38px;
+  background-color: #00d0d4;
+  display: block;
+  position: absolute;
+  bottom: calc(1vh - 35rem);
+  right: -0.7rem;
+}
+
+.THIS .submittedSection {
+  width: 544px;
+  color: #767676;
+  font-family: "Calibri" !important;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: 29px;
+  text-align: center;
+}
+
+.THIS .titleClass {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 650px) {
+  .THIS .signUp__tnc {
+    padding: 0 0 48px 0;
+    align-self: center;
+    text-align: center;
+    width: 90% !important;
+  }
+}
+
+@media (max-width: 649px) {
+  .THIS .inputSection {
+    width: 90% !important;
+    padding: 50px 0px 50px 15px;
+    height: 950px;
+  }
+  .THIS .rightImage {
+    display: none;
+  }
+
+  .THIS .signUp__tnc {
+    padding: 10px 0px 0px 15px;
+    display: inline-block;
+    flex-wrap: wrap;
+  }
+}
+
+.THIS .signUp--tnc--link {
+  color: #0089ff;
+  flex-wrap: wrap;
+}

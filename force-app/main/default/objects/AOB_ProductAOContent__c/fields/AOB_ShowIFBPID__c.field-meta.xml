@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AOB_ShowIFBPID__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Show this content only if the customer has a bpid</description>
+    <externalId>false</externalId>
+    <label>Show only for customers with BPID</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

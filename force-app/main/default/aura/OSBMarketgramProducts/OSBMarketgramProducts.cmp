@@ -1,0 +1,72 @@
+<aura:component description="OSBMarketgramProducts" controller="OSB_MarketgramProducts_CTRL">
+    <aura:attribute name="currentTab" type="String" default="Solutions"/>
+    <aura:attribute name="apisComingSoon" type="Object[]"/>
+    <aura:attribute name="apis" type="Object[]"/>
+    <aura:attribute name="solutions" type="Object[]"/>
+    <aura:attribute name="solutionsComingSoon" type="Object[]"/>
+    <aura:attribute name="products" type="Object[]"/>
+    <aura:attribute name="highlightedProduct" type="Object"/>
+    <aura:attribute name="showProducts" type="Boolean" default="true"/>
+    <aura:attribute name="productsLoaded" type="Boolean" default="false"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler name="change" value="{!v.currentTab}" action="{!c.handleTabChange}"/>
+    <aura:handler name="onSelectProductEvent" event="c:OSBOnSelectProductEvent" action="{!c.showProductFeed}"/>
+    <aura:handler name="onBackButtonEvent" event="c:OSBOnClickBackButtonEvent" action="{!c.goBackToProducts}"/>
+
+    <aura:registerEvent name="navigationEvent" type="c:OSBNavigationEvent"/>
+
+    <div class="marketgram">
+        <div class="marketgram__content">
+            <div class="marketgram__title mb_32">Let us know what you think</div>
+            <div class="marketgram__products">
+                <aura:if isTrue="{!v.showProducts}">
+
+                    <div class="marketgram__tabs">
+                        <lightning:tabset class="marketgram__tabset" selectedTabId="{!v.currentTab}">
+                            <lightning:tab label="Solutions" id="Solutions">
+                                <aura:iteration items="{!v.solutions}" var="product">
+                                    <span>
+                                        <div class="marketgram__product" data-product-Id="{!product.index}">
+                                            <c:OSBMarketgramProduct product="{!product}"/>
+                                        </div>
+                                    </span>
+                                    <div class="marketgram__underline mb_24"/>
+                                </aura:iteration>
+                                <aura:iteration items="{!v.solutionsComingSoon}" var="productComingSoon">
+                                    <span>
+                                        <div class="marketgram__product" data-product-Id="{!productComingSoon.index}">
+                                            <c:OSBMarketgramProduct product="{!productComingSoon}"/>
+                                        </div>
+                                    </span>
+                                    <div class="marketgram__underline mb_24"/>
+                                </aura:iteration>
+                            </lightning:tab>
+                            <lightning:tab label="API Products" id="APIProducts">
+                                <aura:iteration items="{!v.apis}" var="product">
+                                    <span>
+                                        <div class="marketgram__product" data-product-Id="{!product.index}">
+                                            <c:OSBMarketgramProduct product="{!product}"/>
+                                        </div>
+                                    </span>
+                                    <div class="marketgram__underline mb_24"/>
+                                </aura:iteration>
+                                <aura:iteration items="{!v.apisComingSoon}" var="productComingSoon">
+                                    <span>
+                                        <div class="marketgram__product" data-product-Id="{!productComingSoon.index}">
+                                            <c:OSBMarketgramProduct product="{!productComingSoon}"/>
+                                        </div>
+                                    </span>
+                                    <div class="marketgram__underline mb_24"/>
+                                </aura:iteration>
+                            </lightning:tab>
+                        </lightning:tabset>
+                    </div>
+                    <aura:set attribute="else">
+                        <c:OSBProductFeed product="{!v.highlightedProduct}"/>
+                    </aura:set>
+                </aura:if>
+            </div>
+        </div>
+    </div>
+</aura:component>

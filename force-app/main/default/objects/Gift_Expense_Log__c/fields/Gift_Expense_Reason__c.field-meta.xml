@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Gift_Expense_Reason__c</fullName>
+    <description>Reason for Offering/Receiving the Gift or Event Invitation
+
+Case 1051: Gift / Expense Logs : C Reinecke</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Reason for Offering/Receiving Gift or Event Invitation</inlineHelpText>
+    <label>Gift / Expense Reason</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Achieving a Milestone</fullName>
+                <default>false</default>
+                <label>Achieving a Milestone</label>
+            </value>
+            <value>
+                <fullName>Birthday Gift</fullName>
+                <default>false</default>
+                <label>Birthday Gift</label>
+            </value>
+            <value>
+                <fullName>Christmas Gift</fullName>
+                <default>false</default>
+                <label>Christmas Gift</label>
+            </value>
+            <value>
+                <fullName>Competition Winner</fullName>
+                <default>false</default>
+                <label>Competition Winner</label>
+            </value>
+            <value>
+                <fullName>Cultural Practice</fullName>
+                <default>false</default>
+                <label>Cultural Practice</label>
+            </value>
+            <value>
+                <fullName>Easter Gift</fullName>
+                <default>false</default>
+                <label>Easter Gift</label>
+            </value>
+            <value>
+                <fullName>Farewell Gift</fullName>
+                <default>false</default>
+                <label>Farewell Gift</label>
+            </value>
+            <value>
+                <fullName>Get Well Soon</fullName>
+                <default>false</default>
+                <label>Get Well Soon</label>
+            </value>
+            <value>
+                <fullName>Golf Day</fullName>
+                <default>false</default>
+                <label>Golf Day</label>
+            </value>
+            <value>
+                <fullName>Holiday Tours</fullName>
+                <default>false</default>
+                <label>Holiday Tours</label>
+            </value>
+            <value>
+                <fullName>Lead Generation</fullName>
+                <default>false</default>
+                <label>Lead Generation</label>
+            </value>
+            <value>
+                <fullName>Marketing Opportunity</fullName>
+                <default>false</default>
+                <label>Marketing Opportunity</label>
+            </value>
+            <value>
+                <fullName>New Business Exploration</fullName>
+                <default>false</default>
+                <label>New Business Exploration</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Relationship Building</fullName>
+                <default>false</default>
+                <label>Relationship Building</label>
+            </value>
+            <value>
+                <fullName>Secretaries Day</fullName>
+                <default>false</default>
+                <label>Secretaries Day</label>
+            </value>
+            <value>
+                <fullName>Service Excellence</fullName>
+                <default>false</default>
+                <label>Service Excellence</label>
+            </value>
+            <value>
+                <fullName>Teamwork</fullName>
+                <default>false</default>
+                <label>Teamwork</label>
+            </value>
+            <value>
+                <fullName>Valentine&apos;s Day</fullName>
+                <default>false</default>
+                <label>Valentine&apos;s Day</label>
+            </value>
+            <value>
+                <fullName>Wedding Gift</fullName>
+                <default>false</default>
+                <label>Wedding Gift</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

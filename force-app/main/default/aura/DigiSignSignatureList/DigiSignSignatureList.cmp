@@ -1,0 +1,214 @@
+<!--
+- Created by Emmanuel Nocks Mulea on 2020/10/06.
+ -->
+
+<aura:component controller="DigiSignConsent" description="DigiSignSignatureList" implements="flexipage:availableForAllPageTypes,force:hasRecordId,force:appHostable"  access="global" >
+    <aura:attribute name="recordId" type="String" access="public"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler event="force:refreshView" action="{!c.doInit}" />
+    <aura:attribute name="OboardingList" type="DigiSignConsent.OnboardWrapper[]" access="private"/>
+    <aura:attribute name="trackCollapse" type="Integer" default="-1" access="private"/>
+    <aura:attribute name="isLoading" type="boolean" default="true" access="private"/>
+    <aura:attribute name="isPending" type="boolean" default="true" access="private"/>
+    <lightning:notificationsLibrary aura:id="notifLib"/>
+    <div class="slds-card-wrapper" style="padding-bottom: 0px;">
+    <article class="slds-card slds-card_boundary forceRelatedListCardDesktop" style="background-color: #f3f2f2 !important; min-height: 70px;overflow-x: hidden;">
+        <div class="slds-card__header slds-page-header slds-grid forceRelatedListCardHeader">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="slds-media__figure stencil slds-avatar slds-avatar_small" aria-hidden="true" >
+                    <div class="extraSmall forceEntityIcon"  data-aura-class="forceEntityIcon">
+                        <span class="uiImage" data-aura-class="uiImage">
+                           <lightning:icon iconName="custom:custom14" alternativeText="Approved" title="DigiSign Status" />
+                        </span>
+                    </div>
+                </div>
+                <div class="slds-media__body">
+
+                    <h2 class="slds-card__header-title">
+                        <a class="slds-card__header-link baseCard__header-title-container" href="{!'/lightning/r/'+v.recordId+'/related/Onboarding_Applications__r/view'}"  title="Client Consent">
+
+                          <span class="slds-card__header-title slds-truncate slds-m-right--xx-small" title="Client Consent" data-aura-rendered-by="573:0">
+                              Client Consent
+                            <aura:if isTrue="{!v.OboardingList.length>5}">
+                                      (5+)
+                                <aura:set attribute="else">
+                                ({!v.OboardingList.length})
+                                </aura:set>
+                            </aura:if>
+                          </span>
+                        </a>
+                    </h2>
+                </div>
+                <div aura:id="sb-drop-down-35" class="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-closed">
+                    <a href="javascript:void(0);" onclick="{!c.dropDownMenu}" class="slds-button slds-button_icon slds-button_icon-border-filled slds-button--icon-x-small" aria-haspopup="true" title="Show More">
+                        <lightning:icon class="slds-button__icon slds-icon-utility-down slds-icon_container forceIcon" iconName="utility:down" alternativeText="down" size="xx-small" title="down" />
+                    </a>
+                    <div class="slds-dropdown slds-dropdown_right">
+                        <ul class="slds-dropdown__list" role="menu" aria-label="Show More">
+                            <li class="slds-dropdown__item" role="presentation">
+                                <aura:if isTrue="{!and(v.OboardingList.length>0,v.isPending)}">
+                                <a href="javascript:void(0);" onclick="{!c.checkStatus}" role="menuitem" aria-disabled="false" tabindex="0" title="Check Status">
+                                    <div title="Check Status" class="forceActionLink" role="button">Check Status</div>
+                                </a>
+                                    <aura:set attribute="else">
+                                        <a  href="javascript:void(0);" role="menuitem" aria-disabled="true" tabindex="-1" title="undefined">No actions available</a>
+                                    </aura:set>
+                                </aura:if>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <aura:if isTrue="{!v.isLoading}">
+            <div class="slds-spinner_container" style="position: relative; height: 4em;">
+                <lightning:spinner variant="brand" size="medium"/>
+            </div>
+            <aura:set attribute="else">
+
+        <aura:if isTrue="{!v.OboardingList.length>0}">
+        <table aria-multiselectable="true" class="slds-table slds-table_bordered slds-table_fixed-layout slds-table_resizable-cols slds-tree slds-table_tree" role="treegrid">
+            <thead>
+            <tr class="slds-line-height_reset">
+                <th aria-label="Name" aria-sort="none" style="width: 25px;" class="slds-is-resizable slds-is-sortable" scope="col">
+                </th>
+                <th aria-label="Request Type" aria-sort="none" class="slds-is-resizable slds-is-sortable" scope="col">
+                    <a class="slds-th__action slds-text-link_reset" href="javascript:void(0);" role="button" tabindex="0">
+                        <span class="slds-assistive-text">Sort by: </span>
+                        <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                            <span class="slds-truncate" title="Request Type">Request Type</span>
+                        </div>
+                    </a>
+                </th>
+                <th aria-label="Requested By" aria-sort="none" class="slds-is-resizable slds-is-sortable" scope="col">
+                    <a class="slds-th__action slds-text-link_reset" href="javascript:void(0);" role="button" tabindex="0">
+                        <span class="slds-assistive-text">Sort by: </span>
+                        <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                            <span class="slds-truncate" title="Requested By">Requested By</span>
+                        </div>
+                    </a>
+                </th>
+                <th aria-label="Status" aria-sort="none" class="slds-is-resizable slds-is-sortable" scope="col">
+                    <a class="slds-th__action slds-text-link_reset" href="javascript:void(0);" role="button" tabindex="0">
+
+                        <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                            <span class="slds-truncate" title="Status">Status</span>
+                        </div>
+                    </a>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <aura:iteration items="{!v.OboardingList}" var="onboard" indexVar="index">
+                    <tr aria-selected="false" class="slds-hint-parent" data-id="{!onboard.id}" style="cursor: pointer;" onclick="{!c.section}">
+                        <td scope="row">
+                            <div class="slds-float--left " id="{!index}">
+                                <aura:If isTrue="{!index==onboard.collapse}">
+                                    <lightning:icon   iconName="utility:chevrondown" size="x-small" alternativeText="Indicates dash"/>
+
+                                <aura:set attribute="else">
+                                    <lightning:icon   iconName="utility:chevronright" size="x-small" alternativeText="Indicates add"/>
+                                </aura:set>
+                                </aura:If>
+                            </div>
+                        </td>
+                        <td role="gridcell">
+                            <div class="slds-truncate"  title="{!onboard.onboardApp.Request_Type__c}">
+                                <a href="{! '/'+onboard.onboardApp.Id}" target="_blank" tabindex="0">{!onboard.onboardApp.Request_Type__c}</a>
+                            </div>
+                        </td>
+                        <td role="gridcell">
+                            <div class="slds-truncate" id="{!index}" title="{!onboard.onboardApp.Requested_By__c}">{!onboard.onboardApp.Requested_By__c}</div>
+                        </td>
+                        <td role="gridcell">
+                            <div class="slds-truncate" id="{!index}" title="{!onboard.onboardApp.Status__c}" style="color: #d4af37">{!onboard.onboardApp.Status__c}</div>
+                        </td>
+                    </tr>
+                    <aura:If isTrue="{!index==onboard.collapse}">
+                            <div  class="slds-p-around_medium" style="font-weight: bold; margin-left: 30px" >Signatories</div>
+                            <aura:iteration items="{!onboard.appDocList}" var="relatedRecord">
+                            <tr  aria-selected="false" style=""  class="slds-hint-parent" id="{!'collapse_section_'+index}" >
+                                <td data-label="Pending" role="gridcell">
+
+                                </td>
+                                <td  role="gridcell" data-label="Pending">
+                                    <aura:if isTrue="{!onboard.onboardApp.Client__r.RecordType.Name=='Commercial Banking Client'}">
+
+                                        <div class="slds-truncate" style="margin-left: 13px;" title="{!relatedRecord.Authorised_Person__r.Name}">
+                                            <a href="{! '/'+relatedRecord.Authorised_Person__r.Id}" target="_blank"  tabindex="0">{!relatedRecord.Authorised_Person__r.Name}</a>
+
+                                        </div>
+                                        <aura:set attribute="else">
+                                            <div class="slds-truncate" style="margin-left: 13px;" title="{!relatedRecord.Authorised_Person__r.Name}">
+                                                <a href="{! '/'+relatedRecord.Authorised_Person__r.Id}" target="_blank"  tabindex="0">{!relatedRecord.Authorised_Person__r.Name}</a>
+                                            </div>
+                                        </aura:set>
+                                    </aura:if>
+                                </td>
+
+                                <td data-label="Pending" role="gridcell">
+                                    <aura:if isTrue="{!onboard.onboardApp.Client__r.RecordType.Name=='Commercial Banking Client'}">
+                                        <div class="slds-truncate"  title="{!relatedRecord.Authorised_Person__r.Contact_Role_s_at_Client__c}">{!relatedRecord.Authorised_Person__r.Contact_Role_s_at_Client__c}</div>
+                                        <aura:set attribute="else">
+                                          <div class="slds-truncate"  title="{!relatedRecord.Authorised_Person__r.Contact_Role_s_at_Client__c}">{!relatedRecord.Authorised_Person__r.Contact_Role_s_at_Client__c}</div>
+                                        </aura:set>
+                                    </aura:if>
+                                </td>
+                                <td data-label="Pending" role="gridcell">
+                                    <aura:if isTrue="{!onboard.onboardApp.Client__r.RecordType.Name=='Commercial Banking Client'}">
+                                        <div class="slds-truncate"  title="{!relatedRecord.Document_Status__c}" style="color: #d4af37;">{!relatedRecord.Document_Status__c}</div>
+                                        <aura:set attribute="else">
+                                        <div class="slds-truncate"  title="{!relatedRecord.Document_Status__c}" style="color: #d4af37;width: 60px;">{!relatedRecord.Document_Status__c}</div>
+                                        </aura:set>
+                                    </aura:if>
+                                </td>
+                            </tr>
+
+                            </aura:iteration>
+                    </aura:If>
+            </aura:iteration>
+
+            </tbody>
+        </table>
+        </aura:if>
+            </aura:set>
+        </aura:if>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--        <lightning:treeGrid-->
+<!--                columns="{! v.gridColumns }"-->
+<!--                data="{! v.gridData }"-->
+<!--                expandedRows="{! v.gridExpandedRows }"-->
+<!--                keyField="name"-->
+<!--                aura:id="mytree"-->
+<!--        />-->
+
+
+    </article>
+    </div>
+    <aura:attribute name="gridColumns" type="List" />
+    <aura:attribute name="gridData" type="Object" />
+    <aura:attribute name="gridExpandedRows" type="List" />
+</aura:component>

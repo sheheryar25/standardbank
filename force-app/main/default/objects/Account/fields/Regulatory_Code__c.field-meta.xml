@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Regulatory_Code__c</fullName>
+    <description>Regulatory Code</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Regulatory Code</inlineHelpText>
+    <label>Regulatory Code</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>KYC_Location__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>BCB - Banco Central do Brasil</fullName>
+                <default>false</default>
+                <label>BCB - Banco Central do Brasil</label>
+            </value>
+            <value>
+                <fullName>BCC - Banque Centrale du Congo</fullName>
+                <default>false</default>
+                <label>BCC - Banque Centrale du Congo</label>
+            </value>
+            <value>
+                <fullName>BCEAO - Central Bank of West African States</fullName>
+                <default>false</default>
+                <label>BCEAO - Central Bank of West African States</label>
+            </value>
+            <value>
+                <fullName>BDM - Banco de Mozambique</fullName>
+                <default>false</default>
+                <label>BDM - Banco de Mozambique</label>
+            </value>
+            <value>
+                <fullName>BNA - Banco Nacional de Angola</fullName>
+                <default>false</default>
+                <label>BNA - Banco Nacional de Angola</label>
+            </value>
+            <value>
+                <fullName>BOB - Bank of Botswana</fullName>
+                <default>false</default>
+                <label>BOB - Bank of Botswana</label>
+            </value>
+            <value>
+                <fullName>BOE - Bank of England</fullName>
+                <default>false</default>
+                <label>BOE - Bank of England</label>
+            </value>
+            <value>
+                <fullName>BOG - Bank of Ghana</fullName>
+                <default>false</default>
+                <label>BOG - Bank of Ghana</label>
+            </value>
+            <value>
+                <fullName>BOM - Bank of Mauritius</fullName>
+                <default>false</default>
+                <label>BOM - Bank of Mauritius</label>
+            </value>
+            <value>
+                <fullName>BON - Bank of Namibia</fullName>
+                <default>false</default>
+                <label>BON - Bank of Namibia</label>
+            </value>
+            <value>
+                <fullName>BOT -  Bank of Tanzania</fullName>
+                <default>false</default>
+                <label>BOT -  Bank of Tanzania</label>
+            </value>
+            <value>
+                <fullName>BOU - Bank of Uganda</fullName>
+                <default>false</default>
+                <label>BOU - Bank of Uganda</label>
+            </value>
+            <value>
+                <fullName>BOZ -  Bank of Zambia</fullName>
+                <default>false</default>
+                <label>BOZ -  Bank of Zambia</label>
+            </value>
+            <value>
+                <fullName>CBK - Central Bank of Kenya</fullName>
+                <default>false</default>
+                <label>CBK - Central Bank of Kenya</label>
+            </value>
+            <value>
+                <fullName>CBL - Central Bank of Lesotho</fullName>
+                <default>false</default>
+                <label>CBL - Central Bank of Lesotho</label>
+            </value>
+            <value>
+                <fullName>CBN - Central Bank of Nigeria</fullName>
+                <default>false</default>
+                <label>CBN - Central Bank of Nigeria</label>
+            </value>
+            <value>
+                <fullName>CBS - Central Bank of Swaziland</fullName>
+                <default>false</default>
+                <label>CBS - Central Bank of Swaziland</label>
+            </value>
+            <value>
+                <fullName>RBM - Reserve Bank of Malawi</fullName>
+                <default>false</default>
+                <label>RBM - Reserve Bank of Malawi</label>
+            </value>
+            <value>
+                <fullName>RBZ - Reserve Bank of Zimbabwe</fullName>
+                <default>false</default>
+                <label>RBZ - Reserve Bank of Zimbabwe</label>
+            </value>
+            <value>
+                <fullName>SARB - South African Reserve Bank</fullName>
+                <default>false</default>
+                <label>SARB - South African Reserve Bank</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>SBSA - Standard Bank of South Africa Ltd</controllingFieldValue>
+            <valueName>SARB - South African Reserve Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SBSZ - Standard Bank Swaziland Ltd</controllingFieldValue>
+            <valueName>CBS - Central Bank of Swaziland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SBT - Standard Bank of South Africa Ltd, Taipei Bra</controllingFieldValue>
+            <valueName>BOE - Bank of England</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SBTZ - Stanbic Bank Tanzania Ltd</controllingFieldValue>
+            <valueName>BOT -  Bank of Tanzania</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SBUG - Stanbic Bank Uganda Ltd</controllingFieldValue>
+            <valueName>BOU - Bank of Uganda</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SBZM - Stanbic Bank Zambia Ltd</controllingFieldValue>
+            <valueName>BOZ -  Bank of Zambia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SBZW - Stanbic Bank Zimbabwe Ltd</controllingFieldValue>
+            <valueName>RBZ - Reserve Bank of Zimbabwe</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SBAO - Standard Bank de Angola SA</controllingFieldValue>
+            <valueName>BNA - Banco Nacional de Angola</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SBBW - Stanbic Bank Botswana Ltd</controllingFieldValue>
+            <valueName>BOB - Bank of Botswana</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SBCD - Stanbic Bank Congo SARL</controllingFieldValue>
+            <valueName>BCC - Banque Centrale du Congo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SBGH - Stanbic Bank Ghana Ltd</controllingFieldValue>
+            <valueName>BOG - Bank of Ghana</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SBKE - CFC Stanbic Bank Ltd Kenya</controllingFieldValue>
+            <valueName>CBK - Central Bank of Kenya</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SBLS - Standard Lesotho Bank Ltd</controllingFieldValue>
+            <valueName>CBL - Central Bank of Lesotho</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SBMW - Standard Bank Ltd Malawi</controllingFieldValue>
+            <valueName>RBM - Reserve Bank of Malawi</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SBMZ - Standard Bank SARL Mozambique</controllingFieldValue>
+            <valueName>BDM - Banco de Mozambique</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SBNA - Standard Bank Namibia Ltd</controllingFieldValue>
+            <valueName>BON - Bank of Namibia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SBCI - Standard Bank Cote D&apos;Ivoire SA</controllingFieldValue>
+            <valueName>BCEAO - Central Bank of West African States</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SBN - Stanbic IBTC Bank Plc</controllingFieldValue>
+            <valueName>CBN - Central Bank of Nigeria</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

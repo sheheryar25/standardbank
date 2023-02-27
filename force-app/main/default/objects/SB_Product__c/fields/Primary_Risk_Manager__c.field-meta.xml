@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Primary_Risk_Manager__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Credit/ Equity Risk Manager</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Credit/ Equity Risk Manager</inlineHelpText>
+    <label>Primary Risk Manager</label>
+    <lookupFilter>
+        <active>true</active>
+        <errorMessage>Please enter an active Bank Contact. Client Contacts or bank inactive contacts cannot be captured.</errorMessage>
+        <filterItems>
+            <field>Contact.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Bank Contact Record Type</value>
+        </filterItems>
+        <filterItems>
+            <field>Contact.Inactive__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Products</relationshipLabel>
+    <relationshipName>Products</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

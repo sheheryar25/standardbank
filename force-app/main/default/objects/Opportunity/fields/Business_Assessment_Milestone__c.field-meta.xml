@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Assessment_Milestone__c</fullName>
+    <description>Value copied from Milestone__c on Business Assessment [SFP-6735]</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Milestone of the related Business Assessment. If Opportunity is related to multiple Business Assessment, URL of the most recently updated one is reflected on the opportunity.</inlineHelpText>
+    <label>Business Assessment Milestone/ Status</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

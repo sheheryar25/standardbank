@@ -1,0 +1,13 @@
+<!--
+ - Created by tsobota on 09.08.2018.
+ -->
+
+<aura:component description="CC_CST_Change_Confirmation_Modal_Footer">
+    <aura:attribute name="parentComponent" type="Object" />
+    <aura:attribute name="parentHelper" type="Object" />
+
+    <lightning:overlayLibrary aura:id="overlayLibFooter"/>
+
+    <lightning:button name="submit" onclick="{! c.submit}" label="Submit"/>
+    <lightning:button name="cancel" onclick="{! c.cancel}" label="Cancel"/>
+</aura:component>

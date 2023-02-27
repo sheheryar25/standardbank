@@ -1,0 +1,43 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    
+    <aura:attribute name = "allDeviceAuthList" type ="List" access ="public"/>
+    <aura:attribute name="removeDevice" type = "Boolean" default = "false" access ="private" />
+    <aura:attribute name="removeAllDevices" type = "Boolean" default = "false" access ="private" />
+    <aura:attribute name = "devicesToDeleteList" type ="List" access ="public"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    <aura:handler name="closePopUpEvent" event="c:OSBClosePopUpEvent" action="{!c.handlePopupClose}" />
+    <aura:registerEvent name ="deviceManagementEvent" type="c:OSBDeviceManagementEvent"/>
+    
+    <table class ="device-data"   style="width:100%">
+        <tr class="heading-row" style="height:40px;width:90%" >
+            <th class="table-heading column1">Device</th>
+            <th class="table-heading column2">Link Date</th>
+            <th class="table-heading column4">Method</th>    
+            <th class="table-heading column6"></th> 
+        </tr>
+        <aura:iteration items="{!v.allDeviceAuthList}" var ="item" end="5">
+            <tr class="data-row"  style="height:50px;width:90%" >
+                <td class ="table-data column1 "  id ="{!item.deviceId}" > 
+                    <aura:if isTrue ="{!item.osTypeAndroid}" >
+                        <i class= "ms-icn_phone_android noHighlight"></i>
+                        <aura:set attribute="else">
+                            <i class= "ms-icn_phone_iphone noHighlight"></i>
+                        </aura:set>                                
+                    </aura:if >{!item.deviceInfo} - {!item.deviceModel}</td>
+                <td class ="table-data column2">{!item.createdTimeStamp}</td>
+                <td class ="table-data column4">{!item.authenticatorsDescription}</td>
+                <td class ="table-data column6" >
+                    <lightning:button variant="base" value="{!item.authenticatorsHandle}" class="icon ms-icn_bin noHighlight" onclick="{!c.confirmationPopupRemove}"></lightning:button>
+                </td>
+            </tr>
+            <div class="grey-line-break" ></div>
+        </aura:iteration>
+    </table>
+    <aura:if isTrue="{!v.removeDevice}">
+        <c:OSBMarketGramPopup title="Remove device?" content="Removing a device will unlink the authenticator from your profile." icon ="QuestionMark"/>
+    </aura:if>
+    <aura:if isTrue="{!v.removeAllDevices}">
+        <c:OSBMarketGramPopup title="Remove all devices?" content="Removing all devices will unlink all authenticators from your profile." icon ="QuestionMark"/>
+    </aura:if>
+</aura:component>

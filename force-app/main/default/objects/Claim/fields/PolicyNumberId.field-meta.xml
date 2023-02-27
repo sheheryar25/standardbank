@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PolicyNumberId</fullName>
+    <description>SFP-12613 - Policy Number.</description>
+    <inlineHelpText>Unique number to identify Policy</inlineHelpText>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

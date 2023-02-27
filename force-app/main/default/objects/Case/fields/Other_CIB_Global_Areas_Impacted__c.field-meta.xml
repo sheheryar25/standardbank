@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Other_CIB_Global_Areas_Impacted__c</fullName>
+    <externalId>false</externalId>
+    <label>Other CIB Global Areas Impacted</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CIBI</fullName>
+                <default>false</default>
+                <label>CIBI</label>
+            </value>
+            <value>
+                <fullName>CIBSA</fullName>
+                <default>false</default>
+                <label>CIBSA</label>
+            </value>
+            <value>
+                <fullName>CIBROA</fullName>
+                <default>false</default>
+                <label>CIBROA</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

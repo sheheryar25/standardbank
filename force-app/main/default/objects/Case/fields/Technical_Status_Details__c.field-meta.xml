@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Technical_Status_Details__c</fullName>
+    <externalId>false</externalId>
+    <label>Technical Status Details</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Business Requirements Gathering</fullName>
+                <default>false</default>
+                <label>Business Requirements Gathering</label>
+            </value>
+            <value>
+                <fullName>Requirements/A&amp;D In Progress</fullName>
+                <default>false</default>
+                <label>Requirements/A&amp;D In Progress</label>
+            </value>
+            <value>
+                <fullName>Requirements/A&amp;D Complete</fullName>
+                <default>false</default>
+                <label>Requirements/A&amp;D Complete</label>
+            </value>
+            <value>
+                <fullName>DEV Sandbox Build In Progress</fullName>
+                <default>false</default>
+                <label>DEV Sandbox Build In Progress</label>
+            </value>
+            <value>
+                <fullName>In Development</fullName>
+                <default>false</default>
+                <label>In Development</label>
+            </value>
+            <value>
+                <fullName>SIT Testing</fullName>
+                <default>false</default>
+                <label>SIT Testing</label>
+            </value>
+            <value>
+                <fullName>DEV Sandbox Testing Failed</fullName>
+                <default>false</default>
+                <label>DEV Sandbox Testing Failed</label>
+            </value>
+            <value>
+                <fullName>DEV Sandbox Testing Passed</fullName>
+                <default>false</default>
+                <label>DEV Sandbox Testing Passed</label>
+            </value>
+            <value>
+                <fullName>Approved for UAT Sandbox Build/Test</fullName>
+                <default>false</default>
+                <label>Approved for UAT Sandbox Build/Test</label>
+            </value>
+            <value>
+                <fullName>UAT Sandbox Build In Progress</fullName>
+                <default>false</default>
+                <label>UAT Sandbox Build In Progress</label>
+            </value>
+            <value>
+                <fullName>UAT Testing</fullName>
+                <default>false</default>
+                <label>UAT Testing</label>
+            </value>
+            <value>
+                <fullName>Regression Testing</fullName>
+                <default>false</default>
+                <label>Regression Testing</label>
+            </value>
+            <value>
+                <fullName>UAT Sandbox Testing Failed</fullName>
+                <default>false</default>
+                <label>UAT Sandbox Testing Failed</label>
+            </value>
+            <value>
+                <fullName>UAT Sandbox Testing Passed</fullName>
+                <default>false</default>
+                <label>UAT Sandbox Testing Passed</label>
+            </value>
+            <value>
+                <fullName>Waiting for Production Release Date</fullName>
+                <default>false</default>
+                <label>Waiting for Production Release Date</label>
+            </value>
+            <value>
+                <fullName>Approved for Production/Release</fullName>
+                <default>false</default>
+                <label>Approved for Production/Release</label>
+            </value>
+            <value>
+                <fullName>Post Implementation Testing</fullName>
+                <default>false</default>
+                <label>Post Implementation Testing</label>
+            </value>
+            <value>
+                <fullName>Production Testing Failed</fullName>
+                <default>false</default>
+                <label>Production Testing Failed</label>
+            </value>
+            <value>
+                <fullName>Production Testing Passed</fullName>
+                <default>false</default>
+                <label>Production Testing Passed</label>
+            </value>
+            <value>
+                <fullName>No Activity</fullName>
+                <default>false</default>
+                <label>No Activity</label>
+            </value>
+            <value>
+                <fullName>Lack of Funding</fullName>
+                <default>false</default>
+                <label>Lack of Funding</label>
+            </value>
+            <value>
+                <fullName>Implemented in Prod</fullName>
+                <default>false</default>
+                <label>Implemented in Prod</label>
+            </value>
+            <value>
+                <fullName>Roll-back</fullName>
+                <default>false</default>
+                <label>Roll-back</label>
+            </value>
+            <value>
+                <fullName>Non-IT Request</fullName>
+                <default>false</default>
+                <label>Non-IT Request</label>
+            </value>
+            <value>
+                <fullName>Pending Feedback from Premier Support</fullName>
+                <default>false</default>
+                <label>Pending Feedback from Premier Support</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

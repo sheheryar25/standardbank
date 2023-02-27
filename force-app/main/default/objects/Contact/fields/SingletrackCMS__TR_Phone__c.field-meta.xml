@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SingletrackCMS__TR_Phone__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <formula>IF(NOT(ISBLANK(SingletrackCMS__TR_Phone2__c)), SingletrackCMS__TR_Phone2__c,
+     IF(
+     BEGINS(SingletrackCMS__TR_Tel_Country_Code__c , &apos;+&apos;) , 
+     IF(
+          BEGINS(SingletrackCMS__TR_Tel_Area_Code__c, &apos;0&apos;) ,  
+          SingletrackCMS__TR_Tel_Country_Code__c+&quot;&quot;+ RIGHT(SingletrackCMS__TR_Tel_Area_Code__c, LEN(SingletrackCMS__TR_Tel_Area_Code__c) -1),
+          SingletrackCMS__TR_Tel_Country_Code__c +&quot;&quot;+SingletrackCMS__TR_Tel_Area_Code__c
+      ) ,
+     SingletrackCMS__TR_Tel_Country_Code__c+&quot;&quot;+ SingletrackCMS__TR_Tel_Area_Code__c
+) 
+
++&quot;&quot;+
+
+IF(ISBLANK(SingletrackCMS__TR_Tel_Number__c) , &apos;&apos;, SingletrackCMS__TR_Tel_Number__c ) 
+
++&quot;&quot;+
+
+IF(ISBLANK(SingletrackCMS__TR_Tel_Extension__c) , &apos;&apos; , &quot; Ext: &quot; +SingletrackCMS__TR_Tel_Extension__c))</formula>
+    <label>Third Party Phone</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

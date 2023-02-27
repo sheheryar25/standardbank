@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OSB_Contact_Re_invited__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>OneHub: This field is used to indicate whether or not a user has been re-invited to OneHub. (SGPRT-1731)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>True if the user has been re-invited to Salesforce.</inlineHelpText>
+    <label>Contact Re-invited</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

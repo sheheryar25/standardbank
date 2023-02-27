@@ -1,0 +1,14 @@
+<aura:component >
+	<aura:attribute name="value" type="Decimal"/>
+	<aura:attribute name="isoCode" type="String"/>
+	<aura:attribute name="convertedValue" type="Decimal"/>
+	<aura:attribute name="convertedIsoCode" type="String"/>
+	<aura:attribute name="format" type="String"/>
+	<aura:attribute name="class" type="String"/>
+	<div class="{!v.class}">
+		<ui:outputCurrency value="{!v.value}" format="{!v.isoCode+' '+v.format}"/>
+		<aura:if isTrue="{!and(v.convertedValue,v.convertedIsoCode)}">
+			(<ui:outputCurrency value="{!v.convertedValue}" format="{!v.convertedIsoCode+' '+v.format}" />)
+		</aura:if>
+	</div>
+</aura:component>

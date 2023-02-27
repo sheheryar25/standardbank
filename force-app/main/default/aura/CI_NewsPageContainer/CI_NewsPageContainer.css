@@ -1,0 +1,19 @@
+.THIS .filterButton {
+    float:right;
+    background-color: #fff;
+}
+.THIS.scrollerSizeHidden {
+    height: 93.5%;
+    width: 100%;
+    border-radius: 1px;
+}
+.THIS.scrollerSizeShown {
+    height: 79.5%;
+    width: 100%;
+    border-radius: 1px;
+}
+
+.THIS .innerDivWrapper {
+    min-height: 101%;
+    padding-bottom: 20px;
+}

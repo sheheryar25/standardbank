@@ -1,0 +1,36 @@
+<aura:component >
+    <aura:attribute name="link" type="String"/>
+    <aura:attribute name="label" type="String"/>
+    <aura:attribute name="icon" type="String"/>
+    <aura:attribute name="iconcategory" type="String"/>
+    <aura:attribute name="icontype" type="String"/>
+    <aura:attribute name="openNewWindow" type="Boolean" default="false"/>
+    
+   	<aura:handler name="init" value="{!this}" action="{!c.setup}"/>
+
+    <li class="slds-m-bottom_xx-small">
+        <div class="slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="slds-media__figure">
+                    <span class="slds-icon_container slds-icon-utility-standard_objects" title="{!v.label}">
+                        <c:StdBank_Ltn_SVG class="slds-icon slds-icon-text-default slds-icon_x-small" category="{!v.iconcategory}" fill="" type="{!v.icontype}" />
+                    </span>
+                </div>
+                <div class="slds-media__body">
+                    <h2>
+                        <aura:if isTrue="{!v.openNewWindow}">
+                             <a onclick="{!c.open}" class="slds-card__header-link slds-truncate">
+                                <span class="slds-text-body_regular">{!v.label}</span>
+                            </a>
+                            <aura:set attribute="else">
+                                <a target="_blank" href="{!v.link}" class="slds-card__header-link slds-truncate">
+                                    <span class="slds-text-body_regular">{!v.label}</span>
+                                </a>
+                            </aura:set> 
+                        </aura:if>
+                    </h2>
+                </div>
+            </header>
+        </div>
+    </li>
+</aura:component>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_List__c</fullName>
+    <description>Case#220 - Cam field that holds the products users can select as YES, NO and POTENTIAL products for a specific client</description>
+    <externalId>false</externalId>
+    <label>Product List</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Advisory</fullName>
+                <default>false</default>
+                <label>Advisory</label>
+            </value>
+            <value>
+                <fullName>Bank Services</fullName>
+                <default>false</default>
+                <label>Bank Services</label>
+            </value>
+            <value>
+                <fullName>Cash Management</fullName>
+                <default>false</default>
+                <label>Cash Management</label>
+            </value>
+            <value>
+                <fullName>Commodities</fullName>
+                <default>false</default>
+                <label>Commodities</label>
+            </value>
+            <value>
+                <fullName>Credit &amp; Rates</fullName>
+                <default>false</default>
+                <label>Credit &amp; Rates</label>
+            </value>
+            <value>
+                <fullName>Debt Capital Markets</fullName>
+                <default>false</default>
+                <label>Debt Capital Markets</label>
+            </value>
+            <value>
+                <fullName>Equities</fullName>
+                <default>false</default>
+                <label>Equities</label>
+            </value>
+            <value>
+                <fullName>Equity Capital Markets</fullName>
+                <default>false</default>
+                <label>Equity Capital Markets</label>
+            </value>
+            <value>
+                <fullName>Foreign Exchange</fullName>
+                <default>false</default>
+                <label>Foreign Exchange</label>
+            </value>
+            <value>
+                <fullName>Investor Services</fullName>
+                <default>false</default>
+                <label>Investor Services</label>
+            </value>
+            <value>
+                <fullName>Lending</fullName>
+                <default>false</default>
+                <label>Lending</label>
+            </value>
+            <value>
+                <fullName>Money Markets</fullName>
+                <default>false</default>
+                <label>Money Markets</label>
+            </value>
+            <value>
+                <fullName>PBB</fullName>
+                <default>false</default>
+                <label>PBB</label>
+            </value>
+            <value>
+                <fullName>Real Estate</fullName>
+                <default>false</default>
+                <label>Real Estate</label>
+            </value>
+            <value>
+                <fullName>Trade Services &amp; Finance</fullName>
+                <default>false</default>
+                <label>Trade Services &amp; Finance</label>
+            </value>
+            <value>
+                <fullName>Credit</fullName>
+                <default>false</default>
+                <label>Credit</label>
+            </value>
+            <value>
+                <fullName>Rates</fullName>
+                <default>false</default>
+                <label>Rates</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

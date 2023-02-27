@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Set_Selected_Core_CST_For_CIB_Target</fullName>
+    <active>true</active>
+    <description>Allow updates to &apos;Selected Core CST&apos; only if the record is a &apos;CIB Target Client&apos; (US-1307) and  &apos;CRT Client Type&apos; is CRT Top Parent (US-1433)</description>
+    <errorConditionFormula>AND(
+    ISCHANGED(Selected_Core_CST__c),
+    NOT(CIB_Target_Client__c),
+    OR (
+       RecordType.DeveloperName &lt;&gt; &apos;Ultimate Group Parent&apos;,
+       RecordType.DeveloperName &lt;&gt; &apos;Immediate Parent&apos;,
+       RecordType.DeveloperName &lt;&gt; &apos;Child&apos;
+    )
+)</errorConditionFormula>
+    <errorMessage>The client must be a &apos;Individually Budgeted Client&apos; and Client Record Type of &apos;Ultimate Group Parent, Immediate Parent or Child&apos; in order to indicate it as a &apos;Selected Core CST&apos;</errorMessage>
+</ValidationRule>

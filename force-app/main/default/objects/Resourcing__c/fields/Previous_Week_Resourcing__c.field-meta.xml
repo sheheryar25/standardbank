@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Previous_Week_Resourcing__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>[SFP-7953] - backend field for lookup to previous week resourcing. It is matched in the trigger by comparing initiative, opportunity, resource and week end date.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Previous week resourcing for the same opportunity or initiative.</inlineHelpText>
+    <label>Previous Week Resourcing</label>
+    <referenceTo>Resourcing__c</referenceTo>
+    <relationshipLabel>Next Week Resourcing</relationshipLabel>
+    <relationshipName>Next_Week_Resourcing</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

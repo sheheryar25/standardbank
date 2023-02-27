@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Base_Rate__c</fullName>
+    <description>Selection of applicable reference rate as quoted to the client</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Selection of applicable reference rate as quoted to the client</inlineHelpText>
+    <label>Base Rate</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>182 day T Bill</fullName>
+                <default>false</default>
+                <label>182 day T Bill</label>
+            </value>
+            <value>
+                <fullName>1 month Libor</fullName>
+                <default>false</default>
+                <label>1 month Libor</label>
+            </value>
+            <value>
+                <fullName>3 month Libor</fullName>
+                <default>false</default>
+                <label>3 month Libor</label>
+            </value>
+            <value>
+                <fullName>91 day T Bill</fullName>
+                <default>false</default>
+                <label>91 day T Bill</label>
+            </value>
+            <value>
+                <fullName>Cdi</fullName>
+                <default>false</default>
+                <label>Cdi</label>
+            </value>
+            <value>
+                <fullName>Euribor</fullName>
+                <default>false</default>
+                <label>Euribor</label>
+            </value>
+            <value>
+                <fullName>Fixed</fullName>
+                <default>false</default>
+                <label>Fixed</label>
+            </value>
+            <value>
+                <fullName>Jibar</fullName>
+                <default>false</default>
+                <label>Jibar</label>
+            </value>
+            <value>
+                <fullName>KBRR</fullName>
+                <default>false</default>
+                <label>KBRR</label>
+            </value>
+            <value>
+                <fullName>Libor</fullName>
+                <default>false</default>
+                <label>Libor</label>
+            </value>
+            <value>
+                <fullName>Luibor</fullName>
+                <default>false</default>
+                <label>Luibor</label>
+            </value>
+            <value>
+                <fullName>NIBOR</fullName>
+                <default>false</default>
+                <label>NIBOR</label>
+            </value>
+            <value>
+                <fullName>Prime</fullName>
+                <default>false</default>
+                <label>Prime</label>
+            </value>
+            <value>
+                <fullName>SOFR</fullName>
+                <default>false</default>
+                <label>SOFR</label>
+            </value>
+            <value>
+                <fullName>TERM SOFR</fullName>
+                <default>false</default>
+                <label>TERM SOFR</label>
+            </value>
+            <value>
+                <fullName>SONIA</fullName>
+                <default>false</default>
+                <label>SONIA</label>
+            </value>
+            <value>
+                <fullName>ESTR</fullName>
+                <default>false</default>
+                <label>ESTR</label>
+            </value>
+            <value>
+                <fullName>TONA</fullName>
+                <default>false</default>
+                <label>TONA</label>
+            </value>
+            <value>
+                <fullName>SARON</fullName>
+                <default>false</default>
+                <label>SARON</label>
+            </value>
+            <value>
+                <fullName>T BILL</fullName>
+                <default>false</default>
+                <label>T BILL</label>
+            </value>
+            <value>
+                <fullName>Bank Rate</fullName>
+                <default>false</default>
+                <label>Bank Rate</label>
+            </value>
+            <value>
+                <fullName>Central Bank Rate</fullName>
+                <default>false</default>
+                <label>Central Bank Rate</label>
+            </value>
+            <value>
+                <fullName>Monetary Policy Rate</fullName>
+                <default>false</default>
+                <label>Monetary Policy Rate</label>
+            </value>
+            <value>
+                <fullName>Reference Rate</fullName>
+                <default>false</default>
+                <label>Reference Rate</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

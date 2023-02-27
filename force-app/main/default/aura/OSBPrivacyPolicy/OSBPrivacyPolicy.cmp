@@ -1,0 +1,7 @@
+<aura:component description="OSBPrivacyPolicy" access="global"
+                implements="forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes">
+
+    <div class="privacy-policy__container">
+        <iframe src="{!$Resource.OSBPrivacyStatement}"></iframe>
+    </div>
+</aura:component>

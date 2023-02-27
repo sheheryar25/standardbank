@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Uganda_Top_Enterprise_Clients</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Top_Client__c</columns>
+    <columns>Work_Phone__c</columns>
+    <columns>ExternalCIF_ID__c</columns>
+    <columns>Account_Owner__c</columns>
+    <columns>ACCOUNT.RECORDTYPE</columns>
+    <columns>Client_Sector__c</columns>
+    <columns>FinServ__BranchName__c</columns>
+    <columns>Market_Segments__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Enterprise_Banking_Africa_Regions</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.ADDRESS1_COUNTRY</field>
+        <operation>equals</operation>
+        <value>UG,Uganda</value>
+    </filters>
+    <filters>
+        <field>Top_Client__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>Uganda Top Enterprise Clients</label>
+    <sharedTo>
+        <roleAndSubordinatesInternal>BCC_AR_Uganda</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

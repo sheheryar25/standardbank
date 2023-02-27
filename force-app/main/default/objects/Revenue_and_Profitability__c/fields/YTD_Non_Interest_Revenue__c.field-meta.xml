@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>YTD_Non_Interest_Revenue__c</fullName>
+    <description>This is a depiction of all the associated bank service fees that the client is charged, US-4424</description>
+    <externalId>false</externalId>
+    <label>YTD Non Interest Revenue</label>
+    <precision>17</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

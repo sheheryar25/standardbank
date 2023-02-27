@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Exposure_to_Management__c</fullName>
+    <description>SFP-9320[c] This field is introduced for CVCA feature to allow printable view of the Client Page similar to the CVCA Template Caro Reinecke: Ideas Inc</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is an indication of whether the Client has been introduced to or if there are any plans to introduce the client to any key Standard Bank Management</inlineHelpText>
+    <label>Exposure to Management</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

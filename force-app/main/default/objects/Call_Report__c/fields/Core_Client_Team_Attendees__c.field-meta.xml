@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Core_Client_Team_Attendees__c</fullName>
+    <description>Field counts the amount of Core Client Team Members that attended the meeting (US-1414). Core Roles as at July 2016 are
+            Manager Client Coverage,IB Champion,GM Champion,TPS Champion,Executive Sponsor, Sector/Client Coverage Head and Credit Risk</description>
+    <externalId>false</externalId>
+    <inlineHelpText>How many Core Client Team members attended this meeting?</inlineHelpText>
+    <label>Core Client Team Attendees</label>
+    <summaryFilterItems>
+        <field>Call_Report_Attendees__c.Client_Team_Role__c</field>
+        <operation>equals</operation>
+        <value>Manager Client Coverage,IB Champion,GM Champion,TPS Champion,Executive Sponsor, Sector/Client Coverage Head,Credit Risk</value>
+    </summaryFilterItems>
+    <summaryFilterItems>
+        <field>Call_Report_Attendees__c.Status__c</field>
+        <operation>equals</operation>
+        <value>Attended</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Call_Report_Attendees__c.Call_Report__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

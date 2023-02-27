@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Short_Term_Objectives__c</fullName>
+    <description>Describes the client&apos;s ST strategy and objectives</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Short term objectives of the Client to achieve their long term strategy (1500 Characters or less)</inlineHelpText>
+    <label>Short Term Objectives</label>
+    <length>1500</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

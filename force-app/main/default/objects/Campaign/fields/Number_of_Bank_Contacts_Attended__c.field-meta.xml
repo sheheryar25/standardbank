@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_of_Bank_Contacts_Attended__c</fullName>
+    <description>Case#1168 - 11/2011 - Rudolf Niehaus
+            Calculate field for the total number of contacts that have a Attendance Status = Attended and Contact Record Type = Bank Contact Record Type</description>
+    <externalId>false</externalId>
+    <label>Number of Bank Contacts Attended</label>
+    <summaryFilterItems>
+        <field>CampaignMember.Attendance_Status__c</field>
+        <operation>equals</operation>
+        <value>Attended, Walk In</value>
+    </summaryFilterItems>
+    <summaryFilterItems>
+        <field>CampaignMember.Contact_Record_Type__c</field>
+        <operation>equals</operation>
+        <value>Bank Contact Record Type</value>
+    </summaryFilterItems>
+    <summaryForeignKey>CampaignMember.CampaignId</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <type>Summary</type>
+</CustomField>

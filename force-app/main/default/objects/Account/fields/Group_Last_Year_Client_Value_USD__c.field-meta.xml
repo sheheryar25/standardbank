@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Group_Last_Year_Client_Value_USD__c</fullName>
+    <description>Case#5314 C Reinecke - New GM Methodology necessitate field name changes</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Aggregated Last Year Client Value for all Accounts related to this Parent Account (inc the Parent Account itself)</inlineHelpText>
+    <label>Group Last Year Client Value (USD)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

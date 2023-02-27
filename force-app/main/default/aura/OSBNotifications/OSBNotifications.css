@@ -1,0 +1,80 @@
+.THIS {
+    background: #f6f6f6;
+    padding: 112px 0;
+}
+
+.THIS .notifications {
+    margin: 0 auto;
+}
+
+.THIS .notification-container {
+    margin-bottom: 16px;
+}
+
+.THIS .pageBtn {
+    background-color: #ededed;
+    color: #0089ff;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.THIS .pageBtn.pageBtn--active {
+    background-color: #3366CC;
+    color: #FFFFFF;
+}
+
+.THIS .notifications__controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.THIS .notifications__rotate {
+    transform: rotate(180deg);
+}
+
+.THIS .notifications__controls i {
+    font-size: 16px;
+    display: block;
+}
+
+.THIS .notifications__controls button {
+    border: none;
+    background: none;
+}
+
+.THIS .notifications__controls button i.active::before {
+    color: #0089ff;
+}
+
+.THIS .notifications__controls button i.inactive::before {
+    color: #ccc;
+}
+
+.THIS .notifications__empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+}
+
+@media(max-width: 768px) {
+    .THIS.notifications__container {
+        padding: 32px 20px;
+    }
+}
+
+@media(min-width: 1280px) {
+    .THIS .notifications {
+        width: 50%;
+    }
+}

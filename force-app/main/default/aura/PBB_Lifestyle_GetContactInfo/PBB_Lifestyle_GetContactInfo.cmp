@@ -1,0 +1,114 @@
+<!--
+ - Created by zwalczewska on 19.02.2020.
+ -->
+<aura:component description="PBB_Lifestyle_GetContactInfo" implements="force:hasRecordId,flexipage:availableForAllPageTypes" controller="PBB_Lifestyle_ContactInformationCTRL">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="textAlign" type="String" default="center" /> 
+    <aura:attribute name="showBorder" type="Boolean" default="true" />
+    <aura:attribute name="activeSections" type="List" default="['A','B']" />
+    <aura:attribute name="activeSectionsMessage" type="String" default="" />
+    <aura:attribute name="columnsEmails" type="Integer"/>
+    <aura:attribute name="columnsPhones" type="Integer"/>
+    <aura:attribute name="customerContactResponseEmail" type="Object[]"/>
+    <aura:attribute name="customerContactResponsePhone" type="Object[]"/>
+    <aura:attribute name="Phones" type="List"/>
+    <aura:attribute name="Emails" type="List"/>
+    <aura:attribute name="isLoading"	type="boolean"	default="true"/>
+    <aura:attribute name="noBalancesFetched" type="boolean" default="false"/>
+    <aura:attribute name="isError" type="boolean" default="false"/>
+    
+    <lightning:workspaceAPI aura:id="workspace"/>
+    <lightning:notificationsLibrary aura:id="notifLib"/>
+    <aura:registerEvent name="appEvent" type="c:PBB_DataLoaded"/>
+
+    <aura:if isTrue="{! and( not(v.isLoading), not ( v.isError ) ) }" >
+        <aura:if isTrue="{! or(empty(v.customerContactResponseEmail),empty(v.customerContactResponsePhone))}">
+            <aura:if isTrue="{! empty(v.customerContactResponsePhone)}">
+                <lightning:card>
+                    <div class="c-container">
+                        <lightning:accordion
+                                allowMultipleSectionsOpen="true"
+                                onsectiontoggle="{! c.handleSectionToggle }"
+                                activeSectionName="{! v.activeSections }">
+                            <div class="componentGrid slds-grid slds-wrap slds-grid_vertical-stretch">
+                                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_1-of-2 ">
+                                    <lightning:accordionSection name="A" label="Emails" >
+                                        <lightning:datatable
+                                                keyField="Id"
+                                                data="{! v.customerContactResponseEmail }"
+                                                hideCheckboxColumn="true"
+                                                columns="{! v.Emails }"/>
+                                    </lightning:accordionSection>
+                                </div>
+                            </div>
+                        </lightning:accordion>
+                    </div>
+                </lightning:card>
+                <aura:set attribute="else">
+                    <lightning:card>
+                        <div class="c-container">
+                            <lightning:accordion
+                                    allowMultipleSectionsOpen="true"
+                                    onsectiontoggle="{! c.handleSectionToggle }"
+                                    activeSectionName="{! v.activeSections }">
+                                <div class="componentGrid slds-grid slds-wrap slds-grid_vertical-stretch">
+                                    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_1-of-2 ">
+                                        <lightning:accordionSection name="B" label="Phone Numbers">
+                                            <lightning:datatable
+                                                    keyField="Id"
+                                                    data="{! v.customerContactResponsePhone }"
+                                                    hideCheckboxColumn="true"
+                                                    columns="{! v.Phones }"/>
+
+                                        </lightning:accordionSection>
+                                    </div>
+                                </div>
+                            </lightning:accordion>
+                        </div>
+                    </lightning:card>
+                </aura:set>
+            </aura:if>
+            <aura:set attribute="else">
+                <lightning:card>
+                    <div class="c-container">
+                        <lightning:accordion
+                                allowMultipleSectionsOpen="true"
+                                onsectiontoggle="{! c.handleSectionToggle }"
+                                activeSectionName="{! v.activeSections }">
+                            <div class="componentGrid slds-grid slds-wrap slds-grid_vertical-stretch">
+                                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_1-of-2 ">
+                                    <lightning:accordionSection name="A" label="Emails">
+                                        <lightning:datatable
+                                                    keyField="Id"
+                                                    data="{! v.customerContactResponseEmail }"
+                                                    hideCheckboxColumn="true"
+                                                    columns="{! v.Emails }"/>
+                                    </lightning:accordionSection>
+                                </div>
+                                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_1-of-2 ">
+                                    <lightning:accordionSection name="B" label="Phone Numbers">
+                                        <lightning:datatable
+                                                keyField="Id"
+                                                data="{! v.customerContactResponsePhone }"
+                                                hideCheckboxColumn="true"
+                                                columns="{! v.Phones }"/>
+                                    </lightning:accordionSection>
+                                </div>
+                            </div>
+                        </lightning:accordion>
+                    </div>
+                </lightning:card>
+            </aura:set>
+        </aura:if>
+    <aura:set attribute="else">
+        <lightning:card>
+            <div class="slds-is-relative" style="min-height: 15rem; display: flex; justify-content: center; align-items: center;">
+                <aura:if isTrue="{! and ( v.isLoading ,  not( v.isError ) )}">
+                    <lightning:spinner alternativeText="Loading" size="medium" />
+                </aura:if>
+            </div>
+        </lightning:card>
+    </aura:set>
+    </aura:if>
+
+</aura:component>

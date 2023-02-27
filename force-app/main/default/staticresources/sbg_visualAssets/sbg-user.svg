@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="34px" height="34px" viewBox="0 0 34 34" version="1.1">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-user</title>
+    <desc>Created with Sketch.</desc>
+    <defs><linearGradient xy="100%" id="gradient"><stop stop-color="#fff" offset="0%"></stop><stop stop-color="#fff" offset="100%"></stop></linearGradient></defs>
+    <g id="Standard-Bank---Icon-Setup" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-234.000000, -5503.000000)">
+        <g id="Icons---Social" transform="translate(69.000000, 5414.000000)">
+            <g id="icon-user" transform="translate(165.000000, 89.000000)">
+                <rect id="Rectangle" x="0" y="0" width="34" height="34"></rect>
+                <path d="M22.9601932,20.91425 C26.1682212,18.9153333 28.3257828,15.3864167 28.3257828,11.3333333 C28.3257828,5.08441667 23.2447535,0 17,0 C10.7552465,0 5.67421719,5.08441667 5.67421719,11.3333333 C5.67421719,15.3821667 7.81903731,18.9224167 11.0199867,20.927 C5.37549967,23.0109167 1.11134244,27.94375 0,34 L2.88665889,34 C4.32644903,27.5258333 10.1025983,22.6666667 17,22.6666667 C23.8974017,22.6666667 29.673551,27.5258333 31.1133411,34 L34,34 C32.8858261,27.9366667 28.616006,22.9953333 22.9601932,20.91425 Z M8.50566289,11.3333333 C8.50566289,6.64558333 12.3153731,2.83333333 17,2.83333333 C21.6832112,2.83333333 25.4943371,6.64558333 25.4943371,11.3333333 C25.4943371,16.0210833 21.6832112,19.8333333 17,19.8333333 C12.3153731,19.8333333 8.50566289,16.0210833 8.50566289,11.3333333 Z" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,86 @@
+<!--
+ - Created by tsobota on 16.07.2018.
+ -->
+
+<aura:component description="ClientTeamManage" controller="ClientTeamManage_Controller">
+
+    <aura:attribute name="records" type="List" access="public"/>
+    <aura:attribute name="recordId" type="String" access="public"/>
+    <aura:attribute name="CSTCoreRoles" type="List" access="private"/>
+    <aura:attribute name="isWaiting" type="Boolean" access="public"/>
+    <aura:attribute name="attributes" type="Map" access="private"/>
+    <aura:attribute name="account" type="Object" access="private"/>
+    <aura:attribute name="hasAdministratorUserAsCC" type="Boolean" access="public"/>
+    <aura:attribute name="acceptableUsers" type="Map" default="{}" access="private"/>
+    <aura:attribute name="notRestrictedDivisions" type="List" access="private"/>
+    <aura:attribute name="CC_CCBM_PreviousValues" type="Object" access="public"/>
+    <aura:attribute name="actionItem" type="Object" access="private"/>
+    <aura:attribute name="tpsCoreRoles" type="List" access="private"/>
+    <aura:attribute name="isCibUser" type="Boolean" default="false" access="public"/>
+    <aura:attribute name="isCcOrCcbm" type="Boolean" default="false" access="public"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler event="c:RecordFieldChange" action="{! c.handleRecordsChange}"/>
+    <lightning:notificationsLibrary aura:id="notifLib"/>
+    <c:UTL_Lightning aura:id = 'utils'/>
+    <aura:registerEvent name="recordFieldChange" type="c:RecordFieldChange" />
+
+
+    <div class="slds-text-heading_large">New Data Change Request for {!v.account.Name}</div>
+    <div class="slds-size_1-of-1 ">
+        <lightning:button class="slds-float_right slds-align_absolute-center slds-m-around_small" name="addNewMember" variant="neutral" onclick="{! c.addNewMember}" label="Add New Member"/>
+    </div>
+    <div>
+        <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-table–header-fixed_container">
+            <thead>
+                <tr class="slds-text-title_caps">
+                    <th class="slds-text-align_center">No.</th>
+                    <th>{!$Label.c.Field_Label_TeamMember}</th>
+                    <th>{!$Label.c.Field_Label_TeamRole}</th>
+                    <th>{!$Label.c.Field_Label_CC}</th>
+                    <th>{!$Label.c.Field_Label_CCBM}</th>
+                    <th>{!$Label.c.Field_Label_Core}</th>
+                    <aura:if isTrue="{!and(equals(v.isCibUser, true), equals(v.isCcOrCcbm, true))}">
+                        <th>{!$Label.c.Field_Label_VisibleToClient}</th>
+                    </aura:if>
+                    <th>{!$Label.c.Field_Label_UserDivision}</th>
+                    <th>{!$Label.c.Field_Label_UserCountry}</th>
+                    <th>{!$Label.c.Field_Label_Remove}</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <aura:iteration items="{!v.records}" var="row" indexVar="index">
+                    <tr>
+                        <td class="slds-text-align_center">
+                            <aura:if isTrue="{!!row.isNew}">
+                                {! index+1}
+                                <aura:set attribute="else">
+                                    <lightning:buttonIcon size="large" variant="bare" iconName="utility:delete" onclick="{!c.deleteNewTeamMember}" value="{!index}" />
+                                </aura:set>
+                            </aura:if>
+                        </td>
+                        <td>
+                            <c:recordField record="{!row.newClientTeam}"
+                                           fieldName="Team_Member__c"
+                                           readOnly="{! !row.isNew}"
+                                           editMode="{! row.isNew}"
+                                           showLabel="false"
+                                           isLoading="{!v.isWaiting}"
+                                           skipFls="true"/> </td>
+                        <td><c:recordField record="{!row.newClientTeam}"  fieldName="Client_Role__c" readOnly="{!and(v.hasAdministratorUserAsCC,!row.isNew)}" editMode="true" showLabel="false" skipFls="true"/></td>
+                        <td><ui:inputCheckbox value="{!row.newClientTeam.Client_Coordinator__c}" name="Client_Coordinator__c" change="{!c.onCC_CheckboxChange}" disabled="{!not(row.newClientTeam.Team_Member__c)}"/></td>
+                        <td><ui:inputCheckbox value="{!row.newClientTeam.Client_Coordinator_BM__c}" name="Client_Coordinator_BM__c" change="{!c.onCCBM_CheckboxChange}" disabled="{!or(v.hasAdministratorUserAsCC,not(row.newClientTeam.Team_Member__c))}" /></td>
+                        <td><c:recordField aura:id="coreField" record="{!row.newClientTeam}"  fieldName="Core__c" readOnly="{!v.hasAdministratorUserAsCC}" editMode="true" showLabel="false" showHelptext="false" isLoading="{!v.isWaiting}"  attributes="{!v.attributes}" fieldValue="{}"/></td>
+                        <aura:if isTrue="{!and(equals(v.isCibUser, true), equals(v.isCcOrCcbm, true))}">
+                            <td><ui:inputCheckbox value="{!row.newClientTeam.Visible_to_Client__c}" name="Visible_To_Client__c"/></td>
+                        </aura:if>
+                        <td><c:recordField record="{!row.newClientTeam}" fieldName="User_Division__c" editMode="true" showLabel="false" /></td>
+                        <td><c:recordField record="{!row.newClientTeam}" fieldName="User_Country__c" editMode="true" showLabel="false" /></td>
+                        <td><ui:inputCheckbox value="{!row.toDelete}" name="delete" disabled="{! or(row.isNew,and(v.hasAdministratorUserAsCC, !row.oldClientTeam.Client_Coordinator__c))}" change="{!c.onDeleteCheckboxChange}"/> </td>
+                    </tr>
+                </aura:iteration>
+            </tbody>
+        </table>
+    </div>
+</aura:component>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Description__c</fullName>
+    <description>The Heading and description displayed using a pipe delimiter where the first value is the heading and the second is the sub-heading e.g. &quot; radio-button-description|radio-button-description-with-pip  (SGPRT - 1389)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Pip Question</inlineHelpText>
+    <label>Description</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

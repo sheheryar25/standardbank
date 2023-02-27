@@ -1,0 +1,76 @@
+<aura:component >
+    <aura:attribute name="mslabel" type="String" default="" access="public"/>
+    <aura:attribute name="maxSelectedShow" type="Integer" default="2" access="public"/>
+    <aura:attribute name="msoptions" type="List" access="public"/>
+    <aura:attribute name="showFilterInput" type="Boolean" default="true" access="public"/>
+    <aura:attribute name="showRefreshButton" type="Boolean" default="true" access="public"/>
+    <aura:attribute name="showClearButton" type="Boolean" default="true" access="public"/>
+    <aura:attribute name="setErrorMessage" type="String" default=" " access="public"/>
+    <aura:attribute name="msname" type="String" default="Enter operating country/countries" access="private"/>
+    <aura:attribute name="selectedOptions" type="List" access="public"/>
+    <aura:attribute name="selectedLabel" type="String" default="Enter operating country/countries" access="public"/>
+    <aura:attribute name="initializationCompleted" type="Boolean" default="false" access="private"/>
+    <aura:attribute name="showValidation" type="Boolean" default="false" access="public"/>
+    <aura:attribute name="outSideElement" type="Boolean" default="false" access="public"/>
+    <aura:handler name="render" value="{!this}" action="{!c.onRender}"/>
+	<aura:method name="CheckValidation" action="{!c.executeValidationCheck}">
+        <aura:attribute name="validation" type="String"/>
+    </aura:method>
+
+    <div class="slds-form-element">
+        <div class="slds-form-element__control containerMulti">
+            <div class="slds-combobox_container InputMulti slds-size_2-of-2">
+                <div id="picklist-dropdown" class="slds-dropdown-trigger slds-dropdown-trigger_click slds-picklist ms-picklist-dropdown" 
+                     aria-expanded="false" aria-haspopup="listbox" role="listbox" >
+                    <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
+                        <lightning:input class="slds-combobox__input input slds-icon-text-default fontClass multi-class" style="font-weight:100!important"
+                                         aura:id="MultiSelect"
+                                         label="{!v.mslabel}"
+                                         id="input-Multi" 
+                                         aria-controls="ms-dropdown-items" 
+                                         role="textbox" 
+                                         placeholder="{!v.selectedLabel}" 
+                                         value=""
+                                         required="true"
+                                         messageWhenValueMissing="{!v.setErrorMessage}"
+                                         autocomplete="cc-Operating-country"
+                                         type="text"
+                                         readonly="true"
+                                         onblur="{!c.onblurChange}"
+                                         />                      
+                        <span class="slds-icon-utility-down slds-input__icon slds-input__icon_right signUp__Multiselect_Icon" title="Click to open dropdown">
+                            <lightning:icon iconName="utility:down" size="x-small" class="slds-icon__container slds-icon_selected slds-icon_x-small slds-icon-text-default slds-m-right_x-small" />
+                        </span>
+                    </div>
+                    <div aura:id="dropdown" id="dropdown-items" role="listbox">
+                        <ul class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid ms-dropdown" aura:id="dropdownList" role="presentation">
+                            <aura:if isTrue="{!v.showFilterInput}">
+                                <input class="slds-listbox__item filter-input" id="filter-input" aria-controls="ms-dropdown-items" 
+                                role="textbox" type="text" placeholder="Filter values.." value="" oninput="{!c.onInputChange}" autocomplete="off"/>
+                            </aura:if>
+                            <aura:if isTrue="{!v.showClearButton}">
+                                <lightning:buttonIcon iconName="utility:clear" alternativeText="Clear current filters" onclick="{!c.onClearClick}"/>
+                            </aura:if>
+                            <aura:if isTrue="{!v.showRefreshButton}">
+                                <lightning:buttonIcon iconName="utility:refresh" alternativeText="Clear all selections and rebuild picklist" onclick="{!c.onRefreshClick}"/>
+                            </aura:if>
+                            <aura:iteration items="{!v.msoptions}" var="item">
+                                <li role="presentation" class="{!'slds-listbox__item list-item '+ (item.selected ? 'slds-is-selected' : '')}"
+                                    id="list-item" data-id="{!item.Id}" data-name="{!item.Name}">
+                                    <div id="listbox-option-unique-id-01" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-media_center" role="option">
+                                        <span class="slds-media__figure">
+                                            <lightning:icon iconName="utility:check" size="xx-small" class="slds-icon slds-icon_selected slds-icon_x-small slds-icon-text-default slds-m-right_x-small my-icon" />
+                                        </span>
+                                        <span class="slds-media__body">
+                                            <span class="slds-truncate" title="{!item.Name}">{!item.Name}</span>
+                                        </span>
+                                    </div>
+                                </li>
+                            </aura:iteration>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</aura:component>

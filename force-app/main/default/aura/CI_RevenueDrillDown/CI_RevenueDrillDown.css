@@ -1,0 +1,23 @@
+/**
+ * Created by milipinski on 05.03.2018.
+ */
+.THIS .revenue_card{
+
+    border:1px solid rgb(217,219,221);
+}
+
+.THIS {
+    background-color:#ffffff;
+
+}
+.THIS .second_level_padding>.slds-col>.slds-box {
+    padding-left: 2.5rem;
+
+}
+.THIS {
+  height: inherit;
+}
+
+.THIS .scrollerSize {
+  height: inherit;
+}

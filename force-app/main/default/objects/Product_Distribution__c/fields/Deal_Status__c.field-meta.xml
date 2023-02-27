@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deal_Status__c</fullName>
+    <description>Deal Status SGPRT-624</description>
+    <externalId>false</externalId>
+    <label>Deal Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Legal Stage</fullName>
+                <default>false</default>
+                <label>Legal Stage</label>
+            </value>
+            <value>
+                <fullName>Financial Close Reached</fullName>
+                <default>false</default>
+                <label>Financial Close Reached</label>
+            </value>
+            <value>
+                <fullName>Pre-credit, Mandated</fullName>
+                <default>false</default>
+                <label>Pre-credit, Mandated</label>
+            </value>
+            <value>
+                <fullName>Credit Approved, Mandated</fullName>
+                <default>false</default>
+                <label>Credit Approved, Mandated</label>
+            </value>
+            <value>
+                <fullName>Credit Approved, No Mandate</fullName>
+                <default>false</default>
+                <label>Credit Approved, No Mandate</label>
+            </value>
+            <value>
+                <fullName>Credit Approved</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Credit Approved</label>
+            </value>
+            <value>
+                <fullName>NBAC Approved</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>NBAC Approved</label>
+            </value>
+            <value>
+                <fullName>Pre-NABC</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Pre-NABC</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

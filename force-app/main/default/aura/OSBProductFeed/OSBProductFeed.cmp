@@ -1,0 +1,29 @@
+<aura:component description="OSBProductFeed" implements="force:appHostable">
+    <aura:attribute name="product" type="Object"/>
+    <aura:attribute name="supportsPopOut" type="Boolean" default="true" />
+
+    <aura:registerEvent name="onBackButtonEvent" type="c:OSBOnClickBackButtonEvent"/>
+
+    <div class="feed">
+        <div class="feed-container">
+            <aura:if isTrue="{!v.product != null}">
+                <div class="feed__header-items">
+                    <div class="feed__back-button pointer" onclick="{!c.handleOnClickBackButton}" data-id="uitlink_link" data-text="{!'Marketgram Product | ' + v.product.RecordType.DeveloperName == 'Community_Content_Solution' ? 'Solutions' : 'API Products'  + ' | Like'}">
+                        <i class="ms-icn_arrow_left feed__icon"/>
+                        <div class="feed__back-label">Back to {!v.product.RecordType.DeveloperName == 'Community_Content_Solution' ? 'Solutions' : 'API Products'}</div>
+                    </div>
+                    <div class="feed__product-details">
+                        <div class="feed__underline mb_24"></div>
+                        <c:OSBMarketgramProduct product="{!v.product}"/>
+                        <div class="feed__underline mb_24"></div>
+                    </div>
+                </div>
+                <div class="feed__chatter">
+                        <forceChatter:publisher context="RECORD" recordId="{!v.product.Id}"/>
+                    <div class="feed__underline mb_24 mt_24"></div>
+                    <forceChatter:feed type="Record" feedDesign="DEFAULT" subjectId="{!v.product.Id}"/>
+                </div>
+            </aura:if>
+        </div>
+    </div>
+</aura:component>

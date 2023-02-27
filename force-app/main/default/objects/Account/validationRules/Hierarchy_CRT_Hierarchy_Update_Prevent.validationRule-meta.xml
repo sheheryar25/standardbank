@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hierarchy_CRT_Hierarchy_Update_Prevent</fullName>
+    <active>true</active>
+    <description>This validation rule prevent the CRT hierarchy feed to update the fields within the 15 day time-frame. And it prevent record types to update based on the &apos;CRT Parent Child&apos; info. EN-0798</description>
+    <errorConditionFormula>OR(
+ISCHANGED(ParentId),
+ISCHANGED(Group_Parent__c),
+ISCHANGED(CRT_Parent_Child__c),
+ISCHANGED(Immediate_Parent__c))
+&amp;&amp; Onboarded_in_SFDC__c = TRUE
+&amp;&amp; CRT_Hierarchy_Flag__c = TRUE
+&amp;&amp; ($User.FirstName = &quot;Salesforce&quot; &amp;&amp; $User.LastName = &quot;Administration&quot;)</errorConditionFormula>
+    <errorMessage>The client hierarchy can not be changed by the CRT hierarchy feed within 15 days since the CIF Number was uploaded the first time for clients that&apos;s onboarded in SFDC.</errorMessage>
+</ValidationRule>

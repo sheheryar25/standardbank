@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>User_CIB_Global_Area__c</fullName>
+    <description>10/03/2011 VI: case 175. store static value of created person&apos;s details. must not be updated when user changes divisions. populated via workflow - BU tier Defaults</description>
+    <externalId>false</externalId>
+    <label>User CIB Global Area</label>
+    <length>25</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

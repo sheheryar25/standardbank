@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Notepad__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicates whether category belongs to Account Notepad or not, US-4570</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Choose if category belongs to Account Notepad</inlineHelpText>
+    <label>Account Notepad</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

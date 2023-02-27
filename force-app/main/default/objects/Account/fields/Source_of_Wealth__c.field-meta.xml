@@ -1,0 +1,2367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Source_of_Wealth__c</fullName>
+    <description>What is the customer’s source of wealth?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>How does the Client obtain their wealth?</inlineHelpText>
+    <label>Source of Wealth</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Accumulated Savings &amp; Investments</fullName>
+                <default>false</default>
+                <label>Accumulated Savings &amp; Investments</label>
+            </value>
+            <value>
+                <fullName>Capital injection</fullName>
+                <default>false</default>
+                <label>Capital injection</label>
+            </value>
+            <value>
+                <fullName>Capital investment from parent company</fullName>
+                <default>false</default>
+                <label>Capital investment from parent company</label>
+            </value>
+            <value>
+                <fullName>Development Financial Institution</fullName>
+                <default>false</default>
+                <label>Development Financial Institution</label>
+            </value>
+            <value>
+                <fullName>Funding obtained from a Commercial Financial Institution</fullName>
+                <default>false</default>
+                <label>Funding obtained from a Commercial Financial Institution</label>
+            </value>
+            <value>
+                <fullName>Gifts</fullName>
+                <default>false</default>
+                <label>Gifts</label>
+            </value>
+            <value>
+                <fullName>Government backed</fullName>
+                <default>false</default>
+                <label>Government backed</label>
+            </value>
+            <value>
+                <fullName>Inheritance</fullName>
+                <default>false</default>
+                <label>Inheritance</label>
+            </value>
+            <value>
+                <fullName>Retained income from trading subsidiaries</fullName>
+                <default>false</default>
+                <label>Retained income from trading subsidiaries</label>
+            </value>
+            <value>
+                <fullName>Sale of assets</fullName>
+                <default>false</default>
+                <label>Sale of assets</label>
+            </value>
+            <value>
+                <fullName>Shareholders loans</fullName>
+                <default>false</default>
+                <label>Shareholders loans</label>
+            </value>
+            <value>
+                <fullName>-	Group Loans and income from Trading as personnel and labour supply company</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>-	Group Loans and income from Trading as personnel and labour supply company</label>
+            </value>
+            <value>
+                <fullName>0636889249</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>0636889249</label>
+            </value>
+            <value>
+                <fullName>100% of all funds and “wealth” has been raised from Allan Gray Proprietary Limited via a 100% owned subsidiary (BEET) pursuant to share issuances to BEET to in order to fund investments as part of its business</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>100% of all funds and “wealth” has been raised from Allan Gray Proprietary Limited via a 100% owned subsidiary (BEET) pursuant to share issuances to BEET to in order to fund investments as part of its business</label>
+            </value>
+            <value>
+                <fullName>1000000</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>1000000</label>
+            </value>
+            <value>
+                <fullName>100000000</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>100000000</label>
+            </value>
+            <value>
+                <fullName>12</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>12</label>
+            </value>
+            <value>
+                <fullName>13000000</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>13000000</label>
+            </value>
+            <value>
+                <fullName>131000000</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>131000000</label>
+            </value>
+            <value>
+                <fullName>2 000 000 000</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>2 000 000 000</label>
+            </value>
+            <value>
+                <fullName>300000000</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>300000000</label>
+            </value>
+            <value>
+                <fullName>3275000</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>3275000</label>
+            </value>
+            <value>
+                <fullName>32750000</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>32750000</label>
+            </value>
+            <value>
+                <fullName>3rd party assets</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>3rd party assets</label>
+            </value>
+            <value>
+                <fullName>4000000</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>4000000</label>
+            </value>
+            <value>
+                <fullName>Active business</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Active business</label>
+            </value>
+            <value>
+                <fullName>Actuarial Consulting Services</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Actuarial Consulting Services</label>
+            </value>
+            <value>
+                <fullName>Actuarial Consulting Services offered to their clients</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Actuarial Consulting Services offered to their clients</label>
+            </value>
+            <value>
+                <fullName>Administration fee income - ETF&apos;s and Unit Trust portfolios</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Administration fee income - ETF&apos;s and Unit Trust portfolios</label>
+            </value>
+            <value>
+                <fullName>Agric income</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Agric income</label>
+            </value>
+            <value>
+                <fullName>Allan Gray Investments</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Allan Gray Investments</label>
+            </value>
+            <value>
+                <fullName>Asset Management Fees</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Asset Management Fees</label>
+            </value>
+            <value>
+                <fullName>Brokerage Activities</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Brokerage Activities</label>
+            </value>
+            <value>
+                <fullName>Business</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Business</label>
+            </value>
+            <value>
+                <fullName>Business Activities</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Business Activities</label>
+            </value>
+            <value>
+                <fullName>Business Activities, shareholders contribution</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Business Activities, shareholders contribution</label>
+            </value>
+            <value>
+                <fullName>Business Operations</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Business Operations</label>
+            </value>
+            <value>
+                <fullName>Business Proceeds</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Business Proceeds</label>
+            </value>
+            <value>
+                <fullName>Business activity</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Business activity</label>
+            </value>
+            <value>
+                <fullName>Business as usual</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Business as usual</label>
+            </value>
+            <value>
+                <fullName>Business operation</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Business operation</label>
+            </value>
+            <value>
+                <fullName>Business profits</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Business profits</label>
+            </value>
+            <value>
+                <fullName>Business revenue</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Business revenue</label>
+            </value>
+            <value>
+                <fullName>Capital</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Capital</label>
+            </value>
+            <value>
+                <fullName>Capital Contribution</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Capital Contribution</label>
+            </value>
+            <value>
+                <fullName>Capital Injection - shareholder funds</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Capital Injection - shareholder funds</label>
+            </value>
+            <value>
+                <fullName>Capital injection from shareholder funds</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Capital injection from shareholder funds</label>
+            </value>
+            <value>
+                <fullName>Capital injection from shareholders</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Capital injection from shareholders</label>
+            </value>
+            <value>
+                <fullName>Cash Deposits, Payments, Debit orders from Holding Company, subsidiaries and vendors</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Cash Deposits, Payments, Debit orders from Holding Company, subsidiaries and vendors</label>
+            </value>
+            <value>
+                <fullName>Cash deposits, debit order, speed point deposits.</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Cash deposits, debit order, speed point deposits.</label>
+            </value>
+            <value>
+                <fullName>Cash deposits, debit orders, payments from holding company, subsidiaries and vendors</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Cash deposits, debit orders, payments from holding company, subsidiaries and vendors</label>
+            </value>
+            <value>
+                <fullName>Client Activity</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Client Activity</label>
+            </value>
+            <value>
+                <fullName>Client Funds</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Client Funds</label>
+            </value>
+            <value>
+                <fullName>Client activity
+Shareholders loan</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Client activity
+Shareholders loan</label>
+            </value>
+            <value>
+                <fullName>Client insurance policies</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Client insurance policies</label>
+            </value>
+            <value>
+                <fullName>Client is a subsidiary of Bombardier Transportation the rail division of Bombardier Inc.  BTTCI is the treasury arm of Bombardier and the new (2019) counterparty entity in transactions with SB.</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Client is a subsidiary of Bombardier Transportation the rail division of Bombardier Inc.  BTTCI is the treasury arm of Bombardier and the new (2019) counterparty entity in transactions with SB.</label>
+            </value>
+            <value>
+                <fullName>Co-Ownership Consortium, Business Activity</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Co-Ownership Consortium, Business Activity</label>
+            </value>
+            <value>
+                <fullName>Collections, service fees rental, purchase from buyers</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Collections, service fees rental, purchase from buyers</label>
+            </value>
+            <value>
+                <fullName>Commercial Real Estate</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Commercial Real Estate</label>
+            </value>
+            <value>
+                <fullName>Commission and fees generated.</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Commission and fees generated.</label>
+            </value>
+            <value>
+                <fullName>Construction</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Construction</label>
+            </value>
+            <value>
+                <fullName>Consulting Services</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Consulting Services</label>
+            </value>
+            <value>
+                <fullName>Contribution from members</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Contribution from members</label>
+            </value>
+            <value>
+                <fullName>Contribution from shareholders</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Contribution from shareholders</label>
+            </value>
+            <value>
+                <fullName>Contributions from Co-Founders of the Trust.</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Contributions from Co-Founders of the Trust.</label>
+            </value>
+            <value>
+                <fullName>Contributions from shareholders</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Contributions from shareholders</label>
+            </value>
+            <value>
+                <fullName>Current business Operations</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Current business Operations</label>
+            </value>
+            <value>
+                <fullName>Daily business functions</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Daily business functions</label>
+            </value>
+            <value>
+                <fullName>Debt</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Debt</label>
+            </value>
+            <value>
+                <fullName>Debt &amp; Equity</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Debt &amp; Equity</label>
+            </value>
+            <value>
+                <fullName>Debt Financing
+Equity Financing
+Corporate Lending
+Securitization
+Prime Brokerage
+Correspondent Brokerage</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Debt Financing
+Equity Financing
+Corporate Lending
+Securitization
+Prime Brokerage
+Correspondent Brokerage</label>
+            </value>
+            <value>
+                <fullName>Debt and Equity</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Debt and Equity</label>
+            </value>
+            <value>
+                <fullName>Deposits Fees interest</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Deposits Fees interest</label>
+            </value>
+            <value>
+                <fullName>Deposits, fees</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Deposits, fees</label>
+            </value>
+            <value>
+                <fullName>Directors Reserves</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Directors Reserves</label>
+            </value>
+            <value>
+                <fullName>Diversified Mining</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Diversified Mining</label>
+            </value>
+            <value>
+                <fullName>Dividend income</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Dividend income</label>
+            </value>
+            <value>
+                <fullName>Dividends</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Dividends</label>
+            </value>
+            <value>
+                <fullName>Dividends and business profits</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Dividends and business profits</label>
+            </value>
+            <value>
+                <fullName>Dividends and interest</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Dividends and interest</label>
+            </value>
+            <value>
+                <fullName>Dividends and interest from equity Holdings and shareholders loans</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Dividends and interest from equity Holdings and shareholders loans</label>
+            </value>
+            <value>
+                <fullName>Dividends from equity Holdings</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Dividends from equity Holdings</label>
+            </value>
+            <value>
+                <fullName>Dividends from subsidiaries</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Dividends from subsidiaries</label>
+            </value>
+            <value>
+                <fullName>Donations from individuals and corporates to the Trust.</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Donations from individuals and corporates to the Trust.</label>
+            </value>
+            <value>
+                <fullName>Donations from the Gray Family and donars</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Donations from the Gray Family and donars</label>
+            </value>
+            <value>
+                <fullName>Donor donations</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Donor donations</label>
+            </value>
+            <value>
+                <fullName>Employee contribution</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Employee contribution</label>
+            </value>
+            <value>
+                <fullName>Engineering Income</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Engineering Income</label>
+            </value>
+            <value>
+                <fullName>Equity</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Equity</label>
+            </value>
+            <value>
+                <fullName>Equity Injection from cornerstone investors: TBC</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Equity Injection from cornerstone investors: TBC</label>
+            </value>
+            <value>
+                <fullName>Equity and client’s operations</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Equity and client’s operations</label>
+            </value>
+            <value>
+                <fullName>Equity and loan from shareholder</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Equity and loan from shareholder</label>
+            </value>
+            <value>
+                <fullName>Equity and parent debt from partner banks.</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Equity and parent debt from partner banks.</label>
+            </value>
+            <value>
+                <fullName>Equity market and revenues from predecessor company</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Equity market and revenues from predecessor company</label>
+            </value>
+            <value>
+                <fullName>Family wealth originated from business accumulated over the past decades</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Family wealth originated from business accumulated over the past decades</label>
+            </value>
+            <value>
+                <fullName>Farming activities</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Farming activities</label>
+            </value>
+            <value>
+                <fullName>Farming income</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Farming income</label>
+            </value>
+            <value>
+                <fullName>Fees and Interest</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Fees and Interest</label>
+            </value>
+            <value>
+                <fullName>Fees and income from services provided to clients</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Fees and income from services provided to clients</label>
+            </value>
+            <value>
+                <fullName>Fees from Investment funds</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Fees from Investment funds</label>
+            </value>
+            <value>
+                <fullName>Fees from clients and trading revenue</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Fees from clients and trading revenue</label>
+            </value>
+            <value>
+                <fullName>Fees, Deposits,Interest</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Fees, Deposits,Interest</label>
+            </value>
+            <value>
+                <fullName>Fees, Interest</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Fees, Interest</label>
+            </value>
+            <value>
+                <fullName>Fees, Interest Inc</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Fees, Interest Inc</label>
+            </value>
+            <value>
+                <fullName>Fees, Interest, Deposits</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Fees, Interest, Deposits</label>
+            </value>
+            <value>
+                <fullName>Fees, revenues and commissions from providing Finance</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Fees, revenues and commissions from providing Finance</label>
+            </value>
+            <value>
+                <fullName>Fees, revenues and commissions providing equity Finance</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Fees, revenues and commissions providing equity Finance</label>
+            </value>
+            <value>
+                <fullName>Financial Services</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Financial Services</label>
+            </value>
+            <value>
+                <fullName>Founded by Philippe de Moerloose as a trading company from personal savings in 1991 and subsequently grown into today&apos;s heavy machinery distribution business with funding from operating cash flows as well as funding from reputable financial institutions.</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Founded by Philippe de Moerloose as a trading company from personal savings in 1991 and subsequently grown into today&apos;s heavy machinery distribution business with funding from operating cash flows as well as funding from reputable financial institutions.</label>
+            </value>
+            <value>
+                <fullName>Founder Funds</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Founder Funds</label>
+            </value>
+            <value>
+                <fullName>From Business</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>From Business</label>
+            </value>
+            <value>
+                <fullName>From Business Activities</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>From Business Activities</label>
+            </value>
+            <value>
+                <fullName>From Business Activity</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>From Business Activity</label>
+            </value>
+            <value>
+                <fullName>From Business operations</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>From Business operations</label>
+            </value>
+            <value>
+                <fullName>From JV partnership (Saipem, CB&amp;I, Chiyoda &amp; Anadarko</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>From JV partnership (Saipem, CB&amp;I, Chiyoda &amp; Anadarko</label>
+            </value>
+            <value>
+                <fullName>From Profits of other businesses</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>From Profits of other businesses</label>
+            </value>
+            <value>
+                <fullName>From Royalties of mining companies</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>From Royalties of mining companies</label>
+            </value>
+            <value>
+                <fullName>From existing Business Enterprise M Civils and Loans</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>From existing Business Enterprise M Civils and Loans</label>
+            </value>
+            <value>
+                <fullName>From existing business activities of the shareholder</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>From existing business activities of the shareholder</label>
+            </value>
+            <value>
+                <fullName>From investments</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>From investments</label>
+            </value>
+            <value>
+                <fullName>From its shareholder (engineering business)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>From its shareholder (engineering business)</label>
+            </value>
+            <value>
+                <fullName>From operations</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>From operations</label>
+            </value>
+            <value>
+                <fullName>From profits from the sale of food</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>From profits from the sale of food</label>
+            </value>
+            <value>
+                <fullName>From re-issurance activities</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>From re-issurance activities</label>
+            </value>
+            <value>
+                <fullName>From revenue to be generated from patrons</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>From revenue to be generated from patrons</label>
+            </value>
+            <value>
+                <fullName>From shareholder / investor DFIs</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>From shareholder / investor DFIs</label>
+            </value>
+            <value>
+                <fullName>From shareholders</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>From shareholders</label>
+            </value>
+            <value>
+                <fullName>From the Profits of the Company and others</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>From the Profits of the Company and others</label>
+            </value>
+            <value>
+                <fullName>From the existing businesses of the shareholders</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>From the existing businesses of the shareholders</label>
+            </value>
+            <value>
+                <fullName>From the shareholder</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>From the shareholder</label>
+            </value>
+            <value>
+                <fullName>From the shareholders funds</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>From the shareholders funds</label>
+            </value>
+            <value>
+                <fullName>Fund managers &amp; Investors</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Fund managers &amp; Investors</label>
+            </value>
+            <value>
+                <fullName>Funding from Parent</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Funding from Parent</label>
+            </value>
+            <value>
+                <fullName>Funding from shareholders</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Funding from shareholders</label>
+            </value>
+            <value>
+                <fullName>Funding from the shareholder and investors</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Funding from the shareholder and investors</label>
+            </value>
+            <value>
+                <fullName>Funds</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Funds</label>
+            </value>
+            <value>
+                <fullName>Funds from parent</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Funds from parent</label>
+            </value>
+            <value>
+                <fullName>Funds from shareholders</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Funds from shareholders</label>
+            </value>
+            <value>
+                <fullName>Funds generated form Trading activities</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Funds generated form Trading activities</label>
+            </value>
+            <value>
+                <fullName>Funds generated from trading activity</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Funds generated from trading activity</label>
+            </value>
+            <value>
+                <fullName>Game Farming Activities</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Game Farming Activities</label>
+            </value>
+            <value>
+                <fullName>Government funding</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Government funding</label>
+            </value>
+            <value>
+                <fullName>Government of Zimbabwe</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Government of Zimbabwe</label>
+            </value>
+            <value>
+                <fullName>Grant Recipients</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Grant Recipients</label>
+            </value>
+            <value>
+                <fullName>Grants/ Funding from National Treasury</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Grants/ Funding from National Treasury</label>
+            </value>
+            <value>
+                <fullName>Group Funding</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Group Funding</label>
+            </value>
+            <value>
+                <fullName>Group Funds</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Group Funds</label>
+            </value>
+            <value>
+                <fullName>Holding company for shares</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Holding company for shares</label>
+            </value>
+            <value>
+                <fullName>Income</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Income</label>
+            </value>
+            <value>
+                <fullName>Income from dividends</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Income from dividends</label>
+            </value>
+            <value>
+                <fullName>Income from textile manufacturing</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Income from textile manufacturing</label>
+            </value>
+            <value>
+                <fullName>Income generated from property rentals</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Income generated from property rentals</label>
+            </value>
+            <value>
+                <fullName>Income generated from property rentals/annual appreciation of property and commission</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Income generated from property rentals/annual appreciation of property and commission</label>
+            </value>
+            <value>
+                <fullName>Installation of  commercial  Solar Power units</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Installation of  commercial  Solar Power units</label>
+            </value>
+            <value>
+                <fullName>Institutional Investors and Endowments</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Institutional Investors and Endowments</label>
+            </value>
+            <value>
+                <fullName>Insurance funds</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Insurance funds</label>
+            </value>
+            <value>
+                <fullName>Insurance policy payments/collections</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Insurance policy payments/collections</label>
+            </value>
+            <value>
+                <fullName>Interest , fees</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Interest , fees</label>
+            </value>
+            <value>
+                <fullName>Interest income and fees from funding provided</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Interest income and fees from funding provided</label>
+            </value>
+            <value>
+                <fullName>Interest income and fees from securitisation</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Interest income and fees from securitisation</label>
+            </value>
+            <value>
+                <fullName>Interest, Fees</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Interest, Fees</label>
+            </value>
+            <value>
+                <fullName>Investment</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Investment</label>
+            </value>
+            <value>
+                <fullName>Investment Income</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Investment Income</label>
+            </value>
+            <value>
+                <fullName>Investment payout</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Investment payout</label>
+            </value>
+            <value>
+                <fullName>Investments</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Investments</label>
+            </value>
+            <value>
+                <fullName>Investments from Parent company</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Investments from Parent company</label>
+            </value>
+            <value>
+                <fullName>Investments from limited partners/Dividends from underlying investments</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Investments from limited partners/Dividends from underlying investments</label>
+            </value>
+            <value>
+                <fullName>Investor Funds</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Investor Funds</label>
+            </value>
+            <value>
+                <fullName>Investors and commission from Asset Management Activities</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Investors and commission from Asset Management Activities</label>
+            </value>
+            <value>
+                <fullName>Irregular income</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Irregular income</label>
+            </value>
+            <value>
+                <fullName>Jefferies Group LLC is a global full service, integrated investment banking and securities
+firm</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Jefferies Group LLC is a global full service, integrated investment banking and securities
+firm</label>
+            </value>
+            <value>
+                <fullName>Land to be contributed by THL and cash subscriptions from new shareholders. Any short term funding from THL.</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Land to be contributed by THL and cash subscriptions from new shareholders. Any short term funding from THL.</label>
+            </value>
+            <value>
+                <fullName>Loan from holding company</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Loan from holding company</label>
+            </value>
+            <value>
+                <fullName>Loans from shareholder</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Loans from shareholder</label>
+            </value>
+            <value>
+                <fullName>Local and International donors such as Mastercard Foundation, DFID, USAID</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Local and International donors such as Mastercard Foundation, DFID, USAID</label>
+            </value>
+            <value>
+                <fullName>Management Fees</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Management Fees</label>
+            </value>
+            <value>
+                <fullName>Member (Estate Agencies) contributions</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Member (Estate Agencies) contributions</label>
+            </value>
+            <value>
+                <fullName>Mergers &amp; Acquisitions</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Mergers &amp; Acquisitions</label>
+            </value>
+            <value>
+                <fullName>Mining</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Mining</label>
+            </value>
+            <value>
+                <fullName>Mining Related</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Mining Related</label>
+            </value>
+            <value>
+                <fullName>Mining and related activities</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Mining and related activities</label>
+            </value>
+            <value>
+                <fullName>Monument Park Ext 2</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Monument Park Ext 2</label>
+            </value>
+            <value>
+                <fullName>Mortgages advances acquired utilizing proceeds from notes issued via securitisation.</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Mortgages advances acquired utilizing proceeds from notes issued via securitisation.</label>
+            </value>
+            <value>
+                <fullName>N?A</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>N?A</label>
+            </value>
+            <value>
+                <fullName>Net interest income</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Net interest income</label>
+            </value>
+            <value>
+                <fullName>Non profit company</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Non profit company</label>
+            </value>
+            <value>
+                <fullName>Non-Profit Organisation</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Non-Profit Organisation</label>
+            </value>
+            <value>
+                <fullName>Offshore owner</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Offshore owner</label>
+            </value>
+            <value>
+                <fullName>Operating profit</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Operating profit</label>
+            </value>
+            <value>
+                <fullName>Operations</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Operations</label>
+            </value>
+            <value>
+                <fullName>Ordinary shares issued</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Ordinary shares issued</label>
+            </value>
+            <value>
+                <fullName>Own capital</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Own capital</label>
+            </value>
+            <value>
+                <fullName>Own funds</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Own funds</label>
+            </value>
+            <value>
+                <fullName>Own funds from investments</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Own funds from investments</label>
+            </value>
+            <value>
+                <fullName>Owner contributions</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Owner contributions</label>
+            </value>
+            <value>
+                <fullName>Owners Contributions</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Owners Contributions</label>
+            </value>
+            <value>
+                <fullName>Owners contribution</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Owners contribution</label>
+            </value>
+            <value>
+                <fullName>Parent Company, Property Investments</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Parent Company, Property Investments</label>
+            </value>
+            <value>
+                <fullName>Payment and Prepaid services offered to clients - profits from business</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Payment and Prepaid services offered to clients - profits from business</label>
+            </value>
+            <value>
+                <fullName>Pension Fund collectins</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Pension Fund collectins</label>
+            </value>
+            <value>
+                <fullName>Pension Fund collection</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Pension Fund collection</label>
+            </value>
+            <value>
+                <fullName>Pension collection</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Pension collection</label>
+            </value>
+            <value>
+                <fullName>Pension fund collections</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Pension fund collections</label>
+            </value>
+            <value>
+                <fullName>Pension/fees/charges/commisions</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Pension/fees/charges/commisions</label>
+            </value>
+            <value>
+                <fullName>Personal wealth of founders</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Personal wealth of founders</label>
+            </value>
+            <value>
+                <fullName>Pfofits from business activities</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Pfofits from business activities</label>
+            </value>
+            <value>
+                <fullName>Plant and equipment hire</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Plant and equipment hire</label>
+            </value>
+            <value>
+                <fullName>Power equipment supply</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Power equipment supply</label>
+            </value>
+            <value>
+                <fullName>Private company founded by Philippe de Moerloose in 1991 with personal savings. Subsequent growth funded from a combination of operating cash flows and external funding from reputable financial institutions.</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Private company founded by Philippe de Moerloose in 1991 with personal savings. Subsequent growth funded from a combination of operating cash flows and external funding from reputable financial institutions.</label>
+            </value>
+            <value>
+                <fullName>Private equity funds from the Royal Bafokeng Holdings investment group, which it is a part of.</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Private equity funds from the Royal Bafokeng Holdings investment group, which it is a part of.</label>
+            </value>
+            <value>
+                <fullName>Proceed from sales</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Proceed from sales</label>
+            </value>
+            <value>
+                <fullName>Proceeds from business activities</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Proceeds from business activities</label>
+            </value>
+            <value>
+                <fullName>Proceeds from business activity</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Proceeds from business activity</label>
+            </value>
+            <value>
+                <fullName>Proceeds from business related activity</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Proceeds from business related activity</label>
+            </value>
+            <value>
+                <fullName>Proceeds from generated from sale of stainless steel</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Proceeds from generated from sale of stainless steel</label>
+            </value>
+            <value>
+                <fullName>Proceeds from normal business activities</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Proceeds from normal business activities</label>
+            </value>
+            <value>
+                <fullName>Proceeds from normal business activitiy</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Proceeds from normal business activitiy</label>
+            </value>
+            <value>
+                <fullName>Proceeds from normal business activity</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Proceeds from normal business activity</label>
+            </value>
+            <value>
+                <fullName>Proceeds from normal business operations</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Proceeds from normal business operations</label>
+            </value>
+            <value>
+                <fullName>Proceeds from normal tranding business</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Proceeds from normal tranding business</label>
+            </value>
+            <value>
+                <fullName>Proceeds from profit</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Proceeds from profit</label>
+            </value>
+            <value>
+                <fullName>Proceeds of business activity</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Proceeds of business activity</label>
+            </value>
+            <value>
+                <fullName>Proceeds of normal business activity</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Proceeds of normal business activity</label>
+            </value>
+            <value>
+                <fullName>Profit</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Profit</label>
+            </value>
+            <value>
+                <fullName>Profit / Income from business activity</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Profit / Income from business activity</label>
+            </value>
+            <value>
+                <fullName>Profit and Income from construction, site preparation and related activities</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Profit and Income from construction, site preparation and related activities</label>
+            </value>
+            <value>
+                <fullName>Profit from Business</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Profit from Business</label>
+            </value>
+            <value>
+                <fullName>Profit from Business  Activity</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Profit from Business  Activity</label>
+            </value>
+            <value>
+                <fullName>Profit from Operaions</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Profit from Operaions</label>
+            </value>
+            <value>
+                <fullName>Profit from business activities</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Profit from business activities</label>
+            </value>
+            <value>
+                <fullName>Profit from business activities.</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Profit from business activities.</label>
+            </value>
+            <value>
+                <fullName>Profit from business activity</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Profit from business activity</label>
+            </value>
+            <value>
+                <fullName>Profit from business activity.</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Profit from business activity.</label>
+            </value>
+            <value>
+                <fullName>Profit from business operations</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Profit from business operations</label>
+            </value>
+            <value>
+                <fullName>Profit from concessional agreements</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Profit from concessional agreements</label>
+            </value>
+            <value>
+                <fullName>Profit from intermediation activities</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Profit from intermediation activities</label>
+            </value>
+            <value>
+                <fullName>Profit from investment</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Profit from investment</label>
+            </value>
+            <value>
+                <fullName>Profit from investment activities</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Profit from investment activities</label>
+            </value>
+            <value>
+                <fullName>Profit from investments</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Profit from investments</label>
+            </value>
+            <value>
+                <fullName>Profit from mining activities</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Profit from mining activities</label>
+            </value>
+            <value>
+                <fullName>Profit from mining operations.</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Profit from mining operations.</label>
+            </value>
+            <value>
+                <fullName>Profit from operating activities</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Profit from operating activities</label>
+            </value>
+            <value>
+                <fullName>Profit from operations</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Profit from operations</label>
+            </value>
+            <value>
+                <fullName>Profit from operations- Retail Pharmacy</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Profit from operations- Retail Pharmacy</label>
+            </value>
+            <value>
+                <fullName>Profit from sales</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Profit from sales</label>
+            </value>
+            <value>
+                <fullName>Profit from trading</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Profit from trading</label>
+            </value>
+            <value>
+                <fullName>Profit from trading activities</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Profit from trading activities</label>
+            </value>
+            <value>
+                <fullName>Profit from training activities</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Profit from training activities</label>
+            </value>
+            <value>
+                <fullName>Profit generated from business activities</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Profit generated from business activities</label>
+            </value>
+            <value>
+                <fullName>Profit retention</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Profit retention</label>
+            </value>
+            <value>
+                <fullName>Profits</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Profits</label>
+            </value>
+            <value>
+                <fullName>Profits accruing</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Profits accruing</label>
+            </value>
+            <value>
+                <fullName>Profits from  business activities</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Profits from  business activities</label>
+            </value>
+            <value>
+                <fullName>Profits from Business</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Profits from Business</label>
+            </value>
+            <value>
+                <fullName>Profits from Business activity</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Profits from Business activity</label>
+            </value>
+            <value>
+                <fullName>Profits from Oil trading</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Profits from Oil trading</label>
+            </value>
+            <value>
+                <fullName>Profits from Rental of vehicles</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Profits from Rental of vehicles</label>
+            </value>
+            <value>
+                <fullName>Profits from business activities</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Profits from business activities</label>
+            </value>
+            <value>
+                <fullName>Profits from business operations Rental income and investments</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Profits from business operations Rental income and investments</label>
+            </value>
+            <value>
+                <fullName>Profits from busness</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Profits from busness</label>
+            </value>
+            <value>
+                <fullName>Profits from existing business entities</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Profits from existing business entities</label>
+            </value>
+            <value>
+                <fullName>Profits from funds management activities</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Profits from funds management activities</label>
+            </value>
+            <value>
+                <fullName>Profits from selling properties to entrepreneurs under deferred sale agreements</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Profits from selling properties to entrepreneurs under deferred sale agreements</label>
+            </value>
+            <value>
+                <fullName>Profits generated from business activity</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Profits generated from business activity</label>
+            </value>
+            <value>
+                <fullName>Profits on rental and investment opportunities</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Profits on rental and investment opportunities</label>
+            </value>
+            <value>
+                <fullName>Project management</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Project management</label>
+            </value>
+            <value>
+                <fullName>Property Investment and Development</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Property Investment and Development</label>
+            </value>
+            <value>
+                <fullName>Property Investments</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Property Investments</label>
+            </value>
+            <value>
+                <fullName>Property Investments and Leasing</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Property Investments and Leasing</label>
+            </value>
+            <value>
+                <fullName>Property Management</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Property Management</label>
+            </value>
+            <value>
+                <fullName>Property and Investments Holdings</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Property and Investments Holdings</label>
+            </value>
+            <value>
+                <fullName>Property and Land Ownership</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Property and Land Ownership</label>
+            </value>
+            <value>
+                <fullName>Property development</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Property development</label>
+            </value>
+            <value>
+                <fullName>Property investments  / Sale &amp; Leaseback transactions.</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Property investments  / Sale &amp; Leaseback transactions.</label>
+            </value>
+            <value>
+                <fullName>Property ownership and rental thereof</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Property ownership and rental thereof</label>
+            </value>
+            <value>
+                <fullName>Property owning &amp; development</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Property owning &amp; development</label>
+            </value>
+            <value>
+                <fullName>Property rental</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Property rental</label>
+            </value>
+            <value>
+                <fullName>Property rentals</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Property rentals</label>
+            </value>
+            <value>
+                <fullName>R2,636,730</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>R2,636,730</label>
+            </value>
+            <value>
+                <fullName>R5000</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>R5000</label>
+            </value>
+            <value>
+                <fullName>Receipt of dividend funds</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Receipt of dividend funds</label>
+            </value>
+            <value>
+                <fullName>Regular Income</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Regular Income</label>
+            </value>
+            <value>
+                <fullName>Regular income from investmentns</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Regular income from investmentns</label>
+            </value>
+            <value>
+                <fullName>Regular income, fee income and interest income</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Regular income, fee income and interest income</label>
+            </value>
+            <value>
+                <fullName>Regular profits from insurance brokerage activities</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Regular profits from insurance brokerage activities</label>
+            </value>
+            <value>
+                <fullName>Regulator</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Regulator</label>
+            </value>
+            <value>
+                <fullName>Rental income</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Rental income</label>
+            </value>
+            <value>
+                <fullName>Rental income derived from investment property</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Rental income derived from investment property</label>
+            </value>
+            <value>
+                <fullName>Retained earnings from related business entities</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Retained earnings from related business entities</label>
+            </value>
+            <value>
+                <fullName>Retention of profits, Investments</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Retention of profits, Investments</label>
+            </value>
+            <value>
+                <fullName>Revenue from Maintenance undertaken for the Dhans Group</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Revenue from Maintenance undertaken for the Dhans Group</label>
+            </value>
+            <value>
+                <fullName>Royalties</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Royalties</label>
+            </value>
+            <value>
+                <fullName>SDA Holding is the ultimate controlling entity of the group. The business has been financed from a combination of internal operating cashflows and external debt funding from reputable FI&apos;s</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>SDA Holding is the ultimate controlling entity of the group. The business has been financed from a combination of internal operating cashflows and external debt funding from reputable FI&apos;s</label>
+            </value>
+            <value>
+                <fullName>SHARE HOLDERS FUNDS</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>SHARE HOLDERS FUNDS</label>
+            </value>
+            <value>
+                <fullName>Salary</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Salary</label>
+            </value>
+            <value>
+                <fullName>Sale of Diamonds</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sale of Diamonds</label>
+            </value>
+            <value>
+                <fullName>Sale of beverages</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sale of beverages</label>
+            </value>
+            <value>
+                <fullName>Sale of gold, gold services and technical services to gold miners</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sale of gold, gold services and technical services to gold miners</label>
+            </value>
+            <value>
+                <fullName>Sales</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sales</label>
+            </value>
+            <value>
+                <fullName>Sales Revenue</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sales Revenue</label>
+            </value>
+            <value>
+                <fullName>Share capital</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Share capital</label>
+            </value>
+            <value>
+                <fullName>Share capital and loan from Shareholder- Barak Partners Limited</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Share capital and loan from Shareholder- Barak Partners Limited</label>
+            </value>
+            <value>
+                <fullName>Share capital from main shareholder Gazprombank</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Share capital from main shareholder Gazprombank</label>
+            </value>
+            <value>
+                <fullName>Share tradiing</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Share tradiing</label>
+            </value>
+            <value>
+                <fullName>Shareholder</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Shareholder</label>
+            </value>
+            <value>
+                <fullName>Shareholder Funding</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Shareholder Funding</label>
+            </value>
+            <value>
+                <fullName>Shareholder Loans</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Shareholder Loans</label>
+            </value>
+            <value>
+                <fullName>Shareholder equity</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Shareholder equity</label>
+            </value>
+            <value>
+                <fullName>Shareholder funding
+Dividends</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Shareholder funding
+Dividends</label>
+            </value>
+            <value>
+                <fullName>Shareholder funds</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Shareholder funds</label>
+            </value>
+            <value>
+                <fullName>Shareholder funds / capital injection</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Shareholder funds / capital injection</label>
+            </value>
+            <value>
+                <fullName>Shareholder injection of funds and profits from business</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Shareholder injection of funds and profits from business</label>
+            </value>
+            <value>
+                <fullName>Shareholder investment</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Shareholder investment</label>
+            </value>
+            <value>
+                <fullName>Shareholder loan</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Shareholder loan</label>
+            </value>
+            <value>
+                <fullName>Shareholder&apos;s contribution</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Shareholder&apos;s contribution</label>
+            </value>
+            <value>
+                <fullName>Shareholder&apos;s fund</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Shareholder&apos;s fund</label>
+            </value>
+            <value>
+                <fullName>Shareholder&apos;s funds</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Shareholder&apos;s funds</label>
+            </value>
+            <value>
+                <fullName>Shareholder&apos;s investments</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Shareholder&apos;s investments</label>
+            </value>
+            <value>
+                <fullName>Shareholder&apos;s loans</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Shareholder&apos;s loans</label>
+            </value>
+            <value>
+                <fullName>Shareholders</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Shareholders</label>
+            </value>
+            <value>
+                <fullName>Shareholders Equity</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Shareholders Equity</label>
+            </value>
+            <value>
+                <fullName>Shareholders Funds</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Shareholders Funds</label>
+            </value>
+            <value>
+                <fullName>Shareholders Loan and Equity</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Shareholders Loan and Equity</label>
+            </value>
+            <value>
+                <fullName>Shareholders and business</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Shareholders and business</label>
+            </value>
+            <value>
+                <fullName>Shareholders funding</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Shareholders funding</label>
+            </value>
+            <value>
+                <fullName>Shareholders injection</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Shareholders injection</label>
+            </value>
+            <value>
+                <fullName>Shareholders investments</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Shareholders investments</label>
+            </value>
+            <value>
+                <fullName>Shareholders loan</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Shareholders loan</label>
+            </value>
+            <value>
+                <fullName>Shareholders wealth</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Shareholders wealth</label>
+            </value>
+            <value>
+                <fullName>Shareholders&apos; capital</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Shareholders&apos; capital</label>
+            </value>
+            <value>
+                <fullName>Shareholders- France</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Shareholders- France</label>
+            </value>
+            <value>
+                <fullName>Shareholding Funding</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Shareholding Funding</label>
+            </value>
+            <value>
+                <fullName>Shares and Dividends</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Shares and Dividends</label>
+            </value>
+            <value>
+                <fullName>Storage Activity</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Storage Activity</label>
+            </value>
+            <value>
+                <fullName>TRADING</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>TRADING</label>
+            </value>
+            <value>
+                <fullName>The employees contributions to the fund</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>The employees contributions to the fund</label>
+            </value>
+            <value>
+                <fullName>The establishment of the joint venture between Shoprite Checkers and Equites will result in the
+following benefits to Shoprite Holdings, together with its subsidiaries (the &quot;Group&quot;), which are in
+line with the Group&apos;s strategy.</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>The establishment of the joint venture between Shoprite Checkers and Equites will result in the
+following benefits to Shoprite Holdings, together with its subsidiaries (the &quot;Group&quot;), which are in
+line with the Group&apos;s strategy.</label>
+            </value>
+            <value>
+                <fullName>Third Party loans</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Third Party loans</label>
+            </value>
+            <value>
+                <fullName>Through equity and debt</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Through equity and debt</label>
+            </value>
+            <value>
+                <fullName>Trade Profits</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Trade Profits</label>
+            </value>
+            <value>
+                <fullName>Trade deposits</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Trade deposits</label>
+            </value>
+            <value>
+                <fullName>Trading Profits</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Trading Profits</label>
+            </value>
+            <value>
+                <fullName>Trading activities of sale of liquor</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Trading activities of sale of liquor</label>
+            </value>
+            <value>
+                <fullName>Trust Contributions</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Trust Contributions</label>
+            </value>
+            <value>
+                <fullName>Trustee Funds</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Trustee Funds</label>
+            </value>
+            <value>
+                <fullName>Trustees</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Trustees</label>
+            </value>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Unknown</label>
+            </value>
+            <value>
+                <fullName>Working capital</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Working capital</label>
+            </value>
+            <value>
+                <fullName>Zinc Mining Related activities</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Zinc Mining Related activities</label>
+            </value>
+            <value>
+                <fullName>abattoir</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>abattoir</label>
+            </value>
+            <value>
+                <fullName>benefactor funding</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>benefactor funding</label>
+            </value>
+            <value>
+                <fullName>bicycle Sales</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>bicycle Sales</label>
+            </value>
+            <value>
+                <fullName>commodities tading</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>commodities tading</label>
+            </value>
+            <value>
+                <fullName>construction business</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>construction business</label>
+            </value>
+            <value>
+                <fullName>current business activities</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>current business activities</label>
+            </value>
+            <value>
+                <fullName>daily sales</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>daily sales</label>
+            </value>
+            <value>
+                <fullName>donations</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>donations</label>
+            </value>
+            <value>
+                <fullName>feeder fund</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>feeder fund</label>
+            </value>
+            <value>
+                <fullName>from rental of investment properties</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>from rental of investment properties</label>
+            </value>
+            <value>
+                <fullName>generated from business activities</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>generated from business activities</label>
+            </value>
+            <value>
+                <fullName>income from business activities.</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>income from business activities.</label>
+            </value>
+            <value>
+                <fullName>internet services provider</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>internet services provider</label>
+            </value>
+            <value>
+                <fullName>investment Trust</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>investment Trust</label>
+            </value>
+            <value>
+                <fullName>legal fee income</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>legal fee income</label>
+            </value>
+            <value>
+                <fullName>mining of copper</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>mining of copper</label>
+            </value>
+            <value>
+                <fullName>n/a</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>n/a</label>
+            </value>
+            <value>
+                <fullName>oil and gas business</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>oil and gas business</label>
+            </value>
+            <value>
+                <fullName>oil and gas industry</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>oil and gas industry</label>
+            </value>
+            <value>
+                <fullName>operations from companies under the holding of Siemens Energy</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>operations from companies under the holding of Siemens Energy</label>
+            </value>
+            <value>
+                <fullName>profi t from business activity</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>profi t from business activity</label>
+            </value>
+            <value>
+                <fullName>profit from business acitivyt</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>profit from business acitivyt</label>
+            </value>
+            <value>
+                <fullName>profit from operations(Retail pharmacy)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>profit from operations(Retail pharmacy)</label>
+            </value>
+            <value>
+                <fullName>profit from retail pharmacies.</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>profit from retail pharmacies.</label>
+            </value>
+            <value>
+                <fullName>profit from sales of battery and power solutions</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>profit from sales of battery and power solutions</label>
+            </value>
+            <value>
+                <fullName>profits from business operations</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>profits from business operations</label>
+            </value>
+            <value>
+                <fullName>profits from business trading</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>profits from business trading</label>
+            </value>
+            <value>
+                <fullName>profits from rental income</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>profits from rental income</label>
+            </value>
+            <value>
+                <fullName>profits from trading</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>profits from trading</label>
+            </value>
+            <value>
+                <fullName>project income</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>project income</label>
+            </value>
+            <value>
+                <fullName>property investment</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>property investment</label>
+            </value>
+            <value>
+                <fullName>purchasing of property</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>purchasing of property</label>
+            </value>
+            <value>
+                <fullName>security company</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>security company</label>
+            </value>
+            <value>
+                <fullName>share holder investment</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>share holder investment</label>
+            </value>
+            <value>
+                <fullName>shareholder capital injections for partnership interests</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>shareholder capital injections for partnership interests</label>
+            </value>
+            <value>
+                <fullName>shareholder loans and BEE transaction</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>shareholder loans and BEE transaction</label>
+            </value>
+            <value>
+                <fullName>shareholder&apos;s capital</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>shareholder&apos;s capital</label>
+            </value>
+            <value>
+                <fullName>shareholding investments.</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>shareholding investments.</label>
+            </value>
+            <value>
+                <fullName>trade income</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>trade income</label>
+            </value>
+            <value>
+                <fullName>treasury shares sold</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>treasury shares sold</label>
+            </value>
+            <value>
+                <fullName>via partner injection. Profits from the provision of services</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>via partner injection. Profits from the provision of services</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

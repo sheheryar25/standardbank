@@ -1,0 +1,30 @@
+<aura:component controller="StdBank_Ltn_ClientsCYWonRevenueCtrl" extends="c:CI_Base"
+                implements="flexipage:availableForAllPageTypes,force:hasRecordId">
+    <aura:attribute name="totalWonRevenue" type="Integer"/>
+    <aura:attribute name="isoCode" type="String"/>
+    <aura:attribute name="color" type="String" default=" "/>
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="help" type="String"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <article class="card_with_shadow">
+        <div class="slds-grid" style="height:100%">
+            <div class="slds-col slds-p-around_small">
+                <p class="slds-text-heading_small">{!$Label.c.Total_CY_Won_Opportunities}</p>
+                <div class="slds-grid">
+                    <div class="slds-text-heading_medium slds-p-right_xx-small slds-m-top_x-small">
+                        {!$Locale.currencyCode}
+                    </div>
+                    <div class="{!'slds-m-top_x-small slds-text-heading_medium ' +  v.color }">
+                        {!v.totalWonRevenue}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <aura:renderIf isTrue="{!v.recordId != null}">
+            <lightning:helptext class="slds-is-absolute dock_right dock_bottom slds-p-around_xx-small"
+                                content="{!v.help}"/>
+        </aura:renderIf>
+    </article>
+
+</aura:component>

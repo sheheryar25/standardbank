@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SingletrackCMS__Contact_Blocked__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <formula>SingletrackCMS__Blocked__c</formula>
+    <label>Contact Blocked</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

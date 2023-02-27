@@ -1,0 +1,16 @@
+.THIS .slds-card {
+    background-color: white !important;
+}
+
+.THIS .slds-card p {
+    color: rgb(84, 105, 141);
+}
+
+.THIS table {
+	table-layout:fixed;
+    width:100%;
+}
+
+.THIS td {
+	white-space: normal;
+}

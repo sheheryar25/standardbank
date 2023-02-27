@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mandatory_field_check_for_CSI_cases</fullName>
+    <active>true</active>
+    <description>EN-0701/US:1210:CSI - Case automation &amp; data quality control.This validation rule checks if  CSI Client at risk and case related info are not provided or If Case info are provided but overall CSI Client at risk is not Yes.</description>
+    <errorConditionFormula>AND (OR ( AND( 
+ (ISPICKVAL(CSI_Client_at_Risk__c, &quot;Yes&quot;))
+, 
+OR(OR (ISBLANK(CSI_Case_Description__c), 
+ISBLANK(CSI_Case_Subject__c), 
+ISBLANK(CSI_Case_OwnerId__c), 
+ISBLANK(CSI_Survey_Contact__c) 
+),
+AND (NOT(ISPICKVAL(Related_To__c,&quot;Client Coverage&quot;)),
+NOT(ISPICKVAL(Related_To__c,&quot;Global Markets&quot;)),
+NOT(ISPICKVAL(Related_To__c,&quot;Investment Banking&quot;)),
+NOT(ISPICKVAL(Related_To__c,&quot;Transactional Products and Services&quot;)),
+NOT(ISPICKVAL(Related_To__c,&quot;Across CIB&quot;)))
+)	
+), 
+
+AND( 
+
+NOT(ISPICKVAL(CSI_Client_at_Risk__c, &quot;Yes&quot;)), 
+AND 
+(NOT(ISBLANK(CSI_Case_Description__c)), 
+NOT(ISBLANK(CSI_Case_Subject__c)), 
+NOT(ISBLANK(CSI_Case_OwnerId__c)), 
+NOT(ISBLANK(CSI_Survey_Contact__c)) 
+)
+
+) 
+
+
+), 
+
+IF( Text(CreatedDate) == null, True, False ) 
+)</errorConditionFormula>
+    <errorMessage>Please provide all the Case details for this record.Either one or all of the following are blank:Case Subject,Case Description,Case OwnerID,CSI Survey Contact,Related to CSI Client at risk or CSI Client at Risk is No.Will trigger only on CSI record insert</errorMessage>
+</ValidationRule>

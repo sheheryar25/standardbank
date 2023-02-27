@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Document_Required__c</fullName>
+    <description>Documents Required for the KYC Review process</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Documents Required for the KYC Review process</inlineHelpText>
+    <label>Document Required</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>6 AML Questions</fullName>
+                <default>false</default>
+                <label>6 AML Questions</label>
+            </value>
+            <value>
+                <fullName>AML Policy</fullName>
+                <default>false</default>
+                <label>AML Policy</label>
+            </value>
+            <value>
+                <fullName>Annual Financial Statements</fullName>
+                <default>false</default>
+                <label>Annual Financial Statements</label>
+            </value>
+            <value>
+                <fullName>Client Risk Committee Meeting Minutes</fullName>
+                <default>false</default>
+                <label>Client Risk Committee Meeting Minutes</label>
+            </value>
+            <value>
+                <fullName>Corresponding Bank Questions</fullName>
+                <default>false</default>
+                <label>Corresponding Bank Questions</label>
+            </value>
+            <value>
+                <fullName>CRC Minutes</fullName>
+                <default>false</default>
+                <label>CRC Minutes</label>
+            </value>
+            <value>
+                <fullName>CRC Template and Research</fullName>
+                <default>false</default>
+                <label>CRC Template and Research</label>
+            </value>
+            <value>
+                <fullName>Exemption 4B Certificate and Questionnaire</fullName>
+                <default>false</default>
+                <label>Exemption 4B Certificate and Questionnaire</label>
+            </value>
+            <value>
+                <fullName>FAIS Document</fullName>
+                <default>false</default>
+                <label>FAIS Document</label>
+            </value>
+            <value>
+                <fullName>Fatca letter</fullName>
+                <default>false</default>
+                <label>Fatca letter</label>
+            </value>
+            <value>
+                <fullName>High Risk Client Template</fullName>
+                <default>false</default>
+                <label>High Risk Client Template</label>
+            </value>
+            <value>
+                <fullName>High Risk email Approval</fullName>
+                <default>false</default>
+                <label>High Risk email Approval</label>
+            </value>
+            <value>
+                <fullName>HRC Approval</fullName>
+                <default>false</default>
+                <label>HRC Approval</label>
+            </value>
+            <value>
+                <fullName>ID / Passport</fullName>
+                <default>false</default>
+                <label>ID / Passport</label>
+            </value>
+            <value>
+                <fullName>Internal KYC Questions</fullName>
+                <default>false</default>
+                <label>Internal KYC Questions</label>
+            </value>
+            <value>
+                <fullName>Joint Venture Agreement</fullName>
+                <default>false</default>
+                <label>Joint Venture Agreement</label>
+            </value>
+            <value>
+                <fullName>KYC Review Template</fullName>
+                <default>false</default>
+                <label>KYC Review Template</label>
+            </value>
+            <value>
+                <fullName>Letter of Authority</fullName>
+                <default>false</default>
+                <label>Letter of Authority</label>
+            </value>
+            <value>
+                <fullName>Liquidator Documents</fullName>
+                <default>false</default>
+                <label>Liquidator Documents</label>
+            </value>
+            <value>
+                <fullName>Liquidators Letter</fullName>
+                <default>false</default>
+                <label>Liquidators Letter</label>
+            </value>
+            <value>
+                <fullName>Name change certificate</fullName>
+                <default>false</default>
+                <label>Name change certificate</label>
+            </value>
+            <value>
+                <fullName>Proof of Registered address</fullName>
+                <default>false</default>
+                <label>Proof of Registered address</label>
+            </value>
+            <value>
+                <fullName>Proof of Trading address</fullName>
+                <default>false</default>
+                <label>Proof of Trading address</label>
+            </value>
+            <value>
+                <fullName>Resolution</fullName>
+                <default>false</default>
+                <label>Resolution</label>
+            </value>
+            <value>
+                <fullName>Shareholders details</fullName>
+                <default>false</default>
+                <label>Shareholders details</label>
+            </value>
+            <value>
+                <fullName>Site Visit</fullName>
+                <default>false</default>
+                <label>Site Visit</label>
+            </value>
+            <value>
+                <fullName>Swift message</fullName>
+                <default>false</default>
+                <label>Swift message</label>
+            </value>
+            <value>
+                <fullName>Trust Deed</fullName>
+                <default>false</default>
+                <label>Trust Deed</label>
+            </value>
+            <value>
+                <fullName>UBO Details</fullName>
+                <default>false</default>
+                <label>UBO Details</label>
+            </value>
+            <value>
+                <fullName>Ultimate Beneficial Owner</fullName>
+                <default>false</default>
+                <label>Ultimate Beneficial Owner</label>
+            </value>
+            <value>
+                <fullName>W-8ben-e</fullName>
+                <default>false</default>
+                <label>W-8ben-e</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GEL_Charity_Name_Only_for_Rejected</fullName>
+    <active>true</active>
+    <description>Only supply a charity name when the Gift / expense Log is rejected
+
+Case 1051: Gift / Expense Logs : C Reinecke</description>
+    <errorConditionFormula>LEN( Charity_Name__c )&gt;0 &amp;&amp; (TEXT( Status__c )  &lt;&gt;  &quot;Rejected&quot;)</errorConditionFormula>
+    <errorDisplayField>Charity_Name__c</errorDisplayField>
+    <errorMessage>You may only capture the charity name for entries that have been rejected</errorMessage>
+</ValidationRule>

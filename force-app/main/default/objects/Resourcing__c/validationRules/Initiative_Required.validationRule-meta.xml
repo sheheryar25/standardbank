@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Initiative_Required</fullName>
+    <active>true</active>
+    <description>Initiative has to be selected for resourcing not related to opportunity [SFP-4978]</description>
+    <errorConditionFormula>AND( RecordType.DeveloperName = &apos;Initiative_Resourcing&apos;,
+ISBLANK( TEXT(Initiative__c) ) )</errorConditionFormula>
+    <errorMessage>Initiative has to be selected</errorMessage>
+</ValidationRule>

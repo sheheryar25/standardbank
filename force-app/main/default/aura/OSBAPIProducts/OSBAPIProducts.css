@@ -1,0 +1,217 @@
+.THIS {
+    color: #000;
+    padding-top: 60px;
+}
+
+.THIS .clickableli:hover{
+    cursor: pointer;
+}
+
+.THIS .apiProducts {
+    padding: 70px 0;
+    max-width: 1224px;
+    margin: auto;
+	display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 1200px) {
+    .THIS .apiProducts {
+        padding: 96px 15px;
+    }
+}
+@media (min-width: 1200px){
+    .THIS .apiProducts {
+        margin: 0 20% 0 20%;
+    }
+}
+
+.THIS .apiProducts--full {
+    align-items: center;
+}
+
+.THIS .apiProducts__comingSoon__title,
+.THIS .apiProducts__title,
+.THIS .apiProducts__title__full{
+    color: #1a1a1a;
+    font-size: 27px;
+    font-weight: 400;
+    line-height: 27px;
+}
+
+.THIS .apiProducts__comingSoon__title,
+.THIS .apiProducts__title__full {
+    font-weight: 400;
+    font-family: BentonSans;
+    text-transform: uppercase;
+    align-self: normal;
+}
+
+.THIS .apiProducts__comingSoon__title{
+    margin-top: 40px;  
+}
+
+.THIS .apiProducts__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: minmax(300px, 1fr);
+    grid-column-gap: 36px;
+    grid-row-gap: 36px;
+}
+
+.THIS .apiProducts__button {
+    width: 226px;
+    margin: 0 auto;
+    display: block;
+}
+
+.THIS .apiProducts__subtitle {
+    font-size: 24px;
+    line-height: 40px;
+    color: #858D9D;
+    text-align: center;
+    max-width: 800px;
+}
+
+.THIS .apiProducts--tile {
+    padding: 24px 16px 16px 16px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 15px 0 rgba(0,0,0,0.09);
+}
+
+.THIS .apiProducts--tile .link {
+    color: #0089FF;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.THIS .apiProducts--tile .link:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.THIS .apiProducts--tile .link--all {
+    color: #0089ff;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 23px;
+    margin-top: auto;
+    margin-right: 1%;
+    text-align: right;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.THIS .apiProducts__container--tile__title {
+    color: #0033AA;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-bottom: 8px;
+}
+
+.THIS .apiProducts-description--tile {
+    color: #444444;
+    font-family: BentonSans;
+    font-size: 15px;
+    font-weight: 200;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.THIS .apiProducts-title--tile_comingSoon,
+.THIS .apiProducts-title--tile {
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.THIS .apiProducts-title--tile {
+    color: #0089FF;
+}
+
+.THIS .apiProducts-title--tile_comingSoon {
+    color: #0A2240;
+}
+
+.THIS .apiProducts_comingSoon-label {
+    color: #0E8A00;
+    font-size: 15px;
+}
+
+.THIS .apiProducts__comingSoon__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.THIS .slds-input{
+    height: 40px;	
+    border: 1px solid #979797;	
+    border-radius: 3px;	
+    background-color: #FFFFFF;	 
+    display: flex;
+}
+.THIS .apiProducts-searchform--input{
+    color: #999999;	
+    font-family: BentonSans;	
+    font-size: 15px;	
+    font-weight: 300;	
+    line-height: 24px;
+    display: flex;
+}
+
+.THIS .apiProducts-noSearchResults{
+    margin:auto;
+    color: #000000;	
+    font-family: BentonSans;	
+    font-size: 28px;	
+    font-weight: 300;	
+    line-height: 40px;
+    text-align: center;
+}
+
+.THIS .apiProducts-searchBtn{
+    height: 40px;	
+    width: 200px;	
+    border-radius: 5px;	
+    background-color: #0089FF;
+    color: #ffffff;
+}
+.THIS .slds-form__size_resp{
+    margin: auto;
+    width:100%;
+}
+
+.THIS .apiProducts-grow {
+    flex-grow: 1;
+}
+
+.THIS .apiProducts-disp_flex {
+    display: flex;
+}
+
+@media(min-width:1200px){
+    .THIS .slds-form__size_resp {
+        width:61%;
+    }
+    .THIS .apiProducts-form {
+        padding-top: 80px;
+    }
+    .THIS .apiProducts-noSearchResults{
+        padding-top: 60px;
+    }
+}
+@media(max-width:1200px){
+    .THIS .slds-form__size_resp {
+        padding: 40px 10px;
+    }
+    .THIS .apiProducts-form {
+        padding-top: 10px;
+        margin-bottom:-10px;
+    }
+    .THIS .apiProducts-noSearchResults{
+        padding-top: 28px;
+    }
+}

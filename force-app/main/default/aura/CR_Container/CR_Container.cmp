@@ -1,0 +1,37 @@
+<!--
+ - Created by tsobota on 16.07.2018.
+ -->
+
+<aura:component description="CR_Container" implements="lightning:isUrlAddressable" controller="CR_Container_Controller">
+
+    <aura:attribute name="recordId" type="String" access="public" default="{!v.pageReference.state.c__recordId}"/>
+    <aura:attribute name="records" type="List" access="private"/>
+    <aura:attribute name="ClientTeamChanges" type="List" access="private"/>
+    <aura:attribute name="isWaiting" type="Boolean" access="private" default="true"/>
+    <aura:attribute name="redirecting" type="Boolean" default="false" access="private"/>
+    <aura:attribute name="hasPBBOrArchivedUserAsCC" type="Boolean" default="false" access="private"/>
+    <aura:attribute name="hasAdministratorUserAsCC" type="Boolean" default="false" access="private"/>
+    <aura:attribute name="CC_CCBM_PreviousValues" type="Object" access="private"/>
+    <aura:attribute name="showSummary" type="Boolean" default="false" access="private"/>
+    <aura:attribute name="isCcOrCcbm" type="Boolean" access="private" default="false"/>
+    <aura:attribute name="isCibUser" type="Boolean" access="private" default="false"/>
+
+    <c:UTL_Lightning aura:id="utils"/>
+
+    <lightning:notificationsLibrary aura:id="notifLib"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler name="change" value="{! v.pageReference}" action="{! c.reInit}"/>
+    <aura:handler name="change" value="{! v.showSummary}" action="{! c.onShowSummaryChange}"/>
+    <aura:if isTrue="{!!v.showSummary}">
+
+        <c:ClientTeamManage records="{!v.ClientTeamChanges}" CC_CCBM_PreviousValues = "{!v.CC_CCBM_PreviousValues}" recordId="{!if(empty(v.recordId), v.pageReference.state.recordId, v.recordId)}" isWaiting="{!v.isWaiting}" hasAdministratorUserAsCC="{!v.hasAdministratorUserAsCC}" isCcOrCcbm="{!v.isCcOrCcbm}" isCibUser="{!v.isCibUser}"/>
+        <aura:set attribute="else">
+                <c:ClientTeamChangeConfirmation ClientTeamChanges="{!v.ClientTeamChanges}" isWaiting="{!v.isWaiting}" showSummary="{!v.showSummary}" recordId="{!if(empty(v.recordId), v.pageReference.state.recordId, v.recordId)}" isCcOrCcbm="{!v.isCcOrCcbm}" isCibUser="{!v.isCibUser}"/>
+        </aura:set>
+    </aura:if>
+    <div class="slds-size_1-of-1 slds-align_absolute-center slds-m-around_small">
+        <lightning:button name="cancel" variant="neutral" onclick="{! c.cancelOrShowSummary}" label="{! if(v.showSummary, 'Update Request', 'Cancel')}"/>
+        <lightning:button name="submit" variant="brand" onclick="{! c.submit}" label="{! if(v.showSummary, 'Submit', 'Submit Request')}"/>
+    </div>
+</aura:component>

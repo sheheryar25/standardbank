@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NBAC_DistributionAndRiskManagement3</fullName>
+    <description>Fields to be displayed in Distribution and Risk Management section on NBAC process details page in Distribution and Risk Management tab.</description>
+    <displayedFields>
+        <field>SB_Sell_Down__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <displayedFields>
+        <field>Listed_Instruments__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <label>NBAC DistributionAndRiskManagement3</label>
+</FieldSet>

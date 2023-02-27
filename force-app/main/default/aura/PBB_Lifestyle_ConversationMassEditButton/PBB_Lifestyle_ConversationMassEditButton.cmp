@@ -1,0 +1,7 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" >
+	<lightning:workspaceAPI aura:id="workspace" />
+	<div class="slds-align_absolute-center slds-p-vertical_xx-small">
+	<!--	<lightning:formattedUrl value="google.com">Action multiple convestations</lightning:formattedUrl> -->
+		<lightning:button variant="brand" label="Action Conversations" title="Action Conversations" onclick="{! c.handleRedirect }"/>
+	</div>
+</aura:component>

@@ -1,0 +1,123 @@
+<aura:component controller="CI_RevenueController" extends="c:CI_Base">
+    <aura:method name="getCROC">
+        <aura:attribute name="clientId" type="String" />
+        <aura:attribute name="callback" type="function" />
+    </aura:method>
+    <aura:method name="getDeal">
+        <aura:attribute name="clientId" type="String" />
+        <aura:attribute name="dealTypes" type="String[]" />
+        <aura:attribute name="callback" type="function" />
+    </aura:method>
+
+    <aura:method name="getShare">
+        <aura:attribute name="clientId" type="String" />
+        <aura:attribute name="callback" type="function" />
+    </aura:method>
+
+    <aura:method name="getClientRevAndBudget">
+        <aura:attribute name="clientId" type="String" />
+        <aura:attribute name="callback" type="function" />
+    </aura:method>
+
+    <aura:method name="getRevByDivision">
+        <aura:attribute name="clientId" type="String" />
+        <aura:attribute name="callback" type="function" />
+    </aura:method>
+
+    <aura:method name="getBudByDivisionCountry">
+        <aura:attribute name="clientId" type="String" />
+        <aura:attribute name="callback" type="function" />
+    </aura:method>
+
+    <aura:method name="getRevByDivnCountryProduct">
+        <aura:attribute name="clientId" type="String" />
+        <aura:attribute name="callback" type="function" />
+    </aura:method>
+
+    <aura:method name="getCalcCROC">
+        <aura:attribute name="clientId" type="String" />
+        <aura:attribute name="year" type="Integer" />
+        <aura:attribute name="doAnnualise" type="Integer" />
+        <aura:attribute name="callback" type="function" />
+    </aura:method>
+
+    <aura:method name="getCalcROE">
+        <aura:attribute name="clientId" type="String" />
+        <aura:attribute name="year" type="String" />
+        <aura:attribute name="doAnnualise" type="Integer" />
+        <aura:attribute name="callback" type="function" />
+    </aura:method>
+
+    <aura:method name="getCapitalDetailed">
+        <aura:attribute name="clientId" type="String" />
+        <aura:attribute name="callback" type="function" />
+    </aura:method>
+
+    <aura:method name="getRevenueByDivisionProd">
+        <aura:attribute name="clientId" type="String" />
+        <aura:attribute name="callback" type="function" />
+    </aura:method>
+
+    <aura:method name="getRevBudgetDate">
+        <aura:attribute name="callback" type="function" />
+    </aura:method>
+
+    <aura:method name="getPortfolioRevenueAndBudget">
+        <aura:attribute name="querySettings" type="Object" />
+        <aura:attribute name="callback" type="function" />
+    </aura:method>
+
+    <aura:method name="getPortfolioRevenue">
+        <aura:attribute name="startYear" type="Integer" />
+        <aura:attribute name="numYearsBack" type="Integer" />
+        <aura:attribute name="toMonth" type="Integer" />
+        <aura:attribute name="callback" type="function" />
+    </aura:method>
+
+    <aura:method name="getPortfolioClientReturnOverCapital">
+        <aura:attribute name="callback" type="function" />
+    </aura:method>
+
+    <aura:method name="getPortfolioReturnOnEquity">
+        <aura:attribute name="callback" type="function" />
+    </aura:method>
+
+    <aura:method name="getClientReturnOnEquity">
+        <aura:attribute name="clientId" type="String" />
+        <aura:attribute name="callback" type="function" />
+    </aura:method>
+
+    <aura:method name="getRevenueByClientByDivision">
+        <aura:attribute name="clientId" type="String" />
+        <aura:attribute name="callback" type="function" />
+    </aura:method>
+
+    <aura:method name="getClientClientReturnOverCapital">
+        <aura:attribute name="clientId" type="String" />
+        <aura:attribute name="callback" type="function" />
+    </aura:method>
+    
+    <aura:method name="getPortfolioMonthlyRevVariance">
+        <aura:attribute name="callback" type="function" />
+    </aura:method>
+
+    <aura:method name="getPortfolioVariance">
+        <aura:attribute name="callback" type="function" />
+    </aura:method>
+
+    <aura:method name="getPortfolioCYPipeline">
+        <aura:attribute name="clientId" type="String" />
+        <aura:attribute name="querySettings" type="Object" />
+        <aura:attribute name="callback" type="function" />
+    </aura:method>
+
+    <aura:method name="getUserIsoCode">
+        <aura:attribute name="callback" type="function" />
+    </aura:method>
+
+    <aura:method name="getCustomSettings">
+        <aura:attribute name="querySettings" type="Object" />
+        <aura:attribute name="callback" type="function" />
+    </aura:method>
+
+</aura:component>

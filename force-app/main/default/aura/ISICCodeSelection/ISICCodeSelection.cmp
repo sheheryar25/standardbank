@@ -1,0 +1,51 @@
+<!--
+ - Created by joracki on 03.10.2018.
+ -->
+
+<aura:component controller="ISICCodeSelectionController" implements="flexipage:availableForRecordHome,force:hasRecordId">
+
+    <!-- attributes -->
+    <aura:attribute name="data" type="Object"/>
+    <aura:attribute name="codesOptions" type="Object"/>
+    <aura:attribute name="columns" type="List"/>
+    <aura:attribute name="maxRowSelection" type="Integer" default="1"/>
+    <aura:attribute name="selectedRows" type="List" default="[]"/>
+    <aura:attribute name="editMode" type="Boolean" default="false"/>
+    <aura:attribute name="attributes" type="Map"/>
+
+    <aura:attribute name="clientSector" type="String"/>
+    <aura:attribute name="clientSubSector" type="String"/>
+
+    <aura:attribute name="record" type="Object"/>
+    <aura:attribute name="recordError" type="String"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler event="c:RecordFieldChange" action="{!c.handleRecordFieldChange}"/>
+    <aura:handler name="change" value="{!v.selectedRows}" action="{!c.handleSelectedRowsChange}"/>
+    <aura:handler name="change" value="{!v.editMode}" action="{!c.handleEditModeChange}"/>
+    <aura:handler event="c:ComponentAction" action="{!c.handleComponentAction}"/>
+
+
+
+    <aura:registerEvent name="recordFieldChange" type="c:RecordFieldChange" />
+    <aura:registerEvent name="componentAction" type="c:ComponentAction" />
+
+    <force:recordData aura:id="recordLoader"
+                      recordId="{!v.recordId}"
+                      fields = "Client_Sector__c, Client_Sub_Sector__c, Industry_Code__c"
+                      targetFields="{!v.record}"
+                      targetError="{!v.recordError}"
+                      recordUpdated="{!c.handleRecordLoaded}"
+                      mode="EDIT"
+    />
+    <div class="dataTableCustom" ondblclick="{!c.handleEdit}">
+        <lightning:datatable aura:id = "codesTable"
+            columns = "{! v.columns }"
+            data = "{! v.data }"
+            keyField="Name"
+            maxRowSelection = "{!v.maxRowSelection}"
+            onrowselection = "{!c.handleRowSelection}"
+            selectedRows = "{!v.selectedRows}"
+            hideCheckboxColumn="{!!v.editMode}" />
+    </div>
+</aura:component>

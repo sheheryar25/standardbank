@@ -1,0 +1,57 @@
+<aura:component description="Event Report Control Panel" controller="StdBank_Ltn_EventReportCP" implements="flexipage:availableForAllPageTypes,force:hasRecordId" access="global">
+
+    <aura:attribute name="recordId" type="Id" />
+
+    <!-- Component data -->
+    <aura:attribute name="record"   type="Call_Report__c" access="private" />
+
+    <!-- Operational data -->
+    <aura:attribute name="isLoading" type="Boolean" default="true" access="private" />
+    <aura:attribute name="isEligible" type="Boolean" default="true" access="private" />
+
+    <!-- Handlers -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler name="change" value="{!v.record}" action="{!c.doCheck}" />
+
+    <lightning:navigation aura:id="navService"/>
+
+        <div class="slds-page-header" style="background-color: white;">
+            <h2 class="title">
+                Control Panel
+            </h2>
+            <br />
+            <aura:if isTrue="{!v.isLoading}">
+                <div style="height: 30px;">
+                    <div class="slds-spinner_brand slds-spinner slds-spinner_medium" style="top: initial;" aria-hidden="false" role="alert">
+                        <div class="slds-spinner__dot-a"></div>
+                        <div class="slds-spinner__dot-b"></div>
+                    </div>
+                </div>
+                <aura:set attribute="else">
+                    <div style="display: inline;">
+                        <c:StdBank_Ltn_BUTTON class="slds-button slds-button_brand"
+                                              svgClass="slds-button__icon"
+                                              svgCategory="action" svgType="download"
+                                              svgFill="white" label=" Add to Outlook" onclick="{!c.btnAddToOutlook}" />
+                        <c:StdBank_Ltn_BUTTON class="slds-button slds-button_brand"
+                                              svgClass="slds-button__icon"
+                                              svgCategory="action" svgType="email"
+                                              svgFill="white" label=" Send Event Report" onclick="{!c.btnSendEventReport}" />
+                        
+                    </div>
+                    <div style="float: right;">
+                        <aura:if isTrue="{!v.record.RecordType.Name != 'NBAC Meeting'}">
+                            <c:StdBank_Ltn_BUTTON class="slds-button slds-button_neutral"
+                                                  svgClass="slds-button__icon"
+                                                  svgCategory="utility" svgType="adduser"
+                                                  svgFill="#0070D2" label=" Add/Update Internal Attendees" onclick="{!c.btnAttendeesInternal}" />
+                            <c:StdBank_Ltn_BUTTON class="slds-button slds-button_neutral"
+                                                  svgClass="slds-button__icon"
+                                                  svgCategory="utility" svgType="adduser"
+                                                  svgFill="#0070D2" label=" Add/Update External Attendees" onclick="{!c.btnAttendeesExternal}" />
+                        </aura:if>
+                    </div>
+                </aura:set>
+            </aura:if>
+        </div>
+</aura:component>

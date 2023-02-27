@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Value_Perception__c</fullName>
+    <description>Why do they make banking decisions (US-1378)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Why do they make banking decisions</inlineHelpText>
+    <label>Customer Value Perception</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>7</visibleLines>
+</CustomField>

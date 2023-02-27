@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NBAC_Name__c</fullName>
+    <description>US: 1301 - Formula used in Meeting Creator to display information even if user doesn&apos;t have CRUD on NBAC and opportunity</description>
+    <externalId>false</externalId>
+    <formula>Related_NBAC__r.Name</formula>
+    <label>NBAC Name</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

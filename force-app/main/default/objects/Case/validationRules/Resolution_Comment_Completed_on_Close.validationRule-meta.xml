@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Resolution_Comment_Completed_on_Close</fullName>
+    <active>true</active>
+    <description>Resolution Comment must be completed on Case Close action. The Validation will prevent users from closing case using status field in LEX.</description>
+    <errorConditionFormula>AND(
+ISBLANK(ConnectionReceivedId),  
+OR(RecordType.DeveloperName=&apos;Client_Case&apos;,
+RecordType.DeveloperName=&apos;CommB_Client_Case&apos;), OR(ISPICKVAL(Status, &apos;Closed&apos;),ISPICKVAL(Status, &apos;Cancelled&apos;),ISPICKVAL(Status, &apos;Request Completed&apos;)), ISBLANK( Resolution_Comment__c ) )</errorConditionFormula>
+    <errorMessage>Resolution Comment need to be provided in order to close the case.</errorMessage>
+</ValidationRule>

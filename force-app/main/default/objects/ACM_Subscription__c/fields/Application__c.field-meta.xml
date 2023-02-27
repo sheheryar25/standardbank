@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Application__c</fullName>
+    <description>SFP-9094- needs to be treated by an agent</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Application that the subscription is associated to. This will provide the client id and secret to access the API Product</inlineHelpText>
+    <label>Application</label>
+    <length>255</length>
+    <referenceTo>acm_pkg__AnypointApplications__x</referenceTo>
+    <relationshipLabel>Subscriptions</relationshipLabel>
+    <relationshipName>Subscriptions</relationshipName>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>ExternalLookup</type>
+</CustomField>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PP_Step__c</fullName>
+    <description>SFP-4884 - The name of the on-boarding step.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The name of the on-boarding step.</inlineHelpText>
+    <label>Step</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>PP_Phase__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Submit Application</fullName>
+                <default>false</default>
+                <label>Submit Application</label>
+            </value>
+            <value>
+                <fullName>Verification by Standard Bank</fullName>
+                <default>false</default>
+                <label>Verification by Standard Bank</label>
+            </value>
+            <value>
+                <fullName>NDA Signed</fullName>
+                <default>false</default>
+                <label>NDA Signed</label>
+            </value>
+            <value>
+                <fullName>Business Engagement</fullName>
+                <default>false</default>
+                <label>Business Engagement</label>
+            </value>
+            <value>
+                <fullName>Risk Review</fullName>
+                <default>false</default>
+                <label>Risk Review</label>
+            </value>
+            <value>
+                <fullName>Follow Up Risk Questions</fullName>
+                <default>false</default>
+                <label>Follow Up Risk Questions</label>
+            </value>
+            <value>
+                <fullName>Commercials and Contracting</fullName>
+                <default>false</default>
+                <label>Commercials and Contracting</label>
+            </value>
+            <value>
+                <fullName>Launch</fullName>
+                <default>false</default>
+                <label>Launch</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Registration</controllingFieldValue>
+            <valueName>Submit Application</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Registration</controllingFieldValue>
+            <valueName>Verification by Standard Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Discovery</controllingFieldValue>
+            <valueName>NDA Signed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Discovery</controllingFieldValue>
+            <valueName>Business Engagement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Discovery</controllingFieldValue>
+            <valueName>Risk Review</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Onboarding</controllingFieldValue>
+            <valueName>Follow Up Risk Questions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Onboarding</controllingFieldValue>
+            <valueName>Commercials and Contracting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Onboarding</controllingFieldValue>
+            <valueName>Launch</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

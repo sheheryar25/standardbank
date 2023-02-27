@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Escalated_Angola_CCC_Trade_Finance_Call_Report</fullName>
+    <filterScope>Queue</filterScope>
+    <label>Escalated Angola CCC Trade Finance</label>
+    <queue>Escalated_Angola_CCC_Trade_Finance</queue>
+    <sharedTo>
+        <roleAndSubordinates>PBB_Angola_Country</roleAndSubordinates>
+    </sharedTo>
+</ListView>

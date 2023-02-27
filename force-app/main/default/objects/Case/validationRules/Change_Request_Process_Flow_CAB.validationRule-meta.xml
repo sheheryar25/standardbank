@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Change_Request_Process_Flow_CAB</fullName>
+    <active>true</active>
+    <description>Ensure that the status of the Change Request adheres to the defined process flow. A Case cannot be set to &apos;Submitted for CAB&apos; if it is not a level 4 change request
+
+CRM-Enhanced Cases for Change Request Functionality (C Reinecke 2010/08)</description>
+    <errorConditionFormula>$RecordType.Name = &apos;Change Request&apos; &amp;&amp; ISCHANGED(Status) &amp;&amp; (TEXT(Status) = &apos;Submitted for CAB&apos;) &amp;&amp; TEXT(Change_Request_Level__c) != &apos;4. Major - IT Development&apos;</errorConditionFormula>
+    <errorDisplayField>Status</errorDisplayField>
+    <errorMessage>Only level 4 Change Requests can be &quot;Submitted for CAB&quot;.</errorMessage>
+</ValidationRule>

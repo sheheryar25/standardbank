@@ -1,0 +1,146 @@
+<aura:component controller="PBBLifeStyleConversationCtrl" implements="lightning:isUrlAddressable,force:lightningQuickActionWithoutHeader,force:hasRecordId,lightning:actionOverride" access="global" >
+    <lightning:workspaceAPI aura:id="workspace"/>
+ 
+    <aura:attribute name="subCatlist" type="List"/>
+    <aura:attribute name="respMap" type="Map"/>
+    <aura:attribute name="catFieldMap" type="Map"/>
+    <aura:attribute name="highValueFieldMap" type="Map"/>
+    <aura:attribute name="resplist" type="list"/>
+    <aura:attribute name="reasMap" type="Map"/>
+    <aura:attribute name="reaslist" type="list"/>
+    <aura:attribute name="recordId" type="Id"/> 
+    <aura:attribute name="clientId" type="Id" />
+    <aura:attribute name="modalTabId" type="string" />
+    <aura:attribute name="options" type="List"/>
+    <aura:attribute name="requiredFields" type="List" default="[false,false,false,false,false,false,false,false,false,false]"/>
+    <aura:attribute name="recordData" type="Conversation__c"/>
+    <aura:attribute name="isLoading" type="boolean" default='false'/>
+    <aura:handler name="pickListEvent" event="c:UTL_PickList_Event" action="{!c.handleComponentEvent}"/>
+    <lightning:notificationsLibrary aura:id="notifLib"/>
+    <ltng:require scripts="{!$Resource.UTL_JavaScript}" afterScriptsLoaded="{!c.init}"/>
+    <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_medium" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1">
+        <div class="slds-modal__container">
+            <header class="slds-modal__header">
+                <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick="{!c.cancel}">
+                    
+                    <lightning:icon iconName="utility:close" size="x-small" alternativeText="Edit" />
+                    <span class="slds-assistive-text">Close</span>
+                </button>
+                <h2 id="modal-heading-01" class="slds-modal__title slds-hyphenate">New Conversation</h2>
+            </header>
+            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                
+                
+                
+                <lightning:card >
+                    <aura:renderIf isTrue="{!v.isLoading}">
+                        <lightning:spinner class="sslds-is-relative" alternativeText="Loading" size="medium" />
+                    </aura:renderIf> 
+                    <div class="slds-section slds-is-open">
+                        <h3 class="slds-section__title">
+                            <button aria-controls="expando-unique-id" aria-expanded="true" class="slds-button slds-section__title-action">
+                                <lightning:icon iconName="utility:chevrondown" size="x-small" alternativeText="chevrondown" title="chevrondown" />
+                                <span class="slds-truncate" title="Section Title">Information</span>
+                            </button>
+                        </h3>
+                        
+                        <lightning:layout multipleRows="true">
+                            <lightning:layoutItem size="6" padding="around-small">            
+                                <lightning:input aura:id="Name"  type="text" name="Name" label="Name" value="{!v.recordData.Name}" required="true" />
+                                <aura:if isTrue="{!v.requiredFields[0]}">
+                                    <p style="color:#c23934;white-space: pre-wrap;">Complete this field</p>
+                                </aura:if>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem size="6" padding="around-small">
+                                <lightning:input aura:id="Expected OI"  type="text" name="Expected OI" label="Expected OI" value="{!v.recordData.Expected_OI__c}"  />
+                                <aura:if isTrue="{!v.requiredFields[1]}">
+                                    <p style="color:#c23934;white-space: pre-wrap;">Complete this field</p>
+                                </aura:if>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem size="6" padding="around-small">
+                                <lightning:textarea   aura:id="Description" name="Description" label="Description" value="{!v.recordData.Description__c}"  />
+                                <aura:if isTrue="{!v.requiredFields[2]}">
+                                    <p style="color:#c23934;white-space: pre-wrap;">Complete this field</p>
+                                </aura:if>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem size="6" padding="around-small">
+                                <c:UTL_PickList showSearch="false" recId="{!v.recordData.Id}"  isDependent="true" fieldName="Response" assignTo="{!v.recordData.Response__c}" dependencyMap="{!v.reasMap}" returnedDependency="{!v.reaslist}"   options="{!v.resplist}" />
+                                <aura:if isTrue="{!v.requiredFields[3]}">
+                                    <p style="color:#c23934;white-space: pre-wrap;">Complete this field</p>
+                                </aura:if>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem size="6" padding="around-small">
+                                <c:UTL_PickList showSearch="false"  fieldName="High Value CD" assignTo="{!v.recordData.PBB_HighValueCD__c}"   options="{!v.highValueFieldMap}" />
+                                <aura:if isTrue="{!v.requiredFields[4]}">
+                                    <p style="color:#c23934;white-space: pre-wrap;">Complete this field</p>
+                                </aura:if>
+                            </lightning:layoutItem>
+                            
+                            <lightning:layoutItem size="6" padding="around-small">
+                                <c:UTL_PickList showSearch="true" recId="{!v.recordData.Id}"  fieldName="Reason" assignTo="{!v.recordData.Reason__c}"   options="{!v.reaslist}" />
+                                <aura:if isTrue="{!v.requiredFields[5]}">
+                                    <p style="color:#c23934;white-space: pre-wrap;">Complete this field</p>
+                                </aura:if>
+                            </lightning:layoutItem>
+                            
+                            <lightning:layoutItem size="6" padding="around-small">
+                                <c:UTL_PickList showSearch="true" recId="{!v.recordData.Id}"  fieldName="Category"  assignTo="{!v.recordData.Category__c}"   options="{!v.catFieldMap}" />
+                                <aura:if isTrue="{!v.requiredFields[6]}">
+                                    <p style="color:#c23934;white-space: pre-wrap;">Complete this field</p>
+                                </aura:if>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem size="6" padding="around-small">
+                                <lightning:textarea   aura:id="Comments" name="Comments" label="Comments" value="{!v.recordData.Comments__c}" required="true" />
+                                <aura:if isTrue="{!v.requiredFields[7]}">
+                                    <p style="color:#c23934;white-space: pre-wrap;">Complete this field</p>
+                                </aura:if>
+                            </lightning:layoutItem>
+                            
+                            <lightning:layoutItem size="6" padding="around-small">
+                                <c:UTL_PickList showSearch="true" recId="{!v.recordData.Id}" isDependent="true" fieldName="Sub-Category" assignTo="{!v.recordData.Subcategory__c}" dependencyMap="{!v.respMap}" returnedDependency="{!v.resplist}" options="{!v.subCatlist}"/>
+                                <aura:if isTrue="{!v.requiredFields[8]}">
+                                    <p style="color:#c23934;white-space: pre-wrap;">Complete this field</p>
+                                </aura:if>
+                            </lightning:layoutItem>
+                            
+                            
+                            <lightning:layoutItem size="6" padding="around-small">
+                                <lightning:input type="datetime" value="{!v.recordData.Future_Contact_Date__c}" name="input1"  label="Future Contact Date" />
+                                
+                            </lightning:layoutItem>
+                            
+                        </lightning:layout>
+                        <h3 class="slds-section__title">
+                            <button aria-controls="expando-unique-id" aria-expanded="true" class="slds-button slds-section__title-action">
+                                <span class="slds-truncate" title="Section Title">Related To</span>
+                            </button>
+                        </h3>
+                        <lightning:layout multipleRows="true">
+                            <lightning:layoutItem size="6" padding="around-small">
+                                <c:UTL_LookupField   sObjectName="Conversation__c" fieldName="Client__c" fieldLabel="Client"
+                                                   assignTo="{!v.recordData.Client__c}" required="true"/>
+                                <aura:if isTrue="{!v.requiredFields[9]}">
+                                    <p style="color:#c23934;white-space: pre-wrap;">Complete this field</p>
+                                </aura:if>
+                            </lightning:layoutItem>
+                            <lightning:layoutItem size="6" padding="around-small">
+                                <c:UTL_LookupField   sObjectName="Conversation__c" fieldName="OwnerId" fieldLabel="Owner"
+                                                   assignTo="{!v.recordData.OwnerId}" required="true" isOnRemoveBtn="false" readOnly="true"/>
+                                
+                            </lightning:layoutItem>
+                        </lightning:layout>
+                        
+                    </div>
+                    
+                </lightning:card>
+                
+            </div>
+            <footer class="slds-modal__footer">
+                <button class="slds-button slds-button_neutral" onclick="{!c.cancel}">Cancel</button>
+                <button class="slds-button slds-button_brand" onclick="{!c.saveRecord}">Save</button>
+            </footer>
+        </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+	
+</aura:component>

@@ -1,0 +1,108 @@
+<aura:component controller="EstimatedRevenueScheduleController">
+    <!-- on component load, fetch picklist values dynamically from apex controller -->   
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <!--declare aura attributes-->
+    <!--aura:attribute name="objInfoForPicklistValues" type="Estimated_Revenue_Schedule__c" default="{sobjectType : 'Estimated_Revenue_Schedule__c'}" description="object information to fetch picklist values"/ -->
+    <!--aura:attribute name="ratingPicklistOpts" type="string[]" description="store picklist options values"/--> 
+    <aura:attribute name="showSaveCancelBtn" type="boolean"/>
+    <aura:attribute name="showErrorClass" type="boolean" default="false"/>
+    <aura:attribute name="sNo" type="string" />
+    <aura:attribute name="singleRec" type="sobject" default="{'sobjectType' : 'Estimated_Revenue_Schedule__c',
+                                                             'Estimated_Revenue_Date__c' : '',
+                                                             'Fee_Amount__c' : '',
+                                                             'Risk_Weighted_Value__c' :'',
+                                                             'Estimated_Product_Revenue__c' : '',
+                                                             'Margin_Amount__c' : '',
+                                                             'CurrencyISOCode' : ''
+                                                             }"/>
+    <aura:attribute name="dateEditMode" type="boolean" default="false" />
+    <aura:attribute name="feeEditMode" type="boolean" default="false" />
+    <aura:attribute name="isAdvisoryRt" type="Boolean" access="public"/>
+    <aura:attribute name="isNiiRt" type="Boolean" access="public"/>
+    
+    <!--Table Row Start-->  
+    <tr>
+        <td><div class="{! v.isAdvisoryRt == false ? 'slds-truncate slds-float_right' : 'slds-truncate'}">{!v.sNo}</div></td>
+        
+        <td ondblclick="{!c.inlineEditDate}" class="{! v.showErrorClass == true ? 'slds-cell-edit slds-has-error' : 'slds-cell-edit'}">
+            <span class="{! v.isAdvisoryRt == false ? 'slds-grid slds-grid_align-spread slds-float_right' : 'slds-grid slds-grid_align-spread'}">
+                <!-- show input and output section based on boolean flag --> 
+                <aura:if isTrue="{!v.dateEditMode == false}">
+                    <span class="slds-truncate" title="Date"><lightning:formattedDateTime value="{!v.singleRec.Estimated_Revenue_Date__c}" /></span>
+                    <aura:if isTrue="{!v.isAdvisoryRt}">
+                        <button onclick="{!c.inlineEditDate}" class="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small" tabindex="0" title="Edit Date">
+                            <lightning:icon iconName="utility:edit" size="xx-small" alternativeText="edit"/>
+                        </button>
+                    </aura:if>
+
+                    <!-- Inline Edit Section in else case-->
+                    <aura:set attribute="else">
+                        <section  tabindex="0" class="slds-popover slds-popover_edit" role="dialog" style="position: absolute; top: 0px">
+                            <div class="slds-popover__body">
+                                <div class="slds-form-element slds-grid slds-wrap">
+                                    <div class="slds-form-element__control slds-grow">
+                                        <lightning:input type="date" name="inputDate" aura:id="inputDate" label="Required Estimated Revenue Date" 
+                                                         onchange="{!c.onDateChange}"
+                                                         onblur="{!c.closeDateBox}"
+                                                         required="true" value="{!v.singleRec.Estimated_Revenue_Date__c}"
+                                                         format="dd/MM/yyyy" />
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <span id="form-end" tabindex="0"></span>
+                        </section>  
+                    </aura:set>  
+                </aura:if> 
+            </span>
+        </td>
+        
+        <td ondblclick="{!c.inlineEditFee}" class="{! v.showErrorClass == true ? 'slds-cell-edit slds-has-error' : 'slds-cell-edit'}">
+            <span class="{! v.isAdvisoryRt == false ? 'slds-grid slds-grid_align-spread slds-float_right' : 'slds-grid slds-grid_align-spread'}">
+                <aura:if isTrue="{!v.feeEditMode == false}">
+                    <!-- show input and output section based on boolean flag -->
+                    <div class="slds-truncate"><lightning:formattedNumber maximumFractionDigits="2" value="{!v.singleRec.Fee_Amount__c}"/></div>
+                    <aura:if isTrue="{!v.isAdvisoryRt}">
+                        <button onclick="{!c.inlineEditFee}" class="slds-button slds-button_icon slds-cell-edit__button slds-m-left_x-small" tabindex="0" title="Edit Fee">
+                            <lightning:icon iconName="utility:edit" size="xx-small" alternativeText="edit"/>
+                        </button>
+                    </aura:if>
+                    
+                    <aura:set attribute="else">
+                        <!-- Inline Edit Section in else case-->  
+                        <section  tabindex="0" class="slds-popover slds-popover_edit" role="dialog" style="position: absolute; top: 0px">
+                            <div class="slds-popover__body">
+                                <div class="slds-form-element slds-grid slds-wrap">
+                                    <div class="slds-form-element__control slds-grow">
+                                        <lightning:input type="number" name="inputFee" aura:id="inputFee" label="Required fee amount" 
+                                                         onchange="{!c.onFeeChange}"
+                                                         onblur="{!c.closeFeeBox}"
+                                                         required="true" value="{!v.singleRec.Fee_Amount__c}" />
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <span id="form-end" tabindex="0"></span>
+                        </section>  
+                    </aura:set>
+                </aura:if> 
+            </span>
+        </td>
+        <aura:if isTrue="{!v.isAdvisoryRt}">
+            <td>
+                <div class="slds-truncate">{!v.singleRec.Risk_Weighted_Value__c}</div>
+            </td>
+        </aura:if>
+        <aura:if isTrue="{!v.isNiiRt}">
+            <td>
+                <div class="slds-truncate slds-float_right"><lightning:formattedNumber maximumFractionDigits="2" value="{!v.singleRec.Margin_Amount__c}"/></div>
+
+            </td>
+            <td>
+                <div class="slds-truncate slds-float_right"><lightning:formattedNumber maximumFractionDigits="2" value="{!v.singleRec.Estimated_Product_Revenue__c}"/></div>
+            </td>
+        </aura:if>
+
+    </tr>
+</aura:component>

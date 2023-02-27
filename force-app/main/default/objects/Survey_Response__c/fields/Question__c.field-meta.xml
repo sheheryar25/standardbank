@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Question__c</fullName>
+    <description>(US-4200)The question on the survey that the client responded to.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>What is the question the respondent answered?</inlineHelpText>
+    <label>Question</label>
+    <length>100</length>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

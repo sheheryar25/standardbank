@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Opportunity_part_of_Client_Budget__c</fullName>
+    <description>Indicates whether the opportunity is part of the budget for the Client in order to track opportunities against budget</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Shows whether the opportunity forms part of the agreed client budget for the year. This can be for either individually or portfolio budgeted clients and is to show the difference between known opportunities and newly identified opportunities.</inlineHelpText>
+    <label>Is Opportunity part of Client Budget?</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Yes</fullName>
+                <default>false</default>
+                <label>Yes</label>
+            </value>
+            <value>
+                <fullName>No</fullName>
+                <default>false</default>
+                <label>No</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

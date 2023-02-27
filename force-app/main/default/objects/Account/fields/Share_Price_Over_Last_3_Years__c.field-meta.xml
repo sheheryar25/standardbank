@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Share_Price_Over_Last_3_Years__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Year - Share Price - provide the details as found on the Clients published financials. Format: 2011 - R263.14; 2012 - R271.26; 2013 - R288.32</inlineHelpText>
+    <label>Share Price Over Last 3 Years</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

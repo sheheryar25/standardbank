@@ -1,0 +1,7 @@
+<aura:event type="APPLICATION" description="Event template">
+    <aura:attribute name="menuOpened" type="Boolean" default="false" access="public"/>
+    <aura:attribute name="showTeamProfile" type="Boolean" default="true" access="public"/>
+    <aura:attribute name="isMobileView" type="Boolean" default="false" access="public" />
+    <aura:attribute name="unreadNotificationsNumber" type="Integer" default="0" />
+    <aura:attribute name="currentBreadcrumbItem" type="String" />
+</aura:event>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Distribution_Parties__c</fullName>
+    <description>Names of investors engaged for the portion of the sell down relating to the specific distribution method OR sellers engaged for the purchase
+SGPRT-624</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Names of investors engaged for the portion of the sell down relating to the specific distribution method OR sellers engaged for the purchase</inlineHelpText>
+    <label>All Distribution Parties</label>
+    <length>131072</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

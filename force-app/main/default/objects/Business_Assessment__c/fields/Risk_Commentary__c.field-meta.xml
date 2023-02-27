@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Risk_Commentary__c</fullName>
+    <description>Risk to complete: any detail necessary to provide a context on the risk of the transaction(s)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Risk to complete: any detail necessary to provide a context on the risk of the transaction(s)</inlineHelpText>
+    <label>Risk Commentary</label>
+    <length>1200</length>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

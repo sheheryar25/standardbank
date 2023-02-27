@@ -1,0 +1,58 @@
+.THIS {
+    height: 100%;
+}
+
+
+.THIS .cliped_title {
+  display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    max-height:2.5rem; /* I needed this to get it to work */
+    overflow:hidden;
+    height: auto;
+}
+
+.THIS .cliped_title p {
+    font-size: 13px;
+}
+.THIS .cliped_title:after {
+    display:none;
+}
+
+.THIS .icon_green svg {
+    fill: token(SBGreenPositive);
+}
+
+.THIS .icon_blue svg {
+    fill: token(SBSecondaryBlue);
+}
+
+.THIS .text_blue {
+    color:  token(SBSecondaryBlue);
+}
+.THIS .icon_m-xsmall svg {
+    margin-right: 0.05rem;
+
+}
+
+.THIS .clickable {
+    cursor: pointer;
+}
+
+.THIS .full_article {
+    background-color: white;
+}
+
+.THIS .button_green button {
+    color: token(SBGreenPositive);
+}
+
+.THIS .publish_info {
+    font-size: 11px;
+}
+.THIS .text_bold {
+    font-weight: bold;
+}
+.THIS .scrollerSize {
+    overflow-x:hidden;
+}

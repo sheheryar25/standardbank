@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Related_to_field_check_on_Event_Report</fullName>
+    <active>true</active>
+    <description>You can link only one related to field to the Event report.</description>
+    <errorConditionFormula>OR(
+            AND(
+            LEN(Relate_to_Client__c)&gt;0 ,
+            LEN(Relate_to_Opp__c)&gt;0
+            ),
+            AND(
+            LEN(Relate_to_Client__c)&gt;0 ,
+            LEN(Related_to_Campaign__c)&gt;0
+            ),
+            AND(
+            LEN(Relate_to_Opp__c)&gt;0,
+            LEN(Related_to_Campaign__c)&gt;0
+            )
+)</errorConditionFormula>
+    <errorMessage>You can only relate an event report to a Client OR an Opportunity OR a Campaign</errorMessage>
+</ValidationRule>

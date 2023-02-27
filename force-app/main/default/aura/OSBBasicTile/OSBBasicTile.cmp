@@ -1,0 +1,28 @@
+<aura:component>
+    <aura:attribute name="title" type="String" />
+    <aura:attribute name="content" type="String" />
+    <aura:attribute name="linkLabel" type="String" />
+    <aura:attribute name="link" type="String" />
+    <aura:attribute name="class" type="String" />
+    <aura:attribute name="caseCreatedMessage" type="String" />
+    <div class="{!'basicTile-container ' + v.class}">
+        <h2 class="tile__header">{!v.title}</h2>
+        <div class="basicTile">
+            <div class="basicTile__content">{!v.content}</div>
+            <aura:if isTrue="{!not(empty(v.link))}">
+                <aura:if isTrue="{!v.class == 'whatIsMarketplace'}">
+                    <a class="link tile__link" href="{!v.link}" target="_blank" data-id="uitlink_link" data-text="{! 'Tile | ' + v.linkLabel}">{!v.linkLabel}</a>
+                    <aura:set attribute="else">
+                        <a class="link tile__link" href="{!v.link}" target="_top"
+                        data-id="uitlink_link" data-text="{! 'Tile | ' + v.linkLabel}">
+                        {!v.linkLabel}<i class="insightsItem__link--icon ms-icn_chevron_right"></i>
+                    </a>
+                    </aura:set>
+                </aura:if>
+            </aura:if>
+            <aura:if isTrue="{!not(empty(v.caseCreatedMessage))}">
+                <div class="basicTile__caseCreated">{!v.caseCreatedMessage}</div>
+            </aura:if>
+        </div>
+    </div>
+</aura:component>

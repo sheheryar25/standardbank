@@ -1,0 +1,18 @@
+<aura:component controller="StdBank_Ltn_ClientsCROCController" implements="flexipage:availableForAllPageTypes,force:hasRecordId">
+    <!--<c:CI_RevenueService aura:id="service" />-->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="clientId" type="String" />
+    <aura:attribute name="croc" type="String" />
+    <aura:attribute name="crocColor" type="String" />
+	<div style="height:100%">
+		<article class="slds-card slds-is-relative border-box" style="height:100%">
+			<div class="slds-grid slds-p-around_small" style="height:100%">
+				<div class="slds-col slds-align-middle">
+					<p class="slds-text-body_small slds-text-align_center"> {!$Label.c.CROC} </p>
+					<div class="slds-text-heading_medium slds-text-align_center" style="{!' min-height: 1em; color: ' + v.crocColor}"><ui:outputtext value="{!v.croc}" /></div>
+				</div>
+			</div>
+			<c:UTL_HelpText text="{!$Label.c.Help_Text_CROC}" />
+		</article>
+	</div>
+</aura:component>

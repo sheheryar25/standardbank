@@ -1,0 +1,19 @@
+<aura:component >
+    <aura:attribute name="text" type="String" default="None help text provided for that feature"/>
+    <footer class="slds-card__footer slds-p-around_none slds-m-around_none slds-align-bottom slds-is-absolute" style="z-index:2; bottom:1px; right:1px; border:0px">
+        <div aura:id="popover" class="slds-is-absolute slds-hide popup" >
+            <section  class="slds-popover slds-nubbin_bottom slds-popover_walkthrough slds-popover_large "  role="dialog" aria-describedby="dialog-body-id-6" aria-label="Help" >
+                <div class="slds-popover__body slds-text-body_small slds-text-align_left " id="dialog-body-id-6">
+                    <p>
+						<aura:unescapedHtml value="{!v.text}"/>					
+					</p>
+                </div>
+            </section>
+        </div>
+        <div class="slds-form-element__icon slds-p-around_xx-small" onmouseover="{!c.show}" onmouseout="{!c.hide}">
+            <button class="slds-button slds-button slds-button_icon" aria-describedby="help1" aura:id="NAV">
+				<lightning:icon size="xx-small" iconName="utility:info" variant="inverse" class="slds-icon slds-icon-text-default slds-icon_x-small icon"/>
+            </button>
+        </div>
+    </footer>
+</aura:component>

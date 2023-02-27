@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CRT_Client_Type_Indicator__c</fullName>
+    <description>This formula field loads specific icons base on the value of the field CRT Client Type</description>
+    <externalId>false</externalId>
+    <formula>Case( CRT_Client_Types__c,&quot;&quot;,&quot;ERROR&quot;,image(&quot;/img/icon/&quot;&amp;case(CRT_Client_Types__c,&quot;Prospect&quot;,&quot;lookup32.png&quot;,&quot;IB Client&quot;,&quot;custom51_100/compass32.png&quot;,&quot;PBB Client&quot;,&quot;bank32.png&quot;,&quot;CRT Child&quot;,&quot;hands32.png&quot;,&quot;CRT Top Parent&quot;,&quot;building32.png&quot;,&quot;Non CRT Account&quot;,&quot;diamond32.png&quot;,&quot;/custom51_100/buildingBlock32.png&quot;),CRT_Client_Types__c))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>CRT Client Type Indicator</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

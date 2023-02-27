@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Completed_Client_Details__c</fullName>
+    <description>US-4492 - Updated to validate on an JV rectype</description>
+    <externalId>false</externalId>
+    <formula>IF( CONTAINS(RecordType.DeveloperName, &apos;NBAC_Joint_Venture&apos;) &amp;&amp;
+NOT(OR(ISBLANK(TEXT( Client_Rating__c )),ISBLANK(TEXT(Construction_Risk_Grade__c)),ISBLANK(TEXT(Operations_Risk_Grade__c)),ISBLANK( TEXT(Client_Sector__c)),ISBLANK(TEXT(Risk_Classification__c)),ISBLANK(TEXT(Complexity__c)),ISBLANK(Decision_Emphasis__c),ISBLANK(TEXT(Client_LGD__c)),ISBLANK(Ultimate_Shareholders__c),ISBLANK(Sponsors__c))),
+
+TRUE
+
+,
+
+IF(
+NOT(OR(
+ISBLANK(TEXT( Risk_Classification__c )),ISBLANK(TEXT(Complexity__c)),ISBLANK(Decision_Emphasis__c),ISBLANK( TEXT(Client_LGD__c)),ISBLANK( TEXT( NBAC_Meeting_Date__c ))
+))
+,
+TRUE
+,
+FALSE
+)
+)</formula>
+    <label>Completed Client Details</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

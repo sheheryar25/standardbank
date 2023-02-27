@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>For_manual_treatment__c</fullName>
+    <description>SPF-9094 - Until APIs are connected, we need the record to be manually processed</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Until APIs are connected, we need the record to be manually processed</inlineHelpText>
+    <label>For manual treatment</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Html</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Out_Of_SLA_Approved__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Sheldon Lazarus
+            Ideas Inc: Field that shows Cases that have been approved to be out of SLA</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Case has been approved to be out of SLA</inlineHelpText>
+    <label>Out Of SLA Approved</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

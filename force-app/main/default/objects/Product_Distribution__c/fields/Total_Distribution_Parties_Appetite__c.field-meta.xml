@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Distribution_Parties_Appetite__c</fullName>
+    <description>The indicative appetite levels provided by the investors with whom the trade is explored, for the portion of the sell down that relates to the specific distribution method OR enter the indicative amount seller wishes to sell
+SGPRT-624</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The indicative appetite levels provided by the investors with whom the trade is explored, for the portion of the sell down that relates to the specific distribution method OR enter the indicative amount seller wishes to sell.</inlineHelpText>
+    <label>Total Distribution Parties&apos; Appetite</label>
+    <summarizedField>Investor_Participation__c.Distribution_Party_Appetite__c</summarizedField>
+    <summaryFilterItems>
+        <field>Investor_Participation__c.Distribution_Party_Status__c</field>
+        <operation>notEqual</operation>
+        <value>Declined</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Investor_Participation__c.Distribution__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

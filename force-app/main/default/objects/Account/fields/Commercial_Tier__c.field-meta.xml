@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Commercial_Tier__c</fullName>
+    <description>The field determines a commercial tier and is fed from the PMT system (EN-908).</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The field determines a commercial tier and is fed from the PMT system.</inlineHelpText>
+    <label>Commercial Tier</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Gold</fullName>
+                <default>false</default>
+                <label>Gold</label>
+            </value>
+            <value>
+                <fullName>Silver</fullName>
+                <default>false</default>
+                <label>Silver</label>
+            </value>
+            <value>
+                <fullName>Bronze</fullName>
+                <default>false</default>
+                <label>Bronze</label>
+            </value>
+            <value>
+                <fullName>Blue</fullName>
+                <default>false</default>
+                <label>Blue</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

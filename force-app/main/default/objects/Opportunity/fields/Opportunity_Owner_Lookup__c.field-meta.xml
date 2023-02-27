@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Owner_Lookup__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>This Field is used to capture the Opportunity Owner as a Lookup so that a formula field can draw the location value from it.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field is not meant to be on the page Layout. It is an intermediate field.</inlineHelpText>
+    <label>Opportunity Owner Lookup</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Opportunities1</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,131 @@
+<aura:component extends="c:CI_Base" implements="flexipage:availableForAllPageTypes">
+    <aura:attribute name="gridColumns" type="List" access="private" />
+    <aura:attribute name="gridData" type="Object" access="private" />
+    <aura:attribute name="fullGridData" type="Object" access="private" />
+    <aura:attribute name="numOfRecordsPerPage" type="Integer" default="20" />
+    <aura:attribute name="userCurrencyCode" type="String" access="private" />
+    <aura:attribute name="errorMsg" type="String" access="private" />
+    <aura:attribute name="recordId" type="String"  />
+    <aura:attribute name="enableInfiniteLoading" type="Boolean" default="true" />
+    <aura:attribute name="querySettings" type="Object"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <c:CI_RevenueService aura:id="revenue_service" />
+
+    <article aura:id="no_data_msg" class="card_with_shadow slds- slds-m-around_small slds-hide">
+        <div class="slds-p-around_small">
+            <p class="slds-text-heading_small slds-text-align_center">
+                No relevant data found
+            </p>
+        </div>
+    </article>
+
+    <div class="slds-text-align_left slds-p-around_small">
+        <h1 class="slds-text-heading_small ">Total CY Pipeline</h1>
+    </div>
+
+    <aura:if isTrue="{!v.errorMsg}">
+        <div class="slds-p-around_small">
+            {!v.errorMsg}
+        </div>
+    </aura:if>
+
+    <aura:if isTrue="{!or($Browser.isAndroid, $Browser.isIOS)}">
+
+        <ui:scrollerWrapper class="scrollerSize">
+            <div class="slds-m-bottom_xx-large">
+                <aura:iteration var="client" items="{!v.gridData}">
+                    <div class="slds-section">
+
+                        <h3 class="slds-section__title" onclick="{!c.toogleSection}">
+                            <div class="slds-button slds-section__title-action background_white slds-grid">
+                                <div>
+                                    <lightning:icon class="slds-section__title-action-icon  slds-button__icon_left" iconName="utility:chevrondown" size="x-small"
+                                    />
+                                </div>
+                                <div>
+                                    <div class="bold slds-text-body_small slds-p-around_medium slds-grid">
+                                        <div class="slds-col slds-truncate">{!client.recordName}</div>
+                                        <div class="slds-p-left_small slds-col">
+                                            <lightning:buttonIcon class="slds-align-middle slds-p-bottom_x-small" iconName="utility:share" size="medium" name="{!client.id}"
+                                                alternativeText="Go to client" onclick="{!c.redirectToClient}" type="button"
+                                                variant="bare" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </h3>
+
+                        <div class="slds-grid slds-grid_vertical">
+                            <div class="slds-col">
+                                <div class="slds-grid slds-grid_vertical">
+                                    <div class="slds-box slds-col background_light_grey slds-p-around_xx-small slds-grid">
+                                        <div class="slds-col slds-text-title_caps">
+                                            CY Projected Revenue
+                                        </div>
+                                        <div class="slds-col slds-text-align_right">
+                                            <lightning:formattedNumber style="currency" value="{!client.revenue}" currencyCode="{!$Locale.currencyCode}" currencyDisplayAs="code"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div aria-hidden="false" class="slds-section__content" style="padding-top:0px">
+
+                                <div class="second_level_padding">
+                                    <aura:iteration items="{!client._children}" var="opportunity">
+                                        <div class="slds-col">
+                                            <div class="slds-box bold background_white">
+                                                {!opportunity.recordName}
+                                            </div>
+                                            <div class="slds-box slds-col background_light_grey slds-grid">
+                                                <div class="slds-col slds-text-title_caps">
+                                                    CY Projected Revenue
+                                                </div>
+                                                <div class="slds-col slds-text-align_right">
+                                                    <lightning:formattedNumber style="currency" value="{!opportunity.revenue}"  currencyCode="{!$Locale.currencyCode}" currencyDisplayAs="code"/>
+                                                </div>
+                                            </div>
+                                            <div class="slds-box slds-col background_light_grey slds-p-around_xx-small slds-grid">
+                                                <div class="slds-col slds-text-title_caps">
+                                                    Probability
+                                                </div>
+                                                <div class="slds-col slds-text-align_right">
+                                                    <lightning:formattedNumber style="percent" value="{!opportunity.probability}" />
+                                                </div>
+                                            </div>
+                                            <div class="slds-box slds-col background_light_grey slds-p-around_xx-small slds-grid">
+                                                <div class="slds-col slds-text-title_caps">
+                                                    Close Date
+                                                </div>
+                                                <div class="slds-col slds-text-align_right">
+                                                    <lightning:formattedDateTime value="{!opportunity.closeDate}" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </aura:iteration>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </aura:iteration>
+
+                <div aura:id="show_more" class="slds-align_absolute-center slds-m-top_medium slds-m-bottom_xx-large slds-hide">
+                    <lightning:button label="Show More" onclick="{!c.showMore}" />
+                </div>
+            </div>
+        </ui:scrollerWrapper>
+
+        <aura:set attribute="else">
+            <div>
+                <lightning:treeGrid columns="{!v.gridColumns}" data="{!v.gridData}" keyField="id" hideCheckboxColumn="true" aura:id="pipe_line_grid"
+                />
+            </div>
+
+            <div aura:id="show_more" class="slds-align_absolute-center slds-m-vertical_medium slds-hide">
+                <lightning:button label="Show More" onclick="{!c.showMore}" />
+            </div>
+        </aura:set>
+
+    </aura:if>
+
+</aura:component>

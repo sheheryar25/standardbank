@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GTB__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>US-2017: As a user who has an ability to add a team member to CST, I want to assign dual roles to a TPS member of the Client Service Teams in order to report make sure that right roles are assigned to right people.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Is this Client Team Member the Global Transaction Banker for this Client?</inlineHelpText>
+    <label>GTB</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Read_Only</fullName>
+    <active>true</active>
+    <description>US-2442, [SFP-6318] - Add new fields</description>
+    <errorConditionFormula>AND(
+  OR(
+   ISPICKVAL(Milestone__c, &apos;Supported&apos;),
+   ISPICKVAL(Milestone__c, &apos;Submitted&apos;),
+   ISPICKVAL(Milestone__c, &apos;Approval&apos;)
+  ),
+
+  OR(
+   ISCHANGED(NBAC_Committee__c),
+   ISCHANGED(NBAC_Meeting_Date__c),
+   ISCHANGED(OwnerId),
+   ISCHANGED(Submission_Type__c),
+
+   ISCHANGED(Client_LGD__c),
+   ISCHANGED(Complexity__c),
+   ISCHANGED(YTD_Group_Parent_Client_CROC__c),
+   ISCHANGED(Decision_Emphasis__c),
+   ISCHANGED(Economic_Group_Client_Country_of_Risk__c),
+   ISCHANGED(Economic_Group_Client_Risk_Rating__c),
+   ISCHANGED(Economic_Group_Client_Sector_Temp__c),
+   ISCHANGED(Economic_Group_Risk_Appetite__c),
+   ISCHANGED(Group_Directors__c),
+   ISCHANGED(Risk_Classification__c),
+   ISCHANGED(Ultimate_Shareholders__c),
+
+   ISCHANGED(Client_Gearing_PostTransaction__c),
+   ISCHANGED(Client_Gearing_PreTransaction__c),
+   ISCHANGED(Gearing_Metric__c),
+   ISCHANGED(Group_Parent_Client_Name__c),
+   ISCHANGED(Guarantor_Gearing_PostTransaction__c),
+   ISCHANGED(Guarantor_Gearing_PreTransaction__c),
+   ISCHANGED(Guarantor_Name__c),
+   ISCHANGED(Nature_of_Business__c),
+   ISCHANGED(Advisor__c),
+   ISCHANGED(Mandated_Lead_Arranger__c),
+   ISCHANGED(Other_Lenders__c),
+
+   ISCHANGED(Transaction_Description__c),
+
+   ISCHANGED(Strategic_Rationale__c),
+
+   ISCHANGED(Anticipated_Ancillary_Business_GM__c),
+   ISCHANGED(Anticipated_Ancillary_Business_IB__c),
+   ISCHANGED(Anticipated_Ancillary_Business_TPS__c),
+   ISCHANGED(Global_Markets_CY_Revenue__c),
+   ISCHANGED(Global_Markets_PY_Revenue__c),
+   ISCHANGED(GM_Share_of_Wallet_Existing_SBG__c),
+   ISCHANGED(GM_Share_of_Wallet_Existing_Total__c),
+   ISCHANGED(IB_Share_of_Wallet_Existing_SBG__c),
+   ISCHANGED(IB_Share_of_Wallet_Existing_Total__c),
+   ISCHANGED(Investment_Banking_CY_Revenue__c),
+   ISCHANGED(Investment_Banking_PY_Revenue__c),
+   ISCHANGED(TPS_CY_Revenue__c),
+   ISCHANGED(TPS_PY_Revenue__c),
+   ISCHANGED(TPS_Share_of_Wallet_Existing_SBG__c),
+   ISCHANGED(TPS_Share_of_Wallet_Existing_Total__c),
+
+   ISCHANGED(EDD_PEP__c),
+   ISCHANGED(GCCR_Status__c),
+   ISCHANGED(KYC_Status__c),
+   ISCHANGED(Sanctions__c),
+
+   ISCHANGED(Environmental_Social_Risks_Tool__c),
+   ISCHANGED(Client_Risk__c),
+   ISCHANGED(Transaction_on_the_Exceptions_List__c),
+   ISCHANGED(Reference_Number__c),
+   ISCHANGED(Transaction_Risk__c),
+   ISCHANGED(ES_Risk_Commentary__c),
+
+   ISCHANGED(Business_Sponsor__c),
+
+   ISCHANGED(TCM_Commentary__c),
+   ISCHANGED(TCM_Details__c),
+
+   ISCHANGED(Credit_Requirement__c),
+   ISCHANGED(Listed_Instruments__c),
+   ISCHANGED(SBSA_Role__c),
+   ISCHANGED(Transaction_Profile__c),
+   ISCHANGED(Underwrite_Amount__c),
+   ISCHANGED(Amount_Held__c),
+   ISCHANGED(Distribution_Commentary__c),
+   ISCHANGED(Distribution_Price__c),
+   ISCHANGED(Potential_Investors__c),
+   ISCHANGED(Risk_Commentary__c),
+
+   ISCHANGED(Booking_Countries__c),
+   ISCHANGED(Additional_Strategic_Rationale__c),
+   ISCHANGED(Additional_Transaction_Description__c),
+
+   ISCHANGED(Bank_Role__c),
+   ISCHANGED(Transaction_Type__c),
+   ISCHANGED(Market_Deal_Size__c),
+   ISCHANGED(SB_Hold__c),
+   ISCHANGED(SB_Sell_Down__c),
+   ISCHANGED(SB_Gross_Participation__c)
+            )
+            )</errorConditionFormula>
+    <errorMessage>No more updates can be made as support has been recieved</errorMessage>
+</ValidationRule>

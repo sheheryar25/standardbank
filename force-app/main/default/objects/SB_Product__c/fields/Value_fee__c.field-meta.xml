@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Value_fee__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>The fee associated to the number entered in the &quot;Monthly Value&quot; field i.e. for Cash deposit products remember to enter CDF divided by 100. E.g. CDF = R0.36c per R100 therefore enter 0.0036</inlineHelpText>
+    <label>Value Fee</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>4</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

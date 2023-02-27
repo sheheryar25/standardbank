@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Branch_Complaint</fullName>
+    <active>true</active>
+    <description>US-3665 This validation rule ensures a Complaint Reference Number is captured when a complaint case is created at a branch.</description>
+    <errorConditionFormula>AND(
+TEXT(Type) = &quot;Complaint&quot;,
+TEXT(Origin)= &quot;Branch&quot;,
+ISBLANK(Complaint_Reference_Number__c) 
+)</errorConditionFormula>
+    <errorDisplayField>Complaint_Reference_Number__c</errorDisplayField>
+    <errorMessage>Please complete the Complaint Reference Number</errorMessage>
+</ValidationRule>

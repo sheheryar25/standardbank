@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Non_SBG_User__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Field to track a Non-SBG User</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Field to track a Non-SBG User</inlineHelpText>
+    <label>Non-SBG User</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

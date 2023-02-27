@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Not_editable_after_Reason_submition</fullName>
+    <active>true</active>
+    <errorConditionFormula>(ISCHANGED(Response__c) ||  ISCHANGED( Reason__c ) ||  ISCHANGED( Comments__c ) ||  ISCHANGED( Future_Contact_Date__c ) )
+            &amp;&amp;  NOT( ISBLANK( PRIORVALUE( Response__c ) ) )</errorConditionFormula>
+    <errorMessage>You cannot change Reason, Response, Comments and Future Contact Date</errorMessage>
+</ValidationRule>

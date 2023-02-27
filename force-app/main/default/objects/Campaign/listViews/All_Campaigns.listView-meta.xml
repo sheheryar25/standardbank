@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Campaigns</fullName>
+    <columns>CAMPAIGN.NAME</columns>
+    <columns>CAMPAIGN.START_DATE</columns>
+    <columns>CAMPAIGN.END_DATE</columns>
+    <columns>CORE.USERS.FIRST_NAME</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>CAMPAIGN.BUDGETED_COST</columns>
+    <columns>CAMPAIGN.ACTUAL_COST</columns>
+    <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+    <columns>CAMPAIGN.STATUS</columns>
+    <columns>Lock_Campaign__c</columns>
+    <columns>CAMPAIGN.NUM_CONTACTS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CAMPAIGN.CREATED_DATE</field>
+        <operation>greaterThan</operation>
+        <value>1/1/2021 12:00 AM</value>
+    </filters>
+    <filters>
+        <field>Campaign_Category__c</field>
+        <operation>equals</operation>
+        <value>Survey</value>
+    </filters>
+    <filters>
+        <field>CAMPAIGN.CAMPAIGN_TYPE</field>
+        <operation>equals</operation>
+        <value>Client Research</value>
+    </filters>
+    <label>All Campaigns</label>
+</ListView>

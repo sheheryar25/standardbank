@@ -1,0 +1,20 @@
+<aura:component >
+	<ltng:require scripts="{!$Resource.D3 + '/d3.min.js'}" afterScriptsLoaded="{!c.onScriptLoaded}"/>
+
+	<aura:attribute name="height" type="Integer" default=""/>
+	<aura:attribute name="width" type="Integer" default=""/>
+	<aura:attribute name="boxHeight" type="Integer" default="500"/>
+	<aura:attribute name="boxWidth" type="Integer" default="700"/>
+	<aura:attribute name="title" type="String" default=""/>
+	<aura:attribute name="colors" type="String[]" default="['#76DDFB', '#B44AC7', '#9013FE']"/>
+	<aura:attribute name="legends" type="Object[]" default="[]"/>
+	<aura:attribute name="values" type="Decimal[]" default="[]"/>
+	<aura:attribute name="circleText" type="String" default=""/>
+	<aura:attribute name="circleLegend" type="String" default=""/>
+
+	<aura:attribute name="isInitialized" type="Boolean" default="false" access="private"/>
+	<aura:attribute name="isScriptLoaded" type="Boolean" default="false" access="private"/>
+	<aura:handler name="init" action="{!c.onInit}" value="{!this}"/>
+
+	<div style="display:inline-block;" aura:id="container"></div>
+</aura:component>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lesotho_CST_CIB_Queries_Call_Report</fullName>
+    <filterScope>Queue</filterScope>
+    <label>Lesotho CST CIB Queries</label>
+    <queue>Lesotho_CST_CIB_Queries</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

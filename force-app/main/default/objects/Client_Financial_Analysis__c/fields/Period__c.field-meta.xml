@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Period__c</fullName>
+    <description>Period of time for which this financial data is applicable.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Period of time for which this financial data is applicable.</inlineHelpText>
+    <label>Period</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1 Month</fullName>
+                <default>false</default>
+                <label>1 Month</label>
+            </value>
+            <value>
+                <fullName>2 Month</fullName>
+                <default>false</default>
+                <label>2 Month</label>
+            </value>
+            <value>
+                <fullName>3 Month</fullName>
+                <default>false</default>
+                <label>3 Month</label>
+            </value>
+            <value>
+                <fullName>4 Month</fullName>
+                <default>false</default>
+                <label>4 Month</label>
+            </value>
+            <value>
+                <fullName>5 Month</fullName>
+                <default>false</default>
+                <label>5 Month</label>
+            </value>
+            <value>
+                <fullName>6 Month</fullName>
+                <default>false</default>
+                <label>6 Month</label>
+            </value>
+            <value>
+                <fullName>7 Month</fullName>
+                <default>false</default>
+                <label>7 Month</label>
+            </value>
+            <value>
+                <fullName>8 Month</fullName>
+                <default>false</default>
+                <label>8 Month</label>
+            </value>
+            <value>
+                <fullName>9 Month</fullName>
+                <default>false</default>
+                <label>9 Month</label>
+            </value>
+            <value>
+                <fullName>10 Month</fullName>
+                <default>false</default>
+                <label>10 Month</label>
+            </value>
+            <value>
+                <fullName>11 Month</fullName>
+                <default>false</default>
+                <label>11 Month</label>
+            </value>
+            <value>
+                <fullName>12 Month</fullName>
+                <default>false</default>
+                <label>12 Month</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

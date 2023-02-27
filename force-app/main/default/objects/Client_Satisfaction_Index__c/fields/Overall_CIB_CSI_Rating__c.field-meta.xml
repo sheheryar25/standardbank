@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Overall_CIB_CSI_Rating__c</fullName>
+    <description>This field is used to record the CIB Rating, created as per EN-0690</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Rate your CIB experience. 1-6 Client at Risk | 7 Room for Improvement | 8 Satisfied | 9-10 Extremely Satisfied</inlineHelpText>
+    <label>Overall CIB CSI Rating</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Not Rated</fullName>
+                <default>true</default>
+                <label>Not Rated</label>
+            </value>
+            <value>
+                <fullName>1</fullName>
+                <color>#330000</color>
+                <default>false</default>
+                <label>1</label>
+            </value>
+            <value>
+                <fullName>2</fullName>
+                <color>#660000</color>
+                <default>false</default>
+                <label>2</label>
+            </value>
+            <value>
+                <fullName>3</fullName>
+                <color>#990000</color>
+                <default>false</default>
+                <label>3</label>
+            </value>
+            <value>
+                <fullName>4</fullName>
+                <color>#CC0000</color>
+                <default>false</default>
+                <label>4</label>
+            </value>
+            <value>
+                <fullName>5</fullName>
+                <color>#FF0000</color>
+                <default>false</default>
+                <label>5</label>
+            </value>
+            <value>
+                <fullName>6</fullName>
+                <color>#FF6666</color>
+                <default>false</default>
+                <label>6</label>
+            </value>
+            <value>
+                <fullName>7</fullName>
+                <color>#FF9966</color>
+                <default>false</default>
+                <label>7</label>
+            </value>
+            <value>
+                <fullName>8</fullName>
+                <color>#BBBBBB</color>
+                <default>false</default>
+                <label>8</label>
+            </value>
+            <value>
+                <fullName>9</fullName>
+                <color>#009900</color>
+                <default>false</default>
+                <label>9</label>
+            </value>
+            <value>
+                <fullName>10</fullName>
+                <color>#006600</color>
+                <default>false</default>
+                <label>10</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

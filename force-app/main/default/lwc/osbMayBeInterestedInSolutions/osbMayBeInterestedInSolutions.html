@@ -1,0 +1,125 @@
+<template>
+    <template if:true={SolutionsRequest}>
+        <div class="MainInterestedInSection">
+            <div class="FeaturedSolutionsSection">
+                <div class="HeadingSection">
+                    <h1>Featured Applications</h1>
+                </div>
+                <div class="ApplicationSection slds-wrap slds-grid">
+                    <lightning-layout multiple-rows="true">
+                        <lightning-layout-item size="12" small-device-size="12" medium-device-size="6"
+                            large-device-size="6">
+                            <div class="AppOne slds-col" data-value={solSiteOne}>
+                                <template if:true={solThirdOne}>
+                                    <img class="SolutionTagThird" src="/resource/OSB_Images_Two/SolutionTag.svg"></img>
+                                </template>
+                                <template if:false={solThirdOne}>
+                                    <img class="SolutionTag" src="/resource/OSB_Images_Two/SolutionTag.svg"></img>
+                                </template>
+                                <div class="ImageSection">
+                                    <img src={ApplicationImageOne} class="SolutionImage">
+                                </div>
+                                <div class="TextSection">
+                                    <div class="HeaderTextSection">
+                                        <template if:true={solTMOne}>
+                                            <p>{solTitleOne}<sup class="tmClass">TM</sup></p>
+                                        </template>
+                                        <template if:false={solTMOne}>
+                                            <p>{solTitleOne}</p>
+                                        </template>
+                                    </div>
+                                    <div class="DescriptionTextSection">
+                                        <p>{solIntroOne}</p>
+                                    </div>
+                                    <div class="ReadLinkSection" data-id="featuredAppOnelink"
+                                        data-text="My Dashboard | Featured Application One">
+                                        <a onclick={visitWebsiteOne}>Read more<img class="ReadMoreArrow"
+                                                src="/resource/OSB_Images_Two/ReadMoreArrow.svg"></img></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12" small-device-size="12" medium-device-size="6"
+                            large-device-size="6">
+                            <div class="AppTwo slds-col" data-value={solSiteTwo}>
+                                <template if:true={solThirdTwo}>
+                                    <img class="SolutionTagThird" src="/resource/OSB_Images_Two/SolutionTag.svg"></img>
+                                </template>
+                                <template if:false={solThirdTwo}>
+                                    <img class="SolutionTag" src="/resource/OSB_Images_Two/SolutionTag.svg"></img>
+                                </template>
+                                <div class="ImageSection">
+                                    <img src={ApplicationImageTwo} class="SolutionImage">
+                                </div>
+                                <div class="TextSection">
+                                    <div class="HeaderTextSection">
+                                        <template if:true={solTMTwo}>
+                                            <p>{solTitleTwo}<sup class="tmClass">TM</sup></p>
+                                        </template>
+                                        <template if:false={solTMTwo}>
+                                            <p>{solTitleTwo}</p>
+                                        </template>
+                                    </div>
+                                    <div class="DescriptionTextSection">
+                                        <p>{solIntroTwo}</p>
+                                    </div>
+                                    <div class="ReadLinkSection" data-id="featuredAppTwolink"
+                                        data-text="My Dashboard | Featured Application Two">
+                                        <a onclick={visitWebsiteTwo}>Read more<img class="ReadMoreArrow"
+                                                src="/resource/OSB_Images_Two/ReadMoreArrow.svg"></img></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </lightning-layout-item>
+                    </lightning-layout>
+                </div>
+            </div>
+        </div>
+        <br />
+    </template>
+    <template if:true={SolutionRequestOne}>
+        <div class="MainInterestedInSection">
+            <div class="FeaturedSolutionsSection">
+                <div class="HeadingSection">
+                    <h1>Featured solutions</h1>
+                </div>
+                <div class="ApplicationSection slds-wrap slds-grid">
+                    <lightning-layout multiple-rows="true">
+                        <lightning-layout-item size="12" small-device-size="12" medium-device-size="6"
+                            large-device-size="6">
+                            <div class="AppOne slds-col" data-value={solSiteOne}>
+                                <template if:true={solThirdOne}>
+                                    <img class="SolutionTagThird" src="/resource/OSB_Images_Two/SolutionTag.svg"></img>
+                                </template>
+                                <template if:false={solThirdOne}>
+                                    <img class="SolutionTag" src="/resource/OSB_Images_Two/SolutionTag.svg"></img>
+                                </template>
+                                <div class="ImageSection">
+                                </div>
+                                <div class="TextSection">
+                                    <div class="HeaderTextSection">
+                                        <template if:true={solTMOne}>
+                                            <p>{solTitleOne}<sup class="tmClass">TM</sup></p>
+                                        </template>
+                                        <template if:false={solTMOne}>
+                                            <p>{solTitleOne}</p>
+                                        </template>
+                                    </div>
+                                    <div class="DescriptionTextSection">
+                                        <p>{solIntroOne}</p>
+                                    </div>
+                                    <div class="ReadLinkSection" data-id="featuredAppOnelink"
+                                        data-text="My Dashboard | Featured Application One">
+                                        <a onclick={visitWebsiteOne}>Read more<img class="ReadMoreArrow"
+                                                src="/resource/OSB_Images_Two/ReadMoreArrow.svg"></img></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </lightning-layout-item>
+                    </lightning-layout>
+                </div>
+            </div>
+        </div>
+        <br />
+    </template>
+</template>

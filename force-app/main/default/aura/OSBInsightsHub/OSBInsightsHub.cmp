@@ -1,0 +1,47 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" controller="OSB_InsightsHub_CTRL">
+    <lightning:navigation aura:id="navService"/>
+    <aura:attribute name="insightsHubRows" type="Object[]" access="private"/>
+    <aura:attribute name="articles" type="Object[]" access="private"/>
+    <aura:attribute name="full" type="Boolean" default="false" access="public"/>
+    <aura:attribute name="tile" type="Boolean" default="false" access="public"/>
+    <aura:attribute name="isLoading" type="Boolean" default="true" access="private"/>
+    <aura:attribute name="class" type="String" access="public"/>
+    <aura:attribute name="InsightUrl" type="String" access="private"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:if isTrue="{!v.tile}">
+        <div class="{!'insights-container insights-container--tile ' + v.class}">
+            <h2 class="insights-container--tile__title">Insights</h2>
+            <div class="insights--tile">
+                <div class="insights--tile__items">
+                    <aura:iteration items="{!v.articles}" var="insightsHubItem" end="3">
+                        <div class="insights__item">
+                            <div class="insights__item__image">
+                                <lightning:formattedRichText aura:id="outputRT" value="{!insightsHubItem.Image__c}"/>
+                            </div>
+                            <div class="insights__item__content">
+                                <div class="insights__item__row">
+                                    <div class="insights__item__title">
+                                        <a href="{!insightsHubItem.External_url__c}" class="link" target="_blank" data-id= "uitlink_link" data-text= "{!'Dashboard | Insights | ' + insightsHubItem.Title}">{!insightsHubItem.Title}<i class="ms-icn_link_out marginLeft"></i></a>
+                                    </div>
+                                    <div class="insights__item__date">
+                                        <lightning:formattedDateTime value="{!insightsHubItem.Created_date__c}" timeZone="UTC" />
+                                    </div>
+                                </div>
+                                <div class="insights__item__description">
+                                    {!insightsHubItem.Introduction__c}
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </aura:iteration>
+                </div>
+                <a class="insights--tile__items__link" href="{!v.InsightUrl}" target="_blank" data-id= "uitlink_link" data-text= "Dashboard | Insights | View More">View more<i class="ms-icn_link_out marginLeft"></i></a>
+            </div>
+        </div>
+        <aura:set attribute="else">
+            <aura:if isTrue="{!v.isLoading}">
+                <c:OSBLoadingScreen />
+            </aura:if>
+        </aura:set>
+    </aura:if>
+</aura:component>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CC_and_CC_BM_cannot_be_the_same_user</fullName>
+    <active>true</active>
+    <description>CC and CC BM cannot be the same user</description>
+    <errorConditionFormula>Client_Coordinator__c = True &amp;&amp; Client_Coordinator_BM__c = True</errorConditionFormula>
+    <errorMessage>CC and CC BM cannot be the same user</errorMessage>
+</ValidationRule>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AUM__c</fullName>
+    <description>US-1981: FAIS - To store FAIS related information in SF : FAIS Status, NAV, AUM and FAIS Review Date</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the currency field holding Asset Under Management value for the asset management clients</inlineHelpText>
+    <label>Asset Under Management</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Currency</type>
+</CustomField>

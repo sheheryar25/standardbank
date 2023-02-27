@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SanctionChangesApprovalDate__c</fullName>
+    <description>Track the date when/if any sanction change approval were made, only occurs if sanction changes were made</description>
+    <externalId>false</externalId>
+    <label>SanctionChangesApprovalDate</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

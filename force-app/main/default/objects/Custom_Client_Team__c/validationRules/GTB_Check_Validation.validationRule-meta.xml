@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GTB_Check_Validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+OR(ISCHANGED(Client_Role__c ),
+ISNEW()),
+ISPICKVAL(Client_Role__c , &quot;Global Transaction Banker&quot;),
+$Profile.Name != &quot;System Administrator&quot;
+)</errorConditionFormula>
+    <errorMessage>Insufficient Privileges - You do not have the level of access necessary to Add or Delete Global Transaction Banker on this Client. Please contact the CRM Helpdesk (CRMSalesforce@standardbank.co.za) for assistance.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Proposed_Group_Parent__c</fullName>
+    <description>This field will be populated upon hierarchy selection based on predefined rules, for Clients onboarded in SFDC only. (EN-0786)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Legally registered entity which is a holding company of a Client group (subsidiary/subsidiaries)</inlineHelpText>
+    <label>Proposed Group Parent</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

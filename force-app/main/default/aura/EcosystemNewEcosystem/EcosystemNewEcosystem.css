@@ -1,0 +1,4 @@
+.THIS ul { /* make UTL_LookupField expand the modal */
+	position: relative;
+	z-index: 9999;
+}

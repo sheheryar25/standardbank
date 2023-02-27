@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Market__c</fullName>
+    <externalId>false</externalId>
+    <label>Market</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Global Markets</fullName>
+                <default>false</default>
+                <label>Global Markets</label>
+            </value>
+            <value>
+                <fullName>Investment Banking</fullName>
+                <default>false</default>
+                <label>Investment Banking</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>PCS</fullName>
+                <default>false</default>
+                <label>PCS</label>
+            </value>
+            <value>
+                <fullName>PIM</fullName>
+                <default>false</default>
+                <label>PIM</label>
+            </value>
+            <value>
+                <fullName>TPS</fullName>
+                <default>false</default>
+                <label>TPS</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

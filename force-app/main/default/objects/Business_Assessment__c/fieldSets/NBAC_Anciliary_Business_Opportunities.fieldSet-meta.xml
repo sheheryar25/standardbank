@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NBAC_Anciliary_Business_Opportunities</fullName>
+    <description>NBAC Anciliary Business Opportunities</description>
+    <displayedFields>
+        <field>Anticipated_Ancillary_Business_GM__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <displayedFields>
+        <field>Anticipated_Ancillary_Business_IB__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <displayedFields>
+        <field>Anticipated_Ancillary_Business_TPS__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <label>NBAC Anciliary Business Opportunities</label>
+</FieldSet>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CMN_SPC_EnableProfileName__c</fullName>
+    <caseSensitive>true</caseSensitive>
+    <description>All users with this profile name will be enabled; by ensuring email is valid and they are active</description>
+    <externalId>false</externalId>
+    <label>Enable Profile Name</label>
+    <length>80</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Transaction_on_the_Exceptions_List__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>US-3828 List of activities that are either prohibited from financing in all Standard Bank/Stanbic Group operations, or to which specific restrictions apply in selected regions/activities. The Exceptions List can be found on the intranet or by selecting &apos;click here to access exceptions list&apos; from the E&amp;S screening tool. The checkbox should be ticked by the transactor to confirm that they have checked that the transaction is not on the exceptions list (or is within the allocated parameters).</description>
+    <externalId>false</externalId>
+    <inlineHelpText>List of activities that are either prohibited from financing in all SBG operations, or to which specific restrictions apply in selected regions/activities. The Exceptions List can be found on the intranet or accessed via the E&amp;S screening tool.</inlineHelpText>
+    <label>Transaction on the Exceptions List?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

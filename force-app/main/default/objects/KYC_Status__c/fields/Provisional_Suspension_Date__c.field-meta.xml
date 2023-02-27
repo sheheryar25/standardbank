@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Provisional_Suspension_Date__c</fullName>
+    <description>The provisional suspension date, set 90 days after the first contact with the client</description>
+    <externalId>false</externalId>
+    <formula>Client_Contact_Date__c + 90</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>The provisional suspension date, set 90 days after the first contact with the client</inlineHelpText>
+    <label>Provisional Suspension Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

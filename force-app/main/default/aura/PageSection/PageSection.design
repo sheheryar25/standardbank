@@ -1,0 +1,7 @@
+<design:component >
+    <design:attribute name="title" label="Section title" />
+	<design:attribute name="fieldsets" label="FieldSets Name separated by ';' (comma)" />
+	<design:attribute name="showBorder" label="Show Border" />
+    <design:attribute name="noOfColumns" label="Number of columns" />
+    <design:attribute name="textAlign" label="Text Alignment" />
+</design:component>

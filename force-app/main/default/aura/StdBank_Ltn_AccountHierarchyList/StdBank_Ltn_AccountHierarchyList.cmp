@@ -1,0 +1,78 @@
+<aura:component controller="AccountHierarchy_LTN_CTRL" implements="flexipage:availableForRecordHome" access="global">
+    
+    <aura:attribute name="nodes" type="object"/> 
+    <aura:attribute name="recordId" type="Id" />  
+    <aura:attribute name="agmColumnVisible" type="boolean" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.init}" />
+
+    <table class="slds-table slds-table_bordered slds-table_fixed-layout" role="grid">
+        <thead>
+            <tr class="slds-line-height_reset">
+                <th  class="slds-truncate slds-cell-wrap" scope="col" style="width: 10rem;" title="CLIENT NAME"> 
+                    <span style="font-size: .75rem;"> 
+                            CLIENT NAME 
+                    </span>
+                </th>
+                <th class="slds-is-sortable slds-is-resizable slds-text-title_caps slds-truncate slds-cell-wrap" scope="col" title="INDIVIDUALLY BUDGETED CLIENT (IBC)">
+                    <span style="font-size: .75rem;">
+                            INDIVIDUALLY BUDGETED CLIENT (IBC) 
+                    </span>
+                </th>
+                <th class="slds-is-sortable slds-is-resizable slds-text-title_caps slds-truncate slds-cell-wrap" scope="col" title="CIF NUMBER">
+                    <span style="font-size: .75rem;">
+                            CIF NUMBER
+                    </span>
+                </th>
+                <th class="slds-is-sortable slds-is-resizable slds-text-title_caps slds-truncate slds-cell-wrap" scope="col" title="CLIENT SECTOR">
+                    <span style="font-size: .75rem;">
+                            CLIENT SECTOR
+                    </span>
+                </th>
+                <th class="slds-is-sortable slds-is-resizable slds-text-title_caps slds-truncate slds-cell-wrap" scope="col" title="CLIENT SUB-SECTOR">
+                    <span style="font-size: .75rem;">
+                            CLIENT SUB-SECTOR
+                    </span>
+                </th>
+                <th class="slds-is-sortable slds-is-resizable slds-text-title_caps slds-truncate slds-cell-wrap" scope="col" title="OVERALL CIB CSI RATING">
+                    <span style="font-size: .75rem;">
+                            OVERALL CIB CSI RATING
+                    </span>
+                </th>
+                <!-- If the user is cib then show column -->
+                <aura:if isTrue="{!v.agmColumnVisible}">
+                <th class="slds-is-sortable slds-is-resizable slds-text-title_caps slds-truncate slds-cell-wrap" scope="col" title="AGM STATUS">
+                    <span style="font-size: .75rem;">
+                            AGM STATUS
+                    </span>
+                </th>
+                </aura:if>         
+                <th class="slds-is-sortable slds-is-resizable slds-text-title_caps slds-truncate slds-cell-wrap" scope="col" title="REGISTERED COUNTRY">
+                    <span style="font-size: .75rem;">
+                            REGISTERED COUNTRY
+                    </span>
+                </th>                
+                <th class="slds-is-sortable slds-is-resizable slds-text-title_caps slds-truncate slds-cell-wrap" scope="col" title="ACTUAL CY REVENUE (ZAR)">
+                    <span style="font-size: .75rem;">
+                            ACTUAL CY REVENUE (ZAR)
+                    </span>
+                </th>
+                <th class="slds-is-sortable slds-is-resizable slds-text-title_caps slds-truncate slds-cell-wrap" scope="col" title="CLIENT COORDINATOR">
+                    <span style="font-size: .75rem;">
+                            CLIENT COORDINATOR
+                    </span>
+                </th>
+                <th class="slds-is-sortable slds-is-resizable slds-text-title_caps slds-truncate slds-cell-wrap" scope="col" title="CLIENT RECORD TYPE">
+                    <span style="font-size: .75rem;">
+                            CLIENT RECORD TYPE  
+                    </span>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <aura:iteration items="{!v.nodes}" var="node">
+                <c:StdBank_Ltn_AccountHierarchyListRow node="{!node}" agmColumnVisible="{!v.agmColumnVisible}" />   
+            </aura:iteration> 
+        </tbody>
+    </table>
+</aura:component>

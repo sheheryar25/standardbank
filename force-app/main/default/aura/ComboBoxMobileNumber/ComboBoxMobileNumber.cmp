@@ -1,0 +1,69 @@
+<!--
+ - Created by Emmanuel Nocks Mulea on 2020/10/06.
+ -->
+
+<aura:component controller="ComboBoxMobileNumberCodes" description="ComboBoxMobileNumber">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <lightning:notificationsLibrary aura:id="comboMobile_notifLib"/>
+    <aura:attribute name="listOfCountryCodes" type="CountryCodes__c[]" access="private"/>
+    <aura:attribute name="mobileNumber" type="string" access="public"/>
+    <aura:attribute name="index" type="integer" access="public"/>
+    <aura:attribute name="mobile_input_index" type="integer" access="private"/>
+    <aura:attribute name="timeout" type="Object" access="private"/>
+    <aura:attribute name="isNotValidMobileNumber" type="boolean" default="false" access="public"/>
+    <aura:attribute name="selectedCountry" type="Map" default="{flagName:'South-Africa',Name:'South Africa',phone_code:'27'}" access="private"/>
+
+    <div class="slds-form-element">
+        <div class="slds-form-element__control">
+            <div class="slds-combobox-group">
+                <div class="slds-combobox_object-switcher slds-combobox-addon_start">
+                    <div class="slds-form-element">
+                        <div class="slds-form-element__control">
+                            <div class="slds-combobox_container slds-has-icon-only">
+                                <div aura:id="sb-drop-down-mobile" class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click " aria-controls="primary-combobox-id-8" aria-expanded="true" aria-haspopup="listbox" role="combobox">
+                                    <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_left-right" role="none">
+                                        <span style="font-size: 10px;" id="country" class="slds-icon_container slds-icon-utility-apex slds-input__icon slds-input__icon_left" title="apex">
+                                         <img src="{!$Resource.country_flags+'/country_flags/png_32/'+v.selectedCountry.flagName +'.png'}"/>
+                                                                                    +{!v.selectedCountry.phone_code}
+                                        </span>
+                                        <input type="text" onblur="{!c.closeDropDown}"  onclick="{!c.openDropDown}" class="slds-input slds-combobox__input  slds-combobox__input-value" id="combobox-id-45" aria-controls="objectswitcher-listbox-id-02" autocomplete="off" role="textbox" placeholder=" " value="code" />
+                                    </div>
+
+                                    <div onscroll="{!c.clearTimeOut}" id="objectswitcher-listbox-id-02" class="slds-dropdown slds-dropdown_length-5 slds-dropdown_x-small slds-dropdown_left" role="listbox">
+                                        <ul  class="slds-listbox slds-listbox_vertical" role="presentation">
+                                            <aura:iteration items="{!v.listOfCountryCodes}" var="country" indexVar="index">
+                                            <li onclick="{!c.select}"  id="{!index}" role="presentation" class="slds-listbox__item">
+                                                <div aria-checked="true" id="{!index}" class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected" role="option">
+                                                    <span id="{!index}" class="slds-media__figure slds-listbox__option-icon">
+                                                        <span id="{!index}" class="slds-icon_container slds-icon-utility-apex slds-current-color">
+                                                            <img id="{!index}" src="{!$Resource.country_flags+'/country_flags/png_32/'+country.flagName +'.png'}"/>
+                                                        </span>
+                                                    </span>
+                                                    <span id="{!index}" class="slds-media__body">
+                                                        <span id="{!index}" class="slds-truncate" title="{!country.Name}">{!country.Name +'(+'+country.Country_Phone_Code__c+')'}</span>
+                                                    </span>
+                                                </div>
+                                            </li>
+                                            </aura:iteration>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-combobox_container slds-combobox-addon_end">
+                    <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click" aria-expanded="false" aria-haspopup="listbox" id="primary-combobox-id-8" role="combobox">
+                        <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
+                            <input aura:id="mobile_input" value="{!v.mobileNumber}" onblur="{!c.onblur}" onclick="{!c.closeDropDown}"  onkeyup="{!c.onkeydown}" type="text" class="slds-input slds-combobox__input" id="combobox-id-44" aria-autocomplete="list" aria-controls="listbox-id-30" autocomplete="off" role="textbox" placeholder="Mobile..." />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <aura:if isTrue="{!and(v.isNotValidMobileNumber,v.index==v.mobile_input_index) }">
+        <p style="color:#c23934;white-space: pre-wrap;">Please provide a valid mobile number. Example: 0821234567</p>
+    </aura:if>
+</aura:component>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Anticipated_Ancillary_Business_GM__c</fullName>
+    <description>Future/Potential Opportunities with the Client. Please include all Pipeline deals.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Future/Potential Opportunities with the Client. Please include all Pipeline deals.</inlineHelpText>
+    <label>Anticipated Ancillary Business for GM</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

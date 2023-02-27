@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Uganda_ENTClients_Onboarded_This_Year</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.ADDRESS2_STATE</columns>
+    <columns>Work_Phone__c</columns>
+    <columns>Account_Owner__c</columns>
+    <columns>ExternalIdentifier__c</columns>
+    <columns>ACCOUNT.RECORDTYPE</columns>
+    <columns>Client_Sector__c</columns>
+    <columns>FinServ__BranchName__c</columns>
+    <columns>Market_Segments__c</columns>
+    <columns>Completeness_Score__c</columns>
+    <columns>Date_of_Incorporation__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Enterprise_Banking_Africa_Regions</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.ADDRESS1_COUNTRY</field>
+        <operation>equals</operation>
+        <value>UG,Uganda</value>
+    </filters>
+    <filters>
+        <field>FinServ__RelationshipStartDate__c</field>
+        <operation>equals</operation>
+        <value>THIS_YEAR</value>
+    </filters>
+    <label>Uganda ENT Clients Onboarded This Year</label>
+    <sharedTo>
+        <roleAndSubordinatesInternal>BCC_AR_Uganda</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

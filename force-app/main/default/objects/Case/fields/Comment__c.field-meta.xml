@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Comment__c</fullName>
+    <description>Additional comments on the Case or Query</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Additional Comments on the Category</inlineHelpText>
+    <label>Comment</label>
+    <length>256</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

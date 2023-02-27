@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>client_record_type__c</fullName>
+    <description>Record type of the related client (US-1383).</description>
+    <externalId>false</externalId>
+    <formula>CommB_Client__r.RecordType.Name</formula>
+    <inlineHelpText>Record type of the related client.</inlineHelpText>
+    <label>Client Record Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

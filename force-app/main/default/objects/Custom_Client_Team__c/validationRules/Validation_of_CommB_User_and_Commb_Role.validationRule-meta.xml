@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validation_of_CommB_User_and_Commb_Role</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( OR(ISPICKVAL(Account__r.Primary_Relationship_Holder__c, &apos;Commercial Banking&apos;),ISPICKVAL(Account__r.Primary_Relationship_Holder__c, &apos;Business Banking&apos;)),
+     ISPICKVAL(Team_Member__r.User_CIB_Global_Area__c, &apos;BCC&apos;),
+     NOT(OR( ISPICKVAL(Client_Role__c, &apos;BCC Relationship Manager&apos;),
+             ISPICKVAL(Client_Role__c, &apos;BCC Portfolio Manager&apos;),
+             ISPICKVAL(Client_Role__c, &apos;BCC Product Specialist&apos;),
+             ISPICKVAL(Client_Role__c, &apos;BCC Service Manager&apos;),
+             ISPICKVAL(Client_Role__c, &apos;BCC Business Development Manager&apos;),
+             ISPICKVAL(Client_Role__c, &apos;BCC CSU Agent&apos;),
+             ISPICKVAL(Client_Role__c, &apos;BCC CSU Manager&apos;),
+             ISPICKVAL(Client_Role__c, &apos;BCC Ecosystem Manager&apos;),
+             ISPICKVAL(Client_Role__c, &apos;BCC Account Analyst&apos;),
+             ISPICKVAL(Client_Role__c, &apos;BCC Head Trade Sales&apos;),
+             ISPICKVAL(Client_Role__c, &apos;BCC Trade Sales Manager&apos;),
+             ISPICKVAL(Client_Role__c, &apos;BCC Trade Finance Manager&apos;))
+       )
+)</errorConditionFormula>
+    <errorMessage>You cannot add a BCC user with a CIB Team role, please select a BCC role (BCC prefix)</errorMessage>
+</ValidationRule>

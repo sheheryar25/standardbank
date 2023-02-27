@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Topics__c</fullName>
+    <description>A list of possible high level business topics that have been discussed at a meeting</description>
+    <externalId>false</externalId>
+    <inlineHelpText>A list of possible high level business topics that have been discussed at a meeting. Select all that apply.</inlineHelpText>
+    <label>Topics</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Advisory</fullName>
+                <default>false</default>
+                <label>Advisory</label>
+            </value>
+            <value>
+                <fullName>Africa Focus</fullName>
+                <default>false</default>
+                <label>Africa Focus</label>
+            </value>
+            <value>
+                <fullName>Brainstorming</fullName>
+                <default>false</default>
+                <label>Brainstorming</label>
+            </value>
+            <value>
+                <fullName>China Focus</fullName>
+                <default>false</default>
+                <label>China Focus</label>
+            </value>
+            <value>
+                <fullName>Commodities</fullName>
+                <default>false</default>
+                <label>Commodities</label>
+            </value>
+            <value>
+                <fullName>Consolidations</fullName>
+                <default>false</default>
+                <label>Consolidations</label>
+            </value>
+            <value>
+                <fullName>E-Channels</fullName>
+                <default>false</default>
+                <label>E-Channels</label>
+            </value>
+            <value>
+                <fullName>Equity</fullName>
+                <default>false</default>
+                <label>Equity</label>
+            </value>
+            <value>
+                <fullName>Exchange Control</fullName>
+                <default>false</default>
+                <label>Exchange Control</label>
+            </value>
+            <value>
+                <fullName>Financial Engineering</fullName>
+                <default>false</default>
+                <label>Financial Engineering</label>
+            </value>
+            <value>
+                <fullName>Financial Structuring</fullName>
+                <default>false</default>
+                <label>Financial Structuring</label>
+            </value>
+            <value>
+                <fullName>Forex</fullName>
+                <default>false</default>
+                <label>Forex</label>
+            </value>
+            <value>
+                <fullName>Funding</fullName>
+                <default>false</default>
+                <label>Funding</label>
+            </value>
+            <value>
+                <fullName>Interest Rate</fullName>
+                <default>false</default>
+                <label>Interest Rate</label>
+            </value>
+            <value>
+                <fullName>International Payment Systems</fullName>
+                <default>false</default>
+                <label>International Payment Systems</label>
+            </value>
+            <value>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+                <label>Marketing</label>
+            </value>
+            <value>
+                <fullName>Mergers and Acquisitions</fullName>
+                <default>false</default>
+                <label>Mergers and Acquisitions</label>
+            </value>
+            <value>
+                <fullName>Money Markets</fullName>
+                <default>false</default>
+                <label>Money Markets</label>
+            </value>
+            <value>
+                <fullName>New Business</fullName>
+                <default>false</default>
+                <label>New Business</label>
+            </value>
+            <value>
+                <fullName>Reference Rate Reform</fullName>
+                <default>false</default>
+                <label>Reference Rate Reform</label>
+            </value>
+            <value>
+                <fullName>Relationship</fullName>
+                <default>false</default>
+                <label>Relationship</label>
+            </value>
+            <value>
+                <fullName>Research</fullName>
+                <default>false</default>
+                <label>Research</label>
+            </value>
+            <value>
+                <fullName>Special Initiatives</fullName>
+                <default>false</default>
+                <label>Special Initiatives</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

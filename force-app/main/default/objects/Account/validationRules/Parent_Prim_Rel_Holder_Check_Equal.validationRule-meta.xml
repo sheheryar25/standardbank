@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Parent_Prim_Rel_Holder_Check_Equal</fullName>
+    <active>true</active>
+    <description>Disallow client hierarchies where a Client&apos;s primary relationship holder is not matching that of the parent Client (EN-961).</description>
+    <errorConditionFormula>($Profile.Name != &quot;Business Administrator&quot; &amp;&amp; $Profile.Name != &quot;System Administrator&quot; &amp;&amp;  $Profile.Name != &quot;Api User&quot;)
+&amp;&amp; (RecordType.Name == &quot;Potential Client&quot; || RecordType.Name == &quot;Prospect&quot;)
+&amp;&amp; !ISBLANK(ParentId)
+&amp;&amp; (ISPICKVAL(Primary_Relationship_Holder__c, &quot;Commercial Banking&quot;)  || ISPICKVAL(Primary_Relationship_Holder__c, &quot;Corporate and Investment Banking&quot;))
+&amp;&amp; !ISBLANK(TEXT(Parent.Primary_Relationship_Holder__c))
+&amp;&amp; TEXT(Primary_Relationship_Holder__c) != TEXT(Parent.Primary_Relationship_Holder__c)</errorConditionFormula>
+    <errorDisplayField>Primary_Relationship_Holder__c</errorDisplayField>
+    <errorMessage>The Parent Client you have selected is managed by a different division to the client you are on-boarding. Please remove the Parent Client name and request this client hierarchy update via the CRM Helpdesk.</errorMessage>
+</ValidationRule>

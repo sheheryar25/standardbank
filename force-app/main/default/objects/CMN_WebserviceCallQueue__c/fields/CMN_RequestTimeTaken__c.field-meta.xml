@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CMN_RequestTimeTaken__c</fullName>
+    <description>The time taken in Milliseconds for a request to an endpoint to complete. It doesn&apos;t include any processing of the response</description>
+    <externalId>false</externalId>
+    <label>Request Time Taken</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

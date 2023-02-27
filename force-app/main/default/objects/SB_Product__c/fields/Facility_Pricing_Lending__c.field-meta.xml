@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Facility_Pricing_Lending__c</fullName>
+    <description>If Variable: input total margin in % above the applicable base rate quoted to client. If below, input with minus symbol.
+If Fixed: input all-in fixed rate in %.
+If Preference Share: input the applicable % of Prime as quoted to client.
+SGPRT-625</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If Variable: input total margin in % above the applicable base rate quoted to client. If below, input with minus symbol.
+
+If Fixed: input all-in fixed rate in %.
+
+If Preference Share: input the applicable % of Prime as quoted to client.</inlineHelpText>
+    <label>Facility Pricing (%)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

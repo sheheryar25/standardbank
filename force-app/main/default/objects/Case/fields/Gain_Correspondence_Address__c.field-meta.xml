@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Gain_Correspondence_Address__c</fullName>
+    <defaultValue>$Setup.Environment_Variable__c.GainMarginChangeEMailAddress__c</defaultValue>
+    <description>This email field uses a formula to pre-populate the Gain Capital email address from the Custome Settings variable. The field is used as the recipient in a Email Alter that gets send to Gain when a new Margin Change request was submitted.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This eMail Address was pre-populated from the Custome Settings by a formula.</inlineHelpText>
+    <label>Gain Correspondence Address</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Email</type>
+    <unique>false</unique>
+</CustomField>

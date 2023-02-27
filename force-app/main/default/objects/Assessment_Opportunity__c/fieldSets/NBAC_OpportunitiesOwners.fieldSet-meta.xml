@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NBAC_OpportunitiesOwners</fullName>
+    <description>Set of fields to be displayed on NBAC process details page in Opportunity Owners related list of regulatory tab.</description>
+    <displayedFields>
+        <field>Opportunity__r.OwnerId</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <displayedFields>
+        <field>Opportunity__r.Opportunity_Owner_Division__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <label>NBAC OpportunitiesOwners</label>
+</FieldSet>

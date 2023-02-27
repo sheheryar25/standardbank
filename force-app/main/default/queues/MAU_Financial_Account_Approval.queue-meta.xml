@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>MAU Financial Account Approval</name>
+    <queueMembers>
+        <users>
+            <user>francoise.ernest@standardbank.mu.sbg.uat</user>
+            <user>husvin.shewdeen@standardbank.mu.sbg.uat</user>
+            <user>katlego.motlhabane@standardbank.co.za</user>
+            <user>robin.veerapen@standardbank.mu.sbg.uat</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Call_Report__c</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>Financial_Account_Permission__c</sobjectType>
+    </queueSobject>
+</Queue>

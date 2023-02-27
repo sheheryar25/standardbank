@@ -1,0 +1,1024 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SA_Book__c</fullName>
+    <description>Case#1146 - Rudolf Niehaus - 03/2011</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Trading Book where Revenue should reflect</inlineHelpText>
+    <label>Book</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Trading_Area__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>10086 : CIB : Merrill Book</fullName>
+                <default>false</default>
+                <label>10086 : CIB : Merrill Book</label>
+            </value>
+            <value>
+                <fullName>10452 : CIB : FX CCY Options &amp; Structure</fullName>
+                <default>false</default>
+                <label>10452 : CIB : FX CCY Options &amp; Structure</label>
+            </value>
+            <value>
+                <fullName>10453 : CIB : Fixed Int Trading</fullName>
+                <default>false</default>
+                <label>10453 : CIB : Fixed Int Trading</label>
+            </value>
+            <value>
+                <fullName>10455 : CIB : G7</fullName>
+                <default>false</default>
+                <label>10455 : CIB : G7</label>
+            </value>
+            <value>
+                <fullName>10459 : CIB : IRD Money Mkt</fullName>
+                <default>false</default>
+                <label>10459 : CIB : IRD Money Mkt</label>
+            </value>
+            <value>
+                <fullName>10460 : CIB : Interest Rate Desk</fullName>
+                <default>false</default>
+                <label>10460 : CIB : Interest Rate Desk</label>
+            </value>
+            <value>
+                <fullName>10461 : CIB : Quantitive Applications</fullName>
+                <default>false</default>
+                <label>10461 : CIB : Quantitive Applications</label>
+            </value>
+            <value>
+                <fullName>10464 : CIB : Forex Curve</fullName>
+                <default>false</default>
+                <label>10464 : CIB : Forex Curve</label>
+            </value>
+            <value>
+                <fullName>10728 : CIB : Cap Mkt Pfolios</fullName>
+                <default>false</default>
+                <label>10728 : CIB : Cap Mkt Pfolios</label>
+            </value>
+            <value>
+                <fullName>10729 : CIB : Forex Profits Management</fullName>
+                <default>false</default>
+                <label>10729 : CIB : Forex Profits Management</label>
+            </value>
+            <value>
+                <fullName>10730 : CIB : CPI Swaps</fullName>
+                <default>false</default>
+                <label>10730 : CIB : CPI Swaps</label>
+            </value>
+            <value>
+                <fullName>10732 : CIB : GM-Central</fullName>
+                <default>false</default>
+                <label>10732 : CIB : GM-Central</label>
+            </value>
+            <value>
+                <fullName>11402 : CIB : Prudential Balances</fullName>
+                <default>false</default>
+                <label>11402 : CIB : Prudential Balances</label>
+            </value>
+            <value>
+                <fullName>11404 : CIB : FX - PTA Rep Office</fullName>
+                <default>false</default>
+                <label>11404 : CIB : FX - PTA Rep Office</label>
+            </value>
+            <value>
+                <fullName>11405 : CIB : FX Cape Town Rep Office</fullName>
+                <default>false</default>
+                <label>11405 : CIB : FX Cape Town Rep Office</label>
+            </value>
+            <value>
+                <fullName>11406 : CIB : FX Durban Rep Office</fullName>
+                <default>false</default>
+                <label>11406 : CIB : FX Durban Rep Office</label>
+            </value>
+            <value>
+                <fullName>11477 : CIB : International Finance</fullName>
+                <default>false</default>
+                <label>11477 : CIB : International Finance</label>
+            </value>
+            <value>
+                <fullName>11639 : CIB : Forex Agri Futures</fullName>
+                <default>false</default>
+                <label>11639 : CIB : Forex Agri Futures</label>
+            </value>
+            <value>
+                <fullName>11640 : CIB : Rand Options</fullName>
+                <default>false</default>
+                <label>11640 : CIB : Rand Options</label>
+            </value>
+            <value>
+                <fullName>11641 : CIB : Prime</fullName>
+                <default>false</default>
+                <label>11641 : CIB : Prime</label>
+            </value>
+            <value>
+                <fullName>12468 : CIB : Hedging Strategies</fullName>
+                <default>false</default>
+                <label>12468 : CIB : Hedging Strategies</label>
+            </value>
+            <value>
+                <fullName>12473 : CIB : FX - Foreign Note Trading</fullName>
+                <default>false</default>
+                <label>12473 : CIB : FX - Foreign Note Trading</label>
+            </value>
+            <value>
+                <fullName>12476 : CIB : Base Metals &amp; Energy</fullName>
+                <default>false</default>
+                <label>12476 : CIB : Base Metals &amp; Energy</label>
+            </value>
+            <value>
+                <fullName>125 : CIB : FX Port Elizabeth Rep Office</fullName>
+                <default>false</default>
+                <label>125 : CIB : FX Port Elizabeth Rep Office</label>
+            </value>
+            <value>
+                <fullName>13755 : CIB : Equity Derivatives</fullName>
+                <default>false</default>
+                <label>13755 : CIB : Equity Derivatives</label>
+            </value>
+            <value>
+                <fullName>1410 : CIB : FX JHB Corporate Dealing</fullName>
+                <default>false</default>
+                <label>1410 : CIB : FX JHB Corporate Dealing</label>
+            </value>
+            <value>
+                <fullName>1426 : CIB : Money Markets Johannesburg</fullName>
+                <default>false</default>
+                <label>1426 : CIB : Money Markets Johannesburg</label>
+            </value>
+            <value>
+                <fullName>1441 : CIB : FX Central</fullName>
+                <default>false</default>
+                <label>1441 : CIB : FX Central</label>
+            </value>
+            <value>
+                <fullName>14683 : CIB : Forex Arbitrage</fullName>
+                <default>false</default>
+                <label>14683 : CIB : Forex Arbitrage</label>
+            </value>
+            <value>
+                <fullName>14686 : CIB : DCMT-Credit Derivatives</fullName>
+                <default>false</default>
+                <label>14686 : CIB : DCMT-Credit Derivatives</label>
+            </value>
+            <value>
+                <fullName>14687 : CIB : DCMT-Exotics</fullName>
+                <default>false</default>
+                <label>14687 : CIB : DCMT-Exotics</label>
+            </value>
+            <value>
+                <fullName>14689 : CIB : Sales &amp; Structuring</fullName>
+                <default>false</default>
+                <label>14689 : CIB : Sales &amp; Structuring</label>
+            </value>
+            <value>
+                <fullName>17366 : CIB : Forex Africa</fullName>
+                <default>false</default>
+                <label>17366 : CIB : Forex Africa</label>
+            </value>
+            <value>
+                <fullName>17409 : CIB : FOREX TRADING</fullName>
+                <default>false</default>
+                <label>17409 : CIB : FOREX TRADING</label>
+            </value>
+            <value>
+                <fullName>17410 : CIB : FX Branch Dealing</fullName>
+                <default>false</default>
+                <label>17410 : CIB : FX Branch Dealing</label>
+            </value>
+            <value>
+                <fullName>17411 : CIB : FX Operations &amp; Technology</fullName>
+                <default>false</default>
+                <label>17411 : CIB : FX Operations &amp; Technology</label>
+            </value>
+            <value>
+                <fullName>18127 : CIB : FX Interest Rate Futures</fullName>
+                <default>false</default>
+                <label>18127 : CIB : FX Interest Rate Futures</label>
+            </value>
+            <value>
+                <fullName>18172 : SFM :Online Trading</fullName>
+                <default>false</default>
+                <label>18172 : SFM :Online Trading</label>
+            </value>
+            <value>
+                <fullName>18176 : SFM : Online Trading II</fullName>
+                <default>false</default>
+                <label>18176 : SFM : Online Trading II</label>
+            </value>
+            <value>
+                <fullName>18179 : SFM : Trading Other (Interest &amp; Invest)</fullName>
+                <default>false</default>
+                <label>18179 : SFM : Trading Other (Interest &amp; Invest)</label>
+            </value>
+            <value>
+                <fullName>18815 : CIB : FX Exchange Traded Products</fullName>
+                <default>false</default>
+                <label>18815 : CIB : FX Exchange Traded Products</label>
+            </value>
+            <value>
+                <fullName>19521 : CIB : IOM Money Markets Funding Unit</fullName>
+                <default>false</default>
+                <label>19521 : CIB : IOM Money Markets Funding Unit</label>
+            </value>
+            <value>
+                <fullName>19524 : CIB : SFL Money Markets Funding</fullName>
+                <default>false</default>
+                <label>19524 : CIB : SFL Money Markets Funding</label>
+            </value>
+            <value>
+                <fullName>19639 : CIB : International</fullName>
+                <default>false</default>
+                <label>19639 : CIB : International</label>
+            </value>
+            <value>
+                <fullName>19734 : CIB : FX Bank Sales</fullName>
+                <default>false</default>
+                <label>19734 : CIB : FX Bank Sales</label>
+            </value>
+            <value>
+                <fullName>19912 : CIB : Africa Trading Desk</fullName>
+                <default>false</default>
+                <label>19912 : CIB : Africa Trading Desk</label>
+            </value>
+            <value>
+                <fullName>20028 : CIB : Tier/III Capital</fullName>
+                <default>false</default>
+                <label>20028 : CIB : Tier/III Capital</label>
+            </value>
+            <value>
+                <fullName>20084 : CIB : Credit Link Notes</fullName>
+                <default>false</default>
+                <label>20084 : CIB : Credit Link Notes</label>
+            </value>
+            <value>
+                <fullName>20113 : CIB : FX Macro</fullName>
+                <default>false</default>
+                <label>20113 : CIB : FX Macro</label>
+            </value>
+            <value>
+                <fullName>20531 : CIB : Money Markets Mark to Market</fullName>
+                <default>false</default>
+                <label>20531 : CIB : Money Markets Mark to Market</label>
+            </value>
+            <value>
+                <fullName>20788 : CIB : Call Loans</fullName>
+                <default>false</default>
+                <label>20788 : CIB : Call Loans</label>
+            </value>
+            <value>
+                <fullName>20810 : CIB : FX Relationship Centre</fullName>
+                <default>false</default>
+                <label>20810 : CIB : FX Relationship Centre</label>
+            </value>
+            <value>
+                <fullName>22153 : CIB : London 1</fullName>
+                <default>false</default>
+                <label>22153 : CIB : London 1</label>
+            </value>
+            <value>
+                <fullName>22784 : CIB : Money Markets Trading</fullName>
+                <default>false</default>
+                <label>22784 : CIB : Money Markets Trading</label>
+            </value>
+            <value>
+                <fullName>23015 : CIB : Protea Capital</fullName>
+                <default>false</default>
+                <label>23015 : CIB : Protea Capital</label>
+            </value>
+            <value>
+                <fullName>23286 : CIB : FX Strat</fullName>
+                <default>false</default>
+                <label>23286 : CIB : FX Strat</label>
+            </value>
+            <value>
+                <fullName>23287 : CIB : Agricultural Banking Book</fullName>
+                <default>false</default>
+                <label>23287 : CIB : Agricultural Banking Book</label>
+            </value>
+            <value>
+                <fullName>23381 : CIB : Foreign Currency Money Markets Tra</fullName>
+                <default>false</default>
+                <label>23381 : CIB : Foreign Currency Money Markets Tra</label>
+            </value>
+            <value>
+                <fullName>23459 : CIB : Cross Currencies</fullName>
+                <default>false</default>
+                <label>23459 : CIB : Cross Currencies</label>
+            </value>
+            <value>
+                <fullName>23486 : CIB : Global Markets Sales</fullName>
+                <default>false</default>
+                <label>23486 : CIB : Global Markets Sales</label>
+            </value>
+            <value>
+                <fullName>23942 : CIB : CD Banking Book</fullName>
+                <default>false</default>
+                <label>23942 : CIB : CD Banking Book</label>
+            </value>
+            <value>
+                <fullName>24746 : CIB : Performers CRS</fullName>
+                <default>false</default>
+                <label>24746 : CIB : Performers CRS</label>
+            </value>
+            <value>
+                <fullName>24750 : CIB : Funding Unit Investment Banking</fullName>
+                <default>false</default>
+                <label>24750 : CIB : Funding Unit Investment Banking</label>
+            </value>
+            <value>
+                <fullName>25930 : CIB : London 3</fullName>
+                <default>false</default>
+                <label>25930 : CIB : London 3</label>
+            </value>
+            <value>
+                <fullName>25931 : CIB : London 2</fullName>
+                <default>false</default>
+                <label>25931 : CIB : London 2</label>
+            </value>
+            <value>
+                <fullName>25963 : CIB : Credit Deriv/For Cur Money Market JV</fullName>
+                <default>false</default>
+                <label>25963 : CIB : Credit Deriv/For Cur Money Market JV</label>
+            </value>
+            <value>
+                <fullName>26563 : CIB : Listed Retail Notes</fullName>
+                <default>false</default>
+                <label>26563 : CIB : Listed Retail Notes</label>
+            </value>
+            <value>
+                <fullName>26983 : CIB : Money Market Portfolio</fullName>
+                <default>false</default>
+                <label>26983 : CIB : Money Market Portfolio</label>
+            </value>
+            <value>
+                <fullName>27199 : CIB : Forex Gold Trading</fullName>
+                <default>false</default>
+                <label>27199 : CIB : Forex Gold Trading</label>
+            </value>
+            <value>
+                <fullName>27474 : CIB : FX Collateralised Trading</fullName>
+                <default>false</default>
+                <label>27474 : CIB : FX Collateralised Trading</label>
+            </value>
+            <value>
+                <fullName>27635 : ANDSEC : SBSA/ANDSEC Institutional Bus</fullName>
+                <default>false</default>
+                <label>27635 : ANDSEC : SBSA/ANDSEC Institutional Bus</label>
+            </value>
+            <value>
+                <fullName>28063 : CIB : FX Currency Futures</fullName>
+                <default>false</default>
+                <label>28063 : CIB : FX Currency Futures</label>
+            </value>
+            <value>
+                <fullName>29687 : SFL : Soft Commodities Africa Trades</fullName>
+                <default>false</default>
+                <label>29687 : SFL : Soft Commodities Africa Trades</label>
+            </value>
+            <value>
+                <fullName>30012 : CIB : Distribution</fullName>
+                <default>false</default>
+                <label>30012 : CIB : Distribution</label>
+            </value>
+            <value>
+                <fullName>31388 : CIB : IOM Capital Foreign Funding Unit</fullName>
+                <default>false</default>
+                <label>31388 : CIB : IOM Capital Foreign Funding Unit</label>
+            </value>
+            <value>
+                <fullName>31846 : CIB : Forex Funding</fullName>
+                <default>false</default>
+                <label>31846 : CIB : Forex Funding</label>
+            </value>
+            <value>
+                <fullName>32838 : CIB Exchange Control Compliance</fullName>
+                <default>false</default>
+                <label>32838 : CIB Exchange Control Compliance</label>
+            </value>
+            <value>
+                <fullName>33463 : CIB : Interest Rate Trading</fullName>
+                <default>false</default>
+                <label>33463 : CIB : Interest Rate Trading</label>
+            </value>
+            <value>
+                <fullName>34503 : CIB : FX JHB Global Sales Management</fullName>
+                <default>false</default>
+                <label>34503 : CIB : FX JHB Global Sales Management</label>
+            </value>
+            <value>
+                <fullName>34504 : CIB : FX Sales</fullName>
+                <default>false</default>
+                <label>34504 : CIB : FX Sales</label>
+            </value>
+            <value>
+                <fullName>34575 : CIB : FX E-Channels</fullName>
+                <default>false</default>
+                <label>34575 : CIB : FX E-Channels</label>
+            </value>
+            <value>
+                <fullName>35753 : CIB : Agency Business</fullName>
+                <default>false</default>
+                <label>35753 : CIB : Agency Business</label>
+            </value>
+            <value>
+                <fullName>36864 : CIB : GFE Global Markets</fullName>
+                <default>false</default>
+                <label>36864 : CIB : GFE Global Markets</label>
+            </value>
+            <value>
+                <fullName>36865 : CIB : Global Markets Global Money Markets</fullName>
+                <default>false</default>
+                <label>36865 : CIB : Global Markets Global Money Markets</label>
+            </value>
+            <value>
+                <fullName>36898 : CIB : CSSS Executive Management2</fullName>
+                <default>false</default>
+                <label>36898 : CIB : CSSS Executive Management2</label>
+            </value>
+            <value>
+                <fullName>36899 : CIB : CSSS Human Resource2</fullName>
+                <default>false</default>
+                <label>36899 : CIB : CSSS Human Resource2</label>
+            </value>
+            <value>
+                <fullName>36900 : CIB : CSSS Admin2</fullName>
+                <default>false</default>
+                <label>36900 : CIB : CSSS Admin2</label>
+            </value>
+            <value>
+                <fullName>36901 : CIB : CSSS Finance2</fullName>
+                <default>false</default>
+                <label>36901 : CIB : CSSS Finance2</label>
+            </value>
+            <value>
+                <fullName>36902 : CIB : CSSS IT2</fullName>
+                <default>false</default>
+                <label>36902 : CIB : CSSS IT2</label>
+            </value>
+            <value>
+                <fullName>36903 : CIB : CSSS Compliance2</fullName>
+                <default>false</default>
+                <label>36903 : CIB : CSSS Compliance2</label>
+            </value>
+            <value>
+                <fullName>36904 : CIB : CSSS Firm Event2</fullName>
+                <default>false</default>
+                <label>36904 : CIB : CSSS Firm Event2</label>
+            </value>
+            <value>
+                <fullName>36905 : CIB : CSSS Sales2</fullName>
+                <default>false</default>
+                <label>36905 : CIB : CSSS Sales2</label>
+            </value>
+            <value>
+                <fullName>36906 : CIB : CSSS Stat2</fullName>
+                <default>false</default>
+                <label>36906 : CIB : CSSS Stat2</label>
+            </value>
+            <value>
+                <fullName>36907 : CIB : CSSS Sales Trade2</fullName>
+                <default>false</default>
+                <label>36907 : CIB : CSSS Sales Trade2</label>
+            </value>
+            <value>
+                <fullName>36908 : CIB : CSSS Trade Support2</fullName>
+                <default>false</default>
+                <label>36908 : CIB : CSSS Trade Support2</label>
+            </value>
+            <value>
+                <fullName>37230 : CIB : FCMM IOM Repo Trading</fullName>
+                <default>false</default>
+                <label>37230 : CIB : FCMM IOM Repo Trading</label>
+            </value>
+            <value>
+                <fullName>37232 : CIB : FCMM JHB Repo Trading</fullName>
+                <default>false</default>
+                <label>37232 : CIB : FCMM JHB Repo Trading</label>
+            </value>
+            <value>
+                <fullName>38493 : CIB : Credit Derivatives Central</fullName>
+                <default>false</default>
+                <label>38493 : CIB : Credit Derivatives Central</label>
+            </value>
+            <value>
+                <fullName>38499 : CIB : Money Markets Central</fullName>
+                <default>false</default>
+                <label>38499 : CIB : Money Markets Central</label>
+            </value>
+            <value>
+                <fullName>563 : CIB : Offshore Funding Unit-AC133 Adjust</fullName>
+                <default>false</default>
+                <label>563 : CIB : Offshore Funding Unit-AC133 Adjust</label>
+            </value>
+            <value>
+                <fullName>570 : CIB : New Product/Innovation</fullName>
+                <default>false</default>
+                <label>570 : CIB : New Product/Innovation</label>
+            </value>
+            <value>
+                <fullName>6022 : CIB : Metals</fullName>
+                <default>false</default>
+                <label>6022 : CIB : Metals</label>
+            </value>
+            <value>
+                <fullName>623 : CIB : Money Markets Global Markets</fullName>
+                <default>false</default>
+                <label>623 : CIB : Money Markets Global Markets</label>
+            </value>
+            <value>
+                <fullName>886 : CIB : Money Markets Cape Town</fullName>
+                <default>false</default>
+                <label>886 : CIB : Money Markets Cape Town</label>
+            </value>
+            <value>
+                <fullName>903 : CIB : Exchange Control Advisory</fullName>
+                <default>false</default>
+                <label>903 : CIB : Exchange Control Advisory</label>
+            </value>
+            <value>
+                <fullName>989 : CIB : Money Markets Kwazulu Natal</fullName>
+                <default>false</default>
+                <label>989 : CIB : Money Markets Kwazulu Natal</label>
+            </value>
+            <value>
+                <fullName>CPISWAPS</fullName>
+                <default>false</default>
+                <label>CPISWAPS</label>
+            </value>
+            <value>
+                <fullName>Credit Derivatives</fullName>
+                <default>false</default>
+                <label>Credit Derivatives</label>
+            </value>
+            <value>
+                <fullName>Exotics</fullName>
+                <default>false</default>
+                <label>Exotics</label>
+            </value>
+            <value>
+                <fullName>FI GOV</fullName>
+                <default>false</default>
+                <label>FI GOV</label>
+            </value>
+            <value>
+                <fullName>GLOBAL</fullName>
+                <default>false</default>
+                <label>GLOBAL</label>
+            </value>
+            <value>
+                <fullName>IRD</fullName>
+                <default>false</default>
+                <label>IRD</label>
+            </value>
+            <value>
+                <fullName>IRDSTRAT</fullName>
+                <default>false</default>
+                <label>IRDSTRAT</label>
+            </value>
+            <value>
+                <fullName>LTFX</fullName>
+                <default>false</default>
+                <label>LTFX</label>
+            </value>
+            <value>
+                <fullName>Options</fullName>
+                <default>false</default>
+                <label>Options</label>
+            </value>
+            <value>
+                <fullName>Prime</fullName>
+                <default>false</default>
+                <label>Prime</label>
+            </value>
+            <value>
+                <fullName>Repo</fullName>
+                <default>false</default>
+                <label>Repo</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Other Global Markets</controllingFieldValue>
+            <valueName>10459 : CIB : IRD Money Mkt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other Global Markets</controllingFieldValue>
+            <valueName>10461 : CIB : Quantitive Applications</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other Global Markets</controllingFieldValue>
+            <valueName>10732 : CIB : GM-Central</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other Global Markets</controllingFieldValue>
+            <valueName>20028 : CIB : Tier/III Capital</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other Global Markets</controllingFieldValue>
+            <valueName>23486 : CIB : Global Markets Sales</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other Global Markets</controllingFieldValue>
+            <valueName>27635 : ANDSEC : SBSA/ANDSEC Institutional Bus</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SBG Securities</controllingFieldValue>
+            <valueName>36898 : CIB : CSSS Executive Management2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SBG Securities</controllingFieldValue>
+            <valueName>36899 : CIB : CSSS Human Resource2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SBG Securities</controllingFieldValue>
+            <valueName>36900 : CIB : CSSS Admin2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SBG Securities</controllingFieldValue>
+            <valueName>36901 : CIB : CSSS Finance2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SBG Securities</controllingFieldValue>
+            <valueName>36902 : CIB : CSSS IT2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SBG Securities</controllingFieldValue>
+            <valueName>36903 : CIB : CSSS Compliance2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SBG Securities</controllingFieldValue>
+            <valueName>36904 : CIB : CSSS Firm Event2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SBG Securities</controllingFieldValue>
+            <valueName>36905 : CIB : CSSS Sales2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SBG Securities</controllingFieldValue>
+            <valueName>36906 : CIB : CSSS Stat2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SBG Securities</controllingFieldValue>
+            <valueName>36907 : CIB : CSSS Sales Trade2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SBG Securities</controllingFieldValue>
+            <valueName>36908 : CIB : CSSS Trade Support2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Standard Fin Markets</controllingFieldValue>
+            <valueName>18179 : SFM : Trading Other (Interest &amp; Invest)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Africa Trading</controllingFieldValue>
+            <valueName>19912 : CIB : Africa Trading Desk</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commodities</controllingFieldValue>
+            <valueName>11639 : CIB : Forex Agri Futures</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commodities</controllingFieldValue>
+            <valueName>12476 : CIB : Base Metals &amp; Energy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commodities</controllingFieldValue>
+            <valueName>23287 : CIB : Agricultural Banking Book</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commodities</controllingFieldValue>
+            <valueName>29687 : SFL : Soft Commodities Africa Trades</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commodities</controllingFieldValue>
+            <valueName>6022 : CIB : Metals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Credit Derivatives</controllingFieldValue>
+            <valueName>14686 : CIB : DCMT-Credit Derivatives</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Credit Derivatives</controllingFieldValue>
+            <valueName>23942 : CIB : CD Banking Book</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Credit Derivatives</controllingFieldValue>
+            <valueName>25963 : CIB : Credit Deriv/For Cur Money Market JV</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Credit Derivatives</controllingFieldValue>
+            <valueName>38493 : CIB : Credit Derivatives Central</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Distribution</controllingFieldValue>
+            <valueName>30012 : CIB : Distribution</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Distribution</controllingFieldValue>
+            <valueName>35753 : CIB : Agency Business</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Equity Derivatives</controllingFieldValue>
+            <valueName>13755 : CIB : Equity Derivatives</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Exotics</controllingFieldValue>
+            <valueName>14687 : CIB : DCMT-Exotics</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Foreign Currency Money Markets</controllingFieldValue>
+            <valueName>11477 : CIB : International Finance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Foreign Currency Money Markets</controllingFieldValue>
+            <valueName>19521 : CIB : IOM Money Markets Funding Unit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Foreign Currency Money Markets</controllingFieldValue>
+            <valueName>19524 : CIB : SFL Money Markets Funding</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Foreign Currency Money Markets</controllingFieldValue>
+            <valueName>19639 : CIB : International</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Foreign Currency Money Markets</controllingFieldValue>
+            <valueName>23381 : CIB : Foreign Currency Money Markets Tra</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Foreign Currency Money Markets</controllingFieldValue>
+            <valueName>31388 : CIB : IOM Capital Foreign Funding Unit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Foreign Currency Money Markets</controllingFieldValue>
+            <valueName>37230 : CIB : FCMM IOM Repo Trading</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Foreign Currency Money Markets</controllingFieldValue>
+            <valueName>37232 : CIB : FCMM JHB Repo Trading</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Foreign Currency Money Markets</controllingFieldValue>
+            <valueName>563 : CIB : Offshore Funding Unit-AC133 Adjust</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Foreign Exchange</controllingFieldValue>
+            <controllingFieldValue>Interest Rate Derivatives</controllingFieldValue>
+            <valueName>10452 : CIB : FX CCY Options &amp; Structure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Foreign Exchange</controllingFieldValue>
+            <valueName>10729 : CIB : Forex Profits Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Foreign Exchange</controllingFieldValue>
+            <valueName>11404 : CIB : FX - PTA Rep Office</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Foreign Exchange</controllingFieldValue>
+            <valueName>11405 : CIB : FX Cape Town Rep Office</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Foreign Exchange</controllingFieldValue>
+            <valueName>11406 : CIB : FX Durban Rep Office</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Foreign Exchange</controllingFieldValue>
+            <valueName>12473 : CIB : FX - Foreign Note Trading</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Foreign Exchange</controllingFieldValue>
+            <valueName>125 : CIB : FX Port Elizabeth Rep Office</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Foreign Exchange</controllingFieldValue>
+            <valueName>1410 : CIB : FX JHB Corporate Dealing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Foreign Exchange</controllingFieldValue>
+            <valueName>1441 : CIB : FX Central</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Foreign Exchange</controllingFieldValue>
+            <valueName>14683 : CIB : Forex Arbitrage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Foreign Exchange</controllingFieldValue>
+            <valueName>17366 : CIB : Forex Africa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Foreign Exchange</controllingFieldValue>
+            <valueName>17409 : CIB : FOREX TRADING</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Foreign Exchange</controllingFieldValue>
+            <valueName>17410 : CIB : FX Branch Dealing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Foreign Exchange</controllingFieldValue>
+            <valueName>17411 : CIB : FX Operations &amp; Technology</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Foreign Exchange</controllingFieldValue>
+            <valueName>18127 : CIB : FX Interest Rate Futures</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Foreign Exchange</controllingFieldValue>
+            <valueName>18815 : CIB : FX Exchange Traded Products</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Foreign Exchange</controllingFieldValue>
+            <valueName>19734 : CIB : FX Bank Sales</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Foreign Exchange</controllingFieldValue>
+            <valueName>20810 : CIB : FX Relationship Centre</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Foreign Exchange</controllingFieldValue>
+            <valueName>23286 : CIB : FX Strat</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Foreign Exchange</controllingFieldValue>
+            <valueName>27199 : CIB : Forex Gold Trading</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Foreign Exchange</controllingFieldValue>
+            <valueName>27474 : CIB : FX Collateralised Trading</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Foreign Exchange</controllingFieldValue>
+            <valueName>28063 : CIB : FX Currency Futures</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Foreign Exchange</controllingFieldValue>
+            <valueName>31846 : CIB : Forex Funding</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Foreign Exchange</controllingFieldValue>
+            <valueName>32838 : CIB Exchange Control Compliance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Foreign Exchange</controllingFieldValue>
+            <valueName>34503 : CIB : FX JHB Global Sales Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Foreign Exchange</controllingFieldValue>
+            <valueName>34504 : CIB : FX Sales</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Foreign Exchange</controllingFieldValue>
+            <valueName>34575 : CIB : FX E-Channels</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Foreign Exchange</controllingFieldValue>
+            <valueName>36864 : CIB : GFE Global Markets</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Foreign Exchange</controllingFieldValue>
+            <valueName>570 : CIB : New Product/Innovation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Foreign Exchange</controllingFieldValue>
+            <valueName>903 : CIB : Exchange Control Advisory</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Interest Rate Derivatives</controllingFieldValue>
+            <valueName>10086 : CIB : Merrill Book</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Interest Rate Derivatives</controllingFieldValue>
+            <valueName>10455 : CIB : G7</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Interest Rate Derivatives</controllingFieldValue>
+            <valueName>10460 : CIB : Interest Rate Desk</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Interest Rate Derivatives</controllingFieldValue>
+            <valueName>10464 : CIB : Forex Curve</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Interest Rate Derivatives</controllingFieldValue>
+            <valueName>10728 : CIB : Cap Mkt Pfolios</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Interest Rate Derivatives</controllingFieldValue>
+            <valueName>10730 : CIB : CPI Swaps</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Interest Rate Derivatives</controllingFieldValue>
+            <valueName>11640 : CIB : Rand Options</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Interest Rate Derivatives</controllingFieldValue>
+            <valueName>11641 : CIB : Prime</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Interest Rate Derivatives</controllingFieldValue>
+            <valueName>14689 : CIB : Sales &amp; Structuring</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Interest Rate Derivatives</controllingFieldValue>
+            <valueName>20113 : CIB : FX Macro</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Interest Rate Derivatives</controllingFieldValue>
+            <valueName>22153 : CIB : London 1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Interest Rate Derivatives</controllingFieldValue>
+            <valueName>23015 : CIB : Protea Capital</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Interest Rate Derivatives</controllingFieldValue>
+            <valueName>23459 : CIB : Cross Currencies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Interest Rate Derivatives</controllingFieldValue>
+            <valueName>25930 : CIB : London 3</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Interest Rate Derivatives</controllingFieldValue>
+            <valueName>25931 : CIB : London 2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Interest Rate Derivatives</controllingFieldValue>
+            <valueName>33463 : CIB : Interest Rate Trading</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Money Markets</controllingFieldValue>
+            <valueName>11402 : CIB : Prudential Balances</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Money Markets</controllingFieldValue>
+            <valueName>12468 : CIB : Hedging Strategies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Money Markets</controllingFieldValue>
+            <valueName>1426 : CIB : Money Markets Johannesburg</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Money Markets</controllingFieldValue>
+            <valueName>20084 : CIB : Credit Link Notes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Money Markets</controllingFieldValue>
+            <valueName>20531 : CIB : Money Markets Mark to Market</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Money Markets</controllingFieldValue>
+            <valueName>20788 : CIB : Call Loans</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Money Markets</controllingFieldValue>
+            <valueName>22784 : CIB : Money Markets Trading</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Money Markets</controllingFieldValue>
+            <valueName>24746 : CIB : Performers CRS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Money Markets</controllingFieldValue>
+            <valueName>24750 : CIB : Funding Unit Investment Banking</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Money Markets</controllingFieldValue>
+            <valueName>26563 : CIB : Listed Retail Notes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Money Markets</controllingFieldValue>
+            <valueName>26983 : CIB : Money Market Portfolio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Money Markets</controllingFieldValue>
+            <valueName>36865 : CIB : Global Markets Global Money Markets</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Money Markets</controllingFieldValue>
+            <valueName>38499 : CIB : Money Markets Central</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Money Markets</controllingFieldValue>
+            <valueName>623 : CIB : Money Markets Global Markets</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Money Markets</controllingFieldValue>
+            <valueName>886 : CIB : Money Markets Cape Town</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Money Markets</controllingFieldValue>
+            <valueName>989 : CIB : Money Markets Kwazulu Natal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Online Share Trading</controllingFieldValue>
+            <valueName>18172 : SFM :Online Trading</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Online Share Trading</controllingFieldValue>
+            <valueName>18176 : SFM : Online Trading II</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

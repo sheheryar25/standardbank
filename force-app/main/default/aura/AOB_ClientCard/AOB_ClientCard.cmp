@@ -1,0 +1,67 @@
+<aura:component description="AOB_ClientCard" implements="lightning:availableForFlowScreens">
+    <aura:attribute name="clientName" type="string" required="true" default="Unknown"/>
+    <aura:attribute name="CIFNumber" type="string" required="true" default="Unknown"/>
+    <aura:attribute name="clientCoordinator" type="string" />
+    <aura:attribute name="primaryRelationshipHolder" type="string" />
+    <aura:attribute name="requestedBy" type="string" />
+    <aura:attribute name="requesterNumber" type="string" />
+    <aura:attribute name="KYCConsultant" type="string" default="Not Assigned" />
+    <aura:attribute name="lastReviewedDate" type="string" default="Not Reviewed"/>
+
+    <div class="slds-page-header">
+        <div class="slds-grid">
+            <div class="slds-col slds-has-flexi-truncate">
+                <div class="slds-media slds-no-space slds-grow">
+                    <div class="slds-media__figure">
+                      <span class="slds-icon_container slds-icon-standard-account" title="Description of icon when needed">
+                        <lightning:icon iconName="standard:account" alternativeText="Client" />
+                      </span>
+                    </div>
+                    <div class="slds-media__body">
+                        <nav>
+                            <ol class="slds-breadcrumb slds-line-height_reset">
+                                <li class="slds-breadcrumb__item">
+                                    <span>Client</span>
+                                </li>
+                            </ol>
+                        </nav>
+                        <h1 class="slds-page-header__title slds-m-right_small slds-align-middle slds-truncate"
+                            title="{! v.clientName }">{! v.clientName }</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <ul class="slds-grid slds-page-header__detail-row">
+            <li class="slds-page-header__detail-block">
+                <p class="slds-text-heading_label-normal slds-m-bottom_xx-small slds-truncate" title="CIF Number">CIF Number</p>
+                <p class="slds-text-body_regular  slds-truncate">{! v.CIFNumber }</p>
+            </li>
+            <li class="slds-page-header__detail-block">
+                <p class="slds-text-title slds-truncate slds-m-bottom_xx-small" title="Client Coordinator">Client Coordinator</p>
+                <p><lightning:formattedRichText value="{! v.clientCoordinator }" /></p>
+            </li>
+            <li class="slds-page-header__detail-block">
+                <p class="slds-text-title slds-truncate slds-m-bottom_xx-small" title="Primary Relationship Holder">Primary Relationship Holder</p>
+                <p class="slds-text-body_regular">{! v.primaryRelationshipHolder}</p>
+            </li>
+            <li class="slds-page-header__detail-block">
+                <p class="slds-text-title slds-truncate slds-m-bottom_xx-small" title="KYC Contact Name">Requested By</p>
+                <p class="slds-text-body_regular">{! v.requestedBy}</p>
+            </li>
+            <li class="slds-page-header__detail-block">
+                <p class="slds-text-title slds-truncate slds-m-bottom_xx-small" title="KYC Contact Number">Requester Number</p>
+                <p class="slds-text-body_regular">{! v.requesterNumber}</p>
+            </li>
+            <li class="slds-page-header__detail-block">
+                <p class="slds-text-title slds-truncate slds-m-bottom_xx-small" title="KYC Consultant">KYC Consultant</p>
+                <p class="slds-text-body_regular">{! v.KYCConsultant}</p>
+            </li>
+            <li class="slds-page-header__detail-block">
+                <p class="slds-text-title slds-truncate slds-m-bottom_xx-small" title="Last Reviewed Date">Last Reviewed Date</p>
+                <p class="slds-text-body_regular">{! v.lastReviewedDate}</p>
+            </li>
+        </ul>
+
+    </div>
+</aura:component>

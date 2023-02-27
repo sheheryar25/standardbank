@@ -1,0 +1,136 @@
+<aura:component controller="StdBank_Ltn_Ecosystem">
+	<aura:attribute name="groupNumber" type="String"/>
+	<aura:attribute name="title" type="String"/>
+	<aura:attribute name="type" type="String"/>
+	<aura:attribute name="fieldName" type="String"/>
+	<aura:attribute name="textSizeContainer" type="String"/>
+
+	<aura:attribute name="isLoading" type="Boolean" default="true" access="private"/>
+
+	<aura:attribute name="ecosystem" type="Ecosystem__c" access="private"/>
+	<aura:attribute name="bankedClients" type="Object[]" access="private"/>
+	<aura:attribute name="revenueAndProfitability" type="Object[]" access="private"/>
+	<aura:attribute name="dtfDataPipelineByElement" type="Object[]" access="private"/>
+	<aura:attribute name="dtfDataBankedByElement" type="Object[]" access="private"/>
+	<aura:attribute name="dtfData" type="DTO_Ecosystem.DeliverTheFirm[]" default="[]" access="private" />
+
+	<aura:attribute name="legends" type="Object[]" access="private"/>
+	<aura:attribute name="values" type="Decimal[]" access="private"/>
+	<aura:attribute name="circleText" type="String" access="private"/>
+
+	<aura:attribute name="legendText" type="String" access="private"/>
+	<aura:attribute name="barValues" type="Decimal[]" access="private"/>
+	<aura:attribute name="barTooltips" type="String[]" access="private"/>
+
+	<aura:attribute name="dtfPipeline" type="String" access="private"/>
+	<aura:attribute name="dtfBanked" type="String" access="private"/>
+
+	<aura:attribute name="netInterestIncome" type="String" access="private"/>
+	<aura:attribute name="nonInterestIncome" type="String" access="private"/>
+	<aura:attribute name="operatingIncome" type="String" access="private"/>
+	<aura:attribute name="headlineEarnings" type="String" access="private"/>
+	<aura:attribute name="roe" type="String" access="private"/>
+
+	<aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
+	<aura:handler action="{!c.doPenetrationChange}" event="c:ecosystemPenetrationChange" />
+	<aura:handler action="{!c.doEntityChange}" event="c:ecosystemEntityChange" />
+	<aura:handler action="{!c.doEntityChange}" event="c:ecosystemEntityUnbankedChange" />
+
+    <aura:if isTrue="{!v.isLoading}">
+        <div class="slds-spinner_container" style="position: relative; height: 4 em;">
+            <div class="slds-spinner_brand slds-spinner slds-spinner_small">
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+        <aura:set attribute="else">
+        	<div style="width:1322px;">
+        	<div style="display:inline-block;vertical-align:top;" class="slds-border_right">
+		    <c:ChartRadialProgress height="300"
+		    	boxWidth="700"
+		    	boxHeight="500"
+		    	title="PENETRATION" 
+		    	legends="{!v.legends}"
+		    	values="{!v.values}"
+		    	circleText="{!v.circleText}"
+		    	circleLegend="Known Banked"/>
+		    </div>
+		    <div style="display:inline-block;width:900px;">
+			    <c:ChartHorizontalBar height="270"
+			    	boxWidth="1500"
+			    	boxHeight="450"
+			    	title="REVENUE &amp; PROFITABILITY" 
+			    	legends="[['Net Interest Income (NII)'], ['Net Interest Revenue (NIR)'], ['Operating Income (OI)'], ['Headline Earnings (HE)']]"
+			    	legendText="{!v.legendText}"
+			    	labels="['NII', 'NIR', 'OI', 'HE']"
+			    	values="{!v.barValues}"
+			    	tooltips="{!v.barTooltips}"
+			    	textSizeContainer="{!v.textSizeContainer}"/>
+		    </div>
+
+			<div class="slds-border_top slds-m-top_small slds-p-top_medium"></div>
+
+			<c:EcosystemPenetration groupNumber="{#v.groupNumber}" type="{#v.type}" fieldName="{#v.fieldName}"/>
+
+			<c:EcosystemKnownBankedClients groupNumber="{#v.groupNumber}" type="{#v.type}" />
+
+			<c:EcosystemKnownUnbankedClients groupNumber="{#v.groupNumber}" type="{#v.type}" />
+
+ 			<!--div class="slds-text-heading_small slds-align_absolute-center slds-border_top slds-m-top_small slds-p-top_medium">DELIVER THE FIRM</div>
+
+			<table class="slds-table slds-table_bordered slds-table_cell-buffer slds-table_fixed-layout slds-m-top_small" role="grid">
+			  	<thead>
+			    	<tr class="slds-line-height_reset">
+					   	<th class="slds-is-sortable slds-is-resizable slds-text-title_caps slds-truncate" scope="col">
+			        		<span class="slds-truncate">
+					        		Opportunity Name
+					        </span>
+					   	</th>
+					   	<th class="slds-is-sortable slds-is-resizable slds-text-title_caps slds-truncate" scope="col">
+			        		<span class="slds-truncate">
+					        		Opportunity Stage
+					        </span>
+					   	</th>
+					   	<th class="slds-is-sortable slds-is-resizable slds-text-title_caps slds-truncate" scope="col">
+			        		<span class="slds-truncate">
+					        		Notional Value (Total Deal size)
+					        </span>
+					   	</th>
+					   	<th class="slds-is-sortable slds-is-resizable slds-text-title_caps slds-truncate" scope="col">
+			        		<span class="slds-truncate">
+					        		Opportunity Owner
+					        </span>
+					   	</th>
+					   	<th class="slds-is-sortable slds-is-resizable slds-text-title_caps slds-truncate" scope="col">
+			        		<span class="slds-truncate">
+					        		Estimated Close Date
+					        </span>
+					   	</th>
+				   	</tr>
+				</thead>
+				<tbody>
+					<aura:iteration items="{!v.dtfData}" var="dtf">
+					    <tr>
+						   	<td role="gridcell" class="slds-truncate" title="{!dtf.oppName}">
+						   		{!dtf.oppName}
+						   	</td>
+						   	<td role="gridcell" class="slds-truncate" title="{!dtf.oppStage}">
+						   		{!dtf.oppStage}
+						   	</td>
+						   	<td role="gridcell" class="slds-truncate" title="{!dtf.notionalValue}">
+						   		{!dtf.notionalValue + ' ' + dtf.currencyCode} 
+						   	</td>
+						   	<td role="gridcell" class="slds-truncate" title="{!dtf.oppOwner}">
+						   		{!dtf.oppOwner}
+						   	</td>
+						   	<td role="gridcell" class="slds-truncate" title="{!dtf.closeDate}">
+						   		{!dtf.closeDate}
+						   	</td>
+					   	</tr> 
+					</aura:iteration>
+				</tbody> 
+			</table-->
+		</div>
+		</aura:set>
+	</aura:if>
+</aura:component>

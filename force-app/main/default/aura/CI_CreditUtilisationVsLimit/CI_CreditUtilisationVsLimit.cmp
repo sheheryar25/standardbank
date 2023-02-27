@@ -1,0 +1,66 @@
+<aura:component controller="Ltn_CreditUtilisationVsLimitCtrl" extends="c:CI_Base" implements="flexipage:availableForAllPageTypes,force:hasRecordId">
+    <aura:attribute name="utilisation" type="decimal" />
+    <aura:attribute name="limit" type="decimal" />
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="isEconomicGroupParent" type="Boolean" />
+    <aura:attribute name="notAvailable" type="String" />
+    <aura:attribute name="hasCreditLines" type="Boolean" />
+    <aura:attribute name="isLimited" type="Boolean" />
+    <aura:attribute name="isoCode" type="String" />
+    <aura:attribute name="reportId" type="String" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <c:CI_ReportService aura:id="report_service"/>
+
+    <article class="card_with_shadow clickable" onclick="{!c.navigateToCreditLines}">
+        <div class="slds-grid">
+            <div class="slds-col slds-align-middle slds-p-around_small">
+                <p class="slds-text-heading_small">
+                    <aura:if isTrue="{!v.isEconomicGroupParent}">
+                        {!$Label.c.Economic_Group_Credit_Limit_and_Utilisation}
+                        <aura:set attribute="else">
+                            {!$Label.c.Client_Credit_Limit_and_Utilisation}
+                        </aura:set>
+                    </aura:if>
+                </p>
+                <div class="slds-m-top_x-small slds-text-heading_medium">
+                    <aura:if isTrue="{!v.isLimited}">
+                        {!$Label.c.Limited_to_client_team}
+                        <aura:set attribute="else">
+                            <aura:if isTrue="{! !v.hasCreditLines}">
+                                {!v.notAvailable}
+                                <aura:set attribute="else">
+
+
+                                    <div class="slds-grid slds-m-top_x-small slds-wrap">
+                                        <div class="slds-text-heading_medium slds-p-right_x-small">
+                                            {!$Locale.currencyCode}
+                                        </div>
+                                        <div class="slds-text-heading_medium slds-p-right_xx-small">
+                                            {!v.limit}
+                                            <p class="slds-text-body_regular">Limit</p>
+                                        </div>
+
+                                        <div class="card_value_secondary">|</div>
+
+                                        <div class="slds-text-heading_medium slds-p-left_xx-small">
+                                            {!v.utilisation}
+                                            <p class="slds-text-body_regular">Utilisation</p>
+                                        </div>
+                                    </div>
+
+                                </aura:set>
+                            </aura:if>
+                        </aura:set>
+                    </aura:if>
+                </div>
+            </div>
+        </div>
+        <aura:if isTrue="{!v.isEconomicGroupParent}">
+            <lightning:helptext class="slds-is-absolute dock_right dock_bottom slds-p-around_xx-small" content="{!$Label.c.Help_Text_Economic_group_credit_limit_and_utilisation}" />
+            <aura:set attribute="else">
+                <lightning:helptext class="slds-is-absolute dock_right dock_bottom slds-p-around_xx-small" content="{!$Label.c.Help_Text_Client_credit_limit_and_utilisation}" />
+            </aura:set>
+        </aura:if>
+    </article>
+</aura:component>

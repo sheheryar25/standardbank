@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Must_assign_Account_and_Contact</fullName>
+    <active>true</active>
+    <description>SFP-5726 - Used to ensure an Account and Contact is allocated before starting the onboarding process because we need to provide community access to related contact.</description>
+    <errorConditionFormula>AND( ISPICKVAL(PP_ApplicationStatus__c, &quot;Approved&quot;), OR( ISBLANK(PP_Account__c), ISBLANK(PP_PrimaryContact__c)) )</errorConditionFormula>
+    <errorDisplayField>PP_ApplicationStatus__c</errorDisplayField>
+    <errorMessage>You must assign a Account and Contact when in this status.</errorMessage>
+</ValidationRule>

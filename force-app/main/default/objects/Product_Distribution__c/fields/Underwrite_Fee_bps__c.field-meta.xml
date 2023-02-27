@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Underwrite_Fee_bps__c</fullName>
+    <description>The fee earned by SB for the risk of acting as an Underwriter in this transaction (including est. participation fee). Full upfront fee expressed in bps. SGPRT-624</description>
+    <externalId>false</externalId>
+    <formula>Product__r.Underwrite_Fee_bps__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>The fee earned by SB for the risk of acting as an Underwriter in this transaction (including est. participation fee). Full upfront fee expressed in bps</inlineHelpText>
+    <label>Underwrite Fee (bps)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

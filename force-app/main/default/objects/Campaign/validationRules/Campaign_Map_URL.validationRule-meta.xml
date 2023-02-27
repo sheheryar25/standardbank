@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Campaign_Map_URL</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( NOT(ISPICKVAL(Campaign_Category__c, &quot;7 - PA Event&quot;)),
+            NOT(ISBLANK(Map_URL__c)) )</errorConditionFormula>
+    <errorDisplayField>Map_URL__c</errorDisplayField>
+    <errorMessage>You can&apos;t fill Map URL when Campaign Category is not PA Event</errorMessage>
+</ValidationRule>

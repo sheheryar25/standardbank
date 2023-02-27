@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <isExposed>true</isExposed>
+  <targets>
+    <target>lightningCommunity__Page</target>
+    <target>lightningCommunity__Default</target>
+  </targets>
+
+  <targetConfigs>
+    <targetConfig targets="lightningCommunity__Default">
+        <property name="blogImageOne" type="String" label="Resource 1 - Image"/>
+        <property name="blogHeaderOne" type="String" label="Resource 1 - Title"/>
+        <property name="blogDescriptionOne" type="String" label="Resource 1 - Description"/>
+        <property name="redirectLinkOne" type="String" label="Resource 1 - Link" />
+
+        <property name="blogImageTwo" type="String" label="Resource 2 - Image"/>
+        <property name="blogHeaderTwo" type="String" label="Resource 2 - Title"/>
+        <property name="blogDescriptionTwo" type="String" label="Resource 2 - Description"/>
+        <property name="redirectLinkTwo" type="String" label="Resource 2 - Link" />
+
+        <property name="blogImageThree" type="String" label="Resource 3 - Image"/>
+        <property name="blogHeaderThree" type="String" label="Resource 3 - Title"/>
+        <property name="blogDescriptionThree" type="String" label="Resource 3 - Description"/>
+        <property name="redirectLinkThree" type="String" label="Resource 3 - Link" />
+
+        <property name="buttonTitle" type="String" label="Button Label" default="Tell me more"/>
+        <property name="allResources" type="String" label="View all resources URL" default="#"/>
+    </targetConfig>
+  </targetConfigs>
+</LightningComponentBundle>

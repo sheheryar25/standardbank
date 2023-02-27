@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Target_Client_Segment__c</fullName>
+    <description>Case#1168 - 11/2011 - Rudolf Niehaus
+            Standard Bank Client Segments</description>
+    <externalId>false</externalId>
+    <label>Target Client Segment</label>
+    <required>false</required>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Corporates</fullName>
+                <default>false</default>
+                <label>Corporates</label>
+            </value>
+            <value>
+                <fullName>Financial Institutions</fullName>
+                <default>false</default>
+                <label>Financial Institutions</label>
+            </value>
+            <value>
+                <fullName>Government &amp; Institutions</fullName>
+                <default>false</default>
+                <label>Government &amp; Institutions</label>
+            </value>
+            <value>
+                <fullName>High Net Worth Individuals</fullName>
+                <default>false</default>
+                <label>High Net Worth Individuals</label>
+            </value>
+            <value>
+                <fullName>International Development Institutions</fullName>
+                <default>false</default>
+                <label>International Development Institutions</label>
+            </value>
+            <value>
+                <fullName>NBFI / Buy Side</fullName>
+                <default>false</default>
+                <label>NBFI / Buy Side</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

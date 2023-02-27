@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Facility_Parent_Product_PP__c</fullName>
+    <externalId>false</externalId>
+    <label>Facility Parent Product (PP)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Facility_Grand_Parent_Product_GPP__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Asset Finance</fullName>
+                <default>false</default>
+                <label>Asset Finance</label>
+            </value>
+            <value>
+                <fullName>Bond Positions</fullName>
+                <default>false</default>
+                <label>Bond Positions</label>
+            </value>
+            <value>
+                <fullName>Call Loans</fullName>
+                <default>false</default>
+                <label>Call Loans</label>
+            </value>
+            <value>
+                <fullName>Card</fullName>
+                <default>false</default>
+                <label>Card</label>
+            </value>
+            <value>
+                <fullName>Cashman Account</fullName>
+                <default>false</default>
+                <label>Cashman Account</label>
+            </value>
+            <value>
+                <fullName>CFC Accounts</fullName>
+                <default>false</default>
+                <label>CFC Accounts</label>
+            </value>
+            <value>
+                <fullName>Credit Derivatives</fullName>
+                <default>false</default>
+                <label>Credit Derivatives</label>
+            </value>
+            <value>
+                <fullName>Current Account (Not Linked to Cashman)</fullName>
+                <default>false</default>
+                <label>Current Account (Not Linked to Cashman)</label>
+            </value>
+            <value>
+                <fullName>Equities</fullName>
+                <default>false</default>
+                <label>Equities</label>
+            </value>
+            <value>
+                <fullName>Equity Loans</fullName>
+                <default>false</default>
+                <label>Equity Loans</label>
+            </value>
+            <value>
+                <fullName>FX Options</fullName>
+                <default>false</default>
+                <label>FX Options</label>
+            </value>
+            <value>
+                <fullName>GSTBF</fullName>
+                <default>false</default>
+                <label>GSTBF</label>
+            </value>
+            <value>
+                <fullName>Lending Guarantees</fullName>
+                <default>false</default>
+                <label>Lending Guarantees</label>
+            </value>
+            <value>
+                <fullName>Letters of Credit</fullName>
+                <default>false</default>
+                <label>Letters of Credit</label>
+            </value>
+            <value>
+                <fullName>Loans Term</fullName>
+                <default>false</default>
+                <label>Loans Term</label>
+            </value>
+            <value>
+                <fullName>Performance Guarantees</fullName>
+                <default>false</default>
+                <label>Performance Guarantees</label>
+            </value>
+            <value>
+                <fullName>Shareholder Loans</fullName>
+                <default>false</default>
+                <label>Shareholder Loans</label>
+            </value>
+            <value>
+                <fullName>Structured Trade Finance</fullName>
+                <default>false</default>
+                <label>Structured Trade Finance</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Physical Payments &amp; Collections</controllingFieldValue>
+            <valueName>Card</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bonds</controllingFieldValue>
+            <valueName>Bond Positions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Credit</controllingFieldValue>
+            <valueName>Credit Derivatives</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Equity</controllingFieldValue>
+            <valueName>Equities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FX</controllingFieldValue>
+            <valueName>FX Options</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Trade Products</controllingFieldValue>
+            <valueName>Lending Guarantees</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Trade Products</controllingFieldValue>
+            <valueName>Letters of Credit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Trade Products</controllingFieldValue>
+            <valueName>Performance Guarantees</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Liquidity Management</controllingFieldValue>
+            <valueName>Call Loans</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Liquidity Management</controllingFieldValue>
+            <valueName>Cashman Account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Liquidity Management</controllingFieldValue>
+            <valueName>CFC Accounts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Liquidity Management</controllingFieldValue>
+            <valueName>Current Account (Not Linked to Cashman)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Loans</controllingFieldValue>
+            <valueName>Asset Finance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Loans</controllingFieldValue>
+            <valueName>Equity Loans</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Loans</controllingFieldValue>
+            <valueName>GSTBF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Loans</controllingFieldValue>
+            <valueName>Loans Term</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Loans</controllingFieldValue>
+            <valueName>Shareholder Loans</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Loans</controllingFieldValue>
+            <valueName>Structured Trade Finance</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

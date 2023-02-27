@@ -1,0 +1,164 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId" controller="StdBank_Ltn_Ecosystem">
+	<aura:attribute name="recordId" type="Id"/>
+    <aura:attribute name="groupNumber" type="String"/>
+    <aura:attribute name="ecosystem" type="Ecosystem__c" access="private"/>
+	<aura:attribute name="selTabId" type="String" default="tab1" access="private"/>
+	<aura:attribute name="isLoading" type="Boolean" default="true" access="private"/>
+    <aura:attribute name="globalId" type="String" access="private"/>
+    <aura:attribute name="isPermitted" type="Boolean" default="true" access="private"/>
+    <aura:attribute name="isEdit" type="Boolean" default="false" access="private"/>
+    <aura:handler event="force:showToast" action="{!c.handleToastEvent}"/>
+    <ltng:require scripts="{!$Resource.UTL_JavaScript}" afterScriptsLoaded="{!c.doInit}"/>
+
+    <!--aura:handler name="init" action="{!c.doInit}" value="{!this}" /-->
+
+    <aura:if isTrue="{!not(v.isPermitted)}">
+        <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_warning" role="alert">
+            <span class="slds-assistive-text">warning</span>
+            <lightning:icon iconName="utility:warning" size="x-small" class="slds-m-right_x-small" alternativeText="warning"/>
+            <h2>You need to be the owner or CST member of a client in this ecosystem to view this data.</h2>
+        </div>      
+    </aura:if>
+
+    <div class="slds-page-header">
+        <div class="slds-grid">
+            <div class="slds-col slds-has-flexi-truncate">
+                <div class="slds-media slds-media_center slds-m-bottom_medium">
+                    <div class="slds-media__figure">
+                        <c:svgIcon class="slds-icon slds-icon-standard-record" svgPath="{!$Resource.SLDS202 + '/assets/icons/standard-sprite/svg/symbols.svg#record'}" />
+                    </div>
+                    <div class="slds-media__body">
+                        <p class="slds-text-title_caps slds-line-height_reset">Ecosystem</p>
+                        <h1 class="slds-page-header__title slds-m-right_small slds-align-middle slds-truncate" title="this should match the Record Title">{!v.ecosystem.Relationship_Group_Name__c}</h1>
+                        <span>{!v.groupNumber}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-col slds-no-flex slds-grid slds-align-top">
+                <c:StdBank_Ltn_BUTTON class="slds-button slds-button--neutral"
+                                      label="Edit" onclick="{!c.btnEdit}" />
+                <c:StdBank_Ltn_BUTTON class="slds-button slds-button--neutral"
+                                      label="Back" onclick="{!c.btnBack}" />
+            </div>
+        </div>
+    </div>
+    <div class="slds-p-around_large">
+
+    <aura:if isTrue="{!v.isLoading}">
+        <div class="slds-spinner_container" style="position: relative; height: 4 em;">
+            <div class="slds-spinner_brand slds-spinner slds-spinner_small">
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+        <aura:set attribute="else">
+            <aura:if isTrue="{!v.isPermitted}">
+                <div id="{!'test_' + v.globalId + '_text-size-conainer'}"></div>
+            	<lightning:tabset selectedTabId="{!v.selTabId}" >
+                    <lightning:tab id="tab1">
+                        <aura:set attribute="label">
+                            Overview
+                        </aura:set>
+                        <aura:set attribute="body">
+                            <c:EcosystemOverview groupNumber="{!v.groupNumber}"
+                                titles="['Subsidiaries', 'Debtors / Client', 'Creditors / Suppliers', 'Partners', 'Shareholders / Directors', 'Employees']"
+                                types="['Subsidiary', 'Debtor / Client', 'Creditor / Supplier', 'Partner', 'Shareholder / Director', 'Employee']"
+                                fieldNames="['Subsidiaries', 'Debtors_Creditors', 'Clients_Distributors', 'Partners', 'Shareholders_Directors', 'Employees']"
+                                textSizeContainer="{!'test_' + v.globalId + '_text-size-conainer'}"/>
+                        </aura:set>
+                    </lightning:tab>
+
+                    <lightning:tab id="tabDtf">
+                        <aura:set attribute="label">
+                            Deliver-the-Firm (DTF)
+                        </aura:set>
+                        <aura:set attribute="body">
+            				<c:EcosystemDTF groupNumber="{!v.groupNumber}" 
+                                textSizeContainer="{!'test_' + v.globalId + '_text-size-conainer'}"/>
+                        </aura:set>
+                    </lightning:tab>
+
+                    <lightning:tab id="tab3">
+                        <aura:set attribute="label"> 
+                            Subsidiaries
+                        </aura:set>
+                        <aura:set attribute="body"> 
+                            <c:EcosystemItem groupNumber="{!v.groupNumber}"
+                                title="Subsidiaries"
+                                type="Subsidiary"
+                                fieldName="Subsidiaries"
+                                textSizeContainer="{!'test_' + v.globalId + '_text-size-conainer'}"/>
+                        </aura:set>
+                    </lightning:tab>
+
+                    <lightning:tab id="tab6">
+                        <aura:set attribute="label">
+                            Debtors / Clients
+                        </aura:set>
+                        <aura:set attribute="body"> 
+                            <c:EcosystemItem groupNumber="{!v.groupNumber}"
+                                title="Debtors / Clients"
+                                type="Debtor / Client"
+                                fieldName="Debtors_Creditors"
+                                textSizeContainer="{!'test_' + v.globalId + '_text-size-conainer'}"/>
+                        </aura:set>
+                    </lightning:tab>
+
+                    <lightning:tab id="tab5" >
+                        <aura:set attribute="label">
+                            Creditors / Suppliers
+                        </aura:set>
+                        <aura:set attribute="body">
+                            <c:EcosystemItem groupNumber="{!v.groupNumber}"
+                                title="Creditors / Suppliers"
+                                type="Creditor / Supplier"
+                                fieldName="Clients_Distributors"
+                                textSizeContainer="{!'test_' + v.globalId + '_text-size-conainer'}"/>
+                        </aura:set>
+                    </lightning:tab>
+
+                    <lightning:tab id="tab2">
+                        <aura:set attribute="label">
+                            Partners
+                        </aura:set>
+                        <aura:set attribute="body">
+            				<c:EcosystemItem groupNumber="{!v.groupNumber}"
+            					title="Partners"
+            					type="Partner"
+            					fieldName="Partners"
+                                textSizeContainer="{!'test_' + v.globalId + '_text-size-conainer'}"/>
+                        </aura:set>
+                    </lightning:tab>
+
+                    <lightning:tab id="tab4">
+                    	<aura:set attribute="label">
+                    		Shareholders / Directors
+                    	</aura:set>
+                    	<aura:set attribute="body">
+            				<c:EcosystemItem groupNumber="{!v.groupNumber}"
+            					title="Shareholders / Directors"
+            					type="Shareholder / Director"
+            					fieldName="Shareholders_Directors"
+                                textSizeContainer="{!'test_' + v.globalId + '_text-size-conainer'}"/>
+                    	</aura:set>
+                    </lightning:tab>
+
+                    <lightning:tab id="tab7">
+                    	<aura:set attribute="label">
+                    		Employees
+                    	</aura:set>
+                    	<aura:set attribute="body">
+            				<c:EcosystemItem groupNumber="{!v.groupNumber}"
+            					title="Employees"
+            					type="Employee"
+            					fieldName="Employees"
+                                textSizeContainer="{!'test_' + v.globalId + '_text-size-conainer'}"/>
+                    	</aura:set>
+                    </lightning:tab>
+                </lightning:tabset>
+
+            </aura:if>
+        </aura:set>
+    </aura:if>
+    </div>
+</aura:component>

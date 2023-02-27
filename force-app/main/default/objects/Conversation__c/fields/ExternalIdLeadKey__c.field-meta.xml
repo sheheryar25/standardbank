@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ExternalIdLeadKey__c</fullName>
+    <description>&quot;US-4450
+            US-4454
+            A unique ID assigned to the customer task - forms part of the unique identifier (in conjunction with the file ID) for the task (ascending number assigned by Smart2)&quot;</description>
+    <externalId>true</externalId>
+    <label>ExternalIdLeadKey</label>
+    <length>50</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

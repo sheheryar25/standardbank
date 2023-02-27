@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Kenya_CST_CIB_Queries_Corporate_Banking_Call_Report</fullName>
+    <columns>NAME</columns>
+    <filterScope>Queue</filterScope>
+    <label>Kenya CST CIB Queries-Corporate Banking</label>
+    <queue>Kenya_CST_CIB_Queries_Corporate_Banking</queue>
+    <sharedTo>
+        <roleAndSubordinatesInternal>CIB_Customer_Contact_Center_Kenya_Division</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,315 @@
+.THIS {
+    background: rgba(238, 238, 238, 0.8)!important;
+    position: fixed;
+    padding: 0 !important; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex !important;    
+    align-items: unset !important;
+    z-index: 9999;
+    overflow-y: scroll;
+}
+
+.THIS #mainModal{
+    background: linear-gradient(135deg, #0A2240 0%, #054B82 100%);
+    top: 0px;
+    min-height:710px;
+    max-height: 70%;
+}
+
+.THIS .last_modallink {
+    margin-bottom: 128px;
+}
+
+@media(max-width: 650px ){
+    .THIS .mainModal_class,
+    .THIS .modallist_div {
+        width: 100%;
+        height: 100%;
+        max-height: unset !important;
+        position: absolute;
+    }
+}
+
+@media(min-width: 651px ) and (max-width:1280px){
+    .THIS .mainModal_class,
+    .THIS .modallist_div {
+        margin-top: 90px;
+        margin-bottom: 90px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .THIS .mainModal_class {
+        width: 100%;
+    }
+}
+
+@media(min-width: 1281px ) {
+    .THIS .mainModal_class , 
+    .THIS .modallist_div{
+        top: 244px;
+        vertical-align:middle;
+        margin: 11% auto;
+        width: 50%;
+    }
+}
+
+.THIS #modalHeader{
+    margin-right:0;
+    min-height: 42px;
+    border-bottom: 0px solid #0A2240;
+}
+
+.THIS #modalLogo{
+    text-align: center;
+    align-content: center;
+}
+
+.THIS #modalComingSoonSolution{
+    margin-top:24px;
+    text-align: center;
+}
+
+.THIS #modalComingSoonAPI{
+    margin-top:112px;
+    text-align: center;
+}
+
+.THIS #comingSoonText{
+	color: #FFFFFF;
+	font-family: BentonSans;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 24px;
+	text-align: center;
+    text-transform: none;
+}
+
+.THIS #modalTitle{
+    text-transform: none;
+    align-content:center;
+    text-align:center;
+    padding: 0 20px 0 20px;
+}
+
+.THIS #modalTitleSub{
+    text-align:center;
+}
+
+.THIS #modalTitleTextSolution{
+    color: #FFFFFF;
+    text-align:center;
+    font-family: BentonSans;
+    font-size: 57px;
+    font-weight: 200;
+    line-height: 60px;
+    text-transform: none;
+}
+
+.THIS sup{
+    font-size: 17px;
+    vertical-align: super;
+}
+
+.THIS #modalTitleTextAPI{
+    margin-top:84px;
+    color: #FFFFFF;
+    text-align:center;
+    font-family: BentonSans;
+    font-size: 57px;
+    font-weight: 200;
+    line-height: 60px;
+    text-transform: none;
+}
+
+.THIS .onboarding__title_container hr,
+.THIS #modalTitle hr{
+    width:240px;
+    border: 0px solid rgb(104,91,60);
+    height: 2px;
+  	background: linear-gradient(135deg, #695B3A 0%, #A48C5C 100%);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:0;
+    margin-top: 16px;
+}
+
+.THIS #modalBody{
+    margin-top:16px;
+    color: #FFFFFF;
+    font-family: BentonSans;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.THIS #modalBodySub{
+    margin-left: auto;
+    margin-right: auto;
+    text-align:center;
+    color: #FFFFFF;
+    font-family: BentonSans;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    width: fit-content;
+    max-width: 480px;
+    padding: 0 20px 0 20px;
+}
+
+.THIS .adjustTable{
+    margin-left: 0px;
+    margin-top: 100px;
+}
+
+.THIS .adjustList{
+    margin-left:460px;
+    margin-top:282px;
+}
+
+.THIS #modalFirstButton{
+    margin-top: 24px;
+    align-content: center;
+    padding: 0 20px 0 20px;
+}
+
+.THIS .firstButton{
+    border: 0px;
+    height: 50px;
+    width: 100%;
+    max-width: 310px;
+    background-color: #0089FF;
+    border-radius: 2px;
+    color: #FFFFFF;
+    font-size:14px;
+    text-align:center;
+    line-height: 50px;
+}
+
+@media(min-width: 650px){
+    .THIS .firstButton{
+        width: 310px;
+    }
+}
+
+.THIS #modalSecondButton{
+    margin-top:16px;
+    align-content: center;
+    padding: 0 20px 0 20px;
+}
+
+.THIS .secondButton{
+    border: 0px;
+    height: 50px;
+    width: 100%;
+    max-width: 310px;
+    background-color: #EEE;
+    border-radius:2px;
+    font-size:14px;
+    color:#0033AA;
+    text-align:center;
+    line-height: 50px;
+}
+
+@media(min-width: 650px){
+    .THIS .secondButton{
+        width: 310px;
+    }
+}
+
+.THIS #modalMarketPlaceLink{
+    text-align: center;
+    margin-top: 32px;
+    padding: 0 20px 0 20px;
+}
+
+.THIS #marketPlaceLink{
+    text-transform: uppercase;
+    color: #0089FF;
+    font-family: BentonSans;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 13px;
+    text-align: center;
+}
+
+.THIS .solutionShowcase__item__logo .uiOutputRichText img {
+    min-height: 144px;
+    min-width: 144px;
+    max-height: 144px;
+    max-width: 144px;
+    border-radius: 50%;
+    
+}
+
+.THIS #uiOutputRichText {
+    align-content:center;
+}
+
+.THIS .firstButton:hover{
+    height: 50px;
+    background-color:#0089FF;
+}
+
+.THIS .close {
+    height:26px;
+    width:26px;
+    margin-top:16px;
+    margin-right:16px;
+    float: right;
+}
+
+.THIS .close:hover{
+    color: #aaaaaa;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.THIS .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.THIS #mainModal.onboarding__screen {
+    height: 62%;
+    width: 52.5%;
+    padding: 6%;
+    min-height: unset;
+    margin: auto;
+}
+
+.THIS .onboardingButton {
+    text-transform: uppercase;
+}
+
+.THIS #modalTitleTextAPI.onboarding__title {
+    margin-top: unset;
+}
+
+.THIS .onboarding__body {
+    width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.THIS.onboarding__screen {
+    overflow-y: unset;
+}
+
+.THIS.onboarding__screen #mainModal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-y: unset;
+}
+
+.THIS .onboarding__screen #modalTitle {
+    padding: unset;
+}

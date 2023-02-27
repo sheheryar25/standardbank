@@ -1,0 +1,87 @@
+<!--
+ - Created by zwalczewska on 25.10.2019.
+ -->
+
+<aura:component controller="PBB_Lifestyle_FocusClientController" description="PBB_Lifestyle_FocusClient" implements="flexipage:availableForAllPageTypes"
+                access="global">
+    <aura:attribute access="private" name="accounts" type="Object[]"/>
+    <aura:attribute access="private" name="allAccounts" type="Object[]"/>
+	<aura:attribute access="private" name="allAccountsPaginated"		type="Object"	 />
+    <aura:attribute access="private" name="columns" type="List"/>
+    <aura:attribute access="private" name="isLoading"	type="boolean"	default="true"/>
+	<aura:attribute access="private" name="currentPage" type="Integer"  default="0" />
+    <aura:attribute access="private" name="rowPerPage" type="String"/>
+	<aura:attribute access="private" name="rowPerPageSet" type="String[]" default="10,15,20" />
+	<aura:attribute access="private" name="sortBy" type="String"/>
+	<aura:attribute access="private" name="sortDirection" type="String"/> 
+
+    <aura:handler name="init" value="{! this }" action="{! c.doInit }"/>
+	<aura:handler name="change" value="{!v.currentPage}" action="{!c.pageChanged}"/>
+	<aura:handler name="change" value="{!v.allAccounts}" action="{!c.handleResultChange}"/>
+	<aura:handler name="change" value="{!v.rowPerPage}" action="{!c.handleRowPerPageChange}"/>
+
+		
+    <aura:if isTrue="{!and(!empty(v.allAccounts), !v.isLoading)}" >
+		<div >
+			<lightning:button label="Top 20" title="Go to Top 20" name="0" onclick="{! c.handleGoTo }"/>
+			<lightning:button label="Middle 70" title="Go to Middle 70" name="20" onclick="{! c.handleGoTo }"/>
+			<lightning:button label="Bottom 10" title="Go to Bottom 10" name="90" onclick="{! c.handleGoTo }"/>
+		 </div>
+        <lightning:card class="slds-p-top_xxx-small" >
+            <div style="height: 27rem;" >
+                <lightning:datatable
+                        keyField="Id" 
+                        data="{! v.accounts }"
+                        columns="{! v.columns }"
+                        hideCheckboxColumn="true"
+						sortedBy="{!v.sortBy}"
+						sortedDirection="{!v.sortDirection}"
+						onsort="{!c.handleSort}"/>
+            </div>
+          
+        </lightning:card>
+		<div class="slds-is-relative">
+				<div class="slds-is-absolute">
+					<lightning:select name="select" label="Rows per page" value="{!v.rowPerPage}" variant="label-inline">
+						<aura:iteration items="{!v.rowPerPageSet}" var="set">
+								<option text="{!set}"></option>
+							</aura:iteration>
+					</lightning:select>
+				</div>
+				<div class="slds-text-align_center">
+					<div>
+					{!(v.currentPage * v.rowPerPage ) + 1} - {!if(lessthan(((v.currentPage +1 ) * v.rowPerPage ), v.allAccounts.length), ((v.currentPage +1 ) * v.rowPerPage ), v.allAccounts.length ) } of {!v.allAccounts.length}
+					</div>
+					<div>		
+						<lightning:button variant="base" label="Prev"  iconName="utility:chevronleft" iconPosition="left" title="Prev page" onclick="{! c.handlePrev }" disabled="{!v.currentPage == 0}"/>
+						<aura:iteration items="{!v.allAccountsPaginated}" var="item" indexVar="i" start="{!v.currentPage - 2}" end="{!v.currentPage +3}">
+							<aura:if isTrue="{!v.currentPage == i}" >
+								<lightning:button variant="base" label="{!i + 1}" title="{!'Go to ' + i +' page'}" disabled="true" />
+								<aura:set attribute="else" >
+									<lightning:button variant="base" label="{!i + 1}" title="{!'Go to ' + i +' page'}" onclick="{!c.changePage}"/>
+								</aura:set>
+							</aura:if>
+						</aura:iteration>
+						<lightning:button variant="base" label="Next" iconName="utility:chevronright" iconPosition="right" title="Next page" onclick="{! c.handleNext }" disabled="{!v.currentPage == v.allAccountsPaginated.length -1}"/>
+					</div>
+				</div>	
+			</div>
+				
+
+		
+        <aura:set attribute="else" >
+            <div class="slds-is-relative" style="min-height: 15rem; display: flex; justify-content: center; align-items: center;">
+
+                <aura:if isTrue="{!v.isLoading}">
+                    <lightning:spinner alternativeText="Loading" size="medium" />
+                    <aura:set attribute="else" >
+                        <p class="slds-p-horizontal_small">
+                            There is no data to present
+                        </p>
+                    </aura:set>
+                </aura:if>
+
+            </div>
+        </aura:set>
+    </aura:if>
+</aura:component>

@@ -1,0 +1,42 @@
+<!-- **
+* @description  : Partner Portal Theme Layout.
+* User Story : SFP-4962
+*
+* @author Syed Ovais Ali (syed.ali@standardbank.co.za)
+* @date June 2021
+*/ -->
+<aura:component implements="forceCommunity:themeLayout">
+    
+    <aura:attribute name="isUserLoggedIn" type="Boolean" default="false" access="public"/>
+    <aura:attribute name="otherNotices" type="Aura.Component[]" access="public"/>
+    <aura:attribute name="importantNotices" type="Aura.Component[]" access="public"/>
+    <aura:attribute name="body" type="Aura.Component[]" access="public"/>
+    <aura:attribute name="profileMenu" type="Aura.Component[]" required="false" access="public"/> 
+    
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+
+    <div class="slds-grid  slds-grid_vertical">
+        <div class="slds-col">
+            {!v.otherNotices}
+        </div>
+        <div class="slds-col">
+            <aura:if isTrue="{! !v.isUserLoggedIn}">
+                {!v.importantNotices}
+            </aura:if>
+        </div>
+        <div class="slds-col">
+            <aura:if isTrue="{! !v.isUserLoggedIn}">
+                <c:PP_NavigationMenu />
+                <aura:set attribute="else">
+                    <c:PP_AuthenticatedNavigationMenu profileMenu="{!v.profileMenu}" />    
+                </aura:set>
+            </aura:if>
+        </div>
+        <div class="slds-col content">
+            {!v.body}
+        </div>
+        <div class="footer-container">
+            <c:ppFooter/>
+        </div>
+    </div>
+</aura:component>

@@ -1,0 +1,42 @@
+<template>
+    <template if:false={showMiniMallFilter}>
+        <div class="gradient">
+            <div class="">
+                <p class="HeadingSection ">Application Categories</p>
+            </div>
+            <div class="wrap slds-grid slds-wrap slds-gutters">
+                <div
+                    class="cardFrame slds-col slds-size_1-of-1 slds-medium-size_1-of-4 slds-large-size_1-of-5 slds-p-around_xx-small">
+                    <a data-value="All Applications" onclick={handleClick}>
+                        <article class="card slds-card">
+                            <div class="slds-card__body slds-card__body_inner"> <img src={AllApplication}
+                                    class=" categoryImage" alt="Category Picture" /></div>
+                            <footer class="categoryName slds-card__footer">
+                                All Applications
+                            </footer>
+                        </article>
+                    </a>
+                </div>
+                <template if:true={records}>
+                    <template for:each={records} for:item="record">
+                        <div class="cardFrame slds-col slds-size_1-of-1 slds-medium-size_1-of-4 slds-large-size_1-of-5 slds-p-around_xx-small"
+                            key={record.Id}>
+                            <a data-value={record.MasterLabel} value={record.MasterLabel} onclick={handleClick}>
+                                <article class="card slds-card">
+                                    <div class="slds-card__body slds-card__body_inner"> <img src={record.ImageLink__c}
+                                            class=" categoryImage" alt="Category Picture" /></div>
+                                    <footer class="categoryName slds-card__footer">
+                                        {record.MasterLabel}
+                                    </footer>
+                                </article>
+                            </a>
+                        </div>
+                    </template>
+                </template>
+            </div>
+        </div>
+    </template>
+    <template if:true={showMiniMallFilter}>
+        <c-osb-mini-mall-filter property-value={categories}></c-osb-mini-mall-filter>
+    </template>
+</template>

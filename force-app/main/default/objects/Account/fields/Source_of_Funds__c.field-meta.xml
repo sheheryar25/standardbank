@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Source_of_Funds__c</fullName>
+    <description>What is the customer’s source of funds?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>What is the customer’s source of funds?</inlineHelpText>
+    <label>Source of Funds</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>TextArea</type>
+</CustomField>

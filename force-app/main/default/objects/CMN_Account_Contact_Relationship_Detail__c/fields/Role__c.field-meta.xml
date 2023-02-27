@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Role__c</fullName>
+    <externalId>false</externalId>
+    <label>Role</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>ACCOUNTING OFFICER</fullName>
+                <default>false</default>
+                <label>ACCOUNTING OFFICER</label>
+            </value>
+            <value>
+                <fullName>ADMINISTRATOR</fullName>
+                <default>false</default>
+                <label>ADMINISTRATOR</label>
+            </value>
+            <value>
+                <fullName>AGENT</fullName>
+                <default>false</default>
+                <label>AGENT</label>
+            </value>
+            <value>
+                <fullName>AUDITOR GENERAL</fullName>
+                <default>false</default>
+                <label>AUDITOR GENERAL</label>
+            </value>
+            <value>
+                <fullName>BENEFICIAL OWNER</fullName>
+                <default>false</default>
+                <label>Beneficial Owner</label>
+            </value>
+            <value>
+                <fullName>BENEFICIARY</fullName>
+                <default>false</default>
+                <label>BENEFICIARY</label>
+            </value>
+            <value>
+                <fullName>BOARD MEMBER</fullName>
+                <default>false</default>
+                <label>BOARD MEMBER</label>
+            </value>
+            <value>
+                <fullName>BUSINESS CONTROLLER</fullName>
+                <default>false</default>
+                <label>BUSINESS CONTROLLER</label>
+            </value>
+            <value>
+                <fullName>BUSINESS REPRESENTATIVE</fullName>
+                <default>false</default>
+                <label>BUSINESS REPRESENTATIVE</label>
+            </value>
+            <value>
+                <fullName>BUSINESS RESCUE PRACTITIONER</fullName>
+                <default>false</default>
+                <label>BUSINESS RESCUE PRACTITIONER</label>
+            </value>
+            <value>
+                <fullName>Business User</fullName>
+                <default>false</default>
+                <label>Business User</label>
+            </value>
+            <value>
+                <fullName>CHAIRMAN</fullName>
+                <default>false</default>
+                <label>CHAIRMAN</label>
+            </value>
+            <value>
+                <fullName>CHAIRPERSON</fullName>
+                <default>false</default>
+                <label>CHAIRPERSON</label>
+            </value>
+            <value>
+                <fullName>CHAIRPERSON OF THE COUNCIL</fullName>
+                <default>false</default>
+                <label>CHAIRPERSON OF THE COUNCIL</label>
+            </value>
+            <value>
+                <fullName>CHANCELLOR</fullName>
+                <default>false</default>
+                <label>CHANCELLOR</label>
+            </value>
+            <value>
+                <fullName>CHIEF EXECUTIVE OFFICER</fullName>
+                <default>false</default>
+                <label>CHIEF EXECUTIVE OFFICER</label>
+            </value>
+            <value>
+                <fullName>CHIEF FINANCIAL OFFICER</fullName>
+                <default>false</default>
+                <label>CHIEF FINANCIAL OFFICER</label>
+            </value>
+            <value>
+                <fullName>CHIEF OPERATIONS</fullName>
+                <default>false</default>
+                <label>CHIEF OPERATIONS</label>
+            </value>
+            <value>
+                <fullName>COMPANY DIRECTOR</fullName>
+                <default>false</default>
+                <label>COMPANY DIRECTOR</label>
+            </value>
+            <value>
+                <fullName>COMPANY SECRETARY</fullName>
+                <default>false</default>
+                <label>COMPANY SECRETARY</label>
+            </value>
+            <value>
+                <fullName>Contact</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Contact</label>
+            </value>
+            <value>
+                <fullName>CONTACT PERSON</fullName>
+                <default>false</default>
+                <label>CONTACT PERSON</label>
+            </value>
+            <value>
+                <fullName>CONTROLLING ENTITY</fullName>
+                <default>false</default>
+                <label>CONTROLLING ENTITY</label>
+            </value>
+            <value>
+                <fullName>CO-PARTICIPANT</fullName>
+                <default>false</default>
+                <label>CO-PARTICIPANT</label>
+            </value>
+            <value>
+                <fullName>CorpRep</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>CorpRep</label>
+            </value>
+            <value>
+                <fullName>COUNCILLOR</fullName>
+                <default>false</default>
+                <label>COUNCILLOR</label>
+            </value>
+            <value>
+                <fullName>CURATOR</fullName>
+                <default>false</default>
+                <label>CURATOR</label>
+            </value>
+            <value>
+                <fullName>DEBT COUNSELLOR</fullName>
+                <default>false</default>
+                <label>DEBT COUNSELLOR</label>
+            </value>
+            <value>
+                <fullName>Decision Maker</fullName>
+                <default>false</default>
+                <label>Decision Maker</label>
+            </value>
+            <value>
+                <fullName>DEPUTY CHAIRPERSON</fullName>
+                <default>false</default>
+                <label>DEPUTY CHAIRPERSON</label>
+            </value>
+            <value>
+                <fullName>Director</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Director</label>
+            </value>
+            <value>
+                <fullName>DIRECTOR GENERAL</fullName>
+                <default>false</default>
+                <label>DIRECTOR GENERAL</label>
+            </value>
+            <value>
+                <fullName>DONOR</fullName>
+                <default>false</default>
+                <label>DONOR</label>
+            </value>
+            <value>
+                <fullName>Economic Buyer</fullName>
+                <default>false</default>
+                <label>Economic Buyer</label>
+            </value>
+            <value>
+                <fullName>Economic Decision Maker</fullName>
+                <default>false</default>
+                <label>Economic Decision Maker</label>
+            </value>
+            <value>
+                <fullName>EMPLOYEE</fullName>
+                <default>false</default>
+                <label>Employee</label>
+            </value>
+            <value>
+                <fullName>Evaluator</fullName>
+                <default>false</default>
+                <label>Evaluator</label>
+            </value>
+            <value>
+                <fullName>Executive Sponsor</fullName>
+                <default>false</default>
+                <label>Executive Sponsor</label>
+            </value>
+            <value>
+                <fullName>EXECUTOR</fullName>
+                <default>false</default>
+                <label>EXECUTOR</label>
+            </value>
+            <value>
+                <fullName>FOUNDER</fullName>
+                <default>false</default>
+                <label>FOUNDER</label>
+            </value>
+            <value>
+                <fullName>FRANCHISEE</fullName>
+                <default>false</default>
+                <label>FRANCHISEE</label>
+            </value>
+            <value>
+                <fullName>GOVERNING BODY CHAIRPERSON</fullName>
+                <default>false</default>
+                <label>GOVERNING BODY CHAIRPERSON</label>
+            </value>
+            <value>
+                <fullName>GUARANTOR/SURETY</fullName>
+                <default>false</default>
+                <label>GUARANTOR/SURETY</label>
+            </value>
+            <value>
+                <fullName>HEAD OF DEPARTMENT</fullName>
+                <default>false</default>
+                <label>HEAD OF DEPARTMENT</label>
+            </value>
+            <value>
+                <fullName>INCORPORATOR</fullName>
+                <default>false</default>
+                <label>INCORPORATOR</label>
+            </value>
+            <value>
+                <fullName>Influencer</fullName>
+                <default>false</default>
+                <label>Influencer</label>
+            </value>
+            <value>
+                <fullName>JOINT PARTICIPANT</fullName>
+                <default>false</default>
+                <label>JOINT PARTICIPANT</label>
+            </value>
+            <value>
+                <fullName>LIQUIDATOR</fullName>
+                <default>false</default>
+                <label>LIQUIDATOR</label>
+            </value>
+            <value>
+                <fullName>MAYOR</fullName>
+                <default>false</default>
+                <label>MAYOR</label>
+            </value>
+            <value>
+                <fullName>MEMBER</fullName>
+                <default>false</default>
+                <label>MEMBER</label>
+            </value>
+            <value>
+                <fullName>MEMBER OF EXECUTIVE COMMITTEE</fullName>
+                <default>false</default>
+                <label>MEMBER OF EXECUTIVE COMMITTEE</label>
+            </value>
+            <value>
+                <fullName>MEMBER OF THE CABINET</fullName>
+                <default>false</default>
+                <label>MEMBER OF THE CABINET</label>
+            </value>
+            <value>
+                <fullName>MINISTER</fullName>
+                <default>false</default>
+                <label>MINISTER</label>
+            </value>
+            <value>
+                <fullName>MUNICIPAL MANAGER</fullName>
+                <default>false</default>
+                <label>MUNICIPAL MANAGER</label>
+            </value>
+            <value>
+                <fullName>OFFICE BEARER</fullName>
+                <default>false</default>
+                <label>OFFICE BEARER</label>
+            </value>
+            <value>
+                <fullName>ONLINE BUSINESS BANKING OPERATOR</fullName>
+                <default>false</default>
+                <label>ONLINE BUSINESS BANKING OPERATOR</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Owner</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Owner</label>
+            </value>
+            <value>
+                <fullName>PARTNER</fullName>
+                <default>false</default>
+                <label>PARTNER</label>
+            </value>
+            <value>
+                <fullName>PREMIER</fullName>
+                <default>false</default>
+                <label>PREMIER</label>
+            </value>
+            <value>
+                <fullName>PRIMARY PARTICIPANT</fullName>
+                <default>false</default>
+                <label>PRIMARY PARTICIPANT</label>
+            </value>
+            <value>
+                <fullName>PRINCIPAL</fullName>
+                <default>false</default>
+                <label>PRINCIPAL</label>
+            </value>
+            <value>
+                <fullName>RECTOR</fullName>
+                <default>false</default>
+                <label>RECTOR</label>
+            </value>
+            <value>
+                <fullName>REGISTRAR</fullName>
+                <default>false</default>
+                <label>REGISTRAR</label>
+            </value>
+            <value>
+                <fullName>SHAREHOLDER</fullName>
+                <default>false</default>
+                <label>Shareholder</label>
+            </value>
+            <value>
+                <fullName>SIGNIFICANT SHAREHOLDER</fullName>
+                <default>false</default>
+                <label>SIGNIFICANT SHAREHOLDER</label>
+            </value>
+            <value>
+                <fullName>SOLE PROPRIETOR</fullName>
+                <default>false</default>
+                <label>SOLE PROPRIETOR</label>
+            </value>
+            <value>
+                <fullName>SPECIAL RELATIONSHIP MANAGER</fullName>
+                <default>false</default>
+                <label>SPECIAL RELATIONSHIP MANAGER</label>
+            </value>
+            <value>
+                <fullName>Sponsor</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sponsor</label>
+            </value>
+            <value>
+                <fullName>Stakeholder</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Stakeholder</label>
+            </value>
+            <value>
+                <fullName>SUB ENTITY</fullName>
+                <default>false</default>
+                <label>SUB ENTITY</label>
+            </value>
+            <value>
+                <fullName>Technical Buyer</fullName>
+                <default>false</default>
+                <label>Technical Buyer</label>
+            </value>
+            <value>
+                <fullName>TREASURER</fullName>
+                <default>false</default>
+                <label>TREASURER</label>
+            </value>
+            <value>
+                <fullName>TRUSTEE</fullName>
+                <default>false</default>
+                <label>TRUSTEE</label>
+            </value>
+            <value>
+                <fullName>VICE CHANCELLOR</fullName>
+                <default>false</default>
+                <label>VICE CHANCELLOR</label>
+            </value>
+            <value>
+                <fullName>VICE PRINCIPAL</fullName>
+                <default>false</default>
+                <label>VICE PRINCIPAL</label>
+            </value>
+            <value>
+                <fullName>WEALTH MANAGER</fullName>
+                <default>false</default>
+                <label>WEALTH MANAGER</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,15 @@
+<aura:component>
+	<aura:attribute name="notifications" type="Object[]"/>
+    <div class="notifications__container">
+        <div class="notifications__list">
+            <aura:iteration items="{!v.notifications}" var="notification">
+                <c:OSBNotificationsItem id="{!notification.Id}"
+                                        title="{!notification.Title__c}"
+                                        subtitle="{!notification.Subtitle__c}"
+                                        date="{!notification.CreatedDate}"
+                                        content="{!notification.Content__c}"
+                                        isUnread="{!notification.Is_Unread__c}"/>
+            </aura:iteration>
+        </div>
+    </div>
+</aura:component>

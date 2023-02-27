@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Outlook_Exchange_System_ID__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>This is the Unique System Generated ID getting it from Source System Exchange.
+This replaces SAM ACCOUNT NAME
+Case Number:Case C-00000178</description>
+    <externalId>true</externalId>
+    <inlineHelpText>This field can only be updated from the source system which is Outlook Exchange. Please contact the Outlook Exchange team to make any updates to the field (250 characters or less)</inlineHelpText>
+    <label>Outlook Exchange System ID</label>
+    <length>250</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

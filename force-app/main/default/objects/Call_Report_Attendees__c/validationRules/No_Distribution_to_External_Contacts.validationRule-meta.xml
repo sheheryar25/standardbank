@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Distribution_to_External_Contacts</fullName>
+    <active>true</active>
+    <description>Prevent users from updating the distribution field to &quot;Yes&quot; on an external contact</description>
+    <errorConditionFormula>(Contact_Type__c == &apos;External&apos;) &amp;&amp; (TEXT( Send_Email__c ) == &apos;YES&apos;)&amp;&amp; $Setup.Execution__c.Skip_Validations__c</errorConditionFormula>
+    <errorDisplayField>Send_Email__c</errorDisplayField>
+    <errorMessage>Distributing Event Reports to external contacts is not allowed</errorMessage>
+</ValidationRule>

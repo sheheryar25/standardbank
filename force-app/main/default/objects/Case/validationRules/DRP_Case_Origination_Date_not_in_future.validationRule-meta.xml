@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DRP_Case_Origination_Date_not_in_future</fullName>
+    <active>true</active>
+    <description>Prevents users from populating the Case Origination Date field with a date field greater than the current date (Future Date)</description>
+    <errorConditionFormula>AND( RecordType.DeveloperName = &quot;Client_Case&quot;,  NOT(ISBLANK(Case_Origination_Date__c )), Case_Origination_Date__c &gt;  TODAY())</errorConditionFormula>
+    <errorDisplayField>Case_Origination_Date__c</errorDisplayField>
+    <errorMessage>Case Origination Date cannot be in future</errorMessage>
+</ValidationRule>

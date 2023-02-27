@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OSB_Persona__c</fullName>
+    <description>This field is used to define a OneHub user&apos;s Persona which will drive visibility of Solutions &amp; API&apos;s on the users dashboard.</description>
+    <externalId>false</externalId>
+    <formula>IF( Account.Name = &apos;Standard Bank Employees&apos;, &apos;Staff&apos;, &apos;Client&apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>What is the persona of this user? IE staff or client</inlineHelpText>
+    <label>Persona</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

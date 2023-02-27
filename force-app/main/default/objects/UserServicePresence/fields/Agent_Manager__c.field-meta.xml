@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Agent_Manager__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>SFP-7659 - The current agents manager will be set from a process builder on record create</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The current agents manager will be set from a process builder on record create</inlineHelpText>
+    <label>Agent Manager</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>User_Presences</relationshipName>
+    <required>false</required>
+    <type>Lookup</type>
+</CustomField>

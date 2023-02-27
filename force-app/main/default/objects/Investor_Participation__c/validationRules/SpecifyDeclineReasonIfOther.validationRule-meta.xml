@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SpecifyDeclineReasonIfOther</fullName>
+    <active>true</active>
+    <description>US-4609</description>
+    <errorConditionFormula>AND(INCLUDES( Distribution_Party_Decline_Reason__c , &quot;Other&quot;),  ISBLANK( Specify_Decline_Reason_if_Other__c ) )</errorConditionFormula>
+    <errorDisplayField>Specify_Decline_Reason_if_Other__c</errorDisplayField>
+    <errorMessage>Please specify the Decline reason if &quot;Other&quot; was selected</errorMessage>
+</ValidationRule>

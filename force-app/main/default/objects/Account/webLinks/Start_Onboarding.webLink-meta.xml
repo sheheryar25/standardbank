@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Start_Onboarding</fullName>
+    <availability>online</availability>
+    <description>Button to change KYC Location and Relationship Roles</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Start Onboarding</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/33.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/33.0/apex.js&quot;)} 
+
+var errorstring = &quot;&quot;; 
+var errorstring1 = &quot;&quot;; 
+
+sforce.connection.sessionId = window.ApiUtils.getSessionId(); 
+var userID = window.UserContext.userId; 
+
+if({!ISPICKVAL(Account.Client_Relationship_Hierarchy__c,&apos;&apos;)} 
+|| {!ISPICKVAL(Account.Client_Sector__c, &apos;&apos;)} || 
+{!ISPICKVAL(Account.Client_Sub_Sector__c, &apos;&apos;)} || 
+{!ISNULL(Account.Client_Co_ordinator__c)} || (&apos;{!Account.Status__c}&apos; == &apos;Submitted for Approval&apos;) ||
+((({!ISPICKVAL(Account.Client_Relationship_Hierarchy__c,&apos;Group Parent&apos;)} 
+|| {!ISPICKVAL(Account.Client_Relationship_Hierarchy__c,&apos;Immediate Parent&apos;)} 
+|| {!ISPICKVAL(Account.Client_Relationship_Hierarchy__c,&apos;Child&apos;)}) &amp;&amp; (&apos;{!Account.Status__c}&apos; != &apos;Approved&apos;) 
+&amp;&amp; (userID != &apos;{!Account.Client_Co_ordinatorId__c}&apos;))? true : false)){ 
+
+errorstring = errorstring + ({!ISPICKVAL(Account.Client_Relationship_Hierarchy__c, &apos;&apos;)} ? &quot;Client Relationship Hierarchy\n&quot; : &quot;&quot;); 
+errorstring = errorstring + ({!ISPICKVAL(Account.Client_Sector__c, &apos;&apos;)} ? &quot;Client Sector\n&quot; : &quot;&quot;); 
+errorstring = errorstring + ({!ISPICKVAL(Account.Client_Sub_Sector__c, &apos;&apos;)} ? &quot;Client Sub-Sector\n&quot; : &quot;&quot;); 
+errorstring = errorstring + ({!ISNULL(Account.Client_Co_ordinator__c)} ? &quot;Proposed Client Coordinator\n&quot; : &quot;&quot;); 
+
+if(&apos;{!Account.Status__c}&apos; == &apos;Submitted for Approval&apos;){
+	errorstring1 = errorstring1 + &quot;The record is awaiting approval from the Proposed CC therefore Client onboarding cannot start\n&quot;;
+}
+else{
+	errorstring1 = errorstring1+({!ISPICKVAL(Account.Client_Relationship_Hierarchy__c,&apos;&apos;)} || {!ISPICKVAL(Account.Client_Sector__c, &apos;&apos;)} 
+	|| {!ISPICKVAL(Account.Client_Sub_Sector__c, &apos;&apos;)} || 
+	{!ISNULL(Account.Client_Co_ordinator__c)} ? &quot;&quot;:((({!ISPICKVAL(Account.Client_Relationship_Hierarchy__c,&apos;Group Parent&apos;)} 
+	|| {!ISPICKVAL(Account.Client_Relationship_Hierarchy__c,&apos;Immediate Parent&apos;)} || {!ISPICKVAL(Account.Client_Relationship_Hierarchy__c,&apos;Child&apos;)}) 
+	&amp;&amp; (&apos;{!Account.Status__c}&apos; != &apos;Approved&apos;) &amp;&amp; ( userID != &apos;{!Account.Client_Co_ordinatorId__c}&apos;))? &quot;The record must be submitted for approval to the Proposed CC before Client Onboarding can start\n&quot; : &quot;&quot;)); 
+}
+
+alert((errorstring != &quot;&quot; ? &quot;Please complete the following fields to Start Onboarding:\n&quot;:&quot;&quot;) + errorstring + errorstring1 ); 
+} 
+else{ 
+window.parent.location.href=&quot;/apex/Start_Onboarding?id={!Account.Id}&quot;;	
+}</url>
+</WebLink>

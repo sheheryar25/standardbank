@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Economic_Group_Parent_Client_Name__c</fullName>
+    <description>Group parent client for the economic group client hierarchy as represented in credit risk (Adaptiv)</description>
+    <externalId>false</externalId>
+    <formula>IF(ISBLANK(Economic_Group_Parent__c) &amp;&amp; Adaptive_Flag__c = TRUE , Name, IF(Not( Economic_Group_Parent__c = &quot;&quot;), Economic_Group_Parent__r.Name,&quot;&quot;))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Group parent client for the economic group client hierarchy as represented in credit risk (Adaptiv)</inlineHelpText>
+    <label>Economic Group Parent Client Name</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

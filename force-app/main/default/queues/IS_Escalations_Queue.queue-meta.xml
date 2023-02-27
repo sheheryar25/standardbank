@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>true</doesSendEmailToMembers>
+    <email>dummy@fake.com</email>
+    <name>IS Escalations Queue</name>
+    <queueMembers>
+        <users>
+            <user>dheshni.govender1@standardbank.co.za</user>
+            <user>priscilla.phala@standardbank.co.za</user>
+            <user>robyn.esau@standardbank.co.za</user>
+            <user>sibongile.zwane@standardbank.co.za</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Call_Report__c</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

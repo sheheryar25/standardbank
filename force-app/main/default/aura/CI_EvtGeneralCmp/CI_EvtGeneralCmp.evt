@@ -1,0 +1,4 @@
+<aura:event type="COMPONENT" description="General use ID-Data component event">
+    <aura:attribute name="id" type="String" />
+    <aura:attribute name="data" type="Object" />
+</aura:event>

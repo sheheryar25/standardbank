@@ -1,0 +1,57 @@
+<aura:component implements="forceCommunity:themeLayout" access="global" description="Custom Theme Layout">
+    <aura:attribute name="profileMenu" type="Aura.Component[]" required="false" access="public" />
+    <aura:attribute name="showProfileMenu" type="Boolean" default="false" required="false" access="public" />
+    <aura:attribute name="rootClass" type="String" default="ao-slds" access="public" />
+
+
+    <ltng:require styles="{!$Resource.AOB_ThemeOverrides + '/styleDelta.css'}" />
+    <div class="slds-container_center ao-slds sb">
+        <!-- fixed header -->
+        <header class="ao-header ao-use-z-index_10 slds-is-fixed slds-size_1-of-1 ao-position_top-left ">
+            <div
+                class="ao-header-content slds-container_center slds-rp-horizontal_medium ao-background-colour_brand-blue">
+                <div class="slds-grid aob_grid_sm slds-grid_align-spread slds-grid_vertical-align-center slds-p-around_medium">
+                    <div class="slds-col">
+                        <img src="{!$Resource.AOB_ThemeOverrides + '/assets/logos/sbg-logo.svg'}" alt=""
+                            class="ao-header-logo" />
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="ao-main-content aob_gray_background">
+            {!v.body}
+        </div>
+        <footer class="ao-footer footer ao-background-colour_brand-blue slds-p-vertical_small">
+            <div class="container">
+                <div class="slds-grid">
+                    <div class="slds-size--1-of-3 align-self-center slds-m-vertical_small ">
+                        <div class="title--module-sub-title text-light">
+                            Standard Bank App
+                        </div>
+                    </div>
+                    <div class="slds-size--1-of-3 align-self-center">
+                        <div class="app-card__icon-container">
+                            <a class="app-card__icon"
+                                href="https://play.google.com/store/apps/details?id=com.sbg.mobile.phone">
+                                <img alt="" class="logo"
+                                    src="{!$Resource.AOB_ThemeOverrides + '/assets/images/google-play-badge.svg'}"
+                                    title="" />
+                            </a>
+                            <a class="app-card__icon"
+                                href="https://itunes.apple.com/za/app/standard-bank-stanbic-bank/id528239110?mt=8">
+                                <img alt="" class="logo"
+                                    src="{!$Resource.AOB_ThemeOverrides + '/assets/images/app-store-badge.svg'}"
+                                    title="" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slds-size--1-of-3 footer-devices-img text-center">
+                        <img alt="" class="aob_footer_image float-right"
+                            src="{!$Resource.AOB_ThemeOverrides + '/assets/images/app-snapshot.png'}" />
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</aura:component>

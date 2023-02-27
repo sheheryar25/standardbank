@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mandatory_CIB_Service_Type_Name</fullName>
+    <active>true</active>
+    <description>SGPRT-2740 - validation for CIB to have service type name mandatory to fill in when case type is complaint.</description>
+    <errorConditionFormula>AND(
+ RecordType.DeveloperName = &apos;Client_Case&apos;,
+ OR(
+   AND(ISPICKVAL(Type , &apos;Complaint&apos;), 
+       ISBLANK(Service_Type_Name__c)),
+   AND(NOT(ISPICKVAL(Type, &apos;Complaint&apos;)), 
+       NOT(ISBLANK(Service_Type_Name__c)))),
+ ConnectionReceivedId = null
+)</errorConditionFormula>
+    <errorMessage>Service type name is compulsory and cannot be left blank only for case type &quot;Complaint&quot;.</errorMessage>
+</ValidationRule>

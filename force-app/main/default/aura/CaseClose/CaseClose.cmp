@@ -1,0 +1,41 @@
+<aura:component controller="StdBank_Ltn_CaseCloseCtrl" implements="force:lightningQuickActionWithoutHeader,force:hasRecordId">
+    <aura:attribute name="recordId" type="String"  />
+    <aura:attribute name="caseRecord" type="Case" />
+	<aura:attribute name="options" type="DTO_SelectOption[]"  />
+    <aura:attribute name="isLoading" type="Boolean" default="true" />
+	<aura:attribute name="errorMsg" type="String"/>
+    <lightning:notificationsLibrary aura:id="notifLib"/>
+    <ltng:require scripts="{!$Resource.UTL_JavaScript}" afterScriptsLoaded="{!c.doInit}"/>
+	<aura:if isTrue="{!v.errorMsg != null}">
+		<ui:message title="Review the errors on this page." severity="error" closable="true" >
+			{!v.errorMsg}
+		</ui:message>
+	</aura:if>
+        <div class="slds-grid slds-grid_vertical">
+            <aura:if isTrue="{!v.isLoading}">
+                <lightning:spinner aura:id="mySpinner" size="small" alternativeText="Loading" variant="brand"  />
+            </aura:if>
+            <div class="slds-container__medium">
+				<lightning:select label="Status" name="Status" value="{!v.caseRecord.Status}">
+					<aura:iteration items="{!v.options}" var="status">
+						<option  value="{!status.value}" text="{!status.label}" selected="{! status.value == 'Closed' }"/>
+					</aura:iteration>
+				</lightning:select>
+              <!--  <lightning:input label="Status" value="{!v.caseRecord.Status}" required="true" />-->
+            </div>
+			 <div class="slds-container__medium">
+                <ui:inputtextarea required="true" label="Resolution comment" value="{!v.caseRecord.Resolution_Comment__c}" />
+            </div>
+            <div class="slds-container__medium">
+                <ui:inputtextarea required="{!v.caseRecord.RecordType.DeveloperName == 'Client_Case'}" label="Next Steps" value="{!v.caseRecord.Next_Steps__c}" />
+            </div>           
+            <div class="slds-container__medium">
+                <c:UTL_LookupField required="true"  sObjectName="Case" fieldName="Resolved_By__c" fieldLabel="Resolved by" assignTo="{!v.caseRecord.Resolved_By__c}" />
+            </div>
+			<div class="slds-container__medium">
+                                      <!--Removal Of close button from case quick action-->
+					<!--<lightning:button class="slds-float_right slds-m-left_medium slds-m-top_medium" label="Close" onclick="{!c.close}"/>-->
+					<lightning:button class="slds-float_right slds-m-left_medium slds-m-top_medium" label="Save" onclick="{!c.save}"/>					
+            </div>
+        </div>
+</aura:component>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Company_Industry__c</fullName>
+    <description>OneHub: This field is used to store the Company Industry which is used to personalise the users News on their dashboard. (US-4589)</description>
+    <externalId>false</externalId>
+    <label>Company Industry</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Agriculture</fullName>
+                <default>false</default>
+                <label>Agriculture</label>
+            </value>
+            <value>
+                <fullName>Business Services and Consulting</fullName>
+                <default>false</default>
+                <label>Business Services and Consulting</label>
+            </value>
+            <value>
+                <fullName>Financial Services</fullName>
+                <default>false</default>
+                <label>Financial Services</label>
+            </value>
+            <value>
+                <fullName>Government</fullName>
+                <default>false</default>
+                <label>Government</label>
+            </value>
+            <value>
+                <fullName>Healthcare</fullName>
+                <default>false</default>
+                <label>Healthcare</label>
+            </value>
+            <value>
+                <fullName>Information Technology</fullName>
+                <default>false</default>
+                <label>Information Technology</label>
+            </value>
+            <value>
+                <fullName>Manufacturing and Construction</fullName>
+                <default>false</default>
+                <label>Manufacturing and Construction</label>
+            </value>
+            <value>
+                <fullName>Marketing and Communications</fullName>
+                <default>false</default>
+                <label>Marketing and Communications</label>
+            </value>
+            <value>
+                <fullName>Mining and Metals</fullName>
+                <default>false</default>
+                <label>Mining and Metals</label>
+            </value>
+            <value>
+                <fullName>Oil and Gas</fullName>
+                <default>false</default>
+                <label>Oil and Gas</label>
+            </value>
+            <value>
+                <fullName>Transport</fullName>
+                <default>false</default>
+                <label>Transport</label>
+            </value>
+            <value>
+                <fullName>Wholesale/Retail Trade</fullName>
+                <default>false</default>
+                <label>Wholesale/Retail Trade</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

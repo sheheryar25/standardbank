@@ -1,0 +1,24 @@
+<aura:component controller="StdBank_Ltn_ClientsRevenueYTD" implements="flexipage:availableForAllPageTypes,force:hasRecordId">
+    <aura:attribute name="totalRevenue" type="Long" />
+    <aura:attribute name="recordId" type="String" />
+	<aura:attribute name="help" type="String" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+	<div style="height:100%">
+		<article class="slds-card slds-is-relative border-box" style="height:100%">
+			<div class="slds-grid slds-p-around_small " style="height:100%">
+				<div class="slds-col slds-align-middle">
+					<p class="slds-text-body_small slds-text-align_center">{!$Label.c.Client_Revenue_YTD}</p>
+					<div class="slds-text-heading_medium slds-text-align_center" style="min-height: 1em">
+						<aura:renderIf isTrue="{!and(v.totalRevenue != '', v.totalRevenue != null)}">
+							ZAR <ui:outputnumber value="{!v.totalRevenue/1000000}" format="0.00" /> M
+						</aura:renderIf>
+					</div>
+				</div>
+			</div>
+			<aura:renderIf isTrue="{!v.recordId != null}">
+				 <c:UTL_HelpText text="{!v.help}" />
+			</aura:renderIf>       
+		</article>
+	</div>
+
+</aura:component>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Capability_of_Response_unchangeable</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+  NOT(ISBLANK(PRIORVALUE(Capability_of_Response__c))), 
+  ISCHANGED(Capability_of_Response__c)
+)</errorConditionFormula>
+    <errorDisplayField>Capability_of_Response__c</errorDisplayField>
+    <errorMessage>Capability of Response cannot be changed once it is set.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Refinance_required</fullName>
+    <active>true</active>
+    <description>This validation validates that if products are created and the Existing_Facility_Maturity_Date__c is populated with a date then the Refinance__c should be set to true as well</description>
+    <errorConditionFormula>Refinance__c = False
+&amp;&amp; NOT(ISNULL(Existing_Facility_Maturity_Date__c))
+&amp;&amp; RecordType.Name = &apos;Lending and Commitments&apos;</errorConditionFormula>
+    <errorMessage>Existing Facility Maturity Date may only be populated if Refinance option is selected</errorMessage>
+</ValidationRule>

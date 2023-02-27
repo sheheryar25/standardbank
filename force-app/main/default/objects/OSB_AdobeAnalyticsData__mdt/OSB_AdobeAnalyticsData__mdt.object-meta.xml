@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>US-4233: Used to store data layer for Adobe Analytics. Use Page URL to identify proper data set.</description>
+    <label>OSB Adobe Analytics Data</label>
+    <pluralLabel>OSB Adobe Analytics Data</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

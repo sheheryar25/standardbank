@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FundingRequiredIsNull</fullName>
+    <active>true</active>
+    <description>case#141 - Rudolf Niehaus
+Funding Required cannot be null. This forces a user to add a Funding value on the Draw Down Vf page</description>
+    <errorConditionFormula>IF(ISBLANK( 
+TEXT( Funding_Required__c ) 
+) &amp;&amp; 
+NOT(
+ISBLANK( 
+TEXT( Draw_Date__c ) )
+ ),true,false)</errorConditionFormula>
+    <errorDisplayField>Funding_Required__c</errorDisplayField>
+    <errorMessage>Please enter a Funding Required value when adding a Draw Down Profile record.</errorMessage>
+</ValidationRule>

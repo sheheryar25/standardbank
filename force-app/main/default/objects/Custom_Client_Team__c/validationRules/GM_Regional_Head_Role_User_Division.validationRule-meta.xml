@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GM_Regional_Head_Role_User_Division</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT(ISPICKVAL(Team_Member__r.User_Division__c, &apos;Global Markets&apos;)) &amp;&amp; ISPICKVAL(Client_Role__c, &apos;GM Regional Head&apos;)</errorConditionFormula>
+    <errorMessage>GM Regional Head  cannot be assigned to team member who is not from Global Markets.</errorMessage>
+</ValidationRule>

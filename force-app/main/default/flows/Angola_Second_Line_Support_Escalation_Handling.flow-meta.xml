@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Email_Escalated_Angola_Support_Cash_Centre</name>
+        <label>Email Escalated Angola Support Cash Centre</label>
+        <locationX>342</locationX>
+        <locationY>1266</locationY>
+        <actionName>Case.US_3829_Escalated_Angola_Support_Cash_Centre</actionName>
+        <actionType>emailAlert</actionType>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>caseId</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Email_Escalated_Angola_Support_CIB_Credit</name>
+        <label>Email Escalated Angola Support CIB Credit</label>
+        <locationX>442</locationX>
+        <locationY>1331</locationY>
+        <actionName>Case.US_3829_Escalated_Angola_Support_CIB_Credit</actionName>
+        <actionType>emailAlert</actionType>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>caseId</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Email_Escalated_Angola_Support_CIB_TPS_Product</name>
+        <label>Email Escalated Angola Support CIB TPS Product</label>
+        <locationX>527</locationX>
+        <locationY>1417</locationY>
+        <actionName>Case.US_3829_Escalated_Angola_Support_CIB_TPS_Products</actionName>
+        <actionType>emailAlert</actionType>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>caseId</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Email_Escalated_Angola_Support_Collections</name>
+        <label>Email Escalated Angola Support Collections</label>
+        <locationX>626</locationX>
+        <locationY>1501</locationY>
+        <actionName>Case.US_3829_Escalated_Angola_Support_Collections</actionName>
+        <actionType>emailAlert</actionType>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>caseId</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Email_Escalated_Angola_Support_Compliance</name>
+        <label>Email Escalated Angola Support Compliance</label>
+        <locationX>724</locationX>
+        <locationY>1572</locationY>
+        <actionName>Case.US_3829_Escalated_Angola_Support_Compliance</actionName>
+        <actionType>emailAlert</actionType>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>caseId</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Email_Escalated_Angola_Support_Finance</name>
+        <label>Email Escalated Angola Support Finance</label>
+        <locationX>942</locationX>
+        <locationY>1576</locationY>
+        <actionName>Case.US_3829_Escalated_Angola_Support_Finance</actionName>
+        <actionType>emailAlert</actionType>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>caseId</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Email_Escalated_Angola_Support_Global_Markets</name>
+        <label>Email Escalated Angola Support Global Markets</label>
+        <locationX>1041</locationX>
+        <locationY>1493</locationY>
+        <actionName>Case.US_3829_Escalated_Angola_Support_Global_Markets</actionName>
+        <actionType>emailAlert</actionType>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>caseId</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Email_Escalated_Angola_Support_GMO</name>
+        <label>Email Escalated Angola Support GMO</label>
+        <locationX>1127</locationX>
+        <locationY>1407</locationY>
+        <actionName>Case.US_3829_Escalated_Angola_Support_GMO</actionName>
+        <actionType>emailAlert</actionType>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>caseId</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Email_Escalated_Angola_Support_Investigation</name>
+        <label>Email Escalated Angola Support Investigation</label>
+        <locationX>951</locationX>
+        <locationY>109</locationY>
+        <actionName>Case.US_3888_Escalated_Angola_Support_Investigation</actionName>
+        <actionType>emailAlert</actionType>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>caseId</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Email_Escalated_Angola_Support_Legal</name>
+        <label>Email Escalated Angola Support Legal</label>
+        <locationX>1235</locationX>
+        <locationY>1278</locationY>
+        <actionName>Case.US_3829_Escalated_Angola_Support_Legal</actionName>
+        <actionType>emailAlert</actionType>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>caseId</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Email_Escalated_Angola_Support_Payments</name>
+        <label>Email Escalated Angola Support Payments</label>
+        <locationX>1341</locationX>
+        <locationY>1174</locationY>
+        <actionName>Case.US_3829_Escalated_Angola_Support_Payments</actionName>
+        <actionType>emailAlert</actionType>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>caseId</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Email_Escalated_Angola_Support_PBB_Credits</name>
+        <label>Email Escalated Angola Support PBB Credits</label>
+        <locationX>1269</locationX>
+        <locationY>180</locationY>
+        <actionName>Case.US_3829_Escalated_Angola_Support_PBB_Credit</actionName>
+        <actionType>emailAlert</actionType>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>caseId</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Email_Escalated_Angola_Support_PBB_Products</name>
+        <label>Email Escalated Angola Support PBB Products</label>
+        <locationX>1418</locationX>
+        <locationY>268</locationY>
+        <actionName>Case.US_3829_Escalated_Angola_Support_PBB_Products</actionName>
+        <actionType>emailAlert</actionType>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>caseId</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Email_Escalated_Angola_Support_Processing_Team</name>
+        <label>Email Escalated Angola Support Processing Team</label>
+        <locationX>1600</locationX>
+        <locationY>369</locationY>
+        <actionName>Case.US_3829_Escalated_Angola_Support_Processing</actionName>
+        <actionType>emailAlert</actionType>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>caseId</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Email_Escalated_Angola_Support_Recons</name>
+        <label>Email Escalated Angola Support Recons</label>
+        <locationX>1772</locationX>
+        <locationY>464</locationY>
+        <actionName>Case.US_3829_Escalated_Angola_Support_Recons</actionName>
+        <actionType>emailAlert</actionType>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>caseId</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>49.0</apiVersion>
+    <decisions>
+        <description>Notify various public groups that a escalation of Angola 2nd Line Support Case has occured</description>
+        <name>Notify_Groups_Angola_Support_Escalation</name>
+        <label>Notify Groups Angola Support Escalation</label>
+        <locationX>758</locationX>
+        <locationY>500</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Team_Is_Cash_Centre</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>userTeamValue</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Cash Centre</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>queueName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Angola Support Cash Centre</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Email_Escalated_Angola_Support_Cash_Centre</targetReference>
+            </connector>
+            <label>Team Is Cash Centre</label>
+        </rules>
+        <rules>
+            <name>Team_is_CIB_Credit</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>userTeamValue</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>CIB Credit</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>queueName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Angola Support CIB Credit</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Email_Escalated_Angola_Support_CIB_Credit</targetReference>
+            </connector>
+            <label>Team is CIB Credit</label>
+        </rules>
+        <rules>
+            <name>Team_is_CIB_TPS_Products</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>userTeamValue</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>CIB TPS Products</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>queueName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Angola Support CIB TPS Products</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Email_Escalated_Angola_Support_CIB_TPS_Product</targetReference>
+            </connector>
+            <label>Team is CIB TPS Products</label>
+        </rules>
+        <rules>
+            <name>Team_is_Collections</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>userTeamValue</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>﻿Collections</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>queueName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Angola Support Collections</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Email_Escalated_Angola_Support_Collections</targetReference>
+            </connector>
+            <label>Team is ﻿Collections</label>
+        </rules>
+        <rules>
+            <name>Team_is_Compliance</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>userTeamValue</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Compliance</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>queueName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Angola Support Compliance</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Email_Escalated_Angola_Support_Compliance</targetReference>
+            </connector>
+            <label>Team is Compliance</label>
+        </rules>
+        <rules>
+            <name>Team_is_Finance</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>userTeamValue</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Finance</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>queueName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Angola Support Finance</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Email_Escalated_Angola_Support_Finance</targetReference>
+            </connector>
+            <label>Team is Finance</label>
+        </rules>
+        <rules>
+            <name>Team_is_Global_Markets</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>userTeamValue</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Global Markets</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>queueName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Angola Support Global Markets</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Email_Escalated_Angola_Support_Global_Markets</targetReference>
+            </connector>
+            <label>Team is Global Markets</label>
+        </rules>
+        <rules>
+            <name>Team_is_GMO</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>userTeamValue</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>﻿GMO</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>queueName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Angola Support GMO</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Email_Escalated_Angola_Support_GMO</targetReference>
+            </connector>
+            <label>Team is ﻿GMO</label>
+        </rules>
+        <rules>
+            <name>Team_is_Legal</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>userTeamValue</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Legal</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>queueName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Angola Support Legal</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Email_Escalated_Angola_Support_Legal</targetReference>
+            </connector>
+            <label>Team is Legal</label>
+        </rules>
+        <rules>
+            <name>Team_is_Payments</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>userTeamValue</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Payments</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>queueName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Angola Support Exchange Control</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>queueName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Angola Support Licensing</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>queueName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Angola Support Payments</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>queueName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Angola Support Origination</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>queueName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Angola Support Reporting</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Email_Escalated_Angola_Support_Payments</targetReference>
+            </connector>
+            <label>Team is Payments</label>
+        </rules>
+        <rules>
+            <name>Team_is_PBB_Credits</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>userTeamValue</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>PBB Credit</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>queueName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Angola Support PBB Credit</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Email_Escalated_Angola_Support_PBB_Credits</targetReference>
+            </connector>
+            <label>Team is PBB Credit</label>
+        </rules>
+        <rules>
+            <name>Team_is_PBB_Products</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>userTeamValue</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>PBB Products</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>queueName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Angola Support Electronic Channels</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>queueName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Angola Support Acquiring</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>queueName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Angola Support Bancassurance</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>queueName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Angola Support PBB Products</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>queueName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Angola Support Issuing</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Email_Escalated_Angola_Support_PBB_Products</targetReference>
+            </connector>
+            <label>Team is PBB Products</label>
+        </rules>
+        <rules>
+            <name>Team_is_Processing_Team</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>userTeamValue</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Processing</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>queueName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Angola Support AOM</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>queueName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Angola Support Cards</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>queueName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Angola Support Processing</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>queueName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Angola Support Processing and Clearing</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Email_Escalated_Angola_Support_Processing_Team</targetReference>
+            </connector>
+            <label>Team is Processing Team</label>
+        </rules>
+        <rules>
+            <name>Team_is_Recons</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>userTeamValue</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Recons</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>queueName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Angola Support Recons</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Email_Escalated_Angola_Support_Recons</targetReference>
+            </connector>
+            <label>Team is Recons</label>
+        </rules>
+        <rules>
+            <name>Team_is_Investigation</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>userTeamValue</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Investigation</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>queueName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Angola Support Investigation</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Email_Escalated_Angola_Support_Investigation</targetReference>
+            </connector>
+            <label>Team is Investigation</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Determine if the previous case owner was a user or a queue</description>
+        <name>oldOwner_User_OR_Queue</name>
+        <label>oldOwner = User OR Queue</label>
+        <locationX>227</locationX>
+        <locationY>451</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>oldOwnerIsUser</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>oldOwnerId</leftValueReference>
+                <operator>StartsWith</operator>
+                <rightValue>
+                    <stringValue>005</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>QueryUserRecord</targetReference>
+            </connector>
+            <label>oldOwnerIsUser</label>
+        </rules>
+        <rules>
+            <name>oldOwnerIsQueue</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>oldOwnerId</leftValueReference>
+                <operator>StartsWith</operator>
+                <rightValue>
+                    <stringValue>00G</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>QueryQueueDetails</targetReference>
+            </connector>
+            <label>oldOwnerIsQueue</label>
+        </rules>
+    </decisions>
+    <description>US-3829 Handle the escalation of Angola Second Line Support Cases</description>
+    <interviewLabel>Angola Second Line Support Escalation Handling {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Angola Second Line Support Escalation Handling</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Get queue name etc</description>
+        <name>QueryQueueDetails</name>
+        <label>QueryQueueDetails</label>
+        <locationX>530</locationX>
+        <locationY>445</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Notify_Groups_Angola_Support_Escalation</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>oldOwnerId</elementReference>
+            </value>
+        </filters>
+        <object>Group</object>
+        <outputAssignments>
+            <assignToReference>queueName</assignToReference>
+            <field>Name</field>
+        </outputAssignments>
+    </recordLookups>
+    <recordLookups>
+        <description>Query the User record to get the User Business Unit value of previous case owner</description>
+        <name>QueryUserRecord</name>
+        <label>QueryUserRecord</label>
+        <locationX>537</locationX>
+        <locationY>634</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Notify_Groups_Angola_Support_Escalation</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>oldOwnerId</elementReference>
+            </value>
+        </filters>
+        <object>User</object>
+        <outputAssignments>
+            <assignToReference>userBusinessUnitValue</assignToReference>
+            <field>Business_Unit__c</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>userTeamValue</assignToReference>
+            <field>User_Team__c</field>
+        </outputAssignments>
+    </recordLookups>
+    <startElementReference>oldOwner_User_OR_Queue</startElementReference>
+    <status>Obsolete</status>
+    <variables>
+        <name>caseId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Case that was passed from Process Builder Flow to this Flow for assessment</description>
+        <name>caseRecord</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Case</objectType>
+    </variables>
+    <variables>
+        <description>previous OwnerId of case</description>
+        <name>oldOwnerId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>The name of the queue that previously owned the case</description>
+        <name>queueName</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>This value determines if user is a Angola 2nd Line Support User</description>
+        <name>userBusinessUnitValue</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>userTeamValue</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

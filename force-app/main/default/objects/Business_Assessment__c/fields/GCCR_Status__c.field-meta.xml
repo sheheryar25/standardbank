@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GCCR_Status__c</fullName>
+    <description>Has the deal been submitted for conflicts clearance to the Compliance Control Room? Yes/No Remember that every single deal, whether it is a refinance or overdraft facility needs to be sent to the CCR for the necessary clearance. Even if you have obtained conflicts clearance, please disclose any potential conflicts that the deal team is aware of (if any).</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Has the deal been submitted for conflicts clearance to the CCR? Every single deal needs to be sent to the CCR for clearance. If conflicts clearance has been obtained, please disclose any potential conflicts that the deal team is aware of (if any).</inlineHelpText>
+    <label>GCCR Status</label>
+    <length>131072</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>6</visibleLines>
+</CustomField>

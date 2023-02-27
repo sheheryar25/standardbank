@@ -1,0 +1,36 @@
+<!-- **
+* @description  : Cookies Disclaimer Component
+* User Story : SFP-4963
+*
+* @author Syed Ovais Ali (syed.ali@standardbank.co.za)
+* @date July 2021
+*/ -->
+<aura:component description="PPCookieDisclaimer" implements="forceCommunity:availableForAllPageTypes" access="global">
+    <aura:attribute name="privacyPolicyLink" type="String" access="public"/>
+    <aura:attribute name="privacyPolicyLinkLabel" type="String" access="public"/>
+    <aura:attribute name="privacyPolicyText" type="String" access="public"/>
+    <aura:attribute name="showCookieDisclaimer" type="Boolean" default="true" access="private"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    
+    <aura:if isTrue="{!v.showCookieDisclaimer}">
+        <div id="cookie-disclaimer" class="mobile__cookie-disclaimer">
+            <div aura:id="header-cookie--container" class="header_mainSec">
+                <div  class="header-cookie--container header_InnerSec header-cookie--open slds-grid">
+                    <div>
+                        <div class="header_cookie-disclaimer--message">
+                            {!v.privacyPolicyText}
+                            <a class="header_cookie-disclaimer--message--link"
+                               href="{!v.privacyPolicyLink}" target="_blank"
+                               data-id= "uitlink_link"
+                               data-text= "Cookie Disclaimer | Privacy Statement"> {!v.privacyPolicyLinkLabel}</a>
+                        </div>
+                    </div>
+                    <button onclick="{!c.closeDisclaimer}" class="header_cookie-disclaimer--close slds-size_1-of-6 slds-medium-size_1-of-12 slds-large-size_1-of-12" data-id="uitlink_link" data-text="Cookie Disclaimer | Close">
+                        <img src="{!$Resource.PP_Assets + '/Icons/close.png'}"  class="closeIcon"/>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </aura:if>
+</aura:component>

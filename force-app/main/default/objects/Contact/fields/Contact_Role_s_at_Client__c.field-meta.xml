@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Role_s_at_Client__c</fullName>
+    <description>The functional role(s) performed by the Client Contact in dealing with Standard Bank. C-00000333</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The functional role(s) performed by the Client Contact in dealing with Standard Bank</inlineHelpText>
+    <label>Contact Role(s) at Client</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Approved Dealer</fullName>
+                <default>false</default>
+                <label>Approved Dealer</label>
+            </value>
+            <value>
+                <fullName>Authorised Person</fullName>
+                <default>false</default>
+                <label>Authorised Person</label>
+            </value>
+            <value>
+                <fullName>CC Survey Contact</fullName>
+                <default>false</default>
+                <label>CC Survey Contact</label>
+            </value>
+            <value>
+                <fullName>CommB Survey Contact</fullName>
+                <default>false</default>
+                <label>CommB Survey Contact</label>
+            </value>
+            <value>
+                <fullName>Direct Shareholder</fullName>
+                <default>false</default>
+                <label>Direct Shareholder</label>
+            </value>
+            <value>
+                <fullName>GM Survey Contact</fullName>
+                <default>false</default>
+                <label>GM Survey Contact</label>
+            </value>
+            <value>
+                <fullName>Group KYC Contact</fullName>
+                <default>false</default>
+                <label>Group KYC Contact</label>
+            </value>
+            <value>
+                <fullName>IB Survey Contact</fullName>
+                <default>false</default>
+                <label>IB Survey Contact</label>
+            </value>
+            <value>
+                <fullName>Indirect Shareholder</fullName>
+                <default>false</default>
+                <label>Indirect Shareholder</label>
+            </value>
+            <value>
+                <fullName>KYC Contact</fullName>
+                <default>false</default>
+                <label>KYC Contact</label>
+            </value>
+            <value>
+                <fullName>Pricing Contact</fullName>
+                <default>false</default>
+                <label>Pricing Contact</label>
+            </value>
+            <value>
+                <fullName>Primary GM Research Contact</fullName>
+                <default>false</default>
+                <label>Primary GM Research Contact</label>
+            </value>
+            <value>
+                <fullName>TPS Survey Contact</fullName>
+                <default>false</default>
+                <label>TPS Survey Contact</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

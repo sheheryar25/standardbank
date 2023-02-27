@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Week_End_Date_Not_Editable</fullName>
+    <active>true</active>
+    <description>Week_End_Date__c should not be edited after record&apos;s creation [SFP-4974]</description>
+    <errorConditionFormula>AND(
+     NOT(ISNEW()),
+     ISCHANGED( Week_End_Date__c )
+)</errorConditionFormula>
+    <errorMessage>Week_End_Date__c can&apos;t be edited after record&apos;s creation</errorMessage>
+</ValidationRule>

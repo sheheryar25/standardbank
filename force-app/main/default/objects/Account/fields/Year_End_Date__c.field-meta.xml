@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Year_End_Date__c</fullName>
+    <description>SFP-9319 [c] This field is introduced for CVCA feature to allow printable view of the Client Page similar to the CVCA Template.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The financial year end date for the client</inlineHelpText>
+    <label>Year End Date</label>
+    <length>15</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

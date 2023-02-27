@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ReasonForWinLossPickList__c</fullName>
+    <description>Reason for winning / losing the Opportunity</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Reason for winning / losing this Opportunity</inlineHelpText>
+    <label>Reason Won / Lost</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>StageName</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bank Strategy not Aligned to Client Strategy</fullName>
+                <default>false</default>
+                <label>Bank Strategy not Aligned to Client Strategy</label>
+            </value>
+            <value>
+                <fullName>Client Irrelevance / Unfavourable Relationship</fullName>
+                <default>false</default>
+                <label>Client Irrelevance / Unfavourable Relationship</label>
+            </value>
+            <value>
+                <fullName>Client Relevance / Relationship</fullName>
+                <default>false</default>
+                <label>Client Relevance / Relationship</label>
+            </value>
+            <value>
+                <fullName>Compliance Risk</fullName>
+                <default>false</default>
+                <label>Compliance Risk</label>
+            </value>
+            <value>
+                <fullName>Credit</fullName>
+                <default>false</default>
+                <label>Credit</label>
+            </value>
+            <value>
+                <fullName>Favourable Response Time</fullName>
+                <default>false</default>
+                <label>Favourable Response Time</label>
+            </value>
+            <value>
+                <fullName>Fewer Products Available and Poor Product Fit</fullName>
+                <default>false</default>
+                <label>Fewer Products Available and Poor Product Fit</label>
+            </value>
+            <value>
+                <fullName>Greater Product Mix and Exact Product Fit</fullName>
+                <default>false</default>
+                <label>Greater Product Mix and Exact Product Fit</label>
+            </value>
+            <value>
+                <fullName>Most Competitive Market Pricing</fullName>
+                <default>false</default>
+                <label>Most Competitive Market Pricing</label>
+            </value>
+            <value>
+                <fullName>Unfavourable Market Pricing</fullName>
+                <default>false</default>
+                <label>Unfavourable Market Pricing</label>
+            </value>
+            <value>
+                <fullName>Unfavourable Response Time</fullName>
+                <default>false</default>
+                <label>Unfavourable Response Time</label>
+            </value>
+            <value>
+                <fullName>Unfavourable Returns from Pricing Structure</fullName>
+                <default>false</default>
+                <label>Unfavourable Returns from Pricing Structure</label>
+            </value>
+            <value>
+                <fullName>Captured in Error / Duplicate / Expired</fullName>
+                <default>false</default>
+                <label>Captured in Error / Duplicate / Expired</label>
+            </value>
+            <value>
+                <fullName>Client Strategy Change</fullName>
+                <default>false</default>
+                <label>Client Strategy Change</label>
+            </value>
+            <value>
+                <fullName>Unfavorable Returns from Pricing Structure</fullName>
+                <default>false</default>
+                <label>Unfavorable Returns from Pricing Structure</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>3 - Closed Won</controllingFieldValue>
+            <valueName>Client Relevance / Relationship</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>3 - Closed Won</controllingFieldValue>
+            <valueName>Favourable Response Time</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>3 - Closed Won</controllingFieldValue>
+            <valueName>Greater Product Mix and Exact Product Fit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>3 - Closed Won</controllingFieldValue>
+            <valueName>Most Competitive Market Pricing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>4 - Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Cancel</controllingFieldValue>
+            <valueName>Bank Strategy not Aligned to Client Strategy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>4 - Closed Lost</controllingFieldValue>
+            <valueName>Client Irrelevance / Unfavourable Relationship</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>4 - Closed Lost</controllingFieldValue>
+            <valueName>Fewer Products Available and Poor Product Fit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>4 - Closed Lost</controllingFieldValue>
+            <valueName>Unfavourable Market Pricing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>4 - Closed Lost</controllingFieldValue>
+            <valueName>Unfavourable Response Time</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>4 - Closed Lost</controllingFieldValue>
+            <valueName>Unfavourable Returns from Pricing Structure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancel</controllingFieldValue>
+            <valueName>Compliance Risk</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancel</controllingFieldValue>
+            <valueName>Credit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancel</controllingFieldValue>
+            <valueName>Captured in Error / Duplicate / Expired</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancel</controllingFieldValue>
+            <valueName>Client Strategy Change</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancel</controllingFieldValue>
+            <valueName>Unfavorable Returns from Pricing Structure</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,12 @@
+.THIS .Red-Negative{
+    color: token(SBRedNegative);
+}
+.THIS .Yellow-Attention{
+    color: token(SBYellowAttention);
+}
+.THIS .Green-Positive{
+    color: token(SBGreenPositive);
+}
+.THIS {
+    height: 100%;
+}

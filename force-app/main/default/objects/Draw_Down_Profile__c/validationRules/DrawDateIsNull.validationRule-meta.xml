@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DrawDateIsNull</fullName>
+    <active>true</active>
+    <description>case#141 - Rudolf Niehaus
+Draw date cannot be null. This will force a user on the vf page for draw down profiles to enter a value</description>
+    <errorConditionFormula>IF(ISBLANK( 
+TEXT( Draw_Date__c ) 
+) &amp;&amp; 
+NOT( 
+ISBLANK( 
+TEXT( Funding_Required__c  ) ) 
+),true,false)</errorConditionFormula>
+    <errorDisplayField>Draw_Date__c</errorDisplayField>
+    <errorMessage>Please select a Draw Date when adding a Draw Down Profile record.</errorMessage>
+</ValidationRule>

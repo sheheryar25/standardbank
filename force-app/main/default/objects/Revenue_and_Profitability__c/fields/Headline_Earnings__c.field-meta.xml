@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Headline_Earnings__c</fullName>
+    <description>Headline Earnings reflect the revenue earned less any profits, losses, and interest expenses (NPAT) (EN-927).</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Headline Earnings reflect the revenue earned less any profits, losses, and interest expenses (NPAT).</inlineHelpText>
+    <label>Headline Earnings</label>
+    <precision>17</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_Review_Year_format</fullName>
+    <active>true</active>
+    <description>Validation rule to check the value entered in the KYC Review Year / Period field and to limit it to YYYY format</description>
+    <errorConditionFormula>AND(
+IF(NOT(ISBLANK(Review_Year_Period__c )) &amp;&amp; LEN( Review_Year_Period__c ) &lt;&gt; 4, true, false) 
+
+||  
+
+IF(NOT(ISBLANK(Review_Year_Period__c )) &amp;&amp; NOT(ISNUMBER(Review_Year_Period__c )),true,false) ,
+NOT( $Setup.Environment_Variable__c.Ignore_Validation_Rule__c ))</errorConditionFormula>
+    <errorDisplayField>Review_Year_Period__c</errorDisplayField>
+    <errorMessage>Please enter value in YYYY format.</errorMessage>
+</ValidationRule>

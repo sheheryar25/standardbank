@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Chinese_Segment__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Used to define Clients that make up the portfolio of Clients for the Client Coverage Chinese Segment team. This field is used for backend reporting purposes only and is updated using a dataload.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Client that belongs in the Chinese Segment potfolio</inlineHelpText>
+    <label>Chinese Segment</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

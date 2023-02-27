@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validate_5th_Follow_up_Date</fullName>
+    <active>true</active>
+    <description>Before filling 5th Follow up date, 4th follow up date should be completed</description>
+    <errorConditionFormula>(ISNULL(X4th_Client_follow_up__c) &amp;&amp; NOT(ISNULL(X5th_Client_follow_up__c))) || X4th_Client_follow_up__c &gt; X5th_Client_follow_up__c</errorConditionFormula>
+    <errorMessage>4th Client follow up date must be completed before the 5th Client follow up date and 5th Client follow up date must be later than the 4th Client follow up date</errorMessage>
+</ValidationRule>

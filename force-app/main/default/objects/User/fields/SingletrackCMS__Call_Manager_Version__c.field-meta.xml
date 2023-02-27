@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SingletrackCMS__Call_Manager_Version__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The version of Call Manager to use.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The version of Call Manager to use.</inlineHelpText>
+    <label>Call Manager Version</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Previous</fullName>
+                <default>false</default>
+                <label>Previous</label>
+            </value>
+            <value>
+                <fullName>New</fullName>
+                <default>false</default>
+                <label>New</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

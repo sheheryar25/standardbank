@@ -1,0 +1,25 @@
+.THIS .search-input {
+  outline: none;
+  border: 0;
+  padding: calc(0.124rem + 1px) 0.625rem; 
+  min-height: 1.625rem; }
+
+.THIS .search-input:focus {
+  border: none; }
+
+.THIS .slds-pill_container {
+  -webkit-transition: border .1s linear,background-color .1s linear;
+  transition: border 0.1s linear, background-color 0.1s linear; }
+
+.THIS .slds-pill_container.slds-has-focus {
+  outline: 0;
+  border-color: #1589ee;
+  background-color: white;
+  box-shadow: 0 0 3px #0070D2; }
+
+.THIS .slds-has-error .slds-pill_container {
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(194, 57, 52);
+    box-shadow: rgb(194, 57, 52) 0 0 0 1px inset;
+    background-clip: padding-box;
+}

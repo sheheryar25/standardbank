@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Entitlement__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>SGPRT-263 - This field looks up to an Entitlement record.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>What entitlement is linked to this Service Type?</inlineHelpText>
+    <label>Entitlement</label>
+    <referenceTo>Entitlement</referenceTo>
+    <relationshipLabel>Service Types</relationshipLabel>
+    <relationshipName>Service_Types</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

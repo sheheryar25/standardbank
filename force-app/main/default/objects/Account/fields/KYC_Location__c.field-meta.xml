@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>KYC_Location__c</fullName>
+    <description>KYC Location will be used to determine the routing for the submission of the loader form.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Location of the Standard Bank entity where Know Your Client (KYC) is required to be completed</inlineHelpText>
+    <label>KYC Location</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>NONE - Asia (for Asia User Only)</fullName>
+                <default>false</default>
+                <label>NONE - Asia (for Asia User Only)</label>
+            </value>
+            <value>
+                <fullName>SBAO - Standard Bank de Angola SA</fullName>
+                <default>false</default>
+                <label>SBAO - Standard Bank de Angola SA</label>
+            </value>
+            <value>
+                <fullName>SBBW - Stanbic Bank Botswana Ltd</fullName>
+                <default>false</default>
+                <label>SBBW - Stanbic Bank Botswana Ltd</label>
+            </value>
+            <value>
+                <fullName>SBCD - Stanbic Bank Congo SARL</fullName>
+                <default>false</default>
+                <label>SBCD - Stanbic Bank Congo SARL</label>
+            </value>
+            <value>
+                <fullName>SBCI - Standard Bank Cote D&apos;Ivoire SA</fullName>
+                <default>false</default>
+                <label>SBCI - Standard Bank Cote D&apos;Ivoire SA</label>
+            </value>
+            <value>
+                <fullName>SBGH - Stanbic Bank Ghana Ltd</fullName>
+                <default>false</default>
+                <label>SBGH - Stanbic Bank Ghana Ltd</label>
+            </value>
+            <value>
+                <fullName>SBKE - CFC Stanbic Bank Ltd Kenya</fullName>
+                <default>false</default>
+                <label>SBKE - CFC Stanbic Bank Ltd Kenya</label>
+            </value>
+            <value>
+                <fullName>SBLS - Standard Lesotho Bank Ltd</fullName>
+                <default>false</default>
+                <label>SBLS - Standard Lesotho Bank Ltd</label>
+            </value>
+            <value>
+                <fullName>SBMU - Standard Bank (Mauritius) Ltd</fullName>
+                <default>false</default>
+                <label>SBMU - Standard Bank (Mauritius) Ltd</label>
+            </value>
+            <value>
+                <fullName>SBMW - Standard Bank Ltd Malawi</fullName>
+                <default>false</default>
+                <label>SBMW - Standard Bank Ltd Malawi</label>
+            </value>
+            <value>
+                <fullName>SBMZ - Standard Bank SARL Mozambique</fullName>
+                <default>false</default>
+                <label>SBMZ - Standard Bank SARL Mozambique</label>
+            </value>
+            <value>
+                <fullName>SBNA - Standard Bank Namibia Ltd</fullName>
+                <default>false</default>
+                <label>SBNA - Standard Bank Namibia Ltd</label>
+            </value>
+            <value>
+                <fullName>SBN - Stanbic IBTC Bank Plc</fullName>
+                <default>false</default>
+                <label>SBN - Stanbic IBTC Bank Plc</label>
+            </value>
+            <value>
+                <fullName>SBSA - Standard Bank of South Africa Ltd</fullName>
+                <default>false</default>
+                <label>SBSA - Standard Bank of South Africa Ltd</label>
+            </value>
+            <value>
+                <fullName>SBSZ - Standard Bank Swaziland Ltd</fullName>
+                <default>false</default>
+                <label>SBSZ - Standard Bank Swaziland Ltd</label>
+            </value>
+            <value>
+                <fullName>SBT - Standard Bank of South Africa Ltd, Taipei Bra</fullName>
+                <default>false</default>
+                <label>SBT - Standard Bank of South Africa Ltd, Taipei Bra</label>
+            </value>
+            <value>
+                <fullName>SBTZ - Stanbic Bank Tanzania Ltd</fullName>
+                <default>false</default>
+                <label>SBTZ - Stanbic Bank Tanzania Ltd</label>
+            </value>
+            <value>
+                <fullName>SBUG - Stanbic Bank Uganda Ltd</fullName>
+                <default>false</default>
+                <label>SBUG - Stanbic Bank Uganda Ltd</label>
+            </value>
+            <value>
+                <fullName>SBZM - Stanbic Bank Zambia Ltd</fullName>
+                <default>false</default>
+                <label>SBZM - Stanbic Bank Zambia Ltd</label>
+            </value>
+            <value>
+                <fullName>SBZW - Stanbic Bank Zimbabwe Ltd</fullName>
+                <default>false</default>
+                <label>SBZW - Stanbic Bank Zimbabwe Ltd</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

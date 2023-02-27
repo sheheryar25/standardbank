@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_phone_or_email</fullName>
+    <active>true</active>
+    <description>Users should not be able to create a contact without supplying phone number, email address or both.
+Case #6251- Change contact to use TestFatcory. Should only fire on non Client 
+Case#6251 TR - Phone or Email required, change 13digit ID to 15digit</description>
+    <errorConditionFormula>AND($RecordType.Name != &apos;Client Contact Record Type&apos;,
+$RecordType.Name != &apos;Inactive Client Contact Record Type&apos;
+,LEN(Email)=0,LEN(Phone)=0)</errorConditionFormula>
+    <errorMessage>You must enter a phone number or email address when creating or editing a Contact</errorMessage>
+</ValidationRule>

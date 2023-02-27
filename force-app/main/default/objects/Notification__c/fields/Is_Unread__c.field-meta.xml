@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Unread__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>OneHub: This field indicates if the message was read or unread by users on the OneHub dashboard.(US-4388)</description>
+    <externalId>false</externalId>
+    <label>Is Unread</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

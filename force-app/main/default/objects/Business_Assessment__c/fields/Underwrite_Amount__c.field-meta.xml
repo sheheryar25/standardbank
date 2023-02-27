@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Underwrite_Amount__c</fullName>
+    <description>The total amount of the underwrite provided by Standard Bank. Underwrite implies providing more than the bank intends to hold.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The total amount of the underwrite provided by Standard Bank. Underwrite implies providing more than the bank intends to hold.  If the transaction is not an underwrite, but merely a participation or bilateral, then do not fill any amount in this field.</inlineHelpText>
+    <label>Underwrite Amount</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

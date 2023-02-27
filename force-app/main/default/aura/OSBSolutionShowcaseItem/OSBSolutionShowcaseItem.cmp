@@ -1,0 +1,55 @@
+<aura:component>
+    <aura:attribute name="title" type="String" />
+    <aura:attribute name="content" type="String" />
+    <aura:attribute name="shortContent" type="String"/>
+    <aura:attribute name="link" type="String" />
+    <aura:attribute name="linkDirect" type="String" />
+    <aura:attribute name="linkLabel" type="String" />
+    <aura:attribute name="solutionId" type="String" />
+    <aura:attribute name="logo" type="Object" />
+    <aura:attribute name="largeLogo" type="Object" />
+    <aura:attribute name="dashboard" type="Boolean" default="false"/>
+    <aura:attribute name="modalIsSolution" type="Boolean" default="true" />
+    <aura:attribute name="isComingSoon" type="Boolean" default="false" />
+    <aura:attribute name="solutionSiteURL" type="String"/>
+    <aura:attribute name="isOnShowcase" type="boolean" default="false" access="public"/> 
+    
+    <aura:attribute name="isOpen" type="boolean" default="false"/>
+    <aura:attribute name="currentTab" type="String" default="Dashboard"/>
+    
+    <div class="solutionShowcaseItem" onclick="{! c.createModalWindow}" data-id="uitlink_link" data-text="{!'Solutions | ' + v.title}">
+        <aura:if isTrue="{!v.title == 'AUTHENTIFI'}">
+        
+        <div class="solutionShowcaseItem__logo mb_8">
+            <ui:outputRichText aura:id="outputRT" value="{!v.logo}" />
+        </div>
+    	<div class="solutionShowcaseItem__title mb_8">
+        	<a>{!v.title}<sup>TM</sup></a>
+        </div>
+        <div class="solutionShowcaseItem__content">
+            {!v.shortContent}
+        </div>
+        <aura:set attribute="else">
+            <div class="solutionShowcaseItem__logo mb_8">
+                <ui:outputRichText aura:id="outputRT" value="{!v.logo}" />
+            </div>
+            <div class="solutionShowcaseItem__title mb_8">
+                <a>{!v.title}</a>
+            </div>
+            <div class="solutionShowcaseItem__content">
+                {!v.shortContent}
+            </div>
+        </aura:set>
+    </aura:if>
+    </div>
+    
+    <aura:if isTrue="{!v.isOpen}">
+        <c:OSBModal isOpen="{!v.isOpen}" modalIsComingSoon="{! v.isComingSoon}"
+                    modalTitle="{!v.title}" modalLogo="{! v.largeLogo}"
+                    modalContent="{! v.content}" modalIsSolution="{! v.modalIsSolution}"
+                    modalFirstButtonURL="{! v.link}" modalScndButtonURL="{! v.solutionSiteURL}"
+                    modalType="secondLevel" recordId="{! v.solutionId}"
+                    currentTab="{! v.currentTab}" 
+                    isOnShowcase="{! v.isOnShowcase}"/>
+    </aura:if>
+</aura:component>

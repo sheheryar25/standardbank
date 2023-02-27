@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Estimated_Revenue_Schedule_Fees_and_Margin</fullName>
+    <active>true</active>
+    <description>Record type to store Estimated Revenue Schedule for Non Interest Revenue and Interest Revenue products</description>
+    <label>Estimated Revenue Schedule Fees and Margin</label>
+</RecordType>

@@ -1,0 +1,65 @@
+<aura:component controller="CI_NewsController" extends="c:CI_Base">
+    <aura:attribute type="Integer" default="0" access="private" name="queuedLongTermActions" />
+    
+    <aura:if isTrue="{!v.queuedLongTermActions > 0}">
+        <div class="slds-text-align_center slds-is-relative" style="height:80px">
+            <lightning:spinner aura:id="spinner" variant="brand" size="medium" style="margin-top: 30px;margin-bottom: 60px;" />
+        </div>
+    </aura:if>
+    
+    <aura:method name="getNewsForClient">
+        <aura:attribute name="clientId" type="String" />
+        <aura:attribute name="numberOfArticlesPerType" type="Integer" />
+        <aura:attribute name="publicationDate" type="Date" />
+        <aura:attribute name="probability" type="String" />
+        <aura:attribute name="isGettingClientSectorNews" type="Boolean" />
+        <aura:attribute name="sortingArticles" type="Boolean" />
+        <aura:attribute name="callback" type="function" />
+    </aura:method>
+    <aura:method name="getNews">
+        <aura:attribute name="numberOfLastViewClients" type="Integer" />
+        <aura:attribute name="numberOfArticlesPerType" type="Integer" />
+        <aura:attribute name="publicationDate" type="Date" />
+        <aura:attribute name="probability" type="String" />
+        <aura:attribute name="isGettingClientSectorNews" type="Boolean" />
+        <aura:attribute name="sortingArticles" type="Boolean" />
+        <aura:attribute name="callback" type="function" />
+    </aura:method>
+    <aura:method name="getSavedNews">
+        <aura:attribute name="clientId" type="String" />
+        <aura:attribute name="callback" type="function" />
+    </aura:method>
+    <aura:method name="doSaveNews">
+        <aura:attribute name="an" type="String" />
+        <aura:attribute name="groupSectors" type="String" />
+        <aura:attribute name="subSectors" type="String" />
+        <aura:attribute name="hClients" type="String" />
+        <aura:attribute name="mClients" type="String" />
+        <aura:attribute name="lClients" type="String" />
+        <aura:attribute name="title" type="String" />
+        <aura:attribute name="snippet" type="String" />
+        <aura:attribute name="publicationDate" type="String" />
+        <aura:attribute name="publisherName" type="String" />
+        <aura:attribute name="regions" type="String" />
+        <aura:attribute name="index" type="String" />
+        <aura:attribute name="pred" type="String" />
+        <aura:attribute name="callback" type="function" />
+    </aura:method>
+    <aura:method name="getNewsArticle">
+        <aura:attribute name="articleId" type="String" />
+        <aura:attribute name="callback" type="function" />
+    </aura:method>
+    <aura:method name="setArticleFeedback">
+        <aura:attribute name="articleId" type="String" />
+        <aura:attribute name="rating" type="Decimal" />
+        <aura:attribute name="callback" type="function" />
+    </aura:method>
+    <aura:method name="getArticleStatus">
+        <aura:attribute name="articleId" type="String" />
+        <aura:attribute name="callback" type="function" />
+    </aura:method>
+    <!--<aura:method name="getAllArticlesStatus">
+        <aura:attribute name="allNews" type="Object[]"/>
+        <aura:attribute name="callback" type="function"/>
+    </aura:method>-->
+</aura:component>

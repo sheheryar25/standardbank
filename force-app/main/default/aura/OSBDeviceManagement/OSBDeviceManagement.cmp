@@ -1,0 +1,120 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes,force:appHostable" access="global" controller="OSB_DeviceManagement_CTRL" >
+   
+    <aura:attribute name="Edit" type="Boolean" default="true" access="public" />
+    <aura:attribute name="toastMessage" type="String" access="public" />
+    <aura:attribute name="toastType" type="String" access="public" />
+    <aura:attribute name="showMessageToast" type="Boolean" default="false" access="public" />
+    <aura:attribute name="loading" type="Boolean" default="true" access="public" />
+    <aura:attribute name="isPreferred" type="Boolean" default = "False" access ="public" />
+    <aura:attribute name="openModal" type="Boolean" default = "false" access="public" />
+    <aura:attribute name="removeDevice" type = "Boolean" default = "false" access ="public" />
+    <aura:attribute name="removeAllDevices" type = "Boolean" default = "false" access ="public" />
+    <aura:attribute name="qrTimedOut" type="Boolean" default="false" access="public"/>
+    <aura:attribute name="deviceRemoved" type="Boolean" default="false" access="public"/>
+    <aura:attribute name="allDevicesRemoved" type="Boolean" default="false" access="public"/>
+    <aura:attribute name="preferedAuthChanged" type="Boolean" default="false" access="private"/>
+    <aura:attribute name="unexpectedError" type="Boolean" default="false" access="public"/>    
+    <aura:attribute name="deviceCount" type = "Integer" access="public"/>
+    <aura:attribute name="maxDevicesAllowed" type="Integer" default="32" access="public"/>
+    <aura:attribute name="cantAddDevice" type ="Boolean" default= "false" access="public"/>
+    <aura:attribute name ="allDeviceAuthIdList" type ="List" access="public"/>
+    <aura:attribute name="kickinPagination" type= "Boolean" default = "false" access="public"/>
+    <aura:attribute name="deviceDetailsList" type="List" access="public" />
+    <aura:attribute name ="deviceDetailsKeyList" type="List" access="public"/>
+    <aura:attribute name ="devicesToDeleteList" type ="List" access="public"/>
+    <aura:attribute name ="allDeviceAuthList" type ="List" access="public"/>
+    <aura:attribute name ="blankResponse" type= "boolean" default="false" access="public"/>
+    <aura:attribute name ="noOfAuthenticators" type="Integer" default="0" access="public" />
+    <aura:attribute name ="error" type= "boolean" default="false" access="public"/>
+    <aura:attribute name ="noDevicesLinked" type= "boolean" default="false" access="public"/>
+    
+    <lightning:navigation aura:id="navService"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    <aura:handler  event ="c:OSBDeviceManagementEvent"  action="{!c.handleDeleteDevice}"/>
+    <aura:handler name="closePopUpEvent" event="c:OSBClosePopUpEvent" action="{!c.handleDeleteAllDevices}" />
+    <aura:handler name="change" value="{!v.showMessageToast}" action="{!c.closeTimedToast}"/>
+    
+    <div class="device-container slds-small-size--6-of-6 slds-medium-size--4-of-6  slds-large-size--12-of-12">
+        <aura:if isTrue="{!v.loading}">
+            <c:OSBLoadingScreen/>
+        </aura:if>
+        <div class="device-rectangle slds-small-size--6-of-6 slds-medium-size--4-of-6 slds-large-size--6-of-12">
+
+            <aura:if isTrue="{!v.deviceRemoved}">
+                <c:OSBToastComponent closePopup="{!v.deviceRemoved}" toastType="success"
+                                     toastMessage="The device has been successfully removed. Please wait for the page to reload." top="18%" left="50%">
+                </c:OSBToastComponent>
+            </aura:if>
+
+            <aura:if isTrue="{!v.allDevicesRemoved}">
+                <c:OSBToastComponent closePopup="{!v.allDevicesRemoved}" toastType="success"
+                                     toastMessage="All devices have been successfully removed. Please wait for the page to reload." top="18%" left="50%">
+                </c:OSBToastComponent>
+            </aura:if>
+
+            <aura:if isTrue="{!v.qrTimedOut}">
+                <c:OSBToastComponent closePopup="{!v.qrTimedOut}" toastType="warning" top="18%" left="50%"
+                                     toastMessage="QR code timed out. Please use device management to add a new device"/>
+            </aura:if>
+
+            <aura:if isTrue="{!v.unexpectedError}">
+                <c:OSBToastComponent closePopup="{!v.unexpectedError}" toastType="warning" top="18%" left="50%"
+                                     toastMessage="An unexpected error occured"/>
+            </aura:if>
+            <div class="device-list slds-size--6-of-6 slds-medium-size--8-of-12 slds-large-size--4-of-6">
+                <div class="Sign__icon">
+                    <i class="ms-icn_shield_lock"></i>
+                </div>
+                <h1 class="device__title">Device Management</h1>
+                <div class="device__subtitle">
+                    Manage the devices that you use to access OneHub here 
+                </div>                
+            </div>
+            <div class="rectangle">
+                <div class="linked-devices">
+                    Linked Devices
+                </div>
+            </div>
+            <div class="add-remove-devices slds-grid" >
+                <div class=" device   slds-small-size--3-of-6 slds-medium-size--3-of-6 slds-large-size--3-of-12 ">                   
+                    <lightning:button variant="base" class="ms-icn_add_circle noHighlight " onclick="{! c.handleAddDevice }"/>
+                    <lightning:button variant="base" label="ADD DEVICE" class=" noHighlight " onclick="{! c.handleAddDevice }"/>
+                </div>
+                <aura:if isTrue="{!not(empty(v.deviceDetailsList))}">
+                    <div class="remove-all-devices slds-small-size--3-of-6 slds-medium-size--3-of-6 slds-large-size--3-of-12" >
+                        <lightning:button variant="base" label="Remove all devices" onclick="{!c.handleRemoveAllDevices}" class="noHighlight" ></lightning:button>
+                    </div>
+                </aura:if>
+            </div> 
+            <div class="device-table">
+                <aura:if isTrue="{!v.blankResponse}">
+                    <div style="text-align: center">No data received from server. Please try after sometime.</div>
+                   <aura:set attribute ="else">
+                       <aura:if isTrue="{!not(empty(v.allDeviceAuthList))}">
+                                <div class="pagination">             
+                                           <c:OSBPagination data="{!v.allDeviceAuthList}" pageSize="5" full="{!v.cantAddDevice}" contentComponent="OSBDeviceManagement"/>
+                                    <!--<c:OSBDeviceManagementTable allDeviceAuthList= "{!v.allDeviceAuthList}"/>-->
+                                </div> 
+                           <aura:set attribute ="else">
+                               <div style="text-align: center">You don't have any linked devices.</div>
+                           </aura:set>
+                       </aura:if>
+                    </aura:set>
+                </aura:if>
+            </div>
+        </div>
+    </div>
+    <aura:if isTrue="{!v.openModal}">
+        <c.OSBNewDeviceModal isOpen="true" />
+    </aura:if>
+    
+    <aura:if isTrue="{!v.cantAddDevice}" >
+        <c:OSBMarketGramPopup title="You can’t add more devices" content="You have added the maximum amount of devices and cannot add more."  
+                              infoPopup="true"/>
+    </aura:if>
+    
+    <aura:if isTrue="{!v.removeAllDevices}">
+        <c:OSBMarketGramPopup title="Remove all devices?" content="Removing all devices will unlink all authenticators from your profile." icon ="QuestionMark"/>
+    </aura:if>
+</aura:component>

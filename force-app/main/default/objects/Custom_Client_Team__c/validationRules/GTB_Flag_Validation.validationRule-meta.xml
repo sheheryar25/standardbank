@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GTB_Flag_Validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(GTB__c,
+ NOT(ISPICKVAL(Team_Member__r.User_Division__c, &quot;Transactional Products and Services&quot;)))</errorConditionFormula>
+    <errorMessage>GTB (Global Transaction Banker) flag cannot be checked against the team member who is not from Transactional Products and Services</errorMessage>
+</ValidationRule>

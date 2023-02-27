@@ -1,0 +1,27 @@
+.THIS .desktop_background {
+    background-color: white;
+}
+
+.THIS .mobile_background {
+    background-color: transparent;
+}
+
+.THIS ul.slds-tabs_default__nav {
+    text-align: center;
+}
+
+.THIS li.slds-tabs_default__item {
+    width: 50%;
+}
+
+.THIS .slds-tabs_default {
+    background-color: transparent;
+}
+
+.THIS .slds-tabs__nav-scroller {
+    background-color: white;
+}
+
+.THIS .negative_top_margin {
+    margin-top:-35px;
+}

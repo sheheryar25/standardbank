@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Asset_Manager__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>US-4080 - This field captures the Asset Manager involved in this service request (DD-MM-YYYY)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Is there an Asset Manager involved in this request? If so, add them here.</inlineHelpText>
+    <label>Asset Manager</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Cases (Asset Manager)</relationshipLabel>
+    <relationshipName>Cases3</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

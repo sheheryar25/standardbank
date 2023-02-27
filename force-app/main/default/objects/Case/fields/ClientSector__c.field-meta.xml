@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ClientSector__c</fullName>
+    <externalId>false</externalId>
+    <label>Client Sector</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bank</fullName>
+                <default>false</default>
+                <label>Bank</label>
+            </value>
+            <value>
+                <fullName>NBFI</fullName>
+                <default>false</default>
+                <label>NBFI</label>
+            </value>
+            <value>
+                <fullName>Consumer</fullName>
+                <default>false</default>
+                <label>Consumer</label>
+            </value>
+            <value>
+                <fullName>Financial Institutions</fullName>
+                <default>false</default>
+                <label>Financial Institutions</label>
+            </value>
+            <value>
+                <fullName>Industrials</fullName>
+                <default>false</default>
+                <label>Industrials</label>
+            </value>
+            <value>
+                <fullName>Internal / Grouped</fullName>
+                <default>false</default>
+                <label>Internal / Grouped</label>
+            </value>
+            <value>
+                <fullName>Mining and Metals</fullName>
+                <default>false</default>
+                <label>Mining and Metals</label>
+            </value>
+            <value>
+                <fullName>Oil and Gas</fullName>
+                <default>false</default>
+                <label>Oil and Gas</label>
+            </value>
+            <value>
+                <fullName>Power and Infrastructure</fullName>
+                <default>false</default>
+                <label>Power and Infrastructure</label>
+            </value>
+            <value>
+                <fullName>Real Estate</fullName>
+                <default>false</default>
+                <label>Real Estate</label>
+            </value>
+            <value>
+                <fullName>Sovereign / Public Sector</fullName>
+                <default>false</default>
+                <label>Sovereign / Public Sector</label>
+            </value>
+            <value>
+                <fullName>Telecoms and Media</fullName>
+                <default>false</default>
+                <label>Telecoms and Media</label>
+            </value>
+            <value>
+                <fullName>Unknown Sector</fullName>
+                <default>false</default>
+                <label>Unknown Sector</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

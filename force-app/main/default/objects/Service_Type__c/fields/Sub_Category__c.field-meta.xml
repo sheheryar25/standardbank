@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Category__c</fullName>
+    <description>SGPRT-263 - This field represents the sub category of service that is required.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>What sub category of service is required?</inlineHelpText>
+    <label>Sub Category</label>
+    <length>100</length>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

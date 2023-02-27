@@ -1,0 +1,123 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" controller="OSB_ApiProducts_CTRL">
+    <lightning:navigation aura:id="navService"/>
+    <aura:attribute name="ourApiProducts" type="Object[]" access="public" />
+    <aura:attribute name="comingSoonProducts" type="Object[]" access="public"/>
+    <aura:attribute name="full" type="Boolean" default="false" access="public"/>
+    <aura:attribute name="tile" type="Boolean" default="false" access="public"/>
+    <aura:attribute name="class" type="String" access="public" />
+    <aura:attribute name="isOpen" type="boolean" default="false" access="public"/>
+    <aura:attribute name="modalIsComingSoon" type="boolean" default="false" access="public"/>
+    <aura:attribute name="modalIsSolution" type="boolean" default="false" access="public"/>
+    <aura:attribute name="apiDocAvailable" type="boolean" default="false" access="public"/>
+    <aura:attribute name="modalType" type="String" access="public"/>
+    <aura:attribute name="modalTitle" type="String" access="public"/>
+    <aura:attribute name="modalContent" type="String" access="public"/>
+    <aura:attribute name="modalSignUpURL" type="String" access="public"/>
+    <aura:attribute name="modalDocumentURL" type="String" access="public"/>
+    <aura:attribute name="searchKeyword" access="public" type="String"/>
+    <aura:attribute name="noSearchResults" type="Boolean" access="public" default="false" />
+    <aura:attribute name="isSearched" type="Boolean" access="public" default="false" />
+    <aura:attribute name="currentTab" type="String" default="Dashboard" access="public"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:if isTrue="{!v.tile}">
+        
+        <div class="{!'apiProducts__container--tile ' + v.class}">
+            <h2 class="apiProducts__container--tile__title">API Products</h2>
+            <div class="apiProducts--tile">
+                <ul>
+                    <aura:iteration items="{!v.ourApiProducts}" var="ourApiProduct" end="4">
+                        <li class="mb_32 clickableli" onclick="{! c.createModalWindow}" data-id="uitlink_link" data-text="{!'Dashboard | API Products | ' + ourApiProduct.Title}" id="{! ourApiProduct.Is_coming_soon__c + '|' + ourApiProduct.Title + '|' + ourApiProduct.Introduction__c + '|' + 'api-details?apiId=' + ourApiProduct.Id + '|' + ourApiProduct.Sign_Up_URL__c + '|' + ourApiProduct.URL__c}">
+                            <aura:if isTrue="{!ourApiProduct.Is_coming_soon__c}">
+                                <div class="apiProducts__comingSoon__container" data-id="uitlink_link" data-text="{!'Dashboard | API Products | ' + ourApiProduct.Title}" id="{! ourApiProduct.Is_coming_soon__c + '|' + ourApiProduct.Title + '|' + ourApiProduct.Introduction__c + '|' + 'api-details?apiId=' + ourApiProduct.Id + '|' + ourApiProduct.Sign_Up_URL__c + '|' + ourApiProduct.URL__c}">
+                                    <div class="apiProducts-title--tile_comingSoon" data-id="uitlink_link" data-text="{!'Dashboard | API Products | ' + ourApiProduct.Title}" id="{! ourApiProduct.Is_coming_soon__c + '|' + ourApiProduct.Title + '|' + ourApiProduct.Introduction__c + '|' + 'api-details?apiId=' + ourApiProduct.Id + '|' + ourApiProduct.Sign_Up_URL__c + '|' + ourApiProduct.URL__c}">
+                                        <a class="apiProducts-title--tile" data-id="uitlink_link" data-text="{!'Dashboard | API Products | ' + ourApiProduct.Title}" id="{! ourApiProduct.Is_coming_soon__c + '|' + ourApiProduct.Title + '|' + ourApiProduct.Introduction__c + '|' + 'api-details?apiId=' + ourApiProduct.Id + '|' + ourApiProduct.Sign_Up_URL__c + '|' + ourApiProduct.URL__c}">{!ourApiProduct.Title}</a>
+                                    </div>
+                                    <div class="apiProducts_comingSoon-label" data-id="uitlink_link" data-text="{!'Dashboard | API Products | ' + ourApiProduct.Title}" id="{! ourApiProduct.Is_coming_soon__c + '|' + ourApiProduct.Title + '|' + ourApiProduct.Introduction__c + '|' + 'api-details?apiId=' + ourApiProduct.Id + '|' + ourApiProduct.Sign_Up_URL__c + '|' + ourApiProduct.URL__c}">Coming soon</div>
+                                </div>
+                                <aura:set attribute="else">
+                                    <a class="apiProducts-title--tile" data-id="uitlink_link" data-text="{!'Dashboard | API Products | ' + ourApiProduct.Title}" id="{! ourApiProduct.Is_coming_soon__c + '|' + ourApiProduct.Title + '|' + ourApiProduct.Introduction__c + '|' + 'api-details?apiId=' + ourApiProduct.Id + '|' + ourApiProduct.Sign_Up_URL__c + '|' + ourApiProduct.URL__c}">{!ourApiProduct.Title}</a>
+                                </aura:set>
+                            </aura:if>
+                            <div class="apiProducts-description--tile" data-id="uitlink_link" data-text="{!'Dashboard | API Products | ' + ourApiProduct.Title}" id="{! ourApiProduct.Is_coming_soon__c + '|' + ourApiProduct.Title + '|' + ourApiProduct.Introduction__c + '|' + 'api-details?apiId=' + ourApiProduct.Id + '|' + ourApiProduct.Sign_Up_URL__c + '|' + ourApiProduct.URL__c}">{!ourApiProduct.Introduction__c}</div>
+                        </li>
+                    </aura:iteration>
+                </ul>
+                <a class="link--all" href="javascript:void(0)" onclick="{!c.openProduct}" data-id= "uitlink_link" data-text= "Dashboard | API Products | View More">View more</a>
+            </div>
+        </div>
+        <aura:set attribute="else">
+            <div class="apiProducts-container" style="{!v.full ? 'background: #f6f6f6' : 'background: #fff'}">
+                <div class="apiProducts-form">
+                    <form class="slds-form--inline"> 
+                        <div class="slds-form__size_resp"> 
+                            <div class="slds-form-element__control slds-input-has-icon apiProducts-disp_flex">
+                                <span onkeypress="{!c.onCallKeyUp}" class="apiProducts-grow">
+                                <lightning:input type="search" value="{!v.searchKeyword}" onchange="{!c.reloadAPIProducts}" class="apiProducts-searchform--input" placeholder="Search for API Products"/>
+                                </span>  
+                                <lightning:button type="Button" onclick="{!c.searchAPIProducts}" class="apiProducts-searchBtn">Search</lightning:button>
+                            </div>
+                        </div> 
+                    </form>
+                 </div>   
+                 <aura:if isTrue="{!v.noSearchResults}">
+                    <div class="apiProducts-noSearchResults">
+                        <div>Your search did not match any of our API Products. 
+                        <br></br>
+                        Please try again.
+                        </div>
+                    </div>
+                </aura:if>
+                <div class="{!v.full ? 'apiProducts apiProducts--full' : 'apiProducts'}">
+                    <aura:if isTrue="{!v.full}">
+                        <aura:if isTrue="{!v.ourApiProducts.length > 0}">
+                            <div class="apiProducts__title__full mb_32">Available API Products</div>
+                        </aura:if>
+                        <aura:set attribute="else">
+                            <h1 class="apiProducts__title mb_32">Available Api Products</h1>
+                            <div class="apiProducts__items mb_32">
+                                <aura:iteration items="{!v.ourApiProducts}" var="ourApiProduct" end="6">
+                                    <c:OSBAPIProductsItem title="{!ourApiProduct.Title}"
+                                                          content="{!ourApiProduct.Introduction__c}"
+                                                          link="{!ourApiProduct.Id}" linkLabel="View more"
+                                                          id="{!ourApiProduct.Id}" currentTab="{! v.currentTab}"
+                                    />
+                                </aura:iteration>
+                            </div>
+                        </aura:set>
+                    </aura:if>
+                    <aura:if isTrue="{!v.full}">
+                        <c:OSBPagination data="{!v.ourApiProducts}" full="{!v.full}"
+                                         contentComponent="OSBAPIProductsItem" isSearched="{!v.isSearched}"/>
+                        <aura:if isTrue="{!v.comingSoonProducts.length > 0}">
+                            <div class="apiProducts__comingSoon__title mb_32">Coming soon</div>
+                            <div class="apiProducts__items mb_32">
+                                <aura:iteration items="{!v.comingSoonProducts}" var="comingSoonProduct" end="3">
+                                    <c:OSBAPIProductsItem title="{!comingSoonProduct.Title}"
+                                                          content="{!comingSoonProduct.Introduction__c}"
+                                                          link="{!comingSoonProduct.URL__c}" linkLabel="View more"
+                                                          id="{!comingSoonProduct.Id}"
+                                                          isComingSoon="{!comingSoonProduct.Is_coming_soon__c}"
+                                    />
+                                </aura:iteration>
+                            </div>
+                        </aura:if>
+                        <aura:set attribute="else">
+                            <button onclick="{!c.goToAPIProducts}" class="btn btn--blue apiProducts__button">View all
+                                API Products
+                            </button>
+                        </aura:set>
+                    </aura:if>
+                </div>
+            </div>
+
+        </aura:set>
+    </aura:if>
+    <aura:if isTrue="{!v.isOpen}">
+            <c:OSBModal isOpen="{!v.isOpen}" modalIsComingSoon="{! v.modalIsComingSoon}"
+                        modalType="{! v.modalType}" modalTitle="{! v.modalTitle}" 
+                        modalContent="{! v.modalContent}" modalIsSolution="{! v.modalIsSolution}"
+                        modalFirstButtonURL="{! v.modalSignUpURL}" modalScndButtonURL="{! v.modalDocumentURL}"
+                        apiDocAvailable="{!v.apiDocAvailable}" currentTab="{! v.currentTab}"/>
+    </aura:if>
+</aura:component>

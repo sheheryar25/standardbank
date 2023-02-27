@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cash_Acquiring_Base_Rate__c</fullName>
+    <description>The cash acquiring flat fee charged per deposit</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The cash acquiring flat fee charged per deposit</inlineHelpText>
+    <label>Cash Acquiring Base Rate</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Cash_Acquiring_Channel_Type__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>0</fullName>
+                <default>false</default>
+                <label>0</label>
+            </value>
+            <value>
+                <fullName>4</fullName>
+                <default>false</default>
+                <label>4</label>
+            </value>
+            <value>
+                <fullName>6</fullName>
+                <default>false</default>
+                <label>6</label>
+            </value>
+            <value>
+                <fullName>7</fullName>
+                <default>false</default>
+                <label>7</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>All Channels</controllingFieldValue>
+            <controllingFieldValue>ANA / ATM</controllingFieldValue>
+            <controllingFieldValue>Autosafe</controllingFieldValue>
+            <controllingFieldValue>Autosafe &amp; Cash Centre Only</controllingFieldValue>
+            <controllingFieldValue>Branch Only</controllingFieldValue>
+            <controllingFieldValue>Bulk Teller</controllingFieldValue>
+            <controllingFieldValue>Cash Centre Only</controllingFieldValue>
+            <valueName>0</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>All Channels</controllingFieldValue>
+            <controllingFieldValue>ANA / ATM</controllingFieldValue>
+            <valueName>4</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>All Channels</controllingFieldValue>
+            <controllingFieldValue>Autosafe</controllingFieldValue>
+            <controllingFieldValue>Autosafe &amp; Cash Centre Only</controllingFieldValue>
+            <controllingFieldValue>Bulk Teller</controllingFieldValue>
+            <controllingFieldValue>Cash Centre Only</controllingFieldValue>
+            <valueName>6</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>All Channels</controllingFieldValue>
+            <controllingFieldValue>Branch Only</controllingFieldValue>
+            <controllingFieldValue>Bulk Teller</controllingFieldValue>
+            <valueName>7</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

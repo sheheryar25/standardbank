@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Client_Coordinator_Division__c</fullName>
+    <description>This field will capture the Client Coordinator&apos;s user divsion value, EN-0731</description>
+    <externalId>false</externalId>
+    <formula>TEXT(Owner.User_Division__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Client Coordinator Division</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

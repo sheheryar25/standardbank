@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_TT_Value__c</fullName>
+    <description>The total value of inward and outward telegraphic transfers</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The total value of inward and outward telegraphic transfers</inlineHelpText>
+    <label>Total TT Value</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

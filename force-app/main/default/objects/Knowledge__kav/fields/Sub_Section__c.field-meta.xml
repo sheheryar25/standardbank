@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Section__c</fullName>
+    <description>Sub-section of main section of knowledge base</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Sub-section of main section of knowledge base</inlineHelpText>
+    <label>Sub-Section</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Section__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Private Customers</fullName>
+                <default>false</default>
+                <label>Private Customers</label>
+            </value>
+            <value>
+                <fullName>Corporate Customers</fullName>
+                <default>false</default>
+                <label>Corporate Customers</label>
+            </value>
+            <value>
+                <fullName>Term Deposits</fullName>
+                <default>false</default>
+                <label>Term Deposits</label>
+            </value>
+            <value>
+                <fullName>Savings Accounts</fullName>
+                <default>false</default>
+                <label>Savings Accounts</label>
+            </value>
+            <value>
+                <fullName>Escrow Accounts</fullName>
+                <default>false</default>
+                <label>Escrow Accounts</label>
+            </value>
+            <value>
+                <fullName>Sweeping Accounts</fullName>
+                <default>false</default>
+                <label>Sweeping Accounts</label>
+            </value>
+            <value>
+                <fullName>FAQ’s</fullName>
+                <default>false</default>
+                <label>FAQ’s</label>
+            </value>
+            <value>
+                <fullName>National Transfers</fullName>
+                <default>false</default>
+                <label>National Transfers</label>
+            </value>
+            <value>
+                <fullName>International Transfers (Private Customers)</fullName>
+                <default>false</default>
+                <label>International Transfers (Private Customers)</label>
+            </value>
+            <value>
+                <fullName>International Transfers (Corporate Customers)</fullName>
+                <default>false</default>
+                <label>International Transfers (Corporate Customers)</label>
+            </value>
+            <value>
+                <fullName>IBAN / Swift Code</fullName>
+                <default>false</default>
+                <label>IBAN / Swift Code</label>
+            </value>
+            <value>
+                <fullName>Foreign Currency Notes Sale Process</fullName>
+                <default>false</default>
+                <label>Foreign Currency Notes Sale Process</label>
+            </value>
+            <value>
+                <fullName>Customized / Non Customized Debit Card</fullName>
+                <default>false</default>
+                <label>Customized / Non Customized Debit Card</label>
+            </value>
+            <value>
+                <fullName>Credit Card</fullName>
+                <default>false</default>
+                <label>Credit Card</label>
+            </value>
+            <value>
+                <fullName>Internet Banking – Private Business (PB)</fullName>
+                <default>false</default>
+                <label>Internet Banking – Private Business (PB)</label>
+            </value>
+            <value>
+                <fullName>Internet Banking - Business Banking (BB)</fullName>
+                <default>false</default>
+                <label>Internet Banking - Business Banking (BB)</label>
+            </value>
+            <value>
+                <fullName>Internet Banking – Corporate Business (CIB)</fullName>
+                <default>false</default>
+                <label>Internet Banking – Corporate Business (CIB)</label>
+            </value>
+            <value>
+                <fullName>ATM´s [PBB]</fullName>
+                <default>false</default>
+                <label>ATM´s [PBB]</label>
+            </value>
+            <value>
+                <fullName>POS [PBB]</fullName>
+                <default>false</default>
+                <label>POS [PBB]</label>
+            </value>
+            <value>
+                <fullName>Cheques [PBB]</fullName>
+                <default>false</default>
+                <label>Cheques [PBB]</label>
+            </value>
+            <value>
+                <fullName>OST (On Site Teller) [CIB]</fullName>
+                <default>false</default>
+                <label>OST (On Site Teller) [CIB]</label>
+            </value>
+            <value>
+                <fullName>CIT (Cash in Transit) [CIB]</fullName>
+                <default>false</default>
+                <label>CIT (Cash in Transit) [CIB]</label>
+            </value>
+            <value>
+                <fullName>Swift [CIB]</fullName>
+                <default>false</default>
+                <label>Swift [CIB]</label>
+            </value>
+            <value>
+                <fullName>PS2 [CIB]</fullName>
+                <default>false</default>
+                <label>PS2 [CIB]</label>
+            </value>
+            <value>
+                <fullName>H2H via BOL (Pagamentos Domésticos) [CIB]</fullName>
+                <default>false</default>
+                <label>H2H via BOL (Pagamentos Domésticos) [CIB]</label>
+            </value>
+            <value>
+                <fullName>H2H via ATG (Pagamentos Domésticos &amp; Cross-boarder) [CIB]</fullName>
+                <default>false</default>
+                <label>H2H via ATG (Pagamentos Domésticos &amp; Cross-boarder) [CIB]</label>
+            </value>
+            <value>
+                <fullName>Credit Products</fullName>
+                <default>false</default>
+                <label>Credit Products</label>
+            </value>
+            <value>
+                <fullName>Interest Rates</fullName>
+                <default>false</default>
+                <label>Interest Rates</label>
+            </value>
+            <value>
+                <fullName>List of EVB Companies</fullName>
+                <default>false</default>
+                <label>List of EVB Companies</label>
+            </value>
+            <value>
+                <fullName>Credit Simulators</fullName>
+                <default>false</default>
+                <label>Credit Simulators</label>
+            </value>
+            <value>
+                <fullName>Default messages</fullName>
+                <default>false</default>
+                <label>Default messages</label>
+            </value>
+            <value>
+                <fullName>Sunset Campaigns</fullName>
+                <default>false</default>
+                <label>Sunset Campaigns</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Service</controllingFieldValue>
+            <valueName>Sunset Campaigns</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accounts</controllingFieldValue>
+            <valueName>Private Customers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accounts</controllingFieldValue>
+            <valueName>Corporate Customers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accounts</controllingFieldValue>
+            <valueName>Term Deposits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accounts</controllingFieldValue>
+            <valueName>Savings Accounts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accounts</controllingFieldValue>
+            <valueName>Escrow Accounts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accounts</controllingFieldValue>
+            <valueName>Sweeping Accounts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accounts</controllingFieldValue>
+            <controllingFieldValue>Transfers</controllingFieldValue>
+            <controllingFieldValue>Cards</controllingFieldValue>
+            <controllingFieldValue>Digital</controllingFieldValue>
+            <controllingFieldValue>Channels</controllingFieldValue>
+            <controllingFieldValue>Loans</controllingFieldValue>
+            <valueName>FAQ’s</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transfers</controllingFieldValue>
+            <valueName>National Transfers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transfers</controllingFieldValue>
+            <valueName>International Transfers (Private Customers)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transfers</controllingFieldValue>
+            <valueName>International Transfers (Corporate Customers)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transfers</controllingFieldValue>
+            <valueName>IBAN / Swift Code</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transfers</controllingFieldValue>
+            <valueName>Foreign Currency Notes Sale Process</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cards</controllingFieldValue>
+            <valueName>Customized / Non Customized Debit Card</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cards</controllingFieldValue>
+            <valueName>Credit Card</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Digital</controllingFieldValue>
+            <valueName>Internet Banking – Private Business (PB)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Digital</controllingFieldValue>
+            <valueName>Internet Banking - Business Banking (BB)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Digital</controllingFieldValue>
+            <valueName>Internet Banking – Corporate Business (CIB)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Channels</controllingFieldValue>
+            <valueName>ATM´s [PBB]</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Channels</controllingFieldValue>
+            <valueName>POS [PBB]</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Channels</controllingFieldValue>
+            <valueName>Cheques [PBB]</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Channels</controllingFieldValue>
+            <valueName>OST (On Site Teller) [CIB]</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Channels</controllingFieldValue>
+            <valueName>CIT (Cash in Transit) [CIB]</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Channels</controllingFieldValue>
+            <valueName>Swift [CIB]</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Channels</controllingFieldValue>
+            <valueName>PS2 [CIB]</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Channels</controllingFieldValue>
+            <valueName>H2H via BOL (Pagamentos Domésticos) [CIB]</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Channels</controllingFieldValue>
+            <valueName>H2H via ATG (Pagamentos Domésticos &amp; Cross-boarder) [CIB]</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Loans</controllingFieldValue>
+            <valueName>Credit Products</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Loans</controllingFieldValue>
+            <valueName>Interest Rates</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Loans</controllingFieldValue>
+            <valueName>List of EVB Companies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Loans</controllingFieldValue>
+            <valueName>Credit Simulators</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Loans</controllingFieldValue>
+            <valueName>Default messages</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

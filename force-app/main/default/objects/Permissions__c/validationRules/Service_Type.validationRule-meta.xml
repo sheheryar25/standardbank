@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Service_Type</fullName>
+    <active>true</active>
+    <description>CDCS-70</description>
+    <errorConditionFormula>AND (Name &lt;&gt; &apos;Payment tracking&apos;,
+				Name &lt;&gt; &apos;Balance inquiry&apos;,
+				Name &lt;&gt; &apos;Email statement&apos;)</errorConditionFormula>
+    <errorMessage>Allowed service types are: Payment tracking, Balance inquiry, Email statement</errorMessage>
+</ValidationRule>

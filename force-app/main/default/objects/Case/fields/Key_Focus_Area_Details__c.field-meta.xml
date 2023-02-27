@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Key_Focus_Area_Details__c</fullName>
+    <description>CRM-Enhanced Cases for Change Request Functionality (C Reinecke 2010/08)</description>
+    <externalId>false</externalId>
+    <label>Key Focus Area Details</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Key_Focus_Area__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Account Plan</fullName>
+                <default>false</default>
+                <label>Account Plan</label>
+            </value>
+            <value>
+                <fullName>Activity Management</fullName>
+                <default>false</default>
+                <label>Activity Management</label>
+            </value>
+            <value>
+                <fullName>Call Report Management</fullName>
+                <default>false</default>
+                <label>Call Report Management</label>
+            </value>
+            <value>
+                <fullName>Client Contacts</fullName>
+                <default>false</default>
+                <label>Client Contacts</label>
+            </value>
+            <value>
+                <fullName>Client Focused Information</fullName>
+                <default>false</default>
+                <label>Client Focused Information</label>
+            </value>
+            <value>
+                <fullName>Client Hierarchy</fullName>
+                <default>false</default>
+                <label>Client Hierarchy</label>
+            </value>
+            <value>
+                <fullName>Client Profitability</fullName>
+                <default>false</default>
+                <label>Client Profitability</label>
+            </value>
+            <value>
+                <fullName>Client service teams</fullName>
+                <default>false</default>
+                <label>Client service teams</label>
+            </value>
+            <value>
+                <fullName>Communication</fullName>
+                <default>false</default>
+                <label>Communication</label>
+            </value>
+            <value>
+                <fullName>Conflicts Clearing</fullName>
+                <default>false</default>
+                <label>Conflicts Clearing</label>
+            </value>
+            <value>
+                <fullName>Content Library</fullName>
+                <default>false</default>
+                <label>Content Library</label>
+            </value>
+            <value>
+                <fullName>Customized pipeline alerts</fullName>
+                <default>false</default>
+                <label>Customized pipeline alerts</label>
+            </value>
+            <value>
+                <fullName>Dashboards</fullName>
+                <default>false</default>
+                <label>Dashboards</label>
+            </value>
+            <value>
+                <fullName>Event Management</fullName>
+                <default>false</default>
+                <label>Event Management</label>
+            </value>
+            <value>
+                <fullName>Fields</fullName>
+                <default>false</default>
+                <label>Fields</label>
+            </value>
+            <value>
+                <fullName>Forecast Data</fullName>
+                <default>false</default>
+                <label>Forecast Data</label>
+            </value>
+            <value>
+                <fullName>Gift Management</fullName>
+                <default>false</default>
+                <label>Gift Management</label>
+            </value>
+            <value>
+                <fullName>Hierarchy</fullName>
+                <default>false</default>
+                <label>Hierarchy</label>
+            </value>
+            <value>
+                <fullName>Home Page</fullName>
+                <default>false</default>
+                <label>Home Page</label>
+            </value>
+            <value>
+                <fullName>Intelligence from other systems</fullName>
+                <default>false</default>
+                <label>Intelligence from other systems</label>
+            </value>
+            <value>
+                <fullName>Intelligent reporting</fullName>
+                <default>false</default>
+                <label>Intelligent reporting</label>
+            </value>
+            <value>
+                <fullName>Liquidity &amp; Capital Management</fullName>
+                <default>false</default>
+                <label>Liquidity &amp; Capital Management</label>
+            </value>
+            <value>
+                <fullName>Objects</fullName>
+                <default>false</default>
+                <label>Objects</label>
+            </value>
+            <value>
+                <fullName>Opportunity Sharing</fullName>
+                <default>false</default>
+                <label>Opportunity Sharing</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Outlook Integration</fullName>
+                <default>false</default>
+                <label>Outlook Integration</label>
+            </value>
+            <value>
+                <fullName>Page Layout</fullName>
+                <default>false</default>
+                <label>Page Layout</label>
+            </value>
+            <value>
+                <fullName>Profiles</fullName>
+                <default>false</default>
+                <label>Profiles</label>
+            </value>
+            <value>
+                <fullName>Related Lists</fullName>
+                <default>false</default>
+                <label>Related Lists</label>
+            </value>
+            <value>
+                <fullName>Reports</fullName>
+                <default>false</default>
+                <label>Reports</label>
+            </value>
+            <value>
+                <fullName>Roles</fullName>
+                <default>false</default>
+                <label>Roles</label>
+            </value>
+            <value>
+                <fullName>Static Client Data</fullName>
+                <default>false</default>
+                <label>Static Client Data</label>
+            </value>
+            <value>
+                <fullName>Training</fullName>
+                <default>false</default>
+                <label>Training</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Client Activity</controllingFieldValue>
+            <valueName>Account Plan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Activity</controllingFieldValue>
+            <valueName>Activity Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Activity</controllingFieldValue>
+            <valueName>Call Report Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Activity</controllingFieldValue>
+            <valueName>Client Focused Information</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Activity</controllingFieldValue>
+            <valueName>Content Library</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Activity</controllingFieldValue>
+            <valueName>Event Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Activity</controllingFieldValue>
+            <valueName>Gift Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Activity</controllingFieldValue>
+            <controllingFieldValue>Client Reference Data</controllingFieldValue>
+            <controllingFieldValue>Opportunity Management</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Activity</controllingFieldValue>
+            <valueName>Outlook Integration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Reference Data</controllingFieldValue>
+            <valueName>Client Contacts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Reference Data</controllingFieldValue>
+            <valueName>Client Hierarchy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Reference Data</controllingFieldValue>
+            <valueName>Client service teams</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Reference Data</controllingFieldValue>
+            <valueName>Intelligence from other systems</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Reference Data</controllingFieldValue>
+            <valueName>Static Client Data</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Internal Enhancements</controllingFieldValue>
+            <valueName>Communication</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Internal Enhancements</controllingFieldValue>
+            <valueName>Dashboards</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Internal Enhancements</controllingFieldValue>
+            <valueName>Fields</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Internal Enhancements</controllingFieldValue>
+            <valueName>Hierarchy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Internal Enhancements</controllingFieldValue>
+            <valueName>Home Page</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Internal Enhancements</controllingFieldValue>
+            <valueName>Objects</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Internal Enhancements</controllingFieldValue>
+            <valueName>Page Layout</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Internal Enhancements</controllingFieldValue>
+            <valueName>Profiles</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Internal Enhancements</controllingFieldValue>
+            <valueName>Related Lists</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Internal Enhancements</controllingFieldValue>
+            <valueName>Reports</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Internal Enhancements</controllingFieldValue>
+            <valueName>Roles</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Internal Enhancements</controllingFieldValue>
+            <valueName>Training</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Opportunity Management</controllingFieldValue>
+            <valueName>Client Profitability</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Opportunity Management</controllingFieldValue>
+            <valueName>Conflicts Clearing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Opportunity Management</controllingFieldValue>
+            <valueName>Customized pipeline alerts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Opportunity Management</controllingFieldValue>
+            <valueName>Forecast Data</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Opportunity Management</controllingFieldValue>
+            <valueName>Intelligent reporting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Opportunity Management</controllingFieldValue>
+            <valueName>Liquidity &amp; Capital Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Opportunity Management</controllingFieldValue>
+            <valueName>Opportunity Sharing</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

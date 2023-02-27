@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Relationship_Roles__c</fullName>
+    <description>Relationship Roles</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Role performed by the Client in their relationship with Standard Bank</inlineHelpText>
+    <label>Relationship Roles</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Agent</fullName>
+                <default>false</default>
+                <label>Agent</label>
+            </value>
+            <value>
+                <fullName>Broker</fullName>
+                <default>false</default>
+                <label>Broker</label>
+            </value>
+            <value>
+                <fullName>Clearing House</fullName>
+                <default>false</default>
+                <label>Clearing House</label>
+            </value>
+            <value>
+                <fullName>Client</fullName>
+                <default>false</default>
+                <label>Client</label>
+            </value>
+            <value>
+                <fullName>Club Participant/Syndicate Loan</fullName>
+                <default>false</default>
+                <label>Club Participant/Syndicate Loan</label>
+            </value>
+            <value>
+                <fullName>Corresponding Bank</fullName>
+                <default>false</default>
+                <label>Corresponding Bank</label>
+            </value>
+            <value>
+                <fullName>Exchange</fullName>
+                <default>false</default>
+                <label>Exchange</label>
+            </value>
+            <value>
+                <fullName>Fund</fullName>
+                <default>false</default>
+                <label>Fund</label>
+            </value>
+            <value>
+                <fullName>Guaranteeing Bank</fullName>
+                <default>false</default>
+                <label>Guaranteeing Bank</label>
+            </value>
+            <value>
+                <fullName>Issuer</fullName>
+                <default>false</default>
+                <label>Issuer</label>
+            </value>
+            <value>
+                <fullName>Managed Fund</fullName>
+                <default>false</default>
+                <label>Managed Fund</label>
+            </value>
+            <value>
+                <fullName>Nostro Agent</fullName>
+                <default>false</default>
+                <label>Nostro Agent</label>
+            </value>
+            <value>
+                <fullName>Potential Client</fullName>
+                <default>false</default>
+                <label>Potential Client</label>
+            </value>
+            <value>
+                <fullName>Processing Organisation</fullName>
+                <default>false</default>
+                <label>Processing Organisation</label>
+            </value>
+            <value>
+                <fullName>Professional Service Provider</fullName>
+                <default>false</default>
+                <label>Professional Service Provider</label>
+            </value>
+            <value>
+                <fullName>Reference Asset</fullName>
+                <default>false</default>
+                <label>Reference Asset</label>
+            </value>
+            <value>
+                <fullName>Settlement Bank</fullName>
+                <default>false</default>
+                <label>Settlement Bank</label>
+            </value>
+            <value>
+                <fullName>Warehouse</fullName>
+                <default>false</default>
+                <label>Warehouse</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SingletrackCMS__Enable_Portal_User</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Enable Portal User</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>window.open(&quot;/apex/SingletrackCMS__CreatePortalUser?contactId={!Contact.Id}&quot;, &quot;Enable Portal User&quot;, &quot;width=650,height=300&quot;);</url>
+</WebLink>

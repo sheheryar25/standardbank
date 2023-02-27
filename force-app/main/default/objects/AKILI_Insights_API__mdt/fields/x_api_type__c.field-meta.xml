@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>x_api_type__c</fullName>
+    <description>Note: Before changing the value for xapi type in get API please check the code to ensure the parameter format is correct and its not mismatched.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Note: Before changing the value for xapi type in get API please check the code to ensure the parameter format is correct and its not mismatched.</inlineHelpText>
+    <label>x-api-type</label>
+    <length>255</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,160 @@
+<template>
+  <template if:true={isopen}>
+    <section id="modalSection" role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+      aria-describedby="modal-content-id-1" class="osbModal slds-modal slds-fade-in-open">
+      <template if:false={thirdParty}>
+        <div class="mainModal">
+          <div class="modalHeader">
+            <img src={OSBCloseIconWhite} class="close-white" onclick={closeModel} data-id="close_modal"
+              data-text="Modal | Close Icon"></img>
+          </div>
+          <template if:true={modalissolution}>
+            <div class="modalLogoDiv" id="modalLogo">
+              <img class="outputRT" src={SBlogo} />
+            </div>
+          </template>
+          <template if:true={modaliscomingsoon}>
+            <div id={modalissolution}>
+              <h1 id="comingSoonText">Coming Soon</h1>
+            </div>
+          </template>
+          <div class="modalTitle ">
+            <template if:true={modalissolution}>
+              <template if:true={solTM}>
+                <h1 class="modalTitleTextSolution"> {modaltitle} <sup class="tmClass">TM</sup></h1>
+              </template>
+              <template if:false={solTM}>
+                <h1 class="modalTitleTextSolution"> {modaltitle} </h1>
+              </template>
+            </template>
+            <template if:false={modalissolution}>
+              <template if:true={modaliscomingsoon}>
+                <h1 class="modalTitleTextComingSoonSolution"> {modaltitle} </h1>
+              </template>
+              <template if:false={modaliscomingsoon}>
+                <h1 class="modalTitleTextAPI"> {modaltitle} </h1>
+              </template>
+            </template>
+          </div>
+          <div class="linedivider">
+            <hr />
+          </div>
+          <div class="modalBody">
+            <div class="modalBodySub">
+              <p> {modalcontent} </p>
+            </div>
+          </div>
+          <template if:true={modalissolution}>
+            <template if:false={modaliscomingsoon}>
+              <div class="modalButtonContainer slds-align_absolute-center">
+                <div class="modalFirstButton" data-id="modal_sign_up" data-text="Modal | Sign Up">
+                  <button onclick={openfirsturl} title="SIGN UP" class="firstButton slds-align_absolute-center">SIGN
+                    UP</button>
+                </div>
+                <div class="modalSecondButton" data-id="modal_visit" data-text="Modal | Visit Website">
+                  <button onclick={opensecondurl} title="VISIT WEBSITE" class="secondButton slds-align_absolute-center"
+                    img src={OSBCloseIconWhite}>VISIT WEBSITE </button>
+                </div>
+              </div>
+            </template>
+          </template>
+          <template if:false={modalissolution}>
+            <div class="modalFirstButtonComingSoon" data-id="modal_sub" data-text="Modal | Sign Up To Subscribe">
+              <button onclick={openfirsturl} title="SIGN UP TO SUBSCRIBE" class="firstButton">SIGN UP TO
+                SUBSCRIBE</button>
+            </div>
+            <div class="modalSecondButtonComingSoon" data-id="modal_view" data-text="Modal | View Documentation">
+              <button onclick={opensecondurl} title="VIEW DOCUMENTATION" class="secondButton">VIEW
+                DOCUMENTATION</button>
+            </div>
+          </template>
+          <template if:true={modalissolution}>
+            <div class="modalMarketPlaceLink">
+              <button label="ADD TO MY APPLICATIONS" class="marketPlaceLink" onclick={addSolutionAsFavourite}
+                data-id="modal_add" data-text={modalTitle} disabled={disabled} value="ADD TO MY APPLICATIONS">
+                ADD TO MY APPLICATIONS
+              </button>
+            </div>
+          </template>
+        </div>
+      </template>
+      <template if:true={thirdParty}>
+        <div class="mainModal3rdParty">
+          <div class="modalHeader">
+            <img src={OSBCloseIcon} class="close3rd" onclick={closeModel} data-id="modal_thrid_close"
+              data-text="Modal | Close Icon"></img>
+          </div>
+          <template if:true={modalissolution}>
+            <div class="modalLogoDiv" id="modalLogo3rd">
+              <lightning-formatted-rich-text id="outputRT3rd" class="logoSolution" value={modallogo}>
+              </lightning-formatted-rich-text>
+            </div>
+          </template>
+          <template if:true={modaliscomingsoon}>
+            <div id={modalissolution3rd}>
+              <h1 id="comingSoonText3rd">Coming Soon</h1>
+            </div>
+          </template>
+          <div class="modalTitle">
+            <template if:true={modalissolution}>
+              <template if:true={solTM}>
+                <h1 class="modalTitleTextSolution3rd"> {modaltitle} <sup class="tmClass">TM</sup></h1>
+              </template>
+              <template if:false={solTM}>
+                <h1 class="modalTitleTextSolution3rd"> {modaltitle} </h1>
+              </template>
+            </template>
+            <template if:false={modalissolution}>
+              <template if:true={modaliscomingsoon}>
+                <h1 class="modalTitleTextComingSoonSolution"> {modaltitle} </h1>
+              </template>
+              <template if:false={modaliscomingsoon}>
+                <h1 class="modalTitleTextAPI"> {modaltitle} </h1>
+              </template>
+            </template>
+          </div>
+          <div class="linedivider  ">
+            <hr />
+          </div>
+          <div class="modalBody ">
+            <div class="modalBodySub3rd">
+              <p> {modalcontent} </p>
+            </div>
+          </div>
+          <template if:true={modalissolution}>
+            <template if:false={modaliscomingsoon}>
+              <div class="modalButtonContainer slds-align_absolute-center ">
+                <div class="modalFirstButton" data-id="modal_thrid_signup" data-text="Modal | Sign Up">
+                  <button onclick={openfirsturl} title="SIGN UP" class="firstButton slds-align_absolute-center">SIGN
+                    UP</button>
+                </div>
+                <div class="modalSecondButton" data-id="modal_thrid_visit" data-text="Modal | Visit Website">
+                  <button onclick={opensecondurl} title="VISIT WEBSITE"
+                    class="secondButton3rd slds-align_absolute-center">VISIT WEBSITE</button>
+                </div>
+              </div>
+            </template>
+          </template>
+          <template if:false={modalissolution}>
+            <div class="modalFirstButtonComingSoon" data-id="modal_thrid_sub" data-text="Modal | Sign Up To Subscribe">
+              <button onclick={openfirsturl} title="SIGN UP TO SUBSCRIBE" class="firstButton">SIGN UP TO
+                SUBSCRIBE</button>
+            </div>
+            <div class="modalSecondButtonComingSoon" data-id="modal_thrid_view" data-text="Modal | View Documentation">
+              <button onclick={opensecondurl} title="VIEW DOCUMENTATION" class="secondButton">VIEW
+                DOCUMENTATION</button>
+            </div>
+          </template>
+          <template if:true={modalissolution}>
+            <div class="modalMarketPlaceLink">
+              <lightning-button variant="base" label="ADD TO MY APPLICATIONS" class="marketPlaceLink3rd"
+                onclick={addSolutionAsFavourite} data-id="modal_thrid_add" data-text={modalTitle} disabled={disabled}
+                value="ADD TO MY APPLICATIONS">
+              </lightning-button>
+            </div>
+          </template>
+        </div>
+      </template>
+    </section>
+  </template>
+</template>

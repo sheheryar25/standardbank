@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Distribution_Compact_Layout</fullName>
+    <fields>Product__c</fields>
+    <fields>Client__c</fields>
+    <fields>Deal_Status__c</fields>
+    <fields>Distribution_Role__c</fields>
+    <fields>Mandate_Type__c</fields>
+    <fields>Distribution_Status__c</fields>
+    <label>Product Distribution Compact Layout</label>
+</CompactLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Region__c</fullName>
+    <externalId>false</externalId>
+    <label>Region (Legacy)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>London</fullName>
+                <default>true</default>
+                <label>London</label>
+            </value>
+            <value>
+                <fullName>New York</fullName>
+                <default>false</default>
+                <label>New York</label>
+            </value>
+            <value>
+                <fullName>Hong Kong</fullName>
+                <default>false</default>
+                <label>Hong Kong</label>
+            </value>
+            <value>
+                <fullName>Brazil</fullName>
+                <default>false</default>
+                <label>Brazil</label>
+            </value>
+            <value>
+                <fullName>Argentina</fullName>
+                <default>false</default>
+                <label>Argentina</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,76 @@
+<aura:component controller="StdBank_Ltn_SendEmail" implements="flexipage:availableForAllPageTypes,force:appHostable" access="global" >
+  <ltng:require scripts="{!$Resource.svg4everybody + '/svg4everybody.min.js'}" afterScriptsLoaded="{!c.onScriptLoaded}" />
+  <aura:attribute name="templateId" type="String" access="global" />
+  <aura:attribute name="objectId" type="String" access="global" />
+  <aura:attribute name="to" type="String" default="" access="global" />
+  <aura:attribute name="cc" type="String" default="" access="global" />
+  <aura:attribute name="bcc" type="String" default="" access="global" />
+  <aura:attribute name="subject" type="String" default="" access="global" />
+  <aura:attribute name="orgWideEmailAddressId" type="String" default="" access="private" />
+  <aura:attribute name="toAddresses" type="Object[]" default="[]" access="global" />
+  <aura:attribute name="ccAddresses" type="Object[]" default="[]" access="global" />
+  <aura:attribute name="bccAddresses" type="Object[]" default="[]" access="global" />
+  <aura:attribute name="attachments" type="Object[]" default="[]" access="global" />
+  <aura:attribute name="filesSubscription" type="Object" default="" access="private" />
+  <aura:attribute name="isSending" type="Boolean" default="false" access="private" />
+  <aura:attribute name="errorSubject" type="Boolean" default="false" access="private" />
+
+  <aura:handler name="emailSubject" event="c:sendEmailSubject" action="{!c.onSubject}" />
+
+  <div class="slds-page-header slds-scrollable_y" role="banner" ondrop="{!c.onDrop}" ondragover="{!c.onDragOver}">
+    <div class="slds-media slds-media_center">
+      <div class="slds-media__figure">
+        <c:svgIcon class="slds-icon slds-icon-standard-email" svgPath="{!$Resource.SLDS202 + '/assets/icons/standard-sprite/svg/symbols.svg#email'}" />
+      </div>
+      <div class="slds-media__body">
+        <p class="slds-page-header__title slds-truncate" title="Send Email">Send Email</p>
+      </div>
+    </div>
+    <div class="slds-page-header__detail-row slds-is-relative">
+      <aura:if isTrue="{!v.isSending}">
+        <div class="slds-spinner_container">
+          <div class="slds-spinner_brand slds-spinner slds-spinner_large" role="alert">
+            <span class="slds-assistive-text">Loading</span>
+            <div class="slds-spinner__dot-a"></div>
+            <div class="slds-spinner__dot-b"></div>
+          </div>
+        </div>
+      </aura:if>
+      <div class="slds-container_left slds-container_x-large">
+        <div class="slds-form_horizontal">
+          <!-- Buttons -->
+          <div class="slds-form-element">
+            <div class="slds-form-element__control">  
+              <div class="slds-align_absolute-center slds-m-top_large slds-m-bottom_large">
+                <div class="slds-button-group" role="group">
+                <button aura:id="send-button" class="slds-button slds-button_neutral" onclick="{!c.onSend}" disabled="{!v.isSending}">
+                  <c:svgIcon svgPath="{!$Resource.SLDS202 + '/assets/icons/utility-sprite/svg/symbols.svg#email'}" class="slds-button__icon slds-button__icon_left"/>Send</button>
+                <button aura:id="cancel-button" class="slds-button slds-button_neutral" onclick="{!c.onCancel}" disabled="{!v.isSending}">Cancel</button>
+              </div>
+              </div>
+            </div>
+          </div>
+          <c:SendEmailFrom orgWideEmailAddressId="{!v.orgWideEmailAddressId}" />
+          <c:SendEmailRecipients aura:id="to-recipients" label="To" recipients="{!v.to}" addresses="{!v.toAddresses}" />
+          <c:SendEmailRecipients aura:id="cc-recipients" label="Cc" recipients="{!v.cc}" addresses="{!v.ccAddresses}" />
+          <c:SendEmailRecipients aura:id="bcc-recipients" label="Bcc"
+          recipients="{!v.bcc}" addresses="{!v.bccAddresses}" addUserAddress="true" />
+          <!-- Subject -->
+          <div class="{! v.errorSubject ? 'slds-form-element slds-has-error' : 'slds-form-element'}">
+            <label class="slds-form-element__label">
+              <abbr class="slds-required" title="required">*</abbr> Subject
+            </label>
+            <div class="slds-form-element__control">
+              <ui:inputText class="slds-input" value="{!v.subject}" labelClass="slds-form-element__label" />
+            </div>
+            <aura:if isTrue="{!v.errorSubject}">
+              <div class="slds-form-element__help">This field is required</div>
+            </aura:if>
+          </div>
+          <c:SendEmailPreview templateId="{!v.templateId}" objectId="{!v.objectId}" />
+          <c:SendEmailAttachments attachments="{!v.attachments}" />
+        </div>
+      </div>
+    </div>
+  </div>
+</aura:component>

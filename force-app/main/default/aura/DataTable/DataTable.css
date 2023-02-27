@@ -1,0 +1,11 @@
+/**
+ * Created by Chibuye Kunda on 2020/01/15.
+ */
+
+.THIS .slds-button_icon-bare{
+    display: none;
+}
+.THIS .slds-table_header-fixed_container {
+    background-color: #f3f2f2 !important;
+
+}

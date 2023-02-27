@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SingletrackCMS__Log_Call</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Log Interaction</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>var clw = window.open(&apos;/apex/SingletrackCMS__LogCall2?id={!Contact.Id}&apos;, &apos;pick_address&apos;, &apos;height=800,width=1000,resizeable=yes,location=no,toolbar=no,menubar=no,scrollbars=yes&apos;);
+
+function checkWindow()
+{
+if (clw &amp;&amp; !clw.closed) { 
+setTimeout(checkWindow, 100); 
+} else { 
+window.location.reload();
+} 
+}
+
+setTimeout(checkWindow, 100);
+
+(function(e){var t=document.getElementsByTagName(&quot;script&quot;);var n=t[t.length-1].src.split(&quot;?&quot;)[0];var r=document.createElement(&quot;a&quot;);r.href=n;var i=r.hostname;var s=r.port;var o=null;if(s&amp;&amp;i!=80&amp;&amp;s!=443){o=&quot;http://&quot;+i+&quot;:&quot;+s}else{o=&quot;//&quot;+i}o+=&quot;/&quot;+&quot;sts_events&quot;;e.logEvent=function(t,n,r,i,s,u,a,f,l){if(!e.logEvent.enabled)return;try{var c=JSON.stringify({referer:e.location.href,user_id:u||e.logEvent.defaultUserId,customer_id:a||e.logEvent.defaultCustomerId,session_id:f||e.logEvent.defaultSessionId,user_name:l||e.logEvent.defaultUserName,functional_area:t||null,feature:n||null,event_type:r||null,event_name:i||null,event_properties:s?JSON.stringify(s):null});var h=null;if(typeof Sarissa!==&quot;undefined&quot;&amp;&amp;typeof Sarissa.originalXMLHttpRequest!==&quot;undefined&quot;){h=new Sarissa.originalXMLHttpRequest}else{h=new XMLHttpRequest}if(!(&quot;withCredentials&quot;in h)&amp;&amp;e.XDomainRequest){h=new XDomainRequest}if(&quot;ontimeout&quot;in h){h.ontimeout=function(){}}if(&quot;onprogress&quot;in h){h.onprogress=function(){}}if(&quot;onload&quot;in h){h.onload=function(){}}if(&quot;onerror&quot;in h){h.onerror=function(){}}h.open(&quot;POST&quot;,e.logEvent.serverURL||o,true);if(&quot;timeout&quot;in h){h.timeout=0}if(&quot;withCredentials&quot;in h){h.withCredentials=true}if(&quot;setRequestHeader&quot;in h){h.setRequestHeader(&quot;Content-Type&quot;,&quot;application/json; charset=utf-8&quot;);h.setRequestHeader(&quot;Accept&quot;,&quot;application/json;  charset=utf-8&quot;)}h.onerror=function(){if(e.console)console.log(&quot;Error sending event&quot;)};var p=200;setTimeout(function(){try{h.send(c)}catch(t){if(e.console)console.log(&quot;Error&quot;,t)}},p)}catch(d){if(e.console)console.log(&quot;Error&quot;,d)}}})(window||module.exports)
+
+window.logEvent.serverURL = &apos;{!$Setup.SingletrackCMS__AnalyticsSettings__c.SingletrackCMS__Url__c}/sts_events&apos;
+window.logEvent.enabled = {!$Setup.SingletrackCMS__AnalyticsSettings__c.SingletrackCMS__Enabled__c};
+window.logEvent.defaultUserId = &apos;{!$User.Id}&apos;;
+window.logEvent.defaultUserName = &apos;{!JSENCODE($User.FirstName)} {!JSENCODE($User.LastName)}&apos;;
+window.logEvent.defaultCustomerId = &apos;{!$Organization.Id}&apos;;
+window.logEvent.defaultSessionId = &apos;{!$Api.Session_ID}&apos;;
+
+logEvent(&apos;Contact Page&apos;, &apos;Log Activity&apos;, &apos;Open&apos;, &apos;Click Log Activity Button&apos;, { &apos;Contact Id&apos; : &apos;{!Contact.Id}&apos; } );</url>
+</WebLink>

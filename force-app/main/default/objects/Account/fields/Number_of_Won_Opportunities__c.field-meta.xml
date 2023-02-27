@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_of_Won_Opportunities__c</fullName>
+    <description>EN-0695-Number of Closed Won Opportunities on the Client (This Year, Rolled Up)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The number of Closed Won Opportunities (This year, Including Subsidiary Clients)</inlineHelpText>
+    <label>Number of Won Opportunities</label>
+    <precision>4</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

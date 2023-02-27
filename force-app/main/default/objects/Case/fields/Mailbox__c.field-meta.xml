@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mailbox__c</fullName>
+    <description>US-3664:To capture email address from email message mainly for case closure process</description>
+    <externalId>false</externalId>
+    <inlineHelpText>To capture client email address</inlineHelpText>
+    <label>Mailbox</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Email</type>
+    <unique>false</unique>
+</CustomField>

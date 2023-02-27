@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GM_Execution_Manager_Role_User_Division</fullName>
+    <active>true</active>
+    <description>SGPRT-837 - validation for the GM Execution Manager role to ensure that the team member is of GM division.</description>
+    <errorConditionFormula>NOT(ISPICKVAL(Team_Member__r.User_Division__c, &apos;Global Markets&apos;)) &amp;&amp; ISPICKVAL(Client_Role__c, &apos;GM Execution Manager&apos;)</errorConditionFormula>
+    <errorMessage>GM Execution Manager cannot be assigned to team member who is not from Global Markets.</errorMessage>
+</ValidationRule>

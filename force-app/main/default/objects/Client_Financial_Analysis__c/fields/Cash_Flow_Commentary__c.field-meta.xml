@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cash_Flow_Commentary__c</fullName>
+    <description>SFP-10747 [c] This field is introduced for CVCA feature to allow printable view of the Client Page similar to the CVCA Template.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>A commentary about the Client’s cash flow, including potential seasonality of cash flows, Creditor and Debtor payment cycles, trade facilities etc.</inlineHelpText>
+    <label>Cash Flow Commentary</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

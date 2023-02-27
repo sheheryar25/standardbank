@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Client_Hierarchy_2</fullName>
+    <description>Used for onbaording process</description>
+    <displayedFields>
+        <field>Relationship_with_China__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <label>Client Hierarchy 2</label>
+</FieldSet>

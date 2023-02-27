@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SA_Lost__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>IRD field</description>
+    <externalId>false</externalId>
+    <inlineHelpText>For a lost deal please provide comments in Reason Won/Lost Comments</inlineHelpText>
+    <label>Lost</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SingletrackCMS__Logo</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <height>600</height>
+    <linkType>page</linkType>
+    <masterLabel>Logo</masterLabel>
+    <openType>sidebar</openType>
+    <page>SingletrackCMS__AccountLogo</page>
+    <protected>false</protected>
+</WebLink>

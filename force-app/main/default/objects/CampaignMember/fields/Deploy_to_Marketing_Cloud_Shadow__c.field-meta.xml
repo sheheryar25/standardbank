@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deploy_to_Marketing_Cloud_Shadow__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>SFP-7843: &apos;Deploy to Marketing Cloud Shadow&apos; field</description>
+    <externalId>false</externalId>
+    <label>Deploy to Marketing Cloud Shadow</label>
+    <type>Checkbox</type>
+</CustomField>

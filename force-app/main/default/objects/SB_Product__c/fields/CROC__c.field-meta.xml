@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CROC__c</fullName>
+    <description>Input transaction CROC  %  for specific facility. SGPRT-625</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Input transaction CROC  %  for specific facility</inlineHelpText>
+    <label>CROC (%)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

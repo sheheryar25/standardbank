@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Export_Credit_Agency__c</fullName>
+    <description>US-3690</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Name of the Export Credit Agency</inlineHelpText>
+    <label>Export Credit Agency</label>
+    <length>50</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

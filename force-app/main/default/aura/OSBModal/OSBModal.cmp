@@ -1,0 +1,160 @@
+<aura:component controller="OSB_Modal_CTRL">
+    <aura:attribute name="isOpen" type="boolean" default="false"/>
+    <aura:attribute name="modalIsComingSoon" type="boolean" default="false"/>
+    <aura:attribute name="modalIsSolution" type="boolean" default="false"/>
+    <aura:attribute name="apiDocAvailable" type="boolean" default="false"/>
+    <aura:attribute name="modalLogo" type="String"/>
+    <aura:attribute name="modalType" type="String"/>
+    <aura:attribute name="modalTitle" type="String"/>
+    <aura:attribute name="modalContent" type="String"/>
+    <aura:attribute name="firstButtonLabel" type="String" access="public"/>
+    <aura:attribute name="modalFirstButtonURL" type="String"/>
+    <aura:attribute name="modalScndButtonURL" type="String"/>
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="isProductHighlight" type="boolean" default="true"/>
+    <aura:attribute name="displaySecondButton" type="Boolean" default="false" access="public"/>
+    <aura:attribute name="isOnShowcase" type="boolean" default="false" access="public"/>
+
+    <aura:attribute name="currentTab" type="String" default="Dashboard"/>
+    <aura:registerEvent name="closePopUpEvent" type="c:OSBClosePopUpEvent"/> 
+    
+    <lightning:navigation aura:id="navService"/>
+        <aura:if isTrue="{! v.isOpen}">
+            <aura:if isTrue="{!v.isProductHighlight}">
+                <section id="modalSection" role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                    <div class="{!v.isOnShowcase ? 'modallist_div' : 'mainModal_class'}" id="mainModal" aura:id="mainModal">
+
+                        <div id="modalHeader">
+                            <img src="{!$Resource.OSBCloseIcon}" class="close" onclick="{! c.closeModel}" data-id="uitlink_link" data-text="Modal | Close Icon"/>
+                        </div>
+                        <aura:if isTrue="{!v.modalIsSolution}">
+                            <div class="solutionShowcase__item__logo" id="modalLogo">
+                                <ui:outputRichText aura:id="outputRT" value="{! v.modalLogo}"/>
+                            </div>
+                        </aura:if>
+                        <aura:if isTrue="{!v.modalIsComingSoon}">
+                            <div id="{! v.modalIsSolution == true ? 'modalComingSoonSolution' : 'modalComingSoonAPI'}">
+                                <h1 id="comingSoonText">Coming Soon</h1>
+                            </div>
+                        </aura:if>
+        <!-- ***************************TITLE SECTION************************************* -->
+                        <div id="modalTitle" style="{! v.modalIsComingSoon == 'true' ? '' : 'margin-top: 16px;'}">
+                            <center>
+                                <aura:if isTrue="{!v.modalIsSolution}">
+                                    <aura:if isTrue="{!v.modalTitle == 'AUTHENTIFI'}">
+                                        <h1 id="modalTitleTextSolution"> {!v.modalTitle} <sup>TM</sup> </h1>
+                                        <aura:set attribute="else">
+                                            <h1 id="modalTitleTextSolution"> {!v.modalTitle} </h1>
+                                        </aura:set>
+                                    </aura:if>
+                                    
+                                    <aura:set attribute="else">
+                                        <aura:if isTrue="{!v.modalIsComingSoon}">
+                                            <h1 id="modalTitleTextSolution"> {!v.modalTitle} </h1>
+                                            <aura:set attribute="else">
+                                                <h1 id="modalTitleTextAPI"> {!v.modalTitle} </h1>
+                                            </aura:set>
+                                        </aura:if>
+                                    </aura:set>
+                                </aura:if>
+                            </center>
+                            <hr/>
+                        </div>
+        <!-- ***************************END TITLE SECTION************************************* -->
+                        <div class="" id="modalBody">
+                            <div id="modalBodySub">
+                                <p> {!v.modalContent} </p>
+                            </div>
+                        </div>
+        <!-- ***************************BUTTON SECTION************************************* -->
+                        <aura:if isTrue="{!v.modalIsSolution}">
+                            <aura:if isTrue="{!v.modalIsComingSoon == false}">
+                                <aura:if isTrue="{!v.modalTitle== 'My support'}">
+                                    <div id="modalFirstButton" data-id="uitlink_link" data-text="Modal | Access Solution">
+                                        <center>
+                                            <lightning:button onclick="{! c.openFirstURL}" label="ACCESS SOLUTION" title="ACCESS SOLUTION" class="firstButton"/>
+                                        </center>
+                                    </div>
+                                    <aura:set attribute="else">
+                                        <div id="modalFirstButton" data-id="uitlink_link" data-text="Modal | Sign Up">
+                                            <center>
+                                                <lightning:button onclick="{! c.openFirstURL}" label="SIGN UP" title="SIGN UP" class="firstButton"/>
+                                            </center>
+                                        </div>
+                                        <div id="modalSecondButton" data-id="uitlink_link" data-text="Modal | Visit Website">
+                                            <center>
+                                                <lightning:button onclick="{! c.openSecondURL}" label="VISIT WEBSITE" title="VISIT WEBSITE" class="secondButton"/>
+                                            </center>
+                                        </div>
+                                    </aura:set>
+                                </aura:if>
+                            </aura:if>
+                            <aura:set attribute="else">
+                                <aura:if isTrue="{!v.modalIsComingSoon == false}">
+                                    <div id="modalFirstButton" data-id="uitlink_link" data-text="Modal | Sign Up To Subscribe">
+                                        <center>
+                                            <lightning:button onclick="{! c.openFirstURL}" label="SIGN UP TO SUBSCRIBE" title="SIGN UP TO SUBSCRIBE" class="firstButton"/>
+                                        </center>
+                                    </div>
+                                    <div id="modalSecondButton" data-id="uitlink_link" data-text="Modal | View Documentation">
+                                        <center>
+                                            <lightning:button onclick="{! c.openSecondURL}" label="VIEW DOCUMENTATION" title="VIEW DOCUMENTATION" class="secondButton"/>
+                                        </center>
+                                    </div>
+                                </aura:if>
+                            </aura:set>
+                        </aura:if>
+        <!-- *****************************END BUTTON SECTION************************************* -->
+        <!-- **********************************LINKS SECTION************************************* -->
+                        <aura:if isTrue="{!v.modalIsSolution}">
+                            <aura:if isTrue="{!v.modalIsComingSoon}">
+                                <aura:set attribute="else">
+                                    <div id="modalMarketPlaceLink">
+                                        <a id="marketPlaceLink" onclick="{! c.addSolutionAsFavourite}" data-id= "uitlink_link" data-text= "{!'Modal | Favourite - ' + v.modalTitle}">
+                                            Add to my solutions
+                                        </a>
+                                    </div>
+                                </aura:set>
+                            </aura:if>
+                        </aura:if>
+
+                        <div id="modalMarketPlaceLink" class="last_modallink">
+                            <a id="marketPlaceLink" onclick="{! c.openMarketPlace}" data-id= "uitlink_link" data-text= "{!'Modal | Visit Marketplace - ' + v.modalTitle}">
+                                Visit the marketplace to share your thoughts
+                            </a>
+                        </div>
+        <!-- ******************************END LINKS SECTION************************************* -->
+                    </div>
+                </section>
+                <aura:set attribute="else">
+                    <section id="modalSection" role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="onboarding__screen slds-modal slds-fade-in-open">
+                        <div class="mainModal_class onboarding__screen" id="mainModal" aura:id="mainModal">
+                            <div class="onboarding__title_container slds-size_4-of-6 slds-medium-size_5-of-12 slds-large-size_3-of-6">
+                                <center>
+                                    <h1 id="modalTitleTextAPI" class="onboarding__title"> {!v.modalTitle} </h1>
+                                </center>
+                                <hr class="slds-size_6-of-6"/>
+                            </div>
+                            <div class="onboarding__body slds-size_6-of-6 slds-medium-size_8-of-12 slds-large-size_4-of-6" id="modalBody">
+                                <div id="modalBodySub">
+                                    <p><aura:unescapedHtml value="{!v.modalContent}"/></p>
+                                </div>
+                            </div>
+                            <div class="slds-size_1-of-1" id="modalFirstButton" data-id="uitlink_link" data-text="Modal | First onboarding button">
+                                <center>
+                                    <lightning:button onclick="{!c.handleStartOnboarding}" label="{!v.firstButtonLabel}" title="{!v.firstButtonLabel}" class="firstButton onboardingButton"/>
+                                </center>
+                            </div>
+                            <aura:if isTrue="{!v.displaySecondButton}">
+                                <div id="modalSecondButton" data-id="uitlink_link" data-text="Modal | Second onboarding button">
+                                    <center>
+                                        <lightning:button onclick="{!c.handleFinishOnboarding}" label="No, not right now" title="No, not right now" class="secondButton onboardingButton"/>
+                                    </center>
+                                </div>
+                            </aura:if>
+                        </div>
+                    </section>
+                </aura:set>
+            </aura:if>
+        </aura:if>
+</aura:component>

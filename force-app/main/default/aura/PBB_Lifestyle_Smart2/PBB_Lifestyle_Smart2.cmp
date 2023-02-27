@@ -1,0 +1,163 @@
+<aura:component implements="flexipage:availableForAllPageTypes" controller="PBB_Lifestyle_Smart2Controller" access="global" >
+	<aura:attribute access="private" name="showFilters"		type="Boolean"	default="false" />
+	<aura:attribute access="private" name="filteredConversation"		type="Conversation__c[]" />
+	<aura:attribute access="private" name="filteredConversationPaginated"		type="Object"	/>
+	<aura:attribute access="private" name="conversations"		type="Conversation__c[]"	 />
+	<aura:attribute access="private" name="allConversation"		type="Conversation__c[]"	 />
+	<aura:attribute access="private" name="filteredBy"		type="String[]" default=""	 />
+	<aura:attribute access="private" name="options"		type="List"	 />
+	<aura:attribute access="private" name="isLoading"	type="boolean"	default="true" />
+	<aura:attribute access="private" name="searchPhase" type="String" />
+	<aura:attribute access="private" name="rowPerPageSet" type="String[]" default="10,15,20" />
+    <aura:attribute access="private" name="rowPerPage" type="String"/>
+
+	<aura:attribute access="private" name="currentPage" type="Integer" default="0" />
+
+	<aura:attribute access="private" name="isAsc" type="boolean" default="true" description="boolean flag for pass sorting condition to apex class"/>
+	<aura:attribute access="private" name="sortField" type="string" default="Expected_OI__c" description="Used for determining by which field sorting should happen"/>
+
+
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+	<aura:handler name="change" value="{!v.filteredBy}" action="{!c.filterChanged}"/>
+	<aura:handler name="change" value="{!v.searchPhase}" action="{!c.filterChanged}"/>
+	<aura:handler name="change" value="{!v.currentPage}" action="{!c.pageChanged}"/>
+	<aura:handler name="change" value="{!v.filteredConversation}" action="{!c.handleResultChange}"/>
+	<aura:handler name="change" value="{!v.rowPerPage}" action="{!c.handleRowPerPageChange}"/>
+	<aura:if isTrue="{!and(!empty(v.allConversation), !v.isLoading)}" >
+		<div class="slds-grid slds-border_bottom" style="width:100%; background: rgb(250, 250, 249);">
+			<div class="slds-size_2-of-8 slds-is-relative">
+				<div class="center_custom slds-text-title_bold slds-text-heading_label-normal title-column" onclick="{!c.sortName}" >Client Name
+
+					<aura:if isTrue="{!  v.sortField == 'Client__r.Name' }">
+						<lightning:buttonIcon variant="bare" iconName="{!v.isAsc ? 'utility:arrowdown' : 'utility:arrowup'}"/>
+						<aura:set attribute="else" >
+							<lightning:buttonIcon variant="bare" class="slds-hidden" iconName="utility:arrowup"/>
+						</aura:set>
+					</aura:if>
+					
+				</div>
+			</div>
+
+			<div class="slds-size_2-of-8 slds-is-relative"><div class="center_custom slds-text-title_bold slds-text-heading_label-normal title-column" onclick="{!c.sortExpectedOI}" >Expected OI
+
+					<aura:if isTrue="{!  v.sortField == 'Expected_OI__c' }">
+						<lightning:buttonIcon variant="bare" iconName="{!v.isAsc ? 'utility:arrowdown' : 'utility:arrowup'}"/>
+						<aura:set attribute="else" >
+							<lightning:buttonIcon variant="bare" class="slds-hidden" iconName="utility:arrowup"/>
+						</aura:set>
+					</aura:if>				
+
+				</div>
+			</div>
+ 
+			<div class="slds-size_1-of-8 slds-is-relative"><div class="center_custom slds-text-title_bold slds-text-heading_label-normal title-column" onclick="{!c.sortProduct}" >Product
+
+					<aura:if isTrue="{!  v.sortField == 'Subcategory__c' }">
+						<lightning:buttonIcon variant="bare" iconName="{!v.isAsc ? 'utility:arrowdown' : 'utility:arrowup'}"/>
+						<aura:set attribute="else" >
+							<lightning:buttonIcon variant="bare" class="slds-hidden" iconName="utility:arrowup"/>
+						</aura:set>
+					</aura:if>				
+				</div>
+			</div>
+
+			<div class="slds-size_3-of-8 slds-text-align_right slds-m-bottom_x-small slds-p-right_x-small">
+				<div style="display: inline-block;" class="slds-p-right_xx-small">
+					<lightning:input 
+						aura:id="search"
+						name="search"
+						variant="label-hidden"
+						label="Search by product"
+						type="search"
+						value="{!v.searchPhase}"
+						placeholder="Search by product"
+					/>
+				</div>
+
+				<lightning:buttonIcon iconName="utility:refresh" variant="border-filled"  alternativeText="Refresh" onclick="{!c.handleRefresh}" />
+				
+				<lightning:buttonIcon iconName="utility:filterList" variant="border-filled" alternativeText="Filter" onclick="{!c.handleToggleFilters}" />
+			</div>
+		</div>
+		<div class="slds-is-relative">
+			<aura:if isTrue="{!v.showFilters}" >
+				<div class="sm2-filters slds-box">				
+					<p class="slds-p-horizontal_small"> 
+						<div>
+						<lightning:checkboxGroup name="radioGroup"
+							aura:id="filterRadio"
+							label="Lead Category"
+							options="{! v.options }"
+							value="{! v.filteredBy }"
+							type="radio"/>
+						</div>
+					</p>
+				</div>	
+			</aura:if>
+		</div>
+		<div class="tabs slds-is-relative" style="height: 27rem; overflow-y: scroll;">
+
+			<aura:iteration items="{!v.conversations}" var="item" indexVar="i">
+				<div class="tab">
+					<input type="checkbox" id="{!'chck'+i}"> </input>
+					<label class="tab-label slds-p-vertical_small slds-border_bottom" for="{!'chck'+i}">
+						<div class="slds-grid" style="width:100%">
+							<div class=" slds-is-sortable slds-size_2-of-8 slds-p-right_small"><lightning:formattedUrl label="{!item.Client__r.Name}" value="{!'/' + item.Client__r.Id}" /></div>
+							<aura:if isTrue="{!not(empty(item.Expected_OI__c))}">
+								<div class="slds-is-sortable slds-size_2-of-8">ZAR <lightning:formattedNumber value="{!item.Expected_OI__c}"/></div>
+								<aura:set attribute="else">
+									<div class="slds-is-sortable slds-is-sortable slds-size_2-of-8"></div>
+								</aura:set>
+							</aura:if>
+							<div class="slds-size_4-of-8">{!item.Subcategory__c}</div>
+						</div>
+					</label>
+					<div class="tab-content" >
+						{!item.Description__c}
+					</div>
+				</div>
+			</aura:iteration>
+		</div>
+	`	<div class="slds-is-relative">
+			<div class="slds-is-absolute">
+				<lightning:select name="select" label="Rows per page" value="{!v.rowPerPage}" variant="label-inline">
+					<aura:iteration items="{!v.rowPerPageSet}" var="set">
+							<option text="{!set}"></option>
+						</aura:iteration>
+				</lightning:select>
+			</div>
+			<div class="slds-text-align_center">
+				<div>
+				{!(v.currentPage * v.rowPerPage ) + 1} - {!if(lessthan(((v.currentPage +1 ) * v.rowPerPage ), v.filteredConversation.length), ((v.currentPage +1 ) * v.rowPerPage ), v.filteredConversation.length ) } of {!v.filteredConversation.length}
+				</div>
+				<div>
+					<lightning:button variant="base" label="Prev"  iconName="utility:chevronleft" iconPosition="left" title="Prev page" onclick="{! c.handlePrev }" disabled="{!v.currentPage == 0}"/>
+					<aura:iteration items="{!v.filteredConversationPaginated}" var="item" indexVar="i"  start="{!v.currentPage - 2}" end="{!v.currentPage +3}">
+						<aura:if isTrue="{!v.currentPage == i}">
+							<lightning:button variant="base" label="{!i + 1}" title="{!'Go to ' + i +' page'}" disabled="true" />
+							<aura:set attribute="else" >
+								<lightning:button variant="base" label="{!i + 1}" title="{!'Go to ' + i +' page'}" onclick="{!c.changePage}"/>
+							</aura:set>
+						</aura:if>
+					</aura:iteration>
+					<lightning:button variant="base" label="Next" iconName="utility:chevronright" iconPosition="right" title="Next page" onclick="{! c.handleNext }" disabled="{!v.currentPage == v.filteredConversationPaginated.length -1}"/>
+				</div>
+			</div>
+		</div>
+		<aura:set attribute="else" >
+				<div class="slds-is-relative" style="min-height: 15rem; height: 27rem; display: flex; justify-content: center; align-items: center;">
+
+					<aura:if isTrue="{!v.isLoading}">
+						<lightning:spinner alternativeText="Loading" size="medium" />
+						<aura:set attribute="else" >
+							<p class="slds-p-horizontal_small">
+								There is no data to present
+							</p>
+						</aura:set>
+					</aura:if>
+
+				</div>
+			</aura:set>
+	</aura:if>
+
+</aura:component>

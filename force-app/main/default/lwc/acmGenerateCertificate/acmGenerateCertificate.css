@@ -1,0 +1,53 @@
+.generate-certificate {
+    font-size: 27.8px;
+    line-height: 35.7px;
+    width: 397px;
+    color: #3c4b6c;
+    font-weight: 300;
+}
+
+.container-generate-cert {
+    width: 100%;
+}
+
+.buttons {
+    display: inline-flex;
+    float: right;
+    padding-top: 10px;
+    margin-left: auto;
+    margin-right: -10px;
+}
+
+.generate-steps div {
+    display: inline-flex;
+    width: 360px;
+    padding: 16px 38px 10px 0px;
+    color: #0a2240;
+
+    /* font-size: 14.9px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.67;
+  letter-spacing: normal; */
+}
+
+.info-text {
+    font-size: 15px;
+    line-height: 25px;
+    color: #3c4b6c;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.styled-asset {
+    margin: 0;
+    width: 69.5px;
+    height: 2px;
+    background: linear-gradient(135deg,#ff5a00 0%,#ffb94f 100%);
+}
+
+.added-style {
+    margin-left: 30px;
+    margin-right: 0px;
+}

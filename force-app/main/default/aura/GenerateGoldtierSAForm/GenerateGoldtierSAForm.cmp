@@ -1,0 +1,418 @@
+<!--
+ - Created by mjaznicki on 04.07.2018.
+ -->
+
+<aura:component implements="lightning:isUrlAddressable,force:hasRecordId"
+                controller="GenerateGoldtierSAFormController">
+    <aura:attribute name="hasAccess" type="Boolean" default="false"/>
+    <aura:attribute name="account" type="Account"/>
+    <aura:attribute name="cif" type="String" default="{!v.account.RecordType.Name == 'Ultimate Group Parent' ? 'No' : 'Yes'}"/>
+    <aura:attribute name="entityType" type="String" default="{!v.account.Client_Type_OnBoard__c}"/>
+    <aura:attribute name="entityClassification" type="String"  default="{!v.account.Business_Classification__c}"/>
+    <aura:attribute name="singleRevenue" type="String"/>
+    <aura:attribute name="profClient" type="String"/>
+    <aura:attribute name="statusReason" type="String"/>
+    <aura:attribute name="activities" type="String"/>
+    <aura:attribute name="services" type="String"/>
+    <aura:attribute name="offshore" type="String"/>
+    <aura:attribute name="shell" type="String"/>
+    <aura:attribute name="corespondent" type="String"/>
+    <aura:attribute name="products" type="String"/>
+    <aura:attribute name="nature" type="String"/>
+    <aura:attribute name="expectedIncome" type="Decimal" default="{!v.account.Expected_Income__c}"/>
+    <aura:attribute name="sourceWealth" type="String" default="{!v.account.Source_of_Wealth__c}"/>
+    <aura:attribute name="sourceFunds" type="String" default="{!v.account.Source_of_Funds__c}"/>
+    <aura:attribute name="anticipatedLevel" type="String"
+                    default="{!v.account.Anticipated_Level_Volume_of_Activity__c}"/>
+    <aura:attribute name="natureBusiness" type="String" default="{!v.account.Nature_of_business_activity__c}"/>
+    <aura:attribute name="parameterList" type="List" default="['cif','entityType','entityClassification','singleRevenue','profClient',
+                    'statusReason', 'activities', 'services', 'offshore', 'shell', 'corespondent', 'products', 'nature', 'sourceWealth',
+                     'sourceFunds', 'anticipatedLevel', 'natureBusiness', 'expectedIncome']"/>
+    <aura:attribute name="urlParam" type="String" default="/apex/GoldtierSaForm?"/>
+    <aura:attribute name="detailsOfCustomers" type="List"
+                    default="['Name','CIF__c']"/>
+    <aura:attribute name="SADetails" type="List"
+                    default="['Account_Owner__c']"/>
+    <aura:attribute name="SADetailsOwner" type="List"
+                    default="['User_Division__c']"/>
+    <aura:attribute name="entityClassificationDetails" type="List"
+                    default="['Industry_Code__c']"/>
+    <aura:attribute name="registeredAddress" type="List"
+                    default="['BillingStreet','BillingCity','BillingState','BillingPostalCode','BillingCountry']"/>
+    <aura:attribute name="InternalContact" type="List"
+                    default="['Name','Title','Phone']"/>
+    <aura:attribute name="entityDetails" type="List"
+                    default="['Primary_Relationship_Holder__c']"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="bussinessValues" type="List"/>
+    <aura:attribute name="entityValues" type="List"/>
+    <aura:attribute name="sowValues" type="List" access="private"/>
+    <aura:attribute name="kycUser" type="User"/>
+    <aura:if isTrue="{!v.account}">
+        <aura:if isTrue="{!v.hasAccess}">
+            <div style="height: 640px;">
+                <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+                         aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                    <div class="slds-modal__container">
+                        <header class="slds-modal__header">
+                            <button class="slds-button slds-button_icon-inverse slds-modal__close" onclick="{!c.onCancel}">
+                                <lightning:icon iconName="utility:close" size="medium" variant="bare"/>
+                                <span class="slds-assistive-text">Close</span>
+                            </button>
+                            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate"> GoldTier SBSA
+                                Origination
+                                Form</h2>
+                        </header>
+                        <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                            <div class="slds-form slds-form_compound">
+                                <div class="slds-section slds-is-open">
+                                    <h3 class="slds-section__title slds-theme_shade">
+                                <span class="slds-truncate slds-p-horizontal_small"
+                                      title="Details of Customer">Details of Customer</span>
+                                    </h3>
+                                </div>
+                                <lightning:recordForm objectApiName="Account" mode="readonly" recordId="{!v.recordId}"
+                                                      columns="2" fields="{!v.detailsOfCustomers}"/>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-size_1-of-2">
+                                        <lightning:select label="Entity Type" required="true"
+                                                          value="{!v.entityType}" onchange="{!c.onChangeClientType}">
+                                            <option label="---NONE---" value=""/>
+                                            <aura:iteration var="opt" items="{!v.entityValues}">
+                                                <option value="{!opt}" label="{!opt}" />
+                                            </aura:iteration>
+                                        </lightning:select>
+                                    </div>
+                                    <div class="slds-form-element slds-size_1-of-2">
+                                        <lightning:select label="Entity Classification" required="{!v.entityType == 'Branch' || v.entityType == 'Managed Fund' ? false : true}"
+                                                          disabled="{!v.entityType == 'Branch' || v.entityType == 'Managed Fund' ? true : false}"
+                                                          value="{!v.entityClassification}">
+                                            <option label="---NONE---" value=""/>
+                                            <aura:iteration var="opt" items="{!v.bussinessValues}">
+                                                <option value="{!opt}" label="{!opt}" />
+                                            </aura:iteration>
+
+                                        </lightning:select>
+                                    </div>
+                                </div>
+
+                                <div class="slds-section slds-is-open">
+                                    <h3 class="slds-section__title slds-theme_shade">
+                                <span class="slds-truncate slds-p-horizontal_small"
+                                      title="SA Details">SA Details</span>
+                                    </h3>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-size_1-of-2">
+                                        <lightning:recordForm objectApiName="Account" mode="readonly"
+                                                              recordId="{!v.recordId}"
+                                                              columns="1" fields="{!v.SADetails}"/>
+                                    </div>
+                                    <div class="slds-form-element slds-size_1-of-2">
+                                        <lightning:recordForm objectApiName="User" mode="readonly"
+                                                              recordId="{!v.account.OwnerId}"
+                                                              columns="1" fields="{!v.SADetailsOwner}"/>
+                                    </div>
+                                </div>
+
+                                <div class="slds-section slds-is-open">
+                                    <h3 class="slds-section__title slds-theme_shade">
+                                <span class="slds-truncate slds-p-horizontal_small"
+                                      title="CIF Top Parent Details">CIF Top Parent Details</span>
+                                    </h3>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-size_1-of-2">
+
+                                        <span class="slds-form-element__label"> Does the Entity have a CIF Top Parent? </span>
+
+                                        <div class="slds-form-element__control " >
+                                           <span class="slds-border_bottom slds-form-element__static">
+                                           <ui:outputText value = "{!v.cif}" />
+                                           </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-section slds-is-open">
+                                    <h3 class="slds-section__title slds-theme_shade">
+                                <span class="slds-truncate slds-p-horizontal_small"
+                                      title="Entity Details">Entity Details</span>
+                                    </h3>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-size_1-of-2">
+                                        <lightning:select required="true"
+                                                label="Is More than 50% of the Customers revenue generated out of a single Country ?"
+                                                value="{!v.singleRevenue}">
+                                            <option label="---NONE---" value=""/>
+                                            <option label="Yes" value="Yes"/>
+                                            <option label="No" value="No"/>
+                                        </lightning:select>
+                                    </div>
+                                    <div class="slds-form-element slds-size_1-of-2">
+                                        <lightning:recordForm objectApiName="Account" mode="readonly"
+                                                              recordId="{!v.account.Id}"
+                                                              columns="1" fields="{!v.entityDetails}"/>
+                                    </div>
+                                </div>
+                                <div class="slds-section slds-is-open">
+                                    <h3 class="slds-section__title slds-theme_shade">
+                                <span class="slds-truncate slds-p-horizontal_small"
+                                      title="FAIS Classification Details">FAIS Classification Details</span>
+                                    </h3>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-size_1-of-2">
+                                        <lightning:select label="Professional Client"
+                                                          value="{!v.profClient}" required="true">
+                                            <option label="---NONE---" value=""/>
+                                            <option label="Yes" value="Yes"/>
+                                            <option label="No" value="No"/>
+                                        </lightning:select>
+                                    </div>
+                                    <div class="slds-form-element slds-size_1-of-2">
+                                        <lightning:select label="Reason for Professional Status"
+                                                          value="{!v.statusReason}" disabled="{!v.profClient == 'No' ? true : false}" required="{!v.profClient == 'Yes' ? true : false}">
+                                            <option label="---NONE---" value=""/>
+                                            <option label="NAV > R20m" value="NAV > R20m"/>
+                                            <option label="AUM > R2bn" value="AUM > R2bn"/>
+                                        </lightning:select>
+                                    </div>
+                                </div>
+                                <div class="slds-section slds-is-open">
+                                    <h3 class="slds-section__title slds-theme_shade">
+                                <span class="slds-truncate slds-p-horizontal_small"
+                                      title="Entity Classification Details">Entity Classification Details</span>
+                                    </h3>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-size_1-of-2">
+                                        <span class="slds-form-element__label">Industry Code</span>
+
+                                        <div class="slds-form-element__control " >
+                                           <span class="slds-border_bottom slds-form-element__static">
+                                           <ui:outputText value = "{!v.account.Industry_Code__c +' - ' + v.account.SA_Industry_Description__c}" />
+                                           </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-section slds-is-open">
+                                    <h3 class="slds-section__title slds-theme_shade">
+                                <span class="slds-truncate slds-p-horizontal_small"
+                                      title="Other Details">Other Details</span>
+                                    </h3>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-size_1-of-2">
+                                        <lightning:select label="Source of Wealth" required="true"
+                                                          value="{!v.sourceWealth}">
+                                            <option label="---NONE---" value=""/>
+                                            <aura:iteration var="opt" items="{!v.sowValues}">
+                                                <option value="{!opt.value}" label="{!opt.label}" />
+                                            </aura:iteration>
+                                        </lightning:select>
+                                        </div>
+                                    <div class="slds-form-element slds-size_1-of-2">
+                                        <ui:inputText label="Source of Funds" value="{!v.sourceFunds}" required="true"/>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-size_1-of-2">
+                                        <ui:inputText label="Anticipated level/volume of activity"
+                                                      value="{!v.anticipatedLevel}" required="true"/>
+                                    </div>
+                                    <div class="slds-form-element slds-size_1-of-2">
+                                        <ui:inputText label="Nature of Business Activity" value="{!v.natureBusiness}"
+                                                      required="true"/>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-size_1-of-2">
+                                        <lightning:select required="true"
+                                                          label="Services/Products to be expected"
+                                                          value="{!v.products}">
+                                            <option label="---NONE---" value=""/>
+                                            <option label="Current Account" value="Current Account"/>
+                                            <option label="CFC Account" value="CFC Account"/>
+                                            <option label="Nostro" value="Nostro"/>
+                                            <option label="Vostro" value="Vostro"/>
+                                            <option label="Forex" value="Forex"/>
+                                        </lightning:select>
+                                    </div>
+                                    <div class="slds-form-element slds-size_1-of-2">
+                                        <lightning:select required="true"
+                                                          label="Nature of relationship"
+                                                          value="{!v.nature}">
+                                            <option label="---NONE---" value=""/>
+                                            <option label="Banking" value="Banking"/>
+                                            <option label="Transactional" value="Transactional"/>
+                                        </lightning:select>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-size_1-of-2">
+                                        <ui:inputNumber label="Expected Income" value="{!v.expectedIncome}"
+                                                        required="true"/>
+                                    </div>
+                                </div>
+                                <div class="slds-section slds-is-open">
+                                    <h3 class="slds-section__title slds-theme_shade">
+                                <span class="slds-truncate slds-p-horizontal_small"
+                                      title="Correspondent Banking Details">Correspondent Banking Details
+                                 <br/><div style="font-size:10px">If this is a Correspondent bank please complete the below details</div></span>
+                                    </h3>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-size_1-of-2">
+                                        <br/>
+                                        <lightning:select required="true"
+                                                label="Does the entity provide corresponding bank services, directly or indirectly, to shell banks ?"
+                                                value="{!v.shell}">
+                                            <option label="---NONE---" value=""/>
+                                            <option label="Yes" value="Yes"/>
+                                            <option label="No" value="No"/>
+                                        </lightning:select>
+                                    </div>
+                                    <div class="slds-form-element slds-size_1-of-2">
+                                        <lightning:select label="Is this an offshore bank that is limited to conducting business with
+                    Non-Residents in Non-Local currency?" disabled="{!v.shell == 'No' ? true : false}"
+                                                          value="{!v.offshore}" required="{!v.shell == 'Yes' ? true : false}">
+                                            <option label="---NONE---" value=""/>
+                                            <option label="Yes" value="Yes"/>
+                                            <option label="No" value="No"/>
+                                        </lightning:select>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-size_2-of-2">
+                                        <lightning:select label="Bank Services" disabled="{!v.shell == 'No' ? true : false}"
+                                                          value="{!v.services}" required="{!v.shell == 'Yes' ? true : false}">
+                                            <option label="---NONE---" value=""/>
+                                            <option label="TPS: Cash - Working Capital - Lending (overdrafts)"
+                                                    value="TPS: Cash - Working Capital - Lending (overdrafts)"/>
+                                            <option label="TPS: Cash - Trade Finance"
+                                                    value="TPS: Cash - Trade Finance"/>
+                                            <option label="TPS: Cash - Payments - Outward EFT, Cash, Cheques, Cards "
+                                                    value="TPS: Cash - Payments - Outward EFT, Cash, Cheques, Cards "/>
+                                            <option label="TPS: Cash - Collections - Inward EFT, Cash, Cheques, Direct debit, Cards"
+                                                    value="TPS: Cash - Collections - Inward EFT, Cash, Cheques, Direct debit, Cards"/>
+                                            <option label="TPS: Cash - Account Services"
+                                                    value="TPS: Cash - Account Services"/>
+                                            <option label="Transaction Services - TPS Ops - Trade Services"
+                                                    value="Transaction Services - TPS Ops - Trade Services"/>
+                                            <option label="Transaction Services - Guarantees"
+                                                    value="Transaction Services - Guarantees"/>
+                                            <option label="Transaction Services - Forward exchange contracts"
+                                                    value="Transaction Services - Forward exchange contracts"/>
+                                            <option label="Transaction Services - Escrow Account"
+                                                    value="Transaction Services - Escrow Account"/>
+                                            <option label="Transaction Services - Documentary collections"
+                                                    value="Transaction Services - Documentary collections"/>
+                                            <option label="Transaction Services - Customer Foreign Currency Account"
+                                                    value="Transaction Services - Customer Foreign Currency Account"/>
+                                            <option label="Transaction Services - Bank draft"
+                                                    value="Transaction Services - Bank draft"/>
+                                            <option label="Global Markets - e-Market"
+                                                    value="Global Markets - e-Market"/>
+                                            <option label="Global Markets - Structured solutions"
+                                                    value="Global Markets - Structured solutions"/>
+                                            <option label="Global Markets - Money Market"
+                                                    value="Global Markets - Money Market"/>
+                                            <option label="Global Markets - Interest rates"
+                                                    value="Global Markets - Interest rates"/>
+                                            <option label="Global Markets - Foreign Exchange"
+                                                    value="Global Markets - Foreign Exchange"/>
+                                            <option label="Global Markets - Equity derivatives"
+                                                    value="Global Markets - Equity derivatives"/>
+                                            <option label="Global Markets - Distribution and Agency"
+                                                    value="Global Markets - Distribution and Agency"/>
+                                            <option label="Global Markets - Credit Trading"
+                                                    value="Global Markets - Credit Trading"/>
+                                            <option label="Global Markets - Commodities"
+                                                    value="Global Markets - Commodities"/>
+                                            <option label="Financing - Term Lending" value="Financing - Term Lending"/>
+                                            <option label="Financing - Syndicated lending /distribution"
+                                                    value="Financing - Syndicated lending /distribution"/>
+                                            <option label="Financing - Structured trade and commodity finance"
+                                                    value="Financing - Structured trade and commodity finance"/>
+                                            <option label="Financing - Structured debt Finance"
+                                                    value="Financing - Structured debt Finance"/>
+                                            <option label="Financing - Securitisation"
+                                                    value="Financing - Securitisation"/>
+                                            <option label="Financing - Project Finance/ Property Finance"
+                                                    value="Financing - Project Finance/ Property Finance"/>
+                                            <option label="Financing - Equity capital markets"
+                                                    value="Financing - Equity capital markets"/>
+                                            <option label="Financing - Debt capital markets"
+                                                    value="Financing - Debt capital markets"/>
+                                            <option label="Financing - Carbon finance/emissions"
+                                                    value="Financing - Carbon finance/emissions"/>
+                                            <option label="Financing - Asset finance"
+                                                    value="Financing - Asset finance"/>
+                                            <option label="Financing - Acquisition Finance"
+                                                    value="Financing - Acquisition Finance"/>
+                                        </lightning:select>
+                                    </div>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-size_1-of-2">
+                                        <lightning:select disabled="{!v.shell == 'No' ? true : false}"
+                                                label="Does the entity provide downstream correspondent clearing ?"
+                                                value="{!v.corespondent}" required="{!v.shell == 'Yes' ? true : false}">
+                                            <option label="---NONE---" value=""/>
+                                            <option label="Yes" value="Yes"/>
+                                            <option label="No" value="No"/>
+                                        </lightning:select>
+                                    </div>
+                                </div>
+                                <div class="slds-section slds-is-open">
+                                    <h3 class="slds-section__title slds-theme_shade">
+                                <span class="slds-truncate slds-p-horizontal_small"
+                                      title="Registered Address">Registered Address</span>
+                                    </h3>
+                                </div>
+                                <lightning:recordForm objectApiName="Account" mode="readonly" recordId="{!v.recordId}"
+                                                      columns="2" fields="{!v.registeredAddress}"/>
+                                <div class="slds-section slds-is-open">
+                                    <h3 class="slds-section__title slds-theme_shade">
+                                <span class="slds-truncate slds-p-horizontal_small"
+                                      title="Customer Contact (KYC Contact)">Customer Contact (KYC Contact)</span>
+                                    </h3>
+                                </div>
+                                <div class="slds-form-element__row">
+                                    <div class="slds-form-element slds-size_1-of-2">
+                                        <div>
+                                        <c:UTL_LookupField required="true"  sObjectName="Account" fieldName="KYC_Contact__c"
+                                                           fieldLabel="KYC Contact" assignTo="{!v.account.KYC_Contact__c}"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-section slds-is-open">
+                                    <h3 class="slds-section__title slds-theme_shade">
+                                <span class="slds-truncate slds-p-horizontal_small"
+                                      title="Internal Contact">Internal Contact</span>
+                                    </h3>
+                                </div>
+                                <lightning:recordForm objectApiName="User" mode="readonly"
+                                                      recordId="{!v.account.OwnerId}"
+                                                      columns="2" fields="{!v.InternalContact}"/>
+                            </div>
+                            <footer class="slds-modal__footer">
+                                <button class="slds-button slds-button_neutral" onclick="{!c.onCancel}">Cancel</button>
+                                <button class="slds-button slds-button_brand" onclick="{!c.onSaveAndSend}">Save and Send
+                                </button>
+                            </footer>
+                        </div>
+                    </div>
+                </section>
+                <div class="slds-backdrop slds-backdrop_open"></div>
+            </div>
+            <aura:set attribute="else">
+                <h3 style="font-weight: 900">Insufficient Privileges</h3><br/>
+                <div>You do not have the level of access necessary to perform the operation you requested. Please
+                    contact the owner of the record or your administrator if access is necessary.
+                </div>
+            </aura:set>
+        </aura:if>
+    </aura:if>
+</aura:component>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cases_I_Created</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>OWNER_NAME</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>CASES.LAST_UPDATE_DATE_ONLY</columns>
+    <columns>NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Case.Cross_Border_CoE_Closed_Record_Type,Case.Cross_Border_CoE_Record_Type</value>
+    </filters>
+    <label>Cases I Created</label>
+    <sharedTo>
+        <allCustomerPortalUsers></allCustomerPortalUsers>
+        <portalRoleAndSubordinates>StandardBankEmployeesCustomerUser</portalRoleAndSubordinates>
+    </sharedTo>
+</ListView>

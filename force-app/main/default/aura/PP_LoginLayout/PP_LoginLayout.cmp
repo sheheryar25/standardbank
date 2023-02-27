@@ -1,0 +1,17 @@
+<!-- **
+* @description  : Partner Portal Login Page  Theme Layout.
+* User Story : SFP-4844
+*
+* @author Syed Ovais Ali (syed.ali@standardbank.co.za)
+* @date June 2021
+*/ -->
+<aura:component implements="forceCommunity:themeLayout">
+    
+ 
+    <aura:attribute name="body" type="Aura.Component[]" required="false" access="private" />
+    
+    <div class="content-container">
+        {!v.body}
+    </div>
+    
+</aura:component>

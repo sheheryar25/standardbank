@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Group_Parent_Reporting_Franco__c</fullName>
+    <description>EN-0238. Definition : : Reporting Franco of a Client&apos;s Group Parent. Where this value is not available, the Client&apos;s own Reporting Franco is applied.</description>
+    <externalId>false</externalId>
+    <formula>IF( ISPICKVAL(CRT_Parent_Child__c, &quot;TP&quot;),
+TEXT(Client_Franco__c),
+IF( NOT(Group_Parent__c = &quot;&quot;) ,
+IF(ISBLANK(TEXT(Group_Parent__r.Client_Franco__c)),
+TEXT(Client_Franco__c),
+TEXT(Group_Parent__r.Client_Franco__c)
+),
+TEXT(Client_Franco__c))
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Group Parent Reporting Franco</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

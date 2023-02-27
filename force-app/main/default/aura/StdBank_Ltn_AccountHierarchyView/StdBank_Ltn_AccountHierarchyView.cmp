@@ -1,0 +1,57 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global"
+controller="AccountHierarchy_LTN_CTRL" >
+	<aura:attribute name="recordId" type="Id"/>
+    <aura:attribute name="account" type="Account"/>
+	<aura:attribute name="isLoading" type="Boolean" default="true" />
+	<aura:attribute name="selTabId" type="String" default="tab1" /> 
+
+	<aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
+    	
+        <aura:if isTrue="{!v.isLoading}">
+        <div class="slds-spinner_container" style="position: relative; height: 4 em;">
+            <div class="slds-spinner_brand slds-spinner slds-spinner_small">
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div> 
+        </div>
+        <aura:set attribute="else">
+
+        	<lightning:tabset selectedTabId="{!v.selTabId}" > 
+                <lightning:tab id="tab1">
+                    <aura:set attribute="label">
+                        CLIENTS 
+                    </aura:set>
+                    <aura:set attribute="body">
+                        <br/>
+                        <a href="{!'/apex/Hierarchy_OrgChart?Id=' + v.account.Id + '&amp;name=' + v.account.Name + '&amp;isdtp=p1'}" target="_blank" style="float:right;"> 
+                            Tree View 
+                        </a> 
+                        <br/><br/>
+
+                        <c:StdBank_Ltn_AccountHierarchyList recordId="{!v.recordId}" /> 
+                    </aura:set>
+                    
+                </lightning:tab>
+
+                <lightning:tab id="tab2">
+                    <aura:set attribute="label">
+                        OPPORTUNITIES
+                    </aura:set>
+                    <aura:set attribute="body">
+                        <c:StdBank_Ltn_AccountHierarchyOpps accountId="{!v.recordId}"/>
+                    </aura:set>
+                </lightning:tab>
+
+                <lightning:tab id="tab3">
+                    <aura:set attribute="label"> 
+                        CONTACTS 
+                    </aura:set>
+                    <aura:set attribute="body">
+                        <c:StdBank_Ltn_AccountHierarchyContacts accountId="{!v.recordId}"/>
+                    </aura:set>
+                </lightning:tab>
+            </lightning:tabset>
+        </aura:set>
+    </aura:if>
+    
+</aura:component>

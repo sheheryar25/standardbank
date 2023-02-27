@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Internal_Day_to_Day_Meetings__c</fullName>
+    <description>EN-0777 – Number of Internal Day to Day Meetings attended this year</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Number of Internal Day to Day Meetings attended this year</inlineHelpText>
+    <label>Total Internal Day to Day Meetings</label>
+    <precision>4</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

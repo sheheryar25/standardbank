@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Manage_Member_Hosts</fullName>
+    <availability>online</availability>
+    <description>Case#1168 - 11/2011 - Rudolf Niehaus
+            Button that opens the VF page &quot;CampaignMemberHostManager&quot;</description>
+    <displayType>button</displayType>
+    <linkType>page</linkType>
+    <masterLabel>Manage Member Hosts</masterLabel>
+    <openType>replace</openType>
+    <page>CampaignMemberHostManager</page>
+    <protected>false</protected>
+</WebLink>

@@ -1,0 +1,6 @@
+<aura:component controller="CI_ReportController" extends="c:CI_Base">
+    <aura:method name="getReportId">
+        <aura:attribute name="reportName" type="String" />
+        <aura:attribute name="callback" type="function" />
+    </aura:method>
+</aura:component>

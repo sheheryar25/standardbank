@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Insurance_Total_Revenue_Amount__c</fullName>
+    <description>SFP-6290 - This formula field calculates the Total Product Revenue associated with Total Fees and Total Commission.</description>
+    <externalId>false</externalId>
+    <formula>Total_Fees__c + Total_Commission__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Estimates the the total sum of Total Fees and Total Commission</inlineHelpText>
+    <label>Total Revenue (Amount)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

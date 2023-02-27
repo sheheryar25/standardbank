@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Next_Steps__c</fullName>
+    <description>This field refers to the next steps that need to be followed in order to action the insight.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The next steps that need to be followed in order to action the insight.</inlineHelpText>
+    <label>Next Steps</label>
+    <length>40000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

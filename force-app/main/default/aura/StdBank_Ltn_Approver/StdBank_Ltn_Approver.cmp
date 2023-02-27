@@ -1,0 +1,104 @@
+<aura:component controller="StdBank_Ltn_Approver" implements="flexipage:availableForAllPageTypes" access="global"
+                description="Lightning Approver">
+    <!-- Private Variables -->
+    <aura:attribute name="data" type="List" default="[]" access="private"/>
+    <aura:attribute name="users" type="List" default="[]" access="private"/>
+    <aura:attribute name="isLoading" type="Boolean" default="true" access="private"/>
+    <aura:attribute name="dataEvent" type="ProcessInstanceWorkitem" access="private"/>
+    <aura:attribute name="dataModal" type="Object" default="{'header':'', 'action':''}" access="private"/>
+    <aura:attribute name="dataModalLookup" type="Object" default="{}" access="private"/>
+    <aura:attribute name="dataModalTextArea" type="String" default="" access="private"/>
+    <aura:attribute name="isLookup" type="Boolean" default="false" access="private"/>
+
+
+    <!-- INIT Sequence -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler name="showModal" event="c:StdBank_Ltn_ShowModal" action="{!c.handleEvent}"/>
+
+    <article class="slds-card" style="background-color: white">
+        <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="slds-media__body">
+                    <h2 class="header-title-container">
+                        <span class="slds-text-heading_small slds-truncate" title="Items to Action">Items to Approve</span>
+                    </h2>
+                </div>
+            </header>
+        </div>
+        <div class="slds-card__body">
+            <aura:if isTrue="{!v.isLoading}">
+                <div class="slds-spinner_container" style="position: relative; height: 4em;">
+                    <div class="slds-spinner_brand slds-spinner slds-spinner_small" aria-hidden="false" role="alert">
+                        <div class="slds-spinner__dot-a"></div>
+                        <div class="slds-spinner__dot-b"></div>
+                    </div>
+                </div>
+
+                <aura:set attribute="else">
+                    <span>
+                        <aura:if isTrue="{!v.data.length == 0}">
+                            <p style="text-align: center; color: rgb(84, 105, 141);">
+                                No items to approve.
+                            </p>
+                            <aura:set attribute="else">
+                                <table class="slds-table slds-table_bordered slds-no-row-hover slds-table_cell-buffer">
+                                    <thead>
+                                    <tr class="slds-text-heading_label">
+                                        <th scope="col">related to</th>
+                                        <th scope="col">date submitted</th>
+                                        <th scope="col" style="width: 120px; text-align: center">actions</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                        <aura:iteration items="{!v.data}" var="item">
+                                            <c:StdBank_Ltn_ApproverRow data="{!item}"/>
+                                        </aura:iteration>
+                                    </tbody>
+                                </table>
+                            </aura:set>
+                        </aura:if>
+                    </span>
+                </aura:set>
+            </aura:if>
+        </div>
+        <div class="slds-card__footer">
+            <!-- Bottom maybe here :3 -->
+        </div>
+    </article>
+
+    <!-- Modal -->
+    <div aura:id="modal" class="slds-modal" aria-hidden="false" role="dialog">
+        <div class="slds-modal__container">
+            <div class="slds-modal__header">
+                <button class="slds-button slds-button_icon-inverse slds-modal__close" onclick="{!c.modalClose}">
+                    <c:StdBank_Ltn_SVG class="button__icon slds-button__icon_large" ariaHidden="true" category="action" type="close"/>
+                    <span class="slds-assistive-text">Close</span>
+                </button>
+                <h2 class="slds-text-heading_medium">{!v.dataModal.header}</h2>
+            </div>
+            <div class="slds-modal__content slds-p-around_medium" style="min-height: 300px;">
+                <div>
+                    <aura:if isTrue="{!v.isLookup}">
+                        <div>
+                            <c:StdBank_Ltn_SELECT data="{!v.users}" selected="{!v.dataModalLookup}"/>
+                        </div>
+                        <aura:set attribute="else">
+                            <div class="slds-form-element">
+                                <div class="slds-form-element__control">
+                                    <ui:inputTextArea rows="20" placeholder="Write you comment here" value="{!v.dataModalTextArea}" class="slds-textarea" label="Description (Optional)" labelClass="slds-form-element__label" />
+                                </div>
+                            </div>
+                        </aura:set>
+                    </aura:if>
+                </div>
+            </div>
+            <div class="slds-modal__footer">
+                <c:StdBank_Ltn_BUTTON class="slds-button slds-button_neutral" label="Cancel"
+                                      onclick="{!c.modalClose}"/>
+                <c:StdBank_Ltn_BUTTON class="slds-button slds-button_neutral slds-button_brand"
+                                      label="{!v.dataModal.action}" onclick="{!c.modalSave}"/>
+            </div>
+        </div>
+    </div>
+    <div aura:id="modal-shade" class="slds-backdrop"></div>
+</aura:component>

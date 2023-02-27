@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Client_Coordinator__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Used to specify the Client Coordinator in the Service Team</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Is this Client Team Member the Client Coordinator?</inlineHelpText>
+    <label>CC</label>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

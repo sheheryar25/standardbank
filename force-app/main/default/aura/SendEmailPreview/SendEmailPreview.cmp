@@ -1,0 +1,19 @@
+<aura:component controller="StdBank_Ltn_SendEmail">
+  <aura:attribute name="templateId" type="String" />
+  <aura:attribute name="objectId" type="String" />
+  <aura:attribute name="height" type="String" default="100px" access="private" />
+  <aura:attribute name="width" type="String" default="100px" access="private" />
+
+  <aura:handler name="init" action="{!c.doInit}" value="{!this}" />
+
+  <aura:registerEvent name="emailSubject" type="c:sendEmailSubject" />
+
+  <div class="slds-form-element">
+    <label class="slds-form-element__label">Preview</label>
+    <div class="slds-form-element__control">
+      <div class="slds-pill_container slds-scrollable">
+        <iframe aura:id="preview" class="email-preview" height="{!v.height}" width="{!v.width}" onload="{!c.onLoad}" />
+      </div>
+    </div>
+  </div>
+</aura:component>

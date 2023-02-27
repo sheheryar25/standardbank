@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SingletrackCMS__TR_Contact_Name__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <formula>IF(ISBLANK(SingletrackCMS__TR_First_Name__c) , &quot;&quot; , SingletrackCMS__TR_First_Name__c )
+&amp;
+IF(ISBLANK(SingletrackCMS__TR_Middle_Initial__c) , &quot;&quot; ,&quot; &quot; &amp; SingletrackCMS__TR_Middle_Initial__c )
+&amp;
+IF(ISBLANK(SingletrackCMS__TR_Last_Name__c) , &quot;&quot;, &quot; &quot; &amp; SingletrackCMS__TR_Last_Name__c )</formula>
+    <label>Third Party Contact Name</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

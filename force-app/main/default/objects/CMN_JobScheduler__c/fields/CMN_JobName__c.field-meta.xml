@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CMN_JobName__c</fullName>
+    <description>The name of the scheduled job, composed from Cron expression and Class being run</description>
+    <externalId>false</externalId>
+    <formula>CMN_SchedulerName__c + &apos; - &apos; + &apos;(&apos; +  CMN_CronExpression__c + &apos;)&apos;</formula>
+    <label>Job Name</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

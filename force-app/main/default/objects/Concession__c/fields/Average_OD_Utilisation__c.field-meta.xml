@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Average_OD_Utilisation__c</fullName>
+    <description>Overdraft Only: The average utilisation of an overdraft , as a percentage</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Overdraft Only: The average utilisation of an overdraft , as a percentage</inlineHelpText>
+    <label>Average OD Utilisation (%)</label>
+    <precision>3</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

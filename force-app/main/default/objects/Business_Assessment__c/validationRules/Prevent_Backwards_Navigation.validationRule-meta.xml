@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Backwards_Navigation</fullName>
+    <active>true</active>
+    <description>US-2918 - A user cannot move to a previously completed Milestone</description>
+    <errorConditionFormula>AND(ISCHANGED(Milestone__c),
+            OR(
+            AND(ISPICKVAL(PRIORVALUE(Milestone__c), &apos;Stakeholder Contribution&apos;), ISPICKVAL(Milestone__c , &apos;Transaction Overview&apos;)),
+            AND(ISPICKVAL(PRIORVALUE(Milestone__c), &apos;Finalisation&apos;), ISPICKVAL(Milestone__c , &apos;Transaction Overview&apos;)),
+            AND(ISPICKVAL(PRIORVALUE(Milestone__c), &apos;Supported&apos;), ISPICKVAL(Milestone__c , &apos;Transaction Overview&apos;)),
+            AND(ISPICKVAL(PRIORVALUE(Milestone__c), &apos;Submitted&apos;), ISPICKVAL(Milestone__c , &apos;Transaction Overview&apos;)),
+            AND(ISPICKVAL(PRIORVALUE(Milestone__c), &apos;Approval&apos;), ISPICKVAL(Milestone__c , &apos;Transaction Overview&apos;)),
+            AND(ISPICKVAL(PRIORVALUE(Milestone__c), &apos;Finalisation&apos;), ISPICKVAL(Milestone__c , &apos;Stakeholder Contribution&apos;)),
+            AND(ISPICKVAL(PRIORVALUE(Milestone__c), &apos;Supported&apos;), ISPICKVAL(Milestone__c , &apos;Stakeholder Contribution&apos;)),
+            AND(ISPICKVAL(PRIORVALUE(Milestone__c), &apos;Submitted&apos;), ISPICKVAL(Milestone__c , &apos;Stakeholder Contribution&apos;)),
+            AND(ISPICKVAL(PRIORVALUE(Milestone__c), &apos;Approval&apos;), ISPICKVAL(Milestone__c , &apos;Stakeholder Contribution&apos;)),
+            AND(ISPICKVAL(PRIORVALUE(Milestone__c), &apos;Submitted&apos;), ISPICKVAL(Milestone__c , &apos;Supported&apos;)),
+            AND(ISPICKVAL(PRIORVALUE(Milestone__c), &apos;Approval&apos;), ISPICKVAL(Milestone__c , &apos;Supported&apos;)),
+            AND(ISPICKVAL(PRIORVALUE(Milestone__c), &apos;Approval&apos;), ISPICKVAL(Milestone__c , &apos;Submitted&apos;))))</errorConditionFormula>
+    <errorMessage>You cannot navigate to a previously completed Milestone</errorMessage>
+</ValidationRule>

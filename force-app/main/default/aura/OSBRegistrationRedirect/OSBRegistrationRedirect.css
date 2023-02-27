@@ -1,0 +1,558 @@
+.THIS {
+    padding: 48px 0 88px;
+    background-image: url('/sfsites/c/resource/OSB_BackgroundImage');
+    background-position: bottom;
+    background-size: cover;
+    margin-bottom: 50px;
+}
+
+.THIS .form__header,
+.THIS .form__container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.THIS .recapture-container{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.THIS .my-error-class {
+    border-color:#FF0000;
+}
+
+.THIS .newCase__form--input.phoneNumberInput{
+    margin-left: 16px;
+    max-width: 70%;
+}
+
+.THIS .inputForm-sec{
+    align-self:left;
+}
+
+.THIS .newCase__form--input input {
+    height: 40px;
+}
+
+.THIS .newCase__form--dialingCode{
+    position: relative;
+    display: inline-grid;
+    max-width: 30%;
+}
+
+.THIS .newCase__form--input	.slds-input_height{
+   width:40px;
+}
+
+.THIS .newCase__form--dialingCode .slds-select{
+    max-width: 180px;
+}
+
+.THIS .newCase__form--label--span{
+    color: #4a4a4a;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 18px;
+    text-transform: uppercase;
+    position: absolute;
+	margin-top: 20px;
+}
+
+.THIS .signUp__value{
+    color: #222222;
+    font-family: BentonSans;
+    font-size: 16px;
+    font-weight: 300;
+    padding-bottom: 5px;
+}
+
+.THIS .signUp__title {
+    color: #222222;
+    font-family: BentonSans;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 0.83px;
+    line-height: 24px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.THIS .docType{
+    padding-top: 32px;
+    display:inline-block;
+}
+.THIS .customRadioCls .slds-form-element__control .slds-radio{
+    display : inline-block !important;
+}
+
+.THIS .customRadioCls{
+    color: #4A4A4A;
+    font-family: BentonSans;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    max-width: 300px;
+}
+
+.THIS .signUp__form--input {
+    font-size: 15px;
+    font-weight: 300;
+    color: #222222;
+}
+
+.THIS .signUp__form--input input {
+    height: 40px;
+}
+
+.THIS .signUp__form--textarea {
+    height: 144px;
+}
+
+.THIS .signUp__form--label_code,
+.THIS .signUp__form--input label {
+    color: #4A4A4A;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 18px;
+    text-transform: uppercase;
+    /*margin-bottom: 8px;*/
+    padding-top: 24px;
+    margin-bottom: -17px;
+}
+
+.THIS .cellphone-Input{
+    min-width: 60px;
+}
+
+.THIS .signUp__form--label_code {
+    display: block;
+    margin-right: 1%;
+}
+
+.THIS .signUp__form__industry-placeholder,
+.THIS .signUp__form--input_phone input::placeholder,
+.THIS .signUp__form--input input::placeholder,
+.THIS .signUp__form--input textArea::placeholder{
+    color: rgb(118, 118, 118);
+    font-weight: 200;
+}
+
+.THIS .signUp__form--input_code {
+    height: 48px;
+    padding: 0 1rem 0 .75rem;
+    font-weight: 300;
+    margin-right: 1%;
+    font-family: BentonSans;
+    font-size: 15px;
+    color: #222222;
+}
+
+.THIS .LinkColour{
+    color: #0089FF;
+}
+
+.THIS .signUp_greyAreaBtn{
+    background-color: #F6F6F6;
+    justify-content: flex-end;
+    height: 80px;
+    margin: 0;
+    align-items: center;
+}
+
+.THIS .signUp__button.btn--gray {
+    background-color: #ededed;
+    color: #0033AA;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.3);
+}
+
+.THIS .rectangle {
+    height: 40px;
+    background-color: #f6f6f6;
+    display: flex;
+    align-items: center;
+}
+
+.THIS .lets_get_started{
+    color: #222222;
+    font-family: BentonSans;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.58px;
+    margin-left: 24px;
+}
+
+.THIS .signUp--optl .signUp__title {
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 0.83px;
+    line-height: 24px;
+}
+
+.THIS abbr.slds-required {
+    display: none;
+}
+
+.THIS .link.signUp__link {
+    margin-top: 24px;
+    align-self: center;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.THIS .signUp__subLabel {
+    color: #666666;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    max-width: 600px;
+}
+
+.THIS .slds-select {
+    height: 40px;
+    border: 1px solid #CCCCCC;
+    border-radius: 2px;
+    background-color: #FFFFFF;
+    max-width:600px;
+}
+
+.THIS .signUp__passwordContainer {
+    position: relative;
+}
+
+.THIS .signUp__togglePassword {
+    position: absolute;
+    right: 216px;
+    top: 55px;
+    font-size: 24px;
+    color: #0033A1;
+    cursor: pointer;
+}
+
+.THIS .signUp__industryIcon {
+        top: 59px;
+    right: 215px;
+}
+
+.THIS .signUp__codeIcon,
+.THIS .signUp__dialingCode {
+    position: absolute;
+    font-size: 20px;
+    color: #CCCCCC;
+}
+
+.THIS .PaddingGrey{
+    margin-top: 48px;
+}
+
+.THIS .signUp__dialingCode {
+    top: 32px;
+    right: -75px;
+}
+
+.THIS .signUp__codeIcon {
+    top: 16px;
+    right: 8px;
+}
+
+.THIS .signUp__form--ID_number{
+    height: 18px;
+    max-width: 600px;
+    color: #666666;
+    font-family: BentonSans;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-top: -14px;
+    margin-bottom: 20px;
+}
+
+.THIS .signUp__form--input--phone{
+    margin-bottom: 16px;
+    font-size: 15px;
+    font-weight: 300;
+    color: #222222;
+}
+
+.THIS .signUp__label{
+    color: #767676;
+    font-family: BentonSans;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: inherit;
+}
+
+.THIS .Sign__icon {
+    padding-top: 18px;
+    padding-right: 16px;
+    padding-bottom: 14px;
+    padding-left: 16px;
+    background: #0033AA;
+    border-radius: 50%;
+    align-self: center;
+    margin-bottom: 24px;
+}
+
+.THIS .Sign__icon i {
+    font-size: 48px;
+    color: #fff;
+
+}
+
+.THIS .signUp {
+    background: #fff;
+    max-width: 1000px;
+    padding-top:40px;
+    margin: 0 auto;
+    border-radius: 4px;
+    box-shadow: 0 6px 25px 0 rgba(0,0,0,0.1);
+}
+
+.THIS .signUp__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.THIS .InputSection{
+    min-width:600px;
+    align-self:center;
+}
+
+.THIS .customRadioGroup{
+    display:flex;
+    flex-direction:row;
+}
+
+.THIS .format{
+    color: #666666;
+    font-family: BentonSans;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 24px;
+    text-align: center;
+}
+
+.THIS .format:nth-child(3) {
+    padding-bottom: 16px;
+}
+
+.THIS .signUp__form--input input,
+.THIS .signUp__form--input textArea {
+    border: 1px solid #CCCCCC;
+    border-radius: 2px;
+    background-color: #FFFFFF;
+}
+
+.THIS .signUp__form--input textArea {
+    height: 120px;
+}
+
+.THIS  .btnStyle {
+    display: block;
+    height: 36px;
+    border: 0;
+    border-radius: 2px;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 13px;
+    text-transform: uppercase;
+    text-align: center;
+    transition: all .15s ease-in;
+    cursor: pointer;
+}
+
+.THIS .signUp__form--input__phone label,
+.THIS .signUp__form--input_phone ::before,
+.THIS .signUp__form--input_phone ::after {
+    display: none;
+}
+
+.THIS .signUp__form--input_phone {
+    max-width: 74%;
+    height: 48px;
+    padding: 0 1rem 0 .75rem;
+}
+
+.THIS .signUp__form--input_code {
+    height: 48px;
+    max-width: 25%;
+    padding: 0 1rem 0 .75rem;
+    font-weight: 300;
+    margin-right: 1%;
+    font-family: BentonSans;
+    font-size: 15px;
+    color: #222222;
+}
+
+.THIS .signUp__button {
+    width: 100%;
+    float: right;
+    max-height: 40px;
+}
+
+.THIS .signUp__button.btn--darkblue {
+    background-color: #0033AA;
+    color: #FFFFFF;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.3);
+}
+
+.THIS .signUp__button.btn--gray:hover,
+.THIS .signUp__button.btn--gray:focus {
+    background: #0089ff;
+    color: #fff;
+}
+
+.THIS .signUp__button.btn--darkblue:hover,
+.THIS .signUp__button.btn--darkblue:focus {
+    background: #0069c4;
+    color: #fff;
+}
+
+.THIS .IdSearch{
+    display:flex;
+    align-self: center;
+}
+
+.THIS .signUp__submitBtn {
+    margin-top: 16px;
+}
+
+.THIS .newCase__form--dialingCode .slds-select_container::before{
+    visibility: hidden;
+}
+
+.THIS .newCase__form--dialingCode .slds-select_container::after{
+    bottom: 21.5px;
+    right: 8px;
+}
+
+.THIS .size_24 {
+    max-width: 24%;
+    margin-right: 1%;
+}
+
+.THIS .size_75 {
+    max-width: 75%;
+}
+
+.THIS .signUp__form--checkbox {
+    position: relative;
+}
+
+.THIS .signUp__form--checkboxLabel {
+    position: absolute;
+    top: 0;
+    left: 24px;
+    color: #0A2240;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.THIS .signUp__industryContainer {
+    position: relative;
+}
+
+.THIS .signUp__codeIcon,
+.THIS .signUp__industryIcon {
+    position: absolute;
+    font-size: 20px;
+    color: #CCCCCC;
+}
+
+.THIS .slds-has-error .slds-form-element__help{
+    max-width: 600px;
+}
+
+.THIS .signUp__genericError {
+    font-size: .75rem;
+    color: #e70011;
+}
+
+.THIS .signUp__form--error input,
+.THIS .signUp__form--error select {
+    border: 1px solid #e70011;
+}
+
+.THIS .personal{
+    margin-top: 32px;
+    margin-bottom: 24px;
+}
+
+.THIS .signUp__form--documentTypeGroup .slds-form-element__label{
+    height: 1.13%;
+    color: #4A4A4A;
+    font-family: BentonSans;
+    font-size: 14px !important;
+    font-weight: 300;
+    line-height: 18px;
+    padding-top:32px;
+}
+
+@media(max-width: 480px) {
+    .THIS .signUp_greyAreaBtn {
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media(max-width: 1023px) {
+    .THIS {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .THIS .form__header {
+        padding: 0 24px;
+    }
+
+    .THIS .rectangle {
+        margin: 32px -16px 0;
+    }
+
+    .THIS .newCase__form {
+        padding: 0 32px;
+    }
+
+    .THIS .CellSection {
+        padding-left: 8px;
+    }
+}
+
+@media(min-width: 768px) {
+    .THIS .signUp_greyAreaBtn {
+        padding-right: 16.6667%;
+    }
+}
+
+@media(min-width: 1024px) {
+    .THIS .CellSection {
+        padding-left: 4px;
+    }
+
+    .THIS .rectangle {
+        margin-left: -24px;
+        margin-right: -24px;
+    }
+}
+
+@media(min-width: 1024px) and (max-width: 1279px) {
+    .THIS .signUp {
+        width: 100%;
+    }
+
+    .THIS {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media (min-width: 1280px) and (max-width: 1439px) {
+    .THIS .signUp {
+        width: 75%;
+    }
+}

@@ -1,0 +1,7 @@
+<aura:component description="PBB_AccountInformationListContainer" implements="lightning:isUrlAddressable">
+    <aura:attribute type="String" name="recordId" default="{!v.pageReference.state.c__recordId}"/>
+    <aura:handler name="change" value="{!v.pageReference}" action="{!c.reInit}"/>
+        <lightning:card >
+            <c:pbb_accountinformationlist recordId = "{!v.recordId}" displayFullView = "true" />
+        </lightning:card>
+</aura:component>

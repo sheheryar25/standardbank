@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Virtual_Assistant_New_Cases_Call_Report</fullName>
+    <filterScope>Queue</filterScope>
+    <label>Virtual Assistant New Cases</label>
+    <queue>Virtual_Assistant_New_Cases</queue>
+    <sharedTo>
+        <role>CIB_Global_Digital_Division</role>
+    </sharedTo>
+</ListView>

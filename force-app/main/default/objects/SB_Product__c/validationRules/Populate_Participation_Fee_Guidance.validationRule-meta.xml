@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Populate_Participation_Fee_Guidance</fullName>
+    <active>true</active>
+    <description>User should populate Participation Fee Guidance (%) if Distribution Required is yes - SGPRT-626</description>
+    <errorConditionFormula>AND( RecordType.DeveloperName = &apos;Primary_Arranging_Advisory&apos;,  ISBLANK( Participation_Fee_Guidance__c ),  ISPICKVAL(Distribution_Required__c, &apos;yes&apos;)  )</errorConditionFormula>
+    <errorDisplayField>Participation_Fee_Guidance__c</errorDisplayField>
+    <errorMessage>If you selected &apos;Yes&apos; to Distribution required, please ensure you enter Participation Fee Guidance (%)</errorMessage>
+</ValidationRule>

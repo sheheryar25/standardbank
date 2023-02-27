@@ -1,0 +1,24 @@
+<!--
+ - Created by mpszonka on 20.07.2020.
+ - US-1008
+ -->
+
+<aura:component controller="PBB_RiskAndFacilitiesController" description="PBB_RiskAndFacilitiesWrapper"
+                implements="force:hasRecordId,flexipage:availableForAllPageTypes" access="global">
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <aura:attribute name="recordId" type="Id"/>
+    <aura:attribute access="private" name="data" type="Object"/>
+
+    <div class="slds-grid slds-grid_vertical">
+        <c:PBB_Lifestyle_Risk_And_Account_Types
+                    financialRiskData="{!v.data}"
+                    recordId="{!v.recordId}"/>
+        <div class="slds-m-top_medium">
+            <c:PBB_Lifestyle_Financial_Information
+                    data="{!v.data}"
+                    recordId="{!v.recordId}"/>
+        </div>
+    </div>
+</aura:component>

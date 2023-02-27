@@ -1,0 +1,115 @@
+.THIS {
+    padding-bottom: 70px;
+}
+
+.THIS .startExploring {
+    background: linear-gradient(315deg, #1F59D8 0%, #0033A1 100%);
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    padding: 48px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.THIS .ui-text {
+    font-size: 14px;
+    line-height: 22px;
+    color: #0a2240;
+}
+
+.THIS .banner {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 1224px;
+}
+
+.THIS button.btn-signin-options .label {
+    color: #0033aa;
+}
+
+.THIS .btn-signin-options {
+    background: #ededed;
+    border: none;
+    margin-bottom: 16px;
+}
+
+.THIS button.ui_button {
+    font-family: BentonSans;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    text-align: center;
+    height: 50px;
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.3);
+    border: 1px solid transparent;
+    text-shadow: none;
+}
+
+.THIS .ui-modal{
+    width: 500px;
+    box-shadow: 0 6px 25px 0 rgba(0,0,0,0.1);
+    background: #ffffff;
+    padding: 40px 40px 48px 40px;
+    border-radius: 4px;
+    overflow-y:auto;
+    /*max-height:90vh;*/
+     top: 180rem;
+    position: absolute;
+}
+
+
+.THIS .modalSection{
+    position:absolute!important;
+}
+
+
+.THIS .modal-container{
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+
+.THIS .startExploring__title {
+    color: #fff;
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 48px;
+    margin-bottom: 24px;
+}
+
+.THIS .startExploring__buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.THIS .startExploring__buttons a {
+    width: 266px;
+}
+
+.THIS .startExploring__buttons a:not(:last-child) {
+    margin-right: 32px;
+}
+
+.THIS .btn.btn--whitenoborder {
+    color: #0089FF;
+}
+
+@media (max-width: 576px) {
+    .THIS .startExploring__buttons {
+        flex-direction: column;
+    }
+    .THIS .startExploring__buttons a {
+        margin: 0;
+        margin-top: 10px;
+    }
+}

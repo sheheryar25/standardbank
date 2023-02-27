@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cannot_be_expired_with_active_dates</fullName>
+    <active>false</active>
+    <errorConditionFormula>IF(AND( Valid_To__c &gt; TODAY(),  ISPICKVAL( Status__c , &apos;Expired&apos;) ), true, false)</errorConditionFormula>
+    <errorDisplayField>Status__c</errorDisplayField>
+    <errorMessage>Status cannot be expired within active dates interval</errorMessage>
+</ValidationRule>

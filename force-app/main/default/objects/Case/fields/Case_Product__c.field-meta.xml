@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Product__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>SGPRT-369 Select Product on Cross Border Case record. This field allows a user to select a Product stored in the Option_List_Item__c object based on the user team they belong to.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The Product associated with this case.</inlineHelpText>
+    <label>Case Product</label>
+    <lookupFilter>
+        <active>true</active>
+        <booleanFilter>(1 AND 2) OR 3</booleanFilter>
+        <filterItems>
+            <field>Option_List_Item__c.Active__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </filterItems>
+        <filterItems>
+            <field>Option_List_Item__c.User_Team__c</field>
+            <operation>equals</operation>
+            <valueField>$User.Team_Value_Combination__c</valueField>
+        </filterItems>
+        <filterItems>
+            <field>$Profile.Name</field>
+            <operation>equals</operation>
+            <value>Api User, System Administrator</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Option_List_Item__c</referenceTo>
+    <relationshipLabel>Cases</relationshipLabel>
+    <relationshipName>Cases</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

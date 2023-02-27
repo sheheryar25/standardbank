@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SA_Domain_Name__c</fullName>
+    <description>Revashlin &gt; 13113012 &gt;&gt; Removed default value of SCMBNT1. Field is now used Globally.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Login Domain Name used to identify Standard Bank network access (i.e. scmbnt1/scmbntldn)  (80 characters or less)</inlineHelpText>
+    <label>Domain Name</label>
+    <length>80</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

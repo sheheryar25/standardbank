@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Resolved_Within__c</fullName>
+    <externalId>false</externalId>
+    <label>Resolved Within</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Market__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>24 hrs</fullName>
+                <default>false</default>
+                <label>24 hrs</label>
+            </value>
+            <value>
+                <fullName>24 hrs to 3 days</fullName>
+                <default>false</default>
+                <label>24 hrs to 3 days</label>
+            </value>
+            <value>
+                <fullName>4 days +</fullName>
+                <default>false</default>
+                <label>4 days +</label>
+            </value>
+            <value>
+                <fullName>3 days</fullName>
+                <default>false</default>
+                <label>3 days</label>
+            </value>
+            <value>
+                <fullName>4-7 days</fullName>
+                <default>false</default>
+                <label>4-7 days</label>
+            </value>
+            <value>
+                <fullName>8 days+</fullName>
+                <default>false</default>
+                <label>8 days+</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Global Markets</controllingFieldValue>
+            <controllingFieldValue>Investment Banking</controllingFieldValue>
+            <controllingFieldValue>PCS</controllingFieldValue>
+            <controllingFieldValue>PIM</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>3 days</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Markets</controllingFieldValue>
+            <controllingFieldValue>Investment Banking</controllingFieldValue>
+            <controllingFieldValue>PCS</controllingFieldValue>
+            <controllingFieldValue>PIM</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>4-7 days</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Markets</controllingFieldValue>
+            <controllingFieldValue>Investment Banking</controllingFieldValue>
+            <controllingFieldValue>PCS</controllingFieldValue>
+            <controllingFieldValue>PIM</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>8 days+</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TPS</controllingFieldValue>
+            <valueName>24 hrs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TPS</controllingFieldValue>
+            <valueName>24 hrs to 3 days</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TPS</controllingFieldValue>
+            <valueName>4 days +</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_Insurance_Product_Editing</fullName>
+    <active>true</active>
+    <description>SFP-5354 - Only Business/System Admin and Users with User_Division__c = &apos;Insurance&apos; can create/edit Insurance product.</description>
+    <errorConditionFormula>AND(
+  RecordType.DeveloperName = &apos;Insurance&apos;,
+  NOT(
+    OR(
+      $Profile.Name = &apos;System Administrator&apos;,
+      $Profile.Name = &apos;Business Administrator&apos;,
+      ISPICKVAL($User.User_Division__c, &apos;Insurance&apos;)
+    )
+  )
+)</errorConditionFormula>
+    <errorMessage>Only Business/System Admin and Users with &apos;User Division&apos; = &apos;Insurance&apos; can create/edit Insurance products.</errorMessage>
+</ValidationRule>

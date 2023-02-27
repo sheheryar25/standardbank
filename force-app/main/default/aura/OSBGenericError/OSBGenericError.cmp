@@ -1,0 +1,76 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" controller="OSB_GenericError_CTRL">
+    <aura:attribute name="logoutURL" type="String" access="private"/>
+    <aura:attribute name="title" type="String" access="public"/>
+    <aura:attribute name="subtitle" type="String" access="public"/>
+    <aura:attribute name="context" type="String" access="public"/>
+    <aura:attribute name="showMultiButtons" type="Boolean" access="public" default="true"/>
+    <aura:attribute name="primaryButtonText" type="String" access="public"/>
+    <aura:attribute name="primaryButtonLink" type="String" access="public"/>
+    <aura:attribute name="secondaryButtonText" type="String" access="public"/>
+    <aura:attribute name="secondaryButtonLink" type="String" access="public"/>
+    <aura:attribute name="navPage" type="String" default="Home" access="public"/>
+    <aura:attribute name="imageName" type="String" default="Group.png" access="public"/>
+    <aura:attribute name="requiresLogout" type="Boolean" access="public" default="false"/>
+    <aura:handler name="init" value="{!this}" action="{!c.init}" />
+    <lightning:navigation aura:id="navService"/>
+
+    <aura:html tag="style">
+        :root {
+        --background: ({!v.context}!='SignUpExpired' ? '#F6F6F6' : null);
+        }
+    </aura:html>
+
+    <div class="{!v.context == 'SignUpExpired' ? 'background-image' : ''}">
+        <aura:if isTrue="{!and((v.context != 'signUp'),(v.context != 'SignUpExpired'))}">
+            <div class="breadcrumbDiv"></div>
+        </aura:if>
+        <div class="containerDiv slds-size_6-of-6 slds-small-size_12-of-12 slds-medium-size_6-of-6 slds-large-size_6-of-6">
+            <div class="{!v.context != 'signUp' ? 'content slds-size_6-of-6 slds-small-size_6-of-6 slds-medium-size_5-of-6 slds-large-size_4-of-6' : 'contentDifPad'}">
+                <aura:if isTrue="{!v.context != 'signUp'}">
+                    <img class="contentIcon" src="{!$Resource.OSB_Images + '/' + v.imageName}"/>
+                </aura:if>
+                <p class="{!v.context != 'signUp' ? 'ContentTitle' : 'ContentTitleSignUp'}">
+                    {!v.title}
+                </p>
+                
+                <p class="{!v.context != 'signUp' ? 'contentText' : 'contentTextSignUp'}">
+                    <lightning:formattedRichText value="{!v.subtitle}"/>
+                </p>
+            </div>
+            
+            <div class="buttons">
+                <div class="buttons__container slds-grid slds-size_6-of-6 slds-small-size_12-of-12 slds-medium-size_4-of-6 slds-large-size_4-of-6">
+                    <aura:if isTrue="{!v.showMultiButtons}">
+
+                        <button class="cancelButton slds-size_6-of-6 slds-small-size_12-of-12 slds-medium-size_2-of-8 slds-large-size_1-of-6" data-id="uitlink_link" data-text="{!'General Error | '+ v.context + ' | v.secondaryButtonText'}" onclick="{!c.handleActionSecondary}">
+                            {!v.secondaryButtonText}
+                        </button>
+                        <button class="primaryButton slds-size_6-of-6 slds-small-size_12-of-12 slds-medium-size_3-of-8 slds-large-size_2-of-6" data-id="uitlink_link" data-text="{!'General Error | '+ v.context + ' | v.primaryButtonText'}" onclick="{!c.handleActionPrimary}">
+                            {!v.primaryButtonText}
+                        </button>
+                        <aura:set attribute="else">
+                            <aura:if isTrue="{!v.context=='signUp'}">
+                                <center>
+                                    <button class="primaryButton" data-id="uitlink_link" data-text="{!'General Error | '+ v.context + ' | v.primaryButtonText'}" onclick="{!c.handleActionPrimary}">
+                                        {!v.primaryButtonText}
+                                    </button>
+                                </center>
+
+                                <aura:set attribute="else">
+                                    <aura:if isTrue="{!v.context=='SignUpExpired'}">
+                                        <a class="primaryButtonAlignRight slds-size_6-of-6 slds-small-size_12-of-12 slds-medium-size_1-of-4 slds-large-size_1-of-4" href="{!v.primaryButtonLink}" data-id= "uitlink_link" data-text="{!'General Error | '+ v.context + ' | v.primaryButtonText'}">{!v.primaryButtonText}</a>
+                                        <aura:Set attribute="else">
+                                            <button class="primaryButtonAlignRight slds-size_6-of-6 slds-small-size_12-of-12 slds-medium-size_1-of-4 slds-large-size_1-of-4" data-id="uitlink_link" data-text="{!'General Error | '+ v.context + ' | v.primaryButtonText'}" onclick="{!c.handleActionPrimary}">
+                                                {!v.primaryButtonText}
+                                            </button>
+                                        </aura:Set>
+                                    </aura:if>
+                                </aura:set>
+                            </aura:if>
+                        </aura:set>
+                    </aura:if>
+                </div>
+            </div>
+        </div>
+    </div>
+</aura:component>

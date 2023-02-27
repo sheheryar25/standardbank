@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Profile and Settings | EditProfile</label>
+    <protected>false</protected>
+    <values>
+        <field>Page_Category__c</field>
+        <value xsi:type="xsd:string">Profile and Settings</value>
+    </values>
+    <values>
+        <field>Page_Name__c</field>
+        <value xsi:type="xsd:string">Profile and Settings | EditProfile</value>
+    </values>
+    <values>
+        <field>Page_Section__c</field>
+        <value xsi:type="xsd:string">EditProfile</value>
+    </values>
+    <values>
+        <field>Page_URL__c</field>
+        <value xsi:type="xsd:string">profile-and-settings</value>
+    </values>
+    <values>
+        <field>Sub_Section_1__c</field>
+        <value xsi:type="xsd:string">Profile and Settings | EditProfile</value>
+    </values>
+    <values>
+        <field>Sub_Section_2__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Sub_Section_3__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Sub_Section_4__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Sub_Section_5__c</field>
+        <value xsi:nil="true"/>
+    </values>
+</CustomMetadata>

@@ -1,0 +1,646 @@
+/* ***************API PRODUCT/GROUP DETAILS + API DETAILS ****************/
+
+	/* Display country icon on API product tile */
+	.cACM_ThemeLayout .api-catalog-card-icon {
+		position: absolute;
+		right: 0;   
+	}
+
+  /* Hide the icon on API Details */
+  .comm-page-detail-a0r .slds-media__figure,
+  .comm-page-detail-a6t .slds-media__figure {
+    display: none;
+  }
+ .comm-page-detail-a0r  .api-version-card-img,
+   .comm-page-detail-a6t .api-version-card-img {
+    display: none;
+  }
+  
+   .comm-page-detail-a0r .parent-api,
+   .comm-page-detail-a6t .parent-api {
+    display: none;
+  }
+
+  .comm-page-detail-a0r .api-header-spacer,
+  .comm-page-detail-a6t .api-header-spacer{
+    padding-top: calc(6%) !important;
+  }
+
+  .comm-page-detail-a0r .slds-large-size_6-of-12,
+  .comm-page-detail-a6t .slds-large-size_6-of-12{
+    padding-bottom: calc(12%);
+  }
+  
+  /* Stretch the main API Image to fill the div */
+  .comm-page-detail-a0r .slds-large-size_3-of-12,
+  .comm-page-detail-a6t .slds-large-size_3-of-12,
+  .comm-page-detail-a0r .slds-large-size_4-of-12,
+  .comm-page-detail-a6t .slds-large-size_4-of-12 {
+    padding: 0 !important;
+    position: relative;
+  }
+  
+  .comm-page-detail-a0r .acm_pkgApiVersionHeader .api-version-header-media{
+    padding-bottom: 0;
+  }
+
+    .comm-page-detail-a0r
+    .src-components-markdownViewer-markdownViewer-module__page--2tXut,
+       
+    .comm-page-detail-a6t
+    .src-components-markdownViewer-markdownViewer-module__page--2tXut {
+    display: initial;
+  }
+  
+  
+    .comm-page-detail-a0r
+    .slds-large-size_4-of-12
+    .src-components-markdownViewer-markdownViewer-module__page--2tXut
+    img,
+    
+    .comm-page-detail-a6t
+    .slds-large-size_4-of-12
+    .src-components-markdownViewer-markdownViewer-module__page--2tXut
+    img {
+    height: 100%; 
+    position: absolute;
+    width: 100%; 
+    object-fit: cover;
+    top: 0;
+    left: 0;
+  }
+
+  /* API version input overide */
+  
+  .comm-page-detail-a0r .slds-select_container .slds-select,
+  .comm-page-detail-a6t .slds-select_container .slds-select{
+    border: 1px solid #dddbda;
+    background-color: #fff;
+    background-image: url("/sfsites/c/resource/ACM_Assets/DropDownArrow.svg");
+    background-repeat: no-repeat;
+    background-position: 80% center;
+    background-size: 15px 15px;
+    border-radius: 3px;
+    height: 36px;
+    padding-right: 3rem;
+    font-family: var(--FONT-FAMILY);
+  }
+
+  .comm-page-detail-a0r .slds-select_container,
+  .comm-page-detail-a6t .slds-select_container::after{
+    content: unset;
+  }
+
+  .comm-page-detail-a0r .slds-select_container,
+  .comm-page-detail-a6t .slds-select_container::before{
+    content: unset;
+  }
+
+
+  /* Hide the API Product image if the screen gets too small */
+  @media screen and (max-width: 1015px) {   
+    .comm-page-detail-a0r .src-components-markdownViewer-markdownViewer-module__page--2tXut img,
+    .comm-page-detail-a6t .src-components-markdownViewer-markdownViewer-module__page--2tXut img {
+      display: none;
+    }
+  }
+
+
+  .src-components-apiCard-apiCardContent-apiCardContent__description--1Efwx{
+    font-size: 1.23077em;
+  }
+  
+  /* Remove the left padding that appears in documentation viewer */
+  
+    .comm-page-detail-a0r
+    .src-components-documentationViewer-documentationViewer__documentation--29lx7,
+      
+    .comm-page-detail-a6t
+    .src-components-documentationViewer-documentationViewer__documentation--29lx7 {
+    padding-left: 0px !important;
+  }
+  
+  
+    .comm-page-detail-a0r
+    .src-components-markdownViewer-markdownViewer-module__page--2tXut
+    p,
+    
+    .comm-page-detail-a6t
+    .src-components-markdownViewer-markdownViewer-module__page--2tXut
+    p,
+   
+    .src-components-markdownViewer-markdownViewer-module__page--2tXut
+    .src-components-markdownViewer-markdownViewer-module__paragraph--nX1Ew {
+    padding: 0 !important;
+  }
+  
+  /* Style API Product details (top of screen) area*/
+  
+  .comm-page-detail-a0r .cb-section_column.slds-size_12-of-12.slds-max-medium-size_12-of-12.slds-large-size_8-of-12,      
+  .comm-page-detail-a6t .cb-section_column.slds-size_12-of-12.slds-max-medium-size_12-of-12.slds-large-size_8-of-12 {
+    background-color: white;
+    padding: 50px;
+  }
+  
+  /* Format the Salesforce Flow (for API Subscription) area */
+  
+   .comm-page-detail-a0r .actionButtonBar,
+   .comm-page-detail-a6t .actionButtonBar {
+    justify-content: left;
+  }
+  
+   .comm-page-detail-a0r .flowRuntimeForFlexipage,
+   .comm-page-detail-a6t .flowRuntimeForFlexipage {
+    border: none;
+  }
+  
+  /* Set the max size of the "what you can do with this API" image */
+   .comm-page-detail-a0r .documentation-viewer,
+   .comm-page-detail-a6t .documentation-viewer {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Set the API Carousel background to white */
+  
+    .comm-page-detail-a0r
+    .api-version-carousel-container,
+       
+    .comm-page-detail-a6t
+    .api-version-carousel-container {
+    background: rgb(255, 255, 255);
+  }
+  
+  /* ***About this API Product tabs*** */
+  
+   .comm-page-detail-a0r .tabs__nav,
+    .comm-page-detail-a6t .tabs__nav {
+    justify-content: left;
+  }
+
+   .comm-page-detail-a0r .uiTabBar,
+   .comm-page-detail-a6t .uiTabBar {
+    margin-bottom: 20px;
+    padding-left: var(--base-spacing);
+    padding-right: var(--base-spacing);
+  }
+  
+   .comm-page-detail-a0r .tabHeader,
+   .comm-page-detail-a6t .tabHeader {
+    font-size: medium !important;
+    color: rgb(10, 34, 64) !important;
+  }
+  
+   .comm-page-detail-a0r .js-tabset,
+   .comm-page-detail-a6t .js-tabset {
+    margin: 0;
+  }
+
+  @media screen and (max-width:768px) {
+    .comm-page-detail-a0r .forceCommunitySection .cb-section_column:first-child,
+    .comm-page-detail-a6t .forceCommunitySection .cb-section_column:first-child {
+      padding: 16px 0px 8px 0px;
+    }
+  }
+
+  @media screen and (min-width:768px) {
+    
+    .comm-page-detail-a0r .js-tabset,
+    .comm-page-detail-a6t .js-tabset {
+      padding: 30px 25px 40px;
+    }
+  }
+
+
+  .acm_pkgApiDocumentationViewer.documentation-viewer{
+    padding-left: var(--base-spacing);
+    padding-right: var(--base-spacing);
+    padding-bottom: var(--base-spacing);
+  }
+
+  /* Change the lines in the markdown viewer to orange */
+  
+    .comm-page-detail-a0r
+    .src-components-markdownViewer-markdownViewer-module__page--2tXut
+    hr,
+       
+    .comm-page-detail-a6t
+    .src-components-markdownViewer-markdownViewer-module__page--2tXut
+    hr {
+    border: none;
+    margin-top: -10px;
+    margin-bottom: 15px;
+  }
+  
+  /* Remove the huge gap between the HTML headline and the API Catlog for Recommended APIs (users also viewed) */
+  
+    .comm-page-detail-a0r
+    .api-catalog-categories-container,
+       
+    .comm-page-detail-a6t
+    .api-catalog-categories-container {
+    padding-top: 0px !important;
+  }
+
+  
+  /* Modify the API Name container at top of the page */
+
+
+  .forceCommunityTabset{
+    
+  }
+  
+    .comm-page-detail-a0r
+    .slds-large-size_6-of-12
+    .api-version-header-container,
+      
+    .comm-page-detail-a6t
+    .slds-large-size_6-of-12
+    .api-version-header-container {
+    background: transparent !important;
+  }
+  
+  
+    .comm-page-detail-a0r
+    .slds-large-size_6-of-12
+    .api-version-header-name, 
+     
+    .comm-page-detail-a6t
+    .slds-large-size_6-of-12
+    .api-version-header-name {
+    font-family: var(--FONT-FAMILY);
+    font-size: 48px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.08;
+    letter-spacing: normal;
+    color: var(--white-color, #fff);
+  }
+
+    .comm-page-detail-a0r
+    .slds-large-size_6-of-12
+    .api-version-header-flex,
+       
+    .comm-page-detail-a6t
+    .slds-large-size_6-of-12
+    .api-version-header-flex {
+    padding-bottom: 20px;
+    border: solid !important;
+    border-image-slice: 1 !important;
+    border-width: 3px !important;
+    border-image-source: linear-gradient(to left, #ffb94f, #ff5a00) !important;
+    border-right: none !important;
+    border-top: none !important;
+    border-left: none !important;
+  }
+  
+  
+    .comm-page-detail-a0r
+    .slds-large-size_6-of-12
+    .api-version-header-description-container,
+    
+    .comm-page-detail-a6t
+    .slds-large-size_6-of-12
+    .api-version-header-description-container {
+    margin-right: 0px;
+    margin-left: auto;
+  }
+  
+  
+    .comm-page-detail-a0r
+    .slds-large-size_6-of-12
+    .api-version-header-description,
+        
+    .comm-page-detail-a6t
+    .slds-large-size_6-of-12
+    .api-version-header-description {
+    padding-top: 20px;
+    font-family: var(--FONT-FAMILY);
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.08;
+    letter-spacing: normal;
+    color: var(--white-color, #fff) !important;
+  }
+
+
+   .acm_pkgApiVersionHeader .api-version-header-description,
+   .acm_pkgApiDocumentationViewer.documentation-viewer,
+  
+    .comm-page-detail-a0r
+    .ui-widget:first-child
+    .cb-section
+    .cb-section_row
+    .cb-section_column
+    .acm_pkgApiDocumentationViewer.documentation-viewer
+    .anypoint-styles
+    .src-components-markdownViewer-markdownViewer-module__page--2tXut
+    p,
+    
+    .comm-page-detail-a6t
+    .ui-widget:first-child
+    .cb-section
+    .cb-section_row
+    .cb-section_column
+    .acm_pkgApiDocumentationViewer.documentation-viewer
+    .anypoint-styles
+    .src-components-markdownViewer-markdownViewer-module__page--2tXut
+    p {
+    color: var(--primary-grey);
+    font-size: 15px;
+    opacity: 1;
+    font-family: var(--FONT-FAMILY);
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.6;
+    letter-spacing: normal;
+  }
+
+  body.comm-page-detail-a6t .theme-container .siteforceDynamicLayout > [data-region-name="content"] > .ui-widget:first-child .cb-section_background[style*="background"]:not([style="background: rgba(0,0,0,0)"]):not([style="background: rgb(255,255,255)"]):not([style="background: rgb(255,255,255,0)"]):not([style="background: rgb(247,247,247)"]) + .cb-section_backgroundOverlay + .cb-section_row .cb-section_column
+  .acm_pkgApiVersionHeader .api-version-header-name,
+  body.comm-page-detail-a0r .theme-container .siteforceDynamicLayout > [data-region-name="content"] > .ui-widget:first-child .cb-section_background[style*="background"]:not([style="background: rgba(0,0,0,0)"]):not([style="background: rgb(255,255,255)"]):not([style="background: rgb(255,255,255,0)"]):not([style="background: rgb(247,247,247)"]) + .cb-section_backgroundOverlay + .cb-section_row .cb-section_column
+  .acm_pkgApiVersionHeader .api-version-header-name,
+  .theme-container .siteforceDynamicLayout > [data-region-name="content"] > .ui-widget:first-child .cb-section_background[style*="background"]:not([style="background: rgba(0,0,0,0)"]):not([style="background: rgb(255,255,255)"]):not([style="background: rgb(255,255,255,0)"]):not([style="background: rgb(247,247,247)"]) + .cb-section_backgroundOverlay + .cb-section_row .cb-section_column 
+  p {
+    color: #fff;
+  }
+
+  [c-acmcontenttilewithbutton_acmcontenttilewithbutton] p{
+    color: #3c4b6c !important;
+  }
+
+  .comm-page-detail-a6t .src-components-markdownViewer-markdownViewer-module__page--2tXut h1,
+  .comm-page-detail-a0r .src-components-markdownViewer-markdownViewer-module__page--2tXut h1{
+    line-height: 1.29;
+  }
+  
+  /*Stretch the API image so it goes full screen */
+  
+    .comm-page-detail-a0r
+    .slds-large-size_6-of-12
+    .src-components-markdownViewer-markdownViewer-module__page--2tXut
+    img,
+       
+    .comm-page-detail-a6t
+    .slds-large-size_6-of-12
+    .src-components-markdownViewer-markdownViewer-module__page--2tXut
+    img {
+    display: block;
+    max-width: 100%;
+    height: 100%;
+    position: absolute;
+    width: calc(100%);
+    object-fit: cover;
+    top: 0;
+  }
+  
+  /* Hide the API image if the screen gets too small */
+  @media screen and (max-width: 1015px) {
+    
+      .comm-page-detail-a0r
+      .slds-large-size_6-of-12
+      .src-components-markdownViewer-markdownViewer-module__page--2tXut
+      img,
+      
+      .comm-page-detail-a6t
+      .slds-large-size_6-of-12
+      .src-components-markdownViewer-markdownViewer-module__page--2tXut
+      img {
+      display: none;
+    }
+  }
+
+ /**** API DETAILS ****/
+  
+    .comm-page-detail-a0r
+    .slds-large-size_3-of-12
+    > div,
+       
+    .comm-page-detail-a6t
+    .slds-large-size_3-of-12
+    > div {
+    padding-right: 20px !important;
+    padding-left: 20px !important;
+    background: white;
+    height: 100%;
+    text-align: center;
+    padding-top: 35px;
+    padding-bottom: 35px;
+  } 
+
+  .comm-page-detail-a0r .slds-large-size_4-of-12 > div,
+  .comm-page-detail-a6t .slds-large-size_4-of-12 > div
+   {
+    background: white;
+  } 
+
+  body .src-components-markdownViewer-markdownViewer-module__page--2tXut ul{
+    padding-left: 20px;
+    font-size: 15px;
+    color: var(--primary-grey);
+  }
+
+  body .src-components-markdownViewer-markdownViewer-module__page--2tXut ul li{
+    font-size: 15px;
+    letter-spacing: normal;
+    font-family: var(--FONT-FAMILY);
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.6;
+    color: var(--primary-grey);
+  }
+  
+  
+    .comm-page-detail-a0r
+    div.cb-section_row.slds-grid.slds-wrap.slds-large-nowrap
+    > div:nth-child(1).slds-large-size_3-of-12
+    > div,
+       
+    .comm-page-detail-a6t
+    div.cb-section_row.slds-grid.slds-wrap.slds-large-nowrap
+    > div:nth-child(1).slds-large-size_3-of-12
+    > div {
+    background: rgb(255, 255, 255);
+  }
+  
+  
+    .comm-page-detail-a0r
+    div.cb-section_row.slds-grid.slds-wrap.slds-large-nowrap
+    > div:nth-child(2).slds-large-size_3-of-12
+    > div,
+       
+    .comm-page-detail-a6t
+    div.cb-section_row.slds-grid.slds-wrap.slds-large-nowrap
+    > div:nth-child(2).slds-large-size_3-of-12
+    > div {
+    background: rgb(0, 51, 161);
+  }
+  
+  
+    .comm-page-detail-a0r
+    div.cb-section_row.slds-grid.slds-wrap.slds-large-nowrap
+    .src-components-markdownViewer-markdownViewer-module__page--2tXut
+    strong,
+     
+    .comm-page-detail-a6t
+    div.cb-section_row.slds-grid.slds-wrap.slds-large-nowrap
+    .src-components-markdownViewer-markdownViewer-module__page--2tXut
+    strong {
+    font-weight: 300;
+    font-family: var(--FONT-FAMILY-LIGHT);
+    font-size: 28.3px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.29;
+    letter-spacing: normal;
+    text-align: center;
+    color: var(--primary-grey);
+  }
+  
+  
+  .comm-page-detail-a0r .api-version-header-container.acm_pkgApiVersionHeader,
+  .comm-page-detail-a6t .api-version-header-container.acm_pkgApiVersionHeader{
+    padding-left: var(--base-spacing);
+    padding-right: var(--base-spacing);
+  }
+
+  
+  .comm-page-detail-a0r
+  div.cb-section_row.slds-grid.slds-wrap.slds-large-nowrap
+  .api-version-header-description,
+
+  .comm-page-detail-a6t
+  div.cb-section_row.slds-grid.slds-wrap.slds-large-nowrap
+  .api-version-header-description,
+
+  .comm-page-detail-a0r
+  div.cb-section_row.slds-grid.slds-wrap.slds-large-nowrap
+  .src-components-markdownViewer-markdownViewer-module__page--2tXut
+  p,
+      
+  .comm-page-detail-a6t
+  div.cb-section_row.slds-grid.slds-wrap.slds-large-nowrap
+  .src-components-markdownViewer-markdownViewer-module__page--2tXut
+  p {
+    font-size: 15px;
+    letter-spacing: normal;
+    font-family: var(--FONT-FAMILY);
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.6;
+    color: var(--primary-grey);
+  }
+
+  .comm-page-detail-a0r .src-components-markdownViewer-markdownViewer-module__page--2tXut h2::after, 
+  .comm-page-detail-a6t .src-components-markdownViewer-markdownViewer-module__page--2tXut h2::after{
+    content: " ";
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(135deg,#ff5a00 0%,#ffb94f 100%);
+    display: block;
+    margin-top: -10px;
+  }
+
+  @media only screen and (min-width: 769px) {
+    .comm-page-detail-a0r .src-components-markdownViewer-markdownViewer-module__page--2tXut h2::after, 
+    .comm-page-detail-a6t .src-components-markdownViewer-markdownViewer-module__page--2tXut h2::after{
+      width: 70px;
+    }
+  }
+
+  .src-components-markdownViewer-markdownViewer-module__page--2tXut table{
+    color: var(--primary-grey);
+  }
+  
+  
+    .comm-page-detail-a0r
+    div.cb-section_row.slds-grid.slds-wrap.slds-large-nowrap
+    > div:nth-child(2).slds-large-size_3-of-12
+    .src-components-markdownViewer-markdownViewer-module__page--2tXut
+    strong,
+    
+    .comm-page-detail-a6t
+    div.cb-section_row.slds-grid.slds-wrap.slds-large-nowrap
+    > div:nth-child(2).slds-large-size_3-of-12
+    .src-components-markdownViewer-markdownViewer-module__page--2tXut
+    strong {
+    color: white !important;
+  }
+  
+  
+    .comm-page-detail-a0r
+    div.cb-section_row.slds-grid.slds-wrap.slds-large-nowrap
+    > div:nth-child(2).slds-large-size_3-of-12
+    .src-components-markdownViewer-markdownViewer-module__page--2tXut
+    p,
+    
+    .comm-page-detail-a6t
+    div.cb-section_row.slds-grid.slds-wrap.slds-large-nowrap
+    > div:nth-child(2).slds-large-size_3-of-12
+    .src-components-markdownViewer-markdownViewer-module__page--2tXut
+    p {
+    color: white !important;
+  }
+  
+  
+    .comm-page-detail-a0r
+    div.cb-section_row.slds-grid.slds-wrap.slds-large-nowrap
+    > div:nth-child(3).slds-large-size_3-of-12
+    > div,
+    
+    .comm-page-detail-a6t
+    div.cb-section_row.slds-grid.slds-wrap.slds-large-nowrap
+    > div:nth-child(3).slds-large-size_3-of-12
+    > div {
+    background: rgb(255, 255, 255);
+  }
+  
+  
+    .comm-page-detail-a0r
+    div.cb-section_row.slds-grid.slds-wrap.slds-large-nowrap
+    > div:nth-child(4).slds-large-size_3-of-12
+    > div,
+       
+    .comm-page-detail-a6t
+    div.cb-section_row.slds-grid.slds-wrap.slds-large-nowrap
+    > div:nth-child(4).slds-large-size_3-of-12
+    > div {
+    background: rgb(0, 51, 161);
+  }
+  
+  
+    .comm-page-detail-a0r
+    div.cb-section_row.slds-grid.slds-wrap.slds-large-nowrap
+    > div:nth-child(4).slds-large-size_3-of-12
+    .src-components-markdownViewer-markdownViewer-module__page--2tXut
+    strong,
+    
+    .comm-page-detail-a6t
+    div.cb-section_row.slds-grid.slds-wrap.slds-large-nowrap
+    > div:nth-child(4).slds-large-size_3-of-12
+    .src-components-markdownViewer-markdownViewer-module__page--2tXut
+    strong {
+    color: white !important;
+  }
+  
+  
+    .comm-page-detail-a0r
+    div.cb-section_row.slds-grid.slds-wrap.slds-large-nowrap
+    > div:nth-child(4).slds-large-size_3-of-12
+    .src-components-markdownViewer-markdownViewer-module__page--2tXut
+    p,
+  .comm-page-detail-a6t
+    div.cb-section_row.slds-grid.slds-wrap.slds-large-nowrap
+    > div:nth-child(4).slds-large-size_3-of-12
+    .src-components-markdownViewer-markdownViewer-module__page--2tXut
+    p {
+    color: white !important;
+  }
+  
+  

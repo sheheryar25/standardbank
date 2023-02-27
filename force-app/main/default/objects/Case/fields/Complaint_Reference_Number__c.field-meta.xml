@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Complaint_Reference_Number__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>US-3665: This is a field to capture reference number that is used to cross reference this record with an alternative source. E.g. the branch complaint book.</description>
+    <externalId>true</externalId>
+    <inlineHelpText>The reference number that is used to cross reference this record with an alternative source. E.g. the branch complaint book.</inlineHelpText>
+    <label>Complaint Reference Number</label>
+    <length>50</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

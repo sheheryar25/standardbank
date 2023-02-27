@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Client_Hierarchy_Level_is_notBlank_Prev</fullName>
+    <active>true</active>
+    <description>This validation checks if the previous value of &apos;Client Relationship Hierarchy Level&apos; and &apos; &apos;Parent Client&apos; is previously not blank an current selection of  &apos;Client Relationship Hierarchy Level&apos; is blank and &apos;Parent Client&apos; is not blank</description>
+    <errorConditionFormula>OR(AND(AND(AND( NOT(ISPICKVAL(PRIORVALUE(Client_Relationship_Hierarchy__c ),&quot;&quot;)) ,
+NOT( ISBLANK( PRIORVALUE( ParentId ) ) ) ) , AND(ISPICKVAL(Client_Relationship_Hierarchy__c,&quot;&quot;),
+NOT(ISBLANK(ParentId ) ))),
+OR(RecordType.Name==&quot;Potential Client&quot;,RecordType.Name==&quot;Potential (CIF)&quot;,RecordType.Name==&quot;Potential (Goldtier)&quot;) ),
+IF(AND(OR(RecordType.Name==&quot;Potential Client&quot;,RecordType.Name==&quot;Potential (CIF)&quot;,RecordType.Name==&quot;Potential (Goldtier)&quot;),ISPICKVAL(Client_Relationship_Hierarchy__c,&quot;&quot;)),IF(NOT(ISBLANK(ParentId )),IF(OR(Parent.RecordType.Name==&quot;Ultimate Group Parent&quot;,Parent.RecordType.Name==&quot;Immediate Parent&quot;),False,True),False),False))</errorConditionFormula>
+    <errorMessage>Ensure that you complete both the Parent Client and Client Relationship Hierarchy with correct values.</errorMessage>
+</ValidationRule>

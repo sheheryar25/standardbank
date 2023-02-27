@@ -1,0 +1,11 @@
+.THIS {
+    font-family: system-ui !Important;
+}
+
+.THIS a{
+    color : #0089ff;
+}
+
+.THIS a:hover{
+  color: #0069C4;
+}

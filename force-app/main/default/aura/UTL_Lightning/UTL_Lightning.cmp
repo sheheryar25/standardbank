@@ -1,0 +1,6 @@
+<aura:component description="UTL_Lightning">
+    <aura:method name="stringFormat" action="{!c.stringFormat}">
+        <aura:attribute name = 'message' type='String'/>
+        <aura:attribute name = 'paramList' type='List'/>
+    </aura:method>
+</aura:component>

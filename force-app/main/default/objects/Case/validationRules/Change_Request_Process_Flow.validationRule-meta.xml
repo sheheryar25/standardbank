@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Change_Request_Process_Flow</fullName>
+    <active>true</active>
+    <description>Ensure that the status of the Change Request adheres to the defined process flow
+
+CRM-Enhanced Cases for Change Request Functionality (C Reinecke 2010/08)</description>
+    <errorConditionFormula>$RecordType.Name = &apos;Change Request&apos; &amp;&amp; ISCHANGED(Status) &amp;&amp; (
+(TEXT(Status) = &apos;On Hold&apos;) &amp;&amp; (TEXT(PRIORVALUE(Status)) = &apos;Submit for CAB&apos;) ||
+(TEXT(Status) = &apos;Not Approved&apos;) &amp;&amp; NOT(TEXT(PRIORVALUE(Status)) = &apos;New&apos; || TEXT(PRIORVALUE(Status)) = &apos;Submit for CAB&apos; || TEXT(PRIORVALUE(Status)) = &apos;On Hold&apos;) ||
+(TEXT(Status) = &apos;Approved&apos;) &amp;&amp; NOT(TEXT(PRIORVALUE(Status)) = &apos;New&apos; || TEXT(PRIORVALUE(Status)) = &apos;On Hold&apos;) ||
+(TEXT(Status) = &apos;Business Requirements Design&apos;) &amp;&amp; NOT(TEXT(PRIORVALUE(Status)) = &apos;Approved&apos; || TEXT(PRIORVALUE(Status)) = &apos;On Hold&apos;) ||
+(TEXT(Status) = &apos;Functional Design&apos;) &amp;&amp; NOT(TEXT(PRIORVALUE(Status)) = &apos;Business Requirements Design&apos; || TEXT(PRIORVALUE(Status)) = &apos;On Hold&apos;) ||
+(TEXT(Status) = &apos;Technical Design&apos;) &amp;&amp; NOT(TEXT(PRIORVALUE(Status)) = &apos;Functional Design&apos; || TEXT(PRIORVALUE(Status)) = &apos;On Hold&apos;) ||
+(TEXT(Status) = &apos;Development&apos;) &amp;&amp; NOT(TEXT(PRIORVALUE(Status)) = &apos;Technical Design&apos; || TEXT(PRIORVALUE(Status)) = &apos;On Hold&apos;) ||
+(TEXT(Status) = &apos;Unit Testing&apos;) &amp;&amp; NOT(TEXT(PRIORVALUE(Status)) = &apos;Development&apos; || TEXT(PRIORVALUE(Status)) = &apos;Technical Design&apos; || TEXT(PRIORVALUE(Status)) = &apos;On Hold&apos;) ||
+(TEXT(Status) = &apos;CRM Solutions Testing&apos;) &amp;&amp; NOT(TEXT(PRIORVALUE(Status)) = &apos;Unit Testing&apos; || TEXT(PRIORVALUE(Status)) = &apos;On Hold&apos;) ||
+(TEXT(Status) = &apos;UAT Testing&apos;) &amp;&amp; NOT(TEXT(PRIORVALUE(Status)) = &apos;Business Requirements Design&apos; || TEXT(PRIORVALUE(Status)) = &apos;CRM Solutions Testing&apos; || TEXT(PRIORVALUE(Status)) = &apos;Unit Testing&apos; || TEXT(PRIORVALUE(Status)) = &apos;On Hold&apos;) ||
+(TEXT(Status) = &apos;UAT Sign-off&apos;) &amp;&amp; NOT(TEXT(PRIORVALUE(Status)) = &apos;UAT Testing&apos; || TEXT(PRIORVALUE(Status)) = &apos;On Hold&apos;) ||
+(TEXT(Status) = &apos;Submitted for CAB&apos;) &amp;&amp; NOT(TEXT(PRIORVALUE(Status)) = &apos;UAT Sign-off&apos; || TEXT(PRIORVALUE(Status)) = &apos;On Hold&apos;) || 
+(TEXT(Status) = &apos;Approved for Production&apos;) &amp;&amp; NOT( TEXT(PRIORVALUE(Status)) = &apos;On Hold&apos; || TEXT(PRIORVALUE(Status)) = &apos;UAT Sign-off&apos; || TEXT(PRIORVALUE(Status)) = &apos;Submitted for CAB&apos;) ||
+(TEXT(Status) = &apos;Post Implementation Testing&apos;) &amp;&amp; NOT(TEXT(PRIORVALUE(Status)) = &apos;Approved for Production&apos; || TEXT(PRIORVALUE(Status)) = &apos;Approved&apos; || TEXT(PRIORVALUE(Status)) = &apos;UAT Sign-off&apos;) 
+)</errorConditionFormula>
+    <errorDisplayField>Status</errorDisplayField>
+    <errorMessage>This is not a valid Status. Please follow the case lifecycle.</errorMessage>
+</ValidationRule>

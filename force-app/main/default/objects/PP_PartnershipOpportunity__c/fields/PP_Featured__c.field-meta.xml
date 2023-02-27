@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PP_Featured__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>SFP-5726 - Makes this a featured opportunity and displayed on the feature section in the community.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Makes this a featured opportunity and displayed on the feature section in the community.</inlineHelpText>
+    <label>Featured</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

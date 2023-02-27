@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Loan_Profile__c</fullName>
+    <externalId>false</externalId>
+    <label>Loan Profile</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Amortising Term Loan</fullName>
+                <default>false</default>
+                <label>Amortising Term Loan</label>
+            </value>
+            <value>
+                <fullName>Bullet Term Loan</fullName>
+                <default>false</default>
+                <label>Bullet Term Loan</label>
+            </value>
+            <value>
+                <fullName>Overdraft</fullName>
+                <default>false</default>
+                <label>Overdraft</label>
+            </value>
+            <value>
+                <fullName>Revolving Credit</fullName>
+                <default>false</default>
+                <label>Revolving Credit</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

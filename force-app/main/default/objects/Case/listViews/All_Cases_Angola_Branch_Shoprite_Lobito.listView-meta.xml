@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Cases_Angola_Branch_Shoprite_Lobito</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>OWNER_NAME</columns>
+    <columns>CASES.STATUS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.ORIGIN</field>
+        <operation>equals</operation>
+        <value>Branch</value>
+    </filters>
+    <filters>
+        <field>CCC_Angola_Branch_Name__c</field>
+        <operation>equals</operation>
+        <value>Shoprite Lobito</value>
+    </filters>
+    <filters>
+        <field>CASES.CLOSED</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <label>All Cases Angola Branch Shoprite Lobito</label>
+    <language>en_US</language>
+    <sharedTo>
+        <roleAndSubordinates>CCC_Shoprite_Lobito_Branch_Angola_BU</roleAndSubordinates>
+        <roleAndSubordinates>Service_Team_Customer_Contact_Centre_Angola_Business_Unit</roleAndSubordinates>
+        <roleAndSubordinates>Service_Team_Customer_Contact_Centre_Angola_Division</roleAndSubordinates>
+    </sharedTo>
+</ListView>

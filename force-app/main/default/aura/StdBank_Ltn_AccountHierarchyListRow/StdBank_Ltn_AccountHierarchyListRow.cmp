@@ -1,0 +1,92 @@
+<aura:component implements="flexipage:availableForRecordHome" access="global" >
+	<aura:attribute name="node" type="Object" />
+	<aura:attribute name="agmColumnVisible" type="boolean" />
+    <aura:attribute name="expanded" type="Boolean" default="true" />
+    <aura:attribute name="margin" type="Integer" default="0"/>
+
+    <tr>
+		<td role="gridcell" class="slds-truncate" title="{!v.node.record.Name}"> 
+			<div style="{!'margin-left:'+v.margin+'em;'}"> 
+			
+				<span onclick="{!c.toggle}">
+					<a>
+		               	<aura:if isTrue="{!v.node.items.length>0}">
+		              		<aura:if isTrue="{!v.expanded}">
+		                      	<lightning:icon iconName="utility:dash" size="x-small"/>
+		                       		<aura:set attribute="else">
+		                            	<lightning:icon iconName="utility:add" size="x-small"/>
+		                       		</aura:set>
+		                      	</aura:if>
+						</aura:if> 
+					</a>
+	          	</span>
+ 				
+	          	<span class="slds-cell-wrap">
+		          	<a href="{!'/one/one.app?#/sObject/'+ v.node.record.Id + '/view'}" target="_blank">
+						{!v.node.record.Name} 
+					</a>
+				</span>
+
+			</div>
+		</td> 
+		<td role="gridcell" class="slds-truncate slds-cell-wrap" title="{!v.node.record.CIB_Target_Client__c}">
+			<ui:outputCheckbox value="{!v.node.record.CIB_Target_Client__c}" />
+		</td>
+		<td role="gridcell" class="slds-truncate slds-cell-wrap" title="{!v.node.record.CIF__c}">
+			<span>
+            	{!v.node.record.CIF__c}
+            </span>
+		</td>
+		<td role="gridcell" class="slds-truncate slds-cell-wrap" title="{!v.node.record.Client_Sector__c}">
+			<span>
+                {!v.node.record.Client_Sector__c}
+            </span>
+		</td>
+		<td role="gridcell" class="slds-truncate slds-cell-wrap" title="{!v.node.record.Client_Sub_Sector__c}">
+			<span>
+                {!v.node.record.Client_Sub_Sector__c}
+            </span>
+		</td>
+		<td role="gridcell" class="slds-truncate slds-cell-wrap" title="{!v.node.record.Overall_CIB_CSI_Rating_Number__c}">
+			<span>
+                {!v.node.record.Overall_CIB_CSI_Rating_Number__c}
+            </span>
+		</td>
+		<!-- If the user is cib then hide column -->
+		<aura:if isTrue="{!v.agmColumnVisible}">
+		<td role="gridcell" class="slds-truncate slds-cell-wrap" title="{!v.node.record.AGM_Status__c}">
+			<span>
+                {!v.node.record.AGM_Status__c}
+            </span>
+		</td>
+		</aura:if>
+		<td role="gridcell" class="slds-truncate slds-cell-wrap" title="{!v.node.record.Name}">
+			<span>
+                {!v.node.record.BillingCountry}
+            </span>
+		</td>
+		<td role="gridcell" class="slds-truncate slds-cell-wrap" title="{!v.node.record.Actual_CY_Revenue__c}">
+			<span> 
+            	{!v.node.record.Actual_CY_Revenue__c}
+            </span>
+		</td>
+		<td role="gridcell" class="slds-truncate slds-cell-wrap" title="{!v.node.record.Owner.Name}"> 
+			<a href="{!'/one/one.app?#/sObject/'+ v.node.record.OwnerId + '/view'}" target="_blank">
+				<span>
+                	{!v.node.record.Owner.Name}  
+                </span>
+			</a> 
+		</td>
+		<td role="gridcell" class="slds-truncate slds-cell-wrap" title="{!v.node.record.RecordType.Name}">
+			<span>
+                {!v.node.record.RecordType.Name}
+            </span>
+		</td> 
+	</tr>  
+
+ 	<aura:if isTrue="{!v.expanded}">
+       	<aura:iteration items="{!v.node.items}" var="node">
+          	<c:StdBank_Ltn_AccountHierarchyListRow node="{!node}" agmColumnVisible="{!v.agmColumnVisible}" margin="{!v.margin+2}" />  
+       	</aura:iteration> 
+ 	</aura:if>
+</aura:component>

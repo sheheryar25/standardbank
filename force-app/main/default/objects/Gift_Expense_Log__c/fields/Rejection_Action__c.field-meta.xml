@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rejection_Action__c</fullName>
+    <description>Action to be taken if the offered gift is rejected.
+
+Case 1051: Gift / Expense Logs : C Reinecke</description>
+    <externalId>false</externalId>
+    <label>Rejection Action</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Declined to Attend Event</fullName>
+                <default>false</default>
+                <label>Declined to Attend Event</label>
+            </value>
+            <value>
+                <fullName>Gift Donated to Charity</fullName>
+                <default>false</default>
+                <label>Gift Donated to Charity</label>
+            </value>
+            <value>
+                <fullName>Gift Returned to Client</fullName>
+                <default>false</default>
+                <label>Gift Returned to Client</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

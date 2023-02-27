@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sync_to_Contacts_Validation</fullName>
+    <active>false</active>
+    <description>SHAVEEN09DEC2010CASE599 &gt; This rule checks if there are values entered in the DOMAIN NAME and the DOMAIN USERNAME if the &quot;Sync with Contacts&quot; checkbox is ticked.</description>
+    <errorConditionFormula>AND (Sync_with_Contact__c == TRUE,  SA_Domain_UserName__c =&apos;&apos;)</errorConditionFormula>
+    <errorMessage>If the &quot;Sync with Contact&quot; check box is ticked, you must supply a DOMAIN NAME. Eg. SCMBNT1\BAGELOOS</errorMessage>
+</ValidationRule>

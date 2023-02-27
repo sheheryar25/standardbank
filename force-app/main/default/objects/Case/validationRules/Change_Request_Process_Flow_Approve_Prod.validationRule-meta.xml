@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Change_Request_Process_Flow_Approve_Prod</fullName>
+    <active>true</active>
+    <description>Ensure that the status of the Change Request adheres to the defined process flow. A Case cannot be set to approved for production if it has not been submitted for approval
+
+CRM-Enhanced Cases for Change Request Functionality (C Reinecke 2010/08)</description>
+    <errorConditionFormula>$RecordType.Name = &apos;Change Request&apos; &amp;&amp; ISCHANGED(Status) &amp;&amp; (TEXT(Status) = &apos;Approved for Production&apos;) &amp;&amp; NOT(Submitted_For_Production_Approval__c)</errorConditionFormula>
+    <errorDisplayField>Status</errorDisplayField>
+    <errorMessage>The case status cannot be changed to &quot;Approved for Production&quot; directly. It must be submitted for Approval.</errorMessage>
+</ValidationRule>

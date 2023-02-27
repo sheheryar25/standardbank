@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Amount</fullName>
+    <inlineHelpText>A sum of the estimated Total Revenue that is anticipated for this Opportunity, based on all Products added to the Opportunity. This value is reflected in ZAR with your currency displayed in brackets.</inlineHelpText>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+</CustomField>

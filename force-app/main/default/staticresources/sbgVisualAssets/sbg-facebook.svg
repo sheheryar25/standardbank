@@ -1,0 +1,24 @@
+<svg
+	xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink" width="9px" height="17px"
+	viewBox="0 0 9 17" version="1.1">
+	<!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+	<title>facebook</title>
+	<desc>Created with Sketch.</desc>
+	<defs>
+		<linearGradient xy="100%" id="gradient">
+			<stop stop-color="#fff" offset="0%"></stop>
+			<stop stop-color="#fff" offset="100%"></stop>
+		</linearGradient>
+	</defs>
+	<g id="Standard-Bank---Icon-Setup" stroke="none" stroke-width="1"
+		fill="none" fill-rule="evenodd"
+		transform="translate(-113.000000, -469.000000)">
+		<g id="facebook" transform="translate(113.000000, 469.000000)"
+			fill="#FFFFFE" fill-rule="nonzero">
+			<path
+				d="M0,5.62180556 L1.75713889,5.62180556 L1.75713889,3.91425 C1.75713889,3.16058333 1.77602778,1.99891667 2.32286111,1.27925 C2.89944444,0.517555556 3.69041667,0 5.05136111,0 C7.26844444,0 8.20202778,0.315916667 8.20202778,0.315916667 L7.76238889,2.92022222 C7.76238889,2.92022222 7.03044444,2.70772222 6.34713889,2.70772222 C5.66336111,2.70772222 5.05136111,2.95280556 5.05136111,3.63611111 L5.05136111,5.62180556 L7.854,5.62180556 L7.6585,8.16519444 L5.05136111,8.16519444 L5.05136111,17 L1.75713889,17 L1.75713889,8.16519444 L0,8.16519444 L0,5.62180556">
+			</path>
+		</g>
+	</g>
+</svg>

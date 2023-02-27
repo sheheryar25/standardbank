@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Active_User__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field can only be updated from the User Object. If he/she is an Active user, will automatically update on Contact Object via future class. Case Number:Case C-00000178</description>
+    <externalId>false</externalId>
+    <label>Active User</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

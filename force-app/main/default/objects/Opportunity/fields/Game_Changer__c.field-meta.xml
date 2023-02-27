@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Game_Changer__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>US-1218 RTB - OM - Game Changers Conversion</description>
+    <externalId>false</externalId>
+    <label>Game Changer</label>
+    <referenceTo>Game_Changer__c</referenceTo>
+    <relationshipLabel>Associated Opportunities</relationshipLabel>
+    <relationshipName>Associated_Opportunities</relationshipName>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SingletrackCMS__TR_Fax__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <formula>IF(NOT(ISBLANK(SingletrackCMS__TR_Fax2__c)), SingletrackCMS__TR_Fax2__c,
+     IF(
+     BEGINS(SingletrackCMS__TR_Fax_Country_Code__c , &apos;+&apos;) , 
+     IF(
+          BEGINS(SingletrackCMS__TR_Fax_Area_Code__c, &apos;0&apos;) ,  
+          SingletrackCMS__TR_Fax_Country_Code__c +&quot;&quot;+ RIGHT(SingletrackCMS__TR_Fax_Area_Code__c, LEN(SingletrackCMS__TR_Fax_Area_Code__c) -1),
+          SingletrackCMS__TR_Fax_Country_Code__c +&quot;&quot;+SingletrackCMS__TR_Fax_Area_Code__c
+      ) ,
+     SingletrackCMS__TR_Fax_Country_Code__c +&quot;&quot;+ RIGHT(SingletrackCMS__TR_Fax_Area_Code__c, LEN(SingletrackCMS__TR_Fax_Area_Code__c) -1)
+) 
+
++&quot;&quot;+
+
+IF(ISBLANK(SingletrackCMS__TR_Fax_Number__c) , &apos;&apos;, SingletrackCMS__TR_Fax_Number__c ))</formula>
+    <label>Third Party Fax</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Legal_Entity_of_Booking__c</fullName>
+    <description>SGPRT- 3817 field used in Profit Centre filtering on Product.</description>
+    <externalId>false</externalId>
+    <label>Legal Entity of Booking</label>
+    <length>225</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

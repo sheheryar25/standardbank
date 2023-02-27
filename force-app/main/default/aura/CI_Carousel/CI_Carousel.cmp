@@ -1,0 +1,19 @@
+<aura:component extends="c:CI_Base">
+    <ltng:require scripts="/resource/jquery180/jquery/jquery-1.8.0.min.js" />
+
+    <aura:method name="scrollAllLeft" action="{!c.scrollAllLeft}"/>
+
+    <div class="slds-grid slds-grid_vertical-align-center slds-grid_align-spread">
+        <div class="slds-col slds-p-right_xxx-small">
+            <lightning:buttonIcon iconName="utility:chevronleft" variant="bare" size="large" onclick="{!c.scrollLeft}" />
+        </div>
+
+        <div class="slds-col scroller" id="scroller" aura:id="scroller">
+            {!v.body}
+        </div>
+
+        <div class="slds-col slds-p-left_xxx-small">
+            <lightning:buttonIcon iconName="utility:chevronright" variant="bare" size="large" onclick="{!c.scrollRight}" />
+        </div>
+    </div>
+</aura:component>

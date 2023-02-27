@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Submitted_For_Approval__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field should not be included on the pagelayout. It is set in the Approval Process and used in the Case Validation rules to ensure that the user cannot change the status to Approved without submitting the Case for Approval
+
+            CRM-Enhanced Cases for Change Request Functionality (C Reinecke 2010/08)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>You are not supposed to see this field. Please do not update this field. Please contact you system administrator to remove this field from the page layout.</inlineHelpText>
+    <label>Submitted For Approval</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

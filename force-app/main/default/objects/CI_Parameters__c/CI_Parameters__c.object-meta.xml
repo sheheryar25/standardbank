@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Custom settings controlling behaviour of lightning components specific for CI App (CI_Landing and CI_Client)</description>
+    <enableFeeds>false</enableFeeds>
+    <label>CI Parameters</label>
+    <visibility>Protected</visibility>
+</CustomObject>

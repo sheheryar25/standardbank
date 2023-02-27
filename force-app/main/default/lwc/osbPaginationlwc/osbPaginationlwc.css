@@ -1,0 +1,158 @@
+.body {
+  width: 100%;
+}
+
+.pagination__container {
+  width: 100% !important;
+}
+
+.solutionShowcase__items {
+  width: 100% !important;
+}
+
+.solutionWrapper {
+  width: 100% !important;
+}
+
+.solutionsItem {
+  width: 100% !important;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  column-gap: 8px;
+  row-gap: 8px;
+}
+
+.navigation-container {
+  width: max-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+  align-items: center;
+}
+
+.Navigationbutton {
+  width: 45px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.NavigationPages {
+  width: 150px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  column-gap: 18px;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pageSelection {
+  height: 30px;
+  width: 30px;
+  color: #0a2240;
+  font-family: "BentonSans";
+  font-weight: 200;
+  font-size: 18.67px;
+  letter-spacing: 0;
+  line-height: 25px;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.pageSelectionCurrent {
+  height: 30px;
+  width: 30px;
+  color: #eee;
+  font-family: "BentonSans";
+  font-size: 18.67px;
+  letter-spacing: 0;
+  line-height: 25px;
+  border-radius: 50%;
+  background: #0033aa;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.workingLeftChevron {
+  filter: invert(52%) sepia(63%) saturate(7072%) hue-rotate(193deg)
+    brightness(105%) contrast(105%);
+}
+
+.disabledRightChevron {
+  filter: invert(100%) sepia(97%) saturate(13%) hue-rotate(249deg)
+    brightness(104%) contrast(104%);
+}
+
+.ms-icn_chevron_left {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ms-icn_chevron_right {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.LeftButtonSec {
+  cursor: pointer;
+}
+
+.rightButtonSec {
+  cursor: pointer;
+}
+
+.LeftButtonDisabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.rightButtonSecDisabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+@media only screen and (max-width: 1100px) {
+  .solutionsItem {
+    width: 100% !important;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    column-gap: 7px;
+    row-gap: 7px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .solutionsItem {
+    width: 100% !important;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    column-gap: 23px;
+    row-gap: 16px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .NavigationPages {
+    width: 125px;
+  }
+  .solutionsItem {
+    width: 100% !important;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 1fr;
+    column-gap: 0px;
+    row-gap: 10px;
+  }
+}

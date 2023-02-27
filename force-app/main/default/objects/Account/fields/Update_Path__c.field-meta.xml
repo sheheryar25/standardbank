@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Update_Path__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicates that the update path method should run in before update trigger</description>
+    <externalId>false</externalId>
+    <label>Update Path</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

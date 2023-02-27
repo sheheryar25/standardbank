@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product__c</fullName>
+    <description>Related Product on which we hold this Facility - provide the details as recorded in Adaptive</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Related Product on which we hold this Facility - provide the details as recorded in Adaptive</inlineHelpText>
+    <label>Product</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>American Depository Receipt</fullName>
+                <default>false</default>
+                <label>American Depository Receipt</label>
+            </value>
+            <value>
+                <fullName>Bond Position</fullName>
+                <default>false</default>
+                <label>Bond Position</label>
+            </value>
+            <value>
+                <fullName>Cape</fullName>
+                <default>false</default>
+                <label>Cape</label>
+            </value>
+            <value>
+                <fullName>Commodities</fullName>
+                <default>false</default>
+                <label>Commodities</label>
+            </value>
+            <value>
+                <fullName>Credit Card</fullName>
+                <default>false</default>
+                <label>Credit Card</label>
+            </value>
+            <value>
+                <fullName>Debtor Finance</fullName>
+                <default>false</default>
+                <label>Debtor Finance</label>
+            </value>
+            <value>
+                <fullName>Deposits Held</fullName>
+                <default>false</default>
+                <label>Deposits Held</label>
+            </value>
+            <value>
+                <fullName>Equity Position</fullName>
+                <default>false</default>
+                <label>Equity Position</label>
+            </value>
+            <value>
+                <fullName>Financial Guarantee - Given</fullName>
+                <default>false</default>
+                <label>Financial Guarantee - Given</label>
+            </value>
+            <value>
+                <fullName>Fleet Management Card</fullName>
+                <default>false</default>
+                <label>Fleet Management Card</label>
+            </value>
+            <value>
+                <fullName>Foreign Notes</fullName>
+                <default>false</default>
+                <label>Foreign Notes</label>
+            </value>
+            <value>
+                <fullName>Forfaiting</fullName>
+                <default>false</default>
+                <label>Forfaiting</label>
+            </value>
+            <value>
+                <fullName>General Short Term Banking Facilities</fullName>
+                <default>false</default>
+                <label>General Short Term Banking Facilities</label>
+            </value>
+            <value>
+                <fullName>Guarantee - Inward</fullName>
+                <default>false</default>
+                <label>Guarantee - Inward</label>
+            </value>
+            <value>
+                <fullName>LC</fullName>
+                <default>false</default>
+                <label>LC</label>
+            </value>
+            <value>
+                <fullName>Metal Lease</fullName>
+                <default>false</default>
+                <label>Metal Lease</label>
+            </value>
+            <value>
+                <fullName>Money Market</fullName>
+                <default>false</default>
+                <label>Money Market</label>
+            </value>
+            <value>
+                <fullName>Net Trading Positions</fullName>
+                <default>false</default>
+                <label>Net Trading Positions</label>
+            </value>
+            <value>
+                <fullName>Non-Disclosed Finance</fullName>
+                <default>false</default>
+                <label>Non-Disclosed Finance</label>
+            </value>
+            <value>
+                <fullName>Payment Settlement</fullName>
+                <default>false</default>
+                <label>Payment Settlement</label>
+            </value>
+            <value>
+                <fullName>Performance Guarantee - Given</fullName>
+                <default>false</default>
+                <label>Performance Guarantee - Given</label>
+            </value>
+            <value>
+                <fullName>Residential Mortgage</fullName>
+                <default>false</default>
+                <label>Residential Mortgage</label>
+            </value>
+            <value>
+                <fullName>Risk Participation Agreement</fullName>
+                <default>false</default>
+                <label>Risk Participation Agreement</label>
+            </value>
+            <value>
+                <fullName>Risk Transfers</fullName>
+                <default>false</default>
+                <label>Risk Transfers</label>
+            </value>
+            <value>
+                <fullName>Securities Financing</fullName>
+                <default>false</default>
+                <label>Securities Financing</label>
+            </value>
+            <value>
+                <fullName>Structured Loans</fullName>
+                <default>false</default>
+                <label>Structured Loans</label>
+            </value>
+            <value>
+                <fullName>TPFA Property Guarantee-Given</fullName>
+                <default>false</default>
+                <label>TPFA Property Guarantee-Given</label>
+            </value>
+            <value>
+                <fullName>Trading</fullName>
+                <default>false</default>
+                <label>Trading</label>
+            </value>
+            <value>
+                <fullName>Vehicle And Asset Finance</fullName>
+                <default>false</default>
+                <label>Vehicle And Asset Finance</label>
+            </value>
+            <value>
+                <fullName>Working Capital Facilities</fullName>
+                <default>false</default>
+                <label>Working Capital Facilities</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

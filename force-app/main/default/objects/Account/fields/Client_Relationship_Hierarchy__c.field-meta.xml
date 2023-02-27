@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Client_Relationship_Hierarchy__c</fullName>
+    <description>Hierarchy level for this Client.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Represents where this Client belongs in the relationship hierarchy of the Client group. When selecting a ‘Group or Immediate Parent’ level, and you are not the CC, you will need approval from the CC.</inlineHelpText>
+    <label>Client Relationship Hierarchy</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Child</fullName>
+                <default>false</default>
+                <label>Child</label>
+            </value>
+            <value>
+                <fullName>Immediate Parent</fullName>
+                <default>false</default>
+                <label>Immediate Parent</label>
+            </value>
+            <value>
+                <fullName>Group Parent</fullName>
+                <default>false</default>
+                <label>Group Parent</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

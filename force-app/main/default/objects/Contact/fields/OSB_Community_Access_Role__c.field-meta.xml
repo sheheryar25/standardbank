@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OSB_Community_Access_Role__c</fullName>
+    <description>OneHub: This field is used to store the Role that a Client user has on the OneHub Community.(US-4589)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Role of the client on the OneHub community</inlineHelpText>
+    <label>Community Access Role</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Authorised Person</fullName>
+                <default>false</default>
+                <label>Authorised Person</label>
+            </value>
+            <value>
+                <fullName>Designated Person</fullName>
+                <default>false</default>
+                <label>Designated Person</label>
+            </value>
+            <value>
+                <fullName>Nominated Person</fullName>
+                <default>false</default>
+                <label>Nominated Person</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,37 @@
+<aura:component controller="StdBank_Ltn_ClientsCSIScoreController" extends="c:CI_Base" implements="flexipage:availableForAllPageTypes,force:hasRecordId">
+	<aura:attribute name="CSIScore" type="String" />
+	<aura:attribute name="CSIScoreText" type="String" />
+	<aura:attribute name="SurveyYear" type="String" />
+	<aura:attribute name="recordId" type="String" />
+	<aura:attribute name="color" type="String" default=" " />
+	<aura:attribute name="urlString" type="String" default=" " />
+
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+	<article class="card_with_shadow">
+		<a href = "{!v.urlString}" target="_blank" style="color: inherit; text-decoration: inherit;">
+		<div class="slds-p-around_small">
+			<p class="slds-text-heading_small"> {!$Label.c.CSI_Score} </p>
+
+			<div class="slds-grid slds-grid_align-spread slds-grid_vertical-align-center slds-m-top_x-small slds-m-bottom_medium" style="height:100%">
+				<div class="slds-text-heading_medium slds-m-bottom_x-small">
+					{!v.CSIScore}
+				</div>
+				<div class="{!' + slds-text-heading_medium ' + v.color}">
+					{!v.CSIScoreText}
+				</div>
+				<footer class="slds-card__footer slds-p-around_none slds-m-around_none slds-align-bottom slds-is-absolute"
+						style="z-index:2; bottom:1px; left:1px; border:0px">
+					<div class="slds-text-body_small slds-m-around_small">
+                        {!v.SurveyYear}
+					</div>
+				</footer>
+
+
+			</div>
+		</div>
+		<lightning:helptext class="slds-is-absolute dock_right dock_bottom slds-p-around_xx-small" content="{!$Label.c.Help_Text_CSI_Score}" />
+		</a>
+	</article>
+
+</aura:component>

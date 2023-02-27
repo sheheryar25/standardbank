@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Required_fields_for_Renewal</fullName>
+    <active>true</active>
+    <description>SFP-5354 Renewal Date is required for Insurance Products, when Renewal checked, if no - Expiry Date is required.
+Renewal Date and Expiry Date cannot be prior Inception Date.</description>
+    <errorConditionFormula>AND(
+  RecordType.DeveloperName = &apos;Insurance&apos;,
+  IF(Renewal__c,
+    IF(NOT(ISBLANK(Renewal_Date__c)),
+      Renewal_Date__c &lt; Inception_Date__c,
+      TRUE
+    ),
+    IF(NOT(ISBLANK(Expiry_Date__c)),
+      Expiry_Date__c &lt; Inception_Date__c,
+      TRUE
+    )
+  )
+)</errorConditionFormula>
+    <errorMessage>Renewal Date is required when Renewal is selected (checkbox), if Renewal date is not selected - Expiry Date is required.
+Renewal Date and Expiry Date cannot be prior Inception Date.</errorMessage>
+</ValidationRule>

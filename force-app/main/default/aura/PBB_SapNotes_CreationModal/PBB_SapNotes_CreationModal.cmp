@@ -1,0 +1,45 @@
+<!--
+ - Created by Mykhailo Reznyk on 18.02.2020.
+ -->
+
+<aura:component controller="PBB_SapNotes_Controller" description="PBB_SapNotes_CreationModal">
+
+    <aura:attribute access="public" type="Boolean" name="isInViewMode" default="false"/>
+    <aura:attribute access="public" type="Object" name="noteInfo"/>
+    <aura:attribute access="public" type="List" name="allCategories"/>
+    <aura:attribute access="public" type="Object" name="modalPromise" />
+    <aura:attribute access="public" name="recordId" type="Id" />
+    <aura:attribute access="private" type="Boolean" name="isLoading" default="false" />
+
+    <aura:registerEvent name="SapNotesEvent" type="c:PBB_SapNotes_Event"/>
+
+    <div class="component-container">
+
+        <aura:if isTrue="{!v.isLoading}">
+            <lightning:spinner size="medium" />
+        </aura:if>
+
+        <lightning:textarea aura:id="newNoteBody" name="noteBodyInput" maxlength="800" required="true" value="{! v.noteInfo ? v.noteInfo.noteDetails : ''}" readonly="{!v.isInViewMode}" placeholder="Create a note" label="Body" messageWhenValueMissing="Note text has to be provided" />
+
+        <lightning:select aura:id="newNoteCategory" name="noteCategorySelect" label="Category" required="true" messageWhenValueMissing="Category has to be provided" readonly="{!v.isInViewMode}">
+            <aura:if isTrue="{!v.isInViewMode}">
+                <option value="{!v.noteInfo.category}">{!v.noteInfo.category}</option>
+                <aura:set attribute="else">
+                    <aura:iteration var="category" indexVar="index" items="{!v.allCategories}">
+                        <option value="{!category.Note_Type_Name__c}" selected="{!index == 0 ? true : false}">{!category.Note_Type_Name__c}</option>
+                    </aura:iteration>
+                </aura:set>
+            </aura:if>
+        </lightning:select>
+
+        <div class="footer-buttons">
+            <aura:if isTrue="{! !v.isInViewMode }">
+                <lightning:button label="Save" variant="brand" aura:id="SaveNoteAction" onclick="{!c.saveNewNote}" />
+            </aura:if>
+
+            <lightning:button label="Close" onclick="{!c.closeModal}"/>
+        </div>
+
+    </div>
+
+</aura:component>

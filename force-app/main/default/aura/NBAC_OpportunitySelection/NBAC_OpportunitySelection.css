@@ -1,0 +1,15 @@
+.THIS.cust-footer {
+	border-top: 2px solid rgb(216, 221, 230);
+	border-bottom-right-radius: .25rem;
+	border-bottom-left-radius: 25rem;
+	padding: .75rem 1rem;
+	text-align: right;
+}
+
+.THIS.modal_content{
+	overflow: auto;
+}
+
+.THIS.checkbox_select {
+	text-align: center;
+}

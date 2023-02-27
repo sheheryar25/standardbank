@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Related_To__c</fullName>
+    <description>DEF-001541: New field for Create Complaint functionality</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Which Business Division(s) does this Case relate to?</inlineHelpText>
+    <label>Related To</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Client Coverage</fullName>
+                <default>false</default>
+                <label>Client Coverage</label>
+            </value>
+            <value>
+                <fullName>Global Markets</fullName>
+                <default>false</default>
+                <label>Global Markets</label>
+            </value>
+            <value>
+                <fullName>Investment Banking</fullName>
+                <default>false</default>
+                <label>Investment Banking</label>
+            </value>
+            <value>
+                <fullName>Transactional Products and Services</fullName>
+                <default>false</default>
+                <label>Transactional Products and Services</label>
+            </value>
+            <value>
+                <fullName>Across CIB</fullName>
+                <default>false</default>
+                <label>Across CIB</label>
+            </value>
+            <value>
+                <fullName>PBB Card</fullName>
+                <default>false</default>
+                <label>PBB Card</label>
+            </value>
+            <value>
+                <fullName>PBB Lending</fullName>
+                <default>false</default>
+                <label>PBB Lending</label>
+            </value>
+            <value>
+                <fullName>PBB Transactional Products and Services</fullName>
+                <default>false</default>
+                <label>PBB Transactional Products and Services</label>
+            </value>
+            <value>
+                <fullName>PBB Wealth and Insurance</fullName>
+                <default>false</default>
+                <label>PBB Wealth and Insurance</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

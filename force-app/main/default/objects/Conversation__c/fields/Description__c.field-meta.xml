@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Description__c</fullName>
+    <description>&quot;US-4310
+            US-4401
+            US-4454
+            The detailed description of the task as received from Smart2&quot;</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Details the description of a task as defined in Smart2</inlineHelpText>
+    <label>Description</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

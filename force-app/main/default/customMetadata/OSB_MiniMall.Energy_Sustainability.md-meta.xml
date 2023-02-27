@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Energy &amp; Sustainability</label>
+    <protected>false</protected>
+    <values>
+        <field>ImageLink__c</field>
+        <value xsi:type="xsd:string">https://standardbank--c.eu45.content.force.com/servlet/servlet.ImageServer?id=0157R000007QSxz&amp;oid=00D200000000Uno&amp;lastMod=1649172050000</value>
+    </values>
+</CustomMetadata>

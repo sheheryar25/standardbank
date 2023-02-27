@@ -1,0 +1,82 @@
+<aura:component description="CI_NewsSearchItem">
+    <aura:attribute name="OneNew" type="Object"/>
+    <aura:attribute name="isLead" type="Boolean"/>
+    <aura:attribute name="showingSaved" type="Boolean" default="false"/>
+    <aura:attribute name="isLiked" type="Boolean" default="false"/>
+    <aura:attribute name="isDisliked" type="Boolean" default="false"/>
+    <aura:attribute name="isSaved" type="Boolean" default="false"/>
+    <aura:attribute name="clientId" type="String"/>
+    <aura:attribute name="isFullArticle" type="Boolean"/>
+    <aura:attribute name="sectors" type="String"/>
+    <aura:attribute name="subSectors" type="String"/>
+    <aura:attribute name="regions" type="String"/>
+    <aura:attribute name="index" type="String"/>
+    <aura:attribute name="tempValue" type="String"/>
+    <aura:attribute name="showIcons" type="Boolean" default="true"/>
+    <aura:attribute name="feedbackArticles" type="List" access="global" />
+    <aura:attribute name="isSavedArticles" type="List"/>
+    <aura:handler name="change" value="{!v.isSavedArticles}" action="{!c.doArticleStatus}"/>
+    <aura:handler name="change" value="{!v.feedbackArticles}" action="{!c.doArticleFeedback}"/>
+    <aura:handler name="change" value="{!v.OneNew}" action="{!c.doInit}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:registerEvent name="navToComponent" type="c:CI_EvtNavigateToComponent"/>
+    <aura:registerEvent name="articleSavedEvent" type="c:CI_EvtGeneralCmp"/>
+    <c:CI_NewsService aura:id="newsService"/>
+    <tr class="slds-hint-parent">
+        <td onclick="{!c.navToArticle}" style="width: 12%;"
+            class="slds-cell-wrap slds-p-around_small boldText clickable">
+            <div title="{!v.OneNew.Title__c}">{!v.OneNew.Title__c}</div>
+        </td>
+        <td onclick="{!c.navToArticle}" style="width: 50%;" class="slds-cell-wrap slds-p-around_small clickable">
+            <div class="slds-truncate" title="{!v.OneNew.Snippet__c}">{!v.OneNew.Snippet__c}</div>
+        </td>
+        <td style="width: 9%; color: green !important;" class="slds-cell-wrap slds-p-around_small slds-text-align_center">
+            <aura:if isTrue="{!v.OneNew.Pred__c}">
+                <div style="color: green !important;">
+                    <lightning:button iconName="utility:fallback" variant="base" disabled="true"
+                                      onclick="{!c.createOpportunity}"
+                                      class="slds-align-middle text_green icon_green icon_m-xsmall"
+                                      label="Lead"/>
+                </div>
+            </aura:if>
+        </td>
+        <td style="width: 8%;" class="slds-cell-wrap slds-p-around_small slds-text-align_center">
+            <div title="{!v.OneNew.Publisher_Name__c}">{!v.OneNew.Publisher_Name__c}</div>
+        </td>
+        <td style="width: 9%;" class="slds-cell-wrap slds-p-around_small slds-text-align_center">
+            <div title="{!v.OneNew.formattedPublicationDate}">
+                {!v.OneNew.formattedPublicationDate}
+            </div>
+        </td>
+        <aura:if isTrue="{!v.showIcons}">
+            <td style="width: 13%;" class="slds-cell-wrap slds-p-around_small slds-text-align_left">
+                <div>
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-size_1-of-2">
+                            <lightning:button iconName="utility:like" onclick="{!c.likeArticle}" variant="base"
+                                              class="{! 'slds-align-middle icon_blue icon_m-xsmall cursor_pointer ' + if(v.isLiked, ' text_bold ') + if(v.showingSaved, ' slds-hidden') }"
+                                              label="Like" disabled="{!v.isLiked}"/>
+
+                        </div>
+                        <div class="slds-size_1-of-2">
+                            <lightning:button iconName="utility:dislike" onclick="{!c.dislikeArticle}" variant="base"
+                                              class="{! 'slds-align-middle icon_blue icon_m-xsmall cursor_pointer ' + if(v.isDisliked, ' text_bold ') + if(v.showingSaved, ' slds-hidden') }"
+                                              label="Dislike" disabled="{!v.isDisliked}"/>
+                        </div>
+                        <div class="slds-size_1-of-2">
+                            <lightning:button iconName="utility:bookmark" onclick="{!c.saveArticle}" variant="base"
+                                              class="{! 'slds-align-middle icon_blue icon_m-xsmall cursor_pointer ' + if(v.isSaved, ' text_bold ') + if(v.showingSaved, 'slds-hidden') }"
+                                              label="Save" disabled="{!v.isSaved}"/>
+                        </div>
+                        <div class="slds-size_1-of-2" style="color: green !important;">
+                            <lightning:button iconName="utility:fallback" variant="base"
+                                              onclick="{!c.createOpportunity}"
+                                              class="slds-align-middle text_green icon_m-xsmall"
+                                              label="Convert"/>
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </aura:if>
+    </tr>
+</aura:component>

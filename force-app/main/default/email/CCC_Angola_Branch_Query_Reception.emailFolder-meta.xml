@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailFolder xmlns="http://soap.sforce.com/2006/04/metadata">
+    <accessType>Shared</accessType>
+    <name>CCC Angola Branch Query Reception</name>
+    <publicFolderAccess>ReadOnly</publicFolderAccess>
+    <sharedTo>
+        <roleAndSubordinates>PBB_Angola_Country</roleAndSubordinates>
+    </sharedTo>
+</EmailFolder>

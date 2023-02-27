@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DRP_Case_Origination_Date_editable_once</fullName>
+    <active>true</active>
+    <description>DRP Validation Rule ensuring the Case Origination Date can only be edited once and after being completed cannot be modified</description>
+    <errorConditionFormula>AND(
+            ISCHANGED(Case_Origination_Date__c),
+            NOT(
+            ISNULL(PRIORVALUE(Case_Origination_Date__c))
+            )
+            )</errorConditionFormula>
+    <errorDisplayField>Case_Origination_Date__c</errorDisplayField>
+    <errorMessage>Case Origination Date can only be set once</errorMessage>
+</ValidationRule>

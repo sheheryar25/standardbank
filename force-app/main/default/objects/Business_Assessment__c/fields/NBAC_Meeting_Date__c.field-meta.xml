@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NBAC_Meeting_Date__c</fullName>
+    <description>The actual date the NBAC form is expected to be presented to the committee</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Date of which the NBAC application will be presented to the Committee</inlineHelpText>
+    <label>NBAC Meeting Date</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

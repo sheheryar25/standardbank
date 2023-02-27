@@ -1,0 +1,50 @@
+<template>
+    <template if:false={thirdParty}>
+        <div class="yourSolution--tile">
+            <div class="inner-tile">
+                <div class="yourSolution--tile__header">
+                    <div class="solutionShowcaseItem__link">
+                        <lightning-icon size="x-small"
+                            class="slds-button slds-button_icon slds-button_icon-inverse deleteIcon"
+                            icon-name="utility:delete" onclick={removeSolutionAsFavourite} disabled={disabled} data-id="Remove_app">
+                        </lightning-icon>
+                    </div>
+                </div>
+                <a href={ssoredirecturl} target="_blank" rel="noopener noreferrer" data-id="sso_redirect">
+                    <div class="yourSolution--tile__app ">
+                        <div class="yourSolution--tile__app__icon ">
+                            <img src={SBlogo}></img>
+                        </div>
+                        <div class="yourSolution--tile__app__title">{title}</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </template>
+    <template if:true={thirdParty}>
+        <div class="yourSolution--tile_3rd">
+            <div class="inner-tile">
+                <div class="yourSolution--tile__header">
+                    <div class="solutionShowcaseItem__link">
+                        <lightning-icon size="x-small"
+                            class="slds-button slds-button_icon slds-button_icon-inverse deleteIcon_3rd"
+                            icon-name="utility:delete" onclick={removeSolutionAsFavourite} disabled={disabled} data-id="Remove_app_third">
+                        </lightning-icon>
+                    </div>
+                </div>
+                <a href={ssoredirecturl} target="_blank" rel="noopener noreferrer" data-id="sso_redirect_thrid">
+                    <div class="logoSolution">
+                        <lightning-formatted-rich-text id="outputRT-1" value={mediumlogo}>
+                        </lightning-formatted-rich-text>
+                    </div>
+                    <template if:true={solTM}>
+                        <div class="yourSolution--tile__app__title_3rd">{title}<sup class="tmClass">TM</sup></div>
+                    </template>
+                    <template if:false={solTM}>
+                        <div class="yourSolution--tile__app__title_3rd">{title}</div>
+                    </template>
+                </a>
+            </div>
+        </div>
+    </template>
+</template>

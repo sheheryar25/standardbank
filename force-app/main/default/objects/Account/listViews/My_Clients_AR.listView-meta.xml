@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Clients_AR</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Account_Owner__c</columns>
+    <columns>ExternalIdentifier__c</columns>
+    <columns>ACCOUNT.RECORDTYPE</columns>
+    <columns>Client_Sector__c</columns>
+    <columns>FinServ__BranchName__c</columns>
+    <columns>Market_Segments__c</columns>
+    <columns>Completeness_Score__c</columns>
+    <columns>FinServ__Status__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Commercial_Banking_Africa_Regions,Account.Enterprise_Banking_Africa_Regions</value>
+    </filters>
+    <label>My Clients (AR)</label>
+    <sharedTo>
+        <roleAndSubordinatesInternal>BCC_Africa_Regions</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

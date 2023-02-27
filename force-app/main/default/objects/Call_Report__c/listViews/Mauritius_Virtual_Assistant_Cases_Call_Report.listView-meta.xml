@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mauritius_Virtual_Assistant_Cases_Call_Report</fullName>
+    <filterScope>Queue</filterScope>
+    <label>Mauritius Virtual Assistant Cases</label>
+    <queue>Mauritius_Virtual_Assistant_Cases</queue>
+    <sharedTo>
+        <role>CIB_Global_Digital_Division</role>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OSB_Expire_Sign_Up_Link__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>OneHub: This field is used to expire the sign up link sent to users. (SGPRT-2300)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates that the sign up link is now expired and user can no longer access it.</inlineHelpText>
+    <label>Expire Sign Up Link</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

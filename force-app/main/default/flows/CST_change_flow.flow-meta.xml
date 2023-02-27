@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>CC_CST_Change_Email_Alert</name>
+        <label>CC_CST_Change_Email_Alert</label>
+        <locationX>421</locationX>
+        <locationY>146</locationY>
+        <actionName>Case.CC_CST_Change_Alert</actionName>
+        <actionType>emailAlert</actionType>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>caseId</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>49.0</apiVersion>
+    <interviewLabel>CST change flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>CST change flow</label>
+    <processType>AutoLaunchedFlow</processType>
+    <startElementReference>CC_CST_Change_Email_Alert</startElementReference>
+    <status>Active</status>
+    <variables>
+        <name>caseId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

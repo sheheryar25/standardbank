@@ -1,0 +1,169 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" controller="OSB_Header_CTRL">
+    <aura:attribute name="isUserLoggedIn" type="Boolean" default="false" access="private"/>
+    <aura:attribute name="isGuestUser" type="Boolean" default="false" access="private"/>
+    <aura:attribute name="userName" type="String" access="private"/>
+    <aura:attribute name="withMenu" type="Boolean" default="false" access="public"/>
+    <aura:attribute name="withMenuStyle" type="Boolean" default="false" access="public"/>
+    <aura:attribute name="withUserName" type="Boolean" default="true" access="public"/>
+    <aura:attribute name="noOverlay" type="Boolean" default="true" access="public"/>
+    <aura:attribute name="showBannerMessage" type="Boolean" default="false" access="public"/>
+    <aura:attribute name="showCookieDisclaimer" type="Boolean" default="true" access="private"/>
+    <aura:attribute name="showTeamProfile" type="Boolean" default="true" access="private"/>
+    <aura:attribute name="displayedUnreadNotifications" type="String" access="private"/>
+    <aura:attribute name="loginUrl" type="String" access="private"/>
+    <aura:attribute name="tcLink" type="String" access="private" />
+    <aura:attribute name="mobileMenuToggled" type="Boolean" default="false" access="private"/>
+    <aura:attribute name="currentTab" type="String" default="Dashboard" access="private"/>
+    <aura:attribute name="unreadNotificationsNumber" type="Integer" default="0" access="public"  />
+
+    <!-- Responsiveness related attributes-->
+    <aura:attribute name="mobileDisplayMenu" type="Boolean" default="false" access="private"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    <aura:handler event="c:OSBNotificationReadEvent" action="{!c.handleReadNotification}"/>
+    <aura:handler event="c:OSBChangeTabEvent" action="{!c.handleTabChange}"/>
+    <aura:handler event="c:OSBMarketplaceTabEvent" action="{!c.closeMenu}"/>
+    <aura:handler event="c:OSBMobileMenuToggledEvent" action="{!c.handleMobileMenuEvent}"/>
+    
+    <aura:registerEvent name="navigationEvent" type="c:OSBNavigationEvent"/>
+    <aura:registerEvent name="headerAttributesEvent" type="c:OSBNotificationReadEvent"/>
+    <aura:registerEvent name="menuToggledEvent" type="c:OSBMobileMenuToggledEvent"/>
+
+    <lightning:navigation aura:id="navService"/>
+    <ltng:require scripts="{!$Resource.OSBNavBarResize + '/OSBHeaderOPTLNavBarResize.js'}" />
+
+    <div aura:id="wholeHeader" class="headerAndNavbar fixed-height" id="headerFixedHeight">
+        <div class="{!v.mobileMenuToggled ? 'hidden' : 'closed_mobile-menu'}">
+            <div class="{!v.withMenu ? 'header-container with-shadow' : 'header-container'}" id="headerContainer">
+                <aura:if isTrue="{!and(equals(v.showBannerMessage, true),equals(v.isUserLoggedIn, false))}">
+                    <c:OSBHeaderBannerMessage/>
+                </aura:if>
+                <aura:if isTrue="{!v.showCookieDisclaimer}">
+                    <c:OSBCookieDisclaimer context="OPTL"/>
+                </aura:if>
+                <div class="{!v.isUserLoggedIn ? (v.withMenu ? 'header withMenu' : 'header') : (v.withMenu ? 'header withMenu cancel_reverse' : 'header cancel_reverse')}" id="headerWithMenu">
+                    <div class="{!v.isUserLoggedIn ? 'header__icon-cont' : 'hidden'}">
+                        <div class="header__icon">
+                            <i class="header__user__icon ms-icn_lock_closed"></i>
+                        </div>
+                    </div>
+                    <aura:if isTrue="{!v.withMenu}">
+                        <div class="header__logo slds-size_1-of-4 slds-medium-size_3-of-12" id="sbLogoContainer">
+                            <a class="logoContainer" href="/s/" id="sbLogo" data-id= "header_nav_link" data-text= "Header | Logo"></a>
+                        </div>
+                        <aura:set attribute="else">
+                            <div class="header__logo" id="sbBadgeLogoContainer">
+                                <a class="breadcrumbs__item" href="/s/" data-id= "header_nav_link" data-text= "Header | Logo">
+                                    <img src="{!$Resource.OSB_logoBadge}" id="sbBadgeLogo"/>
+                                </a>
+                            </div>
+                        </aura:set>
+                    </aura:if>
+                    <aura:if isTrue="{!v.withUserName}">
+                        <div class="{!v.isUserLoggedIn ? 'header__mobile-menu' : 'hidden_nonmobile'}" onclick="{!c.openMobileMenu}">
+                            <button class="slds-dropdown-trigger slds-button header__mobile-menu-cont">
+                                <i class="ms-icn_menu"></i>
+                            </button>
+                            <aura:if isTrue="{!v.unreadNotificationsNumber > 0}">
+                                <div class="header__unread-notifications__left">
+                                    <div class="{!v.unreadNotificationsNumber > 99 ? 'header__unread-notification three__digits' : (v.unreadNotificationsNumber > 9 ? 'header__unread-notification two__digits' : 'header__unread-notification')}">
+                                        <div class="header__unread-notification-number">
+                                            {!v.displayedUnreadNotifications}
+                                        </div>
+                                    </div>
+                                </div>
+                            </aura:if>
+                        </div>
+                        <aura:set attribute="else">
+                            <aura:if isTrue="{!v.noOverlay}">
+                                <div class="header__overlay"></div>
+                                <div class="header__fixed-height"></div>
+                                <aura:set attribute="else">
+                                    <div class="header__fixed-height"></div>
+                                </aura:set>
+                            </aura:if>
+                        </aura:set>
+                        <div id="header_acc" class="{!v.isUserLoggedIn ? 'header__account_logged hide_on-bigres' : 'header__account'}">
+                            <div class="header__contact-container">
+                                <a class="header_contact" onclick="{!c.navigateContactUs}" data-id= "header_nav_link" data-text= "Header | Contact Us">
+                                    Contact us
+                                </a>
+                            </div>
+                            <aura:if isTrue="{!v.isUserLoggedIn}">
+                                <a onclick="{!c.navigateNotifications}" class="header__notification" data-id= "header_nav_link" data-text= "Header | Noification Bell">
+                                    <i class="ms-icn_bell notification__bell"></i>
+                                    <aura:if isTrue="{!v.unreadNotificationsNumber > 0}">
+                                        <div class="header__unread-notifications">
+                                            <div class="{!v.unreadNotificationsNumber > 99 ? 'header__unread-notification three__digits' : (v.unreadNotificationsNumber > 9 ? 'header__unread-notification two__digits' : 'header__unread-notification')}">
+                                                <div class="header__unread-notification-number">
+                                                    {!v.displayedUnreadNotifications}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </aura:if>
+                                </a>
+                                <i class="header__user__icon ms-icn_lock_closed"></i>
+                                <div class="header_dropdown">
+                                    <lightning:buttonMenu class="no-hover" menuAlignment="right" label="{!v.userName}" variant="container" aura:id="menu" onselect="{! c.handleSelect }">
+                                        <div data-id="header_nav_link" data-text="Header | Profile and Settings"><lightning:menuItem class="header_menu_item header_menu_item--border" value="editProfile" label="Profile and Settings"/></div>
+                                        <div data-id="header_nav_link" data-text="Header | Change Password"><lightning:menuItem class="header_menu_item header_menu_item--border" value="changePasswordPing" label="Change Password"/></div>
+                                        <aura:if isTrue="{!v.showTeamProfile}">
+                                            <div data-id="header_nav_link" data-text="Header | Team Profile"><lightning:menuItem class="header_menu_item header_menu_item--border" value="teamProfile" label="Team Profile"/></div>
+                                        </aura:if>
+                                        <div data-id="header_nav_link" data-text="Header | Code of Conduct"><lightning:menuItem class="header_menu_item header_menu_item--border" value="codeconduct" label="Code of Conduct"/></div>
+                                        <div data-id="header_nav_link" data-text="Header | Terms and Conditions"><lightning:menuItem class="header_menu_item header_menu_item--border" value="conditions" label="Terms &amp; Conditions"/></div>
+                                        <div data-id="header_nav_link" data-text="Header | Sign Out"><lightning:menuItem class="header_menu_item" value="signOut" label="Sign out" /></div>
+                                    </lightning:buttonMenu>
+                                </div>
+                                <aura:set attribute="else">
+                                    <aura:if isTrue="{!v.isGuestUser}">
+                                        <div class="header__button_contatiner">
+                                            <a href="{!v.loginUrl}" class="header__button" id="headerButton"  data-id= "header_nav_link" data-text= "Header | Sign into your dashboard">
+                                                <div class="header__button--left" id="buttonLeft">
+                                                    <span id="signIntoYour1">Sign into your</span>
+                                                    <span id="signIntoYour2">dashboard</span>
+                                                </div>
+                                                <div class="header__button--right">
+                                                    <i class="header__button--icon ms-icn_profile_dashboard"></i>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div id="full_terms" class="terms_link">
+                                            By signing in you agree to the<a class="partial_link" target="_blank" href="{!v.tcLink}">&nbsp;T&#38;C's</a>
+                                        </div>
+                                        <a id="part_terms" class="partial_link hidden_link" target="_blank" href="{!v.tcLink}">T&#38;C's</a>
+                                        <aura:set attribute="else">
+                                            <div></div>
+                                        </aura:set>
+                                    </aura:if>
+                                </aura:set>
+                            </aura:if>
+                        </div>
+                    </aura:if>
+                </div>
+            </div>
+        </div>
+    <div class="{!v.mobileMenuToggled ? 'header-dropdown mobile__menu' : 'hidden'}">
+        <aura:if isTrue="{!v.isUserLoggedIn}">
+            <c:OSBMobileMenu />
+            <aura:set attribute="else">
+                <div class="mobile__menu">
+                    <div class="mobile__menu-header">
+                        <i class="ms-icn_close" onclick="{!c.closeMenu}"></i>
+                    </div>
+                    <a class="mobile__menu-sign" href="{!v.loginUrl}">
+                        <div>Sign into your dashboard</div>
+                        <i class="header__button--icon ms-icn_profile_dashboard"></i>
+                    </a>
+                    <div class="mobile__menu-contact">
+                        <a target="_blank" href="{!v.tcLink}">Terms and Conditions</a>
+                    </div>
+                    <div class="mobile__menu-contact" onclick="{!c.navigateContactUs}" data-id= "uitlink_link" data-text= "Header | Contact Us">
+                        Contact us
+                    </div>
+                </div>
+            </aura:set>
+        </aura:if>
+    </div>
+</div>
+</aura:component>

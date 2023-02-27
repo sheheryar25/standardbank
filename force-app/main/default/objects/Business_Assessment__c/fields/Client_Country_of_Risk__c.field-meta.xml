@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Client_Country_of_Risk__c</fullName>
+    <description>US-3690 The country that the Client has the most credit risk exposure</description>
+    <externalId>false</externalId>
+    <formula>TEXT(Account__r.Country_Risk__c)</formula>
+    <inlineHelpText>Client&apos;s specific country of risk exposure</inlineHelpText>
+    <label>Client Country of Risk</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,67 @@
+.THIS.header-container {
+    background: #0033A1;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.THIS .header {
+    padding: 15px 0;
+    margin: auto;
+    margin-left: 16px;
+    justify-content: center;
+}
+
+.THIS .header__logo {
+    min-width: 190px;
+}
+
+.THIS .logoContainer {
+    background-image: t('url(' + brandLogoImage  + ')');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 99;
+    cursor: pointer;
+    position: relative;
+    max-width: 100%;
+    max-height: 53px;
+    display: block;
+    outline: 0;
+    height: 53px;
+}
+
+.THIS .header__button {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    line-height: 20px;
+    background: #0089FF;
+    padding: 22px 24px;
+    margin: -15px 0;
+    color: #fff;
+    border: 0;
+}
+
+.THIS .header__button--left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.THIS .header__button--left span:first-child {
+    margin-left: 5px;
+}
+
+.THIS .header__button--icon {
+    display: block;
+    font-size: 24px;
+    padding-left: 8px;
+}
+
+.THIS .header__button span {
+    white-space: nowrap;
+}

@@ -1,0 +1,94 @@
+<aura:component controller="OSB_MarketGramPopup_Ctrl">
+    <aura:attribute name="title" type="String" access="public" />
+    <aura:attribute name="subTitle" type="String" access="public" />  
+    <aura:attribute name="content" type="String" access="public"/>
+    <aura:attribute name="icon" type="String" access="public"/>
+	<lightning:navigation aura:id="navService" />
+    <aura:attribute name="signUp" type="Boolean" default="false" access="public" />
+    <aura:attribute name="QueryTypes" type="List" default="[
+                                                           {'label': 'Incorrect credentials', 'value': 'Incorrect credentials'},
+                                                           {'label': 'I’m not interested ', 'value': 'I’m not interested '},
+                                                           {'label': 'Other', 'value': 'Other'}
+                                                           ]" access="public"/>
+    <aura:attribute name="DefaultType" type="String" default="Incorrect credentials" access="public"/>
+    <aura:attribute name="loading" type="Boolean" default="False" access="public" />
+    <aura:attribute name="newCase" type="Case" default="{ 'sobjectType': 'Case' }" access="public"/>
+    <aura:attribute name="userMap" type="object[]" access="public"/>
+    <aura:attribute name = "infoPopup" type = "Boolean" default = "false" access="public"/>
+    <aura:attribute name="displayPopUp" type="Boolean" default="true" access="public"/>
+    <aura:attribute name="optl" type="Boolean" default="true" access="public"/>
+    <aura:handler name="change" value="{!v.positionElement}" action="{!c.handleChangePosition}"/>
+    <aura:handler name="change" value="{!v.shouldHandleLastPage}" action="{!c.handleLastPage}"/>
+    <aura:handler name="change" value="{!v.pageNumber}" action="{!c.handleChangePage}"/>
+    <aura:registerEvent name="changePopUpPageEvent" type="c:OSBChangePopUpPageEvent"/>
+    <aura:registerEvent name="closePopUpEvent" type="c:OSBClosePopUpEvent"/>
+    
+    <div class="popUp-container">
+        <aura:if isTrue="{!v.displayPopUp}">
+            <div class="popUp-box" aura:id="popUpBox">
+
+                <div class="popUp-title-container">
+                    <aura:if isTrue="{!v.icon == 'QuestionMark'}">
+                    <i class="ms-icn_questionmark_circle"/>   
+                    <aura:set attribute="else">
+                    <i class=" ms-icn_warning_solid popUp-icon"/>
+                    </aura:set>
+                	</aura:if>
+                    <div class="popUp-title mb_8">{!v.title}</div>
+                </div>
+                <div class="popUp-content mb_16">{!v.content}</div>
+                <div class="slds-grid popUp-options-holder">
+                    <aura:if isTrue="{!v.infoPopup}">
+                        
+                        <div class="popUp-options slds-col slds-size_1-of-3" data-tab-name="OK" onclick="{!c.handleAccept}" data-id="uitlink_link" data-text="{!'Marketgram popup | OK'}">OK</div>                        
+                        
+                        <aura:set attribute="else">   
+                            <!--middle element-->
+                            <div class="popUp-options slds-col slds-size_1-of-3" data-tab-name="No" onclick="{!c.handleClose}" data-id="uitlink_link" data-text="{!'Marketgram popup | No'}">NO</div>
+                            <!--right element-->
+                            <div class="popUp-options slds-col slds-size_1-of-3" data-tab-name="Yes" onclick="{!c.handleAccept}" data-id="uitlink_link" data-text="{!'Marketgram popup | Yes'}">YES</div>
+                        </aura:set>
+                    </aura:if>
+                </div>
+            </div>
+            <div class="popUp-overlay popUp-visible" aura:id="visibleOverlay"></div>
+            <div class="popUp-overlay popUp-invisible"></div>
+        </aura:if>
+    </div>
+	
+    <aura:if isTrue="{!v.signUp}">
+        <div class="popUp-container-signup">
+        <aura:if isTrue="{!v.displayPopUp}">
+            <div class="popUp-box signup" aura:id="popUpBox">
+                <div class="popUp-title-container">
+                    <i class="ms-icn_questionmark_circle"/>
+                    	<div class="popUp-title mb_8">{!v.title}</div>
+                </div>
+                <div class="popUp-content mb_16">
+                    <div>{!v.content}</div>
+                    <div class="popUp-subTitle">{!v.subTitle}</div>
+                    <div>
+                    <lightning:radioGroup name="radioGroup"
+                                                  aura:id="queryType"
+                                                  options="{! v.QueryTypes }"
+                                                  value="{! v.DefaultType }"
+                                                  type="radio"
+                                                  class="customRadioCls"/>
+                    </div>
+                </div>
+                <div class="slds-grid popUp-options-holder adjustFooter">
+                    
+                    <div class="popUp-options slds-col slds-size_1-of-3" data-tab-name="No" onclick="{!c.handleClose}">NO</div>
+                    
+                    
+                    <div class="popUp-options slds-col slds-size_1-of-3" data-tab-name="Yes" onclick="{!c.handleAcceptSign}">YES</div>
+                </div>
+            </div>
+            <div class="popUp-overlay popUp-visible" aura:id="visibleOverlay"></div>
+            <div class="popUp-overlay popUp-invisible"></div>
+        </aura:if>
+    </div>
+    </aura:if>
+
+    
+</aura:component>

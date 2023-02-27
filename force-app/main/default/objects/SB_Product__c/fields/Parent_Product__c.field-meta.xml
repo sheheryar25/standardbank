@@ -1,0 +1,2610 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Parent_Product__c</fullName>
+    <description>Parent Product</description>
+    <externalId>false</externalId>
+    <label>Parent Product (PP)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Grand_Parent_Product__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Electronic Payment</fullName>
+                <default>false</default>
+                <label>Electronic Payment</label>
+            </value>
+            <value>
+                <fullName>Electronic Collections</fullName>
+                <default>false</default>
+                <label>Electronic Collections</label>
+            </value>
+            <value>
+                <fullName>Deposits</fullName>
+                <default>false</default>
+                <label>Deposits</label>
+            </value>
+            <value>
+                <fullName>Letters of Credit</fullName>
+                <default>false</default>
+                <label>Letters of Credit</label>
+            </value>
+            <value>
+                <fullName>Guarantees</fullName>
+                <default>false</default>
+                <label>Guarantees</label>
+            </value>
+            <value>
+                <fullName>Invoice Financing</fullName>
+                <default>false</default>
+                <label>Invoice Financing</label>
+            </value>
+            <value>
+                <fullName>LC Discounting</fullName>
+                <default>false</default>
+                <label>LC Discounting</label>
+            </value>
+            <value>
+                <fullName>Open Account Finance</fullName>
+                <default>false</default>
+                <label>Open Account Finance</label>
+            </value>
+            <value>
+                <fullName>Account Verification Service (AVS)</fullName>
+                <default>false</default>
+                <label>Account Verification Service (AVS)</label>
+            </value>
+            <value>
+                <fullName>Agricultural Products</fullName>
+                <default>false</default>
+                <label>Agricultural Products</label>
+            </value>
+            <value>
+                <fullName>Airway Releases</fullName>
+                <default>false</default>
+                <label>Airway Releases</label>
+            </value>
+            <value>
+                <fullName>Asset-Backed Commercial Paper (ABCP)</fullName>
+                <default>false</default>
+                <label>Asset-Backed Commercial Paper (ABCP)</label>
+            </value>
+            <value>
+                <fullName>Asset-Backed Securitisation (ABS)</fullName>
+                <default>false</default>
+                <label>Asset-Backed Securitisation (ABS)</label>
+            </value>
+            <value>
+                <fullName>Asset Finance</fullName>
+                <default>false</default>
+                <label>Asset Finance</label>
+            </value>
+            <value>
+                <fullName>Associate Income</fullName>
+                <default>false</default>
+                <label>Associate Income</label>
+            </value>
+            <value>
+                <fullName>ATG</fullName>
+                <default>false</default>
+                <label>ATG</label>
+            </value>
+            <value>
+                <fullName>ATG - Host to Host</fullName>
+                <default>false</default>
+                <label>ATG - Host to Host</label>
+            </value>
+            <value>
+                <fullName>ATG - Online</fullName>
+                <default>false</default>
+                <label>ATG - Online</label>
+            </value>
+            <value>
+                <fullName>Autosafe</fullName>
+                <default>false</default>
+                <label>Autosafe</label>
+            </value>
+            <value>
+                <fullName>Autosafe - With Cash Upload</fullName>
+                <default>false</default>
+                <label>Autosafe - With Cash Upload</label>
+            </value>
+            <value>
+                <fullName>Autosafe - Without Value Hosting / Cash Upload</fullName>
+                <default>false</default>
+                <label>Autosafe - Without Value Hosting / Cash Upload</label>
+            </value>
+            <value>
+                <fullName>Autosafe - With Value Hosting</fullName>
+                <default>false</default>
+                <label>Autosafe - With Value Hosting</label>
+            </value>
+            <value>
+                <fullName>Back-to-Back Guarantee</fullName>
+                <default>false</default>
+                <label>Back-to-Back Guarantee</label>
+            </value>
+            <value>
+                <fullName>Back-to-Back  LC</fullName>
+                <default>false</default>
+                <label>Back-to-Back  LC</label>
+            </value>
+            <value>
+                <fullName>Bank Notes</fullName>
+                <default>false</default>
+                <label>Bank Notes</label>
+            </value>
+            <value>
+                <fullName>Base Metals Futures</fullName>
+                <default>false</default>
+                <label>Base Metals Futures</label>
+            </value>
+            <value>
+                <fullName>Base Metals Options</fullName>
+                <default>false</default>
+                <label>Base Metals Options</label>
+            </value>
+            <value>
+                <fullName>Beyond Payments</fullName>
+                <default>false</default>
+                <label>Beyond Payments</label>
+            </value>
+            <value>
+                <fullName>Bills For Collection</fullName>
+                <default>false</default>
+                <label>Bills For Collection</label>
+            </value>
+            <value>
+                <fullName>Bills of Exchange Negotiated (Clean BE&apos;s)</fullName>
+                <default>false</default>
+                <label>Bills of Exchange Negotiated (Clean BE&apos;s)</label>
+            </value>
+            <value>
+                <fullName>Block Trade</fullName>
+                <default>false</default>
+                <label>Block Trade</label>
+            </value>
+            <value>
+                <fullName>BOL</fullName>
+                <default>false</default>
+                <label>BOL</label>
+            </value>
+            <value>
+                <fullName>BOL - Account Management Option A - fixed monthly fee</fullName>
+                <default>false</default>
+                <label>BOL - Account Management Option A - fixed monthly fee</label>
+            </value>
+            <value>
+                <fullName>BOL - Account management Option B - per transaction fee</fullName>
+                <default>false</default>
+                <label>BOL - Account management Option B - per transaction fee</label>
+            </value>
+            <value>
+                <fullName>Bond Positions</fullName>
+                <default>false</default>
+                <label>Bond Positions</label>
+            </value>
+            <value>
+                <fullName>Bonds</fullName>
+                <default>false</default>
+                <label>Bonds</label>
+            </value>
+            <value>
+                <fullName>Branch Loans</fullName>
+                <default>false</default>
+                <label>Branch Loans</label>
+            </value>
+            <value>
+                <fullName>Branch Transactions</fullName>
+                <default>false</default>
+                <label>Branch Transactions</label>
+            </value>
+            <value>
+                <fullName>Branch Transactions - RRS</fullName>
+                <default>false</default>
+                <label>Branch Transactions - RRS</label>
+            </value>
+            <value>
+                <fullName>Bridge Finance</fullName>
+                <default>false</default>
+                <label>Bridge Finance</label>
+            </value>
+            <value>
+                <fullName>Broker Fees Paid</fullName>
+                <default>false</default>
+                <label>Broker Fees Paid</label>
+            </value>
+            <value>
+                <fullName>BT Letter Of Credit</fullName>
+                <default>false</default>
+                <label>BT Letter Of Credit</label>
+            </value>
+            <value>
+                <fullName>Business Online</fullName>
+                <default>false</default>
+                <label>Business Online</label>
+            </value>
+            <value>
+                <fullName>BV Adjustment</fullName>
+                <default>false</default>
+                <label>BV Adjustment</label>
+            </value>
+            <value>
+                <fullName>C/A credit balance -deposits</fullName>
+                <default>false</default>
+                <label>C/A credit balance -deposits</label>
+            </value>
+            <value>
+                <fullName>C/A debit balance o/d</fullName>
+                <default>false</default>
+                <label>C/A debit balance o/d</label>
+            </value>
+            <value>
+                <fullName>CA CR</fullName>
+                <default>false</default>
+                <label>CA CR</label>
+            </value>
+            <value>
+                <fullName>Call Loans</fullName>
+                <default>false</default>
+                <label>Call Loans</label>
+            </value>
+            <value>
+                <fullName>Cash</fullName>
+                <default>false</default>
+                <label>Cash</label>
+            </value>
+            <value>
+                <fullName>Cash Deposit</fullName>
+                <default>false</default>
+                <label>Cash Deposit</label>
+            </value>
+            <value>
+                <fullName>Cash Deposit - Branch</fullName>
+                <default>false</default>
+                <label>Cash Deposit - Branch</label>
+            </value>
+            <value>
+                <fullName>Cash Deposit - Cash Centre</fullName>
+                <default>false</default>
+                <label>Cash Deposit - Cash Centre</label>
+            </value>
+            <value>
+                <fullName>Cash Deposit Fees</fullName>
+                <default>false</default>
+                <label>Cash Deposit Fees</label>
+            </value>
+            <value>
+                <fullName>Cashflow</fullName>
+                <default>false</default>
+                <label>Cashflow</label>
+            </value>
+            <value>
+                <fullName>Cashman</fullName>
+                <default>false</default>
+                <label>Cashman</label>
+            </value>
+            <value>
+                <fullName>Cashman Accounts</fullName>
+                <default>false</default>
+                <label>Cashman Accounts</label>
+            </value>
+            <value>
+                <fullName>Cash Management</fullName>
+                <default>false</default>
+                <label>Cash Management</label>
+            </value>
+            <value>
+                <fullName>Cashman credit balance</fullName>
+                <default>false</default>
+                <label>Cashman credit balance</label>
+            </value>
+            <value>
+                <fullName>Cashman debit balance  o/d</fullName>
+                <default>false</default>
+                <label>Cashman debit balance  o/d</label>
+            </value>
+            <value>
+                <fullName>Cashman  Groups</fullName>
+                <default>false</default>
+                <label>Cashman  Groups</label>
+            </value>
+            <value>
+                <fullName>Cash Withdrawal</fullName>
+                <default>false</default>
+                <label>Cash Withdrawal</label>
+            </value>
+            <value>
+                <fullName>CDI</fullName>
+                <default>false</default>
+                <label>CDI</label>
+            </value>
+            <value>
+                <fullName>CDI - Agent Bank Accounts</fullName>
+                <default>false</default>
+                <label>CDI - Agent Bank Accounts</label>
+            </value>
+            <value>
+                <fullName>CDI - Standard Bank Accounts</fullName>
+                <default>false</default>
+                <label>CDI - Standard Bank Accounts</label>
+            </value>
+            <value>
+                <fullName>CFC Accounts</fullName>
+                <default>false</default>
+                <label>CFC Accounts</label>
+            </value>
+            <value>
+                <fullName>Cheque encashment fees</fullName>
+                <default>false</default>
+                <label>Cheque encashment fees</label>
+            </value>
+            <value>
+                <fullName>Chrome</fullName>
+                <default>false</default>
+                <label>Chrome</label>
+            </value>
+            <value>
+                <fullName>CIT Management</fullName>
+                <default>false</default>
+                <label>CIT Management</label>
+            </value>
+            <value>
+                <fullName>Coke</fullName>
+                <default>false</default>
+                <label>Coke</label>
+            </value>
+            <value>
+                <fullName>Coking Coal</fullName>
+                <default>false</default>
+                <label>Coking Coal</label>
+            </value>
+            <value>
+                <fullName>Collections</fullName>
+                <default>false</default>
+                <label>Collections</label>
+            </value>
+            <value>
+                <fullName>Commercial Mortgage-Backed Securitisation (CMBS)</fullName>
+                <default>false</default>
+                <label>Commercial Mortgage-Backed Securitisation (CMBS)</label>
+            </value>
+            <value>
+                <fullName>Commercial Property Finance</fullName>
+                <default>false</default>
+                <label>Commercial Property Finance</label>
+            </value>
+            <value>
+                <fullName>Contingent Loans</fullName>
+                <default>false</default>
+                <label>Contingent Loans</label>
+            </value>
+            <value>
+                <fullName>Convertible Bond</fullName>
+                <default>false</default>
+                <label>Convertible Bond</label>
+            </value>
+            <value>
+                <fullName>Corporate Card</fullName>
+                <default>false</default>
+                <label>Corporate Card</label>
+            </value>
+            <value>
+                <fullName>Credit Derivatives</fullName>
+                <default>false</default>
+                <label>Credit Derivatives</label>
+            </value>
+            <value>
+                <fullName>Credit interest group (CMCR)</fullName>
+                <default>false</default>
+                <label>Credit interest group (CMCR)</label>
+            </value>
+            <value>
+                <fullName>Current Account</fullName>
+                <default>false</default>
+                <label>Current Account</label>
+            </value>
+            <value>
+                <fullName>Current Account (Not Linked to Cashman)</fullName>
+                <default>false</default>
+                <label>Current Account (Not Linked to Cashman)</label>
+            </value>
+            <value>
+                <fullName>Current Accounts</fullName>
+                <default>false</default>
+                <label>Current Accounts</label>
+            </value>
+            <value>
+                <fullName>Custody</fullName>
+                <default>false</default>
+                <label>Custody</label>
+            </value>
+            <value>
+                <fullName>DCM Bonds</fullName>
+                <default>false</default>
+                <label>DCM Bonds</label>
+            </value>
+            <value>
+                <fullName>Debt Advisory Services</fullName>
+                <default>false</default>
+                <label>Debt Advisory Services</label>
+            </value>
+            <value>
+                <fullName>Debtors Finance</fullName>
+                <default>false</default>
+                <label>Debtors Finance</label>
+            </value>
+            <value>
+                <fullName>Delta One Derivatives</fullName>
+                <default>false</default>
+                <label>Delta One Derivatives</label>
+            </value>
+            <value>
+                <fullName>Deposits Overnight</fullName>
+                <default>false</default>
+                <label>Deposits Overnight</label>
+            </value>
+            <value>
+                <fullName>Deposits Term</fullName>
+                <default>false</default>
+                <label>Deposits Term</label>
+            </value>
+            <value>
+                <fullName>Derivative / Other Securitisation</fullName>
+                <default>false</default>
+                <label>Derivative / Other Securitisation</label>
+            </value>
+            <value>
+                <fullName>Development Funding</fullName>
+                <default>false</default>
+                <label>Development Funding</label>
+            </value>
+            <value>
+                <fullName>Discount LC&apos;s</fullName>
+                <default>false</default>
+                <label>Discount LC&apos;s</label>
+            </value>
+            <value>
+                <fullName>Discretionary</fullName>
+                <default>false</default>
+                <label>Discretionary</label>
+            </value>
+            <value>
+                <fullName>Disposal</fullName>
+                <default>false</default>
+                <label>Disposal</label>
+            </value>
+            <value>
+                <fullName>Domestic and Regional Custody</fullName>
+                <default>false</default>
+                <label>Domestic and Regional Custody</label>
+            </value>
+            <value>
+                <fullName>Domestic Banking - Host to Host</fullName>
+                <default>false</default>
+                <label>Domestic Banking - Host to Host</label>
+            </value>
+            <value>
+                <fullName>Domestic Banking - Online</fullName>
+                <default>false</default>
+                <label>Domestic Banking - Online</label>
+            </value>
+            <value>
+                <fullName>Domestic Custody</fullName>
+                <default>false</default>
+                <label>Domestic Custody</label>
+            </value>
+            <value>
+                <fullName>Drafts</fullName>
+                <default>false</default>
+                <label>Drafts</label>
+            </value>
+            <value>
+                <fullName>eChannels</fullName>
+                <default>false</default>
+                <label>eChannels</label>
+            </value>
+            <value>
+                <fullName>EFT</fullName>
+                <default>false</default>
+                <label>EFT</label>
+            </value>
+            <value>
+                <fullName>EFTS ad-hoc</fullName>
+                <default>false</default>
+                <label>EFTS ad-hoc</label>
+            </value>
+            <value>
+                <fullName>EFTS dated transactions</fullName>
+                <default>false</default>
+                <label>EFTS dated transactions</label>
+            </value>
+            <value>
+                <fullName>EFTS next pay day service</fullName>
+                <default>false</default>
+                <label>EFTS next pay day service</label>
+            </value>
+            <value>
+                <fullName>EFTS same day payment service</fullName>
+                <default>false</default>
+                <label>EFTS same day payment service</label>
+            </value>
+            <value>
+                <fullName>Energy</fullName>
+                <default>false</default>
+                <label>Energy</label>
+            </value>
+            <value>
+                <fullName>Energy - Carbon</fullName>
+                <default>false</default>
+                <label>Energy - Carbon</label>
+            </value>
+            <value>
+                <fullName>E-Procurement</fullName>
+                <default>false</default>
+                <label>E-Procurement</label>
+            </value>
+            <value>
+                <fullName>Equities</fullName>
+                <default>false</default>
+                <label>Equities</label>
+            </value>
+            <value>
+                <fullName>Equity Deposit  Term</fullName>
+                <default>false</default>
+                <label>Equity Deposit  Term</label>
+            </value>
+            <value>
+                <fullName>Equity Linear Instruments</fullName>
+                <default>false</default>
+                <label>Equity Linear Instruments</label>
+            </value>
+            <value>
+                <fullName>Equity Loans</fullName>
+                <default>false</default>
+                <label>Equity Loans</label>
+            </value>
+            <value>
+                <fullName>Equity Options</fullName>
+                <default>false</default>
+                <label>Equity Options</label>
+            </value>
+            <value>
+                <fullName>Exotic Equity Options</fullName>
+                <default>false</default>
+                <label>Exotic Equity Options</label>
+            </value>
+            <value>
+                <fullName>Export LC&apos;s</fullName>
+                <default>false</default>
+                <label>Export LC&apos;s</label>
+            </value>
+            <value>
+                <fullName>Factors</fullName>
+                <default>false</default>
+                <label>Factors</label>
+            </value>
+            <value>
+                <fullName>FEC&apos;s</fullName>
+                <default>false</default>
+                <label>FEC&apos;s</label>
+            </value>
+            <value>
+                <fullName>Fees ADR&apos;s</fullName>
+                <default>false</default>
+                <label>Fees ADR&apos;s</label>
+            </value>
+            <value>
+                <fullName>Fees Advisory</fullName>
+                <default>false</default>
+                <label>Fees Advisory</label>
+            </value>
+            <value>
+                <fullName>Fees Commission</fullName>
+                <default>false</default>
+                <label>Fees Commission</label>
+            </value>
+            <value>
+                <fullName>Fees Domestic Custody</fullName>
+                <default>false</default>
+                <label>Fees Domestic Custody</label>
+            </value>
+            <value>
+                <fullName>Fees Exotics</fullName>
+                <default>false</default>
+                <label>Fees Exotics</label>
+            </value>
+            <value>
+                <fullName>Fees Futures Clearing</fullName>
+                <default>false</default>
+                <label>Fees Futures Clearing</label>
+            </value>
+            <value>
+                <fullName>Fees Global Custody</fullName>
+                <default>false</default>
+                <label>Fees Global Custody</label>
+            </value>
+            <value>
+                <fullName>Fees Investment Administration</fullName>
+                <default>false</default>
+                <label>Fees Investment Administration</label>
+            </value>
+            <value>
+                <fullName>Fees Securities Lending</fullName>
+                <default>false</default>
+                <label>Fees Securities Lending</label>
+            </value>
+            <value>
+                <fullName>Fees Structuring</fullName>
+                <default>false</default>
+                <label>Fees Structuring</label>
+            </value>
+            <value>
+                <fullName>Fees Transactional</fullName>
+                <default>false</default>
+                <label>Fees Transactional</label>
+            </value>
+            <value>
+                <fullName>Fees Trustee Services</fullName>
+                <default>false</default>
+                <label>Fees Trustee Services</label>
+            </value>
+            <value>
+                <fullName>Fleet</fullName>
+                <default>false</default>
+                <label>Fleet</label>
+            </value>
+            <value>
+                <fullName>Foreign Bills for Collection Inwards (Imports)</fullName>
+                <default>false</default>
+                <label>Foreign Bills for Collection Inwards (Imports)</label>
+            </value>
+            <value>
+                <fullName>Foreign Bills for Collection Outwards (Exports)</fullName>
+                <default>false</default>
+                <label>Foreign Bills for Collection Outwards (Exports)</label>
+            </value>
+            <value>
+                <fullName>Foreign Cheques</fullName>
+                <default>false</default>
+                <label>Foreign Cheques</label>
+            </value>
+            <value>
+                <fullName>Foreign Currency Clearing</fullName>
+                <default>false</default>
+                <label>Foreign Currency Clearing</label>
+            </value>
+            <value>
+                <fullName>Foreign Finance</fullName>
+                <default>false</default>
+                <label>Foreign Finance</label>
+            </value>
+            <value>
+                <fullName>Foreign Notes</fullName>
+                <default>false</default>
+                <label>Foreign Notes</label>
+            </value>
+            <value>
+                <fullName>Forex</fullName>
+                <default>false</default>
+                <label>Forex</label>
+            </value>
+            <value>
+                <fullName>Forward Exchange Contract</fullName>
+                <default>false</default>
+                <label>Forward Exchange Contract</label>
+            </value>
+            <value>
+                <fullName>FRAS</fullName>
+                <default>false</default>
+                <label>FRAS</label>
+            </value>
+            <value>
+                <fullName>Funding Associate Income</fullName>
+                <default>false</default>
+                <label>Funding Associate Income</label>
+            </value>
+            <value>
+                <fullName>Funding Investment Income</fullName>
+                <default>false</default>
+                <label>Funding Investment Income</label>
+            </value>
+            <value>
+                <fullName>Futures Clearing</fullName>
+                <default>false</default>
+                <label>Futures Clearing</label>
+            </value>
+            <value>
+                <fullName>FX</fullName>
+                <default>false</default>
+                <label>FX</label>
+            </value>
+            <value>
+                <fullName>FX Forwards</fullName>
+                <default>false</default>
+                <label>FX Forwards</label>
+            </value>
+            <value>
+                <fullName>FX Non Delivarable Forwards(NDFS)</fullName>
+                <default>false</default>
+                <label>FX Non Delivarable Forwards(NDFS)</label>
+            </value>
+            <value>
+                <fullName>FX Options</fullName>
+                <default>false</default>
+                <label>FX Options</label>
+            </value>
+            <value>
+                <fullName>FX Spot</fullName>
+                <default>false</default>
+                <label>FX Spot</label>
+            </value>
+            <value>
+                <fullName>FX Swaps</fullName>
+                <default>false</default>
+                <label>FX Swaps</label>
+            </value>
+            <value>
+                <fullName>Gateway Payments</fullName>
+                <default>false</default>
+                <label>Gateway Payments</label>
+            </value>
+            <value>
+                <fullName>General Purpose Entries</fullName>
+                <default>false</default>
+                <label>General Purpose Entries</label>
+            </value>
+            <value>
+                <fullName>Gross balance group (CMPS)</fullName>
+                <default>false</default>
+                <label>Gross balance group (CMPS)</label>
+            </value>
+            <value>
+                <fullName>GSTBF</fullName>
+                <default>false</default>
+                <label>GSTBF</label>
+            </value>
+            <value>
+                <fullName>Guarantee</fullName>
+                <default>false</default>
+                <label>Guarantee</label>
+            </value>
+            <value>
+                <fullName>Host To Host</fullName>
+                <default>false</default>
+                <label>Host To Host</label>
+            </value>
+            <value>
+                <fullName>Host to Host - Mainframe</fullName>
+                <default>false</default>
+                <label>Host to Host - Mainframe</label>
+            </value>
+            <value>
+                <fullName>Host to Host - Midrange</fullName>
+                <default>false</default>
+                <label>Host to Host - Midrange</label>
+            </value>
+            <value>
+                <fullName>Host to Host - Windows</fullName>
+                <default>false</default>
+                <label>Host to Host - Windows</label>
+            </value>
+            <value>
+                <fullName>HTH</fullName>
+                <default>false</default>
+                <label>HTH</label>
+            </value>
+            <value>
+                <fullName>Hybrids</fullName>
+                <default>false</default>
+                <label>Hybrids</label>
+            </value>
+            <value>
+                <fullName>ICBC HTH Bank Connect</fullName>
+                <default>false</default>
+                <label>ICBC HTH Bank Connect</label>
+            </value>
+            <value>
+                <fullName>Import LC&apos;s</fullName>
+                <default>false</default>
+                <label>Import LC&apos;s</label>
+            </value>
+            <value>
+                <fullName>Information group (CMIN)</fullName>
+                <default>false</default>
+                <label>Information group (CMIN)</label>
+            </value>
+            <value>
+                <fullName>Initial Public Offering (IPO)</fullName>
+                <default>false</default>
+                <label>Initial Public Offering (IPO)</label>
+            </value>
+            <value>
+                <fullName>Insurance</fullName>
+                <default>false</default>
+                <label>Insurance</label>
+            </value>
+            <value>
+                <fullName>Interest Rate Options</fullName>
+                <default>false</default>
+                <label>Interest Rate Options</label>
+            </value>
+            <value>
+                <fullName>Interest Rate Swaps</fullName>
+                <default>false</default>
+                <label>Interest Rate Swaps</label>
+            </value>
+            <value>
+                <fullName>International Banking</fullName>
+                <default>false</default>
+                <label>International Banking</label>
+            </value>
+            <value>
+                <fullName>International Banking - Host to Host</fullName>
+                <default>false</default>
+                <label>International Banking - Host to Host</label>
+            </value>
+            <value>
+                <fullName>International Banking - Online</fullName>
+                <default>false</default>
+                <label>International Banking - Online</label>
+            </value>
+            <value>
+                <fullName>Investment Administration</fullName>
+                <default>false</default>
+                <label>Investment Administration</label>
+            </value>
+            <value>
+                <fullName>Investments</fullName>
+                <default>false</default>
+                <label>Investments</label>
+            </value>
+            <value>
+                <fullName>Investments (CIB)</fullName>
+                <default>false</default>
+                <label>Investments (CIB)</label>
+            </value>
+            <value>
+                <fullName>Investments - Call</fullName>
+                <default>false</default>
+                <label>Investments - Call</label>
+            </value>
+            <value>
+                <fullName>Investments - Fixed</fullName>
+                <default>false</default>
+                <label>Investments - Fixed</label>
+            </value>
+            <value>
+                <fullName>Investments - Notice</fullName>
+                <default>false</default>
+                <label>Investments - Notice</label>
+            </value>
+            <value>
+                <fullName>Inward Foreign Guarantee</fullName>
+                <default>false</default>
+                <label>Inward Foreign Guarantee</label>
+            </value>
+            <value>
+                <fullName>IRD Caps &amp; Floors</fullName>
+                <default>false</default>
+                <label>IRD Caps &amp; Floors</label>
+            </value>
+            <value>
+                <fullName>IRD Options</fullName>
+                <default>false</default>
+                <label>IRD Options</label>
+            </value>
+            <value>
+                <fullName>IRD Structured Products</fullName>
+                <default>false</default>
+                <label>IRD Structured Products</label>
+            </value>
+            <value>
+                <fullName>Iron Ore</fullName>
+                <default>false</default>
+                <label>Iron Ore</label>
+            </value>
+            <value>
+                <fullName>Irrevocable Reimbursement Undertaking</fullName>
+                <default>false</default>
+                <label>Irrevocable Reimbursement Undertaking</label>
+            </value>
+            <value>
+                <fullName>Issuer Services</fullName>
+                <default>false</default>
+                <label>Issuer Services</label>
+            </value>
+            <value>
+                <fullName>i-Trade</fullName>
+                <default>false</default>
+                <label>i-Trade</label>
+            </value>
+            <value>
+                <fullName>Junior Preference Shares</fullName>
+                <default>false</default>
+                <label>Junior Preference Shares</label>
+            </value>
+            <value>
+                <fullName>LC</fullName>
+                <default>false</default>
+                <label>LC</label>
+            </value>
+            <value>
+                <fullName>Lending - Conversion from Development (REF)</fullName>
+                <default>false</default>
+                <label>Lending - Conversion from Development (REF)</label>
+            </value>
+            <value>
+                <fullName>Lending Guarantee</fullName>
+                <default>false</default>
+                <label>Lending Guarantee</label>
+            </value>
+            <value>
+                <fullName>Letter of Credit</fullName>
+                <default>false</default>
+                <label>Letter of Credit</label>
+            </value>
+            <value>
+                <fullName>Listing</fullName>
+                <default>false</default>
+                <label>Listing</label>
+            </value>
+            <value>
+                <fullName>Loans</fullName>
+                <default>false</default>
+                <label>Loans</label>
+            </value>
+            <value>
+                <fullName>Loans Overnight</fullName>
+                <default>false</default>
+                <label>Loans Overnight</label>
+            </value>
+            <value>
+                <fullName>Loans Term</fullName>
+                <default>false</default>
+                <label>Loans Term</label>
+            </value>
+            <value>
+                <fullName>Loans Term Funding</fullName>
+                <default>false</default>
+                <label>Loans Term Funding</label>
+            </value>
+            <value>
+                <fullName>Local Guarantee</fullName>
+                <default>false</default>
+                <label>Local Guarantee</label>
+            </value>
+            <value>
+                <fullName>Manganese</fullName>
+                <default>false</default>
+                <label>Manganese</label>
+            </value>
+            <value>
+                <fullName>Margin Finance</fullName>
+                <default>false</default>
+                <label>Margin Finance</label>
+            </value>
+            <value>
+                <fullName>Merchant Acquiring</fullName>
+                <default>false</default>
+                <label>Merchant</label>
+            </value>
+            <value>
+                <fullName>Messaging</fullName>
+                <default>false</default>
+                <label>Messaging</label>
+            </value>
+            <value>
+                <fullName>Mezzanine Debt</fullName>
+                <default>false</default>
+                <label>Mezzanine Debt</label>
+            </value>
+            <value>
+                <fullName>Milestone</fullName>
+                <default>false</default>
+                <label>Milestone</label>
+            </value>
+            <value>
+                <fullName>Mobile Money</fullName>
+                <default>false</default>
+                <label>Mobile Money</label>
+            </value>
+            <value>
+                <fullName>Monthly fees</fullName>
+                <default>false</default>
+                <label>Monthly fees</label>
+            </value>
+            <value>
+                <fullName>MTL</fullName>
+                <default>false</default>
+                <label>MTL</label>
+            </value>
+            <value>
+                <fullName>NAEDOS</fullName>
+                <default>false</default>
+                <label>NAEDOS</label>
+            </value>
+            <value>
+                <fullName>NCD&apos;S</fullName>
+                <default>false</default>
+                <label>NCD&apos;S</label>
+            </value>
+            <value>
+                <fullName>Non-authenticated early debit order system</fullName>
+                <default>false</default>
+                <label>Non-authenticated early debit order system</label>
+            </value>
+            <value>
+                <fullName>Onsite Cash Centre</fullName>
+                <default>false</default>
+                <label>Onsite Cash Centre</label>
+            </value>
+            <value>
+                <fullName>Ordinary Shares</fullName>
+                <default>false</default>
+                <label>Ordinary Shares</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Outward Foreign Guarantee</fullName>
+                <default>false</default>
+                <label>Outward Foreign Guarantee</label>
+            </value>
+            <value>
+                <fullName>Overdraft</fullName>
+                <default>false</default>
+                <label>Overdraft</label>
+            </value>
+            <value>
+                <fullName>Payment Exchange</fullName>
+                <default>false</default>
+                <label>Payment Exchange</label>
+            </value>
+            <value>
+                <fullName>Payments and collections</fullName>
+                <default>false</default>
+                <label>Payments and collections</label>
+            </value>
+            <value>
+                <fullName>Performance Guarantee</fullName>
+                <default>false</default>
+                <label>Performance Guarantee</label>
+            </value>
+            <value>
+                <fullName>Placement</fullName>
+                <default>false</default>
+                <label>Placement</label>
+            </value>
+            <value>
+                <fullName>Platform Services</fullName>
+                <default>false</default>
+                <label>Platform Services</label>
+            </value>
+            <value>
+                <fullName>Precious Metals Options</fullName>
+                <default>false</default>
+                <label>Precious Metals Options</label>
+            </value>
+            <value>
+                <fullName>Precious Metals Spot and Forward</fullName>
+                <default>false</default>
+                <label>Precious Metals Spot and Forward</label>
+            </value>
+            <value>
+                <fullName>Preference Share</fullName>
+                <default>false</default>
+                <label>Preference Share</label>
+            </value>
+            <value>
+                <fullName>Project Financing</fullName>
+                <default>false</default>
+                <label>Project Financing</label>
+            </value>
+            <value>
+                <fullName>Real-Time Clearing (RTC)</fullName>
+                <default>false</default>
+                <label>Real-Time Clearing (RTC)</label>
+            </value>
+            <value>
+                <fullName>Receivables Discounting</fullName>
+                <default>false</default>
+                <label>Receivables Discounting</label>
+            </value>
+            <value>
+                <fullName>Recon: Onsite Cash Management</fullName>
+                <default>false</default>
+                <label>Recon: Onsite Cash Management</label>
+            </value>
+            <value>
+                <fullName>Refinance</fullName>
+                <default>false</default>
+                <label>Refinance</label>
+            </value>
+            <value>
+                <fullName>Regional Custody</fullName>
+                <default>false</default>
+                <label>Regional Custody</label>
+            </value>
+            <value>
+                <fullName>Repos &amp; Fwd Sales</fullName>
+                <default>false</default>
+                <label>Repos &amp; Fwd Sales</label>
+            </value>
+            <value>
+                <fullName>Reserve Based Lending</fullName>
+                <default>false</default>
+                <label>Reserve Based Lending</label>
+            </value>
+            <value>
+                <fullName>Residential Mortgage-Backed Securitisation (RMBS)</fullName>
+                <default>false</default>
+                <label>Residential Mortgage-Backed Securitisation (RMBS)</label>
+            </value>
+            <value>
+                <fullName>Retail Clearing</fullName>
+                <default>false</default>
+                <label>Retail Clearing</label>
+            </value>
+            <value>
+                <fullName>Retainer</fullName>
+                <default>false</default>
+                <label>Retainer</label>
+            </value>
+            <value>
+                <fullName>Revolver Loan</fullName>
+                <default>false</default>
+                <label>Revolver Loan</label>
+            </value>
+            <value>
+                <fullName>Revolving Loans</fullName>
+                <default>false</default>
+                <label>Revolving Loans</label>
+            </value>
+            <value>
+                <fullName>Rights Offer</fullName>
+                <default>false</default>
+                <label>Rights Offer</label>
+            </value>
+            <value>
+                <fullName>Risk Participation</fullName>
+                <default>false</default>
+                <label>Risk Participation</label>
+            </value>
+            <value>
+                <fullName>RRS</fullName>
+                <default>false</default>
+                <label>RRS</label>
+            </value>
+            <value>
+                <fullName>Savings</fullName>
+                <default>false</default>
+                <label>Savings</label>
+            </value>
+            <value>
+                <fullName>Securities Financing</fullName>
+                <default>false</default>
+                <label>Securities Financing</label>
+            </value>
+            <value>
+                <fullName>Securities Lending</fullName>
+                <default>false</default>
+                <label>Securities Lending</label>
+            </value>
+            <value>
+                <fullName>Senior Preference Shares</fullName>
+                <default>false</default>
+                <label>Senior Preference Shares</label>
+            </value>
+            <value>
+                <fullName>Service Fees</fullName>
+                <default>false</default>
+                <label>Service Fees</label>
+            </value>
+            <value>
+                <fullName>Shareholder Loans</fullName>
+                <default>false</default>
+                <label>Shareholder Loans</label>
+            </value>
+            <value>
+                <fullName>Share Investment</fullName>
+                <default>false</default>
+                <label>Share Investment</label>
+            </value>
+            <value>
+                <fullName>Shipping Guarantee</fullName>
+                <default>false</default>
+                <label>Shipping Guarantee</label>
+            </value>
+            <value>
+                <fullName>Signed set-off group (CMSS)</fullName>
+                <default>false</default>
+                <label>Signed set-off group (CMSS)</label>
+            </value>
+            <value>
+                <fullName>Standby LC</fullName>
+                <default>false</default>
+                <label>Standby LC</label>
+            </value>
+            <value>
+                <fullName>Steel Products</fullName>
+                <default>false</default>
+                <label>Steel Products</label>
+            </value>
+            <value>
+                <fullName>Structured Finance</fullName>
+                <default>false</default>
+                <label>Structured Finance</label>
+            </value>
+            <value>
+                <fullName>Structured Notes</fullName>
+                <default>false</default>
+                <label>Structured Notes</label>
+            </value>
+            <value>
+                <fullName>Structured Products</fullName>
+                <default>false</default>
+                <label>Structured Products</label>
+            </value>
+            <value>
+                <fullName>Structured Trade Finance</fullName>
+                <default>false</default>
+                <label>Structured Trade Finance</label>
+            </value>
+            <value>
+                <fullName>Success</fullName>
+                <default>false</default>
+                <label>Success</label>
+            </value>
+            <value>
+                <fullName>Supply Chain Finance (In Pilot)</fullName>
+                <default>false</default>
+                <label>Supply Chain Finance (In Pilot)</label>
+            </value>
+            <value>
+                <fullName>Sweeping</fullName>
+                <default>false</default>
+                <label>Sweeping</label>
+            </value>
+            <value>
+                <fullName>SWIFT</fullName>
+                <default>false</default>
+                <label>SWIFT</label>
+            </value>
+            <value>
+                <fullName>Syndications and New Issues</fullName>
+                <default>false</default>
+                <label>Syndications and New Issues</label>
+            </value>
+            <value>
+                <fullName>TBA</fullName>
+                <default>false</default>
+                <label>TBA</label>
+            </value>
+            <value>
+                <fullName>Term</fullName>
+                <default>false</default>
+                <label>Term</label>
+            </value>
+            <value>
+                <fullName>Term Lending</fullName>
+                <default>false</default>
+                <label>Term Lending</label>
+            </value>
+            <value>
+                <fullName>Term Loans</fullName>
+                <default>false</default>
+                <label>Term Loans</label>
+            </value>
+            <value>
+                <fullName>Thermal Coal</fullName>
+                <default>false</default>
+                <label>Thermal Coal</label>
+            </value>
+            <value>
+                <fullName>Third Party Fund Administration (TPFA)</fullName>
+                <default>false</default>
+                <label>Third Party Fund Administration (TPFA)</label>
+            </value>
+            <value>
+                <fullName>Till by till</fullName>
+                <default>false</default>
+                <label>Till by till</label>
+            </value>
+            <value>
+                <fullName>Total Return Swaps</fullName>
+                <default>false</default>
+                <label>Total Return Swaps</label>
+            </value>
+            <value>
+                <fullName>TPFA</fullName>
+                <default>false</default>
+                <label>TPFA</label>
+            </value>
+            <value>
+                <fullName>Trade</fullName>
+                <default>false</default>
+                <label>Trade</label>
+            </value>
+            <value>
+                <fullName>Trade Finance Loan</fullName>
+                <default>false</default>
+                <label>Trade Finance Loan</label>
+            </value>
+            <value>
+                <fullName>Transaction Exchange (In Pilot)</fullName>
+                <default>false</default>
+                <label>Transaction Exchange (In Pilot)</label>
+            </value>
+            <value>
+                <fullName>Treasury management group (CMTM)</fullName>
+                <default>false</default>
+                <label>Treasury management group (CMTM)</label>
+            </value>
+            <value>
+                <fullName>Treasury Management Services (TMS)</fullName>
+                <default>false</default>
+                <label>Treasury Management Services (TMS)</label>
+            </value>
+            <value>
+                <fullName>Trustee Services</fullName>
+                <default>false</default>
+                <label>Trustee Services</label>
+            </value>
+            <value>
+                <fullName>TTs</fullName>
+                <default>false</default>
+                <label>TTs</label>
+            </value>
+            <value>
+                <fullName>TTs (Manual)</fullName>
+                <default>false</default>
+                <label>TTs (Manual)</label>
+            </value>
+            <value>
+                <fullName>Underwriting</fullName>
+                <default>false</default>
+                <label>Underwriting</label>
+            </value>
+            <value>
+                <fullName>Unwind Structure</fullName>
+                <default>false</default>
+                <label>Unwind Structure</label>
+            </value>
+            <value>
+                <fullName>VAF</fullName>
+                <default>false</default>
+                <label>VAF</label>
+            </value>
+            <value>
+                <fullName>Value Hosting</fullName>
+                <default>false</default>
+                <label>Value Hosting</label>
+            </value>
+            <value>
+                <fullName>Values to be added by SB</fullName>
+                <default>false</default>
+                <label>Values to be added by SB</label>
+            </value>
+            <value>
+                <fullName>Vanilla Equity Options</fullName>
+                <default>false</default>
+                <label>Vanilla Equity Options</label>
+            </value>
+            <value>
+                <fullName>VAT Short Term Facility</fullName>
+                <default>false</default>
+                <label>VAT Short Term Facility</label>
+            </value>
+            <value>
+                <fullName>Vehicle and Asset Finance</fullName>
+                <default>false</default>
+                <label>Vehicle and Asset Finance</label>
+            </value>
+            <value>
+                <fullName>Vostro Account</fullName>
+                <default>false</default>
+                <label>Vostro Account</label>
+            </value>
+            <value>
+                <fullName>Wealth</fullName>
+                <default>false</default>
+                <label>Wealth</label>
+            </value>
+            <value>
+                <fullName>Working Capital</fullName>
+                <default>false</default>
+                <label>Working Capital</label>
+            </value>
+            <value>
+                <fullName>ZAR Margin</fullName>
+                <default>false</default>
+                <label>ZAR Margin</label>
+            </value>
+            <value>
+                <fullName>Physical Payments &amp;amp; Collections</fullName>
+                <default>false</default>
+                <label>Physical Payments &amp; Collections</label>
+            </value>
+            <value>
+                <fullName>Instalment Sale VAF</fullName>
+                <default>false</default>
+                <label>Instalment Sale VAF</label>
+            </value>
+            <value>
+                <fullName>Lease Capital VAF</fullName>
+                <default>false</default>
+                <label>Lease Capital VAF</label>
+            </value>
+            <value>
+                <fullName>Rental Capital VAF</fullName>
+                <default>false</default>
+                <label>Rental Capital VAF</label>
+            </value>
+            <value>
+                <fullName>Other Debtors VAF</fullName>
+                <default>false</default>
+                <label>Other Debtors VAF</label>
+            </value>
+            <value>
+                <fullName>Merges and Acquisitions</fullName>
+                <default>false</default>
+                <label>Merges and Acquisitions</label>
+            </value>
+            <value>
+                <fullName>Financial Institution Clearing</fullName>
+                <default>false</default>
+                <label>Financial Institution Clearing</label>
+            </value>
+            <value>
+                <fullName>Call Loan</fullName>
+                <default>false</default>
+                <label>Call Loan</label>
+            </value>
+            <value>
+                <fullName>Short-term Loan</fullName>
+                <default>false</default>
+                <label>Short-term Loan</label>
+            </value>
+            <value>
+                <fullName>Agriculture</fullName>
+                <default>false</default>
+                <label>Agriculture</label>
+            </value>
+            <value>
+                <fullName>Aviation</fullName>
+                <default>false</default>
+                <label>Aviation</label>
+            </value>
+            <value>
+                <fullName>Commercial Property</fullName>
+                <default>false</default>
+                <label>Commercial Property</label>
+            </value>
+            <value>
+                <fullName>Construction &amp; Engineering</fullName>
+                <default>false</default>
+                <label>Construction &amp; Engineering</label>
+            </value>
+            <value>
+                <fullName>General</fullName>
+                <default>false</default>
+                <label>General</label>
+            </value>
+            <value>
+                <fullName>Health</fullName>
+                <default>false</default>
+                <label>Health</label>
+            </value>
+            <value>
+                <fullName>Life</fullName>
+                <default>false</default>
+                <label>Life</label>
+            </value>
+            <value>
+                <fullName>Marine</fullName>
+                <default>false</default>
+                <label>Marine</label>
+            </value>
+            <value>
+                <fullName>Motor vehicles and fleet</fullName>
+                <default>false</default>
+                <label>Motor vehicles and fleet</label>
+            </value>
+            <value>
+                <fullName>Multiperil or stand alone</fullName>
+                <default>false</default>
+                <label>Multiperil or stand alone</label>
+            </value>
+            <value>
+                <fullName>Specialist</fullName>
+                <default>false</default>
+                <label>Specialist</label>
+            </value>
+            <value>
+                <fullName>VAF Motor</fullName>
+                <default>false</default>
+                <label>VAF Motor</label>
+            </value>
+            <value>
+                <fullName>VAF Other Assets</fullName>
+                <default>false</default>
+                <label>VAF Other Assets</label>
+            </value>
+            <value>
+                <fullName>API Solutions</fullName>
+                <default>false</default>
+                <label>API Solutions</label>
+            </value>
+            <value>
+                <fullName>Everyday Banking</fullName>
+                <default>false</default>
+                <label>Everyday Banking</label>
+            </value>
+            <value>
+                <fullName>Value Added Services (VAS)</fullName>
+                <default>false</default>
+                <label>Value Added Services (VAS)</label>
+            </value>
+            <value>
+                <fullName>SBFC</fullName>
+                <default>false</default>
+                <label>SBFC</label>
+            </value>
+            <value>
+                <fullName>Fiduciary</fullName>
+                <default>false</default>
+                <label>Fiduciary</label>
+            </value>
+            <value>
+                <fullName>Card</fullName>
+                <default>false</default>
+                <label>Card</label>
+            </value>
+            <value>
+                <fullName>Payments</fullName>
+                <default>false</default>
+                <label>Payments</label>
+            </value>
+            <value>
+                <fullName>Shyft</fullName>
+                <default>false</default>
+                <label>Shyft</label>
+            </value>
+            <value>
+                <fullName>CIB</fullName>
+                <default>false</default>
+                <label>CIB</label>
+            </value>
+            <value>
+                <fullName>BCC</fullName>
+                <default>false</default>
+                <label>BCC</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>TRADE</controllingFieldValue>
+            <valueName>Letters of Credit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRADE</controllingFieldValue>
+            <valueName>Guarantees</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRADE</controllingFieldValue>
+            <valueName>Invoice Financing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRADE</controllingFieldValue>
+            <valueName>LC Discounting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRADE</controllingFieldValue>
+            <valueName>Open Account Finance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRADE</controllingFieldValue>
+            <valueName>Collections</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Card</controllingFieldValue>
+            <valueName>Corporate Card</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Base Metals</controllingFieldValue>
+            <valueName>Base Metals Futures</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Base Metals</controllingFieldValue>
+            <valueName>Base Metals Options</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Credit</controllingFieldValue>
+            <valueName>Bonds</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Credit</controllingFieldValue>
+            <valueName>Credit Derivatives</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Credit</controllingFieldValue>
+            <valueName>Repos &amp; Fwd Sales</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Credit</controllingFieldValue>
+            <controllingFieldValue>Equity Derivatives</controllingFieldValue>
+            <valueName>Structured Products</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Credit</controllingFieldValue>
+            <valueName>Syndications and New Issues</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Credit</controllingFieldValue>
+            <valueName>Total Return Swaps</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Equity</controllingFieldValue>
+            <valueName>Equities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Equity Derivatives</controllingFieldValue>
+            <valueName>Delta One Derivatives</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Equity Derivatives</controllingFieldValue>
+            <valueName>Exotic Equity Options</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Equity Derivatives</controllingFieldValue>
+            <valueName>Hybrids</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Equity Derivatives</controllingFieldValue>
+            <valueName>Vanilla Equity Options</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FX</controllingFieldValue>
+            <valueName>eChannels</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FX</controllingFieldValue>
+            <valueName>FX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FX</controllingFieldValue>
+            <valueName>FX Forwards</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FX</controllingFieldValue>
+            <valueName>FX Non Delivarable Forwards(NDFS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FX</controllingFieldValue>
+            <valueName>FX Options</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FX</controllingFieldValue>
+            <valueName>FX Spot</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FX</controllingFieldValue>
+            <valueName>FX Swaps</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Interest Rates</controllingFieldValue>
+            <valueName>Cashflow</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Interest Rates</controllingFieldValue>
+            <valueName>FRAS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Interest Rates</controllingFieldValue>
+            <valueName>Interest Rate Options</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Interest Rates</controllingFieldValue>
+            <valueName>Interest Rate Swaps</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Interest Rates</controllingFieldValue>
+            <valueName>IRD Caps &amp; Floors</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Interest Rates</controllingFieldValue>
+            <valueName>IRD Options</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Interest Rates</controllingFieldValue>
+            <valueName>IRD Structured Products</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Interest Rates</controllingFieldValue>
+            <valueName>Unwind Structure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Precious Metals</controllingFieldValue>
+            <valueName>Precious Metals Options</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Precious Metals</controllingFieldValue>
+            <valueName>Precious Metals Spot and Forward</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NCD&apos;s - Structured</controllingFieldValue>
+            <valueName>Structured Notes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Investments</controllingFieldValue>
+            <controllingFieldValue>Partnership</controllingFieldValue>
+            <valueName>Investments</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Investments</controllingFieldValue>
+            <valueName>Investments (CIB)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Investments</controllingFieldValue>
+            <valueName>Investments - Call</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Investments</controllingFieldValue>
+            <valueName>Investments - Fixed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Investments</controllingFieldValue>
+            <valueName>Investments - Notice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payments</controllingFieldValue>
+            <valueName>BOL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payments</controllingFieldValue>
+            <controllingFieldValue>Cash Management</controllingFieldValue>
+            <valueName>Cash</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payments</controllingFieldValue>
+            <valueName>Merchant Acquiring</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FEES</controllingFieldValue>
+            <valueName>Fees ADR&apos;s</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FEES</controllingFieldValue>
+            <valueName>Fees Advisory</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FEES</controllingFieldValue>
+            <valueName>Fees Commission</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FEES</controllingFieldValue>
+            <valueName>Fees Domestic Custody</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FEES</controllingFieldValue>
+            <valueName>Fees Exotics</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FEES</controllingFieldValue>
+            <valueName>Fees Futures Clearing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FEES</controllingFieldValue>
+            <valueName>Fees Global Custody</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FEES</controllingFieldValue>
+            <valueName>Fees Investment Administration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FEES</controllingFieldValue>
+            <valueName>Fees Securities Lending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FEES</controllingFieldValue>
+            <valueName>Fees Structuring</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FEES</controllingFieldValue>
+            <valueName>Fees Transactional</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FEES</controllingFieldValue>
+            <valueName>Fees Trustee Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade and Forex</controllingFieldValue>
+            <controllingFieldValue>Partnership</controllingFieldValue>
+            <valueName>Forex</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade and Forex</controllingFieldValue>
+            <valueName>International Banking</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade and Forex</controllingFieldValue>
+            <valueName>Trade</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Investment Income</controllingFieldValue>
+            <valueName>Associate Income</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Investment Income</controllingFieldValue>
+            <valueName>Funding Associate Income</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Investment Income</controllingFieldValue>
+            <valueName>Funding Investment Income</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Investment Income</controllingFieldValue>
+            <valueName>Loans Term Funding</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Investment Income</controllingFieldValue>
+            <valueName>Share Investment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transaction Accounts</controllingFieldValue>
+            <valueName>Current Accounts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transaction Accounts</controllingFieldValue>
+            <valueName>Savings</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transaction Accounts</controllingFieldValue>
+            <valueName>TPFA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wealth and Insurance</controllingFieldValue>
+            <controllingFieldValue>Partnership</controllingFieldValue>
+            <valueName>Insurance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wealth and Insurance</controllingFieldValue>
+            <valueName>Wealth</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Equity Finance</controllingFieldValue>
+            <valueName>Loans</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Equity Finance</controllingFieldValue>
+            <valueName>Preference Share</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cash Management</controllingFieldValue>
+            <valueName>Electronic Payment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cash Management</controllingFieldValue>
+            <valueName>Electronic Collections</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cash Management</controllingFieldValue>
+            <valueName>Deposits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cash Management</controllingFieldValue>
+            <valueName>Mobile Money</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cash Management</controllingFieldValue>
+            <controllingFieldValue>Working Capital</controllingFieldValue>
+            <valueName>Overdraft</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cash Management</controllingFieldValue>
+            <valueName>Platform Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cash Management</controllingFieldValue>
+            <valueName>Treasury Management Services (TMS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cash Management</controllingFieldValue>
+            <valueName>Physical Payments &amp;amp; Collections</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cash Management</controllingFieldValue>
+            <valueName>Financial Institution Clearing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Deposits</controllingFieldValue>
+            <valueName>Cashman</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Deposits</controllingFieldValue>
+            <valueName>Deposits Overnight</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Deposits</controllingFieldValue>
+            <valueName>Deposits Term</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Loans</controllingFieldValue>
+            <controllingFieldValue>Primary Arranging/Advisory</controllingFieldValue>
+            <valueName>Asset Finance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Loans</controllingFieldValue>
+            <controllingFieldValue>Primary Arranging/Advisory</controllingFieldValue>
+            <valueName>Bridge Finance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Loans</controllingFieldValue>
+            <controllingFieldValue>Primary Arranging/Advisory</controllingFieldValue>
+            <valueName>Commercial Property Finance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Loans</controllingFieldValue>
+            <controllingFieldValue>Primary Arranging/Advisory</controllingFieldValue>
+            <valueName>Development Funding</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Loans</controllingFieldValue>
+            <controllingFieldValue>VAF</controllingFieldValue>
+            <controllingFieldValue>Primary Arranging/Advisory</controllingFieldValue>
+            <valueName>Fleet</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Loans</controllingFieldValue>
+            <controllingFieldValue>Primary Arranging/Advisory</controllingFieldValue>
+            <valueName>GSTBF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Loans</controllingFieldValue>
+            <controllingFieldValue>Primary Arranging/Advisory</controllingFieldValue>
+            <valueName>Lending - Conversion from Development (REF)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Loans</controllingFieldValue>
+            <controllingFieldValue>Primary Arranging/Advisory</controllingFieldValue>
+            <valueName>Mezzanine Debt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Loans</controllingFieldValue>
+            <controllingFieldValue>Primary Arranging/Advisory</controllingFieldValue>
+            <valueName>Project Financing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Loans</controllingFieldValue>
+            <controllingFieldValue>Primary Arranging/Advisory</controllingFieldValue>
+            <valueName>Refinance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Loans</controllingFieldValue>
+            <controllingFieldValue>Primary Arranging/Advisory</controllingFieldValue>
+            <valueName>Reserve Based Lending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Loans</controllingFieldValue>
+            <controllingFieldValue>Primary Arranging/Advisory</controllingFieldValue>
+            <valueName>Revolver Loan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Loans</controllingFieldValue>
+            <controllingFieldValue>Primary Arranging/Advisory</controllingFieldValue>
+            <valueName>Revolving Loans</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Loans</controllingFieldValue>
+            <controllingFieldValue>Primary Arranging/Advisory</controllingFieldValue>
+            <valueName>Shareholder Loans</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Loans</controllingFieldValue>
+            <controllingFieldValue>Primary Arranging/Advisory</controllingFieldValue>
+            <controllingFieldValue>International Trade Products</controllingFieldValue>
+            <valueName>Structured Trade Finance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Loans</controllingFieldValue>
+            <controllingFieldValue>Primary Arranging/Advisory</controllingFieldValue>
+            <valueName>Term Lending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Loans</controllingFieldValue>
+            <controllingFieldValue>Primary Arranging/Advisory</controllingFieldValue>
+            <valueName>Term Loans</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Loans</controllingFieldValue>
+            <controllingFieldValue>VAF</controllingFieldValue>
+            <controllingFieldValue>Primary Arranging/Advisory</controllingFieldValue>
+            <controllingFieldValue>Partnership</controllingFieldValue>
+            <valueName>VAF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Loans</controllingFieldValue>
+            <controllingFieldValue>Primary Arranging/Advisory</controllingFieldValue>
+            <valueName>VAT Short Term Facility</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Loans</controllingFieldValue>
+            <controllingFieldValue>Primary Arranging/Advisory</controllingFieldValue>
+            <valueName>Vehicle and Asset Finance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Loans</controllingFieldValue>
+            <controllingFieldValue>Primary Arranging/Advisory</controllingFieldValue>
+            <valueName>Working Capital</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agricultural Products</controllingFieldValue>
+            <valueName>Agricultural Products</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Equity Investments</controllingFieldValue>
+            <controllingFieldValue>Primary Arranging/Advisory</controllingFieldValue>
+            <valueName>Junior Preference Shares</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Equity Investments</controllingFieldValue>
+            <controllingFieldValue>Primary Arranging/Advisory</controllingFieldValue>
+            <valueName>Ordinary Shares</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Equity Investments</controllingFieldValue>
+            <controllingFieldValue>Primary Arranging/Advisory</controllingFieldValue>
+            <valueName>Senior Preference Shares</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commodities</controllingFieldValue>
+            <valueName>Energy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Net Interest Income</controllingFieldValue>
+            <valueName>ZAR Margin</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VAF</controllingFieldValue>
+            <valueName>Instalment Sale VAF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VAF</controllingFieldValue>
+            <valueName>Lease Capital VAF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VAF</controllingFieldValue>
+            <valueName>Rental Capital VAF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VAF</controllingFieldValue>
+            <valueName>Other Debtors VAF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bills of exchange discounted</controllingFieldValue>
+            <controllingFieldValue>TPS Domestic banking</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bills of exchange discounted</controllingFieldValue>
+            <controllingFieldValue>Customer foreign currency accounts (CFC)</controllingFieldValue>
+            <controllingFieldValue>Drafts issues</controllingFieldValue>
+            <controllingFieldValue>Foreign notes (Exports)</controllingFieldValue>
+            <controllingFieldValue>Foreign notes (Imports)</controllingFieldValue>
+            <controllingFieldValue>Letters of credit (Export)</controllingFieldValue>
+            <controllingFieldValue>Letters of credit (Import)</controllingFieldValue>
+            <controllingFieldValue>Telegraphic transfer (Inward)</controllingFieldValue>
+            <controllingFieldValue>Telegraphic transfers (Outward)</controllingFieldValue>
+            <controllingFieldValue>F178</controllingFieldValue>
+            <controllingFieldValue>FECs</controllingFieldValue>
+            <valueName>TBA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer foreign currency accounts (CFC)</controllingFieldValue>
+            <controllingFieldValue>TPS Cash</controllingFieldValue>
+            <valueName>Till by till</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer foreign currency accounts (CFC)</controllingFieldValue>
+            <controllingFieldValue>Drafts issues</controllingFieldValue>
+            <controllingFieldValue>Foreign notes (Exports)</controllingFieldValue>
+            <controllingFieldValue>Foreign notes (Imports)</controllingFieldValue>
+            <controllingFieldValue>Letters of credit (Export)</controllingFieldValue>
+            <controllingFieldValue>Letters of credit (Import)</controllingFieldValue>
+            <controllingFieldValue>Telegraphic transfer (Inward)</controllingFieldValue>
+            <controllingFieldValue>Telegraphic transfers (Outward)</controllingFieldValue>
+            <controllingFieldValue>F178</controllingFieldValue>
+            <controllingFieldValue>FECs</controllingFieldValue>
+            <valueName>Values to be added by SB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Working Capital</controllingFieldValue>
+            <valueName>Call Loan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Working Capital</controllingFieldValue>
+            <valueName>Short-term Loan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TPS Cash</controllingFieldValue>
+            <valueName>Autosafe</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TPS Cash Management</controllingFieldValue>
+            <valueName>Cashman credit balance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TPS Cash Management</controllingFieldValue>
+            <valueName>Cashman debit balance  o/d</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TPS Cash Management</controllingFieldValue>
+            <valueName>Credit interest group (CMCR)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TPS Cash Management</controllingFieldValue>
+            <valueName>Gross balance group (CMPS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TPS Cash Management</controllingFieldValue>
+            <valueName>Information group (CMIN)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TPS Cash Management</controllingFieldValue>
+            <valueName>Signed set-off group (CMSS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TPS Cash Management</controllingFieldValue>
+            <valueName>Sweeping</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TPS Cash Management</controllingFieldValue>
+            <valueName>Treasury management group (CMTM)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TPS Current accounts</controllingFieldValue>
+            <valueName>C/A credit balance -deposits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TPS Current accounts</controllingFieldValue>
+            <valueName>C/A debit balance o/d</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Primary Arranging/Advisory</controllingFieldValue>
+            <valueName>Debt Advisory Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accident &amp; Health</controllingFieldValue>
+            <controllingFieldValue>Liability</controllingFieldValue>
+            <controllingFieldValue>Motor (non lending linked)</controllingFieldValue>
+            <controllingFieldValue>Property (non lending linked)</controllingFieldValue>
+            <valueName>Multiperil or stand alone</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Credit Life</controllingFieldValue>
+            <controllingFieldValue>Insurance of the Person</controllingFieldValue>
+            <controllingFieldValue>SME Group Life</controllingFieldValue>
+            <controllingFieldValue>SME Life insurance</controllingFieldValue>
+            <valueName>Life</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hybrid</controllingFieldValue>
+            <controllingFieldValue>Property (lending)</controllingFieldValue>
+            <controllingFieldValue>Property (non lending linked)</controllingFieldValue>
+            <valueName>Agriculture</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hybrid</controllingFieldValue>
+            <controllingFieldValue>Insurance of the Person</controllingFieldValue>
+            <controllingFieldValue>Liability</controllingFieldValue>
+            <valueName>Specialist</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Insurance of the Person</controllingFieldValue>
+            <controllingFieldValue>Property (non lending linked)</controllingFieldValue>
+            <controllingFieldValue>SME Short term</controllingFieldValue>
+            <valueName>General</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Insurance of the Person</controllingFieldValue>
+            <valueName>Health</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Insurance of the Person</controllingFieldValue>
+            <controllingFieldValue>Motor (non lending linked)</controllingFieldValue>
+            <valueName>Motor vehicles and fleet</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Motor (lending)</controllingFieldValue>
+            <valueName>VAF Motor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TPS Domestic banking</controllingFieldValue>
+            <valueName>Cash Deposit Fees</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TPS Domestic banking</controllingFieldValue>
+            <valueName>Cheque encashment fees</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TPS Domestic banking</controllingFieldValue>
+            <valueName>Monthly fees</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TPS Domestic banking</controllingFieldValue>
+            <valueName>Payments and collections</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TPS Domestic banking</controllingFieldValue>
+            <valueName>Service Fees</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TPS Electronic funds transfer service</controllingFieldValue>
+            <valueName>EFTS ad-hoc</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TPS Electronic funds transfer service</controllingFieldValue>
+            <valueName>EFTS dated transactions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TPS Electronic funds transfer service</controllingFieldValue>
+            <valueName>EFTS next pay day service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TPS Electronic funds transfer service</controllingFieldValue>
+            <valueName>EFTS same day payment service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TPS Host to Host</controllingFieldValue>
+            <valueName>HTH</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TPS Naedos</controllingFieldValue>
+            <valueName>Non-authenticated early debit order system</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TPS Receipt Reference Service</controllingFieldValue>
+            <valueName>RRS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Property (lending)</controllingFieldValue>
+            <valueName>Commercial Property</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Property (lending)</controllingFieldValue>
+            <controllingFieldValue>Property (non lending linked)</controllingFieldValue>
+            <valueName>Marine</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Property (lending)</controllingFieldValue>
+            <valueName>VAF Other Assets</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Property (non lending linked)</controllingFieldValue>
+            <valueName>Aviation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Property (non lending linked)</controllingFieldValue>
+            <valueName>Construction &amp; Engineering</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Surety</controllingFieldValue>
+            <valueName>Guarantee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partnership</controllingFieldValue>
+            <valueName>API Solutions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partnership</controllingFieldValue>
+            <valueName>Everyday Banking</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partnership</controllingFieldValue>
+            <valueName>Value Added Services (VAS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partnership</controllingFieldValue>
+            <valueName>Fiduciary</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partnership</controllingFieldValue>
+            <valueName>Card</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partnership</controllingFieldValue>
+            <valueName>Payments</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partnership</controllingFieldValue>
+            <valueName>Shyft</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partnership</controllingFieldValue>
+            <valueName>CIB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partnership</controllingFieldValue>
+            <valueName>BCC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wealth</controllingFieldValue>
+            <valueName>SBFC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Trade Products</controllingFieldValue>
+            <valueName>Airway Releases</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Trade Products</controllingFieldValue>
+            <valueName>Back-to-Back Guarantee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Trade Products</controllingFieldValue>
+            <valueName>Back-to-Back  LC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Trade Products</controllingFieldValue>
+            <valueName>Bills of Exchange Negotiated (Clean BE&apos;s)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Trade Products</controllingFieldValue>
+            <valueName>Discount LC&apos;s</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Trade Products</controllingFieldValue>
+            <valueName>Drafts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Trade Products</controllingFieldValue>
+            <valueName>Export LC&apos;s</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Trade Products</controllingFieldValue>
+            <valueName>FEC&apos;s</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Trade Products</controllingFieldValue>
+            <valueName>Foreign Bills for Collection Inwards (Imports)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Trade Products</controllingFieldValue>
+            <valueName>Foreign Bills for Collection Outwards (Exports)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Trade Products</controllingFieldValue>
+            <valueName>Import LC&apos;s</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Trade Products</controllingFieldValue>
+            <valueName>Inward Foreign Guarantee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Trade Products</controllingFieldValue>
+            <valueName>Irrevocable Reimbursement Undertaking</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Trade Products</controllingFieldValue>
+            <valueName>i-Trade</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Trade Products</controllingFieldValue>
+            <valueName>Lending Guarantee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Trade Products</controllingFieldValue>
+            <valueName>Letter of Credit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Trade Products</controllingFieldValue>
+            <valueName>Local Guarantee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Trade Products</controllingFieldValue>
+            <valueName>Outward Foreign Guarantee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Trade Products</controllingFieldValue>
+            <valueName>Performance Guarantee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Trade Products</controllingFieldValue>
+            <valueName>Receivables Discounting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Trade Products</controllingFieldValue>
+            <valueName>Risk Participation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Trade Products</controllingFieldValue>
+            <valueName>Shipping Guarantee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Trade Products</controllingFieldValue>
+            <valueName>Supply Chain Finance (In Pilot)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Trade Products</controllingFieldValue>
+            <valueName>Trade Finance Loan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Trade Products</controllingFieldValue>
+            <valueName>TTs (Manual)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bank Sector Services</controllingFieldValue>
+            <valueName>Bank Notes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bank Sector Services</controllingFieldValue>
+            <valueName>Foreign Currency Clearing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bank Sector Services</controllingFieldValue>
+            <valueName>Retail Clearing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Core Custody</controllingFieldValue>
+            <valueName>Domestic Custody</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Core Custody</controllingFieldValue>
+            <controllingFieldValue>Investor Services</controllingFieldValue>
+            <valueName>Futures Clearing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Core Custody</controllingFieldValue>
+            <valueName>Regional Custody</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Custody Services</controllingFieldValue>
+            <controllingFieldValue>Investor Services</controllingFieldValue>
+            <valueName>Issuer Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Custody Services</controllingFieldValue>
+            <controllingFieldValue>Investor Services</controllingFieldValue>
+            <valueName>Trustee Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Investor Services</controllingFieldValue>
+            <valueName>Custody</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Investor Services</controllingFieldValue>
+            <valueName>Domestic and Regional Custody</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Investor Services</controllingFieldValue>
+            <valueName>Investment Administration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Investor Services</controllingFieldValue>
+            <valueName>Securities Lending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Debt Capital Markets</controllingFieldValue>
+            <valueName>DCM Bonds</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Equity Capital Markets</controllingFieldValue>
+            <valueName>Block Trade</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Equity Capital Markets</controllingFieldValue>
+            <valueName>Convertible Bond</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Equity Capital Markets</controllingFieldValue>
+            <valueName>Initial Public Offering (IPO)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Equity Capital Markets</controllingFieldValue>
+            <valueName>Placement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Equity Capital Markets</controllingFieldValue>
+            <valueName>Rights Offer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Equity Capital Markets</controllingFieldValue>
+            <valueName>Underwriting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Securitisation</controllingFieldValue>
+            <valueName>Asset-Backed Commercial Paper (ABCP)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Securitisation</controllingFieldValue>
+            <valueName>Asset-Backed Securitisation (ABS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Securitisation</controllingFieldValue>
+            <valueName>Commercial Mortgage-Backed Securitisation (CMBS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Securitisation</controllingFieldValue>
+            <valueName>Derivative / Other Securitisation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Securitisation</controllingFieldValue>
+            <valueName>Residential Mortgage-Backed Securitisation (RMBS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bonds</controllingFieldValue>
+            <valueName>Bond Positions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Advisory Fees</controllingFieldValue>
+            <valueName>Discretionary</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Advisory Fees</controllingFieldValue>
+            <valueName>Milestone</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Advisory Fees</controllingFieldValue>
+            <valueName>Retainer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Advisory Fees</controllingFieldValue>
+            <valueName>Structured Finance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Advisory Fees</controllingFieldValue>
+            <valueName>Success</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Advisory Fees</controllingFieldValue>
+            <valueName>Merges and Acquisitions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bulk and Steel</controllingFieldValue>
+            <valueName>Chrome</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bulk and Steel</controllingFieldValue>
+            <valueName>Coke</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bulk and Steel</controllingFieldValue>
+            <valueName>Coking Coal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bulk and Steel</controllingFieldValue>
+            <valueName>Iron Ore</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bulk and Steel</controllingFieldValue>
+            <valueName>Manganese</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bulk and Steel</controllingFieldValue>
+            <valueName>Steel Products</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bulk and Steel</controllingFieldValue>
+            <valueName>Thermal Coal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <controllingFieldValue>Debtor Finance</controllingFieldValue>
+            <valueName>Branch Loans</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Management</controllingFieldValue>
+            <valueName>CA CR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Debtor Finance</controllingFieldValue>
+            <valueName>Factors</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

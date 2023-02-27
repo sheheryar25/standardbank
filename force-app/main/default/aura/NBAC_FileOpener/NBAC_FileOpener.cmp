@@ -1,0 +1,4 @@
+<aura:component implements="lightning:isUrlAddressable">
+    <aura:attribute name="fileId" type="String"/>
+    <aura:handler value="{!this}" name="init" action="{!c.openFile}" />
+</aura:component>

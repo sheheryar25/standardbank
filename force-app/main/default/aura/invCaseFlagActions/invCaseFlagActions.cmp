@@ -1,0 +1,13 @@
+<!-- 2017-10-26 - Rudolf Niehaus - CloudSmiths -->
+<aura:component controller="invCaseFlagActionsExt"  
+                implements="force:lightningQuickAction,force:hasRecordId" >
+   <ltng:require styles="{!$Resource.LDS2 + 'assets/styles/salesforce-lightning-design-system.min.css'}"/> 
+   <aura:attribute name="recordId" type="String" />
+   <lightning:workspaceAPI aura:id="workspace"/>
+    <center style="z-index:99">
+        <lightning:spinner aura:id="TheSpinner" class="slds-hide" variant="brand" size="large"/>
+    </center>
+   <lightning:button label="Spam" onclick="{!c.clickSpam}" variant="brand" class="slds-m-top_medium"/>
+   <lightning:button label="Not Ordinary" onclick="{!c.clickNotOrdinary}" variant="brand" class="slds-m-top_medium"/>
+   <lightning:button label="Duplicate" onclick="{!c.clickDuplicate}" variant="brand" class="slds-m-top_medium"/>
+</aura:component>

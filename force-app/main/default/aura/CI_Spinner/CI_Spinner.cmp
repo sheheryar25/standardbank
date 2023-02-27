@@ -1,0 +1,13 @@
+<aura:component description="CI_Spinner">
+    <aura:attribute name="isSpinnerRun" type="Boolean" default="false"/>
+
+    <aura:method name="switchSpinner" action="{!c.switchSpinner}" access="public">
+        <aura:attribute name="status" type="Boolean"/>
+    </aura:method>
+
+    <aura:if isTrue="{!v.isSpinnerRun}">
+        <div class="exampleHolder">
+            <lightning:spinner alternativeText="Loading" size="large"/>
+        </div>
+    </aura:if>
+</aura:component>

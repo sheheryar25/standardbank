@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <decisions>
+        <name>SVC_CheckIfUsersManagerIsSet</name>
+        <label>Check If User&apos;s Manager Is Set</label>
+        <locationX>182</locationX>
+        <locationY>575</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>SVC_CaseOwnerManagerIsSet</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>SVC_GetAssociatedCase.Owner:User.ManagerId</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>SVC_CreateTaskForManager</targetReference>
+            </connector>
+            <label>Case Owner Manager Is Set</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>SVC_CheckNegativeAnswer</name>
+        <label>Check Negative Answer</label>
+        <locationX>380</locationX>
+        <locationY>455</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>SVC_IsNegativeAnswer</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.SVC_AgentRating__c</leftValueReference>
+                <operator>LessThan</operator>
+                <rightValue>
+                    <numberValue>6.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>SVC_CheckIfUsersManagerIsSet</targetReference>
+            </connector>
+            <label>Is Negative Answer</label>
+        </rules>
+    </decisions>
+    <description>SFP-11332 - flow intended to cater for survey responses created through a CTI setup</description>
+    <formulas>
+        <name>TaskSubject</name>
+        <dataType>String</dataType>
+        <expression>&apos;Bad response follow up - &apos; +  {!SVC_GetAssociatedCase.Subject}</expression>
+    </formulas>
+    <interviewLabel>SVC Add Task To Negative Survey Response (Voice &amp; Chat) {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>SVC AC Add Task To Negative Survey Response (Voice &amp; Chat)</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>SVC_CreateTaskForManager</name>
+        <label>Create Task For Manager</label>
+        <locationX>50</locationX>
+        <locationY>695</locationY>
+        <inputAssignments>
+            <field>ActivityDate</field>
+            <value>
+                <elementReference>$Record.CreatedDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Description</field>
+            <value>
+                <stringValue>This serves to draw your attention to a critically low survey score received from a customer. Your necessary and immediate action is being requested. Kindly engage customer and convert customer into a promotor.</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>$Record.Owner:User.ManagerId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Priority</field>
+            <value>
+                <stringValue>Medium</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Not Started</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <elementReference>TaskSubject</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WhatId</field>
+            <value>
+                <elementReference>SVC_GetAssociatedCase.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Task</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <name>SVC_GetAssociatedCase</name>
+        <label>Get Associated Case</label>
+        <locationX>380</locationX>
+        <locationY>335</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>SVC_CheckNegativeAnswer</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>amazonconnect__AC_Contact_Id__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.SVC_ACContactChannel__r.amazonconnect__ContactId__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Case</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>254</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>SVC_GetAssociatedCase</targetReference>
+        </connector>
+        <object>SVC_ContactChannelSurvey__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

@@ -1,0 +1,126 @@
+.THIS {
+
+}
+
+.THIS .popUp-box {
+    z-index: 160;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    box-shadow: 0 3px 7px 8px rgba(0,0,0,0.11);
+    top: 20%;
+    right: 42.5%;
+    left: 42.5%;
+    position: fixed;
+    display: block;
+    width: 310px;
+    height: 201px;
+}
+
+.THIS .popUp-icon {
+    font-size: 32px;
+    height: fit-content;
+    margin-left: 135px;
+    z-index: 500;
+    color: #ffffff;
+    fill: #ffffff;
+}
+
+.THIS .popUp-close {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+}
+
+.THIS .topSection{
+    z-index: 300;
+    height: 93px;	
+    width: 310px;	
+    border-radius: 3px 3px 0 0;	
+    background-color: #3366CC;
+    padding-top: 16px;
+}
+
+.THIS .popUp-start_message,
+.THIS .popUp-pages{
+    color: #444444;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+.THIS .popUp-content {
+    height: 32px;	
+    color: #444444;	
+    font-family: Roboto;	
+    font-size: 14px;	
+    line-height: 19px;
+    padding-top: 16px;
+    padding-left: 16px;
+}
+
+.THIS .popUp-title {
+    color: #FFFFFF;	
+    font-family: Roboto;	
+    font-size: 18px;	
+    font-weight: 300;	
+    line-height: 24px;	
+    text-align: center;
+}
+
+.THIS .popUp-bottom_row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.THIS .popUp-pages {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    color: #767676;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.THIS .acceptClass{
+    margin-left:21px;
+}
+
+.THIS .selectBox{
+    margin-left: 170px;
+}
+
+.THIS .popUp-start_message {
+    margin-top: 30px;
+    height: 19px;	
+    width: 48.72px;	
+    color: #0033AA;	
+    font-family: Roboto;	
+    font-size: 14px;	
+    font-weight: 500;	
+    line-height: 19px;	
+    text-align: center;
+}
+
+.THIS .popUp-icon:hover,
+.THIS .popUp-start_message:hover {
+    cursor: pointer;
+}
+
+.THIS .popUp-overlay {
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 0.8;
+    left:0;
+}
+
+.THIS .popUp-visible {
+    background-color: #EEEEEE;
+    z-index: 100;
+}
+
+.THIS .popUp-invisible {
+    z-index: 155;
+    background-color: transparent;
+}

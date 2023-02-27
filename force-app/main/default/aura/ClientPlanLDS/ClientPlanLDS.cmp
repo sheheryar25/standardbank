@@ -1,0 +1,13 @@
+<aura:component controller="StdBank_Ltn_ClientHelper" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	<aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="record"   type="Account" access="private" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <div class="slds-grid slds-grid_align-center">
+        <aura:if isTrue="{! or(v.record.Primary_Relationship_Holder__c != 'Commercial Banking',v.record.Primary_Relationship_Holder__c != 'Business Banking')}">
+        	<c:StdBank_Ltn_BUTTON class="slds-button slds-button_brand"
+                              svgClass="slds-button__icon"
+                              svgCategory="action"
+                              svgFill="white" label="Client Plan" onclick="{!c.opnclientplanlds}" />
+        </aura:if>
+    </div>
+</aura:component>

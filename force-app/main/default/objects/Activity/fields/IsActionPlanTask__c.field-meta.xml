@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsActionPlanTask__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>SFP-9736: Field used in the backend and set by the Action Plan Task flow to differentiate between an Action Plan Task and any other tasks</description>
+    <externalId>false</externalId>
+    <label>IsActionPlanTask</label>
+    <type>Checkbox</type>
+</CustomField>

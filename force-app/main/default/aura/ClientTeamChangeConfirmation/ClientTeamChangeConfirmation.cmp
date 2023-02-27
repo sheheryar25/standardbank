@@ -1,0 +1,73 @@
+<!--
+ - Created by tsobota on 22.08.2018.
+ -->
+
+<aura:component description="ClientTeamChangeConfirmation" controller="ClientTeamManage_Controller">
+    <aura:attribute name="ClientTeamChanges" type="List"/>
+    <aura:attribute access="private" name="columns" type="List"/>
+    <aura:attribute access="private" name="data" type="Object"/>
+    <aura:attribute access="private" name="ccChanges" type="Object"/>
+    <aura:attribute access="private" name="ccbmChanges" type="Object"/>
+    <aura:attribute name="isWaiting" type="Boolean"/>
+    <aura:attribute name="showSummary" type="Boolean" access="public"/>
+    <aura:attribute name="account" type="Object" access="private"/>
+    <aura:attribute name="recordId" type="String" access="public"/>
+    <aura:attribute name="currentCcbm" type="Object" access="private"/>
+    <aura:attribute name="isCcbmDeletion" type="Boolean" access="private"/>
+    <aura:attribute name="isCibUser" type="Boolean" default="false" access="public"/>
+    <aura:attribute name="isCcOrCcbm" type="Boolean" default="false" access="public"/>
+
+    <aura:handler name="init" value="{!this}" action="{! c.doInit}"/>
+
+    <aura:if isTrue="{!v.isWaiting}">
+        <lightning:spinner/>
+    </aura:if>
+    <div class="slds-m-left_small">
+        <div class="slds-text-heading_large slds-p-bottom_medium slds-text-align_left">Confirm Data Change Request
+            for {!v.account.Name}</div>
+        <aura:if isTrue="{!  not(empty(v.ccChanges))}">
+            <div class="slds-text-heading_small slds-text-title_bold slds-p-bottom_medium">
+                {!$Label.c.CDC_Message_CCChange}
+            </div>
+            <div class="slds-text-body_regular slds-p-bottom_medium">
+                {!format($Label.c.CDC_Message_CCWillChange,v.ccChanges.oldCcName, v.ccChanges.newCcName, v.ccChanges.newCcRole)}
+            </div>
+        </aura:if>
+        <aura:if isTrue="{! not(empty(v.ccbmChanges))}">
+            <div class="slds-text-heading_small slds-text-title_bold slds-p-bottom_medium">
+                {!$Label.c.CDC_Message_CCBMChange}
+            </div>
+            <div class="slds-text-body_regular slds-p-bottom_medium">
+                <aura:if isTrue="{!empty(v.currentCcbm)}">
+                    {!format($Label.c.CDC_Message_CCBMWillChange, v.ccbmChanges.newCcbmName,v.ccbmChanges.newCcbmRole)}
+                    <aura:set attribute="else">
+                        <aura:if isTrue="{!v.isCcbmDeletion}">
+                            {!format($Label.c.CDC_Message_NoLongerCCBM, v.currentCcbm.newClientTeam.Team_Member__r.Name)}
+                            <aura:set attribute="else">
+                                {!format($Label.c.CDC_Message_CCBMWillChangeFrom, v.currentCcbm.newClientTeam.Team_Member__r.Name, v.ccbmChanges.newCcbmName, v.ccbmChanges.newCcbmRole)}
+                            </aura:set>
+                        </aura:if>
+                    </aura:set>
+                </aura:if>
+            </div>
+        </aura:if>
+        <aura:if isTrue="{!  not(empty(v.data))}">
+            <div class="slds-text-heading_small slds-text-title_bold slds-p-bottom_medium">
+                {!$Label.c.CDC_Message_CSTChanges}
+            </div>
+            <div class="slds-p-bottom_medium slds-size_7-of-12 ">
+                <lightning:datatable
+                        keyField="id"
+                        data="{! v.data}"
+                        columns="{! v.columns}"
+                        hideCheckboxColumn="true"/>
+            </div>
+        </aura:if>
+        <div class="slds-text-heading_small slds-text-title_bold slds-p-bottom_medium" style="color:#005fb2">
+            {!$Label.c.CDC_Message_WhatAfterSubmission}
+        </div>
+        <div class="slds-text-body_regular slds-p-bottom_medium" style="color:#005fb2">
+            <aura:unescapedHtml value="{!if(and(equals(v.isCibUser, true), equals(v.isCcOrCcbm, true)), $Label.c.CDC_Message_RequestSummary + $Label.c.CDC_Message_RequestSummary_2, $Label.c.CDC_Message_RequestSummary)}"/>
+        </div>
+    </div>
+</aura:component>

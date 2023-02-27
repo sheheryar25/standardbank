@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>User_Division__c</fullName>
+    <externalId>false</externalId>
+    <label>User Division</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>User_CIB_Global_Area__c</controllingField>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Business Banking</fullName>
+                <default>false</default>
+                <label>Business Banking</label>
+            </value>
+            <value>
+                <fullName>Business Enablers</fullName>
+                <default>false</default>
+                <label>Business Enablers</label>
+            </value>
+            <value>
+                <fullName>Client Coverage</fullName>
+                <default>false</default>
+                <label>Client Coverage</label>
+            </value>
+            <value>
+                <fullName>Client Services</fullName>
+                <default>false</default>
+                <label>Client Services</label>
+            </value>
+            <value>
+                <fullName>Client Solutions</fullName>
+                <default>false</default>
+                <label>Client Solutions</label>
+            </value>
+            <value>
+                <fullName>Commercial Banking</fullName>
+                <default>false</default>
+                <label>Commercial Banking</label>
+            </value>
+            <value>
+                <fullName>Credit</fullName>
+                <default>false</default>
+                <label>Credit</label>
+            </value>
+            <value>
+                <fullName>Digital</fullName>
+                <default>false</default>
+                <label>Digital</label>
+            </value>
+            <value>
+                <fullName>Enterprise Banking</fullName>
+                <default>false</default>
+                <label>Enterprise Banking</label>
+            </value>
+            <value>
+                <fullName>Entrepreneur</fullName>
+                <default>false</default>
+                <label>Entrepreneur</label>
+            </value>
+            <value>
+                <fullName>General Management</fullName>
+                <default>false</default>
+                <label>General Management</label>
+            </value>
+            <value>
+                <fullName>Global Markets</fullName>
+                <default>false</default>
+                <label>Global Markets</label>
+            </value>
+            <value>
+                <fullName>Insurance</fullName>
+                <default>false</default>
+                <label>Insurance</label>
+            </value>
+            <value>
+                <fullName>Investment Banking</fullName>
+                <default>false</default>
+                <label>Investment Banking</label>
+            </value>
+            <value>
+                <fullName>Legal</fullName>
+                <default>false</default>
+                <label>Legal</label>
+            </value>
+            <value>
+                <fullName>Real Estate</fullName>
+                <default>false</default>
+                <label>Real Estate</label>
+            </value>
+            <value>
+                <fullName>Small Enterprise</fullName>
+                <default>false</default>
+                <label>Small Enterprise</label>
+            </value>
+            <value>
+                <fullName>Transactional Products and Services</fullName>
+                <default>false</default>
+                <label>Transactional Products and Services</label>
+            </value>
+            <value>
+                <fullName>Vehicle and Asset Finance</fullName>
+                <default>false</default>
+                <label>Vehicle and Asset Finance</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Legal</controllingFieldValue>
+            <valueName>Legal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIBI</controllingFieldValue>
+            <controllingFieldValue>CIBSA</controllingFieldValue>
+            <controllingFieldValue>CIBROA</controllingFieldValue>
+            <controllingFieldValue>CIB Global</controllingFieldValue>
+            <valueName>Business Enablers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIBI</controllingFieldValue>
+            <controllingFieldValue>CIBSA</controllingFieldValue>
+            <controllingFieldValue>CIBROA</controllingFieldValue>
+            <controllingFieldValue>CIB Global</controllingFieldValue>
+            <valueName>Client Coverage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIBI</controllingFieldValue>
+            <controllingFieldValue>CIBSA</controllingFieldValue>
+            <controllingFieldValue>CIBROA</controllingFieldValue>
+            <controllingFieldValue>CIB Global</controllingFieldValue>
+            <valueName>Credit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIBI</controllingFieldValue>
+            <controllingFieldValue>CIBSA</controllingFieldValue>
+            <controllingFieldValue>CIBROA</controllingFieldValue>
+            <controllingFieldValue>CIB Global</controllingFieldValue>
+            <valueName>General Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIBI</controllingFieldValue>
+            <controllingFieldValue>CIBSA</controllingFieldValue>
+            <controllingFieldValue>CIBROA</controllingFieldValue>
+            <controllingFieldValue>CIB Global</controllingFieldValue>
+            <valueName>Global Markets</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIBI</controllingFieldValue>
+            <controllingFieldValue>CIBSA</controllingFieldValue>
+            <controllingFieldValue>CIBROA</controllingFieldValue>
+            <controllingFieldValue>CIB Global</controllingFieldValue>
+            <valueName>Investment Banking</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIBI</controllingFieldValue>
+            <controllingFieldValue>CIBSA</controllingFieldValue>
+            <controllingFieldValue>CIBROA</controllingFieldValue>
+            <controllingFieldValue>CIB Global</controllingFieldValue>
+            <valueName>Real Estate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIBI</controllingFieldValue>
+            <controllingFieldValue>CIBSA</controllingFieldValue>
+            <controllingFieldValue>CIBROA</controllingFieldValue>
+            <controllingFieldValue>CIB Global</controllingFieldValue>
+            <valueName>Transactional Products and Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIBSA</controllingFieldValue>
+            <valueName>Client Solutions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIBSA</controllingFieldValue>
+            <valueName>Vehicle and Asset Finance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Insurance</controllingFieldValue>
+            <valueName>Insurance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BCC</controllingFieldValue>
+            <valueName>Business Banking</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BCC</controllingFieldValue>
+            <valueName>Commercial Banking</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BCC</controllingFieldValue>
+            <valueName>Enterprise Banking</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BCC</controllingFieldValue>
+            <valueName>Entrepreneur</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIB Global</controllingFieldValue>
+            <valueName>Digital</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Africa Regions</controllingFieldValue>
+            <valueName>Client Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PBB SA</controllingFieldValue>
+            <valueName>Small Enterprise</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

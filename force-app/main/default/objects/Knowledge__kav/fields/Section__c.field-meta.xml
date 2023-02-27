@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Section__c</fullName>
+    <description>Main section of knowledge base</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Main section of knowledge base</inlineHelpText>
+    <label>Section</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Accounts</fullName>
+                <default>false</default>
+                <label>Accounts</label>
+            </value>
+            <value>
+                <fullName>Transfers</fullName>
+                <default>false</default>
+                <label>Transfers</label>
+            </value>
+            <value>
+                <fullName>Cards</fullName>
+                <default>false</default>
+                <label>Cards</label>
+            </value>
+            <value>
+                <fullName>Digital</fullName>
+                <default>false</default>
+                <label>Digital</label>
+            </value>
+            <value>
+                <fullName>Channels</fullName>
+                <default>false</default>
+                <label>Channels</label>
+            </value>
+            <value>
+                <fullName>Investor Services</fullName>
+                <default>false</default>
+                <label>Investor Services</label>
+            </value>
+            <value>
+                <fullName>Trade Finance</fullName>
+                <default>false</default>
+                <label>Trade Finance</label>
+            </value>
+            <value>
+                <fullName>Insurance</fullName>
+                <default>false</default>
+                <label>Insurance</label>
+            </value>
+            <value>
+                <fullName>Loans</fullName>
+                <default>false</default>
+                <label>Loans</label>
+            </value>
+            <value>
+                <fullName>Branches Network</fullName>
+                <default>false</default>
+                <label>Branches Network</label>
+            </value>
+            <value>
+                <fullName>Service</fullName>
+                <default>false</default>
+                <label>Service</label>
+            </value>
+            <value>
+                <fullName>Pricing List</fullName>
+                <default>false</default>
+                <label>Pricing List</label>
+            </value>
+            <value>
+                <fullName>Customer External Communications</fullName>
+                <default>false</default>
+                <label>Customer External Communications</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

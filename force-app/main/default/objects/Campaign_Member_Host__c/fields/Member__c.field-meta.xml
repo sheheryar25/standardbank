@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Member__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Case#1168 - 11/2011 - Rudolf Niehaus
+Member (Client Contact) of the Campaign</description>
+    <externalId>false</externalId>
+    <label>Member</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Campaign Member Hosts (Member)</relationshipLabel>
+    <relationshipName>Campaign_Member_Hosts1</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

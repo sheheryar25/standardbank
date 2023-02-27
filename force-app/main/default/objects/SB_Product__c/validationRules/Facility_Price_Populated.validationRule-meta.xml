@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Facility_Price_Populated</fullName>
+    <active>true</active>
+    <description>User should populate either Cap Guidance Facility Price (%) or Set Facility Price (%) when Transaction Type is Syndicated- SGPRT-625</description>
+    <errorConditionFormula>OR(
+AND( RecordType.DeveloperName = &apos;Lending_Deposits&apos;,  ISPICKVAL( Transaction_Type__c , &apos;Syndicated&apos;) , ISBLANK(  Cap_Guidance_Facility_Price__c ),ISBLANK(  Set_Facility_Price__c ))
+,AND( RecordType.DeveloperName = &apos;Lending_Deposits&apos;,  ISPICKVAL(Transaction_Type__c , &apos;Syndicated&apos;) , NOT(ISBLANK(  Cap_Guidance_Facility_Price__c )),NOT(ISBLANK(  Set_Facility_Price__c )))
+)</errorConditionFormula>
+    <errorMessage>If Transaction Type is Syndicated then Populate Cap Guidance Facility Price (%) OR Set Facility Price (%)</errorMessage>
+</ValidationRule>

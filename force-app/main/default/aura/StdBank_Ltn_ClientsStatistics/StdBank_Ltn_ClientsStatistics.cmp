@@ -1,0 +1,13 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+	<div class="slds-grid">
+		<div class="slds-col slds-p-right_x-small">
+			<c:StdBank_Ltn_NumberOfClients />
+		</div>
+		<div class="slds-col slds-p-right_x-small">
+			<c:StdBank_Ltn_ClientsRevenueBudget />
+		</div>
+		<div class="slds-col">
+			<c:StdBank_Ltn_ClientsCYPipeline />
+		</div>
+	</div>
+</aura:component>

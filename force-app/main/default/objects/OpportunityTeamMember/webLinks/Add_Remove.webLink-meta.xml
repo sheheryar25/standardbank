@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Add_Remove</fullName>
+    <availability>online</availability>
+    <description>Used to rename the label of Add Opp Team Member</description>
+    <displayType>massActionButton</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Add / Remove</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <requireRowSelection>false</requireRowSelection>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/25.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/25.0/apex.js&quot;)}
+
+var hasPermission = sforce.apex.execute(&quot;RoleUtilityOppTeam&quot;, &quot;checkRoleOppTeam&quot;, {currentUserId:&apos;{!User.Id}&apos; ,OpportunityId:&apos;{!Opportunity.Id}&apos;});
+
+var isPrivate = &quot;{!Opportunity.IsPrivate}&quot;;
+var opptyOwner = &quot;{!Opportunity.OwnerId}&quot;;
+var currentUser = &quot;{!$User.Id}&quot;;
+
+if(isPrivate==1){
+if(opptyOwner != currentUser ){
+alert(&apos;Insufficient Privileges, please contact opportunity owner.&apos;);
+}else{
+alert(&apos;Insufficient Privileges, team members cannot be added to a Private Opportunity&apos;);
+}
+}
+
+if(isPrivate==0){
+if(hasPermission != &quot;true&quot;){
+alert(&apos;Insufficient Privileges, please contact opportunity owner.&apos;);
+}else{
+window.location.href=&quot;/apex/oppTeamCreation?oppId={!Opportunity.Id}&amp;sfdc.override=1&quot;;
+}
+}</url>
+</WebLink>

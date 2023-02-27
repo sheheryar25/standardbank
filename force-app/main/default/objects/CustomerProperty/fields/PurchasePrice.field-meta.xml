@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PurchasePrice</fullName>
+    <description>SFP-12614 - The value asset was purchased at.</description>
+    <inlineHelpText>The value asset was purchased at.</inlineHelpText>
+    <trackHistory>false</trackHistory>
+</CustomField>

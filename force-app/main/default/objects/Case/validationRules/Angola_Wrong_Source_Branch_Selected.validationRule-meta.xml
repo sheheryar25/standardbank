@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Angola_Wrong_Source_Branch_Selected</fullName>
+    <active>true</active>
+    <description>US#3548:When Business unit is not branch, validate case origin cannot be branch</description>
+    <errorConditionFormula>AND( 
+RecordType.DeveloperName = &apos;CCC_Angola&apos; ,  
+ISPICKVAL( Origin , &apos;Branch&apos;) , 
+NOT(ISPICKVAL( $User.Business_Unit__c, &apos;Branch&apos;))
+)</errorConditionFormula>
+    <errorMessage>You cannot select &quot;Branch&quot; as a case source. Please select an alternative</errorMessage>
+</ValidationRule>

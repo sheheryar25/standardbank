@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Categories__c</fullName>
+    <description>SFP-10259: This field is to distinguish the category a Solution, API Product or Insights should fall into.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select the relevant category for Solution, API Product and Insights.</inlineHelpText>
+    <label>Categories</label>
+    <required>false</required>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Energy &amp; Sustainability</fullName>
+                <default>false</default>
+                <label>Energy &amp; Sustainability</label>
+            </value>
+            <value>
+                <fullName>Loans &amp; Collateral</fullName>
+                <default>false</default>
+                <label>Loans &amp; Collateral</label>
+            </value>
+            <value>
+                <fullName>Risk Management</fullName>
+                <default>false</default>
+                <label>Risk Management</label>
+            </value>
+            <value>
+                <fullName>Treasury &amp; Investments</fullName>
+                <default>false</default>
+                <label>Treasury &amp; Investments</label>
+            </value>
+            <value>
+                <fullName>Support Services</fullName>
+                <default>false</default>
+                <label>Support Services</label>
+            </value>
+            <value>
+                <fullName>Developer</fullName>
+                <default>false</default>
+                <label>Developer</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

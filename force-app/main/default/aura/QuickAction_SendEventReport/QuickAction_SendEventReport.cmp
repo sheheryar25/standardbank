@@ -1,0 +1,12 @@
+<aura:component implements="force:lightningQuickActionWithoutHeader,force:hasRecordId" controller="StdBank_Ltn_EventReportCP">
+	<aura:attribute name="recordId" type="Id"/>
+
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <div class="slds-spinner_container" style="position: relative; height: 4em;">
+        <div class="slds-spinner_brand slds-spinner slds-spinner_large" aria-hidden="false" role="alert">
+            <div class="slds-spinner__dot-a"></div>
+            <div class="slds-spinner__dot-b"></div>
+        </div>
+    </div>
+</aura:component>

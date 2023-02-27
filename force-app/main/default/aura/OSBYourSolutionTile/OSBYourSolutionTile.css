@@ -1,0 +1,86 @@
+.THIS {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 15px 0 rgba(0,0,0,0.09);
+}
+.THIS .grey-link{
+    color:#808080;
+}
+.THIS .icn svg{
+    fill:#d4af37;
+    height:22px;
+    width:22px;
+    margin-left: 5px;
+    margin-top: 4px;
+    float: right;
+    flex-direction: row
+}
+
+.THIS .yourSolution--tile__header {
+    background: #fff;
+    height:48px;
+    align-self: flex-end;
+}
+
+.THIS .yourSolution--tile {
+    padding: 16px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex: auto;
+    box-sizing: content-box;
+}
+
+.THIS .uiOutputRichText>img {
+    border-radius: 50%;
+}
+
+.THIS .yourSolution--tile__app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 48px;
+}
+
+.THIS .yourSolution--tile:not(:first-child) {
+    margin-left: 24px;
+}
+
+.THIS .yourSolution--tile .tile__link {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    text-transform:uppercase;
+}
+
+.THIS .yourSolution--tile .tile__link_left {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    text-transform:uppercase;
+}
+
+.THIS .yourSolution--tile__app__icon {
+    text-align: center;
+    margin-bottom: 16px;
+    width: 72px;
+}
+
+.THIS .yourSolution--tile__app__title {
+    color: #0A2240;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: center;
+}
+
+.THIS .yourSolution--tile__app__title sup{
+    font-size: 9px;
+    vertical-align: middle;
+}
+
+.THIS .yourSolution__items {
+    display: flex;
+}

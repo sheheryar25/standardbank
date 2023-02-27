@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Channels__c</fullName>
+    <description>SGPRT-368 - Field for cross border project so that Agents can select which channel(s) are involved in the query.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Which channels are involved in this query?</inlineHelpText>
+    <label>Channels</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>360T</fullName>
+                <default>false</default>
+                <label>360T</label>
+            </value>
+            <value>
+                <fullName>African Market Trader</fullName>
+                <default>false</default>
+                <label>African Market Trader</label>
+            </value>
+            <value>
+                <fullName>Aroko</fullName>
+                <default>false</default>
+                <label>Aroko</label>
+            </value>
+            <value>
+                <fullName>Bloomberg</fullName>
+                <default>false</default>
+                <label>Bloomberg</label>
+            </value>
+            <value>
+                <fullName>BOL_Domestic</fullName>
+                <default>false</default>
+                <label>BOL - Domestic</label>
+            </value>
+            <value>
+                <fullName>BOL - International</fullName>
+                <default>false</default>
+                <label>BOL - International</label>
+            </value>
+            <value>
+                <fullName>Channel</fullName>
+                <default>false</default>
+                <label>Channel</label>
+            </value>
+            <value>
+                <fullName>Currenex</fullName>
+                <default>false</default>
+                <label>Currenex</label>
+            </value>
+            <value>
+                <fullName>Digital Onboarding App</fullName>
+                <default>false</default>
+                <label>Digital Onboarding App</label>
+            </value>
+            <value>
+                <fullName>EBS</fullName>
+                <default>false</default>
+                <label>EBS</label>
+            </value>
+            <value>
+                <fullName>Email</fullName>
+                <default>false</default>
+                <label>Email</label>
+            </value>
+            <value>
+                <fullName>eMT Lite</fullName>
+                <default>false</default>
+                <label>eMT Lite</label>
+            </value>
+            <value>
+                <fullName>eMT Mobile</fullName>
+                <default>false</default>
+                <label>eMT Mobile</label>
+            </value>
+            <value>
+                <fullName>eMT Professional</fullName>
+                <default>false</default>
+                <label>eMT Professional</label>
+            </value>
+            <value>
+                <fullName>eMT Sales</fullName>
+                <default>false</default>
+                <label>eMT Sales</label>
+            </value>
+            <value>
+                <fullName>FIX API</fullName>
+                <default>false</default>
+                <label>FIX API</label>
+            </value>
+            <value>
+                <fullName>FXALL</fullName>
+                <default>false</default>
+                <label>FXALL</label>
+            </value>
+            <value>
+                <fullName>FX Trading</fullName>
+                <default>false</default>
+                <label>FX Trading</label>
+            </value>
+            <value>
+                <fullName>Host to Host</fullName>
+                <default>false</default>
+                <label>Host to Host</label>
+            </value>
+            <value>
+                <fullName>IBFX</fullName>
+                <default>false</default>
+                <label>IBFX</label>
+            </value>
+            <value>
+                <fullName>Integral</fullName>
+                <default>false</default>
+                <label>Integral</label>
+            </value>
+            <value>
+                <fullName>Internet Banking - Business</fullName>
+                <default>false</default>
+                <label>Internet Banking - Business</label>
+            </value>
+            <value>
+                <fullName>Internet Banking - Individual</fullName>
+                <default>false</default>
+                <label>Internet Banking - Individual</label>
+            </value>
+            <value>
+                <fullName>I-TRADE</fullName>
+                <default>false</default>
+                <label>I-TRADE</label>
+            </value>
+            <value>
+                <fullName>Livechat</fullName>
+                <default>false</default>
+                <label>Livechat</label>
+            </value>
+            <value>
+                <fullName>Manual payment</fullName>
+                <default>false</default>
+                <label>Manual payment</label>
+            </value>
+            <value>
+                <fullName>Metro</fullName>
+                <default>false</default>
+                <label>Metro</label>
+            </value>
+            <value>
+                <fullName>nBOL- Domestic</fullName>
+                <default>false</default>
+                <label>nBOL- Domestic</label>
+            </value>
+            <value>
+                <fullName>nBOL- International</fullName>
+                <default>false</default>
+                <label>nBOL- International</label>
+            </value>
+            <value>
+                <fullName>One Hub</fullName>
+                <default>false</default>
+                <label>One Hub</label>
+            </value>
+            <value>
+                <fullName>RET</fullName>
+                <default>false</default>
+                <label>RET</label>
+            </value>
+            <value>
+                <fullName>SDP</fullName>
+                <default>false</default>
+                <label>SDP</label>
+            </value>
+            <value>
+                <fullName>Shyft</fullName>
+                <default>false</default>
+                <label>Shyft</label>
+            </value>
+            <value>
+                <fullName>TMS - Treasury Management System</fullName>
+                <default>false</default>
+                <label>TMS - Treasury Management System</label>
+            </value>
+            <value>
+                <fullName>Trade Suite</fullName>
+                <default>false</default>
+                <label>Trade Suite</label>
+            </value>
+            <value>
+                <fullName>Traiana</fullName>
+                <default>false</default>
+                <label>Traiana</label>
+            </value>
+            <value>
+                <fullName>Webform</fullName>
+                <default>false</default>
+                <label>Webform</label>
+            </value>
+            <value>
+                <fullName>BOL</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>BOL</label>
+            </value>
+            <value>
+                <fullName>Business OTT</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Business OTT</label>
+            </value>
+            <value>
+                <fullName>Calypso</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Calypso</label>
+            </value>
+            <value>
+                <fullName>FEDS</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>FEDS</label>
+            </value>
+            <value>
+                <fullName>FX Tading</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>FX Tading</label>
+            </value>
+            <value>
+                <fullName>RAVN</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>RAVN</label>
+            </value>
+            <value>
+                <fullName>SBG Mobile App</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>SBG Mobile App</label>
+            </value>
+            <value>
+                <fullName>SDA</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>SDA</label>
+            </value>
+            <value>
+                <fullName>nBOL</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>nBOL</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

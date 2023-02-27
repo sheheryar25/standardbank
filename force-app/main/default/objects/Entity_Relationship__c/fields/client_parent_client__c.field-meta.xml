@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>client_parent_client__c</fullName>
+    <description>Parent of the related client (US-1383).</description>
+    <externalId>false</externalId>
+    <formula>CommB_Client__r.Parent.Name</formula>
+    <inlineHelpText>Parent of the related client.</inlineHelpText>
+    <label>Parent Client</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

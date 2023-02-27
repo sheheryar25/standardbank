@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_AR_Products</fullName>
+    <columns>PRODUCT2.NAME</columns>
+    <columns>PRODUCT2.DESCRIPTION</columns>
+    <columns>PRODUCT2.ACTIVE</columns>
+    <columns>PRODUCT2.FAMILY</columns>
+    <columns>Product_Group__c</columns>
+    <columns>ExternalSystemId__c</columns>
+    <columns>PRODUCT2.EXTERNAL_ID</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Product_Country__c</field>
+        <operation>includes</operation>
+        <value>Uganda</value>
+    </filters>
+    <label>All AR Products</label>
+</ListView>

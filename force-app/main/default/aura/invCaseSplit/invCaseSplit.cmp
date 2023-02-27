@@ -1,0 +1,29 @@
+<!-- 2017-11-02 - Rudolf Niehaus - CloudSmiths -->
+<aura:component implements="force:lightningQuickAction,force:hasRecordId" controller="invCaseSplitExt">
+    
+    <lightning:workspaceAPI aura:id="workspace"/>
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="accountId" type="String" />
+    <aura:attribute name="renderIF" type="Boolean" />
+    <aura:attribute name="case1" type="Case" default="{'sobjectType':'Case'}"/>
+    <aura:handler event="aura:waiting" action="{!c.showSpinner}"/> 
+    <aura:handler event="aura:doneWaiting" action="{!c.hideSpinner}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <center style="z-index:99">
+        <lightning:spinner aura:id="TheSpinner" class="slds-hide" variant="brand" size="large"/>
+    </center>
+    
+    <aura:renderIf isTrue="{!v.renderIF}">
+        <ui:message title="Notification" severity="info" closable="false">
+            This is a Child case and cannot be split
+        </ui:message>    
+    </aura:renderIf>
+    <aura:renderIf isTrue="{!v.renderIF}">
+        <aura:set attribute="else">    
+            <ui:inputText aura:id="subject" label="Subject" value="{!v.case1.Subject}"/>
+            <ui:inputTextArea aura:id="description" label="Description" value="{!v.case1.Description}" rows="3"/>
+            <lightning:button label="Split" onclick="{!c.handleSplit}" variant="brand" class="slds-m-top_medium"/>
+        </aura:set>
+    </aura:renderIf>
+</aura:component>

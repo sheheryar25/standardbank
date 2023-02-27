@@ -1,0 +1,91 @@
+<aura:component description="OSBPagination">
+    <aura:attribute name="data" type="Object[]" required="true" access="public" />
+    <aura:attribute name="full" type="Boolean" required="true" access="public"/>
+    <aura:attribute name="contentComponent" type="String" required="true" access="public"/>
+    <aura:attribute name="displayedData" type="Object[]" access="private"/>
+    <aura:attribute name="pages" type="Integer[]" access="public"/>
+    <aura:attribute name="currentPage" type="Integer" access="private" default="1"/>
+    <aura:attribute name="pagesTotal" type="Integer" access="private"/>
+    <aura:attribute name="pageSize" type="Integer" access="public" default="9"/>
+    <aura:attribute name="maxPages" type="Integer" access="public" default="3"/>
+    <aura:attribute name="firstVisible" type="Boolean" access="private" default="false"/>
+    <aura:attribute name="lasVisible" type="Boolean" access="private" default="false"/>
+    <aura:attribute name="isSearched" type="Boolean" access="public" default="" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler name="change" value="{!v.data}" action="{!c.dataChange}"/>
+    <div class="pagination__container">
+        <aura:if isTrue="{!v.contentComponent == 'OSBAPIProductsItem'}">
+            <div class="product__items mb_32">
+                <aura:iteration items="{!v.displayedData}" var="dataItem" end="9">
+                    <c:OSBAPIProductsItem title="{!dataItem.Title}" content="{!dataItem.Introduction__c}"
+                                          link="{!dataItem.Id}" linkLabel="View more" id="{!dataItem.Id}"
+                                          isOnShowcase="true" />
+                </aura:iteration>
+            </div>
+            <aura:set attribute="else">
+                <aura:if isTrue="{!v.contentComponent == 'OSBSolutionShowcaseItem'}">
+                    <div class="solution__items mb_32">
+                        <aura:iteration items="{!v.displayedData}" var="dataItem" end="9">
+                            <c:OSBSolutionShowcaseItem 
+                                                       solutionId="{!dataItem.Id}" 
+                                                       title="{!dataItem.Title}" 
+                                                       content="{!dataItem.Introduction__c}" 
+                                                       logo="{!dataItem.Medium_Solution_Logo__c}"
+                                                       largeLogo="{!dataItem.Large_Solution_Logo__c}"
+                                                       link="{!dataItem.Sign_Up_URL__c}" 
+                                                       linkLabel="Visit Website"
+                                                       solutionSiteURL="{!dataItem.Solution_URL__c}"
+                                                       isOnShowcase="true"
+                                                       />       
+                        </aura:iteration>
+                    </div>
+                </aura:if>
+            </aura:set>
+        </aura:if>
+        <aura:if isTrue="{!v.contentComponent == 'OSBDeviceManagement'}">
+                        <c:OSBDeviceManagementTable allDeviceAuthList="{!v.displayedData}" />
+        </aura:if>
+        <aura:if isTrue="{!v.pages.length > 1}">
+            <div aura:id="navigation-container" class="navigation-container">
+                <div class = "LeftButtonSec slds-small-size_2-of-6 slds-medium-size_2-of-6 slds-large-size_2-of-6">
+                    <div aura:id="navButton" onclick="{!c.onFirstPage}" data-type="left" data-disabled="true"
+                         class="navigation-leftMostButton navigation-element__chevron navigation-element__chevron-disabled skipBtn"
+                         data-id="uitlink_link" data-text="Pagination | First Page">
+                        <img id="myImage1" class="ms-icn_chevron_right" src="/resource/OSB_pagination/ms_icn_rightSkip.svg" />        
+                    </div>
+                    <div aura:id="navButton" onclick="{!c.onPrevPage}" data-type="left" data-disabled="true"
+                         class="navigation-leftButton navigation-element__chevron navigation-element__chevron-disabled leftChev skipBtn"
+                         data-id="uitlink_link" data-text="Pagination | Previous Page">
+                        <img id="myImage2" class="ms-icn_chevron_left btnTrans" src="/resource/OSB_pagination/ms_icn_pre_Act.svg" /> 
+                    </div>
+                </div>
+                <div class="btnSec slds-small-size_2-of-6 slds-medium-size_2-of-6 slds-large-size_2-of-6">
+                    <aura:if isTrue="false">
+                        <div onclick="{!c.onFirstPage}"
+                             class="navigation-firstPageButton navigation-element navigation-pageButton"
+                             data-id="uitlink_link" data-text="Pagination | Page Number 1">1
+                        </div>...
+                    </aura:if>
+                    <aura:iteration items="{!v.pages}" var="pageItem">
+                        <div onclick="{!c.onPageButtonClick}" name="{!pageItem }" aura:id="pageButton"
+                             class="{! pageItem == 1 ? 'navigation-firstPageButton navigation-element navigation-pageButton navigation-pageButton_selected' : 'navigation-firstPageButton navigation-element navigation-pageButton'}"
+                             data-id="uitlink_link" data-text="{!'Pagination | Page Number | ' + pageItem}">{!pageItem}
+                        </div>
+                    </aura:iteration>
+                </div>
+                <div class="rightButtonSec slds-small-size_2-of-6 slds-medium-size_2-of-6 slds-large-size_2-of-6">
+                    <div aura:id="navButton" onclick="{!c.onNextPage}" data-type="right" data-disabled="false"
+                         class="navigation-rightButton navigation-element__chevron rightChev"
+                         data-id="uitlink_link" data-text="Pagination | Next Page">
+                        <img id="myImage3" class="ms-icn_chevron_right" src="/resource/OSB_pagination/ms_icn_pre_Act.svg" />
+                    </div>
+                    <div aura:id="navButton" onclick="{!c.onLastPage}" data-type="right" data-disabled="false"
+                         class="navigation-rightMostButton navigation-element__chevron"
+                         data-id="uitlink_link" data-text="Pagination | Last Page">
+                        <img class="ms-icn_chevron_right" src="/resource/OSB_pagination/ms_icn_rightSkip.svg" />
+                    </div>
+                </div>
+            </div>
+        </aura:if>
+    </div>
+</aura:component>

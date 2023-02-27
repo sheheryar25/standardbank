@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Related_Agenda__c</fullName>
+    <deleteConstraint>Cascade</deleteConstraint>
+    <description>Agenda to which the submission attendees are associated to</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Agenda to which the submission attendees are associated to</inlineHelpText>
+    <label>Related Agenda</label>
+    <referenceTo>Agenda__c</referenceTo>
+    <relationshipLabel>Event Report Attendees</relationshipLabel>
+    <relationshipName>Call_Report_Attendeess</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

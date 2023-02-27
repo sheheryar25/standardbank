@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_User_Is_Frozen</fullName>
+    <active>true</active>
+    <description>This validation will trigger if  Frozen Account is checked and if there is no reason for user being frozen</description>
+    <errorConditionFormula>AND( Frozen_Account__c = True, ISPICKVAL( Reason_User_Is_Frozen__c ,&quot;&quot;) )</errorConditionFormula>
+    <errorDisplayField>Reason_User_Is_Frozen__c</errorDisplayField>
+    <errorMessage>Please Select Reason Why User Is Being Frozen</errorMessage>
+</ValidationRule>

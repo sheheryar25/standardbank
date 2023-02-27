@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mass_Edit</fullName>
+    <availability>online</availability>
+    <description>Case#141 - Rudolf Niehaus
+Button navigates to the VF page that allow users to batch update edit and delete draw down profiles related to a specific product</description>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Mass Edit</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>/apex/DrawDownProfileMassEdit_Vf?id={!SB_Product__c.Id}</url>
+</WebLink>

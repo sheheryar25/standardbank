@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Parent_Field_Blank_Check_For_Ultimate</fullName>
+    <active>true</active>
+    <description>This rule ensures are that when the Client Relationship Hierarchy Level is either Immediate or Child, Parent Field should not be blank.</description>
+    <errorConditionFormula>AND(ISPICKVAL(Client_Relationship_Hierarchy__c,&quot;Group Parent&quot;),NOT(ISBLANK(ParentId)),OR(RecordType.Name==&quot;Potential Client&quot;,RecordType.Name==&quot;Potential (CIF)&quot;,RecordType.Name==&quot;Potential (Goldtier)&quot;,
+RecordType.Name==&quot;Prospect&quot;))</errorConditionFormula>
+    <errorMessage>You are trying to create a Group Parent Client. Remove the value in the Parent Client field.</errorMessage>
+</ValidationRule>

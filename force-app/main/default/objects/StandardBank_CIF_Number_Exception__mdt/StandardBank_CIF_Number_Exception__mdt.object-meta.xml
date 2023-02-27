@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>SGPRT-848 - Custom metadata to hold the CIF numbers for clients who belong to StandardBank Group.</description>
+    <label>StandardBank CIF Number Exception</label>
+    <pluralLabel>StandardBank CIF Number Exceptions</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

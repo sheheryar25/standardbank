@@ -1,0 +1,382 @@
+.GalleryFilterSection{
+  height: auto;
+  width: 100% !important;
+}
+
+.AppGalleryMain{
+    padding-top: 40px;
+    padding-left: 135px;
+    padding-right: 135px;
+    width: 100% !important; 
+    height: auto;
+    grid-template-columns: minmax(100px, 293px) 1fr;
+}
+.MobileFilter{
+  display: none;
+}
+.MobileappSection{
+  display: none;
+  width: 100% !important; 
+ 
+}
+.MobileFilterIcon{
+  display: flex;
+  position: absolute;
+  z-index: 1;
+  padding-top: 10px;
+  width: 17px;
+  height: 33px;
+}
+.MobileFilterIconDropDown{
+  width:18.2px;
+  height: 18.33px;
+}
+
+.MobileFilterOptions{
+  height: auto;
+  width: 100% !important;
+  background-color: #FFFFFF;
+  position: absolute;
+  top: 90px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  align-items: unset!important;
+  z-index: 9999;
+  margin: 0px;
+  visibility: hidden;
+}
+
+.MobileFilterSelection{
+  height: auto;
+  width: 100% !important;   
+}
+
+.MobileFilterHeader{
+  margin-right: 0;
+  min-height: 40px;
+  border-bottom: 0px solid #0A2240;
+  margin-bottom: 20px;
+}
+
+.filterMobileWrapper{
+  justify-content: center;
+  padding-top: 21px;
+  padding-left: 18px;
+  padding-right: 18px;
+  height: 60px;
+  width: 100% !important;  
+  display: grid;
+  grid-template-columns:17.4px 93.32px 1fr;
+  grid-template-rows: 1fr;
+}
+
+.FilterMobileText{
+  height: 16px;
+  width: 93.32px;
+  color: #032D5E;
+  font-family: "BentonSans";
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 16px;
+  padding-left: 14.28px;
+}
+
+.CloseButtonHolder{
+  height: auto;
+  width: 100% !important;  
+
+}
+
+.CloseButtonFilter{
+  float: right;     
+  height: 18.5px;
+  width: 18.5px;
+}
+
+.slds-grid{
+  display: grid;
+}
+
+.filterSection{
+    padding-left: 0px;
+    width: 100%;
+    height: auto;
+}
+
+.appSection{
+  padding-left: 19.16px;
+  width: 100% !important; 
+  visibility: visible;
+}
+
+.filterContainer{
+    height: 448px;
+    width: 293px;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    box-shadow: 0 6px 25px 0 rgba(0,0,0,0.1);
+}
+.filterHeading{
+    height: 16px;
+    width: 94px;
+    color: #222222;
+    font: Roboto Medium;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 16px;
+}
+
+
+
+.filterlogo{
+    width: 100% !important;
+    height:70px;
+    border-bottom: 1px solid #D8D8D8;
+}
+
+
+.chevronupBtn{
+    width:340px;
+    height:39px;
+    float:right;
+}
+
+.filterHeading{
+    height: 16px;
+    width: 94px;
+    color: #222222;
+    font: Roboto Medium;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 16px;
+}
+
+.checB{
+    border-bottom: 1px solid #D8D8D8;
+    width: 100% !important;
+    height:39px;
+   display: inline-block;
+    background-color: #FFFFFF;
+}
+
+.chckBoxLabel{
+    height: 16px;
+    color: #444444;
+    font: Roboto Regular;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 16px;
+    padding-top: 13px;
+    padding-bottom: 50px;
+    padding-left: 25px;
+}
+
+.chckBoxLabel:hover{
+    height: 16px;
+    color: #0033AA;
+    font: Roboto;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 16px;
+    padding-top: 13px;
+    padding-bottom: 50px;
+    padding-left: 25px;
+}
+
+.checB:hover{
+    background-color: rgba(0,51,170,0.05);
+    border-left: 4px solid #0089FF;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    margin: 13px; 
+    font: inherit;
+    color: currentColor;
+    height: 20px;
+    width: 20px;
+    border: 1px solid #CCCCCC;
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+    position:center;
+  }
+  
+  input[type="checkbox"]::before {
+    content: "";
+    height: 15px;
+    width: 15px;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+    background-color: #0089FF;
+  }
+  
+  input[type="checkbox"]:checked::before {
+    transform: scale(1);
+  }
+
+  .form-control {
+    color: #444444;
+    font: Roboto Regular;
+    font-size: 14px;
+    line-height: 1.1;
+    display: grid;
+    grid-template-columns: 1em auto;
+    gap: 0.5em;
+  }
+
+  .arrow {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    margin-top: -60px;
+    position: absolute;
+    right: 73%; 
+    float: right;
+  }
+
+  .arrow span {
+    top: 0.5rem;
+    position: absolute;
+    width: 0.9rem;
+    height: 0.1rem;
+    background-color: #0033AA;
+    display: inline-block;
+    transition: all 0.2s ease;
+  }
+  .arrow span:first-of-type {
+    left: 0;
+    transform: rotate(-45deg);
+    background-color: #0033AA;
+  }
+  .arrow span:last-of-type {
+    right: 0;
+    transform: rotate(45deg);
+    background-color: #0033AA;
+  }
+  .arrow.active span:first-of-type {
+    transform: rotate(45deg);
+  }
+  .arrow.active span:last-of-type {
+    transform: rotate(-45deg);
+  }
+
+  .CloseButton{
+    height: 50px;
+    width: 280px;
+    border-radius: 4px;
+    background-color: #EDEDED;
+    color: #444444;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 50px;
+    font: "BentonSans";
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 20px;
+  }
+ 
+  @media screen and (min-width: 1920px) {
+      .AppGalleryMain{
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+      .appSection{
+        padding-left: 19.16px;
+      }
+      .arrow {
+        width: 24px;
+        height: 24px;
+        display: flex;
+        margin-top: -60px;
+        position: absolute;
+        right: 88%; 
+        float: right;
+      }
+    }
+  @media only screen and (max-width: 1300px){
+    .AppGalleryMain{
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+    .appSection{
+      padding-left: 19.16px;
+    }
+    .arrow {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      margin-top: -60px;
+      position: absolute;
+      right: 70%; 
+      float: right;
+    }
+  }
+
+  @media only screen and (max-width: 850px){
+    .AppGalleryMain{
+      grid-template-columns: minmax(100px, 221px) 1fr;
+  }
+    .filterContainer{
+      width: 221px;
+  }
+    .appSection{
+      padding-left: 11px;
+    }
+    .arrow {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      margin-top: -60px;
+      position: absolute;
+      right: 68%; 
+      float: right;
+    }    
+  }
+
+  @media only screen and (max-width: 767px){
+    .AppGalleryMain{
+      padding-left: 20px;
+      padding-right: 20px;
+      grid-template-columns: 1fr;
+    }
+    .NormalFilter{
+      display: none;
+    }
+    .filterSection{
+      display: none;
+    }
+    .appSection{
+      padding-left: 0px;
+    }
+    .MobileFilter{
+      display: flex;
+    }
+    .MobileappSection{
+      display: grid;
+    }
+  }
+
+  @media only screen and (max-width: 767px){
+    .MobileFilterIcon{
+      height: 140px;
+    }
+    .AppGalleryMain{
+      padding-top: 0px;
+    }
+  }
+
+  @media only screen and (max-width: 500px){
+    .AppGalleryMain{
+      padding-top: 14px;
+    }
+  }

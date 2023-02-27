@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Correspondence_City__c</fullName>
+    <description>This is the City where the office is located</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The city where the office is located (40 characters or less)</inlineHelpText>
+    <label>Correspondence City</label>
+    <length>40</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

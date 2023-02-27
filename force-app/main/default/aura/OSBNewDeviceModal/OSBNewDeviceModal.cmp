@@ -1,0 +1,389 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" Controller="OSB_NewDeviceModal_CTRL" >
+    
+    <aura:attribute name ="isAppInstalled" type="Boolean" default="false" access="public"/> 
+    <aura:attribute name ="step1" type="Boolean" default ="false" access="public"/>
+    <aura:attribute name ="deviceAuthenticated" type="Boolean" default ="false" access="public"/>
+    <aura:attribute name ="showtutorial" type="Boolean" default ="false" access="public"/>
+    <aura:attribute name ="isOpen" type="boolean" default="false" access="public"/>
+    <aura:attribute name ="imageId" type="String" access="public"/>
+    <aura:attribute name ="onDashboard" type = "Boolean" default = "false" access="public"/>
+    <aura:attribute name ="error" type = "Boolean" default = "false" access="public"/>
+    <aura:attribute name ="waitingForAuth" type = "Boolean" default = "false" access="public"/>
+    <aura:attribute name ="isLoading" type = "Boolean" default = "false" access="public"/>
+    <aura:attribute name ="qrLoading" type = "Boolean" default = "true" access="public"/>    
+    <aura:attribute name ="isMobile" type= "Boolean" default = "false" access="public"/>
+    <aura:attribute name ="isNotMobile" type= "Boolean" default = "true" access="public"/>
+    <aura:attribute name ="selectedNavItem" type= "String" default = "DeviceManagement" access="public"/>
+    <aura:attribute name ="timeLeft" default="180" type= "Integer" access="public"/>
+    <aura:attribute name="qrCodeBase64" default="" type="String" access="public" />
+    <aura:attribute name="oobStatusHandle" type="String" access="public"/>
+    <aura:attribute name="deviceInfo" type="String" access="public"/>
+    <aura:attribute name="intervalId" default="0" type="String" access="public" />
+    <aura:attribute name="reloadQr" default="false" type="Boolean" access="public" />
+    <aura:attribute name="userContactId" type="String" access="public"/>
+    <aura:attribute name="mfaRequired" type="Boolean" access="public" default="false"/>
+        
+    <lightning:navigation aura:id="navService"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    <aura:handler event="c:OSBTimerEvent" action="{!c.handleFinishTimer}"/>
+    <aura:registerEvent name="timerEvent" type="c:OSBTimerEvent"/>
+    <aura:registerEvent name="errorEvent" type="c:OSBErrorFiredEvent"/>
+    <aura:registerEvent name="navigationEvent" type="c:OSBNavigationEvent"/>
+    <aura:registerEvent name="closePopUpEvent" type="c:OSBClosePopUpEvent"/>
+    <aura:registerEvent name="profileAndSettingsTabChosen" type="c:OSBProfileAndSettingsEvent"/>
+        
+    <aura:if isTrue="{! v.isOpen}">
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="popUp-container" aura:id="add-device-modal" >
+          
+                                
+                <aura:if isTrue = "{!v.step1}">
+                    <div class="rectangle-modal  step1  ">
+                        <div class="modal-heading" id="modalHeader">
+                            <h1 class ="heading-text"> <i class="ms-icn_lock_closed slds-medium " ></i>   UPGRADE SECURITY</h1>
+                        </div>
+                        
+                        <div class="grey-line"></div>
+                        <div class="rectangle-steps" id="modalTitle">
+                            <div class="steps-nav slds-grid_align-center">
+                                <div class="step slds-col">
+                                    <div class= "oval-1">
+                                        <div class = "oval-2 oval-2_selected" ><div class="number" >1</div></div></div><div class= "step-name selected_font">Download App</div>
+                                </div>
+                                <div class="step slds-col">
+                                    <div class = "line"></div>
+                                    <div class = "oval-2 oval-2_unselected" ><div class="number" >2</div></div><div class= "step-name">Link Device</div></div>
+                                <div class="step slds-col">
+                                    <div class = "line"></div>
+                                    <div class = "oval-2 oval-2_unselected" ><div class="number" >3</div></div><div class= "step-name">Confirmation</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" rectangle2 slds-grid" id="modalBody" style="padding-bottom:13px"  >
+                            <div class= "rectangle-left phone-image slds-col slds-size--1-of-4  " ><img class="phone_image" src="{!$Resource.OSB_Images+'/phoneWithSignInMethods.png'}"/>
+                            </div>
+                            
+                            <div class=" rectangle-middle slds-col slds-col slds-small-size--4-of-4  slds-medium-size--2-of-4 slds-large-size--2-of-4">
+                                <h1 class="content__title">Download the OneHub Authenticator app</h1>
+                                <div class="content__subtitle">
+                                    <p class="subtitle" >Download and link the OneHub Authenticator app to your mobile device to add an enhanced layer of security.</p>
+                                    <p class="subtitle">Once you have linked your profile you will have the option to sign in using a QR code.</p>
+                                </div>
+                            </div>
+                            <div class=" rectangle-right  slds-col slds-grid_vertical slds-col slds-small-size--4-of-4  slds-medium-size--2-of-4 slds-large-size--2-of-4" >
+                                <p class="sub-text" >Install via the App or Play Store</p><br></br>
+                                <div class=" appOrPayStore  slds-grid slds-grid_vertical" >
+                                    <img class=" img slds-col appStore_image" src="{!$Resource.OSB_Images+'/appStore.svg'}"/>
+                                    <img class=" img slds-col googlePlay_image" src="{!$Resource.OSB_Images+'/googlePlay.svg'}"/>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <aura:if isTrue="{!v.isMobile}" >
+                            <div class="addDevice__buttons slds-grid slds-grid_vertical">
+                                <div class="button slds-col " >
+                                    <lightning:button label="NOT NOW" 
+                                                      class="btnStyle btn--gray newCase__button" 
+                                                      onclick="{!c.notNow}"/> 
+                                </div>
+                                <div class=" button slds-col " >
+                                    <lightning:button label="I HAVE INSTALLED THE APP" 
+                                                      class="btnStyle btn--darkblue newCase__button"
+                                                      onclick="{!c.goToLinkDevice}"/>
+                                </div>     
+                            </div>
+                            <aura:set  attribute="else">
+                                <div class="addDevice__buttons slds-grid slds-grid_align-end">
+                                    <div class="button slds-col slds-p-horizontal_medium" >
+                                        <lightning:button label="NOT NOW" 
+                                                          class="btnStyle btn--gray newCase__button" 
+                                                          onclick="{!c.notNow}"/> 
+                                    </div>
+                                    <div class="button slds-col slds-p-horizontal_medium" >
+                                        
+                                        <lightning:button label="I HAVE INSTALLED THE APP" 
+                                                          class="btnStyle btn--darkblue newCase__button"
+                                                          onclick="{!c.goToLinkDevice}"/>
+                                    </div>
+                                </div>
+                            </aura:set>
+                            
+                        </aura:if>
+                    </div>
+                </aura:if>
+                  
+                <div class="popUp-container" aura:id="add-device-modal" >
+                    <aura:if isTrue="{!v.isAppInstalled}" >
+                        <div class="rectangle-modal step2  ">
+                            <div class="modal-heading" id="modalHeader">
+                                <h1 class ="heading-text"> <i class="ms-icn_lock_closed slds-medium " ></i>   UPGRADE SECURITY</h1>
+                            </div>
+                            <div class="grey-line"></div>
+                            <div class="rectangle-steps" id="modalTitle">
+                                <div class="steps-nav slds-grid_align-center ">
+                                    <div class="step slds-col">
+                                        <i class= "ms-icn_check_circle_solid selected_font"/>
+                                        <div class= "step-name">Download App</div>
+                                    </div>
+                                    <div class="step slds-col">
+                                        <div class = "line"></div>
+                                        <div class= "oval-1">
+                                            <div class = "oval-2 oval-2_selected" ><div class="number" >2</div></div></div><div  class= "step-name selected_font">Link Device</div>
+                                    </div>
+                                    <div class="step slds-col">
+                                        <div class = "line"></div>
+                                        <div class = "oval-2 oval-2_unselected" ><div class="number" >3</div></div>
+                                        <div class= "step-name" >Confirmation</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" rectangle2 slds-grid" id="modalBody" style="padding-bottom:25px" >
+                                <div class= "rectangle-left phone-image-left slds-col slds-size_1-of-4 " ><img class="banner__image" src="{!$Resource.OSB_Images+'/linkYourDevice.png'}"/></div>
+                                <div class=" rectangle-middle slds-col slds-size_2-of-4">
+                                    <h1 class="content__title">Scan the QR code to link your device</h1>
+                                    <div class="content__subtitle">
+                                        <p>Open your OneHub authenticator app and scan the QR code to link your device.</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <aura:if isTrue="{!v.qrCodeBase64 == ''}">
+                                        <div class="rectangle2">
+                                            <img class="loader" src="{!$Resource.OSB_Images+'/loader.gif'}"/>
+                                        </div>
+                                        <aura:set attribute="else">
+                                            <aura:if isTrue="{!v.waitingForAuth == false}">
+                                                <aura:if isTrue="{!v.reloadQr}">
+                                                    <div class="qrCode" >
+                                                        <img src="{!$Resource.OSB_Images+'/qrReload.svg'}" onclick="{!c.reloadQrCode}"/>
+                                                    </div>
+                                                    <aura:set attribute="else">
+                                                        <div class="qrCode" >
+                                                            <img src="{!v.qrCodeBase64}"  />                
+                                                        </div>
+                                                    </aura:set>
+                                                </aura:if>
+                                                <div class="timer_info">
+                                                    <span class="timer_text">This code will expire in</span>
+                                                    <c:OSBTextTimer totalProgress="{!v.timeLeft}"/>
+                                                </div>
+                                            </aura:if>
+                                        </aura:set>
+                                    </aura:if>
+                                    <aura:if isTrue="{!v.waitingForAuth}">
+                                        <div class="timer" aura:id="countdown">
+                                            <div class="timer_text">Waiting for you to approve the sign in on the authentication app</div>
+                                            <div class="timer_contatiner"><c:OSBCircularTimer totalProgress="{!v.timeLeft}"/></div>
+                                            <div class="timer_text">{!v.deviceModel}</div>
+                                        </div>   
+                                    </aura:if>
+                                </div>
+                            </div>
+                            <div class="addDevice__buttons slds-grid slds-grid_align-end">
+                                <aura:if isTrue="{!v.waitingForAuth==false}">
+                                    <div class=" button slds-col slds-p-horizontal_medium  " >
+                                        <lightning:button label="BACK" 
+                                                          class="btnStyle btn--gray newCase__button" 
+                                                          onclick="{!c.goToStep1}"/> 
+                                    </div>
+                                    <aura:set  attribute="else">
+                                        <div class=" button slds-col slds-p-horizontal_medium  " >
+                                            <lightning:button label="BACK" 
+                                                              class="btnStyle btn_disabled newCase__button" 
+                                                              onclick="{!c.goToStep1}"
+                                                              disabled="true"/> 
+                                        </div>                   
+                                    </aura:set>
+                                </aura:if>
+                                <div class="button slds-col slds-p-horizontal_medium" >
+                                    <!-- the controller test is not for the final build -->
+                                    <lightning:button label="CANCEL" 
+                                                      class="btnStyle btn--darkblue newCase__button"
+                                                      
+                                                      onclick="{!c.handleCancel}"/>
+                                </div>
+                            </div>
+                        </div>
+                    </aura:if> 
+                </div>
+                
+                <div class="popUp-container" aura:id="add-device-modal" >                
+                    <aura:if isTrue="{!v.deviceAuthenticated}" >
+                        <div class="rectangle-modal step3">
+                            <div class="modal-heading">
+                                <h1 class ="heading-text"> <i class="ms-icn_lock_closed slds-medium " ></i>   UPGRADE SECURITY</h1>
+                            </div>
+                            <div class="grey-line"></div>
+                            
+                            <div class="rectangle-steps">
+                                <div class="steps-nav slds-grid_align-center ">
+                                    <div class="step slds-col">
+                                        <i class= "ms-icn_check_circle_solid selected_font"/>
+                                        <div  class= "step-name">Download App</div>
+                                    </div>
+                                    <div class="step slds-col">
+                                        <div class = "line"></div>
+                                        <i class= "ms-icn_check_circle_solid selected_font"/>
+                                        <div class= "step-name">Link Device</div>
+                                    </div>
+                                    <div class="step slds-col">
+                                        <div class = "line"></div>
+                                        <div class= "oval-1">
+                                            <div class = "oval-2 oval-2_selected" >
+                                                <div class="number" >3</div>
+                                            </div>
+                                        </div>
+                                        <div class="step-name selected_font" >Confirmation</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" rectangle2 slds-grid"  >
+                                <div class= "rectangle-left phone-image-left slds-col slds-size_1-of-4 " ><img class="banner__image" src="{!$Resource.OSB_Images+'/phoneConfirmed.png'}"/></div>
+                                <div class=" rectangle-middle slds-col slds-size_2-of-4">
+                                    <h1 class="content__title">Device successfully linked</h1>
+                                    <div class="content__subtitle">
+                                        <p >The next time you sign in you will be prompted to </p><p>use the app</p>
+                                        <div class="linked-device">
+                                            <p>Linked device: "{!v.deviceInfo}" </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rectangle-right check-icon slds-col slds-size_1-of-4" style="border: 0" >
+                                    <i class="largeIcon ms-icn_check_circle" ></i>              
+                                </div>
+                            </div>
+                            <div class="addDevice__buttons slds-grid slds-grid_align-end  ">
+                                <div class=" linkAnother button slds-col slds-p-horizontal_medium" >
+                                    <lightning:button label="LINK ANOTHER DEVICE" 
+                                                      class="btnStyle btn--gray newCase__button" 
+                                                      onclick="{!c.goToDeviceManagement}"/> 
+                                </div>
+                                <div class="button slds-col slds-p-horizontal_medium" >
+                                    <lightning:button label="CONTINUE TO ONEHUB" 
+                                                      class="btnStyle btn--darkblue  newCase__button"
+                                                      onclick="{!c.goToHome}"/>
+                                </div>
+                            </div>
+                        </div>
+                    </aura:if>
+                </div>
+                
+                <aura:if isTrue="{!v.showtutorial}" >
+                    <div class="tutorial-modal rectangle-modal" >
+                        <div class="modal-heading">
+                            <h1 class ="heading-text"> <i class="ms-icn_lock_closed slds-medium " ></i>   UPGRADE SECURITY</h1>
+                        </div>
+                        <div class="grey-line"></div>
+                        <div class=" sub-rectangle-tutorial slds-grid"  >
+                            <div class= "tutorial1 slds-col" ><img class="tutorial_image1" src="{!$Resource.OSB_Images+'/AddDeviceTutorial1.png'}"/></div>
+                            <div class=" tutorial2 slds-col" >
+                                <img class="tutorial_image1" src="{!$Resource.OSB_Images+'/AddDeviceTutorial2.png'}"/>             
+                            </div>
+                        </div>
+                        <div class="tutorial-content">
+                            <h1 class="tutorial_content__title">Are you sure you don’t want the added security?</h1>
+                            <div class="tutorial_content__subtitle">
+                                <p>That’s ok, you will be able to sign in without the app. You can always link a device later from the device management interface. </p>
+                                <p>1. Click on ‘Profile and Settings’ at the top of your screen</p>
+                                <p>2. Click on ‘Device Management’ </p>
+                                <p>3. Click on ‘Add device’ and follow the prompts</p>
+                            </div>
+                        </div>
+                        <aura:if isTrue="{!v.isMobile}">
+                        </aura:if>
+                        <div class="addDevice__buttons slds-grid slds-grid_align-end " >
+                            <div class="device_checkbox">
+                                <div class="dontAsk " style=" text-align: -webkit-center;padding:10px" >
+                                    <lightning:input aura:id="dontshow" class="checkbox-container" type="checkbox" label=" Don’t ask again" />                          
+                                </div>
+                            </div>
+                            <div class="button slds-col slds-p-horizontal_medium" >
+                                <lightning:button label="INSTALL THE APP" 
+                                                  class="btnStyle btn--gray newCase__button" 
+                                                  onclick="{!c.goToStep1}"/> 
+                            </div>
+                            
+                            <div class="button slds-col slds-p-horizontal_medium" >
+                                <lightning:button label="CONTINUE TO ONEHUB" 
+                                                  class="btnStyle btn--darkblue newCase__button"
+                                                  onclick="{!c.goToHome}"/>
+                            </div>
+                        </div>
+                    </div>
+                </aura:if>
+                
+                <aura:if isTrue="{!v.isLoading}" >
+                    <div class="rectangle-modal" style="height:600px">
+                        <div class="modal-heading">
+                            <h1 class ="heading-text"> <i class="ms-icn_lock_closed slds-medium " ></i>   UPGRADE SECURITY</h1>
+                        </div>
+                        <div class="grey-line"></div>
+                        <div class="rectangle2"><img class="loader" src="{!$Resource.OSB_Images+'/loader.gif'}"/></div>
+                    </div>
+                </aura:if>
+                
+                <aura:if isTrue="{!v.mfaRequired}" >
+                    <div class="rectangle-modal" style="height:477px">
+                        <!--div class=" errorHeading slds-grid">
+                            <lightning:button variant="base" class= "closeButton"><img class="closeButton slds-col"  src="{!$Resource.OSB_Images+'/closeIcon.svg'}" onclick="{!c.closeErrorScreen}"/></lightning:button>
+                        </div-->
+                        <div class="modal-heading">
+                            <h1 class ="heading-text"> <i class="ms-icn_lock_closed slds-medium " ></i>   UPGRADE SECURITY</h1>
+                        </div>
+                        <div class="grey-line"></div>
+                        
+                        
+                        <div class="mfaRequiredMessage slds-grid_vertical  slds-align_absolute-center">
+                           <div class="heading slds-col" style="width: 60%;" >The solution you are trying to access needs a higher level of security. Please ensure you follow the steps below:</div>
+                            <div class="rectangle-steps slds-col slds-align_absolute-center slds-m-vertical_xx-large" style="width: 80%;" id="modalTitle">
+                            <div class="steps-nav slds-grid_align-center" style="text-align: left;">
+                                <div class="step slds-col">
+                                    
+                                        <div class = "oval-2 oval-2_unselected slds-m-horizontal_x-small" style="width:40px;background-color: #0033AA; margin-top:0" ><div class="number" style="color: white;" >1</div></div><div class="slds-grid_vertical"><div class= "step-heading slds-col ">Download the OneHub Authenticator app</div><div class="slds-col step-sub-heading slds-m-vertical_small">To add an enhanced layer of security.</div>
+                                </div></div>
+                                <div class="step slds-col">
+                                    <div class = "line" style="margin-top: 13px;width: 175px;"></div>
+                                    <div class = "oval-2 oval-2_unselected slds-m-horizontal_x-small" style="width:40px;background-color: #0033AA;margin-top:0" ><div class="number" style="color: white;" >2</div></div><div class="slds-grid_vertical"><div class= "step-heading slds-col">Link Device</div><div class="slds-col step-sub-heading slds-m-vertical_small">Link the OneHub Authenticator app to one or multiple devices.</div></div></div>
+                                <div class="step slds-col">
+                                    <div class = "line" style="margin-top: 13px;width: 175px;"></div>
+                                    <div class = "oval-2 oval-2_unselected slds-m-horizontal_x-small" style="width:40px;background-color: #0033AA;margin-top:0" ><div class="number" style="color: white;" >3</div></div><div class="slds-grid_vertical"><div class= "step-heading slds-col">Sign in to Onehub</div><div class="slds-col step-sub-heading slds-m-vertical_small">Sign into OneHub using the OneHub Authenticator app</div>
+                                    </div></div>
+                            </div>
+                        </div>
+                            </div>
+                            <div style="margin:20px"></div>
+                        <div class="addDevice__buttons slds-grid slds-grid_align-end " >
+                            
+                            <div class="button slds-col slds-p-horizontal_medium" >
+                                <lightning:button label="CLOSE" 
+                                                  class="btnStyle btn--gray newCase__button" 
+                                                  onclick="{!c.closeErrorScreen}"/> 
+                            </div>
+                            
+                            <div class="button slds-col slds-p-horizontal_medium" >
+                                <lightning:button label="SIGN OUT" 
+                                                  class="btnStyle btn--darkblue newCase__button"
+                                                  onclick="{!c.logout}"/>
+                            </div>
+                        </div>
+                    </div>
+                </aura:if>
+                
+                <aura:if isTrue="{!v.error}" >
+                    <div class="rectangle-modal " style="height:600px">
+                        <div class=" errorHeading slds-grid">
+                            <lightning:button variant="base" class= "closeButton"><img class="closeButton slds-col"  src="{!$Resource.OSB_Images+'/closeIcon.svg'}" onclick="{!c.closeErrorScreen}"/></lightning:button>
+                        </div> 
+                        <div class="rectangle-error">
+                            <div class="ms-icn_alert_circle_outline" style="font-size:48px;color:#FF0000"/><br></br>
+                            <div class="error">We have experienced an unexpected error</div>
+                            <lightning:button class="reload" variant="base" label="Reload" onclick="{!c.reload}" ></lightning:button>
+                        </div>
+                    </div>
+                </aura:if>
+                <div class="popUp-overlay popUp-visible" aura:id="visibleOverlay" id="visibleOverlay"></div>
+                <div class="popUp-overlay popUp-invisible"></div>
+            </div>
+        </section>          
+    </aura:if>
+</aura:component>

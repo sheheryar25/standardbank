@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NeedSyncWithProduct__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>SFP-12591 The field uses in sync automation with SB_Product__c object.</description>
+    <externalId>false</externalId>
+    <label>NeedSyncWithProduct</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

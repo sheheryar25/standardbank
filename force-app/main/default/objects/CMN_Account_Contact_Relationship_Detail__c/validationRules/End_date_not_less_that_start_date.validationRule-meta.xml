@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>End_date_not_less_that_start_date</fullName>
+    <active>false</active>
+    <errorConditionFormula>IF( Valid_To__c &lt; Valid_From__c , true, false)</errorConditionFormula>
+    <errorDisplayField>Valid_To__c</errorDisplayField>
+    <errorMessage>Valid to cannot be less than valid from</errorMessage>
+</ValidationRule>

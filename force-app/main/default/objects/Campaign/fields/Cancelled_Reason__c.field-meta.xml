@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cancelled_Reason__c</fullName>
+    <description>Case#1168 - 11/2011 - Rudolf Niehaus
+            The reason why Campaign was cancelled</description>
+    <externalId>false</externalId>
+    <label>Status Reason</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Status</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Brief Incomplete</fullName>
+                <default>false</default>
+                <label>Brief Incomplete</label>
+            </value>
+            <value>
+                <fullName>Budget Not Signed Off</fullName>
+                <default>false</default>
+                <label>Budget Not Signed Off</label>
+            </value>
+            <value>
+                <fullName>Date Undecided</fullName>
+                <default>false</default>
+                <label>Date Undecided</label>
+            </value>
+            <value>
+                <fullName>Insufficient Budget</fullName>
+                <default>false</default>
+                <label>Insufficient Budget</label>
+            </value>
+            <value>
+                <fullName>Key Speakers/Host Unavailable</fullName>
+                <default>false</default>
+                <label>Key Speakers/Host Unavailable</label>
+            </value>
+            <value>
+                <fullName>Lack of Client Interest</fullName>
+                <default>false</default>
+                <label>Lack of Client Interest</label>
+            </value>
+            <value>
+                <fullName>Objective Unclear</fullName>
+                <default>false</default>
+                <label>Objective Unclear</label>
+            </value>
+            <value>
+                <fullName>Timelines Not Met</fullName>
+                <default>false</default>
+                <label>Timelines Not Met</label>
+            </value>
+            <value>
+                <fullName>To Be Rescheduled</fullName>
+                <default>false</default>
+                <label>To Be Rescheduled</label>
+            </value>
+            <value>
+                <fullName>Venue Unavailable</fullName>
+                <default>false</default>
+                <label>Venue Unavailable</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Brief Incomplete</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Budget Not Signed Off</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Date Undecided</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Insufficient Budget</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Key Speakers/Host Unavailable</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Lack of Client Interest</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Objective Unclear</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Timelines Not Met</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>To Be Rescheduled</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cancelled</controllingFieldValue>
+            <valueName>Venue Unavailable</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

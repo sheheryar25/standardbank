@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CSI_IB_Comment__c</fullName>
+    <description>CSI IB Comment (EN-692).</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Why have you given Investment Banking this rating?</inlineHelpText>
+    <label>CSI IB Comment</label>
+    <length>131072</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

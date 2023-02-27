@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Escalated Angola Support</name>
+    <queueMembers>
+        <publicGroups>
+            <publicGroup>Angola_Support_Mgt_Cash_Centre</publicGroup>
+            <publicGroup>Angola_Support_Mgt_CIB_Credit</publicGroup>
+            <publicGroup>Angola_Support_Mgt_CIB_TPS_Products</publicGroup>
+            <publicGroup>Angola_Support_Mgt_Collections</publicGroup>
+            <publicGroup>Angola_Support_Mgt_Compliance</publicGroup>
+            <publicGroup>Angola_Support_Mgt_Finance</publicGroup>
+            <publicGroup>Angola_Support_Mgt_Global_Markets</publicGroup>
+            <publicGroup>Angola_Support_Mgt_GMO</publicGroup>
+            <publicGroup>Angola_Support_Mgt_Legal</publicGroup>
+            <publicGroup>Angola_Support_Mgt_Payments</publicGroup>
+            <publicGroup>Angola_Support_Mgt_PBB_Credit</publicGroup>
+            <publicGroup>Angola_Support_Mgt_PBB_Products</publicGroup>
+            <publicGroup>Angola_Support_Mgt_Processing</publicGroup>
+            <publicGroup>Angola_Support_Mgt_Recons</publicGroup>
+        </publicGroups>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Call_Report__c</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

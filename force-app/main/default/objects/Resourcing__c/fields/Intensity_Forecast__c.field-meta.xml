@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Intensity_Forecast__c</fullName>
+    <description>Bankers can pick from the following list of values:
+
+Full
+High
+Medium
+Low
+Inactive
+[SFP-4974]</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please provide the anticipated intensity for the week ahead. Indicative intensity guidance:
+
+Full – Greater than 50 hours
+
+High – Between 30 and 50 hours
+
+Medium – Between 10 and 30 hours
+
+Low – Between 0 and 10 hours
+
+Inactive –0 hours</inlineHelpText>
+    <label>Intensity Forecast</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Full</fullName>
+                <default>false</default>
+                <label>Full</label>
+            </value>
+            <value>
+                <fullName>High</fullName>
+                <default>false</default>
+                <label>High</label>
+            </value>
+            <value>
+                <fullName>Medium</fullName>
+                <default>false</default>
+                <label>Medium</label>
+            </value>
+            <value>
+                <fullName>Low</fullName>
+                <default>false</default>
+                <label>Low</label>
+            </value>
+            <value>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+                <label>Inactive</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

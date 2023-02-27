@@ -1,0 +1,50 @@
+<aura:component controller="StdBank_Ltn_ActionItems" implements="flexipage:availableForAllPageTypes">
+	<aura:attribute name="isLoading" type="Boolean" default="true" access="private" />
+	<aura:attribute name="actionItems" type="List" default="[]" access="private" />
+
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <article class="slds-card" style="background-color: white">
+        <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="slds-media__body">
+                    <h2 class="header-title-container">
+                        <span class="slds-text-heading_small slds-truncate" title="Items to Action">Items to Action</span>
+                    </h2>
+                </div>
+            </header>
+        </div>
+        <div class="slds-card__body slds-card__body_inner">
+            <aura:if isTrue="{!v.isLoading}">
+                <div class="slds-spinner_container" style="position: relative; height: 4em;">
+                    <div class="slds-spinner_brand slds-spinner slds-spinner_small" aria-hidden="false" role="alert">
+                        <div class="slds-spinner__dot-a"></div>
+                        <div class="slds-spinner__dot-b"></div>
+                    </div>
+                </div>
+
+                <aura:set attribute="else">
+                    <div>
+                        <aura:if isTrue="{!v.actionItems.length == 0}">
+                            <p style="text-align: center; color: rgb(84, 105, 141);">
+                                No items to action.
+                            </p>
+                            <aura:set attribute="else">
+                            	<ul class="slds-list_vertical slds-has-dividers_top">
+                                    <aura:iteration items="{!v.actionItems}" var="actionItem">
+                                        <li class="slds-item slds-p-vertical_small">
+                                            <c:ActionItem data="{!actionItem}"/>
+                                        </li>
+                                    </aura:iteration>
+                                </ul>
+                            </aura:set>
+                        </aura:if>
+                    </div>
+                </aura:set>
+            </aura:if>
+        </div>
+        <div class="slds-card__footer">
+            <!-- Bottom maybe here :3 -->
+        </div>
+    </article>
+</aura:component>

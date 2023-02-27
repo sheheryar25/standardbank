@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Second_Line_Support_Close_Case</fullName>
+    <active>true</active>
+    <description>US-3679 Prevent a Second Line Support Agent from closing a case</description>
+    <errorConditionFormula>AND 
+( 
+ISPICKVAL($User.Business_Unit__c , &apos;Second Line Support&apos;), 
+ISCHANGED(Status), 
+ISPICKVAL(Status , &apos;Closed&apos;) 
+)</errorConditionFormula>
+    <errorMessage>Only a First Line Support user can close this case.</errorMessage>
+</ValidationRule>

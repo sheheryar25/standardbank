@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CommB_Compliance_Case_Mandatory_Fields</fullName>
+    <active>true</active>
+    <description>US-1635 - If Applicable To = Compliance, then appropriate fields must be populated.</description>
+    <errorConditionFormula>AND (
+   ISPICKVAL( Applicable_To__c , &quot;Compliance&quot;),
+   ISBLANK( TEXT( Compliance_Classification__c ) ) 
+)</errorConditionFormula>
+    <errorDisplayField>Compliance_Classification__c</errorDisplayField>
+    <errorMessage>If this case applies to Compliance, then Compliance Classification must be populated</errorMessage>
+</ValidationRule>

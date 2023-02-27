@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>The_Case_Related_To_should_be_valid</fullName>
+    <active>true</active>
+    <description>US-1210:CSI - Improve Case automation &amp; data quality control - Update. Case Related To field should contain values available in the picklist</description>
+    <errorConditionFormula>AND( 
+(IF(AND(NOT(ISPICKVAL(Related_To__c,&quot;Client Coverage&quot;)), 
+NOT(ISPICKVAL(Related_To__c,&quot;Global Markets&quot;)), 
+NOT(ISPICKVAL(Related_To__c,&quot;Investment Banking&quot;)), 
+NOT(ISPICKVAL(Related_To__c,&quot;Transactional Products and Services&quot;)), 
+NOT(ISPICKVAL(Related_To__c,&quot;Across CIB&quot;))), True, False)), 
+IF(Text(Related_To__c)&lt;&gt; null,True,False ))</errorConditionFormula>
+    <errorMessage>The Case Related To should contain either Transactional Products and Services,Client Coverage,Global Markets,Investment Banking or Across CIB</errorMessage>
+</ValidationRule>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Insight__c</fullName>
+    <description>This field refers to the actual details of the insight.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Details of the actual insight from Akili.</inlineHelpText>
+    <label>Insight</label>
+    <length>40000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

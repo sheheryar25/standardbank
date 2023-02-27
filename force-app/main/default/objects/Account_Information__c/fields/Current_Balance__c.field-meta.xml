@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Current_Balance__c</fullName>
+    <description>&quot;Total value of client&apos;s facilities or credit agreements that they have with the bank
+Salesforce field name is different from the api name
+US-4409
+US-4425
+US-4291&quot;</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field identifies the current balance on the specified account (either in debit or credit balance)
+Value of all the client&apos;s facilities with the bank</inlineHelpText>
+    <label>Current Balance</label>
+    <precision>17</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

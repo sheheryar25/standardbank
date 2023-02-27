@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Create_Action_Plan</fullName>
+    <availability>online</availability>
+    <description>SFP-8537: This button will create a new Action Plan and pre-populate Name, Start Date and Target Record</description>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>Create Action Plan</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <url>/lightning/o/ActionPlan/new?
+defaultFieldValues=
+Name={!Opportunity.Name}+-+{!TODAY()},
+ActionPlanType=Industries,
+TargetId={!Opportunity.Id},
+StartDate={!TEXT(Opportunity.Start_Date__c)}</url>
+</WebLink>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Completed_Client_Details_New__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>US-4492 -- Field used for refactored nbac validation</description>
+    <externalId>false</externalId>
+    <label>Completed Client Details</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

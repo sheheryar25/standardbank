@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Machine_setup__c</fullName>
+    <description>Additional field on user to track machine type.</description>
+    <externalId>false</externalId>
+    <label>Machine Setup</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Windows 7 Laptop</fullName>
+                <default>false</default>
+                <label>Windows 7 Laptop</label>
+            </value>
+            <value>
+                <fullName>Windows 7 Desktop</fullName>
+                <default>false</default>
+                <label>Windows 7 Desktop</label>
+            </value>
+            <value>
+                <fullName>Windows 7 GM Laptop 64 Bit</fullName>
+                <default>false</default>
+                <label>Windows 7 GM Laptop 64 Bit</label>
+            </value>
+            <value>
+                <fullName>Windows 7 GM Desktop 64 Bit</fullName>
+                <default>false</default>
+                <label>Windows 7 GM Desktop 64 Bit</label>
+            </value>
+            <value>
+                <fullName>XP Machine</fullName>
+                <default>false</default>
+                <label>XP Machine</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

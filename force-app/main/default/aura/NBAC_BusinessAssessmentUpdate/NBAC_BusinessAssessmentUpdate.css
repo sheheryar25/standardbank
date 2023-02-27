@@ -1,0 +1,11 @@
+/**
+ * Created by pmalicki on 17.08.2018.
+ */
+.THIS {
+}
+
+.THIS .content {
+    margin-top : 25px;
+    margin-bottom : 25px;
+    font-size : 15px;
+}

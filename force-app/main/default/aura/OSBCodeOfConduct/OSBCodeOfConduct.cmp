@@ -1,0 +1,9 @@
+<aura:component description="OSBCodeOfConduct" access="global" implements="forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes" controller="OSB_DocumentWrapper_CTRL">
+	
+    <aura:attribute name="resourceURL" type="String" default="" />
+    <aura:handler name="init" value="{!this}" action="{!c.init}" />
+    
+    <div class="terms__container">
+        <iframe src="{!v.resourceURL}"></iframe>
+    </div>
+</aura:component>

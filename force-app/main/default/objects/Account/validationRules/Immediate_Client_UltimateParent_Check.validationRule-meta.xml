@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Immediate_Client_UltimateParent_Check</fullName>
+    <active>true</active>
+    <description>This validation checks when the client Client Relation Hierarchy level is &apos;Immediate Parent&apos; then the Parent Client field should only allow clients of Record Type - &apos;Ultimate Group Parent&apos;
+only.</description>
+    <errorConditionFormula>OR(AND(ISPICKVAL(Client_Relationship_Hierarchy__c,&quot;Immediate Parent&quot;), NOT(Parent.RecordType.Name=&quot;Ultimate Group Parent&quot;) ,OR(RecordType.Name==&quot;Potential Client&quot;,RecordType.Name==&quot;Potential (CIF)&quot;,RecordType.Name==&quot;Potential (Goldtier)&quot;),!ISPICKVAL(Primary_Relationship_Holder__c, &quot;Commercial Banking&quot;)),AND(ISPICKVAL(Client_Relationship_Hierarchy__c,&quot;Immediate Parent&quot;),(ISBLANK( ParentId ) ),RecordType.Name==&quot;Potential Client&quot;,!ISPICKVAL(Primary_Relationship_Holder__c, &quot;Commercial Banking&quot;)))</errorConditionFormula>
+    <errorMessage>You are trying to create an Immediate Parent Client. Ensure that you complete the Parent Client field with an existing Group Parent Client value.</errorMessage>
+</ValidationRule>

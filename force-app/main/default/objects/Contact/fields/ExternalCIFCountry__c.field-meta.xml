@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ExternalCIFCountry__c</fullName>
+    <description>SFP-10768 [1] - A 2-digit country code that identifies the country of origin for this record</description>
+    <externalId>false</externalId>
+    <label>External CIF Country</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>ExternalCIFCountry</valueSetName>
+    </valueSet>
+</CustomField>

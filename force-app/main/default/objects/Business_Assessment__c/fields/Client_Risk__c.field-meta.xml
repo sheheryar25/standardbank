@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Client_Risk__c</fullName>
+    <description>Measurement rating of the client&apos;s ability to manage E&amp;S risks, based on the client&apos;s commitment, capacity and track record in relation to E&amp;S issues. Sourced from completion of the CRA (client risk assessment) in the E&amp;S screening tool.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Measurement rating of the client&apos;s ability to manage E&amp;S risks, based on the client&apos;s commitment, capacity and track record in relation to E&amp;S issues. Sourced from completion of the CRA (client risk assessment) in the E&amp;S screening tool.</inlineHelpText>
+    <label>Client Risk</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>High</fullName>
+                <default>false</default>
+                <label>High</label>
+            </value>
+            <value>
+                <fullName>Medium</fullName>
+                <default>false</default>
+                <label>Medium</label>
+            </value>
+            <value>
+                <fullName>Low</fullName>
+                <default>false</default>
+                <label>Low</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

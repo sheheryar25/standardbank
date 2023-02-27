@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Client_Group_Parent__c</fullName>
+    <description>EMEA_SOW_StandardBank_009: The Group Parent of the Client record. Calculated field so no hover information available.</description>
+    <externalId>false</externalId>
+    <formula>HYPERLINK( &quot;/&quot; + Account.Group_Parent__r.Id , Account.Group_Parent__r.Name, &quot;_top&quot;)</formula>
+    <inlineHelpText>The Group Parent of the Client record.</inlineHelpText>
+    <label>Client Group Parent</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

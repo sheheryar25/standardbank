@@ -1,0 +1,49 @@
+<aura:component extends="c:CI_Base" implements="flexipage:availableForAllPageTypes">
+    <aura:attribute name="totalRevenueThisYear" type="Integer"/>
+    <aura:attribute name="totalRevenueLastYear" type="Integer"/>
+    <aura:attribute name="differencePercent" type="String"/>
+    <aura:attribute name="revenueSnapshotDate" type="String"/>
+    <aura:attribute name="currentYear" type="String"/>
+    <aura:attribute name="previousYear" type="String"/>
+    <aura:attribute name="redirectComponent" type="String" default="CI_RevenueSecondLevel" access="private"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <lightning:navigation aura:id="navService"/>
+    <c:CI_RevenueService aura:id="revenue_service"/>
+
+    <a onclick="{!c.handleOnClick}" style="color: inherit; text-decoration: inherit;">
+        <article class="card_with_shadow">
+            <div class="slds-p-around_small slds-m-bottom_large slds-p-bottom_large" style="height:100%">
+                <p class="slds-text-heading_small">Revenue YoY</p>
+                <div class="slds-grid slds-m-top_x-small">
+                    <div class="slds-grid  slds-size_1-of-6 slds-text-heading_medium ">
+                        {!$Locale.currencyCode}
+                    </div>
+
+                <div class="slds-grid slds-col slds-size_5-of-6 slds-p-left_small slds-wrap slds-text-align_left">
+                    <div class="slds-text-heading_medium">
+                        <ui:outputNumber value="{!v.totalRevenueThisYear}"/>
+                        <p class="slds-text-body_regular">{!v.currentYear} YTD</p>
+                    </div>
+
+                        <div class="card_value_secondary slds-p-right_xx-small slds-p-left_xx-small">|</div>
+
+                        <div class="slds-text-heading_medium">
+                            <ui:outputNumber value="{!v.totalRevenueLastYear}"/>
+                            <p class="slds-text-body_regular">{!v.previousYear} YTD</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="slds-card__footer slds-p-around_none slds-m-around_none slds-align-bottom slds-is-absolute"
+                    style="z-index:2; bottom:1px; left:1px; border:0px; width:100%;">
+                <div class="slds-float_left slds-p-around_small slds-text-body_small">
+                    {!v.revenueSnapshotDate}
+                </div>
+                <div aura:id="difference_percent" class=" slds-m-around_xx-small slds-float_right slds-text-heading_medium slds-wrap">
+                    {!v.differencePercent}
+                </div>
+            </footer>
+        </article>
+    </a>
+</aura:component>

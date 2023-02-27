@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_for_Inactive_is_Required</fullName>
+    <active>true</active>
+    <description>When a Contact is made Inactive, the Reason for Inactive is required to be completed. This is related to Case: C-00000445.</description>
+    <errorConditionFormula>Inactive__c &amp;&amp; ISBLANK(TEXT(Reason_for_Inactive__c ))</errorConditionFormula>
+    <errorDisplayField>Reason_for_Inactive__c</errorDisplayField>
+    <errorMessage>Reason for Inactive is required when a Contact is made Inactive</errorMessage>
+</ValidationRule>

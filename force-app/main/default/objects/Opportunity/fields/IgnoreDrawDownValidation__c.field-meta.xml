@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IgnoreDrawDownValidation__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Case#141 - Rudolf Niehaus
+If this flag gets updated, then validation rules can use this flag to skip validation with the ISCHANGED() function. The reason is that we do not want the validation to run when we update Draw Downs, else the validation will run into an endless loop</description>
+    <externalId>false</externalId>
+    <label>IgnoreDrawDownValidation</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

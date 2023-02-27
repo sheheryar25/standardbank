@@ -1,0 +1,109 @@
+<aura:component>
+    <aura:attribute name="groupedByClient" type="Object[]" access="public" required="true"/>
+    <aura:attribute name="numberOfClientsPresented" type="Integer" access="public" required="true"/>
+    <aura:attribute name="title" type="String" access="public"/>
+
+    <lightning:card title="{!v.title}">
+    <aura:iteration var="client" items="{!v.groupedByClient}" end="{!v.numberOfClientsPresented}">
+        <div class="slds-section" style="margin-top:0px; margin-bottom:0px; padding-bottom: .5rem; padding-top:.5rem;">
+            <h3 class="slds-section__title" onclick="{!c.toggleSection}">
+                <div class="slds-button slds-section__title-action background_white slds-grid">
+                    <div>
+                        <lightning:icon class="slds-section__title-action-icon  slds-button__icon_left" iconName="utility:chevrondown" size="x-small"
+                        />
+                    </div>
+                    <div>
+                        <div class="bold slds-text-body_small slds-p-around_medium slds-grid">
+                            <div class="slds-col slds-truncate">{!client.Name}</div>
+                            <div class="slds-p-left_small slds-col">
+                                <lightning:buttonIcon class="slds-align-middle slds-p-bottom_x-small" iconName="utility:share" size="medium" name="{!client.Id}"
+                                                      alternativeText="Go to client" onclick="{!c.redirectToClient}" type="button" variant="bare"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </h3>
+            <div class="slds-grid slds-grid_vertical">
+                <div class="slds-col">
+                    <div class="slds-grid slds-grid_vertical">
+                        <div class="slds-box slds-col background_light_grey slds-p-around_xx-small slds-grid">
+                            <div class="slds-col slds-text-title_caps">
+                                Revenue
+                            </div>
+                            <div class="slds-col slds-text-align_right">
+                                <aura:if isTrue="{!client.Revenue != null}">
+                                    <lightning:formattedNumber style="currency" currencyCode="{!$Locale.currencyCode}" currencyDisplayAs="code" value="{!client.Revenue}" />
+                                </aura:if>
+                            </div>
+                        </div>
+                        <div class="slds-box slds-col background_light_grey slds-p-around_xx-small slds-grid">
+                            <div class="slds-col slds-text-title_caps">
+                                Budget
+                            </div>
+                            <div class="slds-col slds-text-align_right">
+                                <aura:if isTrue="{!client.Budget != null}">
+                                    <lightning:formattedNumber style="currency" currencyCode="{!$Locale.currencyCode}"  currencyDisplayAs="code" value="{!client.Budget}" />
+                                </aura:if>
+                            </div>
+                        </div>
+                        <div class="slds-box slds-col background_light_grey slds-p-around_xx-small slds-grid">
+                            <div class="slds-col slds-text-title_caps">
+                                Run Rate %
+                            </div>
+                            <div class="slds-col slds-text-align_right">
+                                <aura:if isTrue="{!client.Variance != null}">
+                                    <lightning:formattedNumber style="percent" value="{!client.Variance}" />
+                                </aura:if>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div aria-hidden="false" class="slds-section__content" style="padding-top:0px;">
+
+                    <div class="second_level_padding">
+                        <aura:iteration items="{!client._children}" var="division">
+                            <div class="slds-col">
+                                <div class="slds-box bold background_white slds-p-around_xx-small">
+                                            {!division.Name}
+                                        </div>
+                                <div class="slds-box slds-col background_light_grey slds-p-around_xx-small slds-grid">
+                                    <div class="slds-col slds-text-title_caps">
+                                        Revenue
+                                    </div>
+                                    <div class="slds-col slds-text-align_right">
+                                        <aura:if isTrue="{!division.Revenue != null}">
+                                            <lightning:formattedNumber style="currency" currencyCode="{!$Locale.currencyCode}" currencyDisplayAs="code" value="{!division.Revenue}" />
+                                        </aura:if>
+                                    </div>
+                                </div>
+                                <div class="slds-box slds-col background_light_grey slds-p-around_xx-small slds-grid">
+                                    <div class="slds-col slds-text-title_caps">
+                                        Budget
+                                    </div>
+                                    <div class="slds-col slds-text-align_right">
+                                        <aura:if isTrue="{!division.Budget != null}">
+                                            <lightning:formattedNumber style="currency" currencyCode="{!$Locale.currencyCode}" currencyDisplayAs="code" value="{!division.Budget}" />
+                                        </aura:if>
+                                    </div>
+                                </div>
+                                <div class="slds-box slds-col background_light_grey slds-p-around_xx-small slds-grid">
+                                    <div class="slds-col slds-text-title_caps">
+                                        Run Rate %
+                                    </div>
+                                    <div class="slds-col slds-text-align_right">
+                                        <aura:if isTrue="{!division.Variance != null}">
+                                            <lightning:formattedNumber style="percent" value="{!division.Variance}" />
+                                        </aura:if>
+                                    </div>
+                                </div>
+                            </div>
+                        </aura:iteration>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </aura:iteration>
+    </lightning:card>
+</aura:component>

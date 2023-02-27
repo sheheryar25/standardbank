@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Revenue_Num__c</fullName>
+    <description>Use for roll up of currency fields to Oppt</description>
+    <externalId>false</externalId>
+    <formula>(Total_Fees__c  +  Total_Margin__c  +  Total_Other__c + total_revenue_amount__c + Total_Commission__c ) / ExchangeRate__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Total Product Revenue (Num)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

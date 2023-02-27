@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Populate_CY_Fees_CommB_Lending</fullName>
+    <active>true</active>
+    <description>Disallow empty Current Year Fees for Commercial Banking Lending products (US-1196).</description>
+    <errorConditionFormula>ISBLANK(Current_Year_Fees__c) &amp;&amp; $RecordType.DeveloperName = &quot;CommB_Lending&quot;</errorConditionFormula>
+    <errorDisplayField>SA_Amount__c</errorDisplayField>
+    <errorMessage>Please enter a value for Current Year Fees.</errorMessage>
+</ValidationRule>

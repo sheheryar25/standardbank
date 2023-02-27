@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Inflow_Outflow_Type__c</fullName>
+    <description>This field will serve as one of the filters for 2 reports: Inflow by narrative and Outflow by narrative
+US-4456</description>
+    <externalId>false</externalId>
+    <formula>IF(ISPICKVAL( Transaction_Type__c , &quot;Inflow/Outflow&quot;), IF( Transaction_Amount__c &gt; 0, &quot;Inflow&quot;, &quot;Outflow&quot;), &quot;&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Inflow Outflow Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

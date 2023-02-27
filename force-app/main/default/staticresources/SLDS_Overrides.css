@@ -1,0 +1,20 @@
+.slds .slds-checkbox [type="checkbox"][disabled] + .slds-checkbox--faux,
+.slds .slds-checkbox [type="checkbox"][disabled] ~ .slds-checkbox--faux {
+  background-color: white;
+  border-color: #d8dde6;
+}
+
+.slds .slds-checkbox [type="checkbox"][disabled] + .slds-checkbox--faux:after,
+.slds .slds-checkbox [type="checkbox"][disabled] ~ .slds-checkbox--faux:after {
+  border-color: #1589ee;
+}
+
+:-webkit-any(.slds-table--fixed-layout) {
+    table-layout : fixed;
+}
+
+.slds .slds-text-heading--medium {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.25;
+}

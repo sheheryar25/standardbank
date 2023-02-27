@@ -1,0 +1,7 @@
+<design:component >
+	<!-- <design:attribute name="isFieldSet" label="Is FieldSet?" /> -->
+	<design:attribute name="fieldSet" label="FieldSet Name" />
+	<design:attribute name="showBorder" label="Show Border" />
+    <design:attribute name="columns" label="Number of columns" />
+    <design:attribute name="textAlign" label="Text Alignment" />
+</design:component>

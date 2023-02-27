@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_CCM_Updates_On_Approval</fullName>
+    <active>true</active>
+    <description>Prevent the CCM and RM from editing the concession record once it has been submitted to them for approval.</description>
+    <errorConditionFormula>OR (
+  AND (
+     TEXT(Sub_Status__c) = &quot;Pricing Team Approved&quot;,
+     $User.Id =  OwnerId   
+  ),
+  AND (
+     TEXT(Sub_Status__c) = &quot;Pending Approval by CCM&quot;,
+     $User.Id = Owner:User.ManagerId  
+  )
+)</errorConditionFormula>
+    <errorMessage>You are not permitted to edit this Concession prior to approval.</errorMessage>
+</ValidationRule>

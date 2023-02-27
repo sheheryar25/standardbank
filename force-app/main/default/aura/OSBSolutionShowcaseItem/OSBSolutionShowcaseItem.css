@@ -1,0 +1,54 @@
+.THIS {
+    box-shadow: 0 10px 15px 0 rgba(0,0,0,0.09);
+    padding: 56px 24px 24px;
+    background-color: #FFFFFF;
+    min-height: 360px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: BentonSans;
+}
+.THIS sup{
+    font-size: 9px;
+    vertical-align: super;
+}
+
+.THIS .solutionShowcaseItem__logo .uiOutputRichText img {
+    height: 72px;
+    border-radius: 50%;
+}
+
+.THIS .solutionShowcaseItem__logo {
+    max-height: 72px;
+}
+
+.THIS .solutionShowcaseItem__title {
+    color: #0089FF;
+    font-size: 28px;
+    text-align: center;
+    font-weight: 400;
+    line-height: 36px;
+}
+
+
+.THIS .solutionShowcaseItem__content {
+    color: #999;
+    font-size: 15px;
+    line-height: 25px;
+    margin-bottom: auto;
+    text-align: center;
+}
+
+.THIS .solutionShowcaseItem__link a {
+    display: flex;
+    align-items: center;
+}
+
+.THIS .solutionShowcaseItem__link a:hover,
+.THIS .solutionShowcaseItem__link a:focus {
+    text-decoration: none;
+}
+
+.THIS .solutionShowcaseItem__link--icon {
+    margin-left: 8px;
+}

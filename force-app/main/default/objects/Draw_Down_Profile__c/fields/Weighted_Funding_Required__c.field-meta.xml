@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Weighted_Funding_Required__c</fullName>
+    <description>case# 141 - Rudolf Niehaus
+Draw Down Funding Required *  Opportunity Probability</description>
+    <externalId>false</externalId>
+    <formula>Funding_Required__c  *  Product__r.Opportunity__r.Probability</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Draw Down Funding Required time the Opportunity Probability</inlineHelpText>
+    <label>Weighted Funding Required</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

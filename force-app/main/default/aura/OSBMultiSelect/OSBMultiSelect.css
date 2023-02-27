@@ -1,0 +1,200 @@
+.THIS .slds-icon-text-default{
+    fill: #cccccc !important;
+    font-size:14px;
+    padding: 0.1rem;
+}
+
+.THIS .InputSection{
+    align-self:center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.THIS .multi-class{
+    width:100%;
+    color:#4A4A4A;
+    font-weight: 100;
+}
+
+@media(min-width: 490px){
+    .THIS .signUp__Multiselect_Icon {
+        right: 24px !important;
+    }
+}
+
+@media(max-width: 488px){
+    .THIS .signUp__Multiselect_Icon {
+        right: 38px !important;
+        background-color: white;
+    }
+}
+
+@media(max-width: 500px){
+    .THIS .InputMulti {
+        width: 97% !important;
+    }
+}
+
+@media(min-width: 501px){
+    .THIS .InputMulti {
+        width: 98% !important;
+    }
+}
+
+.THIS .input .slds-input{
+    border-radius: unset !important;
+    height: 40px;
+    width: 100%;
+    font-weight:100!important;
+}
+
+.THIS .addError-color{
+    color: var(--sds-c-input-text-color);
+    background-clip: padding-box;
+    border: 1px solid #e70011 !important;
+    box-shadow: none;
+}
+
+.THIS .error-format{
+    color: #e70011;
+    font-size: var(--lwc-fontSize2,0.75rem);
+    margin-top: var(--lwc-spacingXxxSmall,0.125rem);
+    display: block;
+    max-width: 190px;
+    font-weight: 300;
+}
+
+.THIS .slds-picklist input[readonly]{
+    font-family: BentonSans !important;
+    padding-left: 0.65rem;
+}
+
+.THIS .slds-form-element__label{
+    font-size: 14px;
+}
+
+.THIS .fontClass{
+    color: #4A4A4A;	
+    font-family: BentonSans !important;	
+    font-size: 14px !important;	
+    font-weight: 300;	
+    line-height: 18px;
+}
+
+.THIS .toggle{
+   color: black !important; 
+}
+
+.THIS .slds-assistive-text{
+    display:none;
+}
+
+.THIS ::placeholder {
+  color: #767676;
+  opacity: 1;
+  font-weight: 300;
+  font-family: BentonSans !important;
+}
+
+.THIS .ms-filter-input{
+    margin-left: 1%;
+    margin-right: 1%;
+    width: 80%;
+    height: 35px;
+    border-radius: 2px;
+    border-style: solid;
+    border-width: thin;
+    border-color: darkgray;
+    padding: 2px 5px;
+}
+
+.THIS .ms-input{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(217, 219, 221);
+    border-radius: .25rem;
+    width: 100%;
+    transition: border .1s linear,background-color .1s linear;
+    display: inline-block;
+    padding: 0 1rem 0 .75rem;
+    line-height: 1.875rem;
+    min-height: calc(1.875rem + (1px * 2));
+    height: 40px;
+    font-family: BentonSans !important;
+}
+
+.THIS .ms-refresh-icon{
+    position: absolute;
+}
+
+.THIS .slds-picklist .slds-dropdown{
+    width: 99%;
+    color: #4A4A4A;	
+    font-family: BentonSans;	
+    font-size: 14px !important;	
+    font-weight: 300;	
+    line-height: 18px;
+}
+
+.THIS .my-icon {
+    padding: 0.1rem;
+}
+
+.THIS .signUp__industryIcon {
+    top: 44px;
+    right: 40px;
+}
+
+
+
+.THIS .signUp__form--input {
+    font-size: 15px;
+    font-weight: 300;
+    color: #222222;
+    padding-left: 15px;
+    padding-bottom: 8px;
+    width: 100%;
+}
+
+.THIS .filter-input{
+    margin-left: 1%;
+    margin-right: 1%;
+    width: 80%;
+    height: 35px;
+    padding: 2px 5px;
+}
+
+.THIS .list-item{
+    font-family: BentonSans !important;
+    font-weight: 300 !important;
+}
+
+.THIS .signUp__form--input input {
+    height: 40px;
+    width: 100%;  
+}
+
+.THIS .slds-button{
+    border-radius: unset;
+    width: 8%;
+    height: 35px;
+    margin-bottom: 5px;
+    padding-bottom: 3px;
+}
+
+.THIS .slds-input-has-icon .slds-input__icon{
+    top: 50px;
+}
+
+.THIS .ms-clear-icon{
+    position: absolute;
+}
+
+.THIS .containerMulti{
+    position: relative;
+}
+
+.THIS .ms-dropdown{
+    max-height: 400px;
+    overflow-y: auto;
+}

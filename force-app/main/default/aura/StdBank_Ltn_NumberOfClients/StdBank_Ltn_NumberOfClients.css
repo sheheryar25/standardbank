@@ -1,0 +1,9 @@
+.THIS .slds-card .slds-grid .slds-col::before {
+      content:" ";
+      position: absolute;
+      left: 0;
+      height: 65px;
+      border-left: 2px solid #ADB2B5;
+      margin-top: 10px;
+
+}

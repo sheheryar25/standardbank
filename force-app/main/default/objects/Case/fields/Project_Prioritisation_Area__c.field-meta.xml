@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Project_Prioritisation_Area__c</fullName>
+    <description>How do we assign priority to this change request. Is it required because of a production incident; for completeness sake; to standardise or for new functionality?
+
+            CRM-Enhanced Cases for Change Request Functionality (C Reinecke 2010/08)</description>
+    <externalId>false</externalId>
+    <label>Project Prioritisation Area</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Completeness</fullName>
+                <default>false</default>
+                <label>Completeness</label>
+            </value>
+            <value>
+                <fullName>Standardisation</fullName>
+                <default>false</default>
+                <label>Standardisation</label>
+            </value>
+            <value>
+                <fullName>New Functionality</fullName>
+                <default>false</default>
+                <label>New Functionality</label>
+            </value>
+            <value>
+                <fullName>Production Incident</fullName>
+                <default>false</default>
+                <label>Production Incident</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

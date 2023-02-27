@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Enter_the_high_risk_reason</fullName>
+    <active>true</active>
+    <description>Enter the high risk reason if Risk = High</description>
+    <errorConditionFormula>IF( AND(ISPICKVAL( Risk__c , &apos;High&apos;), ISPICKVAL(  High_Risk_Reason__c, &apos;&apos; ) ) , true, false)</errorConditionFormula>
+    <errorMessage>Please complete the High Risk Reason</errorMessage>
+</ValidationRule>

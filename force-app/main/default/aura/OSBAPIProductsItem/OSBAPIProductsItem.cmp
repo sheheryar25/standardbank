@@ -1,0 +1,34 @@
+<aura:component>
+    <aura:attribute name="title" type="String" />
+    <aura:attribute name="content" type="String" />
+    <aura:attribute name="link" type="String" />
+    <aura:attribute name="linkLabel" type="String" />
+    <aura:attribute name="id" type="String" default="1" />
+    <aura:attribute name="isComingSoon" type="Boolean" default="false" />
+    <aura:attribute name="modalIsSolution" type="Boolean" default="false" />
+    <aura:attribute name="apiDocAvailable" type="boolean" default="false"/>
+    <aura:attribute name="isOnShowcase" type="boolean" default="false" access="public"/>
+
+    <aura:attribute name="isOpen" type="boolean" default="false"/>
+    <aura:attribute name="currentTab" type="String" default="Dashboard"/>
+    
+    <div class="apiProductsItem" onclick="{! c.createModalWindow}" data-id="uitlink_link" data-text="{!'API Products | ' + v.title}">
+    	<div class="apiProductsItem__title mb_8">
+            <a>
+                {!v.title}
+            </a>
+        </div>
+        <div class="apiProductsItem__content mb_24">
+            {!v.content}
+        </div>
+    </div>
+    
+    <aura:if isTrue="{!v.isOpen}">
+        <c:OSBModal isOpen="{!v.isOpen}" modalIsComingSoon="{! v.isComingSoon}"
+                    modalTitle="{!v.title}" modalType="secondLevel" apiDocAvailable="{!v.apiDocAvailable}"
+                    modalContent="{! v.content}" modalIsSolution="{! v.modalIsSolution}"
+                    modalFirstButtonURL="https://onedevelopernp.standardbank.co.za/" modalScndButtonURL="{! 'api-details?apiId=' + v.id}"
+                    currentTab="{! v.currentTab}"
+                    isOnShowcase="{! v.isOnShowcase}"/>
+    </aura:if>
+</aura:component>

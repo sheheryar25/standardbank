@@ -1,0 +1,46 @@
+/**
+ * Created by Emmanuel Mulea Nocks on 2020/02/21.
+ */
+
+
+
+.THIS .node circle {
+
+    width: 20px;
+    hieght: 20px
+}
+
+.THIS .node--internal text {
+    font-family: 'Salesforce Sans', Arial, sans-serif;
+    font-size: 12px;
+    line-height:1.5;
+    font-weight: bold;
+}
+
+
+.THIS .node--internal circle {
+    fill:rgb(118, 220, 250);
+}
+.THIS .node--internal2 circle {
+    fill:white;
+
+}
+.THIS .node--internal2:hover {
+    fill:#1b5297;
+    cursor: pointer;
+}
+
+/*.THIS .node--leaf circle {*/
+/*    fill: #daebf7;*/
+/*}*/
+.THIS .node--leaf text {
+    font-family: 'Salesforce Sans', Arial, sans-serif;
+    font-size: 9px;
+}
+.THIS .link {
+    fill: none;
+    stroke: #555;
+    stroke-opacity: 1.4;
+    stroke-width: 0.5px;
+
+}

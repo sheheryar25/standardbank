@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Decision_Emphasis__c</fullName>
+    <description>Key issues the deal team predict the NBAC discussion will focus around i.e.: client strategy, risk appetite, country of risk issue, client returns, high complexity, counterparty concentration limit, distribution strategy, noting purposes</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Key issues the deal team predict the NBAC discussion will focus around i.e.: client strategy, risk appetite, country of risk issue, client returns, high complexity, counterparty concentration limit, distribution strategy, noting purposes</inlineHelpText>
+    <label>Decision Emphasis</label>
+    <length>32</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

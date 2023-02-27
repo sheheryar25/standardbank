@@ -1,0 +1,32 @@
+/**
+ * Created by zwalczewska on 21.02.2020.
+ */
+
+.THIS .componentTitle{
+    padding-top: 10px;
+    padding-left: 10px;
+    font-weight: 400;
+}
+.THIS .slds-border-bottom{
+     padding-top: 50px;
+     padding-left:50px;
+}
+.THIS .x-accordion-header {
+    background-color: gray;
+}
+.THIS .slds-truncate{
+    line-height: var(--lwc-lineHeightButton,1.875rem);
+}
+.THIS .slds-accordion__summary-action{
+    background: var(--lwc-colorBackground,rgb(243, 242, 242));
+    padding: 0 var(--lwc-spacingXSmall,0.5rem);
+}
+.THIS .slds-accordion__content{
+    padding: 0 var(--lwc-spacingXSmall,0.5rem);
+}
+.THIS .error{
+    text-align: center;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    color: red;
+}

@@ -1,0 +1,26 @@
+<aura:component description="OSBCountryCodeInput">
+    <aura:attribute name="countryCodes" type="Object[]" access="private"/>
+    <aura:attribute name="displayedCode" type="String" access="public"/>
+    <aura:attribute name="selectedCode" type="String" access="public"/>
+    <aura:attribute name="showCountryNames" type="Boolean" default="false" access="private"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+
+    <div onfocusin="{!c.switchMode}" onfocusout="{!c.switchModeOff}">
+        <lightning:select aura:id="dialingCode"
+                          label=""
+                          value="{!v.selectedCode}"
+                          class="newCase__form--input slds-col"
+                          required="true"
+                          messageWhenValueMissing="Enter a valid dialing code">
+            <aura:if isTrue="{!v.showCountryNames}">
+                <aura:iteration items="{!v.countryCodes}" var="option">
+                    <option value="{!option.name + ' ' + option.code}">{!option.name + ' ' + option.code}</option>
+                </aura:iteration>
+                <aura:set attribute="else">
+                    <option value="{!v.selectedCode}">{!v.displayedCode}</option>
+                </aura:set>
+            </aura:if>
+        </lightning:select>
+    </div>
+</aura:component>

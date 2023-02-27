@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>I_have_sales_credit</fullName>
+    <availability>online</availability>
+    <description>Runs report that lists clients on which the user has sales credits. Replaces the previous custom search on the navigation bar
+
+Case# 5029 &gt; RI: Removal of hard coded EMEA URL</description>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>I have sales credit</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <requireRowSelection>false</requireRowSelection>
+    <url>/00O20000001Zmic</url>
+</WebLink>

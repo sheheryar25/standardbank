@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ExternalCIFCountry__c</fullName>
+    <description>SFP-9071 - Field determines the CIF Country</description>
+    <externalId>false</externalId>
+    <label>ExternalCIFCountry</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>ExternalCIFCountry</valueSetName>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>This custom setting will be used to store the OneSpace URLs</description>
+    <enableFeeds>false</enableFeeds>
+    <label>OSB_URLs</label>
+    <visibility>Public</visibility>
+</CustomObject>

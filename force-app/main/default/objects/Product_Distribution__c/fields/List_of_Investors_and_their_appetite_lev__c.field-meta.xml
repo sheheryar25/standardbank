@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>List_of_Investors_and_their_appetite_lev__c</fullName>
+    <description>List of Investors and their appetite levels</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Input the investors in discussion on the sell down and their expected participation amounts.</inlineHelpText>
+    <label>Investors and their appetite levels</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

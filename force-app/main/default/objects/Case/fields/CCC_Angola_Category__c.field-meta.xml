@@ -1,0 +1,816 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCC_Angola_Category__c</fullName>
+    <externalId>false</externalId>
+    <label>Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>CCC_Angola_Team__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>ARC-IB</fullName>
+                <default>false</default>
+                <label>ARC-IB</label>
+            </value>
+            <value>
+                <fullName>ATG</fullName>
+                <default>false</default>
+                <label>ATG</label>
+            </value>
+            <value>
+                <fullName>ATM Machines</fullName>
+                <default>false</default>
+                <label>ATM Machines</label>
+            </value>
+            <value>
+                <fullName>Autosafe</fullName>
+                <default>false</default>
+                <label>Autosafe</label>
+            </value>
+            <value>
+                <fullName>B</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>B</label>
+            </value>
+            <value>
+                <fullName>Bankinta Saving Account</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Bankinta Saving Account</label>
+            </value>
+            <value>
+                <fullName>Bulk Payments</fullName>
+                <default>false</default>
+                <label>Bulk Payments</label>
+            </value>
+            <value>
+                <fullName>Business Connect</fullName>
+                <default>false</default>
+                <label>Business Connect</label>
+            </value>
+            <value>
+                <fullName>Business Online</fullName>
+                <default>false</default>
+                <label>Business Online</label>
+            </value>
+            <value>
+                <fullName>Business Online (BOL)</fullName>
+                <default>false</default>
+                <label>Business Online (BOL)</label>
+            </value>
+            <value>
+                <fullName>Business Online Mobile Application</fullName>
+                <default>false</default>
+                <label>Business Online Mobile Application</label>
+            </value>
+            <value>
+                <fullName>Call Account</fullName>
+                <default>false</default>
+                <label>Call Account</label>
+            </value>
+            <value>
+                <fullName>Car Loan</fullName>
+                <default>false</default>
+                <label>Car Loan</label>
+            </value>
+            <value>
+                <fullName>Cartões de crédito</fullName>
+                <default>false</default>
+                <label>Cartões de crédito</label>
+            </value>
+            <value>
+                <fullName>Cartões de Débito e Cartões pré-pagos</fullName>
+                <default>false</default>
+                <label>Cartões de Débito e Cartões pré-pagos</label>
+            </value>
+            <value>
+                <fullName>Cash Management</fullName>
+                <default>false</default>
+                <label>Cash Management</label>
+            </value>
+            <value>
+                <fullName>Cash Management ( Need to change this to account Management</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Cash Management ( Need to change this to account Management</label>
+            </value>
+            <value>
+                <fullName>Cheque and Card</fullName>
+                <default>false</default>
+                <label>Cheque and Card</label>
+            </value>
+            <value>
+                <fullName>Cheques</fullName>
+                <default>false</default>
+                <label>Cheques</label>
+            </value>
+            <value>
+                <fullName>CIT - Value Transfer Services</fullName>
+                <default>false</default>
+                <label>CIT - Value Transfer Services</label>
+            </value>
+            <value>
+                <fullName>Cobranças, Prestação de Serviços e Operações com o Estrangeiro</fullName>
+                <default>false</default>
+                <label>Cobranças, Prestação de Serviços e Operações com o Estrangeiro</label>
+            </value>
+            <value>
+                <fullName>Collection</fullName>
+                <default>false</default>
+                <label>Collection</label>
+            </value>
+            <value>
+                <fullName>CollectPlus</fullName>
+                <default>false</default>
+                <label>CollectPlus</label>
+            </value>
+            <value>
+                <fullName>Consumer Loan</fullName>
+                <default>false</default>
+                <label>Consumer Loan</label>
+            </value>
+            <value>
+                <fullName>Consumption Credit, automobile credit and other types of credit</fullName>
+                <default>false</default>
+                <label>Consumption Credit, automobile credit and other types of credit</label>
+            </value>
+            <value>
+                <fullName>Credit Cards</fullName>
+                <default>false</default>
+                <label>Credit Cards</label>
+            </value>
+            <value>
+                <fullName>Crédito à habitação</fullName>
+                <default>false</default>
+                <label>Crédito à habitação</label>
+            </value>
+            <value>
+                <fullName>Current Account</fullName>
+                <default>false</default>
+                <label>Current Account</label>
+            </value>
+            <value>
+                <fullName>Debit Cards</fullName>
+                <default>false</default>
+                <label>Debit Cards</label>
+            </value>
+            <value>
+                <fullName>Descobertos bancários</fullName>
+                <default>false</default>
+                <label>Descobertos bancários</label>
+            </value>
+            <value>
+                <fullName>E-Banking</fullName>
+                <default>false</default>
+                <label>E-Banking</label>
+            </value>
+            <value>
+                <fullName>EBB - Electronic Bill Board</fullName>
+                <default>false</default>
+                <label>EBB - Electronic Bill Board</label>
+            </value>
+            <value>
+                <fullName>EBSRCM</fullName>
+                <default>false</default>
+                <label>EBSRCM</label>
+            </value>
+            <value>
+                <fullName>ECS - e-Centric Switch</fullName>
+                <default>false</default>
+                <label>ECS - e-Centric Switch</label>
+            </value>
+            <value>
+                <fullName>eTranzact</fullName>
+                <default>false</default>
+                <label>eTranzact</label>
+            </value>
+            <value>
+                <fullName>Exchange Transactions</fullName>
+                <default>false</default>
+                <label>Exchange Transactions</label>
+            </value>
+            <value>
+                <fullName>FastPay</fullName>
+                <default>false</default>
+                <label>FastPay</label>
+            </value>
+            <value>
+                <fullName>FAX</fullName>
+                <default>false</default>
+                <label>FAX</label>
+            </value>
+            <value>
+                <fullName>Financing</fullName>
+                <default>false</default>
+                <label>Financing</label>
+            </value>
+            <value>
+                <fullName>Fixed Term Deposit</fullName>
+                <default>false</default>
+                <label>Fixed Term Deposit</label>
+            </value>
+            <value>
+                <fullName>Foreign Operations</fullName>
+                <default>false</default>
+                <label>Foreign Operations</label>
+            </value>
+            <value>
+                <fullName>General causes</fullName>
+                <default>false</default>
+                <label>General causes</label>
+            </value>
+            <value>
+                <fullName>Home Loan</fullName>
+                <default>false</default>
+                <label>Home Loan</label>
+            </value>
+            <value>
+                <fullName>Host to Host</fullName>
+                <default>false</default>
+                <label>Host to Host</label>
+            </value>
+            <value>
+                <fullName>Insurance</fullName>
+                <default>false</default>
+                <label>Insurance</label>
+            </value>
+            <value>
+                <fullName>International Cash Management</fullName>
+                <default>false</default>
+                <label>International Cash Management</label>
+            </value>
+            <value>
+                <fullName>Internet &amp; Mobile Banking</fullName>
+                <default>false</default>
+                <label>Internet &amp; Mobile Banking</label>
+            </value>
+            <value>
+                <fullName>Investor Services</fullName>
+                <default>false</default>
+                <label>Investor Services</label>
+            </value>
+            <value>
+                <fullName>Investor Services Online</fullName>
+                <default>false</default>
+                <label>Investor Services Online</label>
+            </value>
+            <value>
+                <fullName>IS Online</fullName>
+                <default>false</default>
+                <label>IS Online</label>
+            </value>
+            <value>
+                <fullName>iTrade</fullName>
+                <default>false</default>
+                <label>iTrade</label>
+            </value>
+            <value>
+                <fullName>Lazernet</fullName>
+                <default>false</default>
+                <label>Lazernet</label>
+            </value>
+            <value>
+                <fullName>Leasing</fullName>
+                <default>false</default>
+                <label>Leasing</label>
+            </value>
+            <value>
+                <fullName>Letter of Credit</fullName>
+                <default>false</default>
+                <label>Letter of Credit</label>
+            </value>
+            <value>
+                <fullName>Letters of Credit</fullName>
+                <default>false</default>
+                <label>Letters of Credit</label>
+            </value>
+            <value>
+                <fullName>Máquinas de ATM/TPA</fullName>
+                <default>false</default>
+                <label>Máquinas de ATM/TPA</label>
+            </value>
+            <value>
+                <fullName>Mobile Banking</fullName>
+                <default>false</default>
+                <label>Mobile Banking</label>
+            </value>
+            <value>
+                <fullName>Mortgage Lending</fullName>
+                <default>false</default>
+                <label>Mortgage Lending</label>
+            </value>
+            <value>
+                <fullName>NetPlus</fullName>
+                <default>false</default>
+                <label>NetPlus</label>
+            </value>
+            <value>
+                <fullName>Operações Cambiais</fullName>
+                <default>false</default>
+                <label>Operações Cambiais</label>
+            </value>
+            <value>
+                <fullName>Other Credit Types</fullName>
+                <default>false</default>
+                <label>Other Credit Types</label>
+            </value>
+            <value>
+                <fullName>Other Savings Account</fullName>
+                <default>false</default>
+                <label>Other Savings Account</label>
+            </value>
+            <value>
+                <fullName>Overdrafts</fullName>
+                <default>false</default>
+                <label>Overdrafts</label>
+            </value>
+            <value>
+                <fullName>PayDirect</fullName>
+                <default>false</default>
+                <label>PayDirect</label>
+            </value>
+            <value>
+                <fullName>Paynet</fullName>
+                <default>false</default>
+                <label>Paynet</label>
+            </value>
+            <value>
+                <fullName>Prepaid Card</fullName>
+                <default>false</default>
+                <label>Prepaid Card</label>
+            </value>
+            <value>
+                <fullName>Prepaid Cards</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Prepaid Cards</label>
+            </value>
+            <value>
+                <fullName>QuickPay</fullName>
+                <default>false</default>
+                <label>QuickPay</label>
+            </value>
+            <value>
+                <fullName>Regulatory</fullName>
+                <default>false</default>
+                <label>Regulatory</label>
+            </value>
+            <value>
+                <fullName>Salary Account</fullName>
+                <default>false</default>
+                <label>Salary Account</label>
+            </value>
+            <value>
+                <fullName>Savings Account</fullName>
+                <default>false</default>
+                <label>Savings Account</label>
+            </value>
+            <value>
+                <fullName>Services Provision</fullName>
+                <default>false</default>
+                <label>Services Provision</label>
+            </value>
+            <value>
+                <fullName>SFI</fullName>
+                <default>false</default>
+                <label>SFI</label>
+            </value>
+            <value>
+                <fullName>Sight Deposit Accounts and Salary Accounts</fullName>
+                <default>false</default>
+                <label>Sight Deposit Accounts and Salary Accounts</label>
+            </value>
+            <value>
+                <fullName>SMS / Email Alerts</fullName>
+                <default>false</default>
+                <label>SMS / Email Alerts</label>
+            </value>
+            <value>
+                <fullName>SMS Alerts</fullName>
+                <default>false</default>
+                <label>SMS Alerts</label>
+            </value>
+            <value>
+                <fullName>SWIFT</fullName>
+                <default>false</default>
+                <label>SWIFT</label>
+            </value>
+            <value>
+                <fullName>T24 - H2H Connection to KRA System</fullName>
+                <default>false</default>
+                <label>T24 - H2H Connection to KRA System</label>
+            </value>
+            <value>
+                <fullName>T24 - H2H Connection to Safaricom System</fullName>
+                <default>false</default>
+                <label>T24 - H2H Connection to Safaricom System</label>
+            </value>
+            <value>
+                <fullName>Term Deposit Accounts</fullName>
+                <default>false</default>
+                <label>Term Deposit Accounts</label>
+            </value>
+            <value>
+                <fullName>Term deposits accounts, Bankita deposit accounts and other deposit accounts</fullName>
+                <default>false</default>
+                <label>Term deposits accounts, Bankita deposit accounts and other deposit accounts</label>
+            </value>
+            <value>
+                <fullName>Terminos IB</fullName>
+                <default>false</default>
+                <label>Terminos IB</label>
+            </value>
+            <value>
+                <fullName>TPA Machines</fullName>
+                <default>false</default>
+                <label>TPA Machines</label>
+            </value>
+            <value>
+                <fullName>Trade</fullName>
+                <default>false</default>
+                <label>Trade</label>
+            </value>
+            <value>
+                <fullName>Transactional Banking</fullName>
+                <default>false</default>
+                <label>Transactional Banking</label>
+            </value>
+            <value>
+                <fullName>Transferências</fullName>
+                <default>false</default>
+                <label>Transferências</label>
+            </value>
+            <value>
+                <fullName>Vehicle and Asset Management</fullName>
+                <default>false</default>
+                <label>Vehicle and Asset Management</label>
+            </value>
+            <value>
+                <fullName>Wire Transfer</fullName>
+                <default>false</default>
+                <label>Wire Transfer</label>
+            </value>
+            <value>
+                <fullName>ZIMRA E-Tax</fullName>
+                <default>false</default>
+                <label>ZIMRA E-Tax</label>
+            </value>
+            <value>
+                <fullName>ZRA E-Tax Payment</fullName>
+                <default>false</default>
+                <label>ZRA E-Tax Payment</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>CIB CCC Angola</controllingFieldValue>
+            <valueName>ARC-IB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIB CCC Angola</controllingFieldValue>
+            <valueName>ATG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIB CCC Angola</controllingFieldValue>
+            <valueName>Autosafe</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIB CCC Angola</controllingFieldValue>
+            <valueName>Bulk Payments</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIB CCC Angola</controllingFieldValue>
+            <valueName>Business Connect</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIB CCC Angola</controllingFieldValue>
+            <valueName>Business Online</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIB CCC Angola</controllingFieldValue>
+            <valueName>Business Online Mobile Application</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIB CCC Angola</controllingFieldValue>
+            <valueName>Cash Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIB CCC Angola</controllingFieldValue>
+            <valueName>Cheque and Card</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIB CCC Angola</controllingFieldValue>
+            <valueName>CIT - Value Transfer Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIB CCC Angola</controllingFieldValue>
+            <valueName>CollectPlus</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIB CCC Angola</controllingFieldValue>
+            <controllingFieldValue>PBB CCC Angola</controllingFieldValue>
+            <controllingFieldValue>ED CCC Angola</controllingFieldValue>
+            <valueName>E-Banking</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIB CCC Angola</controllingFieldValue>
+            <valueName>EBB - Electronic Bill Board</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIB CCC Angola</controllingFieldValue>
+            <valueName>EBSRCM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIB CCC Angola</controllingFieldValue>
+            <valueName>ECS - e-Centric Switch</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIB CCC Angola</controllingFieldValue>
+            <valueName>eTranzact</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIB CCC Angola</controllingFieldValue>
+            <valueName>FastPay</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIB CCC Angola</controllingFieldValue>
+            <valueName>FAX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIB CCC Angola</controllingFieldValue>
+            <valueName>Host to Host</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIB CCC Angola</controllingFieldValue>
+            <valueName>International Cash Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIB CCC Angola</controllingFieldValue>
+            <valueName>Investor Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIB CCC Angola</controllingFieldValue>
+            <valueName>Investor Services Online</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIB CCC Angola</controllingFieldValue>
+            <valueName>iTrade</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIB CCC Angola</controllingFieldValue>
+            <valueName>Lazernet</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIB CCC Angola</controllingFieldValue>
+            <valueName>NetPlus</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIB CCC Angola</controllingFieldValue>
+            <valueName>PayDirect</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIB CCC Angola</controllingFieldValue>
+            <valueName>Paynet</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIB CCC Angola</controllingFieldValue>
+            <valueName>QuickPay</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIB CCC Angola</controllingFieldValue>
+            <valueName>Regulatory</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIB CCC Angola</controllingFieldValue>
+            <valueName>SFI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIB CCC Angola</controllingFieldValue>
+            <controllingFieldValue>PBB CCC Angola</controllingFieldValue>
+            <valueName>SMS Alerts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIB CCC Angola</controllingFieldValue>
+            <valueName>SWIFT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIB CCC Angola</controllingFieldValue>
+            <valueName>T24 - H2H Connection to KRA System</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIB CCC Angola</controllingFieldValue>
+            <valueName>T24 - H2H Connection to Safaricom System</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIB CCC Angola</controllingFieldValue>
+            <valueName>Terminos IB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIB CCC Angola</controllingFieldValue>
+            <valueName>Transactional Banking</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIB CCC Angola</controllingFieldValue>
+            <valueName>Vehicle and Asset Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIB CCC Angola</controllingFieldValue>
+            <valueName>ZIMRA E-Tax</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIB CCC Angola</controllingFieldValue>
+            <valueName>ZRA E-Tax Payment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PBB CCC Angola</controllingFieldValue>
+            <valueName>Car Loan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PBB CCC Angola</controllingFieldValue>
+            <controllingFieldValue>ED CCC Angola</controllingFieldValue>
+            <controllingFieldValue>ST CCC Angola</controllingFieldValue>
+            <valueName>Cheques</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PBB CCC Angola</controllingFieldValue>
+            <controllingFieldValue>ED CCC Angola</controllingFieldValue>
+            <valueName>Collection</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PBB CCC Angola</controllingFieldValue>
+            <valueName>Consumer Loan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PBB CCC Angola</controllingFieldValue>
+            <controllingFieldValue>ED CCC Angola</controllingFieldValue>
+            <valueName>Credit Cards</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PBB CCC Angola</controllingFieldValue>
+            <controllingFieldValue>ED CCC Angola</controllingFieldValue>
+            <valueName>Current Account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PBB CCC Angola</controllingFieldValue>
+            <controllingFieldValue>ED CCC Angola</controllingFieldValue>
+            <valueName>Debit Cards</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PBB CCC Angola</controllingFieldValue>
+            <controllingFieldValue>ED CCC Angola</controllingFieldValue>
+            <valueName>Exchange Transactions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PBB CCC Angola</controllingFieldValue>
+            <valueName>Fixed Term Deposit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PBB CCC Angola</controllingFieldValue>
+            <controllingFieldValue>ED CCC Angola</controllingFieldValue>
+            <valueName>Foreign Operations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PBB CCC Angola</controllingFieldValue>
+            <controllingFieldValue>ST CCC Angola</controllingFieldValue>
+            <valueName>Insurance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PBB CCC Angola</controllingFieldValue>
+            <controllingFieldValue>ST CCC Angola</controllingFieldValue>
+            <valueName>Máquinas de ATM/TPA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PBB CCC Angola</controllingFieldValue>
+            <controllingFieldValue>ED CCC Angola</controllingFieldValue>
+            <valueName>Mobile Banking</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PBB CCC Angola</controllingFieldValue>
+            <valueName>Mortgage Lending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PBB CCC Angola</controllingFieldValue>
+            <controllingFieldValue>ED CCC Angola</controllingFieldValue>
+            <valueName>Other Credit Types</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PBB CCC Angola</controllingFieldValue>
+            <controllingFieldValue>ED CCC Angola</controllingFieldValue>
+            <valueName>Overdrafts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PBB CCC Angola</controllingFieldValue>
+            <controllingFieldValue>ED CCC Angola</controllingFieldValue>
+            <valueName>Prepaid Card</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PBB CCC Angola</controllingFieldValue>
+            <controllingFieldValue>ED CCC Angola</controllingFieldValue>
+            <valueName>Salary Account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PBB CCC Angola</controllingFieldValue>
+            <controllingFieldValue>ED CCC Angola</controllingFieldValue>
+            <valueName>Savings Account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PBB CCC Angola</controllingFieldValue>
+            <controllingFieldValue>ED CCC Angola</controllingFieldValue>
+            <controllingFieldValue>ST CCC Angola</controllingFieldValue>
+            <valueName>Services Provision</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PBB CCC Angola</controllingFieldValue>
+            <controllingFieldValue>ST CCC Angola</controllingFieldValue>
+            <valueName>SMS / Email Alerts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PBB CCC Angola</controllingFieldValue>
+            <controllingFieldValue>ED CCC Angola</controllingFieldValue>
+            <valueName>TPA Machines</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PBB CCC Angola</controllingFieldValue>
+            <controllingFieldValue>ED CCC Angola</controllingFieldValue>
+            <valueName>Wire Transfer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ED CCC Angola</controllingFieldValue>
+            <valueName>ATM Machines</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ED CCC Angola</controllingFieldValue>
+            <valueName>Call Account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ED CCC Angola</controllingFieldValue>
+            <valueName>Financing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ED CCC Angola</controllingFieldValue>
+            <valueName>Leasing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ED CCC Angola</controllingFieldValue>
+            <valueName>Letters of Credit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ED CCC Angola</controllingFieldValue>
+            <valueName>Term Deposit Accounts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ST CCC Angola</controllingFieldValue>
+            <valueName>Cartões de crédito</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ST CCC Angola</controllingFieldValue>
+            <valueName>Cartões de Débito e Cartões pré-pagos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ST CCC Angola</controllingFieldValue>
+            <valueName>Cobranças, Prestação de Serviços e Operações com o Estrangeiro</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ST CCC Angola</controllingFieldValue>
+            <valueName>Consumption Credit, automobile credit and other types of credit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ST CCC Angola</controllingFieldValue>
+            <valueName>Crédito à habitação</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ST CCC Angola</controllingFieldValue>
+            <valueName>Descobertos bancários</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ST CCC Angola</controllingFieldValue>
+            <valueName>General causes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ST CCC Angola</controllingFieldValue>
+            <valueName>Internet &amp; Mobile Banking</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ST CCC Angola</controllingFieldValue>
+            <valueName>Operações Cambiais</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ST CCC Angola</controllingFieldValue>
+            <valueName>Sight Deposit Accounts and Salary Accounts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ST CCC Angola</controllingFieldValue>
+            <valueName>Term deposits accounts, Bankita deposit accounts and other deposit accounts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ST CCC Angola</controllingFieldValue>
+            <valueName>Transferências</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

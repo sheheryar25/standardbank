@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>External_System__c</fullName>
+    <description>This field refers to the country of the external system</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Country of the external system</inlineHelpText>
+    <label>External System Country</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Angola</fullName>
+                <default>false</default>
+                <label>Angola</label>
+            </value>
+            <value>
+                <fullName>Nigeria</fullName>
+                <default>false</default>
+                <label>Nigeria</label>
+            </value>
+            <value>
+                <fullName>South Africa</fullName>
+                <default>true</default>
+                <label>South Africa</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

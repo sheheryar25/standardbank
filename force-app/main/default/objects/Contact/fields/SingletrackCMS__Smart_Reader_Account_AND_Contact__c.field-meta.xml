@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SingletrackCMS__Smart_Reader_Account_AND_Contact__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <formula>IF(Account.SingletrackCMS__Enable_Smart_Reader__c == TRUE &amp;&amp; SingletrackCMS__Enable_Smart_Reader__c == TRUE, TRUE, FALSE)</formula>
+    <label>Smart Reader Account AND Contact</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

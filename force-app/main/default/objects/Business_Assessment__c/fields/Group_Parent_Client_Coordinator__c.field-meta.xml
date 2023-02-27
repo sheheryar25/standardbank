@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Group_Parent_Client_Coordinator__c</fullName>
+    <description>Client Coordinator of the Group Parent Client</description>
+    <externalId>false</externalId>
+    <formula>IF(NOT(ISBLANK( Account__r.Economic_Group_Parent__c )),Account__r.Economic_Group_Parent__r.Group_Parent_Client_Coordinator__c, Account__r.Group_Parent_Client_Coordinator__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Client Coordinator of the Group Parent Client</inlineHelpText>
+    <label>Group Parent Client Coordinator</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

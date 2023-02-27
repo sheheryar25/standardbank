@@ -1,0 +1,71 @@
+<!-- **
+* @description  : Partner Portal Registration From Component
+* User Story : SFP-5159
+*
+* @author Syed Ovais Ali (syed.ali@standardbank.co.za)
+* @date July 2021
+*/ -->
+<template>
+  <div class="main-container">
+    <div class="spinner">
+      <template if:true={isProcessing}>
+          <lightning-spinner alternative-text="Loading" variant="brand" size="large">
+           </lightning-spinner>
+      </template>
+    </div>
+    <div class="slds-align_absolute-center">
+      <div class="slds-grid slds-grid_vertical container" data-frmcontainer="PartnerConnect Registration From" id="PartnerConnect_Registration_From">
+        <div class="slds-col sec-padding">
+          <div class="slds-grid slds-grid_align-spread">
+            <div class="slds-col">
+              <p class="text-normal-sfProDisplay text">REGISTER FOR PARTNERCONNECT</p>
+            </div>
+            <template if:true={nextBtn}>
+              <div class="slds-col">
+                <p class="text-normal-sfProDisplay text">STEP {currentStep}/4</p>
+              </div>
+            </template>
+            <template if:false={nextBtn}>
+              <div class="slds-col">
+                <p class="text-normal-sfProDisplay text">COMPLETED</p>
+              </div>
+            </template>
+          </div>
+        </div>
+        <div class="slds-col slds-m-top_small">
+          <div class="lline"></div>
+        </div>
+
+        <c-pp-Company-Information class="sec-padding" registration-data={registrationDataMap} page-index={currentStep} guid={guid}>
+        </c-pp-Company-Information>
+        <c-pp-partnership-goal class="sec-padding" registration-data={registrationDataMap} page-index={currentStep}>
+        </c-pp-partnership-goal>
+        <c-pp-brief-description class="sec-padding" registration-data={registrationDataMap} page-index={currentStep}>
+        </c-pp-brief-description>
+        <c-pp-communication-details class="sec-padding" registration-data={registrationDataMap}
+          page-index={currentStep} terms-and-condition-text={termsAndConditionText}>
+        </c-pp-communication-details>
+        <c-pp-registration-thank-you page-index={currentStep}></c-pp-registration-thank-you>
+        
+        <div class="slds-col slds-m-top_small">
+          <div class="slds-grid slds-grid_align-spread">
+            <div class="slds-col back-btn-container">
+              <template if:true={backBtnFlag}>
+                <button class="slds-button slds-button_neutral btn" onclick={handleBack}
+                        data-intent="navigational" data-scope="Registration Form"
+                        data-id="link_content" data-text={stepDetailBack}>BACK</button>
+              </template>
+            </div>
+            <template if:true={nextBtn}>
+              <div class="slds-col btn-container">
+                <button class="slds-button slds-button_neutral btn next-btn" data-intent="navigational"
+                        data-scope="Registration Form"  data-text={stepDetailNext}
+                        onclick={handleNext} data-id="next-btn">NEXT</button>
+              </div>
+            </template>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Tier__c</fullName>
+    <description>Was &quot;GM Account Tier&quot; prior to Feb &apos;08 Go-Live with GM
+Changed from &quot;Account Tier&quot; to &quot;CIB Tier&quot;
+Field Label Rename from &apos;CIB Tier&apos; to &apos;Global Tier&apos;, Nov &apos;10.
+01/2011: Added New Picklist Values &apos;Core, Opportunistic, Growth, Not Assigned&apos;</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Core - Strategic Relationship, Transact Multiple Products, Allocate Majority of Financial Resources.
+Growth - Mapping of Strategy &amp; Needs indicate Future Core Client.
+Opportunistic - Once-Off Opportunities.</inlineHelpText>
+    <label>Global Tier</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Core</fullName>
+                <default>false</default>
+                <label>Core</label>
+            </value>
+            <value>
+                <fullName>Opportunistic</fullName>
+                <default>false</default>
+                <label>Opportunistic</label>
+            </value>
+            <value>
+                <fullName>Growth</fullName>
+                <default>false</default>
+                <label>Growth</label>
+            </value>
+            <value>
+                <fullName>Not Assigned</fullName>
+                <default>true</default>
+                <label>Not Assigned</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

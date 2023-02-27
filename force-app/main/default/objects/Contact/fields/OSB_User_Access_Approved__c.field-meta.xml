@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OSB_User_Access_Approved__c</fullName>
+    <description>OneHub: This field is used to store the Date and Time the users access to the OneHub Community was approved by their Community Access Manager. (US-4589)</description>
+    <externalId>false</externalId>
+    <label>User Access Approved</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>DateTime</type>
+</CustomField>

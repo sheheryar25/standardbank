@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Value_Perception__c</fullName>
+    <description>SFP-9319 [c] Customer&apos;s Value perception in terms of making banking decisions.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Entire value we bring to the client? What will make this client consistently choose SB over other banks? What will make this client refer SB to other business associates? What will make this client open up their business value chain (ecosystem) to SB?</inlineHelpText>
+    <label>Customer Value Perception</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

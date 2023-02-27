@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Aide_Memoire_Sent__c</fullName>
+    <description>Case#1168 - 11/2011 - Rudolf Niehaus
+            The date the aide memoire is sent</description>
+    <externalId>false</externalId>
+    <label>Aide Memoire Sent</label>
+    <required>false</required>
+    <type>Date</type>
+</CustomField>

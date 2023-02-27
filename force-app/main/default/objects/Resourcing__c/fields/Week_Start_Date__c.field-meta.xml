@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Week_Start_Date__c</fullName>
+    <description>Automatically populated with Monday&apos;s date of that week [SFP-4974]</description>
+    <externalId>false</externalId>
+    <formula>Week_End_Date__c  - MOD(Week_End_Date__c - DATE(2021,1,4),7)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Automatically populated with Monday&apos;s date of the week</inlineHelpText>
+    <label>Week Start Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

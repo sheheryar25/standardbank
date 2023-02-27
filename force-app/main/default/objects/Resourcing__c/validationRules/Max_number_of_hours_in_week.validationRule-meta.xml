@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Max_number_of_hours_in_week</fullName>
+    <active>true</active>
+    <description>Time spent can&apos;t exceed number of hours in a week (168) [SFP-4974]</description>
+    <errorConditionFormula>Time_Spent__c &gt; 168</errorConditionFormula>
+    <errorMessage>Time spent can&apos;t exceed number of hours in a week (168)</errorMessage>
+</ValidationRule>

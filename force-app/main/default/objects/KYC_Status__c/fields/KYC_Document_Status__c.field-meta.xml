@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>KYC_Document_Status__c</fullName>
+    <description>US-1205: KYC - Document Status to reflect on the KYC Review</description>
+    <externalId>false</externalId>
+    <formula>IF( AND(
+         OR(
+             No_of_KYC_Docs_with_Status_Outstanding__c == 0,No_of_KYC_Docs_with_Status_Outstanding__c &gt; 0),No_of_KYC_Docs_with_Status_Received__c == 0) ,
+          &apos;No Documents received&apos;, 
+           IF( No_of_KYC_Docs_with_Status_Outstanding__c == 0 &amp;&amp;
+               No_of_KYC_Docs_with_Status_Received__c &gt;0,
+                    &apos;All Documents Received&apos;,
+                    &apos;Partial Documents Received&apos;)
+                      )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>An indication of the overall status of KYC documents attached. If at least one document is marked as “outstanding” this status will be “Partial Documents Received”.</inlineHelpText>
+    <label>KYC Document Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

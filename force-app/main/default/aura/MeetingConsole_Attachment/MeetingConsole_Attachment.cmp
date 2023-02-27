@@ -1,0 +1,77 @@
+<!--
+ - Created by Chibuye Kunda on 2019/11/26.
+ -->
+
+<aura:component controller="MeetingConsole_AttachmentController" access="global"  implements="force:appHostable,flexipage:availableForAllPageTypes" description="MeetingConsole_Task">
+    <aura:attribute name="columns" type="List"/>
+    <aura:attribute name="lookUps" type="List" default="[]"/>
+    <aura:attribute name="dates" type="List" default="[]"/>
+    <aura:attribute name="error" type="Object" default="{iserror:false,message:''}"/>
+    <aura:handler name="init" value="{! this }"  action="{!c.init}"/>
+    <aura:attribute name="accept" type="List" default="['.jpg', '.jpeg','.docx','.doc','.txt','.pdf','png','.csv','xml','.ppt','.pptx','.pps','.xls','.xlsx',]"/>
+    <aura:attribute name="multiple" type="Boolean" default="false"/>
+    <aura:attribute name="isUploadFile" type="Boolean" default="false"/>
+    <aura:attribute name="disabled" type="Boolean" default="false"/>
+    <aura:attribute name="nbacId" type="string" default="" />
+    <aura:attribute name="eventId" type="string" default="" />
+    <aura:attribute name="access" type="string" />
+    <aura:attribute name="isWaiting" type="boolean" default="false" access="private" />
+    <aura:method name="dataTableMethodAttachment" action="{!c.dataTableMethodAttachment}">
+        <aura:attribute name="nbacdata" type="Map"/>
+    </aura:method>
+    <aura:method name="userHasAccess" action="{!c.userHasAccess}">
+        <aura:attribute name="perm" type="Map"/>
+    </aura:method>
+    <aura:renderIf isTrue="{!v.isUploadFile}">
+        <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_small" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick="{!c.closeFileAttach}">
+                        <lightning:icon iconName="utility:close" alternativeText="Utility image" variant="inverse" />
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                    <h2 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Attach files</h2>
+                </header>
+                <div class="slds-modal__content slds-p-around_small" style="text-align: center;" id="modal-content-id-1">
+                    <lightning:fileUpload  name="fileUploader"
+                                           label= "Upload"
+                                           multiple="{!v.multiple}"
+                                           accept="{!v.accept}"
+                                           disabled="{!v.disabled}"
+                                           recordId="{!v.eventId}"
+                                           onuploadfinished="{! c.handleUploadFinished }"/>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </aura:renderIf>
+
+
+    <article class="slds-card" style="background-color: #f3f2f2 !important; min-height: 110px;overflow-x: hidden;">
+        <aura:if isTrue="{!v.isWaiting}">
+            <lightning:spinner class="sslds-is-relative" size="small" />
+        </aura:if>
+        <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+
+                <div class="slds-media__body">
+                    <h2 class="slds-card__header-title">
+                        Attachments
+                    </h2>
+                </div>
+                <div class="slds-no-flex">
+                    <aura:renderIf isTrue="{!v.nbacId!=''}">
+                        <lightning:button  label="Attach File" title="Attach file" onclick="{! c.uploadFile }"/>
+                        <aura:set attribute="else">
+                            <lightning:button  label="Attach File" title="Attach file" onclick="{! c.uploadFile }" disabled="true"/>
+                        </aura:set>
+                    </aura:renderIf>
+                </div>
+            </header>
+        </div>
+
+        <c:DataTable aura:id="child" dates="{!v.dates}" lookUps="{!v.lookUps}" error="{!v.error}" columns="{!v.columns}" showRowNumberColumn="false"/>
+
+
+    </article>
+</aura:component>

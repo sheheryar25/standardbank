@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Resolution_Comments_to_Client__c</fullName>
+    <description>SGPRT-746 - This field is used to capture case resolution comments that will be included in the resolution email sent to the client.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Explain what you did to resolve the case. Please note that these comments will be inserted into the automated resolution email sent to the client.</inlineHelpText>
+    <label>Resolution Comments to Client</label>
+    <length>1000</length>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Html</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

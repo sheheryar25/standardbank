@@ -1,0 +1,33 @@
+<!--
+ - Created by pmalicki on 17.08.2018.
+ -->
+
+<aura:component implements="force:lightningQuickActionWithoutHeader,force:hasRecordId" controller="NBAC_BusinessAssessmentUpdateController">
+
+    <aura:attribute name="accessDeniedMessage" type="String" default="There was a problem with the update"/>
+    <aura:attribute name="successMessage" type="String" default="Update completed"/>
+    <aura:attribute name="isLoading" type="Boolean" default="false" />
+    <aura:registerEvent name="componentAction" type="c:ComponentAction" />
+
+    <div class="slds-is-relative">
+        <aura:if isTrue="{!v.isLoading}">
+            <div class="slds-align_absolute-center">
+                <lightning:spinner size="medium" />
+            </div>
+        </aura:if>
+
+        <div class="modal-header slds-modal__header slds-m-around_small">
+            <h2 class="title slds-text-heading_medium" >Business Assessment Update</h2>
+        </div>
+
+        <div class="content">
+            <p>Please note this means that all pre-populated data on the current NBAC will reflect the latest Salesforce data and you will not be able to undo this update</p>
+        </div>
+
+        <lightning:layout horizontalAlign="end">
+            <lightning:button label="Continue" onclick="{!c.clickContinue}" variant="brand"/>
+            <lightning:button label="Cancel" onclick="{!c.clickCancel}" />
+        </lightning:layout>
+    </div>
+
+</aura:component>

@@ -1,0 +1,8 @@
+<!--
+ - Created by tsobota on 09.08.2018.
+ -->
+
+<aura:component description="CC_CST_Change_Comfirmation_Modal">
+    <aura:attribute name="message" type="String"/>
+    {!v.message}
+</aura:component>

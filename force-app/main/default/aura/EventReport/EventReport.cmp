@@ -1,0 +1,221 @@
+<!--
+  - Created by mjaznicki on 13.08.2018.
+ -->
+
+<aura:component description="EventReport" implements="lightning:isUrlAddressable,force:hasRecordId"
+                controller="EventReportController">
+
+    <aura:attribute name="report" type="Call_Report__c" default="{sobjectType: 'Call_Report__c'}"/>
+    <aura:attribute name="fieldsToQuery" type="string[]"
+                    default="['Id','Description__c', 'Outcomes__c','Issues_Risks__c', 'Competitor_Information__c','Topics__c', 'Name', 'Subject__c', 'Assigned_To__c', 'Event_Priority__c',
+                    'Location__c', 'Meeting_Format__c', 'Meeting_Audience__c', 'Start__c', 'Meeting_Purpose__c', 'End__c', 'Visible_to_Internal_Attendees_only__c', 'Instigated_By__c', 'CurrencyIsoCode',
+                    'Report_Client_Contact__c','Relate_to_Client__c', 'Related_To_Case__c', 'Number_Of_Attended_Attendees__c ', 'Total_Event_Costs__c', 'Date__c', 'Attendee_Reminder_Required__c']"/>
+    <aura:attribute name="requiredFields" type="List"
+                    default="['Description__c', 'Subject__c', 'Assigned_To__c', 'Start__c', 'End__c', 'Meeting_Audience__c', 'Meeting_Format__c']"/>
+    <aura:attribute type="Boolean" name="showSpinner" default="true"/>
+    <aura:attribute type="Boolean" name="isCommB" default="false"/>
+    <aura:attribute type="Boolean" name="isTotalCostRequired" default="false"/>
+    <aura:attribute type="Boolean" name="isSalesforceLicenseUser" default="false"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler name="change" value="{!v.pageReference}" action="{!c.reInit}"/>
+
+    <lightning:navigation aura:id="navService"/>
+
+    <aura:if isTrue="{!v.recordId}">
+        <force:recordData aura:id="reportRD"
+                          recordId="{!v.recordId}"
+                          mode="EDIT"
+                          fields="{!v.fieldsToQuery}"
+                          targetFields="{!v.report}"
+                          recordUpdated="{!c.initMeetingType}"/>
+        <aura:set attribute="else">
+            <force:recordData aura:id="reportRDNEW"
+                              mode="EDIT"
+                              fields="{!v.fieldsToQuery}"
+                              targetFields="{!v.report}"
+                              recordUpdated="{!c.initMeetingType}"/>
+        </aura:set>
+    </aura:if>
+
+    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+             aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+
+        <div class="{!if($Browser.isPhone , '' , 'slds-modal__container')}" aura:id="modalDiv">
+
+            <header class="slds-modal__header ">
+                <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">
+                    <aura:if isTrue="{!v.recordId}">
+                        EDIT {!v.report.Name} EVENT REPORT
+                        <aura:set attribute="else">
+                            NEW EVENT REPORT
+                        </aura:set>
+                    </aura:if>
+
+                </h2>
+            </header>
+            <ui:scrollerWrapper class="scrollerSize">
+                <div class="slds-modal__content slds-p-around_medium">
+
+                    <aura:if isTrue="{!v.showSpinner}">
+                        <lightning:spinner alternativeText="Loading" size="large"/>
+                    </aura:if>
+                    <aura:if isTrue="{!v.isTotalCostRequired}">
+                        <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_error"
+                             role="alert">
+                            Please complete 'Total Event Cost' field for this Entertainment Meeting format
+                        </div>
+                    </aura:if>
+                    <div class="slds-section slds-is-open">
+                        <h3 class="slds-section__title slds-theme_shade">
+                    <span class="slds-truncate slds-p-horizontal_small"
+                          title="Report Information">Report Information</span>
+                        </h3>
+                    </div>
+                    <div class="slds-form slds-form_compound custom-background">
+                        <div class="slds-form-element__row slds-grid slds-wrap">
+                            <div class="slds-form-element slds-size_1-of-1 slds-medium-size_1-of-2 custom-padding">
+                                <c:recordField record="{!v.report}" fieldName="Description__c" editMode="true"
+                                               aura:id='Description__c' required="true"/>
+
+                            </div>
+                            <div class="slds-form-element slds-size_1-of-1 slds-medium-size_1-of-2 custom-padding">
+                                <c:recordField record="{!v.report}" fieldName="Outcomes__c" editMode="true"/>
+                            </div>
+                        </div>
+                        <div class="slds-form-element__row slds-grid slds-wrap">
+                            <div class=" slds-form-element custom-padding " style="width:100%">
+                                <c:recordField record="{!v.report}" fieldName="Topics__c" editMode="true"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-section slds-is-open">
+                        <h3 class="slds-section__title slds-theme_shade">
+                <span class="slds-truncate slds-p-horizontal_small"
+                      title="Report Information">Event Report Detail</span>
+                        </h3>
+                    </div>
+                    <div class="slds-form slds-form_compound custom-background">
+                        <lightning:recordEditForm recordId="{!v.recordId}" objectApiName="Call_Report__c">
+                            <div class="slds-form-element__row slds-grid slds-wrap">
+                                <div class="slds-form-element slds-size_1-of-1 slds-medium-size_1-of-2 custom-padding">
+                                </div>
+                                <div class="slds-form-elementslds-size_1-of-1 slds-medium-size_1-of-2 custom-padding">
+
+                                </div>
+                            </div>
+                            <div class="slds-form-element__row slds-grid slds-wrap">
+                                <div class="slds-form-element slds-size_1-of-1 slds-medium-size_1-of-2 custom-padding">
+                                    <c:recordField record="{!v.report}" fieldName="Subject__c" editMode="true"
+                                                   required="true" aura:id = 'Subject__c' includeRecordEditForm="false"/>
+
+                                </div>
+                                <div class="slds-form-element slds-size_1-of-1 slds-medium-size_1-of-2 custom-padding">
+                                    <c:recordField record="{!v.report}" fieldName="Location__c" editMode="true" includeRecordEditForm="false"/>
+                                </div>
+                            </div>
+                            <div class="slds-form-element__row slds-grid slds-wrap">
+                                <div class="slds-form-element slds-size_1-of-1 slds-medium-size_1-of-2 custom-padding">
+                                    <c:recordField record="{!v.report}" fieldName="Meeting_Format__c" editMode="true" includeRecordEditForm="false"/>
+                                </div>
+                                <div class="slds-form-element slds-size_1-of-1 slds-medium-size_1-of-2 custom-padding">
+                                    <lightning:input type="datetime-local" value="{!v.report.Start__c}" label="Start"
+                                                     required="true" onchange="{!c.onStartDateChange}"/>
+                                </div>
+                            </div>
+                            <div class="slds-form-element__row slds-grid slds-wrap">
+                                <div class="slds-form-element slds-size_1-of-1 slds-medium-size_1-of-2 custom-padding">
+                                    <c:recordField record="{!v.report}" fieldName="Meeting_Audience__c" editMode="true" includeRecordEditForm="false"/>
+                                </div>
+                                <div class="slds-form-element slds-size_1-of-1 slds-medium-size_1-of-2 custom-padding">
+                                    <c:recordField record="{!v.report}" fieldName="End__c" editMode="true" includeRecordEditForm="false" required="true"/>
+                                </div>
+                            </div>
+                            <div class="slds-form-element__row slds-grid slds-wrap">
+                                <div class="slds-form-element slds-size_1-of-1 slds-medium-size_1-of-2 custom-padding">
+                                    <c:recordField record="{!v.report}" fieldName="Meeting_Purpose__c" editMode="true" includeRecordEditForm="false"/>
+                                </div>
+                            </div>
+                            <div class="slds-form-element__row slds-grid slds-wrap">
+                                <div class="slds-form-element slds-size_1-of-1 slds-medium-size_1-of-2 custom-padding">
+                                    <c:recordField record="{!v.report}" fieldName="Visible_to_Internal_Attendees_only__c"
+                                                   editMode="true" includeRecordEditForm="false"/>
+                                </div>
+                            </div>
+                            <div class="slds-form-element__row slds-grid slds-wrap">
+                                <div class="slds-form-element slds-size_1-of-1 slds-medium-size_1-of-2 custom-padding">
+                                    <c:recordField record="{!v.report}" fieldName="Total_Event_Costs__c" editMode="true" aura:id = 'Total_Event_Costs__c' includeRecordEditForm="false"/>
+                                </div>
+                                <div class="slds-form-element slds-size_1-of-1 slds-medium-size_1-of-2 custom-padding">
+                                    <c:recordField record="{!v.report}" fieldName="CurrencyIsoCode" editMode="true" customLabel="Currency" includeRecordEditForm="false"/>
+                                </div>
+                            </div>
+                        </lightning:recordEditForm>
+                        <div class="slds-section slds-is-open">
+                            <h3 class="slds-section__title slds-theme_shade">
+                <span class="slds-truncate slds-p-horizontal_small"
+                      title="Related To Information">Related To Information</span>
+                            </h3>
+                        </div>
+                        <div class="slds-form-element__row slds-grid slds-wrap">
+                            <div class="slds-form-element slds-size_1-of-1 slds-medium-size_1-of-2 custom-padding">
+                                <c:UTL_LookupField sObjectName="Call_report__c" fieldName="Report_Client_Contact__c"
+                                                   fieldLabel="Related To Contact"
+                                                   assignTo="{!v.report.Report_Client_Contact__c}" whereClause="RecordType.Name = 'Client Contact Record Type'"/>
+                            </div>
+
+                        </div>
+                        <div class="slds-form-element__row slds-grid slds-wrap">
+                            <aura:if isTrue="{!v.isSalesforceLicenseUser}">
+                                <div class="slds-form-element slds-size_1-of-1 slds-medium-size_1-of-2 custom-padding">
+                                    <c:UTL_LookupField sObjectName="Call_report__c" fieldName="Related_to_Campaign__c"
+                                                       fieldLabel="Related To Campaign"
+                                                       assignTo="{!v.report.Related_to_Campaign__c}"/>
+                                </div>
+                            </aura:if>
+                        </div>
+                        <div class="slds-form-element__row slds-grid slds-wrap">
+                            <div class="slds-form-element slds-size_1-of-1 slds-medium-size_1-of-2 custom-padding">
+                                <c:UTL_LookupField sObjectName="Call_report__c" fieldName="Relate_to_Client__c"
+                                                   fieldLabel="Related To Client"
+                                                   assignTo="{!v.report.Relate_to_Client__c}"/>
+                            </div>
+
+                        </div>
+                        <div class="slds-form-element__row slds-grid slds-wrap">
+                            <aura:if isTrue="{!v.isSalesforceLicenseUser}">
+                                <div class="slds-form-element slds-size_1-of-1 slds-medium-size_1-of-2 custom-padding">
+                                    <c:UTL_LookupField sObjectName="Call_report__c" fieldName="Relate_to_Opp__c"
+                                                       fieldLabel="Related To Opportunity"
+                                                       assignTo="{!v.report.Relate_to_Opp__c}"/>
+                                </div>
+                            </aura:if>
+                            <aura:if isTrue="{!v.isCommB}">
+                                <div class="slds-form-element slds-size_1-of-1 slds-medium-size_1-of-2 custom-padding">
+                                    <c:recordField record="{!v.report}" fieldName="What_Matters_Comments__c"
+                                                   editMode="true"/>
+                                </div>
+                            </aura:if>
+                        </div>
+                        <div class="slds-form-element__row slds-grid slds-wrap">
+                            <aura:if isTrue="{!v.isCommB}">
+                                <div class="slds-form-element slds-size_1-of-1 slds-medium-size_1-of-2 custom-padding">
+                                    <c:recordField record="{!v.report}" fieldName="System_conditions__c"
+                                                   editMode="true"/>
+                                </div>
+                            </aura:if>
+                        </div>
+                    </div>
+
+                </div>
+            </ui:scrollerWrapper>
+            <footer class="slds-modal__footer">
+                <lightning:button type="submit" onclick="{!c.onSave}" name="save">Save</lightning:button>
+                <lightning:button onclick="{!c.onSaveAndNew}" name="cancel">Save And New</lightning:button>
+                <lightning:button onclick="{!c.onCancel}" name="cancel">Cancel</lightning:button>
+            </footer>
+        </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+
+</aura:component>

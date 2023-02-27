@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RegistrationNumber</fullName>
+    <description>SFP-12614  - Vehicle registration number.</description>
+    <inlineHelpText>Vehicle registration number.</inlineHelpText>
+    <trackHistory>false</trackHistory>
+</CustomField>

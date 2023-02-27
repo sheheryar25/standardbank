@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Expiry_Date__c</fullName>
+    <description>The date at which the specific limit expires for the Client</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The date at which the specific limit expires for the Client</inlineHelpText>
+    <label>Expiry Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

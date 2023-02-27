@@ -1,0 +1,32 @@
+<aura:component controller="LTN_RecordData" implements="flexipage:availableForRecordHome,force:hasRecordId">
+	<aura:attribute name="recordId" type="String" access="public"/>
+	<aura:attribute name="error" type="String" access="private" />
+	<aura:attribute name="record" type="Object" access="public"/>
+	<aura:attribute name="simpleRecord" type="SObject" access="public"/>
+	<aura:attribute name="fields" type="String[]" access="private" default="Id"/>
+	<aura:attribute name="components" type="String"/>
+	<aura:attribute name="additionalComponents" type="Aura.Component[]"/>
+
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+	<aura:handler event="c:RecordFieldChange" action="{!c.handleFieldChange}"/>
+	<aura:handler event="c:ComponentAction" action="{!c.handleComponentAction}"/>
+	<aura:handler event="force:showToast" action="{!c.handleToastMessage}" />
+
+	<lightning:notificationsLibrary aura:id="notifLib"/>
+
+	<section aura:id="savingModal" role="dialog" tabindex="-1" aria-hidden="true" aria-labelledby="modal-content-id-2" aria-describedby="modal-content-id-2" class="slds-modal slds-fade-in-open slds-hide">
+        <lightning:spinner variant="brand" size="large"/>
+    </section>
+    <div aura:id="buttons" class="slds-hide">
+    	<c:FooterButtons saveAction="{!c.saveAction}" cancelAction="{!c.cancelAction}" buttons="{!v.additionalComponents}"/>
+	</div>  
+	<aura:if isTrue="{!v.fields.length>1}">  		
+		<force:recordData aura:id="forceRecord" 
+			recordId="{!v.recordId}" 
+			fields="{!v.fields}"
+			mode="EDIT" 
+			targetRecord="{!v.record}" 
+			targetFields="{!v.simpleRecord}" 
+			targetError="{!v.error}" />
+		</aura:if>
+</aura:component>

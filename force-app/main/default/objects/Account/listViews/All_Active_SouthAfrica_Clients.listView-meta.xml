@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Active_SouthAfrica_Clients</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Client_Sector__c</columns>
+    <columns>CIF__c</columns>
+    <columns>Client_Franco__c</columns>
+    <columns>Group_Parent__c</columns>
+    <columns>Account_Owner__c</columns>
+    <columns>ACCOUNT.RECORDTYPE</columns>
+    <columns>CIF_Client_Status__c</columns>
+    <columns>Client_Sub_Sector__c</columns>
+    <columns>CIF_Inactive_Indicator__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CIF_Client_Status__c</field>
+        <operation>equals</operation>
+        <value>Open,Unknown</value>
+    </filters>
+    <filters>
+        <field>Client_Franco__c</field>
+        <operation>equals</operation>
+        <value>South Africa</value>
+    </filters>
+    <filters>
+        <field>Account_Owner__c</field>
+        <operation>notContain</operation>
+        <value>Hidden Client</value>
+    </filters>
+    <label>All Active South Africa Clients</label>
+    <sharedTo>
+        <roleAndSubordinates>Corporate_Investment_Banking</roleAndSubordinates>
+    </sharedTo>
+</ListView>

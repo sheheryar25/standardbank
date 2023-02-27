@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GEL_Charity_Required</fullName>
+    <active>true</active>
+    <description>Case 1051: Gift / Expense Logs : C Reinecke</description>
+    <errorConditionFormula>ISBLANK( Charity_Name__c )  &amp;&amp;  TEXT(  Rejection_Action__c ) =  &apos;Gift Donated to Charity&apos;</errorConditionFormula>
+    <errorDisplayField>Charity_Name__c</errorDisplayField>
+    <errorMessage>You must enter the charity name to whom the donation is made.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,153 @@
+<aura:component implements="force:hasRecordId,force:LightningQuickActionWithoutHeader" controller="Develop_Prospect_LEX_Controller">
+    <aura:attribute name="fieldsToQuery" type="String[]" access="private" default="[]"/>
+    <aura:attribute name="potentialRTId" type="Id" access="private"/>
+    <aura:attribute name="account" type="Account" access="private" default="{sobjectType: 'Account'}"/>
+    <aura:attribute name="isWaiting" type="Boolean" access="private" default="true"/>
+    <aura:attribute name="unwantedPickListValues" type="List"/>
+    <aura:attribute name="requiredFields" type="String[]" access="private" default="Primary_Relationship_Holder__c,Name,Client_Sector__c,Client_Sub_Sector__c,ISIC_C_ode__c,Client_Co_ordinator__c,Client_Relationship_Hierarchy__c"/>
+    <aura:attribute name="is_commB" type="Boolean" access="private"/>
+
+    <ltng:require scripts="{!$Resource.UTL_JavaScript}" afterScriptsLoaded="{!c.doInit}"/>
+
+    <aura:if isTrue="{!v.isWaiting}">
+        <lightning:spinner/>
+    </aura:if>
+
+    <lightning:notificationsLibrary aura:id="notifLibrary"/>
+
+    <aura:if isTrue="{! !empty(v.fieldsToQuery)}">
+        <force:recordData aura:id="accountFRD"
+                          recordId="{!v.recordId}"
+                          fields="{!v.fieldsToQuery}"
+                          mode="EDIT"
+                          targetFields="{!v.account}"
+                          recordUpdated="{!c.handleRecordUpdated}"/>
+    </aura:if>
+    <aura:if isTrue="{!v.account.Id}">
+        <lightning:recordEditForm objectApiName="Account">
+            <div class="slds-form slds-form_compound">
+                <div class="slds-form-element__row">
+                    <div class="slds-form-element slds-size_1-of-1">
+                        <lightning:select label="Primary Relationship Holder" value="{!v.account.Primary_Relationship_Holder__c}" name="PRH" required="true" aura:id="Primary_Relationship_Holder__c">
+                            <option label="---NONE---" value=""/>
+                            <option label="Commercial Banking" value="Commercial Banking"/>
+                            <option label="Corporate and Investment Banking" value="Corporate and Investment Banking"/>
+                        </lightning:select>
+                    </div>
+                </div>
+                <div class="slds-form-element__row">
+                    <div class="slds-form-element slds-size_1-of-2">
+                        <c:recordField record="{!v.account}" fieldName="Name" editMode="true" required="true" aura:id="Name" includeRecordEditForm="false"/>
+                    </div>
+                    <div class="slds-form-element slds-size_1-of-2">
+                        <c:recordField record="{!v.account}" fieldName="Status__c" editMode="true" includeRecordEditForm="false"/>
+                    </div>
+                </div>
+                <div class="slds-form-element__row">
+                    <div class="slds-form-element slds-size_1-of-2">
+                        <c:recordField record="{!v.account}" fieldName="BillingStreet" editMode="true" includeRecordEditForm="false"/>
+                    </div>
+                    <div class="slds-form-element slds-size_1-of-2">
+                        <c:recordField record="{!v.account}" fieldName="Registration_Number__c" editMode="true" includeRecordEditForm="false"/>
+                    </div>
+                </div>
+                <div class="slds-form-element__row">
+                    <div class="slds-form-element slds-size_1-of-2">
+                        <c:recordField record="{!v.account}" fieldName="BillingCity" editMode="true" includeRecordEditForm="false"/>
+                    </div>
+                </div>
+                <div class="slds-form-element__row">
+                    <div class="slds-form-element slds-size_1-of-1">
+                        <c:recordField record="{!v.account}" fieldName="BillingState" editMode="true" includeRecordEditForm="false"/>
+                    </div>
+                </div>
+                <div class="slds-form-element__row">
+                    <div class="slds-form-element slds-size_1-of-1">
+                        <c:recordField record="{!v.account}" fieldName="BillingCountry" editMode="true" includeRecordEditForm="false"/>
+                    </div>
+                </div>
+                <div class="slds-form-element__row">
+                    <div class="slds-form-element slds-size_1-of-1">
+                        <c:recordField record="{!v.account}" fieldName="Phone" editMode="true" includeRecordEditForm="false"/>
+                    </div>
+                </div>
+                <div class="slds-form-element__row">
+                    <div class="slds-form-element slds-size_1-of-1">
+                        <c:recordField record="{!v.account}" fieldName="Website" editMode="true" includeRecordEditForm="false"/>
+                    </div>
+                </div>
+                <div class="slds-form-element__row">
+                    <div class="slds-form-element slds-size_1-of-1">
+                        <c:recordField record="{!v.account}" fieldName="Description" editMode="true" includeRecordEditForm="false"/>
+                    </div>
+                </div>
+                <div class="slds-form-element__row">
+                    <div class="slds-form-element slds-size_1-of-2">
+                        <c:recordField record="{!v.account}" fieldName="Client_Co_ordinator__c" editMode="true" required="true" aura:id="Client_Co_ordinator__c" includeRecordEditForm="false"/>
+                    </div>
+                    <div class="slds-form-element slds-size_1-of-2">
+                        <c:recordField record="{!v.account}" fieldName="Client_Relationship_Hierarchy__c" editMode="true" required="true" aura:id="Client_Relationship_Hierarchy__c" includeRecordEditForm="false"/>
+                    </div>
+                </div>
+                <div class="slds-form-element__row">
+                    <div class="slds-form-element slds-size_1-of-2">
+                        <aura:renderIf isTrue="{!v.is_commB}">
+                            <c:recordField record="{!v.account}" fieldName="Market_Segments__c" editMode="true" includeRecordEditForm="false"/>
+                        </aura:renderIf>
+                    </div>
+                    <div class="slds-form-element slds-size_1-of-2">
+                        <c:recordField record="{!v.account}" fieldName="ParentId" editMode="true" includeRecordEditForm="false"/>
+                    </div>
+                </div>
+                <div class="slds-form-element__row">
+                    <div class="slds-form-element slds-size_1-of-2">
+                        <c:recordField record="{!v.account}" fieldName="Proposed_Group_Parent__c" editMode="true"  includeRecordEditForm="false"/>
+                    </div>
+                    <div class="slds-form-element slds-size_1-of-2">
+                        <c:recordField record="{!v.account}" fieldName="Proposed_Immediate_Parent__c" editMode="true" includeRecordEditForm="false"/>
+                    </div>
+                </div>
+                <div class="slds-form-element__row">
+                    <div class="slds-form-element slds-size_1-of-2">
+                        <c:recordField record="{!v.account}" fieldName="Client_Sector__c" editMode="true" required="true" aura:id="Client_Sector__c" pickListValuesToRemove="{!v.unwantedPickListValues}" includeRecordEditForm="false"/>
+                    </div>
+                    <div class="slds-form-element slds-size_1-of-2">
+                        <c:recordField record="{!v.account}" fieldName="Client_Sub_Sector__c" editMode="true" required="true" aura:id="Client_Sub_Sector__c" pickListValuesToRemove="{!v.unwantedPickListValues}" includeRecordEditForm="false"/>
+                    </div>
+                </div>
+                <div class="slds-form-element__row">
+                    <c:recordField record="{!v.account}" fieldName="ISIC_C_ode__c" editMode="true" required="true" aura:id="ISIC_C_ode__c" pickListValuesToRemove="{!v.unwantedPickListValues}" includeRecordEditForm="false"/>
+                </div>
+                <div class="slds-form-element__row">
+                    <div class="slds-form-element slds-size_1-of-1">
+                        <c:recordField record="{!v.account}" fieldName="Long_Term_Strategy__c" editMode="true" includeRecordEditForm="false"/>
+                    </div>
+                </div>
+                <div class="slds-form-element__row">
+                    <div class="slds-form-element slds-size_1-of-1">
+                        <c:recordField record="{!v.account}" fieldName="Short_Term_Objectives__c" editMode="true" includeRecordEditForm="false"/>
+                    </div>
+                </div>
+                <div class="slds-form-element__row">
+                    <div class="slds-form-element slds-size_1-of-1">
+                        <c:recordField record="{!v.account}" fieldName="Client_Current_Relationship__c" editMode="true" includeRecordEditForm="false"/>
+                    </div>
+                </div>
+                <div class="slds-form-element__row">
+                    <div class="slds-form-element slds-size_1-of-1">
+                        <c:recordField record="{!v.account}" fieldName="Client_Strategy__c" editMode="true" includeRecordEditForm="false"/>
+                    </div>
+                </div>
+                <div class="slds-form-element__row">
+                    <div class="slds-form-element slds-size_1-of-1">
+                        <c:recordField record="{!v.account}" fieldName="Client_Marketing_Strategy__c" editMode="true" includeRecordEditForm="false"/>
+                    </div>
+                </div>
+            </div>
+        </lightning:recordEditForm>
+        <footer class="slds-modal__footer">
+            <lightning:button variant="neutral" label="Cancel" onclick="{!c.onCancel}"/>
+            <lightning:button variant="brand" label="Develop Prospect" onclick="{!c.onSave}"/>
+        </footer>
+    </aura:if>
+</aura:component>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_User_A_Manager__c</fullName>
+    <description>If the person is a manager, US-4580</description>
+    <externalId>false</externalId>
+    <formula>IF( Owner:User.ManagerId  = $User.Id , TRUE , FALSE)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Is User A Manager</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

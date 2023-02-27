@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Type__c</fullName>
+    <description>SFP-12591 Used to group Insurance products.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select the appropriate product to be linked with the Policy</inlineHelpText>
+    <label>Product Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Accidental Damage</fullName>
+                <default>false</default>
+                <label>Accidental Damage</label>
+            </value>
+            <value>
+                <fullName>Accounts Receivable</fullName>
+                <default>false</default>
+                <label>Accounts Receivable</label>
+            </value>
+            <value>
+                <fullName>Advanced Loss of Profits / Delay in start up</fullName>
+                <default>false</default>
+                <label>Advanced Loss of Profits / Delay in start up</label>
+            </value>
+            <value>
+                <fullName>Advertisers Liability</fullName>
+                <default>false</default>
+                <label>Advertisers Liability</label>
+            </value>
+            <value>
+                <fullName>Agricultural equipment and implements</fullName>
+                <default>false</default>
+                <label>Agricultural equipment and implements</label>
+            </value>
+            <value>
+                <fullName>Airstrip / Helipad Liability</fullName>
+                <default>false</default>
+                <label>Airstrip / Helipad Liability</label>
+            </value>
+            <value>
+                <fullName>Art &amp; Specie</fullName>
+                <default>false</default>
+                <label>Art &amp; Specie</label>
+            </value>
+            <value>
+                <fullName>Assets All Risks incl BI</fullName>
+                <default>false</default>
+                <label>Assets All Risks incl BI</label>
+            </value>
+            <value>
+                <fullName>Aviation hull</fullName>
+                <default>false</default>
+                <label>Aviation hull</label>
+            </value>
+            <value>
+                <fullName>Aviation Liability</fullName>
+                <default>false</default>
+                <label>Aviation Liability</label>
+            </value>
+            <value>
+                <fullName>Bailees Liability</fullName>
+                <default>false</default>
+                <label>Bailees Liability</label>
+            </value>
+            <value>
+                <fullName>Bankers Blanket Bond</fullName>
+                <default>false</default>
+                <label>Bankers Blanket Bond</label>
+            </value>
+            <value>
+                <fullName>Bloodstock</fullName>
+                <default>false</default>
+                <label>Bloodstock</label>
+            </value>
+            <value>
+                <fullName>BLP</fullName>
+                <default>false</default>
+                <label>BLP</label>
+            </value>
+            <value>
+                <fullName>Bondsure</fullName>
+                <default>false</default>
+                <label>Bondsure</label>
+            </value>
+            <value>
+                <fullName>Broadform Liability</fullName>
+                <default>false</default>
+                <label>Broadform Liability</label>
+            </value>
+            <value>
+                <fullName>Buildings Combined</fullName>
+                <default>false</default>
+                <label>Buildings Combined</label>
+            </value>
+            <value>
+                <fullName>Business All Risks</fullName>
+                <default>false</default>
+                <label>Business All Risks</label>
+            </value>
+            <value>
+                <fullName>Business Interruption</fullName>
+                <default>false</default>
+                <label>Business Interruption</label>
+            </value>
+            <value>
+                <fullName>Business multiperil (Packaged solutions - SME)</fullName>
+                <default>false</default>
+                <label>Business multiperil (Packaged solutions - SME)</label>
+            </value>
+            <value>
+                <fullName>BVLP</fullName>
+                <default>false</default>
+                <label>BVLP</label>
+            </value>
+            <value>
+                <fullName>Carriers Liability</fullName>
+                <default>false</default>
+                <label>Carriers Liability</label>
+            </value>
+            <value>
+                <fullName>Cash in Transit</fullName>
+                <default>false</default>
+                <label>Cash in Transit</label>
+            </value>
+            <value>
+                <fullName>Charterers Liability</fullName>
+                <default>false</default>
+                <label>Charterers Liability</label>
+            </value>
+            <value>
+                <fullName>Commercial Crime</fullName>
+                <default>false</default>
+                <label>Commercial Crime</label>
+            </value>
+            <value>
+                <fullName>Commercial - Financed Assets stand-alone cover</fullName>
+                <default>false</default>
+                <label>Commercial - Financed Assets stand-alone cover</label>
+            </value>
+            <value>
+                <fullName>Confiscation, Expropriation, Nationaliation, Deprivation (CEND)</fullName>
+                <default>false</default>
+                <label>Confiscation, Expropriation, Nationaliation, Deprivation (CEND)</label>
+            </value>
+            <value>
+                <fullName>Construction Guarantee</fullName>
+                <default>false</default>
+                <label>Construction Guarantee</label>
+            </value>
+            <value>
+                <fullName>Construction Liability</fullName>
+                <default>false</default>
+                <label>Construction Liability</label>
+            </value>
+            <value>
+                <fullName>Container Lability</fullName>
+                <default>false</default>
+                <label>Container Lability</label>
+            </value>
+            <value>
+                <fullName>Contractors All Risks</fullName>
+                <default>false</default>
+                <label>Contractors All Risks</label>
+            </value>
+            <value>
+                <fullName>Contractors All Risks (with option of BI cover)</fullName>
+                <default>false</default>
+                <label>Contractors All Risks (with option of BI cover)</label>
+            </value>
+            <value>
+                <fullName>Credit Guarantee</fullName>
+                <default>false</default>
+                <label>Credit Guarantee</label>
+            </value>
+            <value>
+                <fullName>Crop Insurance</fullName>
+                <default>false</default>
+                <label>Crop Insurance</label>
+            </value>
+            <value>
+                <fullName>Cyber</fullName>
+                <default>false</default>
+                <label>Cyber</label>
+            </value>
+            <value>
+                <fullName>Defective workmanship</fullName>
+                <default>false</default>
+                <label>Defective workmanship</label>
+            </value>
+            <value>
+                <fullName>Deterioration of stock</fullName>
+                <default>false</default>
+                <label>Deterioration of stock</label>
+            </value>
+            <value>
+                <fullName>Directors &amp; Officers</fullName>
+                <default>false</default>
+                <label>Directors &amp; Officers</label>
+            </value>
+            <value>
+                <fullName>Electronic Equipment</fullName>
+                <default>false</default>
+                <label>Electronic Equipment</label>
+            </value>
+            <value>
+                <fullName>Employee Protect</fullName>
+                <default>false</default>
+                <label>Employee Protect</label>
+            </value>
+            <value>
+                <fullName>Employers Liability</fullName>
+                <default>false</default>
+                <label>Employers Liability</label>
+            </value>
+            <value>
+                <fullName>Environmental Liability</fullName>
+                <default>false</default>
+                <label>Environmental Liability</label>
+            </value>
+            <value>
+                <fullName>Erection All Risks</fullName>
+                <default>false</default>
+                <label>Erection All Risks</label>
+            </value>
+            <value>
+                <fullName>Event Insurance</fullName>
+                <default>false</default>
+                <label>Event Insurance</label>
+            </value>
+            <value>
+                <fullName>Events Liability</fullName>
+                <default>false</default>
+                <label>Events Liability</label>
+            </value>
+            <value>
+                <fullName>Farm Pack</fullName>
+                <default>false</default>
+                <label>Farm Pack</label>
+            </value>
+            <value>
+                <fullName>Fidelity Guarantee</fullName>
+                <default>false</default>
+                <label>Fidelity Guarantee</label>
+            </value>
+            <value>
+                <fullName>Fire</fullName>
+                <default>false</default>
+                <label>Fire</label>
+            </value>
+            <value>
+                <fullName>Fire &amp; Allied Perils</fullName>
+                <default>false</default>
+                <label>Fire &amp; Allied Perils</label>
+            </value>
+            <value>
+                <fullName>Fire &amp; Allied Perils (with option of BI cover)</fullName>
+                <default>false</default>
+                <label>Fire &amp; Allied Perils (with option of BI cover)</label>
+            </value>
+            <value>
+                <fullName>Freight Forwarders Liability</fullName>
+                <default>false</default>
+                <label>Freight Forwarders Liability</label>
+            </value>
+            <value>
+                <fullName>Fuel Guarantee</fullName>
+                <default>false</default>
+                <label>Fuel Guarantee</label>
+            </value>
+            <value>
+                <fullName>Game insurance</fullName>
+                <default>false</default>
+                <label>Game insurance</label>
+            </value>
+            <value>
+                <fullName>Glass</fullName>
+                <default>false</default>
+                <label>Glass</label>
+            </value>
+            <value>
+                <fullName>Goods in Transit</fullName>
+                <default>false</default>
+                <label>Goods in Transit</label>
+            </value>
+            <value>
+                <fullName>Group Funeral</fullName>
+                <default>false</default>
+                <label>Group Funeral</label>
+            </value>
+            <value>
+                <fullName>Group Health</fullName>
+                <default>false</default>
+                <label>Group Health</label>
+            </value>
+            <value>
+                <fullName>Group Household</fullName>
+                <default>false</default>
+                <label>Group Household</label>
+            </value>
+            <value>
+                <fullName>Group Life &amp; Disability</fullName>
+                <default>false</default>
+                <label>Group Life &amp; Disability</label>
+            </value>
+            <value>
+                <fullName>Group Motor</fullName>
+                <default>false</default>
+                <label>Group Motor</label>
+            </value>
+            <value>
+                <fullName>Group Personal Accident</fullName>
+                <default>false</default>
+                <label>Group Personal Accident</label>
+            </value>
+            <value>
+                <fullName>Guarantee: Rental</fullName>
+                <default>false</default>
+                <label>Guarantee: Rental</label>
+            </value>
+            <value>
+                <fullName>Guarantee: Rental deposit</fullName>
+                <default>false</default>
+                <label>Guarantee: Rental deposit</label>
+            </value>
+            <value>
+                <fullName>Guarantee other</fullName>
+                <default>false</default>
+                <label>Guarantee other</label>
+            </value>
+            <value>
+                <fullName>Heavy commercial vehicles</fullName>
+                <default>false</default>
+                <label>Heavy commercial vehicles</label>
+            </value>
+            <value>
+                <fullName>Home-owners associations multiperil</fullName>
+                <default>false</default>
+                <label>Home-owners associations multiperil</label>
+            </value>
+            <value>
+                <fullName>Key Man insurance</fullName>
+                <default>false</default>
+                <label>Key Man insurance</label>
+            </value>
+            <value>
+                <fullName>Kidnap and Ransom</fullName>
+                <default>false</default>
+                <label>Kidnap and Ransom</label>
+            </value>
+            <value>
+                <fullName>Liability: Passenger</fullName>
+                <default>false</default>
+                <label>Liability: Passenger</label>
+            </value>
+            <value>
+                <fullName>Livestock insurance</fullName>
+                <default>false</default>
+                <label>Livestock insurance</label>
+            </value>
+            <value>
+                <fullName>Machinery Breakdown incl BI</fullName>
+                <default>false</default>
+                <label>Machinery Breakdown incl BI</label>
+            </value>
+            <value>
+                <fullName>Marine Cargo (with option of ALOP cover)</fullName>
+                <default>false</default>
+                <label>Marine Cargo (with option of ALOP cover)</label>
+            </value>
+            <value>
+                <fullName>Marine Cargo Exports</fullName>
+                <default>false</default>
+                <label>Marine Cargo Exports</label>
+            </value>
+            <value>
+                <fullName>Marine Cargo Imports</fullName>
+                <default>false</default>
+                <label>Marine Cargo Imports</label>
+            </value>
+            <value>
+                <fullName>Marine hull</fullName>
+                <default>false</default>
+                <label>Marine hull</label>
+            </value>
+            <value>
+                <fullName>Marine Inland Transit</fullName>
+                <default>false</default>
+                <label>Marine Inland Transit</label>
+            </value>
+            <value>
+                <fullName>Marine Liability</fullName>
+                <default>false</default>
+                <label>Marine Liability</label>
+            </value>
+            <value>
+                <fullName>Medical Equipment</fullName>
+                <default>false</default>
+                <label>Medical Equipment</label>
+            </value>
+            <value>
+                <fullName>Medical Malpractise</fullName>
+                <default>false</default>
+                <label>Medical Malpractise</label>
+            </value>
+            <value>
+                <fullName>Money</fullName>
+                <default>false</default>
+                <label>Money</label>
+            </value>
+            <value>
+                <fullName>Motor Comprehensive</fullName>
+                <default>false</default>
+                <label>Motor Comprehensive</label>
+            </value>
+            <value>
+                <fullName>Motor Credit shortfall</fullName>
+                <default>false</default>
+                <label>Motor Credit shortfall</label>
+            </value>
+            <value>
+                <fullName>Motor Fleet</fullName>
+                <default>false</default>
+                <label>Motor Fleet</label>
+            </value>
+            <value>
+                <fullName>Motor Personal Accident</fullName>
+                <default>false</default>
+                <label>Motor Personal Accident</label>
+            </value>
+            <value>
+                <fullName>Motor Third Party</fullName>
+                <default>false</default>
+                <label>Motor Third Party</label>
+            </value>
+            <value>
+                <fullName>Motor Third Party Fire &amp; theft</fullName>
+                <default>false</default>
+                <label>Motor Third Party Fire &amp; theft</label>
+            </value>
+            <value>
+                <fullName>Motor Traders external</fullName>
+                <default>false</default>
+                <label>Motor Traders external</label>
+            </value>
+            <value>
+                <fullName>Motor Traders Internal</fullName>
+                <default>false</default>
+                <label>Motor Traders Internal</label>
+            </value>
+            <value>
+                <fullName>Motor VAPS (excess buy down and deposit protector)</fullName>
+                <default>false</default>
+                <label>Motor VAPS (excess buy down and deposit protector)</label>
+            </value>
+            <value>
+                <fullName>Motor Warranty</fullName>
+                <default>false</default>
+                <label>Motor Warranty</label>
+            </value>
+            <value>
+                <fullName>Motor XOL</fullName>
+                <default>false</default>
+                <label>Motor XOL</label>
+            </value>
+            <value>
+                <fullName>Multiperil</fullName>
+                <default>false</default>
+                <label>Multiperil</label>
+            </value>
+            <value>
+                <fullName>Office Contents</fullName>
+                <default>false</default>
+                <label>Office Contents</label>
+            </value>
+            <value>
+                <fullName>Orchard</fullName>
+                <default>false</default>
+                <label>Orchard</label>
+            </value>
+            <value>
+                <fullName>Orchard Insurance</fullName>
+                <default>false</default>
+                <label>Orchard Insurance</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Plant All Risks</fullName>
+                <default>false</default>
+                <label>Plant All Risks</label>
+            </value>
+            <value>
+                <fullName>Plantation insurance</fullName>
+                <default>false</default>
+                <label>Plantation insurance</label>
+            </value>
+            <value>
+                <fullName>Political Violence &amp; Terrorism</fullName>
+                <default>false</default>
+                <label>Political Violence &amp; Terrorism</label>
+            </value>
+            <value>
+                <fullName>Products Guarantee</fullName>
+                <default>false</default>
+                <label>Products Guarantee</label>
+            </value>
+            <value>
+                <fullName>Products Liability</fullName>
+                <default>false</default>
+                <label>Products Liability</label>
+            </value>
+            <value>
+                <fullName>Products recall</fullName>
+                <default>false</default>
+                <label>Products recall</label>
+            </value>
+            <value>
+                <fullName>Professional Indemnity</fullName>
+                <default>false</default>
+                <label>Professional Indemnity</label>
+            </value>
+            <value>
+                <fullName>Project PI</fullName>
+                <default>false</default>
+                <label>Project PI</label>
+            </value>
+            <value>
+                <fullName>Property All Risks</fullName>
+                <default>false</default>
+                <label>Property All Risks</label>
+            </value>
+            <value>
+                <fullName>Property All Risks (with option of BI cover)</fullName>
+                <default>false</default>
+                <label>Property All Risks (with option of BI cover)</label>
+            </value>
+            <value>
+                <fullName>Public Liability</fullName>
+                <default>false</default>
+                <label>Public Liability</label>
+            </value>
+            <value>
+                <fullName>SASRIA Standalone</fullName>
+                <default>false</default>
+                <label>SASRIA Standalone</label>
+            </value>
+            <value>
+                <fullName>Sectional title: Commercial and mixed use</fullName>
+                <default>false</default>
+                <label>Sectional title: Commercial and mixed use</label>
+            </value>
+            <value>
+                <fullName>Sectional title: Residential</fullName>
+                <default>false</default>
+                <label>Sectional title: Residential</label>
+            </value>
+            <value>
+                <fullName>Security Liability</fullName>
+                <default>false</default>
+                <label>Security Liability</label>
+            </value>
+            <value>
+                <fullName>Short term Coupon</fullName>
+                <default>false</default>
+                <label>Short term Coupon</label>
+            </value>
+            <value>
+                <fullName>SME Life</fullName>
+                <default>false</default>
+                <label>SME Life</label>
+            </value>
+            <value>
+                <fullName>Stated Benefits</fullName>
+                <default>false</default>
+                <label>Stated Benefits</label>
+            </value>
+            <value>
+                <fullName>Stevedores Liability</fullName>
+                <default>false</default>
+                <label>Stevedores Liability</label>
+            </value>
+            <value>
+                <fullName>Stock Guarantee</fullName>
+                <default>false</default>
+                <label>Stock Guarantee</label>
+            </value>
+            <value>
+                <fullName>Stock throughput</fullName>
+                <default>false</default>
+                <label>Stock throughput</label>
+            </value>
+            <value>
+                <fullName>Supply Guarantee</fullName>
+                <default>false</default>
+                <label>Supply Guarantee</label>
+            </value>
+            <value>
+                <fullName>Taxi and e-hailer</fullName>
+                <default>false</default>
+                <label>Taxi and e-hailer</label>
+            </value>
+            <value>
+                <fullName>Theft</fullName>
+                <default>false</default>
+                <label>Theft</label>
+            </value>
+            <value>
+                <fullName>Travel</fullName>
+                <default>false</default>
+                <label>Travel</label>
+            </value>
+            <value>
+                <fullName>Trustees Indemnity</fullName>
+                <default>false</default>
+                <label>Trustees Indemnity</label>
+            </value>
+            <value>
+                <fullName>Umbrella Liability</fullName>
+                <default>false</default>
+                <label>Umbrella Liability</label>
+            </value>
+            <value>
+                <fullName>Utility Gurantee</fullName>
+                <default>false</default>
+                <label>Utility Gurantee</label>
+            </value>
+            <value>
+                <fullName>Warehousemans Liability</fullName>
+                <default>false</default>
+                <label>Warehousemans Liability</label>
+            </value>
+            <value>
+                <fullName>Workers Compensation</fullName>
+                <default>false</default>
+                <label>Workers Compensation</label>
+            </value>
+            <value>
+                <fullName>Wrongful arrest</fullName>
+                <default>false</default>
+                <label>Wrongful arrest</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

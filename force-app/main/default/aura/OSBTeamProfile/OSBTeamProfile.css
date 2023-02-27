@@ -1,0 +1,572 @@
+.THIS {
+}
+
+.THIS .slds-has-error .slds-form-element__help {
+    color: #e70011;
+    margin-bottom: -20px;
+    padding-left: 20px;
+}
+
+.THIS .slds-icon-standard-email {
+    background: #0033aa;
+}
+
+.THIS .align_Icon{
+    position:relative;
+}
+
+.THIS .align_Icon_center{
+    text-align: center;
+    padding-bottom: 24px;
+}
+
+.THIS .slds-icon-text-default {
+    fill: #ffffff;
+}
+
+.THIS .empty_Section{
+    height: 100px;
+    width: 100px;
+    position:relative;
+}
+
+.THIS .notifications__empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.THIS .slds-hidden input{
+	display:none;
+}
+
+.THIS .toastFail{
+    position: absolute;
+    top: 8%;
+    left: 35%;
+    z-index: 999;
+    min-width: 10000px;
+}
+
+.THIS .detail_section,
+.THIS .team_Approval_sec,
+.THIS .team_Invites_sec {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-row-gap: 16px;
+    grid-column-gap: 1%;
+    align-items: center;
+    margin: 24px 0 32px;
+}
+
+.THIS .team_Approval_sec span,
+.THIS .team_Invites_sec span {
+    margin-top: 48px;
+    text-align: center;
+    width: 100%;
+    margin-left: -22px;
+}
+
+.THIS .team_Approval_sec>p,
+.THIS .team_Approval_sec .InviteSentDate,
+.THIS .team_Invites_sec .InviteSentDate,
+.THIS .team_Invites_sec>p {
+    align-self: center;
+}
+
+.THIS .team__invites-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.THIS .team__invites-row:nth-child(1) {
+    margin-top: 32px;
+}
+
+.THIS .team__invites-row>lightning-formatted-date-time,
+.THIS .team__invites-row>p {
+    margin-bottom: 16px;
+
+}
+
+.THIS .team__invites-row>p {
+    width: fit-content;
+}
+
+.THIS .team_Approval_sec span {
+    margin-top: 48px;
+    text-align: center;
+    width: 100%;
+    margin-left: -22px;
+}
+
+.THIS .invite__button{
+    max-height: 36px;
+    min-width: fit-content;
+}
+
+.THIS .team_Approval_sec .invite__button,
+.THIS .team_Invites_sec .invite__button {
+    width: 100%;
+}
+
+.THIS .Team_detials_sec{
+    margin-left: 22px;
+    width: -webkit-fill-available;
+    padding-top: 10px;
+    width: auto;
+}
+
+.THIS .team_invites_detail{
+    display:inline-flex;
+    padding-top: 10px;
+}
+
+.THIS .team_invite_btn{
+    padding-left: 46px;
+}
+
+.THIS .fitContent{
+    width: -webkit-fill-available;
+    padding-top: 10px;
+}
+
+.THIS .team_Approval_sec{
+    padding: 5px 0 5px 0;
+}
+
+.THIS .add_member{
+    display:flex;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.THIS .invite--padding{
+    margin-top:5px;
+}
+
+.THIS .addAnother_btn{
+    padding-top: 36px;
+    min-width: fit-content;
+}
+
+.THIS .addAnother_btn .newCase__button {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.THIS .slds-checkbox_toggle [type="checkbox"] + .slds-checkbox_faux_container .slds-checkbox_off,
+.THIS .slds-checkbox_toggle [type="checkbox"] + .slds-checkbox_faux_container .slds-checkbox_on{
+    display:none;
+}
+
+.THIS .adjustEmail{
+    margin-right: 30px;
+    width: 490px;
+}
+
+.THIS .team__form--input--name--after{
+    width: 200px;
+    padding-right:5px;
+}
+
+.THIS .slds-input{
+    min-height: 48px;
+}
+
+.THIS .toggle{
+    padding-top: 28px;
+    margin-left: 44px;
+}
+
+.THIS .rectangle {
+	height: 40px;
+    background-color: #f6f6f6;
+    padding-bottom: 32px;
+    margin-left: -24px;
+}
+
+.THIS .SectionHeading{
+    height: 13px;
+    color: #222222;
+    font-family: BentonSans;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.58px;
+    padding-top: 10px; 
+    margin-left: 24px;
+}
+
+.THIS .AdjustLength{
+    height: 710px;
+}
+
+.THIS .adjustIc i{
+    padding-left: 5px;
+}
+
+.THIS .original{
+    height: 100%;
+    min-height: 600px;
+}
+
+.THIS .newCase-container {
+    min-width: fit-content;
+}
+
+.THIS .newCase {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 72px;
+}
+
+.THIS .newCase.newCase--optl {
+    background: #fff;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.25);
+}
+
+.THIS .newCase__form {
+    padding: 40px 48px 48px 48px;
+    display: flex;
+    flex-direction: column;
+}
+
+.THIS .newCase__buttons {
+    background-color: #F6F6F6;
+}
+
+.THIS .newCase__buttons-container {
+    height: 80px;
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.THIS .newCase__buttons-container>span:nth-child(1) {
+    padding-right: 6px;
+}
+
+.THIS .newCase__buttons-container>span:nth-child(2) {
+    padding-left: 6px;
+}
+
+.THIS .newCase__title {
+    color: #0A2240;
+    font-size: 57px;
+    font-weight: 200;
+    line-height: 57px;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.THIS .emailFormatting{
+    color:#0089FF !important;
+}
+
+.THIS .newCase__subtitle {
+    color: #666666;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 24px;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.THIS .newCase__subtitle_2 {
+    color: #666666;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 24px;
+    text-align: center;
+    margin-bottom: 24px;
+    height: 50px;
+}
+
+.THIS .aligncenter{
+    text-align:center;
+}
+
+.THIS .newCase__form--input textArea {
+    border: 1px solid #CCCCCC;
+    border-radius: 2px;
+    background-color: #FFFFFF;
+}
+
+
+.THIS .newCase__form--input textArea {
+    height: 240px;
+    resize: none;
+}
+
+.THIS .newCase__form--textarea {
+    height: 144px;
+}
+
+.THIS .newCase__form--input label {
+    color: #4A4A4A;
+    font-size: 14px;
+    font-weight: 300;	
+    line-height: 18px;
+    text-transform: uppercase;
+    padding-bottom: 8px;
+}
+
+.THIS .newCase__form--input textArea::placeholder{
+    color: #767676;
+    font-weight: 200;
+    font-size: 15px;
+}
+
+.THIS .newCase__button {
+    width: 100%;
+    float: left;
+    max-height: 40px;
+    padding: 15px 0;
+}
+
+.THIS .newCase__link {
+    color: #0089FF;
+}
+
+.THIS .newCase__icon {
+    padding: 16px;
+    background: #0033AA;
+    border-radius: 50%;
+    align-self: center;
+    margin-bottom: 24px;
+}
+
+.THIS .newCase__icon i {
+    font-size: 48px;
+    color: #fff;
+}
+
+.THIS .newCase--optl .newCase__title {
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 0.83px;
+    line-height: 24px;
+    text-transform: capitalize;
+}
+
+.THIS  .btnStyle {
+    height: 50px;
+    border: 0;
+    border-radius: 2px;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    transition: all .15s ease-in;
+    cursor: pointer;
+}
+
+.THIS .invite__button.btn--gray {
+    background-color: #ededed;
+    color: #0033AA;
+    border-radius: 2px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.3);
+}
+
+.THIS .invite__button.btn--gray:hover,
+.THIS .invite__button.btn--gray:focus {
+    background: #0089ff;
+    color: #fff;
+}
+
+.THIS .newCase__button.btn--darkblue {
+    background-color: #0033AA;
+    color: #FFFFFF;
+}
+
+.THIS .newCase__button.btn--gray {
+    background-color: #ededed;
+    color: #0033AA;
+    border-radius: 2px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.3);
+}
+
+.THIS .newCase__button.btn--gray:hover,
+.THIS .newCase__button.btn--gray:focus {
+    background: #0089ff;
+    color: #fff;
+}
+
+.THIS .newCase__button.btn--darkblue:hover,
+.THIS .newCase__button.btn--darkblue:focus {
+    background: #0069c4;
+    color: #fff;
+}
+
+.THIS .marketplace {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    color: #1A1A1A;
+    padding: 56px 0;
+}
+
+.THIS .marketplace__content {
+    display: flex;
+    justify-content: center;
+}
+
+.THIS .marketplace__right {
+    max-width: 71%;
+}
+
+.THIS .marketplace__navigation {
+    position: sticky;
+    top: 140px;
+    padding-top: 76px;
+}
+
+.THIS .marketplace__navigation-title {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25px;
+    text-transform: uppercase;
+}
+
+.THIS .marketplace__navigation-item-container {
+    line-height: 25px;
+    margin-top: 16px;
+    cursor: pointer;
+}
+
+.THIS .adjustSize{
+    height: 10px;
+}
+
+.THIS .marketplace__navigation-item {
+    font-size: 16px;
+    font-weight: 400;
+    color: #0089FF;
+    position: relative;
+}
+
+.THIS .marketplace__navigation-item__selected {
+    font-weight: 500;
+}
+
+.THIS .marketplace__navigation-item__selected::before {
+    content: '';
+    position: absolute;
+    height: 24px;
+    width: 4px;
+    border-radius: 3px;
+    background-color: #0089FF;
+    left: -16px;
+}
+
+@media(max-width: 767px) {
+    .THIS .add_member {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .THIS .detail_section,
+    .THIS .team_Approval_sec,
+    .THIS .team_Invites_sec {
+        display: block;
+    }
+
+    .THIS .detail_section>p,
+    .THIS .team_Approval_sec>p,
+    .THIS .team_Invites_sec>p {
+        margin-bottom: 16px;
+    }
+
+    .THIS .team_Approval_sec .invite__button:nth-child(odd) {
+        margin: 16px 0;
+    }
+
+    .THIS .team_Approval_sec .invite__button:nth-child(even) {
+        margin-bottom: 40px;
+    }
+
+    .THIS .detail_section .invite__button,
+    .THIS .team_Invites_sec .invite__button {
+        margin: 16px 0 40px;
+    }
+
+    .THIS .team_Invites_sec .invite__button:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .THIS .team__invites-row {
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+
+    .THIS .team__invites-row .invite__button {
+        width: 100%;
+    }
+
+    .THIS .newCase {
+        margin-top: 32px;
+    }
+
+    .THIS .newCase__buttons {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media(max-width: 1024px) {
+    .THIS .rectangle {
+        margin-left: -16px;
+        margin-right: -16px;
+    }
+
+    .THIS .newCase-container.mt_72 {
+        margin-top: 0;
+    }
+
+    .THIS .newCase-container {
+        padding-right: 20px;
+        padding-left: 20px;
+        width: 100%;
+    }
+
+    .THIS .marketplace__left {
+        display: none;
+    }
+
+    .THIS .invite__button {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+}
+
+@media(min-width: 1025px) {
+    .THIS .rectangle {
+        margin-left: -24px;
+        margin-right: -24px;
+    }
+}
+
+@media(min-width: 481px) and (max-width: 1280px) {
+    .THIS .cOSBPopUp .popUp-box {
+        top: 40% !important;
+        left: 50% !important;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+
+    .THIS .cOSBPopUp .popUp-visible {
+        z-index: 10000;
+    }
+}
+
+@media(min-width: 1025px) and (max-width: 1440px) {
+    .THIS .newCase-container {
+        width: 75%;
+    }
+}

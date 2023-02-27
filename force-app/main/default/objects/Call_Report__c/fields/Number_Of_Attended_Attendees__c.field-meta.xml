@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_Of_Attended_Attendees__c</fullName>
+    <description>Technical field</description>
+    <externalId>false</externalId>
+    <label>Number Of Attendeed Attendees</label>
+    <summaryFilterItems>
+        <field>Call_Report_Attendees__c.Status__c</field>
+        <operation>equals</operation>
+        <value>Attended</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Call_Report_Attendees__c.Call_Report__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

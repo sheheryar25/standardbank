@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CMN_AddStackTraceToExceptions__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>If checked, then when an error is encountered, the system will add the stack track to the errors lists on Queue Item and in responses.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Add Stack Trace to Exceptions</label>
+    <type>Checkbox</type>
+</CustomField>

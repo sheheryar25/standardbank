@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CMN_WebServiceQueue</fullName>
+    <fields>Name</fields>
+    <fields>CMN_Service__c</fields>
+    <fields>CMN_Status__c</fields>
+    <fields>CMN_Type__c</fields>
+    <fields>CMN_RequestTimeTaken__c</fields>
+    <fields>CMN_TriggeringObjectUrl__c</fields>
+    <label>CMN_WebServiceQueue</label>
+</CompactLayout>

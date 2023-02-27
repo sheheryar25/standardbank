@@ -1,0 +1,42 @@
+<!--
+ - Created by joracki on 18.09.2018.
+ - Modified by Chibuye Kunda
+ -->
+
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId"
+                description="Component is an extenson for RecordData component providing client onboarding specific asction."
+                controller="ProceedButtonController">
+
+    <aura:attribute name="recordDataComponent" type="Aura.Component"/>
+    <aura:attribute name="label" type="String" default="Save And Proceed"/>
+    <aura:attribute name="show_submit" type="Boolean" default="false"/>
+    <aura:attribute name="show_proceed" type="Boolean" default="true"/>
+    <aura:attribute name="need_approval" type="Boolean" default="false"/>
+    <aura:attribute name="user_is_cib" type="Boolean" default="false"/>
+    <aura:attribute name="is_gt_record" type="Boolean" default="true"/>
+    <aura:attribute name="is_loading" type="Boolean" default="false"/>
+    <aura:attribute name="onboard_record" type="Account"/>
+    <aura:attribute name="saved_before_onboard" type="Boolean" default="false"/>
+    <aura:attribute name="role_changed" type="Boolean" default="false"/>
+    <aura:attribute name="isic_code" type="String" default="" />
+    <aura:attribute name="record_type_name" type="String" default="NA"/>
+    <aura:attribute name="default_kyc_location" type="String" access="public" default="SBSA - Standard Bank of South Africa Ltd"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <aura:handler event="c:ComponentAction" action="{!c.handleComponentAction}"/>
+    <aura:handler event="c:RecordFieldChange" action="{!c.handleFieldChange}"/>
+
+    <aura:if isTrue="{!v.show_proceed}">
+        <lightning:button label="{!v.label}" onclick="{!c.saveAndProceed}"/>
+    </aura:if>
+
+    <aura:if isTrue="{!v.show_submit}">
+        <lightning:button label="Submit for Onboarding" onclick="{!c.onboardRecord}"/>
+    </aura:if>
+    <aura:if isTrue="{!v.is_loading}">
+        <div>
+            <lightning:spinner aura:id="load_spinner"/>
+        </div>
+    </aura:if>
+</aura:component>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Angola_Support_Finance_Call_Report</fullName>
+    <filterScope>Queue</filterScope>
+    <label>Angola Support Finance</label>
+    <queue>Angola_Support_Finance</queue>
+    <sharedTo>
+        <roleAndSubordinates>PBB_Angola_Country</roleAndSubordinates>
+    </sharedTo>
+</ListView>

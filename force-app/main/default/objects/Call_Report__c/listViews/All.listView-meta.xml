@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>Assigned_To__c</columns>
+    <columns>Contact__c</columns>
+    <columns>Start__c</columns>
+    <columns>End__c</columns>
+    <columns>Report_Type__c</columns>
+    <columns>RECORDTYPE</columns>
+    <columns>Meeting_Purpose__c</columns>
+    <columns>Meeting_Format__c</columns>
+    <columns>Meeting_Audience__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Meeting_Audience__c</field>
+        <operation>equals</operation>
+        <value>Internal</value>
+    </filters>
+    <label>All</label>
+</ListView>

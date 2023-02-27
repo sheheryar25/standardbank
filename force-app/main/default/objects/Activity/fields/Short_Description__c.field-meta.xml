@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Short_Description__c</fullName>
+    <description>Changed from Short Description to Comments on Progress, case 652 (08/07/2011)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Description of the progress that has been made on the Task; any issues, risks or comments raised (255 characters or less)</inlineHelpText>
+    <label>Comments on Progress</label>
+    <required>false</required>
+    <type>TextArea</type>
+</CustomField>

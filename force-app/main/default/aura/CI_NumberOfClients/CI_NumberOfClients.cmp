@@ -1,0 +1,28 @@
+<aura:component extends="c:CI_Base" controller="StdBank_Ltn_NumberOfClientsController" implements="flexipage:availableForAllPageTypes">
+	<aura:attribute name="counts" type="List" />
+	<aura:attribute name="targetURL" type="String" access="private" />
+	<aura:attribute name="querySettings" type="Object"/>
+	<aura:attribute name="title" type="String" default="{!$Label.c.My_Team_Clients}"/>
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+	<article class="card_with_shadow">
+		<a href="{!v.targetURL}" target="_blank" style="color: inherit; text-decoration: inherit;">
+			<div class="slds-p-around_small slds-m-bottom_large slds-p-bottom_large">
+					<p class="slds-text-heading_small">{!v.title}</p>
+
+				<div class="slds-grid slds-m-top_x-small">
+
+					<aura:iteration items="{!v.counts}" var="count" indexVar="index">
+						<div class="slds-text-heading_medium slds-p-right_xx-small">
+							<div>{!count.value}</div>
+							<p class="slds-text-body_regular">{!count.key}</p>
+						</div>
+						<aura:if isTrue="{!v.counts.length - 1 != index}">
+							<div class="card_value_secondary slds-p-horizontal_small">|</div>
+						</aura:if>
+					</aura:iteration>
+
+				</div>
+			</div>
+		</a>
+	</article>
+</aura:component>

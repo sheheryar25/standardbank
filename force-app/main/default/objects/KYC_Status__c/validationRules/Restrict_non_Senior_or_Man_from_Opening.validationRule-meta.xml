@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_non_Senior_or_Man_from_Opening</fullName>
+    <active>true</active>
+    <description>Restricts a non manager or senior from moving back the status from Compliant | Suspended | Closed | Migrated to PBB to open</description>
+    <errorConditionFormula>NOT( $Setup.Environment_Variable__c.Ignore_Validation_Rule__c ) 
+
+&amp;&amp; 
+
+(	
+	(($Profile.Name = &apos;Custom KYC User&apos; || $Profile.Name = &apos;Custom KYC User Mobile&apos;)
+	&amp;&amp; 
+	(NOT(CONTAINS($User.Title, &apos;Senior&apos;)) || ISBLANK($User.Title)) 
+	&amp;&amp; 
+	(NOT(CONTAINS($User.Title, &apos;Manager&apos;)) || ISBLANK($User.Title))
+	) 
+	|| 
+	$User.Id =  KYC_Consultant__c 
+) 
+&amp;&amp; 
+
+OR(ISCHANGED( KYC_Review_Status__c ),ISCHANGED( Review_Completed_Date__c )) 
+
+&amp;&amp; 
+
+OR( 
+ISPICKVAL(PRIORVALUE(KYC_Review_Status__c), &quot;Compliant&quot;),
+ISPICKVAL(PRIORVALUE(KYC_Review_Status__c), &quot;Suspended&quot;),
+ISPICKVAL(PRIORVALUE(KYC_Review_Status__c), &quot;Closed&quot;),
+ISPICKVAL(PRIORVALUE(KYC_Review_Status__c), &quot;Migrated to PBB&quot;),
+ISPICKVAL(PRIORVALUE(KYC_Review_Status__c), &quot;Client Risk Committee Approval Outstanding&quot;)
+)</errorConditionFormula>
+    <errorMessage>You can not fill Review Completed Date  or open KYC Review Status</errorMessage>
+</ValidationRule>

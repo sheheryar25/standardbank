@@ -1,0 +1,47 @@
+<aura:component implements="lightning:actionOverride,flexipage:availableForRecordHome,force:hasRecordId" access="global" controller="OSB_NotificationsDialog_CTRL">
+    <aura:attribute name="userValues" type="Object" />
+    <aura:attribute name="notificationRecord" type="Notification__c" />
+    <aura:attribute name="modalContext" type="String" default="New" />
+    <aura:attribute name="UserList" type="List" default="[]" description="Available Community Users"/>
+    <aura:attribute name="selectedUserList" type="List" default="[]" description="Selected Users"/>
+    <aura:attribute name="selectedUserNames" type="List" default="[]" description="Selected Users Names"/>
+     
+    <force:recordData aura:id="forceRecord"
+                      recordId="{!v.recordId}"
+                      targetFields="{!v.notificationRecord}"
+                      fields="Id,Name,Title__c,Content__c,Users__c,Selected_Users__c"
+                      mode="EDIT" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <div aura:id="editDialog" role="dialog" tabindex="-1" aria-labelledby="header43" class="slds-modal slds-fade-in-open">
+        <div class="slds-modal__container">
+            <div class="slds-modal__header">
+                <h2 class="slds-text-heading_medium">{!v.modalContext} Record</h2>
+            </div>
+            <div class="slds-modal__content slds-p-around_medium slds-grid slds-wrap ">
+                <lightning:input aura:id="notificationName" name="notificationName" label="Notification Name" value="{!v.notificationRecord.Name}" required="true" class="slds-size_1-of-1 slds-p-horizontal_x-small" />
+                <lightning:input aura:id="notificationTitle" name="notificationTitle" label="Title" value="{!v.notificationRecord.Title__c}" class="slds-size_1-of-2 slds-p-horizontal_x-small" />
+                <lightning:input aura:id="notificationContent" name="notificationContent" label="Content" value="{!v.notificationRecord.Content__c}" class="slds-size_1-of-2 slds-p-horizontal_x-small" />
+                <div class="slds-size_1-of-1 slds-p-horizontal_x-small">
+                    <lightning:dualListbox aura:id="selectUser"
+                                           name="User"
+                                           label="Select User"
+                                           sourceLabel="Available Users"
+                                           selectedLabel="Selected Users"
+                                           options="{!v.UserList }"
+                                           value="{!v.selectedUserList}"
+                                           onchange="{!c.handleUserChange}"/>
+                </div> 
+                
+            </div>
+            <div class="slds-modal__footer">                
+                <div class="slds-button" data-id="uitlink_link" data-text="{!'Notification dialog | ' + v.modalContext + ' |  Cancel'}">
+                    <lightning:button variant="neutral" label="Cancel" onclick="{!c.cancelDialog}"/>
+                </div>
+                <div class="slds-button" data-id="uitlink_link" data-text="{!'Notification dialog | ' + v.modalContext + ' |  Submit'}">
+                    <lightning:button variant="brand" label="Submit" onclick="{!c.saveRecord}" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div aura:id="overlay" class="slds-backdrop slds-backdrop_open"></div>
+</aura:component>

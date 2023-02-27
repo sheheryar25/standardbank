@@ -1,0 +1,4 @@
+<aura:event type="APPLICATION" description="ChangePopUpPageEvent">
+    <aura:attribute name="pageNumber" type="Integer"/>
+    <aura:attribute name="isNextPage" type="Boolean"/>
+</aura:event>

@@ -1,0 +1,75 @@
+<aura:component description="OSBMarketPlaceCommunity">
+    <aura:attribute name="selectedNavItem" type="String" access="public"/>
+    <aura:attribute name="mobileMenuToggled" type="Boolean" default="false" access="private"/>
+
+    <aura:registerEvent name="navigationEvent" type="c:OSBNavigationEvent"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    <aura:handler event="c:OSBMarketplaceTabEvent" action="{!c.handleOptionChanged}"/>
+    <aura:handler event="c:OSBMobileMenuToggledEvent" action="{!c.handleMenuToggled}"/>
+
+    <div class="marketplace">
+        <div class="marketplace__content">
+            <div class="marketplace__left slds-large-size_2-of-12 mt_72">
+                <nav class="marketplace__navigation">
+                    <h2 class="marketplace__navigation-title">Community</h2>
+                    <ul class="marketplace__navigation-items mb_32">
+                        <li class="marketplace__navigation-item-container" data-id="side_nav_link" data-text="Marketgram | Be heard">
+                            <span onclick="{!c.handleNavItemChange}"
+                                class="{! v.selectedNavItem == 'BeHeard' ? 'marketplace__navigation-item marketplace__navigation-item__selected' : 'marketplace__navigation-item'}"
+                                aura:id="navigationItem" data-tab-name="BeHeard">
+                                Be heard</span>
+                        </li>
+                        <li class="marketplace__navigation-item-container" data-id="side_nav_link" data-text="Marketgram | Activity">
+                            <span onclick="{!c.handleNavItemChange}" class="{! v.selectedNavItem == 'MyActivity' ? 'marketplace__navigation-item marketplace__navigation-item__selected' : 'marketplace__navigation-item'}"
+                                aura:id="navigationItem" data-tab-name="MyActivity">
+                                Activity
+                            </span>
+                        </li>
+                        <li class="marketplace__navigation-item-container" data-id="side_nav_link" data-text="Marketgram | Bookmarks">
+                            <span onclick="{!c.handleNavItemChange}" class="{! v.selectedNavItem == 'Bookmarks' ? 'marketplace__navigation-item marketplace__navigation-item__selected' : 'marketplace__navigation-item'}"
+                                aura:id="navigationItem" data-tab-name="Bookmarks">
+                                Bookmarks
+                            </span>
+                        </li>
+                    </ul>
+                    <h2 class="marketplace__navigation-title">Let’s collaborate</h2>
+                    <ul class="marketplace__navigation-items mb_32">
+                        <li class="marketplace__navigation-item-container" data-id="side_nav_link" data-text="Marketgram | Submit an idea">
+                            <span onclick="{!c.handleNavItemChange}"
+                            class="{! v.selectedNavItem == 'SubmitAnIdea' ? 'marketplace__navigation-item marketplace__navigation-item__selected' : 'marketplace__navigation-item'}"
+                                aura:id="navigationItem" data-tab-name="SubmitAnIdea">
+                                Submit an idea</span>
+                        </li>
+                        <li class="marketplace__navigation-item-container" data-id="side_nav_link" data-text="Marketgram | Submit a business problem">
+                            <span onclick="{!c.handleNavItemChange}"
+                            class="{! v.selectedNavItem == 'SubmitABusinessProblem' ? 'marketplace__navigation-item marketplace__navigation-item__selected' : 'marketplace__navigation-item'}"
+                                aura:id="navigationItem" data-tab-name="SubmitABusinessProblem">
+                                Submit a business problem</span>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="marketplace__right slds-size_6-of-6 slds-medium-size_12-of-12 slds-large-size_8-of-12 mt_72 ">
+                <aura:if isTrue="{!v.selectedNavItem == 'BeHeard'}">
+                    <c:OSBMarketgramProducts />
+                </aura:if>
+                <aura:if isTrue="{!v.selectedNavItem == 'MyActivity'}">
+                    <c:OSBMarketGramMyActivity />
+                </aura:if>
+                <aura:if isTrue="{!v.selectedNavItem == 'Bookmarks'}">
+                    <c:OSBBookmarksFeed />
+                </aura:if>
+                <aura:if isTrue="{!v.selectedNavItem == 'SubmitRequest'}">
+                    <c:OSBSubmitRequestMarketGram />
+                </aura:if>
+                <aura:if isTrue="{!v.selectedNavItem == 'SubmitAnIdea'}">
+                    <c:OSBSubmitRequestMarketGram section="User Idea"/>
+                </aura:if>
+                <aura:if isTrue="{!v.selectedNavItem == 'SubmitABusinessProblem'}">
+                    <c:OSBSubmitRequestMarketGram section="Business Problem"/>
+                </aura:if>
+            </div>
+        </div>
+    </div>
+</aura:component>

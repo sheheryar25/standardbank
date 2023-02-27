@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ClosedDateRequiredIfClosedAmountNotEmpty</fullName>
+    <active>true</active>
+    <description>US-4609</description>
+    <errorConditionFormula>AND(NOT(ISBLANK( Distribution_Party_Closed__c  )),  ISBLANK( Distribution_Party_Closed_Date__c ) )</errorConditionFormula>
+    <errorDisplayField>Distribution_Party_Closed_Date__c</errorDisplayField>
+    <errorMessage>Please ensure you enter the Closed Date if Distribution Party Closed field has been entered</errorMessage>
+</ValidationRule>

@@ -1,0 +1,36 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" controller="Ltn_NBAC_FinancialAnalysis">
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="fieldSetIndicator" required="true" type="String" />
+    <aura:attribute name="fieldSetMetric" required="true" type="String" />
+	<aura:attribute name="title" type="String" />
+
+	<aura:attribute name="metricRTName" type="String" required="true" access="global" />
+	<aura:attribute name="indicatiorRTName" type="String" required="true" access="global" />
+
+	<aura:attribute name="metricRT" type="String" access="private" />
+	<aura:attribute name="indicatiorRT" type="String" access="private" />
+	<aura:attribute name="isLoading" type="Boolean" default="true" access="private" />
+
+
+	    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+		<aura:if isTrue="{!v.isLoading}" >
+			<lightning:spinner variant="brand" size="large"/>
+		<aura:set attribute="else">
+			<div class="slds-section slds-is-open">
+				<h3 class="slds-section__title slds-theme_shade">
+					<span class="slds-truncate slds-p-horizontal_small" title="{!v.title}">{!v.title}</span>
+				</h3>
+				<div aria-hidden="false" class="slds-grid slds-section__content slds-grid_vertical">
+					<div class="slds-col custom_card slds-m-top_small slds-m-horizontal_xx-small slds-p-around_small">
+						<c:RelatedList recordId="{!v.recordId}" defaults="{!'RecordTypeId = ' + v.indicatiorRT}" fieldset="{!v.fieldSetIndicator}"  relationName="NBAC_Financial_Analysis__r" filters="RecordType.DeveloperName = 'Indicator'" />
+					</div>
+					<div class="slds-col custom_card slds-m-top_small slds-m-horizontal_xx-small slds-p-around_small">
+						<c:NBAC_FinancialAnalysis_Metric aura:id="metriclist" defaults="{!'RecordTypeId = '+ v.metricRT}" columnString="Metric_Year_1__c,Metric_Year_2__c,Metric_Year_3__c,Metric_Year_4__c" recordId="{!v.recordId}" fieldset="{!v.fieldSetMetric}"  relationName="NBAC_Financial_Analysis__r" filters="RecordType.DeveloperName = 'Metric'" />
+					</div>
+				</div>		
+			</div>
+		</aura:set>
+	</aura:if>
+    
+
+</aura:component>

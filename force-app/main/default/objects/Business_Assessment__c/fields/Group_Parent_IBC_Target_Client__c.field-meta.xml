@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Group_Parent_IBC_Target_Client__c</fullName>
+    <description>This Group Parent client was identified during the budget process.</description>
+    <externalId>false</externalId>
+    <formula>IF(NOT(ISBLANK( Account__r.Economic_Group_Parent__c )),Account__r.Economic_Group_Parent__r.Group_Parent_CIB_Target_Client__c, Account__r.Group_Parent_CIB_Target_Client__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>This Group Parent Client was identified as an Individually Budgeted Client (IBC) during the budget process.</inlineHelpText>
+    <label>Group Parent IBC Target Client</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

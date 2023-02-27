@@ -1,0 +1,1047 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Source_System__c</fullName>
+    <description>Source System</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Source System</inlineHelpText>
+    <label>Source System</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AC-Asset Control Feed</fullName>
+                <default>false</default>
+                <label>AC-Asset Control Feed</label>
+            </value>
+            <value>
+                <fullName>ACBS-Advanced Commercial Banking System</fullName>
+                <default>false</default>
+                <label>ACBS-Advanced Commercial Banking System</label>
+            </value>
+            <value>
+                <fullName>ACRS-Confirmation Reconciliation System</fullName>
+                <default>false</default>
+                <label>ACRS-Confirmation Reconciliation System</label>
+            </value>
+            <value>
+                <fullName>ALBR-Alchemy Brazil</fullName>
+                <default>false</default>
+                <label>ALBR-Alchemy Brazil</label>
+            </value>
+            <value>
+                <fullName>ALOY-Precious Metals</fullName>
+                <default>false</default>
+                <label>ALOY-Precious Metals</label>
+            </value>
+            <value>
+                <fullName>ALSA-Alchemy South Africa</fullName>
+                <default>false</default>
+                <label>ALSA-Alchemy South Africa</label>
+            </value>
+            <value>
+                <fullName>ALTM-Altamira</fullName>
+                <default>false</default>
+                <label>ALTM-Altamira</label>
+            </value>
+            <value>
+                <fullName>AO24-Angola T24</fullName>
+                <default>false</default>
+                <label>AO24-Angola T24</label>
+            </value>
+            <value>
+                <fullName>AOHP-Angola Hpand L</fullName>
+                <default>false</default>
+                <label>AOHP-Angola Hpand L</label>
+            </value>
+            <value>
+                <fullName>ASCO-Asset Control</fullName>
+                <default>false</default>
+                <label>ASCO-Asset Control</label>
+            </value>
+            <value>
+                <fullName>BALN-Cortex Base London</fullName>
+                <default>false</default>
+                <label>BALN-Cortex Base London</label>
+            </value>
+            <value>
+                <fullName>BDA-Broker Dealer Accounting</fullName>
+                <default>false</default>
+                <label>BDA-Broker Dealer Accounting</label>
+            </value>
+            <value>
+                <fullName>BDYB-Brady Base Metals</fullName>
+                <default>false</default>
+                <label>BDYB-Brady Base Metals</label>
+            </value>
+            <value>
+                <fullName>BDYP-Brady Precious</fullName>
+                <default>false</default>
+                <label>BDYP-Brady Precious</label>
+            </value>
+            <value>
+                <fullName>BLTT-Blue Titanium</fullName>
+                <default>false</default>
+                <label>BLTT-Blue Titanium</label>
+            </value>
+            <value>
+                <fullName>BMBW-Bank Master -Botswana</fullName>
+                <default>false</default>
+                <label>BMBW-Bank Master -Botswana</label>
+            </value>
+            <value>
+                <fullName>BMCG-Bank Master -Congo</fullName>
+                <default>false</default>
+                <label>BMCG-Bank Master -Congo</label>
+            </value>
+            <value>
+                <fullName>BMGH-Bank Master -Ghana</fullName>
+                <default>false</default>
+                <label>BMGH-Bank Master -Ghana</label>
+            </value>
+            <value>
+                <fullName>BMKE-Bank Master -Kenya</fullName>
+                <default>false</default>
+                <label>BMKE-Bank Master -Kenya</label>
+            </value>
+            <value>
+                <fullName>BMLS-Bank Master -Lesotho</fullName>
+                <default>false</default>
+                <label>BMLS-Bank Master -Lesotho</label>
+            </value>
+            <value>
+                <fullName>BMMU-Bank Master -Mauritius</fullName>
+                <default>false</default>
+                <label>BMMU-Bank Master -Mauritius</label>
+            </value>
+            <value>
+                <fullName>BMMW-Bank Master -Malawi</fullName>
+                <default>false</default>
+                <label>BMMW-Bank Master -Malawi</label>
+            </value>
+            <value>
+                <fullName>BMMZ-Bank Master -Mozambique</fullName>
+                <default>false</default>
+                <label>BMMZ-Bank Master -Mozambique</label>
+            </value>
+            <value>
+                <fullName>BMNA-Bank Master -Nambia</fullName>
+                <default>false</default>
+                <label>BMNA-Bank Master -Nambia</label>
+            </value>
+            <value>
+                <fullName>BMSZ-Bank Master -Swaziland</fullName>
+                <default>false</default>
+                <label>BMSZ-Bank Master -Swaziland</label>
+            </value>
+            <value>
+                <fullName>BMTZ-Bank Master -Tanzania</fullName>
+                <default>false</default>
+                <label>BMTZ-Bank Master -Tanzania</label>
+            </value>
+            <value>
+                <fullName>BMUG-Bank Master -Uganda</fullName>
+                <default>false</default>
+                <label>BMUG-Bank Master -Uganda</label>
+            </value>
+            <value>
+                <fullName>BMZM-Bank Master -Zambia</fullName>
+                <default>false</default>
+                <label>BMZM-Bank Master -Zambia</label>
+            </value>
+            <value>
+                <fullName>BMZW-Bank Master_ Mysis - Zimbabwe</fullName>
+                <default>false</default>
+                <label>BMZW-Bank Master_ Mysis - Zimbabwe</label>
+            </value>
+            <value>
+                <fullName>BNKT-Bank Trade</fullName>
+                <default>false</default>
+                <label>BNKT-Bank Trade</label>
+            </value>
+            <value>
+                <fullName>BOL-Business Online Client Administration</fullName>
+                <default>false</default>
+                <label>BOL-Business Online Client Administration</label>
+            </value>
+            <value>
+                <fullName>BRAC-Branch Accounting System</fullName>
+                <default>false</default>
+                <label>BRAC-Branch Accounting System</label>
+            </value>
+            <value>
+                <fullName>BRDY-Brady London</fullName>
+                <default>false</default>
+                <label>BRDY-Brady London</label>
+            </value>
+            <value>
+                <fullName>BSRE-Basel Ii Sap Reconciliation Engine</fullName>
+                <default>false</default>
+                <label>BSRE-Basel Ii Sap Reconciliation Engine</label>
+            </value>
+            <value>
+                <fullName>BWHP-Botswana Hpand L</fullName>
+                <default>false</default>
+                <label>BWHP-Botswana Hpand L</label>
+            </value>
+            <value>
+                <fullName>CAM-Client Account Management</fullName>
+                <default>false</default>
+                <label>CAM-Client Account Management</label>
+            </value>
+            <value>
+                <fullName>CAPI-Capital</fullName>
+                <default>false</default>
+                <label>CAPI-Capital</label>
+            </value>
+            <value>
+                <fullName>CARD-Card Division</fullName>
+                <default>false</default>
+                <label>CARD-Card Division</label>
+            </value>
+            <value>
+                <fullName>CATS-Cash Accounting And Treasury Services</fullName>
+                <default>false</default>
+                <label>CATS-Cash Accounting And Treasury Services</label>
+            </value>
+            <value>
+                <fullName>CCS-Customer Register In The National Financial S</fullName>
+                <default>false</default>
+                <label>CCS-Customer Register In The National Financial S</label>
+            </value>
+            <value>
+                <fullName>CDHP-Congo Hpand L</fullName>
+                <default>false</default>
+                <label>CDHP-Congo Hpand L</label>
+            </value>
+            <value>
+                <fullName>CDS-Credit Data Store</fullName>
+                <default>false</default>
+                <label>CDS-Credit Data Store</label>
+            </value>
+            <value>
+                <fullName>CFCA-Customer Foreign Currency Accounts.</fullName>
+                <default>false</default>
+                <label>CFCA-Customer Foreign Currency Accounts.</label>
+            </value>
+            <value>
+                <fullName>CIF-Client Information File</fullName>
+                <default>false</default>
+                <label>CIF-Client Information File</label>
+            </value>
+            <value>
+                <fullName>CIHK-Client Information Hong Kong</fullName>
+                <default>false</default>
+                <label>CIHK-Client Information Hong Kong</label>
+            </value>
+            <value>
+                <fullName>CLLU-Client Lending Unit</fullName>
+                <default>false</default>
+                <label>CLLU-Client Lending Unit</label>
+            </value>
+            <value>
+                <fullName>CMDT-Commodities Risk &amp; Reporting System</fullName>
+                <default>false</default>
+                <label>CMDT-Commodities Risk &amp; Reporting System</label>
+            </value>
+            <value>
+                <fullName>CPAF-Calypso Africa</fullName>
+                <default>false</default>
+                <label>CPAF-Calypso Africa</label>
+            </value>
+            <value>
+                <fullName>CPAG-Calypso Agri</fullName>
+                <default>false</default>
+                <label>CPAG-Calypso Agri</label>
+            </value>
+            <value>
+                <fullName>CPFX-Calypso Fx South Africa</fullName>
+                <default>false</default>
+                <label>CPFX-Calypso Fx South Africa</label>
+            </value>
+            <value>
+                <fullName>CPSA-Calypso South Africa</fullName>
+                <default>false</default>
+                <label>CPSA-Calypso South Africa</label>
+            </value>
+            <value>
+                <fullName>CPSO-Calypso</fullName>
+                <default>false</default>
+                <label>CPSO-Calypso</label>
+            </value>
+            <value>
+                <fullName>CQM-Client Query Management</fullName>
+                <default>false</default>
+                <label>CQM-Client Query Management</label>
+            </value>
+            <value>
+                <fullName>CRDE-Credit Derivatives Exposures</fullName>
+                <default>false</default>
+                <label>CRDE-Credit Derivatives Exposures</label>
+            </value>
+            <value>
+                <fullName>CRLM-Credit Limit Monitoring-Adaptiv</fullName>
+                <default>false</default>
+                <label>CRLM-Credit Limit Monitoring-Adaptiv</label>
+            </value>
+            <value>
+                <fullName>CRM-Crm Lite - Sih</fullName>
+                <default>false</default>
+                <label>CRM-Crm Lite - Sih</label>
+            </value>
+            <value>
+                <fullName>CRML-Crm Lite</fullName>
+                <default>false</default>
+                <label>CRML-Crm Lite</label>
+            </value>
+            <value>
+                <fullName>CRS-Credit Rating System</fullName>
+                <default>false</default>
+                <label>CRS-Credit Rating System</label>
+            </value>
+            <value>
+                <fullName>CSHM-Cashman</fullName>
+                <default>false</default>
+                <label>CSHM-Cashman</label>
+            </value>
+            <value>
+                <fullName>DBFN-Debtor`S Finance</fullName>
+                <default>false</default>
+                <label>DBFN-Debtor`S Finance</label>
+            </value>
+            <value>
+                <fullName>DOMB-Domestic Banking</fullName>
+                <default>false</default>
+                <label>DOMB-Domestic Banking</label>
+            </value>
+            <value>
+                <fullName>DOMS-Domestic Treasury</fullName>
+                <default>false</default>
+                <label>DOMS-Domestic Treasury</label>
+            </value>
+            <value>
+                <fullName>DTRS-Domestic Treasury</fullName>
+                <default>false</default>
+                <label>DTRS-Domestic Treasury</label>
+            </value>
+            <value>
+                <fullName>EDEX-Equity Derivatives Exposures</fullName>
+                <default>false</default>
+                <label>EDEX-Equity Derivatives Exposures</label>
+            </value>
+            <value>
+                <fullName>EDSL-Equity Derivatives Securities Lending</fullName>
+                <default>false</default>
+                <label>EDSL-Equity Derivatives Securities Lending</label>
+            </value>
+            <value>
+                <fullName>EFTS-Electronic Funds Transfer</fullName>
+                <default>false</default>
+                <label>EFTS-Electronic Funds Transfer</label>
+            </value>
+            <value>
+                <fullName>EIPS-Electronic Interbank Payments System</fullName>
+                <default>false</default>
+                <label>EIPS-Electronic Interbank Payments System</label>
+            </value>
+            <value>
+                <fullName>EMKT-Emarkets</fullName>
+                <default>false</default>
+                <label>EMKT-Emarkets</label>
+            </value>
+            <value>
+                <fullName>ESB-Esb</fullName>
+                <default>false</default>
+                <label>ESB-Esb</label>
+            </value>
+            <value>
+                <fullName>EXEX-Exotic Exposures</fullName>
+                <default>false</default>
+                <label>EXEX-Exotic Exposures</label>
+            </value>
+            <value>
+                <fullName>EXIS-Exis</fullName>
+                <default>false</default>
+                <label>EXIS-Exis</label>
+            </value>
+            <value>
+                <fullName>EXLN-Exis London</fullName>
+                <default>false</default>
+                <label>EXLN-Exis London</label>
+            </value>
+            <value>
+                <fullName>EXMB-Eximbills</fullName>
+                <default>false</default>
+                <label>EXMB-Eximbills</label>
+            </value>
+            <value>
+                <fullName>FBKR-Front Broker</fullName>
+                <default>false</default>
+                <label>FBKR-Front Broker</label>
+            </value>
+            <value>
+                <fullName>FCHK-Flow Control Hong Kon</fullName>
+                <default>false</default>
+                <label>FCHK-Flow Control Hong Kon</label>
+            </value>
+            <value>
+                <fullName>FCLI-Front Client</fullName>
+                <default>false</default>
+                <label>FCLI-Front Client</label>
+            </value>
+            <value>
+                <fullName>FCSH-Financial Crimes Surveillance Hub</fullName>
+                <default>false</default>
+                <label>FCSH-Financial Crimes Surveillance Hub</label>
+            </value>
+            <value>
+                <fullName>FCTP-Flow Control Taipei</fullName>
+                <default>false</default>
+                <label>FCTP-Flow Control Taipei</label>
+            </value>
+            <value>
+                <fullName>FDA-Fidessa Data Administrator</fullName>
+                <default>false</default>
+                <label>FDA-Fidessa Data Administrator</label>
+            </value>
+            <value>
+                <fullName>FEDS-Foreign Exchange Dealing System</fullName>
+                <default>false</default>
+                <label>FEDS-Foreign Exchange Dealing System</label>
+            </value>
+            <value>
+                <fullName>FGLD-Fully Gauranteed Lending</fullName>
+                <default>false</default>
+                <label>FGLD-Fully Gauranteed Lending</label>
+            </value>
+            <value>
+                <fullName>FISS-Front Issuer</fullName>
+                <default>false</default>
+                <label>FISS-Front Issuer</label>
+            </value>
+            <value>
+                <fullName>FLSA-Filenet Sa</fullName>
+                <default>false</default>
+                <label>FLSA-Filenet Sa</label>
+            </value>
+            <value>
+                <fullName>FMS-Financial Modeling System</fullName>
+                <default>false</default>
+                <label>FMS-Financial Modeling System</label>
+            </value>
+            <value>
+                <fullName>FNBW-Finacle Botswana</fullName>
+                <default>false</default>
+                <label>FNBW-Finacle Botswana</label>
+            </value>
+            <value>
+                <fullName>FNET-Filenet</fullName>
+                <default>false</default>
+                <label>FNET-Filenet</label>
+            </value>
+            <value>
+                <fullName>FNGH-Finacle Ghana</fullName>
+                <default>false</default>
+                <label>FNGH-Finacle Ghana</label>
+            </value>
+            <value>
+                <fullName>FNNG-Finacle Nigeria</fullName>
+                <default>false</default>
+                <label>FNNG-Finacle Nigeria</label>
+            </value>
+            <value>
+                <fullName>FNSZ-Finacle Swaziland</fullName>
+                <default>false</default>
+                <label>FNSZ-Finacle Swaziland</label>
+            </value>
+            <value>
+                <fullName>FNTZ-Finacle Tanzania</fullName>
+                <default>false</default>
+                <label>FNTZ-Finacle Tanzania</label>
+            </value>
+            <value>
+                <fullName>FNUG-Finacle Uganda</fullName>
+                <default>false</default>
+                <label>FNUG-Finacle Uganda</label>
+            </value>
+            <value>
+                <fullName>FRE-Finance Re Engineering</fullName>
+                <default>false</default>
+                <label>FRE-Finance Re Engineering</label>
+            </value>
+            <value>
+                <fullName>FRID-Liberty Finance And Risk Information Delivery</fullName>
+                <default>false</default>
+                <label>FRID-Liberty Finance And Risk Information Delivery</label>
+            </value>
+            <value>
+                <fullName>FRM-Frm Database</fullName>
+                <default>false</default>
+                <label>FRM-Frm Database</label>
+            </value>
+            <value>
+                <fullName>FRNT-Front</fullName>
+                <default>false</default>
+                <label>FRNT-Front</label>
+            </value>
+            <value>
+                <fullName>FRSA-Front South Africa</fullName>
+                <default>false</default>
+                <label>FRSA-Front South Africa</label>
+            </value>
+            <value>
+                <fullName>FSP-Financial Spreading Package - Standard Bank</fullName>
+                <default>false</default>
+                <label>FSP-Financial Spreading Package - Standard Bank</label>
+            </value>
+            <value>
+                <fullName>GHCD-Ghana Citydealer</fullName>
+                <default>false</default>
+                <label>GHCD-Ghana Citydealer</label>
+            </value>
+            <value>
+                <fullName>GHHP-Ghana Hpand L</fullName>
+                <default>false</default>
+                <label>GHHP-Ghana Hpand L</label>
+            </value>
+            <value>
+                <fullName>GLBS-Globus</fullName>
+                <default>false</default>
+                <label>GLBS-Globus</label>
+            </value>
+            <value>
+                <fullName>GLTR-Gold Tier</fullName>
+                <default>false</default>
+                <label>GLTR-Gold Tier</label>
+            </value>
+            <value>
+                <fullName>HOOP-Hoops</fullName>
+                <default>false</default>
+                <label>HOOP-Hoops</label>
+            </value>
+            <value>
+                <fullName>HPEX-Hoops Exposures</fullName>
+                <default>false</default>
+                <label>HPEX-Hoops Exposures</label>
+            </value>
+            <value>
+                <fullName>HPL-High Purchase And Lending System</fullName>
+                <default>false</default>
+                <label>HPL-High Purchase And Lending System</label>
+            </value>
+            <value>
+                <fullName>IACR-Adaptiv Waterdragon</fullName>
+                <default>false</default>
+                <label>IACR-Adaptiv Waterdragon</label>
+            </value>
+            <value>
+                <fullName>ICRS-Crs Waterdragon</fullName>
+                <default>false</default>
+                <label>ICRS-Crs Waterdragon</label>
+            </value>
+            <value>
+                <fullName>IFSP-Spreadpac Waterdragon</fullName>
+                <default>false</default>
+                <label>IFSP-Spreadpac Waterdragon</label>
+            </value>
+            <value>
+                <fullName>INFN-Infinity</fullName>
+                <default>false</default>
+                <label>INFN-Infinity</label>
+            </value>
+            <value>
+                <fullName>INVE-Investment</fullName>
+                <default>false</default>
+                <label>INVE-Investment</label>
+            </value>
+            <value>
+                <fullName>IRC1-Interest Rate Calculator 1</fullName>
+                <default>false</default>
+                <label>IRC1-Interest Rate Calculator 1</label>
+            </value>
+            <value>
+                <fullName>ISW-Interest Statement Warehouse</fullName>
+                <default>false</default>
+                <label>ISW-Interest Statement Warehouse</label>
+            </value>
+            <value>
+                <fullName>KE24-Kenya T24</fullName>
+                <default>false</default>
+                <label>KE24-Kenya T24</label>
+            </value>
+            <value>
+                <fullName>KEHP-Kenya Hpand L</fullName>
+                <default>false</default>
+                <label>KEHP-Kenya Hpand L</label>
+            </value>
+            <value>
+                <fullName>KNOX-Knox</fullName>
+                <default>false</default>
+                <label>KNOX-Knox</label>
+            </value>
+            <value>
+                <fullName>KYC-Know Your Customer</fullName>
+                <default>false</default>
+                <label>KYC-Know Your Customer</label>
+            </value>
+            <value>
+                <fullName>LAPS-Logica All Payments System</fullName>
+                <default>false</default>
+                <label>LAPS-Logica All Payments System</label>
+            </value>
+            <value>
+                <fullName>LCC-Letters Of Credit Confirmation</fullName>
+                <default>false</default>
+                <label>LCC-Letters Of Credit Confirmation</label>
+            </value>
+            <value>
+                <fullName>LCH-Ldn Clearing Hse Code</fullName>
+                <default>false</default>
+                <label>LCH-Ldn Clearing Hse Code</label>
+            </value>
+            <value>
+                <fullName>LCRM-Libertycredit Limit Monitoring-Adaptiv</fullName>
+                <default>false</default>
+                <label>LCRM-Libertycredit Limit Monitoring-Adaptiv</label>
+            </value>
+            <value>
+                <fullName>LCRS-Liberty Credit Rating System</fullName>
+                <default>false</default>
+                <label>LCRS-Liberty Credit Rating System</label>
+            </value>
+            <value>
+                <fullName>LDOC-Legal Document Database</fullName>
+                <default>false</default>
+                <label>LDOC-Legal Document Database</label>
+            </value>
+            <value>
+                <fullName>LFSP-Financial Spreading Package - Liberty</fullName>
+                <default>false</default>
+                <label>LFSP-Financial Spreading Package - Liberty</label>
+            </value>
+            <value>
+                <fullName>LSCD-Lesotho Citydealer</fullName>
+                <default>false</default>
+                <label>LSCD-Lesotho Citydealer</label>
+            </value>
+            <value>
+                <fullName>LSHP-Lesotho Hpand L</fullName>
+                <default>false</default>
+                <label>LSHP-Lesotho Hpand L</label>
+            </value>
+            <value>
+                <fullName>MDNG-Middle Office Database Nigeria (Equinox)</fullName>
+                <default>false</default>
+                <label>MDNG-Middle Office Database Nigeria (Equinox)</label>
+            </value>
+            <value>
+                <fullName>MEQD-Murex Eqd Clients</fullName>
+                <default>false</default>
+                <label>MEQD-Murex Eqd Clients</label>
+            </value>
+            <value>
+                <fullName>MQSA-Murex Eqd Sa</fullName>
+                <default>false</default>
+                <label>MQSA-Murex Eqd Sa</label>
+            </value>
+            <value>
+                <fullName>MRIR-Market Risk Issuer Reporting(Damas)</fullName>
+                <default>false</default>
+                <label>MRIR-Market Risk Issuer Reporting(Damas)</label>
+            </value>
+            <value>
+                <fullName>MUCD-Mauritius Citydealer</fullName>
+                <default>false</default>
+                <label>MUCD-Mauritius Citydealer</label>
+            </value>
+            <value>
+                <fullName>MUHP-Mauritius Hpand L</fullName>
+                <default>false</default>
+                <label>MUHP-Mauritius Hpand L</label>
+            </value>
+            <value>
+                <fullName>MURX-Murex Trading System</fullName>
+                <default>false</default>
+                <label>MURX-Murex Trading System</label>
+            </value>
+            <value>
+                <fullName>MWCD-Malawi Citydealer</fullName>
+                <default>false</default>
+                <label>MWCD-Malawi Citydealer</label>
+            </value>
+            <value>
+                <fullName>MWEB-Metalsweb</fullName>
+                <default>false</default>
+                <label>MWEB-Metalsweb</label>
+            </value>
+            <value>
+                <fullName>MWHP-Malawi Hpand L</fullName>
+                <default>false</default>
+                <label>MWHP-Malawi Hpand L</label>
+            </value>
+            <value>
+                <fullName>MXCM-Mxcom</fullName>
+                <default>false</default>
+                <label>MXCM-Mxcom</label>
+            </value>
+            <value>
+                <fullName>MXEN-Murex Energy</fullName>
+                <default>false</default>
+                <label>MXEN-Murex Energy</label>
+            </value>
+            <value>
+                <fullName>MXFX-Murex Fx Version .3</fullName>
+                <default>false</default>
+                <label>MXFX-Murex Fx Version .3</label>
+            </value>
+            <value>
+                <fullName>MXIR-Murex Interest Rate Derivatives</fullName>
+                <default>false</default>
+                <label>MXIR-Murex Interest Rate Derivatives</label>
+            </value>
+            <value>
+                <fullName>MXLN-Murex Gts London</fullName>
+                <default>false</default>
+                <label>MXLN-Murex Gts London</label>
+            </value>
+            <value>
+                <fullName>MXMR-Murex Money Markets</fullName>
+                <default>false</default>
+                <label>MXMR-Murex Money Markets</label>
+            </value>
+            <value>
+                <fullName>MZ24-Mozambique T24</fullName>
+                <default>false</default>
+                <label>MZ24-Mozambique T24</label>
+            </value>
+            <value>
+                <fullName>MZCD-Mozambizue Citydealer</fullName>
+                <default>false</default>
+                <label>MZCD-Mozambizue Citydealer</label>
+            </value>
+            <value>
+                <fullName>MZHP-Mozambique Hpand L</fullName>
+                <default>false</default>
+                <label>MZHP-Mozambique Hpand L</label>
+            </value>
+            <value>
+                <fullName>NABA-Namibia Branch Accounting</fullName>
+                <default>false</default>
+                <label>NABA-Namibia Branch Accounting</label>
+            </value>
+            <value>
+                <fullName>NACD-Namibia Citydealer</fullName>
+                <default>false</default>
+                <label>NACD-Namibia Citydealer</label>
+            </value>
+            <value>
+                <fullName>NAHP-Namibia Hpand L</fullName>
+                <default>false</default>
+                <label>NAHP-Namibia Hpand L</label>
+            </value>
+            <value>
+                <fullName>NARS-Nostro Reconciliation System</fullName>
+                <default>false</default>
+                <label>NARS-Nostro Reconciliation System</label>
+            </value>
+            <value>
+                <fullName>NCS-National Custody System</fullName>
+                <default>false</default>
+                <label>NCS-National Custody System</label>
+            </value>
+            <value>
+                <fullName>OPLN-Opval London</fullName>
+                <default>false</default>
+                <label>OPLN-Opval London</label>
+            </value>
+            <value>
+                <fullName>OSD-Operational Static Data</fullName>
+                <default>false</default>
+                <label>OSD-Operational Static Data</label>
+            </value>
+            <value>
+                <fullName>PARS-Position Reconciliation System</fullName>
+                <default>false</default>
+                <label>PARS-Position Reconciliation System</label>
+            </value>
+            <value>
+                <fullName>PIMB-Pims Base Metals</fullName>
+                <default>false</default>
+                <label>PIMB-Pims Base Metals</label>
+            </value>
+            <value>
+                <fullName>PIMS-Physical Inventory Management System</fullName>
+                <default>false</default>
+                <label>PIMS-Physical Inventory Management System</label>
+            </value>
+            <value>
+                <fullName>PRFN-Project Finance</fullName>
+                <default>false</default>
+                <label>PRFN-Project Finance</label>
+            </value>
+            <value>
+                <fullName>PRLN-Cortex Precious London</fullName>
+                <default>false</default>
+                <label>PRLN-Cortex Precious London</label>
+            </value>
+            <value>
+                <fullName>PROP-Properties Sap</fullName>
+                <default>false</default>
+                <label>PROP-Properties Sap</label>
+            </value>
+            <value>
+                <fullName>QPLX-Quantoplex</fullName>
+                <default>false</default>
+                <label>QPLX-Quantoplex</label>
+            </value>
+            <value>
+                <fullName>RCC-Risk Capital Calculator</fullName>
+                <default>false</default>
+                <label>RCC-Risk Capital Calculator</label>
+            </value>
+            <value>
+                <fullName>REUT-Reuters System</fullName>
+                <default>false</default>
+                <label>REUT-Reuters System</label>
+            </value>
+            <value>
+                <fullName>RFRM-R-Frame</fullName>
+                <default>false</default>
+                <label>RFRM-R-Frame</label>
+            </value>
+            <value>
+                <fullName>RFS-Retail Forex System</fullName>
+                <default>false</default>
+                <label>RFS-Retail Forex System</label>
+            </value>
+            <value>
+                <fullName>RIMS-Rims</fullName>
+                <default>false</default>
+                <label>RIMS-Rims</label>
+            </value>
+            <value>
+                <fullName>RTGS-Real Time Gross Settlement System</fullName>
+                <default>false</default>
+                <label>RTGS-Real Time Gross Settlement System</label>
+            </value>
+            <value>
+                <fullName>RWEX-Riskwatch Exposures</fullName>
+                <default>false</default>
+                <label>RWEX-Riskwatch Exposures</label>
+            </value>
+            <value>
+                <fullName>SACP-South African Compliance Portal</fullName>
+                <default>false</default>
+                <label>SACP-South African Compliance Portal</label>
+            </value>
+            <value>
+                <fullName>SAPB-Sap Business Partner</fullName>
+                <default>false</default>
+                <label>SAPB-Sap Business Partner</label>
+            </value>
+            <value>
+                <fullName>SAXO-Saxo Bank</fullName>
+                <default>false</default>
+                <label>SAXO-Saxo Bank</label>
+            </value>
+            <value>
+                <fullName>SBRF-Standard Bank Plc R-Frame</fullName>
+                <default>false</default>
+                <label>SBRF-Standard Bank Plc R-Frame</label>
+            </value>
+            <value>
+                <fullName>SCLN-Securities Lending</fullName>
+                <default>false</default>
+                <label>SCLN-Securities Lending</label>
+            </value>
+            <value>
+                <fullName>SDB-Sd Banco</fullName>
+                <default>false</default>
+                <label>SDB-Sd Banco</label>
+            </value>
+            <value>
+                <fullName>SEEX-Sentry Exposures</fullName>
+                <default>false</default>
+                <label>SEEX-Sentry Exposures</label>
+            </value>
+            <value>
+                <fullName>SFCE-Sales Force</fullName>
+                <default>false</default>
+                <label>SFCE-Sales Force</label>
+            </value>
+            <value>
+                <fullName>SFMS-Stannic Fleet Management Systems</fullName>
+                <default>false</default>
+                <label>SFMS-Stannic Fleet Management Systems</label>
+            </value>
+            <value>
+                <fullName>SFWD-Salesforce Waterdragon</fullName>
+                <default>false</default>
+                <label>SFWD-Salesforce Waterdragon</label>
+            </value>
+            <value>
+                <fullName>SLAT-Stock Borrowing And Lending System</fullName>
+                <default>false</default>
+                <label>SLAT-Stock Borrowing And Lending System</label>
+            </value>
+            <value>
+                <fullName>SOLA-Solarc</fullName>
+                <default>false</default>
+                <label>SOLA-Solarc</label>
+            </value>
+            <value>
+                <fullName>SPAR-Sap Accounts Receivable (Sap Ar)</fullName>
+                <default>false</default>
+                <label>SPAR-Sap Accounts Receivable (Sap Ar)</label>
+            </value>
+            <value>
+                <fullName>SPHK-Spectrum Hong Kong</fullName>
+                <default>false</default>
+                <label>SPHK-Spectrum Hong Kong</label>
+            </value>
+            <value>
+                <fullName>SPLN-Spectrum London</fullName>
+                <default>false</default>
+                <label>SPLN-Spectrum London</label>
+            </value>
+            <value>
+                <fullName>SS24-South Sudan T24</fullName>
+                <default>false</default>
+                <label>SS24-South Sudan T24</label>
+            </value>
+            <value>
+                <fullName>STAN-Stannic</fullName>
+                <default>false</default>
+                <label>STAN-Stannic</label>
+            </value>
+            <value>
+                <fullName>STBL-Stb London</fullName>
+                <default>false</default>
+                <label>STBL-Stb London</label>
+            </value>
+            <value>
+                <fullName>STOC-Global Banking Book Collateral</fullName>
+                <default>false</default>
+                <label>STOC-Global Banking Book Collateral</label>
+            </value>
+            <value>
+                <fullName>STRY-Sentry Collateral Management</fullName>
+                <default>false</default>
+                <label>STRY-Sentry Collateral Management</label>
+            </value>
+            <value>
+                <fullName>STTS-Securities Trading &amp; Technology System</fullName>
+                <default>false</default>
+                <label>STTS-Securities Trading &amp; Technology System</label>
+            </value>
+            <value>
+                <fullName>SWHK-Swan Hong Kong</fullName>
+                <default>false</default>
+                <label>SWHK-Swan Hong Kong</label>
+            </value>
+            <value>
+                <fullName>SWLN-Swan London</fullName>
+                <default>false</default>
+                <label>SWLN-Swan London</label>
+            </value>
+            <value>
+                <fullName>SYFX-Symbols Fx</fullName>
+                <default>false</default>
+                <label>SYFX-Symbols Fx</label>
+            </value>
+            <value>
+                <fullName>SYSC-Symbols Securities</fullName>
+                <default>false</default>
+                <label>SYSC-Symbols Securities</label>
+            </value>
+            <value>
+                <fullName>SZCD-Swaziland Citydealer</fullName>
+                <default>false</default>
+                <label>SZCD-Swaziland Citydealer</label>
+            </value>
+            <value>
+                <fullName>SZHP-Swaziland Hpand L</fullName>
+                <default>false</default>
+                <label>SZHP-Swaziland Hpand L</label>
+            </value>
+            <value>
+                <fullName>TEST-Test Publish</fullName>
+                <default>false</default>
+                <label>TEST-Test Publish</label>
+            </value>
+            <value>
+                <fullName>TOMS-Bloomberg Toms</fullName>
+                <default>false</default>
+                <label>TOMS-Bloomberg Toms</label>
+            </value>
+            <value>
+                <fullName>TRAC-Intellitracs</fullName>
+                <default>false</default>
+                <label>TRAC-Intellitracs</label>
+            </value>
+            <value>
+                <fullName>TRFN-Trade Finance</fullName>
+                <default>false</default>
+                <label>TRFN-Trade Finance</label>
+            </value>
+            <value>
+                <fullName>TZCD-Tanzania Citydealer</fullName>
+                <default>false</default>
+                <label>TZCD-Tanzania Citydealer</label>
+            </value>
+            <value>
+                <fullName>TZHP-Tanzania Hpand L</fullName>
+                <default>false</default>
+                <label>TZHP-Tanzania Hpand L</label>
+            </value>
+            <value>
+                <fullName>UGCD-Uganda Citydealer</fullName>
+                <default>false</default>
+                <label>UGCD-Uganda Citydealer</label>
+            </value>
+            <value>
+                <fullName>UGHP-Uganda Hpand L</fullName>
+                <default>false</default>
+                <label>UGHP-Uganda Hpand L</label>
+            </value>
+            <value>
+                <fullName>VOST-Vostro</fullName>
+                <default>false</default>
+                <label>VOST-Vostro</label>
+            </value>
+            <value>
+                <fullName>XCEP-Xceptor</fullName>
+                <default>false</default>
+                <label>XCEP-Xceptor</label>
+            </value>
+            <value>
+                <fullName>ZAPS-South African Payment System</fullName>
+                <default>false</default>
+                <label>ZAPS-South African Payment System</label>
+            </value>
+            <value>
+                <fullName>ZMCD-Zambia Citydealer</fullName>
+                <default>false</default>
+                <label>ZMCD-Zambia Citydealer</label>
+            </value>
+            <value>
+                <fullName>ZMHP-Zambia Hpand L</fullName>
+                <default>false</default>
+                <label>ZMHP-Zambia Hpand L</label>
+            </value>
+            <value>
+                <fullName>ZWCD-Zimbabwe Citydealer</fullName>
+                <default>false</default>
+                <label>ZWCD-Zimbabwe Citydealer</label>
+            </value>
+            <value>
+                <fullName>ZWHP-Zimbabwe Hpand L</fullName>
+                <default>false</default>
+                <label>ZWHP-Zimbabwe Hpand L</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Severity__c</fullName>
+    <description>When a complaint case is created then severity needs to be indicated - SGPRT-2299</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates the relative seriousness of a complaint, and directs the bank’s escalation, accountability and ownership workflows in responding and resolving</inlineHelpText>
+    <label>Severity</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Type</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>High</fullName>
+                <default>false</default>
+                <label>High</label>
+            </value>
+            <value>
+                <fullName>Medium</fullName>
+                <default>false</default>
+                <label>Medium</label>
+            </value>
+            <value>
+                <fullName>Low</fullName>
+                <default>false</default>
+                <label>Low</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Complaint</controllingFieldValue>
+            <valueName>High</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Complaint</controllingFieldValue>
+            <valueName>Medium</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Complaint</controllingFieldValue>
+            <valueName>Low</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,12 @@
+.THIS .pad-10-right {
+    
+    padding-right: 10px;
+    
+}
+.THIS .pad-21-left-right{
+    padding-left: 21px;
+    padding-right: 21px; 
+}
+.THIS .hide{
+    display:none;   
+}

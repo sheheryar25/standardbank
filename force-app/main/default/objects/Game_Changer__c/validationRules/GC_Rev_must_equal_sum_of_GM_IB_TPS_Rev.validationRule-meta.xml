@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GC_Rev_must_equal_sum_of_GM_IB_TPS_Rev</fullName>
+    <active>true</active>
+    <description>US-1214:RTB - OM - Game Changers. 
+sum of Global Market,Investment Bank,Other Revenue and TPS revenue must equal to Game Changer Revenue</description>
+    <errorConditionFormula>NOT(ISPICKVAL( Progress_Category__c ,&quot;Stretch&quot;)) &amp;&amp; 
+NOT(ISNULL(Game_Changer_Revenue__c)) &amp;&amp; (NULLVALUE(Game_Changer_Revenue__c,0) &lt;&gt; (NULLVALUE(Global_Market_Revenue__c,0) +NULLVALUE(Investment_Banking_Revenue__c,0) + NULLVALUE(Transactional_Products_and_Services_Reve__c,0) + NULLVALUE(Cancelled__c,0) + NULLVALUE(Deferred__c,0)))</errorConditionFormula>
+    <errorMessage>Sum of Global Market Revenue,Investment Banking Revenue,Cancelled,Deferred and Transactional Products and Services Revenue must be equal to the Game Changer Revenue</errorMessage>
+</ValidationRule>

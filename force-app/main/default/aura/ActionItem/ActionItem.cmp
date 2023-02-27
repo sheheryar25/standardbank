@@ -1,0 +1,24 @@
+<aura:component >
+	<aura:attribute name="data" type="Object"/>
+
+	<div class="slds-media">
+		<div class="slds-media__figure">
+			<span class="{!'slds-icon_container slds-icon_container_circle slds-icon-standard-' + v.data.item.objectName}">
+          		<c:svgIcon svgPath="{!$Resource.SLDS202 + '/assets/icons/standard-sprite/svg/symbols.svg#' + v.data.item.objectName}" class="slds-icon slds-icon_small"/>
+			</span>
+      	</div>
+      	<div class="slds-media__body slds-text-body_small">
+      		<ul>
+      			<li><span>{!v.data.header}</span></li>
+      			<li><a href="javascript:void(0);" onclick="{!c.onClick}" draggable="">{!v.data.item.name}</a></li>
+      			<li class="slds-text-color_weak">
+      				<ul class="slds-list_horizontal slds-has-dividers_left">
+      					<aura:iteration items="{!v.data.footer}" var="item">
+      						<li class="slds-item">{!item}</li>
+      					</aura:iteration>
+      				</ul>
+      			</li>
+      		</ul>
+      	</div>
+	</div>
+</aura:component>

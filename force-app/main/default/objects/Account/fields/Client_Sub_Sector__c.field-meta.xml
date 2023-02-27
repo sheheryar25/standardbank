@@ -1,0 +1,689 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Client_Sub_Sector__c</fullName>
+    <description>The Client Sub-Sector further defines the sector in which the Client operates. This field is used in CRT and MI reporting. The business rule where a Client Sub-Sector cannot be dependent on more than one Client Sector needs to be adhered to at all times. Do not create or assign a duplicate Client Sub-Sector to more than one Client Sector</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The Client Sub-Sector further defines the sector in which the Client operates</inlineHelpText>
+    <label>Client Sub-Sector</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Client_Sector__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Agriculture</fullName>
+                <default>false</default>
+                <label>Agriculture</label>
+            </value>
+            <value>
+                <fullName>Agriculture Commodity Traders</fullName>
+                <default>false</default>
+                <label>Agriculture Commodity Traders</label>
+            </value>
+            <value>
+                <fullName>Airlines</fullName>
+                <default>false</default>
+                <label>Airlines</label>
+            </value>
+            <value>
+                <fullName>Alternative Investment Vehicles</fullName>
+                <default>false</default>
+                <label>Alternative Investment Vehicles</label>
+            </value>
+            <value>
+                <fullName>Asset Managers</fullName>
+                <default>false</default>
+                <label>Asset Managers</label>
+            </value>
+            <value>
+                <fullName>Automobiles</fullName>
+                <default>false</default>
+                <label>Automobiles</label>
+            </value>
+            <value>
+                <fullName>Banks</fullName>
+                <default>false</default>
+                <label>Banks</label>
+            </value>
+            <value>
+                <fullName>Base Metals</fullName>
+                <default>false</default>
+                <label>Base Metals</label>
+            </value>
+            <value>
+                <fullName>Brokers and Exchanges</fullName>
+                <default>false</default>
+                <label>Brokers and Exchanges</label>
+            </value>
+            <value>
+                <fullName>Bulk Commodities</fullName>
+                <default>false</default>
+                <label>Bulk Commodities</label>
+            </value>
+            <value>
+                <fullName>Cement</fullName>
+                <default>false</default>
+                <label>Cement</label>
+            </value>
+            <value>
+                <fullName>Central Banks</fullName>
+                <default>false</default>
+                <label>Central Banks</label>
+            </value>
+            <value>
+                <fullName>Centralised Power</fullName>
+                <default>false</default>
+                <label>Centralised Power</label>
+            </value>
+            <value>
+                <fullName>Chemicals</fullName>
+                <default>false</default>
+                <label>Chemicals</label>
+            </value>
+            <value>
+                <fullName>Coal</fullName>
+                <default>false</default>
+                <label>Coal</label>
+            </value>
+            <value>
+                <fullName>Construction</fullName>
+                <default>false</default>
+                <label>Construction</label>
+            </value>
+            <value>
+                <fullName>Construction Services</fullName>
+                <default>false</default>
+                <label>Construction Services</label>
+            </value>
+            <value>
+                <fullName>Consumer Services</fullName>
+                <default>false</default>
+                <label>Consumer Services</label>
+            </value>
+            <value>
+                <fullName>Development Financial Institutions</fullName>
+                <default>false</default>
+                <label>Development Financial Institutions</label>
+            </value>
+            <value>
+                <fullName>Diamonds</fullName>
+                <default>false</default>
+                <label>Diamonds</label>
+            </value>
+            <value>
+                <fullName>Diversified Industrials</fullName>
+                <default>false</default>
+                <label>Diversified Industrials</label>
+            </value>
+            <value>
+                <fullName>Diversified Mining</fullName>
+                <default>false</default>
+                <label>Diversified Mining</label>
+            </value>
+            <value>
+                <fullName>Education</fullName>
+                <default>false</default>
+                <label>Education</label>
+            </value>
+            <value>
+                <fullName>Equipment Manufacturers</fullName>
+                <default>false</default>
+                <label>Equipment Manufacturers</label>
+            </value>
+            <value>
+                <fullName>Food and Beverage</fullName>
+                <default>false</default>
+                <label>Food and Beverage</label>
+            </value>
+            <value>
+                <fullName>Forestry</fullName>
+                <default>false</default>
+                <label>Forestry</label>
+            </value>
+            <value>
+                <fullName>Gas</fullName>
+                <default>false</default>
+                <label>Gas</label>
+            </value>
+            <value>
+                <fullName>Gold</fullName>
+                <default>false</default>
+                <label>Gold</label>
+            </value>
+            <value>
+                <fullName>Government Departments</fullName>
+                <default>false</default>
+                <label>Government Departments</label>
+            </value>
+            <value>
+                <fullName>Healthcare</fullName>
+                <default>false</default>
+                <label>Healthcare</label>
+            </value>
+            <value>
+                <fullName>Hotel and Leisure</fullName>
+                <default>false</default>
+                <label>Hotel and Leisure</label>
+            </value>
+            <value>
+                <fullName>Independent Power Producers</fullName>
+                <default>false</default>
+                <label>Independent Power Producers</label>
+            </value>
+            <value>
+                <fullName>Industrial Services</fullName>
+                <default>false</default>
+                <label>Industrial Services</label>
+            </value>
+            <value>
+                <fullName>Information Technology</fullName>
+                <default>false</default>
+                <label>Information Technology</label>
+            </value>
+            <value>
+                <fullName>Insurance</fullName>
+                <default>false</default>
+                <label>Insurance</label>
+            </value>
+            <value>
+                <fullName>Internal / Grouped</fullName>
+                <default>false</default>
+                <label>Internal / Grouped</label>
+            </value>
+            <value>
+                <fullName>International Organisations</fullName>
+                <default>false</default>
+                <label>International Organisations</label>
+            </value>
+            <value>
+                <fullName>Jewellers</fullName>
+                <default>false</default>
+                <label>Jewellers</label>
+            </value>
+            <value>
+                <fullName>Local Government</fullName>
+                <default>false</default>
+                <label>Local Government</label>
+            </value>
+            <value>
+                <fullName>Logistics and Warehousing</fullName>
+                <default>false</default>
+                <label>Logistics and Warehousing</label>
+            </value>
+            <value>
+                <fullName>Manufacturing</fullName>
+                <default>false</default>
+                <label>Manufacturing</label>
+            </value>
+            <value>
+                <fullName>Media</fullName>
+                <default>false</default>
+                <label>Media</label>
+            </value>
+            <value>
+                <fullName>Metal Commodity Traders</fullName>
+                <default>false</default>
+                <label>Metal Commodity Traders</label>
+            </value>
+            <value>
+                <fullName>Mineral Sands</fullName>
+                <default>false</default>
+                <label>Mineral Sands</label>
+            </value>
+            <value>
+                <fullName>Mining Consultants</fullName>
+                <default>false</default>
+                <label>Mining Consultants</label>
+            </value>
+            <value>
+                <fullName>Mining Contractors</fullName>
+                <default>false</default>
+                <label>Mining Contractors</label>
+            </value>
+            <value>
+                <fullName>Niche Finance Companies</fullName>
+                <default>false</default>
+                <label>Niche Finance Companies</label>
+            </value>
+            <value>
+                <fullName>Oil - Exploration and Production</fullName>
+                <default>false</default>
+                <label>Oil - Exploration and Production</label>
+            </value>
+            <value>
+                <fullName>Oil - Integrated</fullName>
+                <default>false</default>
+                <label>Oil - Integrated</label>
+            </value>
+            <value>
+                <fullName>Oil - Midstream</fullName>
+                <default>false</default>
+                <label>Oil - Midstream</label>
+            </value>
+            <value>
+                <fullName>Oil - Retail</fullName>
+                <default>false</default>
+                <label>Oil - Retail</label>
+            </value>
+            <value>
+                <fullName>Oil - Services</fullName>
+                <default>false</default>
+                <label>Oil - Services</label>
+            </value>
+            <value>
+                <fullName>Oil - Traders</fullName>
+                <default>false</default>
+                <label>Oil - Traders</label>
+            </value>
+            <value>
+                <fullName>Other Consumer Products</fullName>
+                <default>false</default>
+                <label>Other Consumer Products</label>
+            </value>
+            <value>
+                <fullName>Other Mining</fullName>
+                <default>false</default>
+                <label>Other Mining</label>
+            </value>
+            <value>
+                <fullName>Paper and Packaging</fullName>
+                <default>false</default>
+                <label>Paper and Packaging</label>
+            </value>
+            <value>
+                <fullName>Pension and Regulated Funds</fullName>
+                <default>false</default>
+                <label>Pension and Regulated Funds</label>
+            </value>
+            <value>
+                <fullName>PGMs</fullName>
+                <default>false</default>
+                <label>PGMs</label>
+            </value>
+            <value>
+                <fullName>Private Education</fullName>
+                <default>false</default>
+                <label>Private Education</label>
+            </value>
+            <value>
+                <fullName>Professional Firms</fullName>
+                <default>false</default>
+                <label>Professional Firms</label>
+            </value>
+            <value>
+                <fullName>Real Estate Corporates</fullName>
+                <default>false</default>
+                <label>Real Estate Corporates</label>
+            </value>
+            <value>
+                <fullName>Real Estate Industrial</fullName>
+                <default>false</default>
+                <label>Real Estate Industrial</label>
+            </value>
+            <value>
+                <fullName>Real Estate Offices</fullName>
+                <default>false</default>
+                <label>Real Estate Offices</label>
+            </value>
+            <value>
+                <fullName>Real Estate Other</fullName>
+                <default>false</default>
+                <label>Real Estate Other</label>
+            </value>
+            <value>
+                <fullName>Real Estate Residential</fullName>
+                <default>false</default>
+                <label>Real Estate Residential</label>
+            </value>
+            <value>
+                <fullName>Real Estate Retail</fullName>
+                <default>false</default>
+                <label>Real Estate Retail</label>
+            </value>
+            <value>
+                <fullName>Retail</fullName>
+                <default>false</default>
+                <label>Retail</label>
+            </value>
+            <value>
+                <fullName>Services</fullName>
+                <default>false</default>
+                <label>Services</label>
+            </value>
+            <value>
+                <fullName>Sovereign</fullName>
+                <default>false</default>
+                <label>Sovereign</label>
+            </value>
+            <value>
+                <fullName>Steel Complex</fullName>
+                <default>false</default>
+                <label>Steel Complex</label>
+            </value>
+            <value>
+                <fullName>Sugar</fullName>
+                <default>false</default>
+                <label>Sugar</label>
+            </value>
+            <value>
+                <fullName>Telecoms - Infrastructure</fullName>
+                <default>false</default>
+                <label>Telecoms - Infrastructure</label>
+            </value>
+            <value>
+                <fullName>Telecoms - Services</fullName>
+                <default>false</default>
+                <label>Telecoms - Services</label>
+            </value>
+            <value>
+                <fullName>Transport</fullName>
+                <default>false</default>
+                <label>Transport</label>
+            </value>
+            <value>
+                <fullName>Utilities</fullName>
+                <default>false</default>
+                <label>Utilities</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Consumer</controllingFieldValue>
+            <valueName>Agriculture</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consumer</controllingFieldValue>
+            <valueName>Agriculture Commodity Traders</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consumer</controllingFieldValue>
+            <valueName>Consumer Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consumer</controllingFieldValue>
+            <valueName>Food and Beverage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consumer</controllingFieldValue>
+            <valueName>Forestry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consumer</controllingFieldValue>
+            <valueName>Other Consumer Products</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consumer</controllingFieldValue>
+            <valueName>Retail</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consumer</controllingFieldValue>
+            <valueName>Sugar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Institutions</controllingFieldValue>
+            <valueName>Alternative Investment Vehicles</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Institutions</controllingFieldValue>
+            <valueName>Asset Managers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Institutions</controllingFieldValue>
+            <valueName>Banks</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Institutions</controllingFieldValue>
+            <valueName>Brokers and Exchanges</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Institutions</controllingFieldValue>
+            <valueName>Development Financial Institutions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Institutions</controllingFieldValue>
+            <valueName>Insurance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Institutions</controllingFieldValue>
+            <valueName>International Organisations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Institutions</controllingFieldValue>
+            <valueName>Niche Finance Companies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Institutions</controllingFieldValue>
+            <valueName>Pension and Regulated Funds</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industrials</controllingFieldValue>
+            <valueName>Automobiles</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industrials</controllingFieldValue>
+            <valueName>Chemicals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industrials</controllingFieldValue>
+            <valueName>Diversified Industrials</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industrials</controllingFieldValue>
+            <valueName>Healthcare</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industrials</controllingFieldValue>
+            <valueName>Hotel and Leisure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industrials</controllingFieldValue>
+            <valueName>Industrial Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industrials</controllingFieldValue>
+            <valueName>Manufacturing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industrials</controllingFieldValue>
+            <valueName>Paper and Packaging</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industrials</controllingFieldValue>
+            <valueName>Professional Firms</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Real Estate</controllingFieldValue>
+            <valueName>Real Estate Corporates</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Real Estate</controllingFieldValue>
+            <valueName>Real Estate Industrial</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Real Estate</controllingFieldValue>
+            <valueName>Real Estate Offices</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Real Estate</controllingFieldValue>
+            <valueName>Real Estate Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Real Estate</controllingFieldValue>
+            <valueName>Real Estate Residential</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Real Estate</controllingFieldValue>
+            <valueName>Real Estate Retail</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Internal / Grouped</controllingFieldValue>
+            <valueName>Internal / Grouped</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mining and Metals</controllingFieldValue>
+            <valueName>Base Metals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mining and Metals</controllingFieldValue>
+            <valueName>Bulk Commodities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mining and Metals</controllingFieldValue>
+            <valueName>Coal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mining and Metals</controllingFieldValue>
+            <valueName>Diamonds</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mining and Metals</controllingFieldValue>
+            <valueName>Diversified Mining</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mining and Metals</controllingFieldValue>
+            <valueName>Equipment Manufacturers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mining and Metals</controllingFieldValue>
+            <valueName>Gold</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mining and Metals</controllingFieldValue>
+            <valueName>Jewellers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mining and Metals</controllingFieldValue>
+            <valueName>Metal Commodity Traders</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mining and Metals</controllingFieldValue>
+            <valueName>Mineral Sands</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mining and Metals</controllingFieldValue>
+            <valueName>Mining Consultants</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mining and Metals</controllingFieldValue>
+            <valueName>Mining Contractors</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mining and Metals</controllingFieldValue>
+            <valueName>Other Mining</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mining and Metals</controllingFieldValue>
+            <valueName>PGMs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mining and Metals</controllingFieldValue>
+            <valueName>Steel Complex</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Oil and Gas</controllingFieldValue>
+            <valueName>Gas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Oil and Gas</controllingFieldValue>
+            <valueName>Oil - Exploration and Production</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Oil and Gas</controllingFieldValue>
+            <valueName>Oil - Integrated</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Oil and Gas</controllingFieldValue>
+            <valueName>Oil - Midstream</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Oil and Gas</controllingFieldValue>
+            <valueName>Oil - Retail</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Oil and Gas</controllingFieldValue>
+            <valueName>Oil - Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Oil and Gas</controllingFieldValue>
+            <valueName>Oil - Traders</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Power and Infrastructure</controllingFieldValue>
+            <valueName>Airlines</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Power and Infrastructure</controllingFieldValue>
+            <valueName>Cement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Power and Infrastructure</controllingFieldValue>
+            <valueName>Centralised Power</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Power and Infrastructure</controllingFieldValue>
+            <valueName>Construction</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Power and Infrastructure</controllingFieldValue>
+            <valueName>Construction Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Power and Infrastructure</controllingFieldValue>
+            <valueName>Independent Power Producers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Power and Infrastructure</controllingFieldValue>
+            <valueName>Logistics and Warehousing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Power and Infrastructure</controllingFieldValue>
+            <valueName>Transport</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Power and Infrastructure</controllingFieldValue>
+            <valueName>Utilities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sovereign / Public Sector</controllingFieldValue>
+            <valueName>Central Banks</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sovereign / Public Sector</controllingFieldValue>
+            <valueName>Education</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sovereign / Public Sector</controllingFieldValue>
+            <valueName>Government Departments</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sovereign / Public Sector</controllingFieldValue>
+            <valueName>Local Government</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sovereign / Public Sector</controllingFieldValue>
+            <valueName>Sovereign</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Telecoms and Media</controllingFieldValue>
+            <valueName>Information Technology</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Telecoms and Media</controllingFieldValue>
+            <valueName>Media</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Telecoms and Media</controllingFieldValue>
+            <valueName>Private Education</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Telecoms and Media</controllingFieldValue>
+            <valueName>Telecoms - Infrastructure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Telecoms and Media</controllingFieldValue>
+            <valueName>Telecoms - Services</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

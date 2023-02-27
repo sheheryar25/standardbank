@@ -1,0 +1,43 @@
+<template>
+    <div class="ApplicationGallery">
+      <lightning-layout>
+        <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12">
+          <div class="SearchSection slds-form-element">
+            <div class="SearchAlignnment">
+              <div class="SearchInput slds-form-element__control slds-input-has-icon slds-input-has-icon_left">
+                  <lightning-icon size="x-small" class="slds-icon slds-float_right slds-input__icon slds-input__icon_left slds-icon-text-default" icon-name="utility:search"></lightning-icon>
+                  <input type="text" id="searchInput" data-id="searchInput" data-text="Application Gallery | Search for Application" onkeyup={searchForSolutions} placeholder="Search" class="slds-input" /> 
+              </div>
+              <p class="helpText">Please enter minimum of 2 characters.</p>
+            </div>
+          </div>          
+        </lightning-layout-item>
+      </lightning-layout>
+      <lightning-layout>
+        <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12">
+          <template if:true={noSearchResults}>
+            <div class="noSearchResults">
+              <div>
+                <p class="headingSearchResults">No search results</p>
+                <p style="padding-top: 16px;">Try adjusting your search filter</p> 
+              </div>
+            </div>
+          </template>
+          <template if:true={appSolutionDisplay}>
+            <template if:true={appSolutions}>
+              <div class="solutionShowcase__items">
+                    <c-osb-paginationlwc fulllist={appSolutions}></c-osb-paginationlwc>
+              </div>
+            </template>
+          </template>
+          <template if:true={noFilteredSolutions}>
+            <div class="noSearchResults">
+              <div><p class="headingSearchResults">No filtered results</p>
+                <p style="padding-top: 16px;">Try choosing a different category</p> 
+               </div>
+            </div>
+          </template>
+        </lightning-layout-item>
+      </lightning-layout>
+    </div>    
+</template>

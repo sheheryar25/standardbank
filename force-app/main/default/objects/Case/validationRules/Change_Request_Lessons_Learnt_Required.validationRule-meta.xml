@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Change_Request_Lessons_Learnt_Required</fullName>
+    <active>true</active>
+    <description>Lessons Learnt is mandatory when status is changed to &apos;UAT Sign-off&apos; for all Cases of type Change Request
+
+CRM-Enhanced Cases for Change Request Functionality (C Reinecke 2010/08)</description>
+    <errorConditionFormula>( $RecordType.Name = &apos;Change Request&apos;) &amp;&amp;  (TEXT(Status) = &apos;UAT Sign-off&apos;) &amp;&amp;  ISBLANK(  Lessons_Learnt__c  )</errorConditionFormula>
+    <errorDisplayField>Lessons_Learnt__c</errorDisplayField>
+    <errorMessage>You must provide details on the lessons learnt when the status is changed to &apos;UAT Sign-off&apos;</errorMessage>
+</ValidationRule>

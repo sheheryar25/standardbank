@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Submission_Type__c</fullName>
+    <description>The decision category to which the business assessment applies.
+            Type 1: Low transaction risk and complexity with adequate client or transaction returns;
+            Type 2: Low transaction risk and complexity but inadequate client or transaction returns;
+            Type 3: High transaction risk and complexity but adequate client or transaction returns;
+            Type 4: High transaction risk and complexity and inadequate client or transaction returns.</description>
+    <externalId>false</externalId>
+    <label>Submission Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Type 1: For noting purposes</fullName>
+                <default>false</default>
+                <label>Type 1: For noting purposes</label>
+            </value>
+            <value>
+                <fullName>Type 2: Emphasis on client strategy / returns</fullName>
+                <default>false</default>
+                <label>Type 2: Emphasis on client strategy / returns</label>
+            </value>
+            <value>
+                <fullName>Type 3: Emphasis on risk / complexity</fullName>
+                <default>false</default>
+                <label>Type 3: Emphasis on risk / complexity</label>
+            </value>
+            <value>
+                <fullName>Type 4: Full discussion</fullName>
+                <default>false</default>
+                <label>Type 4: Full discussion</label>
+            </value>
+            <value>
+                <fullName>Commercial Banking</fullName>
+                <default>false</default>
+                <label>Commercial Banking</label>
+            </value>
+            <value>
+                <fullName>Type 1</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Type 1</label>
+            </value>
+            <value>
+                <fullName>Type 2</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Type 2</label>
+            </value>
+            <value>
+                <fullName>Type 3</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Type 3</label>
+            </value>
+            <value>
+                <fullName>Type 4</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Type 4</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

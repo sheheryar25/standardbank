@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>External_Core_Meetings_Attended__c</fullName>
+    <description>EN-0777 – Number of External Core Events attended this year</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Number of External Core Events attended this year</inlineHelpText>
+    <label>External Core Meetings Attended</label>
+    <precision>4</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

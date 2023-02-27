@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FAIS_reminder__c</fullName>
+    <description>US-2217 Field populated by Batch according to story criteria</description>
+    <externalId>false</externalId>
+    <label>FAIS reminder</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>NO_NEED</fullName>
+                <default>true</default>
+                <label>NO_NEED</label>
+            </value>
+            <value>
+                <fullName>NEED_REMINDER</fullName>
+                <default>false</default>
+                <label>NEED_REMINDER</label>
+            </value>
+            <value>
+                <fullName>HAS_REMINDER_NEED</fullName>
+                <default>false</default>
+                <label>HAS_REMINDER_NEED</label>
+            </value>
+            <value>
+                <fullName>HAS_REMINDER_NO_NEED</fullName>
+                <default>false</default>
+                <label>HAS_REMINDER_NO_NEED</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

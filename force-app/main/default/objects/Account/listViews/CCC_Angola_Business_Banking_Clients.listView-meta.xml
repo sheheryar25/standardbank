@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCC_Angola_Business_Banking_Clients</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>In_Country_CIF__c</columns>
+    <columns>Primary_Relationship_Holder__c</columns>
+    <columns>Commercial_Tier__c</columns>
+    <columns>Account_Owner__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Primary_Relationship_Holder__c</field>
+        <operation>equals</operation>
+        <value>Business Banking</value>
+    </filters>
+    <label>Business Banking Clients</label>
+    <sharedTo>
+        <roleAndSubordinates>PBB_Angola_Country</roleAndSubordinates>
+    </sharedTo>
+</ListView>

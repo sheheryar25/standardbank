@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CSU_Head_Name_for_Case_Owner__c</fullName>
+    <description>Fetches the CSU head&apos;s name for the Case record if it exists, else the name of the line manager (US-1536).</description>
+    <externalId>false</externalId>
+    <formula>IF(!ISBLANK(Owner:User.Id) &amp;&amp; !ISBLANK(Owner:User.ManagerId) &amp;&amp; !ISBLANK(Owner:User.Manager.ManagerId), Owner:User.Manager.Manager.FirstName &amp; &quot; &quot; &amp; Owner:User.Manager.Manager.LastName, line_manager_name_for_case_owner__c)</formula>
+    <inlineHelpText>Fetches the CSU head&apos;s name for the Case record if it exists, else the name of the line manager.</inlineHelpText>
+    <label>CSU Head&apos;s Name for Case Owner</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

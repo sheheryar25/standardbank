@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>(US-4719) A custom setting to hold all the regions/countries that can be used for smart news articles.</description>
+    <enableFeeds>false</enableFeeds>
+    <label>Smart News Regions</label>
+    <visibility>Public</visibility>
+</CustomObject>

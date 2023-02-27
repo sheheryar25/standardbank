@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RCA_Fields_Mandatory_on_Resolution</fullName>
+    <active>true</active>
+    <description>SFP-3371: Ensures that the RCA fields are populated on Resolve</description>
+    <errorConditionFormula>AND(
+$Profile.Name = &apos;Client Service User&apos; ,
+TEXT(Status) = &apos;Resolved&apos;, 
+RecordType.DeveloperName = &apos;Cross_Border_CoE_Record_Type&apos; ,
+OR(ISBLANK(Root_Cause__c ),
+ISBLANK( Root_Cause_Resolution__c )
+)
+)</errorConditionFormula>
+    <errorMessage>Fill in root cause information found on the Feed Tab-&gt;Resolve Case Action if you want to resolve this case.</errorMessage>
+</ValidationRule>

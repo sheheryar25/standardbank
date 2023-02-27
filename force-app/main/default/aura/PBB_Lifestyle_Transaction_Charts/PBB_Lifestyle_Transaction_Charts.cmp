@@ -1,0 +1,95 @@
+<!--
+ - Created by Mykhailo Reznyk on 12.11.2019.
+ -->
+
+<aura:component controller="PBB_Lifestyle_TransactionChartController" description="PBB_Lifestyle_Transaction_Charts"
+                implements="force:hasRecordId,flexipage:availableForAllPageTypes">
+
+    <aura:attribute name="loadingDataRollup" type="Boolean" access="public" default="false"/>
+    <aura:attribute name="noDataMessageRollup" type="Boolean" access="public" default="false"/>
+    <aura:attribute name="unableToGetDataMessageRollup" type="Boolean" access="public" default="false"/>
+    <aura:attribute name="loadingDataNarrative" type="Boolean" access="public" default="false"/>
+    <aura:attribute name="noDataMessageNarrative" type="Boolean" access="public" default="false"/>
+    <aura:attribute name="unableToGetDataMessageNarrative" type="Boolean" access="public" default="false"/>
+
+    <ltng:require scripts="{!$Resource.ChartJS23+ '/ChartJS23.js'}" afterScriptsLoaded="{!c.scriptLoaded}"/>
+
+    <div class="c-container">
+        <div class="canvasWrapper" aura:id="balancesCanvasWrapper">
+            <aura:if isTrue="{!v.loadingDataRollup}">
+                <div class="message" aura:id="loadingDataRollup">
+                    <lightning:spinner alternativeText="Loading" size="medium"></lightning:spinner>
+                </div>
+            </aura:if> 
+            <aura:if isTrue="{!v.noDataMessageRollup}">
+                <div class="message slds-text-heading_large">
+                    NO DATA TO SHOW
+                </div>
+            </aura:if>
+            <aura:if isTrue="{!v.unableToGetDataMessageRollup}">
+                <div class="message slds-text-heading_large">
+                    UNABLE TO GET DATA
+                </div>
+            </aura:if>
+            <canvas id="balancesCanvas" aura:id="balancesCanvas"></canvas>
+        </div>
+
+        <div class="canvasWrapper" aura:id="cashFlowCanvasWrapper">
+            <aura:if isTrue="{!v.loadingDataRollup}">
+                <div class="message" aura:id="loadingDataRollup">
+                    <lightning:spinner alternativeText="Loading" size="medium"></lightning:spinner>
+                </div>
+            </aura:if>
+            <aura:if isTrue="{!v.noDataMessageRollup}">
+                <div class="message slds-text-heading_large">
+                    NO DATA TO SHOW
+                </div>
+            </aura:if>
+            <aura:if isTrue="{!v.unableToGetDataMessageRollup}">
+                <div class="message slds-text-heading_large">
+                    UNABLE TO GET DATA
+                </div>
+            </aura:if>
+            <canvas id="cashFlowCanvas" aura:id="cashFlowCanvas"></canvas>
+        </div>
+
+        <div class="canvasWrapper" aura:id="inflowCanvasWrapper">
+            <aura:if isTrue="{!v.loadingDataNarrative}">
+                <div class="message">
+                    <lightning:spinner alternativeText="Loading" size="medium"></lightning:spinner>
+                </div>
+            </aura:if>
+            <aura:if isTrue="{!v.noDataMessageNarrative}">
+                <div class="message slds-text-heading_large">
+                    NO DATA TO SHOW
+                </div>
+            </aura:if>
+            <aura:if isTrue="{!v.unableToGetDataMessageNarrative}">
+                <div class="message slds-text-heading_large">
+                    UNABLE TO GET DATA
+                </div>
+            </aura:if>
+            <canvas id="inflowCanvas" aura:id="inflowCanvas"></canvas>
+        </div>
+
+        <div class="canvasWrapper" aura:id="outflowCanvasWrapper">
+            <aura:if isTrue="{!v.loadingDataNarrative}">
+                <div class="message">
+                    <lightning:spinner alternativeText="Loading" size="medium"></lightning:spinner>
+                </div>
+            </aura:if>
+            <aura:if isTrue="{!v.noDataMessageNarrative}">
+                <div class="message slds-text-heading_large">
+                    NO DATA TO SHOW
+                </div>
+            </aura:if>
+            <aura:if isTrue="{!v.unableToGetDataMessageNarrative}">
+                <div class="message slds-text-heading_large">
+                    UNABLE TO GET DATA
+                </div>
+            </aura:if>
+            <canvas id="outflowCanvas" aura:id="outflowCanvas"></canvas>
+        </div>
+    </div>
+
+</aura:component>

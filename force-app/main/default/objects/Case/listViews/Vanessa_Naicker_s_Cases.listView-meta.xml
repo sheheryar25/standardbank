@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vanessa_Naicker_s_Cases</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>OWNER_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>equals</operation>
+        <value>vnaic</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>equals</operation>
+        <value>Escalated,Open,New,On Hold,Not Ordinary,Re-opened,In Progress</value>
+    </filters>
+    <label>Vanessa Naicker&apos;s Cases</label>
+    <sharedTo>
+        <group>Account_Services_Group</group>
+        <group>Investor_Services_Users</group>
+    </sharedTo>
+</ListView>

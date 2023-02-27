@@ -1,0 +1,22 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" controller="OSB_404_CTRL">
+    <aura:attribute name="title" type="String" />
+    <aura:attribute name="subtitle" type="String" />
+    <aura:attribute name="linkLabel" type="String" />
+    <aura:attribute name="link" type="String" />
+    <aura:attribute name="mtitle" type="String" />
+    <aura:attribute name="msubtitle" type="String" />
+    <aura:attribute name="mlinkLabel" type="String" />
+    <aura:attribute name="mlink" type="String" />
+    <aura:attribute name="marketplace" type="Boolean" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+
+    <div class="page404-container">
+        <div class="page404">
+                <img class="page404__image" src="{!$Resource.OSB_404image}"/>
+                <div class="page404__title">{!v.title}</div>
+                <div class="page404__subtitle">{!v.subtitle}</div>
+                <a class="btn btn--blue page404__btn" href="{!v.link}" data-id= "uitlink_link" data-text= "{!'404 Page | ' + v.linkLabel}">{!v.linkLabel}</a>
+        </div> 	
+    </div>
+</aura:component>

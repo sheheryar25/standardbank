@@ -1,0 +1,68 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+    <aura:attribute name="link" type="String"  access="public"/>
+    <aura:attribute name="linkLabel" type="String" access="public" />
+    <aura:attribute name="withOverlay" type="Boolean" default="false" access="public"/>
+    <aura:attribute name="productName" default="Dashboard" type="String" access="public"/>
+    <aura:attribute name="PageName" default="Dashboard" type="String" access="public"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    <aura:handler event="c:OSBBreadcrumbEvent" action="{!c.handleBreadcrumbEvent}"/>
+
+    <lightning:navigation aura:id="navService"/>
+
+    <div class="breadcrumbs" id="breadCrumbs" aura:id="breadcrumbs">
+        <aura:if isTrue="{!or(v.PageName == 'MySupportPage', v.PageName == 'KnowledgePage')}">
+            <aura:if isTrue="{!v.PageName== 'MySupportPage'}">
+                <div class="breadcrumbs__container">
+                    <div class="{! and(v.productName == 'Dashboard', v.productName != '') ? 'breadcrumbs__first-main-item breadcrumbs__main-item__selected' : 'breadcrumbs__first-main-item'}" aura:id="breadcrumbTab" data-tab-name="Dashboard" id="dashboardBreadCrumbDiv">
+                        <a class="breadcrumb__wide" href="/s/supportpage" id="Dashboard" data-id="uitlink_link" data-text="Dashboard">Support</a>
+                    </div>
+                    <div class="{!and(v.productName != 'Dashboard', v.productName != '') ? 'breadcrumbs__first-main-item breadcrumbs__main-item__selected' : 'breadcrumbs__first-main-item'}" aura:id="breadcrumbTab" data-tab-name="MarketPlace" id="marketplaceBreadCrumbDiv">
+                        <a class="breadcrumb__wide" href="/s/knowledgePage" id="MarketPlace" data-id="uitlink_link" data-text="MarketPlace">Knowledge</a>
+                    </div>
+                </div>
+                <aura:set attribute="else">
+                    <aura:if isTrue="{!v.PageName== 'KnowledgePage'}">
+                        <div class="breadcrumbs__container">
+                            <div class="{! and(v.productName == 'Dashboard', v.productName != '') ? 'breadcrumbs__first-main-item breadcrumbs__main-item__selected' : 'breadcrumbs__first-main-item'}" aura:id="breadcrumbTab" data-tab-name="Dashboard" id="dashboardBreadCrumbDiv">
+                                <a class="breadcrumb__wide" href="/s/supportpage" id="Dashboard" data-id="uitlink_link" data-text="Dashboard">Support</a>
+                            </div>
+                            <div class="{!and(v.productName != 'Dashboard', v.productName != '') ? 'breadcrumbs__first-main-item breadcrumbs__main-item__selected' : 'breadcrumbs__first-main-item'}" aura:id="breadcrumbTab" data-tab-name="MarketPlace" id="marketplaceBreadCrumbDiv">
+                                <a class="breadcrumb__wide" href="/s/knowledgePage" id="MarketPlace" data-id="uitlink_link" data-text="MarketPlace">Knowledge</a>
+                            </div>
+                        </div>
+                    </aura:if>
+                </aura:set>
+
+            </aura:if>
+
+            <aura:set attribute="else">
+                <aura:if isTrue="{!v.linkLabel}">
+                    <div class="breadcrumbs__container">
+                        <div class="{! and(v.productName == 'Dashboard', v.productName != '') ? 'breadcrumbs__first-main-item breadcrumbs__main-item__selected' : 'breadcrumbs__first-main-item'}" aura:id="breadcrumbTab" data-tab-name="Dashboard" id="dashboardBreadCrumbDiv">
+                            <a class="breadcrumb__wide" href="/s/" id="Dashboard" data-id="uitlink_link" data-text="Dashboard">Dashboard</a>
+                        </div>
+                    </div>
+                    <aura:set attribute="else">
+                        <div class="breadcrumbs__container">
+                            <div class="{! and(v.productName == 'Dashboard', v.productName != '') ? 'breadcrumbs__first-main-item breadcrumbs__main-item__selected' : 'breadcrumbs__first-main-item'}" aura:id="breadcrumbTab" data-tab-name="Dashboard" id="dashboardBreadCrumbDiv">
+                                <a class="breadcrumb__wide" onclick="{!c.switchTabs}" id="Dashboard" data-id="uitlink_link" data-text="Dashboard">Dashboard</a>
+                            </div>
+                        </div>
+                    </aura:set>
+                </aura:if>
+        
+                <aura:if isTrue="{!v.linkLabel}">
+                    <div class="breadcrumb_productpage">
+                        <aura:if isTrue="{!v.linkLabel=='API Products'}">
+                            <a class="breadcrumbs__item" href="/s/api-products" data-id= "uitlink_link" data-text= "{!v.linkLabel}">{!v.linkLabel}</a>
+                            <aura:set attribute="else">
+                                <span class="breadcrumbs__item">{!v.linkLabel}</span>
+                            </aura:set>
+                        </aura:if>
+                    </div>
+                </aura:if>
+            </aura:set>
+        </aura:if>
+    </div>
+</aura:component>

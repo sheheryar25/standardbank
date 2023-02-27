@@ -1,0 +1,318 @@
+<!--
+ - Created by Chibuye Kunda on 2019/12/02.
+
+ -   Last Modified By: Balint Gyokeres
+ -   Description: SFP-4617, MeetingConsole_Detail shows up for a second even when not needed, added conditional rendering
+ -   Last Modified Date: 24 June 2021
+ -->
+
+<aura:component controller="NBACMeetingController" description="MeetingConsole_Details"  access="global" implements="force:appHostable,lightning:actionOverride,force:hasRecordId,flexipage:availableForAllPageTypes">
+    <ltng:require scripts="{!$Resource.UTL_JavaScript}" afterScriptsLoaded="{!c.init}"/>
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="subject" type="String"/>
+    <aura:attribute name="NBACCommittee" type="String"/>
+    <aura:attribute name="chairperson" type="String"/>
+    <aura:attribute name="location" type="String"/>
+    <aura:attribute name="nBACSecretary" type="String"/>
+    <aura:attribute name="meetingNotes" type="String"/>
+    <aura:attribute name="startDate" type="String"/>
+    <aura:attribute name="endDate" type="String"/>
+    <aura:attribute name="eventData" type="NBACMeetingController.EventData"/>
+    <aura:attribute name="eventDataTempo" type="NBACMeetingController.EventData"/>
+    <aura:attribute name="nbacdata" type="Map" />
+    <aura:attribute name="isNbacMeeting" type="boolean" default="false"/>
+    <aura:attribute name="isNbacDetails" type="boolean" default="false"/>
+    <aura:attribute name="isLoading" type="boolean" default="false"/>
+    <aura:attribute name="isLoadingMain" type="boolean" default="true"/>
+    <aura:attribute name="NBACCommitteeOption" type="String[]"/>
+    <aura:attribute name="readOnly" type="boolean" default="true"/>
+    <aura:attribute name="warning" type="boolean" default="false"/>
+    <aura:attribute name="nbacName" type="String"/>
+    <aura:attribute name="access" type="string" />
+    <aura:attribute name="agendaSize" type="integer" />
+    <aura:handler event="c:MeetingConsole_Event" name="MeetingEvent" action="{!c.handleMeetingEvent}"/>
+    <lightning:navigation aura:id="navService"/>
+    <aura:renderIf isTrue="{!v.isNbacMeeting}">
+    <div class="c-container">
+        <aura:renderIf isTrue="{!v.isLoadingMain}">
+            <lightning:spinner class="sslds-is-relative" alternativeText="Loading" size="medium" />
+        </aura:renderIf>
+        <lightning:layout multipleRows="true">
+            <lightning:layoutItem padding="around-small" size="12">
+                <header class="slds-card__header slds-grid page-section" data-aura-rendered-by="536:0">
+                    <div class="slds-media slds-media_center slds-has-flexi-truncate" data-aura-rendered-by="537:0"><!--render facet: 538:0-->
+                        <div class="slds-media__body slds-truncate" data-aura-rendered-by="539:0"><h2 data-aura-rendered-by="540:0"><span class="slds-text-heading_small" data-aura-rendered-by="541:0">
+                                    Meeting Console</span></h2></div></div><div class="slds-no-flex" data-aura-rendered-by="544:0">
+                        <lightning:button  label="Send Agenda" title="Send to Attendees" onclick="{! c.sendAgenda }"/>
+                        <lightning:button  label="Delete"   title="Delete Meeting" onclick="{! c.warningbtn }"/>
+
+                    </div></header>
+
+            </lightning:layoutItem>
+        </lightning:layout>
+        <lightning:layout multipleRows="true">
+            <lightning:layoutItem padding="around-small" size="6">
+                <article class="slds-card" style="padding-bottom: 8px;">
+                    <div class="slds-card__header slds-grid" style="background: #f3f3f2;margin-bottom: 12px;padding-bottom: 12px;">
+                        <header class="slds-media slds-media_center slds-has-flexi-truncate">
+
+                            <div class="slds-media__body">
+                                <h2 class="slds-card__header-title">
+                                    Meeting Details
+                                </h2>
+                            </div>
+                            <div class="slds-no-flex">
+                                <aura:renderIf isTrue="{!v.readOnly}">
+                                    <lightning:button  label="Edit" title="Edit meeting datails" onclick="{! c.handleEditMeeting }"/>
+                                </aura:renderIf>
+
+                                <aura:renderIf isTrue="{!and(not(v.readOnly),v.recordId==null)}">
+                                    <lightning:button aura:id="submit"  label="Save" onclick="{!c.saveDataMeetingDetails}" class="slds-m-top_medium slds-button_brand" />
+                                </aura:renderIf>
+                            </div>
+                        </header>
+                    </div>
+
+                    <div style="margin-left: 16px;margin-right: 18px;">
+                        <aura:renderIf isTrue="{!and(not(v.readOnly),v.recordId!=null)}">
+                                <lightning:layout >
+                                    <lightning:layoutItem padding="around-small " size="12" class="btn-footer">
+                                        <lightning:button aura:id="submit" type="submit" label="Cancel" class="slds-m-top_medium" onclick="{! c.handleCancelMeeting }" />
+                                        <lightning:button aura:id="submit"  label="Save" onclick="{!c.saveDataMeetingDetails}" class="slds-m-top_medium slds-button_brand" />
+                                    </lightning:layoutItem>
+
+                                </lightning:layout>
+
+                        </aura:renderIf>
+
+                        <aura:if isTrue="{!v.readOnly}">
+                            <div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent">
+                                <span class="slds-form-element__label">Subject</span>
+                                <div class="slds-form-element__control">
+                                    <div class="slds-form-element__static">{!v.eventData.SubjectMeeting}</div>
+                                    <button class="slds-button slds-button_icon" title="Edit: Subject" onclick="{! c.handleEditMeeting }">
+                                        <lightning:icon iconName="utility:edit" size="xx-small" alternativeText="Edit" />
+                                        <span class="slds-assistive-text">Edit: Subject</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <aura:set attribute="else">
+
+                                <lightning:input aura:id="subject"  type="text" name="subject" label="Subject" value="{!v.eventData.SubjectMeeting}" required="true" />
+
+                            </aura:set>
+                        </aura:if>
+
+                        <aura:if isTrue="{!v.readOnly}">
+                            <div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent">
+                                <span class="slds-form-element__label">NBAC Committee</span>
+                                <div class="slds-form-element__control">
+                                    <div class="slds-form-element__static">{!v.eventData.NBACCommittee}</div>
+                                    <button class="slds-button slds-button_icon" title="Edit: NBAC Committee" onclick="{! c.handleEditMeeting }">
+                                        <lightning:icon iconName="utility:edit" size="xx-small" alternativeText="Edit" />
+                                        <span class="slds-assistive-text">Edit: NBAC Committee</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <aura:set attribute="else">
+
+                                <lightning:select aura:id="NBACCommittee"  name="NBACCommittee" label="NBAC Committee" required="true" onchange="{!c.onChangenabcCommitteeOp}">
+
+                                    <aura:iteration items="{!v.NBACCommitteeOption}" var="item">
+                                        <aura:renderIf isTrue="{!v.eventData.NBACCommittee==item.value}">
+                                            <option value="{!item.value}" selected="selected">{!item.label}</option>
+                                            <aura:set attribute="else">
+                                                <option value="{!item.value}">{!item.label}</option>
+                                            </aura:set>
+                                        </aura:renderIf>
+
+                                    </aura:iteration>
+                                </lightning:select>
+                            </aura:set>
+                        </aura:if>
+
+                        <aura:if isTrue="{!v.readOnly}">
+                            <div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent">
+                                <span class="slds-form-element__label">Start Date</span>
+                                <div class="slds-form-element__control">
+                                    <div class="slds-form-element__static">
+                                        <ui:outputDateTime aura:id="oDate" value="{!v.eventData.meetingStartDate}" />
+                                    </div>
+                                    <button class="slds-button slds-button_icon" title="Edit: meeting start date" onclick="{! c.handleEditMeeting }">
+                                        <lightning:icon iconName="utility:edit" size="xx-small" alternativeText="Edit" />
+                                        <span class="slds-assistive-text">Edit: start date</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <aura:set attribute="else">
+
+                                <label class="slds-form-element__label" for="input-name" data-aura-rendered-by="1003:0">Start Date</label>
+                                <lightning:input  aura:id="meetingStartDate" variant="label-hidden" type="datetime" name="StartDate" label="Start" value="{!v.eventData.meetingStartDate}" required="true" onchange="{!c.onChangeStartDate}"/>
+
+                            </aura:set>
+                        </aura:if>
+
+                        <aura:if isTrue="{!v.readOnly}">
+                            <div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent">
+                                <span class="slds-form-element__label">End Date</span>
+                                <div class="slds-form-element__control">
+                                    <div class="slds-form-element__static">
+                                        <ui:outputDateTime aura:id="oDate" value="{!v.eventData.meetingEndDate}" />
+                                    </div>
+                                    <button class="slds-button slds-button_icon" title="Edit: meeting end date" onclick="{! c.handleEditMeeting }">
+                                        <lightning:icon iconName="utility:edit" size="xx-small" alternativeText="Edit" />
+                                        <span class="slds-assistive-text">Edit: End Date</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <aura:set attribute="else">
+                                <h2 class="header">End Date</h2>
+                                <lightning:input  aura:id="meetingEndDate"  type="datetime" variant="label-hidden" min="{!v.eventData.meetingStartDate}" label="End Date" value="{!v.eventData.meetingEndDate}" required="true" onchange="{!c.onChangeEndDate}"/>
+                            </aura:set>
+                        </aura:if>
+
+                        <aura:if isTrue="{!v.readOnly}">
+                            <div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent">
+                                <span class="slds-form-element__label">Chairperson</span>
+                                <div class="slds-form-element__control">
+                                    <div class="slds-form-element__static">
+                                        {!v.eventData.ChairpersonActualName}
+                                    </div>
+                                    <button class="slds-button slds-button_icon" title="Edit: Chairperson" onclick="{! c.handleEditMeeting }">
+                                        <lightning:icon iconName="utility:edit" size="xx-small" alternativeText="Edit" />
+                                        <span class="slds-assistive-text">Edit: Chairperson</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <aura:set attribute="else">
+                                <c:UTL_LookupField  sObjectName="Call_Report__c" fieldName="Chairperson__c" fieldLabel="Chairperson"
+                                                    assignTo="{!v.eventData.ChairpersonName}" isOnRemoveBtn="{! not(v.readOnly)}" readOnly="{!v.readOnly}" />
+                            </aura:set>
+                        </aura:if>
+
+
+                        <aura:if isTrue="{!v.readOnly}">
+                            <div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent">
+                                <span class="slds-form-element__label">NBAC Secretary</span>
+                                <div class="slds-form-element__control">
+                                    <div class="slds-form-element__static">
+                                        {!v.eventData.NBACSecretaryActualName}
+                                    </div>
+                                    <button class="slds-button slds-button_icon" title="Edit: NBAC Secretary" onclick="{! c.handleEditMeeting }">
+                                        <lightning:icon iconName="utility:edit" size="xx-small" alternativeText="Edit" />
+                                        <span class="slds-assistive-text">Edit: NBAC Secretary</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <aura:set attribute="else">
+                                <c:UTL_LookupField  sObjectName="Call_Report__c" fieldName="NBAC_Secretary__c" fieldLabel="NBAC Secretary"
+                                                    assignTo="{!v.eventData.NBACSecretaryName}" isOnRemoveBtn="{! not(v.readOnly)}" readOnly="{!v.readOnly}" />
+                            </aura:set>
+                        </aura:if>
+
+                        <aura:if isTrue="{!v.readOnly}">
+                            <div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent">
+                                <span class="slds-form-element__label">Location</span>
+                                <div class="slds-form-element__control">
+                                    <div class="slds-form-element__static">
+                                        {!v.eventData.meetingLocation}
+                                    </div>
+                                    <button class="slds-button slds-button_icon" title="Edit: Location" onclick="{! c.handleEditMeeting }">
+                                        <lightning:icon iconName="utility:edit" size="xx-small" alternativeText="Edit" />
+                                        <span class="slds-assistive-text">Edit: Location</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <aura:set attribute="else">
+                                <lightning:input class="white-input"  disabled="{!v.readOnly}" type="text" name="Location" label="Location" value="{!v.eventData.meetingLocation}" />
+                           <br/>
+                                <br/>
+                            </aura:set>
+                        </aura:if>
+
+                        <aura:if isTrue="{!v.readOnly}">
+                            <div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent">
+                                <span class="slds-form-element__label">Meeting Notes</span>
+                                <div class="slds-form-element__control">
+                                    <div class="slds-form-element__static">
+                                        <ui:outputRichText class="slds-text-longform" value="{!v.eventData.Meeting_Notes}"/>
+                                    </div>
+                                    <button class="slds-button slds-button_icon" title="Edit: Meeting Notes" onclick="{! c.handleEditMeeting }">
+                                        <lightning:icon iconName="utility:edit" size="xx-small" alternativeText="Edit" />
+                                        <span class="slds-assistive-text">Edit: Meeting Notes</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <aura:set attribute="else">
+                                <lightning:inputRichText class="white-input"  disabled="{!v.readOnly}" label="Meeting Notes"   value="{!v.eventData.Meeting_Notes}" placeholder="Meeting Notes"/>
+
+
+                            </aura:set>
+                        </aura:if>
+
+
+                        <aura:renderIf isTrue="{!and(not(v.readOnly),v.recordId!=null)}">
+                        <lightning:layout >
+                            <lightning:layoutItem padding="around-small " size="12" class="btn-footer">
+                                <lightning:button aura:id="submit" type="submit" label="Cancel" class="slds-m-top_medium" onclick="{! c.handleCancelMeeting }"/>
+                                <lightning:button aura:id="submit"  label="Save" onclick="{!c.saveDataMeetingDetails}" class="slds-m-top_medium slds-button_brand" />
+                            </lightning:layoutItem>
+
+                        </lightning:layout>
+                        </aura:renderIf>
+                    </div>
+                </article>
+                <c:MeetingConsole_Agenda ERrecordId="{!v.recordId}" aura:id="childMeetingConsole_Agenda"/>
+                <c:MeetingConsole_CommiteeAttendees ERrecordId="{!v.recordId}" aura:id="childMeetingConsole_Comm"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem padding="around-small" size="6">
+
+                        <aura:renderIf isTrue="{!v.isLoading}">
+                            <lightning:spinner class="sslds-is-relative" alternativeText="Loading" size="medium" />
+                            <aura:set attribute="else">
+
+                            </aura:set>
+                        </aura:renderIf>
+
+                        <div class="page-section">
+                            <aura:renderIf isTrue="{!v.nbacdata.Related_NBAC__c!=null}">
+                            <div class="page-section page-header" style="margin-bottom: 4px;">
+                                <h3 class="slds-float_left">
+                                    <a href="{!v.nbacdata.Related_NBAC__c}" target="_blank">{!v.nbacdata.NBAC_Name__c}</a>
+                                    <h2 class="slds-card__header-title">
+                                       <b> {!v.nbacName}</b>
+                                    </h2>
+                                </h3>
+                            </div>
+                            </aura:renderIf>
+                                <c:MeetingConsole_Task aura:id="childMeetingConsole_Task"  />
+                                <c:MeetingConsole_Attachment aura:id="childMeetingConsole_Attachment"/>
+                                <c:MeetingConsoleSubmissionAttendees aura:id="childMeetingConsole_SubmissionAttendees"/>
+
+                        </div>
+
+            </lightning:layoutItem>
+
+        </lightning:layout>
+    </div>
+</aura:renderIf>
+<aura:renderIf isTrue="{!v.warning}">
+    <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_small" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1">
+        <div class="slds-modal__container">
+<!--            style="background-color: rgb(194, 57, 52);color: white;"-->
+            <header class="slds-modal__header" >
+                <h2 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Delete Event Report</h2>
+            </header>
+            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                <p style="text-align: center;padding-bottom: 10px;">Are you sure you want to delete this Event Report?</p>
+            </div>
+            <footer class="slds-modal__footer">
+                <button class="slds-button slds-button_neutral" onclick="{!c.cancelWarningbtn}">Cancel</button>
+                <button class="slds-button slds-button_brand" onclick="{!c.deleteEvent}">Delete</button>
+            </footer>
+
+        </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+</aura:renderIf>
+</aura:component>

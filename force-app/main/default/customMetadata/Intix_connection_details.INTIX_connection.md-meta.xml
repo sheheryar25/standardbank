@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>INTIX_connection</label>
+    <protected>false</protected>
+    <values>
+        <field>Named_Credential__c</field>
+        <value xsi:type="xsd:string">callout:Intix</value>
+    </values>
+    <values>
+        <field>Password__c</field>
+        <value xsi:type="xsd:string">*--yTBWq}VZZ3$-u</value>
+    </values>
+    <values>
+        <field>Path__c</field>
+        <value xsi:type="xsd:string">/xapi/message/search?index=masterIndex&amp;</value>
+    </values>
+    <values>
+        <field>Records_Limit__c</field>
+        <value xsi:type="xsd:double">1000.0</value>
+    </values>
+    <values>
+        <field>Username__c</field>
+        <value xsi:type="xsd:string">dscbotuser</value>
+    </values>
+</CustomMetadata>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>System__c</fullName>
+    <externalId>false</externalId>
+    <label>System</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ACBS</fullName>
+                <default>false</default>
+                <label>ACBS</label>
+            </value>
+            <value>
+                <fullName>Alchemy</fullName>
+                <default>false</default>
+                <label>Alchemy</label>
+            </value>
+            <value>
+                <fullName>Calypso</fullName>
+                <default>false</default>
+                <label>Calypso</label>
+            </value>
+            <value>
+                <fullName>CAM</fullName>
+                <default>false</default>
+                <label>CAM</label>
+            </value>
+            <value>
+                <fullName>Cortex Precious</fullName>
+                <default>false</default>
+                <label>Cortex Precious</label>
+            </value>
+            <value>
+                <fullName>eBlotter</fullName>
+                <default>false</default>
+                <label>eBlotter</label>
+            </value>
+            <value>
+                <fullName>Eclipse</fullName>
+                <default>false</default>
+                <label>Eclipse</label>
+            </value>
+            <value>
+                <fullName>Exis</fullName>
+                <default>false</default>
+                <label>Exis</label>
+            </value>
+            <value>
+                <fullName>Front</fullName>
+                <default>false</default>
+                <label>Front</label>
+            </value>
+            <value>
+                <fullName>Globus</fullName>
+                <default>false</default>
+                <label>Globus</label>
+            </value>
+            <value>
+                <fullName>Murex Energy</fullName>
+                <default>false</default>
+                <label>Murex Energy</label>
+            </value>
+            <value>
+                <fullName>Murex EQD</fullName>
+                <default>false</default>
+                <label>Murex EQD</label>
+            </value>
+            <value>
+                <fullName>Murex GTS</fullName>
+                <default>false</default>
+                <label>Murex GTS</label>
+            </value>
+            <value>
+                <fullName>Quantoplex</fullName>
+                <default>false</default>
+                <label>Quantoplex</label>
+            </value>
+            <value>
+                <fullName>Rohirst</fullName>
+                <default>false</default>
+                <label>Rohirst</label>
+            </value>
+            <value>
+                <fullName>Spectrum</fullName>
+                <default>false</default>
+                <label>Spectrum</label>
+            </value>
+            <value>
+                <fullName>Swift Alliance</fullName>
+                <default>false</default>
+                <label>Swift Alliance</label>
+            </value>
+            <value>
+                <fullName>Trinity Base</fullName>
+                <default>false</default>
+                <label>Trinity Base</label>
+            </value>
+            <value>
+                <fullName>Trinity Precious</fullName>
+                <default>false</default>
+                <label>Trinity Precious</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

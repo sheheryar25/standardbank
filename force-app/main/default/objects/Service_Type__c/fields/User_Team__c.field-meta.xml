@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>User_Team__c</fullName>
+    <description>SGPRT-263 - This field indicates which User Teams (User.UserTeam__c) can use this Service Type record.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>What team can use this Service Type?</inlineHelpText>
+    <label>Team</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Team</valueSetName>
+    </valueSet>
+</CustomField>

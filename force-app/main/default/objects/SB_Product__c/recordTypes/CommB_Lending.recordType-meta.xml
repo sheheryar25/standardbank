@@ -1,0 +1,2121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CommB_Lending</fullName>
+    <active>true</active>
+    <description>Select to create a Commercial Banking lending product</description>
+    <label>CommB Lending</label>
+    <picklistValues>
+        <picklist>Balance_Sheet_of_Booking__c</picklist>
+        <values>
+            <fullName>Angola - Standard Bank de Angola S%2EA%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Botswana - Stanbic Bank Botswana Limited</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brazil - Banco Standard de Investimentos S%2EA%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>China - Standard Resources %28China%29 Limited</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Côte d%27Ivoire - Stanbic Bank</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>D R Congo - Stanbic Bank RDC s%2Ea%2Er%2El%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ghana - Stanbic Bank Ghana Limited</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hong Kong - Standard Bank Asia Limited</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Isle of Man - Standard Bank Isle of Man Branch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Isle of Man - Standard Bank Isle of Man Limited</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Isle of Man - Standard Finance %28Isle of Man%29 Ltd</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jersey - Standard Bank Jersey Limited</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kenya - Stanbic Bank Kenya Limited</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lesotho - Standard Lesotho Bank Limited</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Malawi - Standard Bank Limited</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mauritius - Standard Bank %28Mauritius%29 Limited</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mozambique - Standard Bank s%2Ea%2Er%2El%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Namibia - Standard Bank Namibia Limited</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nigeria - Stanbic IBTC Bank PLC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Singapore - Standard Merchant Bank %28Asia%29 Limited</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South Africa - The Standard Bank of South Africa Limited</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Swaziland - Standard Bank Swaziland Limited</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tanzania - Stanbic Bank Tanzania Limited</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uganda - Stanbic Bank Uganda Limited</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United Kingdom - Standard Bank Plc</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United States of America - Standard Americas%2C Inc%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zambia - Stanbic Bank Zambia Limited</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zimbabwe - Stanbic Bank Zimbabwe Limited</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Bank_Role__c</picklist>
+        <values>
+            <fullName>Advisor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bookrunner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Co-Lead Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dealer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Debt Advisor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Equity Provider</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JSE Sponsor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Joint Lead Arranger</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lead Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lender</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Main Lead Arranger</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Underwriter</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Base_Rate__c</picklist>
+        <values>
+            <fullName>Jibar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prime</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Calculation_Methodology__c</picklist>
+        <values>
+            <fullName>COMPOUNDING BALANCE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>COMPOUNDING RATE %28NCCR%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Applicable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SIMPLE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TERM</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Capital_Approach__c</picklist>
+        <values>
+            <fullName>Inferred Rating</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal Rating</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Standard Formula</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Commission_Frequency__c</picklist>
+        <values>
+            <fullName>Annual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bi-annual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monthly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Once off</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quarterly</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Country_of_Underlying_Risk__c</picklist>
+        <values>
+            <fullName>Afghanistan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Albania</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Algeria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Andorra</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Angola</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Antigua and Barbuda</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Argentina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Armenia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Australia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Austria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Azerbaijan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bahamas%2C The</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bahrain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bangladesh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Barbados</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Belarus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Belgium</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Belize</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Benin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bermuda</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bhutan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bolivia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bosnia and Herzegovina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Botswana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brazil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brunei</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bulgaria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Burkina Faso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Burma</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Burundi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cambodia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cameroon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Canada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cape Verde</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cayman Islands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Central African Republic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chile</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>China</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Colombia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Comoros</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Congo %28Brazzaville%29%2C the Republic of</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Congo %28Kinshasa%29%2C Democratic Republic of</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cook Islands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Costa Rica</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cote D%60Ivoire</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Croatia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cuba</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cyprus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Czech Republic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Denmark</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Djibouti</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dominica</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dominican Republic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>East Timor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ecuador</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Egypt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>El Salvador</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Equatorial Guinea</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eritrea</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Estonia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ethiopia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fiji</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>France</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gabon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gambia%2C The</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Georgia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Germany</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ghana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gibraltar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Greece</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Greenland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grenada</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guatemala</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guernsey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guinea</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guinea-Bissau</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guyana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Haiti</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Honduras</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hong Kong</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hungary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Iceland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>India</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Indonesia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Iran</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Iraq</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ireland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Isle Of Man</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Israel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Italy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jamaica</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Japan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jersey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jordan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kazakhstan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kenya</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kiribati</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Korea%2C Democratic People%27s Republic of</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Korea%2C Republic Of</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kosovo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kuwait</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kyrgyzstan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Laos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Latvia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lebanon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lesotho</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Liberia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Libya</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Liechtenstein</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lithuania</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Luxembourg</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Macau</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Macedonia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Madagascar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Malawi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Malaysia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maldives</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mali</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Malta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marshall Islands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mauritania</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mauritius</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mexico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Micronesia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Moldova</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monaco</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mongolia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Montenegro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Morocco</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mozambique</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Namibia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nauru</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nepal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Netherlands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Netherlands Antilles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Zealand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nicaragua</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Niger</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nigeria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Norway</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oman</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pakistan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Palau</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Palestinian Territories</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Panama</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Papua New Guinea</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paraguay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Peru</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Philippines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Poland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Portugal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Puerto Rico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Qatar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Romania</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Russia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rwanda</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Saint Kitts and Nevis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Saint Lucia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Saint Vincent and The Grenadines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Samoa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>San Marino</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sao Tome and Principe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Saudi Arabia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Senegal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Serbia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seychelles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sierra Leone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Singapore</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Slovakia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Slovenia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Solomon Islands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Somalia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South Africa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South Sudan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sri Lanka</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sudan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Suriname</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Swaziland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sweden</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Switzerland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Syria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Taiwan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tajikistan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tanzania</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Thailand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Togo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tonga</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trinidad and Tobago</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tunisia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Turkey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Turkmenistan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tuvalu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uganda</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ukraine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United Arab Emirates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United Kingdom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United States of America</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uruguay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uzbekistan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vanuatu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vatican City State</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Venezuela</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vietnam</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yemen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zambia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zimbabwe</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Distribution_Required__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Facility_Type__c</picklist>
+        <values>
+            <fullName>Direct</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Indirect</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Fee_Frequency__c</picklist>
+        <values>
+            <fullName>Annual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bi-annual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monthly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quarterly</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Grand_Parent_Product__c</picklist>
+        <values>
+            <fullName>Loans</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Interest_Type__c</picklist>
+        <values>
+            <fullName>Fixed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Floating</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Loan_Profile__c</picklist>
+        <values>
+            <fullName>Amortising Term Loan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bullet Term Loan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Overdraft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Revolving Credit</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Parent_Product__c</picklist>
+        <values>
+            <fullName>Commercial Property Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Revolving Loans</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Term Loans</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Working Capital</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Product_Division__c</picklist>
+        <values>
+            <fullName>Business and Commercial Banking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Global Markets</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Investment Banking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transactional Products and Services</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Product_Lead_Source__c</picklist>
+        <values>
+            <fullName>Advertisement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Automated lead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Banking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CNHW Banking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>China Banking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commercial Banking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ecosystem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enterprise Direct</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Event%2FShows</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Intercountry referrals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Online</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Walk in</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wholesale Banking</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Product_Revenue_Type__c</picklist>
+        <values>
+            <fullName>New to TPS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retention Money</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SA_Book__c</picklist>
+        <values>
+            <fullName>10086 %3A CIB %3A Merrill Book</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10452 %3A CIB %3A FX CCY Options %26 Structure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10453 %3A CIB %3A Fixed Int Trading</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10455 %3A CIB %3A G7</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10459 %3A CIB %3A IRD Money Mkt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10460 %3A CIB %3A Interest Rate Desk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10461 %3A CIB %3A Quantitive Applications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10464 %3A CIB %3A Forex Curve</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10728 %3A CIB %3A Cap Mkt Pfolios</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10729 %3A CIB %3A Forex Profits Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10730 %3A CIB %3A CPI Swaps</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10732 %3A CIB %3A GM-Central</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11402 %3A CIB %3A Prudential Balances</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11404 %3A CIB %3A FX - PTA Rep Office</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11405 %3A CIB %3A FX Cape Town Rep Office</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11406 %3A CIB %3A FX Durban Rep Office</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11477 %3A CIB %3A International Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11639 %3A CIB %3A Forex Agri Futures</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11640 %3A CIB %3A Rand Options</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>11641 %3A CIB %3A Prime</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12468 %3A CIB %3A Hedging Strategies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12473 %3A CIB %3A FX - Foreign Note Trading</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12476 %3A CIB %3A Base Metals %26 Energy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>125 %3A CIB %3A FX Port Elizabeth Rep Office</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>13755 %3A CIB %3A Equity Derivatives</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1410 %3A CIB %3A FX JHB Corporate Dealing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1426 %3A CIB %3A Money Markets Johannesburg</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1441 %3A CIB %3A FX Central</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>14683 %3A CIB %3A Forex Arbitrage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>14686 %3A CIB %3A DCMT-Credit Derivatives</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>14687 %3A CIB %3A DCMT-Exotics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>14689 %3A CIB %3A Sales %26 Structuring</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>17366 %3A CIB %3A Forex Africa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>17409 %3A CIB %3A FOREX TRADING</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>17410 %3A CIB %3A FX Branch Dealing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>17411 %3A CIB %3A FX Operations %26 Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>18127 %3A CIB %3A FX Interest Rate Futures</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>18172 %3A SFM %3AOnline Trading</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>18176 %3A SFM %3A Online Trading II</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>18179 %3A SFM %3A Trading Other %28Interest %26 Invest%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>18815 %3A CIB %3A FX Exchange Traded Products</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>19521 %3A CIB %3A IOM Money Markets Funding Unit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>19524 %3A CIB %3A SFL Money Markets Funding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>19639 %3A CIB %3A International</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>19734 %3A CIB %3A FX Bank Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>19912 %3A CIB %3A Africa Trading Desk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>20028 %3A CIB %3A Tier%2FIII Capital</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>20084 %3A CIB %3A Credit Link Notes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>20113 %3A CIB %3A FX Macro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>20531 %3A CIB %3A Money Markets Mark to Market</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>20788 %3A CIB %3A Call Loans</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>20810 %3A CIB %3A FX Relationship Centre</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>22153 %3A CIB %3A London 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>22784 %3A CIB %3A Money Markets Trading</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>23015 %3A CIB %3A Protea Capital</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>23286 %3A CIB %3A FX Strat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>23287 %3A CIB %3A Agricultural Banking Book</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>23381 %3A CIB %3A Foreign Currency Money Markets Tra</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>23459 %3A CIB %3A Cross Currencies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>23486 %3A CIB %3A Global Markets Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>23942 %3A CIB %3A CD Banking Book</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>24746 %3A CIB %3A Performers CRS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>24750 %3A CIB %3A Funding Unit Investment Banking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>25930 %3A CIB %3A London 3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>25931 %3A CIB %3A London 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>25963 %3A CIB %3A Credit Deriv%2FFor Cur Money Market JV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>26563 %3A CIB %3A Listed Retail Notes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>26983 %3A CIB %3A Money Market Portfolio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>27199 %3A CIB %3A Forex Gold Trading</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>27474 %3A CIB %3A FX Collateralised Trading</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>27635 %3A ANDSEC %3A SBSA%2FANDSEC Institutional Bus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>28063 %3A CIB %3A FX Currency Futures</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>29687 %3A SFL %3A Soft Commodities Africa Trades</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>30012 %3A CIB %3A Distribution</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>31388 %3A CIB %3A IOM Capital Foreign Funding Unit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>31846 %3A CIB %3A Forex Funding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>32838 %3A CIB Exchange Control Compliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>33463 %3A CIB %3A Interest Rate Trading</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>34503 %3A CIB %3A FX JHB Global Sales Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>34504 %3A CIB %3A FX Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>34575 %3A CIB %3A FX E-Channels</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>35753 %3A CIB %3A Agency Business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>36864 %3A CIB %3A GFE Global Markets</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>36865 %3A CIB %3A Global Markets Global Money Markets</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>36898 %3A CIB %3A CSSS Executive Management2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>36899 %3A CIB %3A CSSS Human Resource2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>36900 %3A CIB %3A CSSS Admin2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>36901 %3A CIB %3A CSSS Finance2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>36902 %3A CIB %3A CSSS IT2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>36903 %3A CIB %3A CSSS Compliance2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>36904 %3A CIB %3A CSSS Firm Event2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>36905 %3A CIB %3A CSSS Sales2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>36906 %3A CIB %3A CSSS Stat2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>36907 %3A CIB %3A CSSS Sales Trade2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>36908 %3A CIB %3A CSSS Trade Support2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>37230 %3A CIB %3A FCMM IOM Repo Trading</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>37232 %3A CIB %3A FCMM JHB Repo Trading</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>38493 %3A CIB %3A Credit Derivatives Central</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>38499 %3A CIB %3A Money Markets Central</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>563 %3A CIB %3A Offshore Funding Unit-AC133 Adjust</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>570 %3A CIB %3A New Product%2FInnovation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6022 %3A CIB %3A Metals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>623 %3A CIB %3A Money Markets Global Markets</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>886 %3A CIB %3A Money Markets Cape Town</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>903 %3A CIB %3A Exchange Control Advisory</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>989 %3A CIB %3A Money Markets Kwazulu Natal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPISWAPS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Derivatives</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exotics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FI GOV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GLOBAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IRD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IRDSTRAT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LTFX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Options</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prime</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Repo</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SA_Day__c</picklist>
+        <values>
+            <fullName>0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SA_IRD_Product__c</picklist>
+        <values>
+            <fullName>Bond Forward</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bond Option</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bond Repo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPI Annuity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPI Swap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancellable Swap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Collar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Convertible Note</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Default Swap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Linked Note</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cross Currency Interest Rate Swap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exotic Structured Product</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Extendible Note</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Extendible Swap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Extinguishable Cross Currency Interest Rate Swap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fixed Rate Note</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Floating Rate Structure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Floor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Forward Rate Agreement %28Fra%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interest Rate Swap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Long Dated Annuity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Long Dated Forward</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Credit Derivatives</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prime Swap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Range Accrual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Replica Note</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Restructured Note</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reverse Annuity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Swaption</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unwind Structure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Variable Rate Swap</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SA_Product__c</picklist>
+        <values>
+            <fullName>Agricultural Production Loan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Advance Account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Revolving Credit Plan Loan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Term Loan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commercial Property Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Debtor%27s Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fixed Rate Option - Enterprise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium Term Loan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Overdraft %28Business Current Account%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pre-Shipment Financing</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SA_Week__c</picklist>
+        <values>
+            <fullName>0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Security_Offered__c</picklist>
+        <values>
+            <fullName>Bonds</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cash</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commodity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Equity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Property</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Receivables</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Trading_Area__c</picklist>
+        <values>
+            <fullName>Africa Trading</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commodities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Derivatives</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Distribution</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Equity Derivatives</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exotics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Foreign Currency Money Markets</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Global Foreign Exchange</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Interest Rate Derivatives</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Money Markets</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Online Share Trading</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Global Markets</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SBG Securities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Standard Fin Markets</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Transaction_Type__c</picklist>
+        <values>
+            <fullName>Bi-Lateral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Club</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Debt advisory only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Syndicated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Syndicated-Best Efforts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Syndicated-Unfunded Underwrite</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Units__c</picklist>
+        <values>
+            <fullName>bbl</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>dmt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>kg</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>lbs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>mmtbu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>mt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>oz</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>wmt</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

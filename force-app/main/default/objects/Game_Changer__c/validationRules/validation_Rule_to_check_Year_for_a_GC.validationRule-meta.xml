@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>validation_Rule_to_check_Year_for_a_GC</fullName>
+    <active>true</active>
+    <description>US-1214:RTB - OM - Game Changers.validation rules to check for year provided should be a 4 digit number</description>
+    <errorConditionFormula>OR(NOT(ISNUMBER( Year__c )),LEN(TRIM( Year__c) ) &lt;4)</errorConditionFormula>
+    <errorMessage>Year should be a valid 4 digit number</errorMessage>
+</ValidationRule>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CurrentYearFees_and_TotalFees</fullName>
+    <active>true</active>
+    <description>Current Year Fees should always be less than or equal to Total Fees</description>
+    <errorConditionFormula>AND(
+    OR(
+       NOT(ISBLANK(Current_Year_Fees__c )),
+       NOT(ISBLANK(Total_Fees__c))
+    ),
+    OR(
+      (Current_Year_Fees__c &gt; Total_Fees__c),
+      (ISBLANK(Total_Fees__c))
+    ),
+    $RecordType.Name &lt;&gt; &quot;Transactional&quot;,
+    $RecordType.Name &lt;&gt; &quot;CommB Lending&quot;,
+    $RecordType.Name &lt;&gt; &quot;Advisory&quot;,
+    $RecordType.Name &lt;&gt; &quot;Capital Markets&quot;,
+    $RecordType.Name &lt;&gt; &quot;Lending and Commitments&quot;,
+    $RecordType.Name &lt;&gt; &quot;Primary Arranging/Advisory&quot;,
+    $RecordType.Name &lt;&gt; &quot;Trading (Flow)&quot;,
+    $RecordType.Name &lt;&gt; &quot;Trading (Structure)&quot;,
+    $RecordType.Name &lt;&gt; &quot;Transactional 2014&quot;,
+    $RecordType.Name &lt;&gt; &quot;TPS 2022&quot;
+)</errorConditionFormula>
+    <errorDisplayField>SA_Amount__c</errorDisplayField>
+    <errorMessage>Current Year Fees should always be less than or equal to Total Fees</errorMessage>
+</ValidationRule>

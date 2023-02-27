@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>SFP-10788 - This class invoked by the &quot;Deactivate Expired Relationships&quot; to remove a role(s) from the role field of the Account Contact Relation object.</description>
+        <name>Call_Apex_method_callRemoveMultiSelectValuesBatch</name>
+        <label>Call Apex method callRemoveMultiSelectValuesBatch</label>
+        <locationX>176</locationX>
+        <locationY>276</locationY>
+        <actionName>RemoveMultiSelectValues</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+    </actionCalls>
+    <apiVersion>54.0</apiVersion>
+    <description>SFP-10788 - This flow changes the status on all expired related parties from &quot;Active&quot; to &quot;Expired&quot;</description>
+    <interviewLabel>Deactivate Expired Relationships {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Deactivate Expired Relationships</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Call_Apex_method_callRemoveMultiSelectValuesBatch</targetReference>
+        </connector>
+        <schedule>
+            <frequency>Daily</frequency>
+            <startDate>2022-03-09</startDate>
+            <startTime>14:00:00.000Z</startTime>
+        </schedule>
+        <triggerType>Scheduled</triggerType>
+    </start>
+    <status>Draft</status>
+    <variables>
+        <name>ACRCollection</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>CMN_Account_Contact_Relationship_Detail__c</objectType>
+    </variables>
+    <variables>
+        <name>test20</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

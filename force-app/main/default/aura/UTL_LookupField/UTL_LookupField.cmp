@@ -1,0 +1,97 @@
+<aura:component controller="UTL_LookupField_Ctrl">
+	<ltng:require scripts="{!$Resource.RxJS410 + '/rx.all.js'}" afterScriptsLoaded="{!c.onRxLoaded}" />
+	
+	<aura:attribute name="sObjectName" type="String"/>
+	<aura:attribute name="fieldName" type="String"/>
+	<aura:attribute name="fieldLabel" type="String"/>
+	<aura:attribute name="readOnly" type="boolean" default="false"/>
+	<aura:attribute name="isOnRemoveBtn" type="boolean" default="true"/>
+	<aura:attribute name="required" type="Boolean" default="false"/>
+	<aura:attribute name="assignTo" type="Object"/>
+	<aura:attribute name="whereClause" type="String"/>
+	<aura:attribute name="parentFieldValue" type="String"/>
+	<aura:attribute name="onchange" type="Aura.Action" />
+	<aura:attribute name="suggestions" type="Object[]" access="private"/>
+	<aura:attribute name="index" type="Integer" default="-1" access="private"/>
+
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+	<aura:handler name="change" value="{!v.assignTo}" action="{!c.handleValueChange}"/>
+	<!-- <aura:handler name="change" value="{!v.parentFieldValue}" action="{!c.doInit}"/> -->
+
+	<div class="slds-form-element">
+		<aura:if isTrue="{!v.fieldLabel != null}">
+			<label class="slds-form-element__label" for="input-name">
+				<aura:if isTrue="{!v.required}">
+					<abbr class="slds-required" title="required">*</abbr>
+				</aura:if>
+				{!v.fieldLabel}
+			</label>
+		</aura:if>
+		<div class="slds-form-element__control">
+			<aura:if isTrue="{!v.parentFieldValue != null}">
+				<div class="slds-combobox_container slds-has-inline-listbox">
+					<div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click" role="combobox">
+						<div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_left-right">
+							<input aura:id="readonly-name" type="text" id="input-name" class="slds-input slds-combobox__input" role="textbox" placeholder="Search Salesforce" readonly="{!v.readOnly}" value="{!v.parentFieldValue}"/>
+							<aura:if isTrue="{!v.isOnRemoveBtn}">
+								<lightning:buttonIcon iconName="utility:close" class="slds-input__icon slds-input__icon_right" variant="bare" onclick="{!c.onRemove}" alternativeText="Remove"/>
+							</aura:if>
+						</div>
+					</div>
+				</div>
+			<aura:set attribute="else">
+				<div aura:id="lookup-container" class="slds-combobox_container slds-has-inline-listbox">
+					<div aura:id="account-lookup" class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-combobox-lookup" role="combobox">
+						<div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right">
+							<aura:if isTrue="{!not(v.readOnly)}">
+								<input aura:id="input-name" type="text" id="input-name" class="slds-input slds-combobox__input" role="textbox"  oninput="{!c.onInput}" onblur="{!c.onBlur}" onfocus="{!c.onFocus}" onkeydown="{!c.onKeydown}"/>
+								<lightning:icon iconName="utility:search" class="slds-input__icon slds-input__icon_right" size="x-small" alternativeText="Search"/>
+								<aura:set attribute="else">
+									<input aura:id="input-name" type="text" id="input-name" class="slds-input slds-combobox__input" role="textbox" readonly="true"  oninput="{!c.onInput}" onblur="{!c.onBlur}" onfocus="{!c.onFocus}" onkeydown="{!c.onKeydown}"/>
+
+								</aura:set>
+							</aura:if>
+						</div>
+					<div id="listbox-unique-id" role="listbox">
+						<ul aura:id="suggestion-list" class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid" role="presentation" onmousedown="{!c.onSuggestionListDown}">
+							<aura:iteration items="{!v.suggestions}" var="suggestion" indexVar="index">
+								<li role="presentation" class="slds-listbox__item"  data-index="{!index}" onclick="{!c.onSuggestionListClick}">
+									<aura:if isTrue="{!v.index == index}">
+										<div aura:id="suggestion-list-item" class="slds-media slds-media_center slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta slds-has-focus" role="option">
+											<div class="slds-media__body">
+												<div class="slds-listbox__option-text slds-listbox__option-text_entity slds-truncate">
+													{!suggestion.queriedField}
+												</div>
+											</div>
+											<div class="slds-listbox__option-meta slds-listbox__option-meta_entity slds-text-body_small">
+												<aura:if isTrue="{!suggestion.sObjectType}">
+													Type • {!suggestion.sObjectType}
+												</aura:if>
+											</div>
+										</div>
+									<aura:set attribute="else">
+										<div aura:id="suggestion-list-item" class="slds-media slds-media_center slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta" role="option">
+											<div class="slds-media__body"> 
+												<div class="slds-listbox__option-text slds-listbox__option-text_entity slds-truncate">
+													{!suggestion.queriedField}
+												</div>
+												<div class="slds-listbox__option-meta slds-listbox__option-meta_entity slds-text-body_small">
+													<aura:if isTrue="{!suggestion.sObjectType}">
+														Type • {!suggestion.sObjectType}
+													</aura:if>
+												</div>
+											</div>
+										</div>
+									</aura:set>
+									</aura:if>
+								</li>
+							</aura:iteration>
+						</ul>
+					</div>
+				</div>
+			</div>
+			</aura:set>
+			</aura:if>
+		</div>
+	</div>
+</aura:component>

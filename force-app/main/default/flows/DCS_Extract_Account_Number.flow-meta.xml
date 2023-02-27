@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <assignments>
+        <name>Extract_Account_Number</name>
+        <label>Extract Account Number</label>
+        <locationX>177</locationX>
+        <locationY>257</locationY>
+        <assignmentItems>
+            <assignToReference>AccountNumber</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>AccountInfo.accountId</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <description>DCS-185 extract account number from account info</description>
+    <interviewLabel>DCS Extract Account Number {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>DCS Extract Account Number</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Extract_Account_Number</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>AccountInfo</name>
+        <apexClass>OSB_VA_AccountInfo</apexClass>
+        <dataType>Apex</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>AccountNumber</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

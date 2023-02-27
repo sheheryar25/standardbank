@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BankAccountType__c</fullName>
+    <externalId>false</externalId>
+    <label>Bank Account Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Premier Business Checking</fullName>
+                <default>false</default>
+                <label>Premier Business Checking</label>
+            </value>
+            <value>
+                <fullName>Basic Business Checking</fullName>
+                <default>false</default>
+                <label>Basic Business Checking</label>
+            </value>
+            <value>
+                <fullName>Commercial Checking</fullName>
+                <default>false</default>
+                <label>Commercial Checking</label>
+            </value>
+            <value>
+                <fullName>Business Line of Credit</fullName>
+                <default>false</default>
+                <label>Business Line of Credit</label>
+            </value>
+            <value>
+                <fullName>Business Term Loan</fullName>
+                <default>false</default>
+                <label>Business Term Loan</label>
+            </value>
+            <value>
+                <fullName>Business Purpose Vehicle Loan</fullName>
+                <default>false</default>
+                <label>Business Purpose Vehicle Loan</label>
+            </value>
+            <value>
+                <fullName>Merchant Services</fullName>
+                <default>false</default>
+                <label>Merchant Services</label>
+            </value>
+            <value>
+                <fullName>Business Reserve Line</fullName>
+                <default>false</default>
+                <label>Business Reserve Line</label>
+            </value>
+            <value>
+                <fullName>Business MMA</fullName>
+                <default>false</default>
+                <label>Business MMA</label>
+            </value>
+            <value>
+                <fullName>Business Savings</fullName>
+                <default>false</default>
+                <label>Business Savings</label>
+            </value>
+            <value>
+                <fullName>Business Credit Card</fullName>
+                <default>false</default>
+                <label>Business Credit Card</label>
+            </value>
+            <value>
+                <fullName>Commercial RE</fullName>
+                <default>false</default>
+                <label>Commercial RE</label>
+            </value>
+            <value>
+                <fullName>Consumer Mortgage</fullName>
+                <default>false</default>
+                <label>Consumer Mortgage</label>
+            </value>
+            <value>
+                <fullName>Consumer Loan</fullName>
+                <default>false</default>
+                <label>Consumer Loan</label>
+            </value>
+            <value>
+                <fullName>Personal Checking</fullName>
+                <default>false</default>
+                <label>Personal Checking</label>
+            </value>
+            <value>
+                <fullName>MMA</fullName>
+                <default>false</default>
+                <label>MMA</label>
+            </value>
+            <value>
+                <fullName>CD</fullName>
+                <default>false</default>
+                <label>CD</label>
+            </value>
+            <value>
+                <fullName>Annuities</fullName>
+                <default>false</default>
+                <label>Annuities</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Totally Free Business Checking</fullName>
+                <default>false</default>
+                <label>Totally Free Business Checking</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

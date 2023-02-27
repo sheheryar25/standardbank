@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Owner_CIB_Global_Area__c</fullName>
+    <description>CIB Global Area of the Case Owner</description>
+    <externalId>false</externalId>
+    <inlineHelpText>CIB Global Area of the Case Owner</inlineHelpText>
+    <label>Case Owner CIB Global Area</label>
+    <length>25</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

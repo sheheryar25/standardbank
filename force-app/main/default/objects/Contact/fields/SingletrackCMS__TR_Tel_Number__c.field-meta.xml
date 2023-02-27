@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SingletrackCMS__TR_Tel_Number__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Contact telephone number without area code and country code</description>
+    <externalId>false</externalId>
+    <label>Third Party Tel Number</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Phone</type>
+</CustomField>

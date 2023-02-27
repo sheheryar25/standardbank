@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ignore_CCValidation__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field is a developer field created when the Trigger is running to ignore the validation.</description>
+    <externalId>false</externalId>
+    <label>Ignore_CCValidation</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

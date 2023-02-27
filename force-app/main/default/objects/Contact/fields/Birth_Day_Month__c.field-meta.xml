@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Birth_Day_Month__c</fullName>
+    <description>Please enter the day and the month of the contact&apos;s birthday. Format dd/mm</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please enter the day and the month of the Contact&apos;s birthday. Format dd/mm (5 characters or less)</inlineHelpText>
+    <label>Birth Day/Month</label>
+    <length>5</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

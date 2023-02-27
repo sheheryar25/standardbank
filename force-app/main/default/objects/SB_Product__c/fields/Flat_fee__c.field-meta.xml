@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Flat_fee__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>This value is not muliplied by any factor (so it will be included directly in the total deal size) E.g. Enter an amount for negotiated fees, and the commission earned off of LC&apos;s and Guarantees (on an annual basis) for example.</inlineHelpText>
+    <label>Annual Flat Fee</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

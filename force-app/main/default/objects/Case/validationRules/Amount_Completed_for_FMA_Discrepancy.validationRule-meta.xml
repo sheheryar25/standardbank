@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Amount_Completed_for_FMA_Discrepancy</fullName>
+    <active>true</active>
+    <description>US-3619 - When FMA Discrepancy is selected, the Account cannot be blank</description>
+    <errorConditionFormula>AND( FMA_Discrepancy__c, ISBLANK(Amount__c))</errorConditionFormula>
+    <errorDisplayField>Amount__c</errorDisplayField>
+    <errorMessage>Amount cannot be blank when FMA Discrepancy is selected</errorMessage>
+</ValidationRule>

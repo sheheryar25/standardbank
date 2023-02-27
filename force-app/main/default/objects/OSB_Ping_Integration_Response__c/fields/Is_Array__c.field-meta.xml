@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Array__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This will specify whether the response key is in array</description>
+    <externalId>false</externalId>
+    <label>Is Array?</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

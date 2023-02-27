@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason__c</fullName>
+    <description>US-4450
+            Picklist is dependant on response and category
+            Part of export to Smart2</description>
+    <externalId>false</externalId>
+    <inlineHelpText>List of applicable client reasons for their response to the conversation</inlineHelpText>
+    <label>Reason</label>
+    <length>250</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,583 @@
+.THIS {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.THIS .modal-heading {
+  padding-left: 25px;
+  padding-top: 25px;
+  font-size: 20px;
+}
+.THIS
+  .slds-checkbox
+  [type="checkbox"]
+  + .slds-checkbox__label
+  .slds-checkbox_faux {
+  border-color: #767676;
+  border-style: solid;
+  border-width: 2px;
+}
+.THIS
+  .slds-checkbox
+  [type="checkbox"]
+  + .slds-checkbox__label
+  .slds-checkbox_faux::after {
+  border-color: #0089ff;
+}
+.THIS .checkbox-container {
+  border-color: #767676;
+}
+.THIS .rectangle-modal {
+  background-color: #ffffff;
+  box-shadow: 0 3px 7px 8px rgba(0, 0, 0, 0.11);
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.32);
+  position: absolute;
+  display: block;
+  min-height: 460px;
+  max-height: 700px;
+  max-width: 72.3%;
+  min-width: 76%;
+  z-index: 9001;
+  top: 17%;
+  left: 12%;
+}
+
+.THIS .heading-text {
+  display: flex;
+  align-items: center;
+  padding-bottom: 12px;
+  font-size: 15px;
+}
+.THIS .linked-device {
+  padding: 30px;
+}
+.THIS .ms-icn_lock_closed {
+  font-size: 30px;
+  padding-right: 15px;
+  color: #0033aa;
+  font-variant: normal;
+}
+.THIS .ms-icn_check_circle {
+  font-size: 187px;
+  color: #0089ff;
+  margin-left: -30px;
+}
+.THIS .appOrPayStore {
+  min-height: 120px;
+  max-height: 132px;
+  align-items: center;
+}
+.THIS .tutorial-modal {
+  max-height: 683px;
+  min-height: 49%;
+  top: 6%;
+  left: 12%;
+}
+.THIS .largeIcon {
+  font-size: 170px;
+  color: #0089ff;
+  margin-left: 0;
+}
+.THIS .grey-line {
+  margin-left: 5px;
+  box-sizing: border-box;
+  height: 1px;
+  max-width: 99%;
+  min-width: 30%;
+  border: 1px solid #c6c6c6;
+}
+.THIS .rectangle-middle {
+  width: 50%;
+  padding-top: 3.6%;
+}
+.THIS .steps-nav {
+  display: flex;
+  line-height: 40px;
+  text-align: center;
+  color: #666666;
+  font-family: "BentonSans";
+  padding-top: 26px;
+}
+
+.THIS .img {
+  max-width: 100%;
+  height: auto;
+  padding: 5px;
+}
+
+.THIS .rectangle-steps {
+  background-color: #ffffff;
+  max-width: 100%;
+  min-width: 30%;
+}
+.THIS .rectangle-left {
+  max-height: 50%;
+  min-height: 40%;
+  max-width: 25%;
+  min-width: 15%;
+  align-self: center;
+}
+.THIS .closeButton {
+  margin-left: auto;
+  max-width: fit-content;
+}
+.THIS .errorHeading {
+  height: 28px;
+}
+.THIS .content__title {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  text-align: center;
+  text-transform: none;
+  max-width: 100%;
+  min-width: 90%;
+  color: #222222;
+  font-family: BentonSans;
+  line-height: 20px;
+}
+.THIS .tutorial_content__title {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  text-align: center;
+  text-transform: none;
+  color: #222222;
+  font-family: BentonSans;
+  line-height: 20px;
+  width: 100%;
+  margin-top: 17px;
+}
+
+.THIS .content__subtitle {
+  color: #666666;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 24px;
+  text-align: center;
+  margin-bottom: 32px;
+  padding: 20px;
+  max-width: 100%;
+  min-width: 90%;
+}
+.THIS .tutorial_content__subtitle {
+  color: #666666;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 24px;
+  text-align: center;
+  margin-bottom: 0;
+  padding: 16px;
+  max-width: 98%;
+  min-width: 30%;
+}
+.THIS .sub-rectangle-tutorial {
+  padding: 7px;
+  margin-left: 5px;
+  min-height: 39%;
+  max-width: 98%;
+  min-width: 30%;
+  vertical-align: middle;
+}
+.THIS .googlePlay_image {
+  margin-left: 0;
+  max-width: 100%;
+}
+.THIS .sub-text {
+  font-size: 12px;
+}
+.THIS .rectangle-right {
+  box-sizing: border-box;
+  height: 312px;
+  width: 25%;
+  padding-top: 41px;
+  text-align: center;
+}
+.THIS .line {
+  box-sizing: border-box;
+  height: 2px;
+  width: 50px;
+  border: 1px solid #979797;
+  margin-top: 18px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.THIS .step {
+  display: flex;
+  width: auto;
+  padding-top: 5px;
+}
+.THIS .popUp-visible {
+  background-color: #eeeeee;
+  z-index: 100;
+}
+.THIS .popUp-invisible {
+  z-index: 155;
+  background-color: transparent;
+}
+.THIS .popUp-overlay {
+  display: block;
+  height: -webkit-fill-available; /* height: 100%;783px*/
+  width: 267%;
+  position: fixed;
+  top: 0;
+  opacity: 0.8;
+  left: -533px;
+}
+.THIS .addDevice__buttons {
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  height: 15.5%;
+  max-width: 100%;
+  min-width: 60%;
+  padding: 25px;
+  align-items: center;
+}
+.THIS .subtitle {
+  padding: 5px;
+}
+.THIS .newCase__button.btn--darkblue {
+  background-color: #0033aa;
+  color: #ffffff;
+}
+.THIS .newCase__button.btn--gray {
+  background-color: #ededed;
+  color: #0033aa;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.3);
+}
+.THIS .newCase__button.btn--gray:hover,
+.THIS .newCase__button.btn--gray:focus {
+  background: #0089ff;
+  color: #fff;
+}
+.THIS .newCase__button.btn_disabled {
+  background-color: #ededed;
+  color: #8b8888;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.3);
+  width: 100%;
+}
+.THIS .newCase__button.btn--darkblue:hover,
+.THIS .newCase__button.btn--darkblue:focus {
+  background: #0069c4;
+  color: #fff;
+}
+.THIS .oval-1 {
+  padding-left: 6px;
+  height: 37.5px;
+  width: 37.5px;
+  background-color: #c4e4ff;
+  border-radius: 50%;
+}
+.THIS .tutorial2 {
+  margin-left: 3px;
+}
+.THIS .oval-2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 6px;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  opacity: 1;
+}
+.THIS .oval-2_selected {
+  background-color: #0033aa;
+}
+.THIS .oval-2_unselected {
+  background-color: #d8d8d8;
+}
+.THIS .oval-2_unselected > .number {
+  color: #444444;
+}
+.THIS .loader {
+  width: 44px;
+  margin: auto;
+  display: flex;
+}
+.THIS .device_checkbox {
+  margin-right: auto;
+}
+
+.THIS .timer_info {
+  text-align: center;
+}
+.THIS .number {
+  height: 19px;
+  width: 8px;
+  color: #ffffff;
+  font-family: "BentonSans";
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 19px;
+  text-align: center;
+  background: border-box;
+  padding-top: 4px;
+}
+.THIS .rectangle-error {
+  margin: 193px;
+  text-align: center;
+}
+.THIS .error {
+  height: 19px;
+  color: #444444;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 21px;
+  text-align: center;
+}
+.THIS .mfaRequiredMessage {
+  text-align: -webkit-center;
+  margin-top: 4%;
+  font-size: large;
+}
+.THIS .step-heading {
+  font-size: medium;
+  line-height: normal;
+  font-weight: 400;
+}
+.THIS .step-sub-heading {
+  font-size: small;
+  line-height: normal;
+  font-weight: 200;
+}
+.THIS .reload {
+  font-size: 14px;
+  color: #0033aa;
+}
+.THIS .step-name {
+  margin-left: 9px;
+}
+.THIS .ms-icn_check_circle_solid {
+  font-size: 30px;
+  margin-top: 4px;
+}
+.THIS .selected_font {
+  color: #0033aa;
+}
+.THIS .button {
+  flex-grow: 0;
+  padding: 0 10px 0 10px;
+}
+.THIS .reload_img {
+  margin: auto;
+  max-width: 250px;
+}
+.THIS .qrCode {
+  min-width: 200px;
+  display: flex;
+}
+.THIS .qrCode > img {
+  margin: auto;
+}
+.THIS .rectangle2 {
+  min-width: 200px;
+  height: 100%;
+  display: flex;
+}
+@media (min-width: 871px) and (max-width: 1280px) {
+  .THIS .reload {
+    margin-top: 20px;
+  }
+  .THIS .newCase-container.mt_72 {
+    margin-top: 0;
+  }
+  .THIS .newCase-container {
+    padding-right: 20px;
+    padding-left: 20px;
+    width: 752px;
+  }
+  .THIS .dashboard__left {
+    display: none;
+  }
+  .THIS .popUp-box {
+    left: 2%;
+    top: 15%;
+    width: 984px;
+  }
+  .THIS .rectangle-modal {
+    max-width: 92.3%;
+    min-width: 90%;
+    left: 4%;
+    top: 23%;
+  }
+  .THIS .rectangle2 {
+    padding-bottom: 0px;
+  }
+  .THIS .grey-line {
+    width: 100%;
+  }
+  .THIS .addDevice__buttons {
+    width: 100%;
+  }
+  .THIS .rectangle-steps {
+    width: 100%;
+  }
+  .cOSBDeviceManagement.cOSBNewDeviceModal .largeIcon {
+    font-size: 1100%;
+    color: #0089ff;
+    padding-top: 74px;
+    font-size: 1100%;
+  }
+  .cOSBNewDeviceModal .sub-rectangle-tutorial {
+    padding: 7px;
+    width: 100%;
+    margin-left: 5px;
+    vertical-align: middle;
+  }
+  .THIS .check-icon {
+    padding-top: 41px;
+  }
+  .THIS .newCase__button.btn--darkblue,
+  .cOSBNewDeviceModal .newCase__button.btn--gray {
+    width: 100%;
+  }
+}
+@media (max-width: 870px) {
+  .THIS .newCase-container.mt_72 {
+    margin-top: 0;
+  }
+  .THIS .newCase-container {
+    padding-right: 20px;
+    padding-left: 20px;
+    width: 752px;
+  }
+  .THIS .dashboard__left {
+    display: none;
+  }
+  .THIS .popUp-box {
+    left: 2%;
+    top: 15%;
+    width: 984px;
+  }
+  .THIS .rectangle-modal {
+    max-width: 94%;
+    min-width: 30%;
+    top: 14%;
+    left: 3%;
+  }
+  .THIS .rectangle2 {
+    padding-bottom: 10px;
+    display: contents;
+  }
+  .cOSBNewDeviceModal .rectangle-left {
+    display: none;
+  }
+  .cOSBNewDeviceModal .rectangle-middle {
+    padding-top: 16px;
+    width: 100%;
+  }
+  .cOSBNewDeviceModal .subtitle {
+    padding: 10px;
+  }
+  .THIS .grey-line {
+    width: 982px;
+  }
+  .THIS .addDevice__buttons {
+    width: 984px;
+    padding: 17px;
+    flex-direction: column;
+  }
+  .THIS .rectangle-steps {
+    width: 984px;
+  }
+  .cOSBDeviceManagement.cOSBNewDeviceModal .largeIcon {
+    font-size: 1100%;
+    color: #0089ff;
+    padding-top: 74px;
+    font-size: 1100%;
+  }
+  .cOSBNewDeviceModal .sub-rectangle-tutorial {
+    padding: 7px;
+    width: 100%;
+    margin-left: 5px;
+    vertical-align: middle;
+  }
+  .THIS .check-icon {
+    padding-top: 41px;
+  }
+  .cOSBNewDeviceModal .content__subtitle {
+    margin-bottom: 0px;
+  }
+  .cOSBNewDeviceModal .rectangle-right {
+    box-sizing: border-box;
+    height: 50%;
+    width: 100%;
+    padding-top: 0;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  .THIS .button {
+    width: 100%;
+    padding: 5px;
+  }
+  .cOSBNewDeviceModal .newCase__button.btn--gray {
+    background-color: #ededed;
+    color: #0033aa;
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 30%);
+    width: 100%;
+  }
+  .THIS .newCase__button.btn--darkblue {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1281px) {
+  .THIS .newCase-container {
+    width: 75%;
+  }
+}
+@media (max-width: 649px) {
+  .cOSBNewDeviceModal .rectangle-steps {
+    max-width: 100%;
+    min-width: 30%;
+  }
+  .cOSBNewDeviceModal .step-name {
+    display: none;
+  }
+}
+@media (max-width: 479px) {
+  .cOSBNewDeviceModal .rectangle-modal {
+    max-height: unset !important;
+    position: absolute;
+    max-width: 100% !important;
+    top: 0%;
+    left: 0%;
+  }
+  .cOSBNewDeviceModal .ms-icn_check_circle {
+    margin-left: -6px;
+    font-size: 168px;
+  }
+  .cOSBNewDeviceModal .addDevice__buttons {
+    bottom: 0;
+    padding: 17px;
+    display: block;
+    flex-direction: column;
+  }
+  .THIS .tutorial-modal {
+    min-height: 471px;
+  }
+  .cOSBNewDeviceModal .button {
+    width: 100%;
+    padding: 5px;
+  }
+  .cOSBNewDeviceModal .grey-line {
+    max-width: 97%;
+    min-width: 30%;
+  }
+  .THIS .newCase__button.btn--darkblue,
+  .cOSBNewDeviceModal .newCase__button.btn--gray {
+    width: 100%;
+  }
+}
+.THIS .timer_contatiner {
+  padding-top: 10px;
+}
+.THIS .timer_text {
+  color: #858d9d;
+  font-family: "BentonSans";
+  font-size: 15px;
+  max-width: 220px;
+  margin: auto;
+  text-align: center;
+}

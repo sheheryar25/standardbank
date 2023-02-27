@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Client_Franco__c</fullName>
+    <description>This field is to Define the Franco the Client belongs to</description>
+    <externalId>false</externalId>
+    <label>Client Reporting Franco</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Angola</fullName>
+                <default>false</default>
+                <label>Angola</label>
+            </value>
+            <value>
+                <fullName>Asia</fullName>
+                <default>false</default>
+                <label>Asia</label>
+            </value>
+            <value>
+                <fullName>Brazil</fullName>
+                <default>false</default>
+                <label>Brazil</label>
+            </value>
+            <value>
+                <fullName>Developed Markets</fullName>
+                <default>false</default>
+                <label>Developed Markets</label>
+            </value>
+            <value>
+                <fullName>DRC</fullName>
+                <default>false</default>
+                <label>DRC</label>
+            </value>
+            <value>
+                <fullName>East Africa</fullName>
+                <default>false</default>
+                <label>East Africa</label>
+            </value>
+            <value>
+                <fullName>Ghana</fullName>
+                <default>false</default>
+                <label>Ghana</label>
+            </value>
+            <value>
+                <fullName>Mauritius</fullName>
+                <default>false</default>
+                <label>Mauritius</label>
+            </value>
+            <value>
+                <fullName>Middle East</fullName>
+                <default>false</default>
+                <label>Middle East</label>
+            </value>
+            <value>
+                <fullName>Nigeria</fullName>
+                <default>false</default>
+                <label>Nigeria</label>
+            </value>
+            <value>
+                <fullName>Non Presence West Africa</fullName>
+                <default>false</default>
+                <label>Non Presence West Africa</label>
+            </value>
+            <value>
+                <fullName>Presence West Africa</fullName>
+                <default>false</default>
+                <label>Presence West Africa</label>
+            </value>
+            <value>
+                <fullName>South and Central Africa</fullName>
+                <default>false</default>
+                <label>South and Central Africa</label>
+            </value>
+            <value>
+                <fullName>South Africa</fullName>
+                <default>false</default>
+                <label>South Africa</label>
+            </value>
+            <value>
+                <fullName>Unknown Franco</fullName>
+                <default>true</default>
+                <label>Unknown Franco</label>
+            </value>
+            <value>
+                <fullName>West Africa</fullName>
+                <default>false</default>
+                <label>West Africa</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

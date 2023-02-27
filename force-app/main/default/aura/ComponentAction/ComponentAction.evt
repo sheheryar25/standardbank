@@ -1,0 +1,3 @@
+<aura:event type="APPLICATION" description="Event to pass data about action taken on the component." >
+	<aura:attribute name="data" type="Object"/>
+</aura:event>

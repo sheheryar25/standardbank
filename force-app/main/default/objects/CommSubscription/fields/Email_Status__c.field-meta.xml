@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Email_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Email Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Unknow</fullName>
+                <default>false</default>
+                <label>Unknow</label>
+            </value>
+            <value>
+                <fullName>Valid</fullName>
+                <default>false</default>
+                <label>Valid</label>
+            </value>
+            <value>
+                <fullName>Invalid</fullName>
+                <default>false</default>
+                <label>Invalid</label>
+            </value>
+            <value>
+                <fullName>Hard Bounced</fullName>
+                <default>false</default>
+                <label>Hard Bounced</label>
+            </value>
+            <value>
+                <fullName>Complaint</fullName>
+                <default>false</default>
+                <label>Complaint</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

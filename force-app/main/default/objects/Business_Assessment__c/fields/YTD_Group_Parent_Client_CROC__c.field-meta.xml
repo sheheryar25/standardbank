@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>YTD_Group_Parent_Client_CROC__c</fullName>
+    <description>Annualised Group Parent Client Revenue / Average Tier 1 Regulatory Capital Held. This information is received in a feed from CRT.Once a month a file will be uploaded with YTD CROC data. The information will be extracted from Client Capital and Revenue. (US-1295)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Annualised Group Parent Client Revenue / Average Tier1 Regulatory Capital Held. This information is received in a feed from CRT. Once a month a file will be uploaded with YTD CROC data. The information will be extracted from the Client Capital and Revenue</inlineHelpText>
+    <label>Current YTD Group Parent Client CROC (%)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

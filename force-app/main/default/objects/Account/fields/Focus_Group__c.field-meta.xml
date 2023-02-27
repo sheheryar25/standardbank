@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Focus_Group__c</fullName>
+    <description>SFP-9319 [c] Enterprise Client focus group segmentation</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Grow: Top 20% customer,maintain relationship (engagement every 90 days)
+Manage: Next 60%,maintain relationship (engagement every 180 days) Retain:Bottom 20%,a focus to grow this business (engagement every 180 days)</inlineHelpText>
+    <label>Focus Group</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Grow</fullName>
+                <default>false</default>
+                <label>Grow</label>
+            </value>
+            <value>
+                <fullName>Manage</fullName>
+                <default>false</default>
+                <label>Manage</label>
+            </value>
+            <value>
+                <fullName>Retain</fullName>
+                <default>false</default>
+                <label>Retain</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

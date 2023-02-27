@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mandatory_fields_for_MarketingEvent_7_PA</fullName>
+    <active>true</active>
+    <description>SFP-5275 - When Type: Marketing Event, Campaign category: 7 - PA Event and Campaign Category Type is not blank, the second fields are mandatory: Venue Name, Location City, Invitation Type... (see error message)</description>
+    <errorConditionFormula>AND(
+  ISPICKVAL( Type , &apos;Marketing Event&apos;),
+  ISPICKVAL( Campaign_Category__c , &apos;7 - PA Event&apos;),
+  NOT(ISBLANK(TEXT( Campaign_Category_Type__c ))),
+  OR(
+    ISBLANK( Venue_Name__c ),
+    ISBLANK(Location_City__c ),
+    ISBLANK(TEXT( Invitation_Type__c )),
+    ISBLANK( Save_The_Date_Sent__c ),
+    ISBLANK( Date_Invitation_Sent__c ),
+    ISBLANK( RSVP__c ),
+    ISBLANK( Event_Name__c ),
+    ISBLANK( Event_Date_Time__c ),
+    ISBLANK( Aide_Memoire_Sent__c )
+  )
+)</errorConditionFormula>
+    <errorMessage>There are mandatory fields:
+Venue Name, Location City, Invitation Type, Save the date sent, Invitation Sent, RSVP, Event Name, Event Date Time, Aide Memoir Sent.</errorMessage>
+</ValidationRule>

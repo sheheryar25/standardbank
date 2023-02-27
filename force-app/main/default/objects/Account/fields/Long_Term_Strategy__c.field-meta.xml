@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Long_Term_Strategy__c</fullName>
+    <description>Describes the client&apos;s LT strategy (growth strategy, diversification)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Long term strategy of the Client (1500 Characters or less)</inlineHelpText>
+    <label>Long Term Strategy</label>
+    <length>1500</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

@@ -1,0 +1,42 @@
+<!--
+ - Created by Emmanuel Nocks  on 2019/11/25.
+ -->
+
+<aura:component controller="NBACMeetingController"  access="global" implements="force:appHostable,flexipage:availableForAllPageTypes"   description="MeetingConsole_Agenda">
+    <aura:attribute name="columns" type="List"/>
+    <aura:attribute name="lookUps" type="List"/>
+    <aura:attribute name="isLoading" type="boolean" default="false"/>
+    <aura:attribute name="error" type="Object" default="{iserror:false,message:''}"/>
+    <aura:handler name="init" value="{! this }"  action="{!c.init}"/>
+    <aura:attribute name="access" type="string" />
+    <aura:attribute name="ERrecordId" type="string" />
+
+    <aura:method name="userHasAccess" action="{!c.userHasAccess}">
+        <aura:attribute name="perm" type="Map"/>
+    </aura:method>
+    <aura:method name="reload" action="{!c.reload}">
+        <aura:attribute name="data" type="Map"/>
+    </aura:method>
+
+    <article class="slds-card" style="background-color: #f3f2f2 !important; min-height: 110px;overflow-x: hidden;">
+        <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+
+                <div class="slds-media__body">
+                    <h2 class="slds-card__header-title">
+                        Agenda
+                    </h2>
+                </div>
+                <div class="slds-no-flex">
+                    <lightning:button  label="Refresh Agenda" title="Refresh Agenda" onclick="{! c.clickToRefresh }"/>
+                </div>
+            </header>
+        </div>
+        <h1 style="margin-left: 8px;">NBACs for Noting</h1>
+        <c:DataTable aura:id="child1"  lookUps="{!v.lookUps}" error="{!v.error}" columns="{!v.columns}" showRowNumberColumn="true"/>
+        <h1 style="margin-top: 48px;margin-left: 8px;">NBACs for Approval</h1>
+        <c:DataTable aura:id="child"  lookUps="{!v.lookUps}" error="{!v.error}" columns="{!v.columns}" showRowNumberColumn="true"/>
+
+
+    </article>
+</aura:component>

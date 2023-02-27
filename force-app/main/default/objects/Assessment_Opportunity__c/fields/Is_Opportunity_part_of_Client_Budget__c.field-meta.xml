@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Opportunity_part_of_Client_Budget__c</fullName>
+    <description>US-2276 - field to be used in rollup summary  field to calculate number of the opportunities that are not part of the client budget.</description>
+    <externalId>false</externalId>
+    <label>Is Opportunity part of Client Budget?</label>
+    <length>3</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

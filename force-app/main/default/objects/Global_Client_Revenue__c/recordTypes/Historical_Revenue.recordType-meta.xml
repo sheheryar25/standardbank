@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Historical_Revenue</fullName>
+    <active>true</active>
+    <description>This record type captures the monthly revenue information</description>
+    <label>Historical Revenue</label>
+    <picklistValues>
+        <picklist>Division_Product_Subsets__c</picklist>
+        <values>
+            <fullName>Advisory</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Capital Markets</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cash Equity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cash Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commodities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coverage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Debt Products</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Equity Derivatives</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Foreign Exchange</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GM ROA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IB ROA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Investment Banking - OTHER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Investor Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LC African Product</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Local Markets and IRT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Management and Enablers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Money Markets</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other CIB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other GM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Principal Trading</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Specialised Transactions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strategic Investments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Structured Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TPS ROA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown Business Area</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Trading_Division__c</picklist>
+        <values>
+            <fullName>GM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OTHER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TPS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VAF</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

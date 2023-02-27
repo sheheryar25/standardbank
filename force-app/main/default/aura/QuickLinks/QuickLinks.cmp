@@ -1,0 +1,28 @@
+<aura:component description="Quick Links" implements="flexipage:availableForAllPageTypes" access="global" controller="SingletrackCMS.QuickLinksController">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="quickCreateLinks" type="List" />
+    <aura:attribute name="quickOpenLinks" type="List" />
+
+    <nav class="slds-nav-vertical" aria-label="Sub page">
+            <div class="slds-nav-vertical__section">
+                <h2 id="entity-header" class="slds-nav-vertical__title slds-text-title_caps">Quick open...</h2>
+                <ul>
+                    <aura:iteration items="{!v.quickOpenLinks}" var="link">
+                        <li class="slds-nav-vertical__item">
+                            <a href="javascript:void(0);" class="slds-nav-vertical__action" aria-describedby="entity-header" data-path="{!link.path}" onclick="{!c.openDialog}">{!link.label}</a>
+                        </li>
+                    </aura:iteration>
+                </ul>
+            </div>
+        <div class="slds-nav-vertical__section">
+            <h2 id="entity-header" class="slds-nav-vertical__title slds-text-title_caps">Quick create...</h2>
+            <ul>
+                <aura:iteration items="{!v.quickCreateLinks}" var="link">
+                    <li class="slds-nav-vertical__item">
+                        <a href="javascript:void(0);" class="slds-nav-vertical__action" aria-describedby="entity-header" data-path="{!link.path}" onclick="{!c.openDialog}">{!link.label}</a>
+                    </li>
+                </aura:iteration>
+            </ul>
+        </div>
+    </nav>
+</aura:component>

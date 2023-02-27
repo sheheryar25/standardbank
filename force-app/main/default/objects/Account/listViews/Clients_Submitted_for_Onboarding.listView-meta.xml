@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Clients_Submitted_for_Onboarding</fullName>
+    <columns>Client_Co_ordinator__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Status__c</columns>
+    <columns>Submission_Date__c</columns>
+    <columns>Registration_Number__c</columns>
+    <columns>Client_Sector__c</columns>
+    <columns>Client_Sub_Sector__c</columns>
+    <columns>Proposed_Group_Parent__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Submitted for Onboarding</value>
+    </filters>
+    <label>Submitted for Onboarding</label>
+</ListView>

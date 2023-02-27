@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCC_Angola_All_My_Clients</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Account_Owner__c</columns>
+    <columns>CIF_Inactive_Indicator__c</columns>
+    <columns>Client_Coordinator_Name__c</columns>
+    <columns>Primary_Relationship_Holder__c</columns>
+    <columns>Entity_Coverage_Sector__c</columns>
+    <filterScope>Mine</filterScope>
+    <label>All My Clients</label>
+    <sharedTo>
+        <roleAndSubordinates>PBB_Angola_Country</roleAndSubordinates>
+    </sharedTo>
+</ListView>

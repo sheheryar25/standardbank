@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Professional_or_Non_Professional_Client__c</fullName>
+    <description>Professional or Non Professional Client</description>
+    <externalId>false</externalId>
+    <inlineHelpText>A Professional Client is where the Client&apos;s Net Asset Value (NAV) is over R20 million or the Assets Under Management (AUM) is over R1 billion. A Non-Professional Client is where the Client&apos;s NAV or AUM is less than the beforementioned threshholds</inlineHelpText>
+    <label>Professional or Non Professional Client</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Professional</fullName>
+                <default>false</default>
+                <label>Professional</label>
+            </value>
+            <value>
+                <fullName>Non Professional</fullName>
+                <default>false</default>
+                <label>Non Professional</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

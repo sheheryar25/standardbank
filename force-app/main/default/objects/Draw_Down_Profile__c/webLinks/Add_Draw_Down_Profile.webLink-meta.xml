@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Add_Draw_Down_Profile</fullName>
+    <availability>online</availability>
+    <description>Case#141 - Button navigates user to the Draw Down Profile VF page. Here a user can add multiple draw down profiles/apex/DrawDownProfile_Vf?id={!SB_Product__c.Id}</description>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>Add / Edit Draw Down Profile</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <requireRowSelection>false</requireRowSelection>
+    <url>/apex/DrawDownProfile_Vf?id={!SB_Product__c.Id}&amp;recs=-1</url>
+</WebLink>

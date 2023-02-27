@@ -1,0 +1,28 @@
+<aura:component controller="StdBank_Ltn_ClientQuickActions" implements="force:lightningQuickAction,force:hasRecordId">
+
+  <!--override Toast CSS with external [.CSS] file.-->
+  <ltng:require styles="{!$Resource.ToastMessageStyling}"/>
+
+
+  <aura:attribute name="recordId" type="Id" />
+  <aura:attribute name="record" type="Account" />
+  <aura:attribute name="contacts" type="Contact[]" />
+  <aura:attribute name="currentUserId" type="Id" />
+  <aura:attribute name="isCommB" type="Boolean" default="false" />   
+  <aura:attribute name="isCIB" type="Boolean" default="false"/>
+  <aura:attribute name="isLoading" type="Boolean" default="true" access="private" />
+
+  <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+  <aura:if isTrue="{!v.isLoading}">
+    <div class="slds-modal__container">
+      <div class="slds-spinner_container">
+        <div class="slds-spinner_brand slds-spinner slds-spinner_large" role="alert">
+            <span class="slds-assistive-text">Loading</span>
+            <div class="slds-spinner__dot-a"></div>
+            <div class="slds-spinner__dot-b"></div>
+        </div>
+      </div>
+    </div>
+  </aura:if>
+</aura:component>

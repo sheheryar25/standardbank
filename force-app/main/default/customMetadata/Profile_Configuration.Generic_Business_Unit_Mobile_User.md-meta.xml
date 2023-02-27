@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Generic Business Unit Mobile User</label>
+    <protected>false</protected>
+    <values>
+        <field>Accessible_Components__c</field>
+        <value xsi:type="xsd:string">GenerateGoldtierSAForm</value>
+    </values>
+    <values>
+        <field>Profile_Name__c</field>
+        <value xsi:type="xsd:string">Custom Standard Lightning Generic Business Unit Mobile User</value>
+    </values>
+</CustomMetadata>

@@ -1,0 +1,15 @@
+<aura:component >
+  <aura:attribute name="attachment" type="Object" default=""/>
+  <aura:attribute name="index" type="Integer" />
+  <aura:registerEvent name="deleteAttachment" type="c:sendEmailDeleteAttachment" />
+
+  <span class="slds-pill">
+    <span class="slds-icon_container slds-pill__icon_container">
+      <c:svgIcon svgPath="{!$Resource.SLDS202 + '/assets/icons/doctype-sprite/svg/symbols.svg#attachment'}" class="slds-icon"/>
+    </span>
+    <span class="slds-pill__label" title="Full pill label verbiage mirrored here">{!v.attachment.name}</span>
+    <button class="slds-button slds-button_icon slds-pill__remove" onclick="{!c.onDelete}" title="Remove">
+      <c:svgIcon svgPath="{!$Resource.SLDS202 + '/assets/icons/action-sprite/svg/symbols.svg#close'}" class="slds-button__icon"/>
+    </button>
+  </span> 
+</aura:component>

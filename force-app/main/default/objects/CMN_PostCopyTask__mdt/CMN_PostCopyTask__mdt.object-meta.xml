@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Use the to register the available post sandbox copy worker classes and also whether they should be executed during sandbox creation; i.e. depending on scenario it may be appropriate to disable some worker class execution prior to sandbox creation. NB this must be done in the sandbox source org.</description>
+    <label>Post Copy Task</label>
+    <pluralLabel>Post Copy Tasks</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

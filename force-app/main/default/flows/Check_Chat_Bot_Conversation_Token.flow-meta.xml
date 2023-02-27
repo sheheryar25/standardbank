@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>DCS-135 generates token for email present in chat transcript. Generated token is compared with token on chat transcript.</description>
+        <name>Generate_Token_For_Check</name>
+        <label>Generate Token For Check</label>
+        <locationX>177</locationX>
+        <locationY>528</locationY>
+        <actionName>OSB_VA_SecurityToken_CTRL</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Is_Token_Correct</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>keysToSign</name>
+            <value>
+                <stringValue>{!vChatTranscript.Visitor_User_Id__c}{!vChatTranscript.ContactId}</stringValue>
+            </value>
+        </inputParameters>
+        <outputParameters>
+            <assignToReference>vTokenForCheck</assignToReference>
+            <name>output</name>
+        </outputParameters>
+    </actionCalls>
+    <apiVersion>49.0</apiVersion>
+    <assignments>
+        <description>DCS-135 sets output variable to true</description>
+        <name>Set_Output_To_True</name>
+        <label>Set Output To True</label>
+        <locationX>454</locationX>
+        <locationY>707</locationY>
+        <assignmentItems>
+            <assignToReference>vIsTokenCorrect</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>Are_Email_And_Token_Present</name>
+        <label>Are Email And Token Present</label>
+        <locationX>166</locationX>
+        <locationY>356</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Are_User_Id_and_Contact_Id_And_Token_Present_In_Chat_Transcript</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>vChatTranscript.Visitor_User_Id__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>vChatTranscript.Security_Token__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>vChatTranscript.ContactId</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Generate_Token_For_Check</targetReference>
+            </connector>
+            <label>Are User Id and Contact Id And Token Present In Chat Transcript</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Is_Token_Correct</name>
+        <label>Is Token Correct</label>
+        <locationX>444</locationX>
+        <locationY>544</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Token_Matches</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>vChatTranscript.Security_Token__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>vTokenForCheck</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Output_To_True</targetReference>
+            </connector>
+            <label>Token Matches</label>
+        </rules>
+    </decisions>
+    <description>DCS-135 checks if token and user email on chat transcript object match</description>
+    <interviewLabel>Check Chat Bot Conversation Token {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Check Chat Bot Conversation Token</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>DCS-135 get chat transcript record associated with chat bot conversation</description>
+        <name>Get_Chat_Transcript</name>
+        <label>Get Chat Transcript</label>
+        <locationX>176</locationX>
+        <locationY>228</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Are_Email_And_Token_Present</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>vChatTranscriptId</elementReference>
+            </value>
+        </filters>
+        <object>LiveChatTranscript</object>
+        <outputReference>vChatTranscript</outputReference>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Security_Token__c</queriedFields>
+        <queriedFields>Visitor_User_Id__c</queriedFields>
+        <queriedFields>ContactId</queriedFields>
+    </recordLookups>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Get_Chat_Transcript</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>vChatTranscript</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>LiveChatTranscript</objectType>
+    </variables>
+    <variables>
+        <name>vChatTranscriptId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>DCs-135 true if token in chat transcript matches user email in chat transcript, false otherwise</description>
+        <name>vIsTokenCorrect</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <booleanValue>false</booleanValue>
+        </value>
+    </variables>
+    <variables>
+        <name>vTokenForCheck</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

@@ -1,0 +1,10 @@
+/**
+ * Created by Emmanuel Mulea Nocks on 2020/02/19.
+ */
+
+@media(max-width:700px){
+    .THIS .responsiveHide{
+
+        display : none !important;
+    }
+}

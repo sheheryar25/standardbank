@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SA_Related_to_Non_CIB_Client__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Add your Non-CIB Client name manually (80 characters or less). Remember to relate this Activity to the Non-CIB Client for reporting</inlineHelpText>
+    <label>Related To Non-CIB Client</label>
+    <length>80</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

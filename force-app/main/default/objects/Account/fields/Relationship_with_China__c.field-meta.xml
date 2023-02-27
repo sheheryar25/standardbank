@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Relationship_with_China__c</fullName>
+    <description>This field is used to indicate whether a client is a Chinese-Owned Business AND/OR an African Business Trading With China.  SGPRT-2586</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicate whether a client is a Chinese-Owned Business or its an African Business Trading With China.</inlineHelpText>
+    <label>Relationship with China</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>African Business Trading With China</fullName>
+                <default>false</default>
+                <label>African Business Trading With China</label>
+            </value>
+            <value>
+                <fullName>Chinese-Owned Business</fullName>
+                <default>false</default>
+                <label>Chinese-Owned Business</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

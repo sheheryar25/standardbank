@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Group_Parent_Coverage_Sector__c</fullName>
+    <description>The primary sector in which the Client’s Group Parent operates. This field is used in CRT and MI reporting
+
+Field Label Rename from &apos;Group Parent Coverage Sector&apos; to &apos;Top Parent Global Sector&apos;, Nov &apos;10
+Field Label rename from &apos;Top Parent Global Sector&apos; to &apos;Group Parent Client Sector&apos; , Feb, 2014
+
+EN 521 : Group Parent Client Sector - Removal from Page Layouts and Reports ( Field was made hidden for all the profiles)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The primary sector in which the Client’s Group Parent operates</inlineHelpText>
+    <label>Group Parent Client Sector</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Agriculture and Forestry</fullName>
+                <default>false</default>
+                <label>Agriculture and Forestry</label>
+            </value>
+            <value>
+                <fullName>Building and Construction</fullName>
+                <default>false</default>
+                <label>Building and Construction</label>
+            </value>
+            <value>
+                <fullName>Fast Moving Consumer Goods</fullName>
+                <default>false</default>
+                <label>Fast Moving Consumer Goods</label>
+            </value>
+            <value>
+                <fullName>Financial Institution</fullName>
+                <default>false</default>
+                <label>Financial Institution</label>
+            </value>
+            <value>
+                <fullName>Healthcare</fullName>
+                <default>false</default>
+                <label>Healthcare</label>
+            </value>
+            <value>
+                <fullName>Industrials</fullName>
+                <default>false</default>
+                <label>Industrials</label>
+            </value>
+            <value>
+                <fullName>Internal / Grouped</fullName>
+                <default>false</default>
+                <label>Internal / Grouped</label>
+            </value>
+            <value>
+                <fullName>Mining and Metals</fullName>
+                <default>false</default>
+                <label>Mining and Metals</label>
+            </value>
+            <value>
+                <fullName>Oil and Gas</fullName>
+                <default>false</default>
+                <label>Oil and Gas</label>
+            </value>
+            <value>
+                <fullName>Power and Infrastructure</fullName>
+                <default>false</default>
+                <label>Power and Infrastructure</label>
+            </value>
+            <value>
+                <fullName>Real Estate</fullName>
+                <default>false</default>
+                <label>Real Estate</label>
+            </value>
+            <value>
+                <fullName>Sovereign / Public Sector</fullName>
+                <default>false</default>
+                <label>Sovereign / Public Sector</label>
+            </value>
+            <value>
+                <fullName>Telecoms and Media</fullName>
+                <default>false</default>
+                <label>Telecoms and Media</label>
+            </value>
+            <value>
+                <fullName>Unknown Sector</fullName>
+                <default>false</default>
+                <label>Unknown Sector</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

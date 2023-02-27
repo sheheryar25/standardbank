@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Game_Changer_Create_Opportunity</fullName>
+    <availability>online</availability>
+    <description>Custom Button to navigate New Opportunity Page</description>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Create Opportunity</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/006/e?{!$Label.GameChangerCustomFieldId}={!URLENCODE(Game_Changer__c.Name)}&amp;{!$Label.GameChangerCustomFieldId}_lkid={!Game_Changer__c.Id}&amp;opp11=1 - Lead&amp;{!$Label.GameChangerLeadSourceId}=Game%20Changer&amp;opp14={!URLENCODE(Game_Changer__c.Detailed_Description__c)}&amp;{!$Label.GameChangerCommentsId}= {!URLENCODE(Game_Changer__c.Comments_on_Progress__c)}&amp;retURL=/{!Game_Changer__c.Id}&amp;saveURL=/{!Game_Changer__c.Id}</url>
+</WebLink>

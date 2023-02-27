@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SB_Sell_Down__c</fullName>
+    <description>The amount of SB&apos;s Gross Participation in the facility to be sold down post close SGPRT-624</description>
+    <externalId>false</externalId>
+    <formula>Product__r.SB_Sell_Down__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>The amount of SB&apos;s Gross Participation in the facility to be sold down post close</inlineHelpText>
+    <label>SB Sell Down (at financial close)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

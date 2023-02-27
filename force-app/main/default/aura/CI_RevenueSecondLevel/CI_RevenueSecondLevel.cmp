@@ -1,0 +1,38 @@
+<aura:component extends="c:CI_Base" description="CI_RevenueSecondLevel" implements="lightning:isUrlAddressable">
+    <aura:attribute name="recordId" type="String" />
+
+    <aura:if isTrue="{!or($Browser.isAndroid, $Browser.isIOS)}">
+        <ui:scrollerWrapper class="scrollerSize">
+            <div class="slds-text-align_center slds-p-around_x-small">
+                <h1 class="slds-text-heading_medium bold">Revenue</h1>
+            </div>
+            <aura:if isTrue="{!v.recordId == null}">
+                <div class="slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3  slds-p-around_x-small">
+                    <c:CI_RevenueTopMonthly />
+                </div>
+                <div class="slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3  slds-p-around_x-small">
+                    <c:CI_RevenueVariance />
+                </div>
+            </aura:if>
+        </ui:scrollerWrapper>
+
+        <aura:set attribute="else">
+            <div class="slds-text-align_center slds-p-around_x-small">
+                <h1 class="slds-text-heading_medium bold">Revenue</h1>
+            </div>
+            <div class="desktop_background slds-p-around_small">
+                <div class="slds-grid slds-grid_vertical-stretch slds-wrap">
+                    <aura:if isTrue="{!v.recordId == null}">
+                        <div class="slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2  slds-p-around_x-small">
+                            <c:CI_RevenueVariance />
+                        </div>
+                        <div class="slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2  slds-p-around_x-small ">
+                            <c:CI_RevenueTopMonthly />
+                        </div>
+                    </aura:if>
+                </div>
+            </div>
+        </aura:set>
+
+    </aura:if>
+</aura:component>

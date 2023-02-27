@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Disabilities__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Used to ensure when arranging Marketing Events that the Client Contact is not adversly impacted by the venue (255 characters or less)</inlineHelpText>
+    <label>Disabilities</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,20 @@
+.THIS {
+    display: flex;
+    flex-direction: column;
+}
+
+.THIS .otherOfferings--tile {
+    height: 100%;
+    padding: 16px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.THIS .otherOfferings--tile .otherOfferings--tile__link {
+    color: #0089FF;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 24px;
+    margin-bottom: 16px;
+}

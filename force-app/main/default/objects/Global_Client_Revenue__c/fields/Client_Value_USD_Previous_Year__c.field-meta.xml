@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Client_Value_USD_Previous_Year__c</fullName>
+    <description>Used to store previous year Client Value in USD</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Full amount for the previous year</inlineHelpText>
+    <label>Client Value USD Previous Year</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

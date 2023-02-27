@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Region__c</fullName>
+    <description>Renamed from &quot;Region&quot; as used by PM prior to Go Live Feb &apos;08</description>
+    <externalId>false</externalId>
+    <label>CRT Sub-Region</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Asia</fullName>
+                <default>false</default>
+                <label>Asia</label>
+            </value>
+            <value>
+                <fullName>Central and Eastern Europe</fullName>
+                <default>false</default>
+                <label>Central and Eastern Europe</label>
+            </value>
+            <value>
+                <fullName>Latin America and Caribbean</fullName>
+                <default>false</default>
+                <label>Latin America and Caribbean</label>
+            </value>
+            <value>
+                <fullName>Mena</fullName>
+                <default>false</default>
+                <label>Mena</label>
+            </value>
+            <value>
+                <fullName>Non Presence Countries</fullName>
+                <default>false</default>
+                <label>Non Presence Countries</label>
+            </value>
+            <value>
+                <fullName>North America and Canada</fullName>
+                <default>false</default>
+                <label>North America and Canada</label>
+            </value>
+            <value>
+                <fullName>Northern Europe</fullName>
+                <default>false</default>
+                <label>Northern Europe</label>
+            </value>
+            <value>
+                <fullName>Oceania</fullName>
+                <default>false</default>
+                <label>Oceania</label>
+            </value>
+            <value>
+                <fullName>Presence Countries</fullName>
+                <default>false</default>
+                <label>Presence Countries</label>
+            </value>
+            <value>
+                <fullName>South Africa</fullName>
+                <default>false</default>
+                <label>South Africa</label>
+            </value>
+            <value>
+                <fullName>Unknown Sub Region</fullName>
+                <default>false</default>
+                <label>Unknown Sub Region</label>
+            </value>
+            <value>
+                <fullName>Western Europe</fullName>
+                <default>false</default>
+                <label>Western Europe</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,195 @@
+.THIS {
+    background-color: var(--background);
+    padding: 0px 20px;
+    margin-top: 96px;
+}
+
+@media(min-width: 665px) and (max-width: 1280px) {
+    .THIS {
+        margin-top: 152px;
+    }
+}
+
+@media(min-width: 1281px) {
+    .THIS {
+        margin-top: 197px;
+    }
+}
+
+.THIS.background-image {
+    background-image: url('/sfsites/c/resource/OSB_BackgroundImage');
+    background-size: cover;
+}
+
+.THIS .breadcrumbDiv {
+    margin: 0 -20px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2);
+}
+
+.THIS .containerDiv {
+    background-color: #FFFFFF;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1280px
+}
+
+@media(max-width:768px){
+    .THIS {
+        padding: 0px 20px;
+    }
+}
+
+.THIS .centerBtns{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.THIS .contentDifPad {
+    background-color: #FFFFFF;
+    align-content: center;
+    text-align: center;
+    padding: 40px 110px 48px 110px;
+}
+
+.THIS .content {
+    background-color: #FFFFFF;
+	align-content: center;
+    text-align: center;
+    padding: 40px 24px 48px;
+    margin: auto;
+}
+
+.THIS .contentIcon {
+    margin-bottom: 26px;
+}
+
+.THIS .ContentTitleSignUp {
+    color: #0A2240;
+    font-family: BentonSans;
+    font-size: 52px;
+    font-weight: 200;
+    letter-spacing: 0;
+    line-height: 60px;
+    text-align: center;
+}
+
+.THIS .ContentTitle {
+    color: #222222;
+	font-size: 20px;
+    font-weight: 300;
+  	letter-spacing: 1px;
+  	line-height: 24px;
+    margin-bottom: 12px;
+}
+
+.THIS .contentTextSignUp{
+    color: #666666;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 24px;
+}
+
+.THIS .contentText{
+    color: #0A2240;
+    font-family: BentonSans;
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: 25px;
+    text-align: center;
+    font-weight: 300;
+}
+
+.THIS .buttons{
+    background-color: #F6F6F6;
+    padding: 22px 20px;
+    width: 100%;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.25);
+}
+
+.THIS .buttons center {
+    margin: auto;
+}
+
+.THIS .buttons__container {
+    justify-content: flex-end;
+    margin: auto;
+}
+
+.THIS .buttons button,
+.THIS .buttons a {
+    height: 36px;
+    border-radius: 2px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.3);
+    font-family: BentonSans;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 19px;
+    border: 0;
+    text-transform: uppercase;
+    text-align: center;
+    transition: all .15s ease-in;
+    cursor: pointer;
+    min-width: fit-content;
+}
+
+.THIS .buttons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.THIS .cancelButton{
+    background-color: #EDEDED;
+    color: token(SBPrimaryBlue);
+}
+
+.THIS .primaryButton{
+    background-color: token(SBPrimaryBlue);
+    color: #ffffff;
+    margin-left: 16px;
+}
+
+.THIS .primaryButtonAlignRight{
+    background-color: token(SBPrimaryBlue);
+    color: #ffffff;
+}
+
+@media(max-width: 668px) {
+
+    .THIS .content {
+        padding-bottom: 32px;
+    }
+
+    .THIS .buttons__container {
+        flex-direction: column-reverse;
+    }
+
+    .THIS .primaryButton {
+        margin: 0 0 16px;
+    }
+}
+
+@media(max-width: 1024px) {
+    .THIS .buttons__container {
+        justify-content: flex-end;
+        margin: auto;
+    }
+}
+
+@media(min-width: 1280px) and (max-width: 1440px) {
+    .THIS .containerDiv {
+        width: 75%;
+    }
+}
+
+@media(min-width: 1441px) {
+    .THIS .containerDiv {
+        width: 50%;
+    }
+}

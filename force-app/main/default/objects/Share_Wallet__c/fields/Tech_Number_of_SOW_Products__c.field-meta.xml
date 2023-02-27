@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tech_Number_of_SOW_Products__c</fullName>
+    <description>Technical field used to check for SOW products - to be used in Validation</description>
+    <externalId>false</externalId>
+    <label>Tech Number of SOW Products</label>
+    <summaryForeignKey>Share_of_Wallet_Product__c.Share_of_Wallet__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

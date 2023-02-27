@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Meeting_Type_del__c</fullName>
+    <description>The specific type of meeting that was held internally or externally. E.g. An Internal meeting can be further defined as a core client team meeting or a day to day meeting</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The specific type of meeting that was held internally or externally. E.g. An Internal meeting can be further defined as a core client team meeting or a day to day meeting</inlineHelpText>
+    <label>Meeting Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Client Conference Call</fullName>
+                <default>false</default>
+                <label>Client Conference Call</label>
+            </value>
+            <value>
+                <fullName>Client Email</fullName>
+                <default>false</default>
+                <label>Client Email</label>
+            </value>
+            <value>
+                <fullName>Client Entertainment</fullName>
+                <default>false</default>
+                <label>Client Entertainment</label>
+            </value>
+            <value>
+                <fullName>Client Meeting</fullName>
+                <default>false</default>
+                <label>Client Meeting</label>
+            </value>
+            <value>
+                <fullName>Client Road Show</fullName>
+                <default>false</default>
+                <label>Client Road Show</label>
+            </value>
+            <value>
+                <fullName>Client Service Discussion</fullName>
+                <default>false</default>
+                <label>Client Service Discussion</label>
+            </value>
+            <value>
+                <fullName>Client Site Visit</fullName>
+                <default>false</default>
+                <label>Client Site Visit</label>
+            </value>
+            <value>
+                <fullName>Client Social</fullName>
+                <default>false</default>
+                <label>Client Social</label>
+            </value>
+            <value>
+                <fullName>Client Training</fullName>
+                <default>false</default>
+                <label>Client Training</label>
+            </value>
+            <value>
+                <fullName>Client Pitch</fullName>
+                <default>false</default>
+                <label>Client Pitch</label>
+            </value>
+            <value>
+                <fullName>Core Client Team Meeting</fullName>
+                <default>false</default>
+                <label>Core Client Team Meeting</label>
+            </value>
+            <value>
+                <fullName>Day To Day Meeting</fullName>
+                <default>false</default>
+                <label>Day To Day Meeting</label>
+            </value>
+            <value>
+                <fullName>Market Research Update</fullName>
+                <default>false</default>
+                <label>Market Research Update</label>
+            </value>
+            <value>
+                <fullName>NBAC Meeting</fullName>
+                <default>false</default>
+                <label>NBAC Meeting</label>
+            </value>
+            <value>
+                <fullName>Client Discussion/Insights</fullName>
+                <default>false</default>
+                <label>Client Discussion/Insights</label>
+            </value>
+            <value>
+                <fullName>Client Execution</fullName>
+                <default>false</default>
+                <label>Client Execution</label>
+            </value>
+            <value>
+                <fullName>Client Service</fullName>
+                <default>false</default>
+                <label>Client Service</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

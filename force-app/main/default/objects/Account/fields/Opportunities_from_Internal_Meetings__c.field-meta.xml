@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunities_from_Internal_Meetings__c</fullName>
+    <description>EN-0695-Amount of Opportunities created from Internal Meetings</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The number of Opportunities that originated from Internal Meetings</inlineHelpText>
+    <label>Opportunities from Internal Meetings</label>
+    <precision>4</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

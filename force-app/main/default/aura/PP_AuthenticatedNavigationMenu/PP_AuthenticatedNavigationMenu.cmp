@@ -1,0 +1,139 @@
+<!-- **
+* @description  : Partner Portal Navigation Menu Component
+* User Story : SFP-4962
+*
+* @author Syed Ovais Ali (syed.ali@standardbank.co.za)
+* @date June 2021
+*/ -->
+<aura:component extends="forceCommunity:navigationMenuBase" access="global" description="Partner Portal Guest User Navigation Menu"> 
+    
+    <aura:attribute name="navigationLinkSetId" type="String" default="Authenticated_Menu" access="public"/>
+    <aura:attribute name="isUserLoggedIn" type="Boolean" default="false" access="private"/>
+    <aura:attribute name="mobileLinksCss" type="String" default="dynamicDisplayNone" access="private" />
+    <aura:attribute name="expandMobileMenu" type="Boolean" default="false" access="private" />
+    <aura:attribute name="currentUser" type="User" access="private"/>
+    <aura:attribute name="isModalOpen" type="boolean" default="false" access="private"/>
+    <aura:attribute name="showMyProfile" type="boolean" default="false" access="private"/>
+    <aura:attribute name="popupHeading" type="String" default="false" access="private"/>
+    <aura:attribute name="adobeEventfired" type="boolean" default="false" access="private"/>
+    <lightning:navigation aura:id="navService"/>   
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    <aura:handler name="render" value="{!this}" action="{!c.onRender}"/>
+    
+    <force:recordData aura:id="recordLoader" recordId="{!$SObjectType.CurrentUser.Id}"  fields="FirstName" targetFields="{!v.currentUser}"/>
+    <aura:attribute name="profileMenu" type="Aura.Component[]" required="false" access="public"/>
+    
+    <div class="container">
+        <div class="nav-container">
+            
+            <div class="slds-grid slds-align_absolute-center desktop-nav">
+                <div class="slds-col">
+                    <a class="breadcrumbs__item" data-id= "header_nav_link" data-text= "Header | Logo">
+                        <img src="{!$Resource.PP_Assets + '/logos/partnerConnectLogo.png'}" class="logo" id="sbBadgeLogo" onclick="{!c.navigateToDashboard}"/>
+                    </a>                
+                </div>
+                <ul onclick="{!c.onClick}">
+                    <div class="slds-col">
+                        <div class="slds-grid nav-main-container">                        
+                            <aura:iteration items="{!v.menuItems}" var="item">
+                                <aura:if isTrue="{!item.label != 'Home'}">
+                                    <div class="slds-col menu-items">
+                                       
+                                        <aura:if isTrue="{!item.active}">
+                                            <li class="menu-items-other">
+                                                <a  class="anchor" href="javascript:void(0);" data-menu-item-id="{!item.id}"
+                                                    data-intent="navigational" data-scope="header" data-id="link_content" data-text="{!item.label}">
+                                                    <p class="menu-items-other" data-menu-item-id="{!item.id}" data-text="{!item.label}">{!item.label}</p>
+                                                    <div class="slds-align_absolute-center active--tab"></div>
+                                                </a>
+                                            </li>
+                                        </aura:if> 
+                                        <aura:if isTrue="{! !item.active}">
+                                            <li class="menu-items-other">
+                                                <a  class="anchor" href="javascript:void(0);" data-menu-item-id="{!item.id}"
+                                                   data-intent="navigational" data-scope="header" data-id="link_content" data-text="{!item.label}">
+                                                    <p class="menu-items-other" style="color: rgba(255, 255, 255, 0.8);" data-menu-item-id="{!item.id}" data-text="{!item.label}">{!item.label}</p>
+                                                </a>
+                                            </li>
+                                        </aura:if> 
+                                       
+                                    </div>
+                                </aura:if>
+                            </aura:iteration>
+                            <div class="slds-col menu-items user-name">
+                                <li class="menu-items-other">
+                                    
+                                    <div class="slds-grid">
+                                        <div class="slds-col menu-items-other">
+                                           {!v.profileMenu}
+                                        </div>
+                                    </div>
+                                    
+                                </li>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </ul>
+            </div>
+            <!-- Mobile Menu -->
+            <div class="mobile-container">
+                <a href="/partners/s/" class="active">
+                    <img src="{!$Resource.PP_Assets + '/logos/partnerConnectLogo.png'}" id="sbBadgeLogo"/>
+                </a>
+                <ul onclick="{!c.onClick}">
+                    <div id="mobile-Links" class="{!v.mobileLinksCss}">
+                        <aura:iteration items="{!v.menuItems}" var="item">
+                            <aura:if isTrue="{!item.label != 'Home'}">
+                                <li> <a href="javascript:void(0);" data-menu-item-id="{!item.id}" onclick="{!c.handleMobileMenuClick}"
+                                        data-intent="navigational" data-scope="header" data-id="link_content" data-text="{!item.label}">{!item.label}</a></li>
+                            </aura:if>
+                        </aura:iteration>
+                        
+                          <li> <a href="javascript:void(0);" data-menu-item-id="myProfile" onclick="{!c.profileItemClick}">My Profile</a></li>
+                          <li> <a href="javascript:void(0);" data-menu-item-id="changePassword" onclick="{!c.profileItemClick}">Change Password</a></li>
+						  <li> <a href="javascript:void(0);" data-menu-item-id="logout" onclick="{!c.profileItemClick}">Logout</a></li>
+
+                    </div>
+                </ul>
+                <a href="javascript:void(0);" class="icon" onclick="{!c.handleMobileMenuClick}">                
+                    <div class="hamburger"></div>
+                    <div class="hamburger"></div>
+                    <div class="hamburger"></div>
+                </a>
+            </div>             
+        </div>
+          <!--Popup-->
+    
+        <aura:if isTrue="{!v.isModalOpen}">
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <header class="slds-modal__header">
+                        <lightning:buttonIcon iconName="utility:close"
+                                              onclick="{! c.closeModel }"
+                                              alternativeText="close"
+                                              variant="bare-inverse"
+                                              class="slds-modal__close"/>
+                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate heading">{!v.popupHeading}</h2>
+                    </header>
+                    <div class="slds-modal__content slds-p-around_medium popup-content" id="modal-content-id-1">
+                        <aura:if isTrue="{!v.showMyProfile}">
+                            <c:ppEditProfile></c:ppEditProfile>
+                            <aura:set attribute="else">
+ 								<c:ppUpdatePassword></c:ppUpdatePassword>
+                            </aura:set>
+                        </aura:if>
+                    </div>
+                    <footer class="slds-modal__footer">
+                        <lightning:button variant="neutral"
+                                          label="Cancel"
+                                          title="Cancel"
+                                          onclick="{! c.closeModel }"/>
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </aura:if>
+    </div>
+    
+</aura:component>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Item_to_Action__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>US-2169, US-2217 if value is checked the task should be displayed in Items to Action component</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Specify if task should be displayed in &apos;Items to Action&apos; on home screen</inlineHelpText>
+    <label>Item to Action</label>
+    <type>Checkbox</type>
+</CustomField>

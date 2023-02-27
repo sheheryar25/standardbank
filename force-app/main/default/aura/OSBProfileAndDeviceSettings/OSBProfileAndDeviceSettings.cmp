@@ -1,0 +1,40 @@
+<aura:component implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" access="global" >
+    
+    <aura:attribute name="selectedNavItem" type="String" default="EditProfile" access="public"/>
+    <lightning:navigation aura:id="navService"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:registerEvent name="navigationEvent" type="c:OSBNavigationEvent"/>
+    <aura:handler event="c:OSBProfileAndSettingsEvent" action="{!c.goToDeviceManagement}" />
+    
+    <div class="dashboard">
+        <div class="dashboard__content ">
+            <div class="dashboard__left slds-large-size--2-of-12 mt_72">
+                <nav class="dashboard__navigation">
+                    <h2 class="dashboard__navigation-title">Profile and Settings</h2>
+                    <ul class="dashboard__navigation-items mb_32">
+                        <li class="dashboard__navigation-item-container" data-id="side_nav_link" data-text="Profile and Settings | Edit Profile">
+                            <span onclick="{!c.handleNavItemChange}"
+                                  class="{! v.selectedNavItem == 'EditProfile' ? 'dashboard__navigation-item dashboard__navigation-item__selected' : 'dashboard__navigation-item'}"
+                                  aura:id="EditProfile" data-tab-name="EditProfile">
+                                 Edit Profile</span>
+                        </li>
+                        <li class="dashboard__navigation-item-container" data-id="side_nav_link" data-text="Profile and Settings | Device Management">
+                            <span onclick="{!c.handleNavItemChange}" class="{! v.selectedNavItem == 'DeviceManagement' ? 'dashboard__navigation-item dashboard__navigation-item__selected' : 'dashboard__navigation-item'}"
+                                  aura:id="DeviceManagement" data-tab-name="DeviceManagement">
+                                Device Management
+                            </span>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="dashboard__right   mt_72">
+                <aura:if isTrue="{!v.selectedNavItem == 'EditProfile'}">
+                    <c:OSBEditProfile />
+                </aura:if>
+                <aura:if isTrue="{!v.selectedNavItem == 'DeviceManagement'}">
+                    <c:OSBDeviceManagement />
+                </aura:if>
+            </div>
+        </div>
+    </div>
+</aura:component>

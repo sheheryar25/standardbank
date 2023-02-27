@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_CCM_ConditionUpdates_On_Approval</fullName>
+    <active>true</active>
+    <description>Prevent the CCM from editing the Conditions of Grant record once it has been submitted to him for approval.</description>
+    <errorConditionFormula>AND ( 
+  TEXT(Concession__r.Sub_Status__c) = &quot;Pending Approval by CCM&quot;, 
+  $User.Id =  Concession__r.Owner:User.ManagerId 
+)</errorConditionFormula>
+    <errorMessage>You are not permitted to edit or create a Condition of Grant prior to approval.</errorMessage>
+</ValidationRule>

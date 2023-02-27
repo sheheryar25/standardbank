@@ -1,0 +1,264 @@
+.myApplication {
+  margin-left: 135px;
+}
+
+.slds-grid {
+  padding-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.slds-carousel {
+  width: 227px;
+  height: 227px;
+}
+
+.header {
+  height: 28px;
+  color: #3c4b6c;
+  font-family: BentonSans;
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  line-height: 28px;
+  margin-bottom: 30px;
+}
+
+.slds-carousel__panels {
+  margin-left: 30px;
+  box-sizing: content-box;
+}
+
+.slds-carousel__panel-action {
+  height: 227px;
+  width: 227px;
+  background-color: #ededed;
+  padding-top: 55px;
+  border: none;
+  text-align: center;
+}
+
+.content {
+  height: 100px;
+  padding: 5px;
+}
+
+.addApplication {
+  height: 29px;
+  width: 176px;
+  color: #3c4b6c;
+  font-family: BentonSans;
+  font-weight: 300;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: 29px;
+  text-align: center;
+  margin: auto;
+  padding-top: 10px;
+}
+
+.tile {
+  padding-right: 10px;
+}
+
+.testPadding {
+  padding: 4px 4px 8px 4px;
+}
+
+.spinnerContainer {
+  position: fixed;
+  z-index: 999;
+  overflow: show;
+  margin: auto;
+  width: 75px;
+  height: 75px;
+  left: 50%;
+  margin-left: -4em;
+}
+
+.custom-box_1 {
+  width: 227px;
+  height: 227px;
+  background-color: #ededed;
+}
+
+.custom-box {
+  width: 227px;
+  height: 227px;
+}
+
+.addAppSolution {
+  align-items: center;
+  padding-bottom: 5px;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .myApplication {
+    margin-left: 20px;
+  }
+
+  .spinnerContainer {
+    left: 50%;
+    margin-left: -3em;
+  }
+
+  .addApplicationTile {
+    width: 280px;
+  }
+
+  .myAppsContainer {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .header {
+    height: 28px;
+    margin-bottom: 14px;
+  }
+
+  .custom-box {
+    height: 100px;
+    min-width: 280px;
+    margin: 0 auto;
+  }
+
+  .custom-box_1 {
+    min-width: 280px;
+    background-color: #ededed;
+    height: 100px;
+  }
+
+  .content {
+    height: 63px;
+    padding: 5px;
+    margin: 5px;
+  }
+
+  .headerContainer {
+    padding-bottom: 8px;
+  }
+
+  .slds-carousel__panel-action {
+    height: 63px;
+    width: 100%;
+    background-color: #ededed;
+    padding-top: 10px;
+    border: none;
+    margin-right: 8px;
+    text-align: center;
+  }
+
+  .addApplication {
+    height: 29px;
+    color: #3c4b6c;
+    font-family: BentonSans;
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 29px;
+    text-align: center;
+    margin-top: -0.75rem;
+  }
+
+  .addAppSolution {
+    width: 30px;
+    align-items: center;
+    padding-bottom: 5px;
+  }
+
+  .testPadding {
+    padding: 0px 0px 8px 0px;
+  }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 768px) {
+  .myApplication {
+    margin: 0 auto;
+    margin-left: 50px;
+  }
+  .headerContainer {
+    margin-right: 20px;
+  }
+  .header {
+    height: 28px;
+  }
+
+  .custom-box {
+    width: 176px;
+    height: 176px;
+  }
+
+  .custom-box_1 {
+    width: 174px;
+    height: 174px;
+    background-color: #ededed;
+  }
+
+  .content {
+    height: 50px;
+    padding: 5px;
+    margin-top: -7px;
+  }
+
+  .slds-carousel__panel-action {
+    height: 176px;
+    width: 176px;
+    background-color: #ededed;
+    border: none;
+    margin-right: 8px;
+    text-align: center;
+  }
+
+  .addApplication {
+    height: 29px;
+    width: 100%;
+    color: #3c4b6c;
+    font-family: BentonSans;
+    font-weight: 300;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: 29px;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-device-width: 769px) and (max-device-width: 1440px) {
+  .myApplication {
+    margin: 0 auto;
+    margin-left: 135px;
+  }
+
+  .header {
+    height: 28px;
+  }
+
+  .custom-box {
+    width: 227px;
+    height: 227px;
+  }
+
+  .custom-box_1 {
+    width: 227px;
+    height: 227px;
+  }
+
+  .slds-carousel__panel-action {
+    background-color: #ededed;
+    border: none;
+    margin-right: 8px;
+    text-align: center;
+  }
+
+  .addApplication {
+    height: 29px;
+    width: 100%;
+    color: #3c4b6c;
+    font-family: BentonSans;
+    font-weight: 300;
+    font-size: 20.6px;
+    letter-spacing: 0;
+    line-height: 29px;
+    text-align: center;
+    padding-top: 15px;
+  }
+}

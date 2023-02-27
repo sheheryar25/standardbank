@@ -1,0 +1,34 @@
+<aura:component extends="c:CI_Base" implements="flexipage:availableForAllPageTypes">
+    <aura:attribute name="croc" type="String" />
+    <aura:attribute name="roe" type="String" />
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="revenueSnapshotDate" type="String" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <c:CI_RevenueService aura:id="revenue_service" />
+
+    <article class="card_with_shadow">
+        <div class="slds-p-around_small slds-m-bottom_large slds-p-bottom_large">
+            <p class="slds-text-heading_small">CROC &amp; ROE</p>
+            <div class="slds-grid slds-m-top_x-small">
+                <div class="slds-text-heading_medium slds-p-right_xx-small">
+                    <div aura:id="croc">{!v.croc}</div>
+                    <p class="slds-text-body_regular">CROC</p>
+                </div>
+
+                <div class="card_value_secondary">|</div>
+
+                <div class="slds-text-heading_medium slds-p-left_xx-small">
+                    <div aura:id="roe">{!v.roe}</div>
+                    <p class="slds-text-body_regular">ROE</p>
+                </div>
+            </div>
+        </div>
+        <footer class="slds-card__footer slds-p-around_none slds-m-around_none slds-align-bottom slds-is-absolute" style="z-index:2; bottom:1px; left:1px; border:0px">
+            <div class="slds-p-around_small slds-text-body_small">
+                {!v.revenueSnapshotDate}
+            </div>
+        </footer>
+    </article>
+</aura:component>

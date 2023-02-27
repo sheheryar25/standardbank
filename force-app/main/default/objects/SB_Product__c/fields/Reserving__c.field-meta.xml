@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reserving__c</fullName>
+    <description>Insert the applicable cost of Reserving (bps) SGPRT-625</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Insert the applicable cost of Reserving (bps)</inlineHelpText>
+    <label>Reserving (bps)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

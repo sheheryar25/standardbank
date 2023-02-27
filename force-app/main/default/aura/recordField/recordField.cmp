@@ -1,0 +1,92 @@
+<aura:component controller="LTN_RecordFieldController">
+	<aura:attribute name="record" type="SObject"/>
+	<aura:attribute name="hasError" type="Boolean" required="false" access="public" default="false"/>
+	<aura:attribute name="errorMessage" type="String" required="false" access="public"/>
+	<aura:attribute name="helperRecord" type="Helper_Object__c" default="{'sobjectType':'Helper_Object__c'}"/>
+	<aura:attribute name="fieldName" type="String" default="Name"/>
+	<aura:attribute name="required" type="Boolean" default="false"/>
+	<aura:attribute name="fieldValue" type="Object" default=""/>
+	<aura:attribute name="linkValue" type="String" default=""/>
+	<aura:attribute name="editMode" type="Boolean" default="false"/>
+	<aura:attribute name="showHelptext" type="Boolean" default="true"/>
+	<aura:attribute name="showLabel" type="Boolean" default="true"/>
+	<aura:attribute name="isLoading" type="Boolean" default="true"/>
+	<aura:attribute name="attributes" type="Map"/>
+	<aura:attribute name="editible" type="Boolean" default="true" />
+	<aura:attribute name="customLabel" type="String" default=""/>
+	<aura:attribute name="skipFls" type="Boolean" default="false"/>
+	<aura:attribute name="readOnly" type="Boolean" default="false"/>
+	<aura:attribute name="pickListValuesToRemove" type="List" />
+	<aura:attribute name="includeRecordEditForm" type="Boolean" default="true" />
+	<aura:attribute name="RecordTypeIdValid" type="Boolean" default="false"/>
+	<aura:attribute name="isCommBUser" type="Boolean" default="false" access="private"/>
+	<aura:attribute name="isGroupNumberEditable" type="Boolean" default="false" access="private"/>
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+	<aura:handler name="change" value="{!v.record}" action="{!c.handleRecordChange}"/>
+	<aura:handler name="change" value="{!v.helperRecord.Rich_Text_Field__c}" action="{!c.handleRichTextChange}"/>
+
+	<aura:registerEvent name="componentAction" type="c:ComponentAction" />
+	<aura:registerEvent name="recordFieldChange" type="c:RecordFieldChange" />
+
+	<!--<aura:if isTrue="{! or(v.attributes.accessible, v.skipFls)}">-->
+		<div class="slds-form-element slds-form-element_edit slds-grow">
+			<aura:if isTrue="{!and(v.attributes, v.showLabel)}">
+				<aura:if isTrue="{!v.required}">
+					<abbr class="slds-required" title="required">*</abbr>
+				</aura:if>
+				<span class="slds-form-element__label">
+					<aura:if isTrue="{!v.customLabel}" >
+						{!v.customLabel}
+						<aura:set attribute="else">
+							{!v.attributes.label}
+						</aura:set>
+					</aura:if>
+				</span>
+			</aura:if>
+			<aura:if isTrue="{!and( v.attributes, and(v.attributes.helptext,v.showHelptext))}">
+				<lightning:helptext content="{!v.attributes.helptext}" class="greyFill" />
+			</aura:if>
+			<aura:if isTrue="{!v.includeRecordEditForm}">
+				<aura:if isTrue="{!v.RecordTypeIdValid}">
+					<lightning:recordEditForm objectApiName="{!v.attributes.sobjectname}" recordTypeId="{!v.record.RecordTypeId}">
+						<div aura:id="inputField" class="{!'inputfield-element ' + if(or(or(!v.editMode,v.readOnly), and(!v.skipFls, !v.attributes.updateable)), 'hidden')}">
+							<force:inputField aura:id="forceInputField" value="{!v.helperRecord.Rich_Text_Field__c}"/>
+						</div>
+					</lightning:recordEditForm>
+					<aura:set attribute="else">
+						<lightning:recordEditForm objectApiName="{!v.attributes.sobjectname}">
+							<div aura:id="inputField" class="{!'inputfield-element ' + if(or(or(!v.editMode,v.readOnly), and(!v.skipFls, !v.attributes.updateable)), 'hidden')}">
+								<force:inputField aura:id="forceInputField" value="{!v.helperRecord.Rich_Text_Field__c}"/>
+							</div>
+						</lightning:recordEditForm>
+					</aura:set>
+				</aura:if>
+				<aura:set attribute="else">
+					<div aura:id="inputField" class="{!'inputfield-element ' + if(or(or(!v.editMode,v.readOnly), and(!v.skipFls, !v.attributes.updateable)), 'hidden')}" >
+						<force:inputField aura:id="forceInputField" value="{!v.helperRecord.Rich_Text_Field__c}"/>
+					</div>
+				</aura:set>
+			</aura:if>
+			<div aura:id="outputField" class="{! 'slds-form-element__control ' + if(and(and(v.editMode,!v.readOnly), or(v.attributes.updateable, v.skipFls)) , 'hidden')}" onmouseover="{!c.handleMouseOver}" onmouseout="{!c.handleMouseOut}" ondblclick="{!if(and(!v.readOnly,v.editible),c.handleEdit)}">
+				<force:outputField value="{!v.helperRecord.Rich_Text_Field__c}"/>
+				<aura:if isTrue="{!and(and(!v.editMode,!v.readOnly), and(v.attributes,v.editible))}">
+					<aura:if isTrue="{!or(v.attributes.updateable,v.skipFls)}">
+							<button onclick="{!c.handleEdit}" class="slds-button slds-button_icon slds-button_icon-small" tabindex="-1" title="Edit">
+							  <lightning:icon aura:id="fieldIcon" iconName="utility:edit" size="x-small" class="unhover"/>
+							</button>
+						<aura:set attribute="else">
+							<button class="slds-button slds-button_icon slds-button_icon-small" tabindex="-1" title="Locked">
+							  <lightning:icon aura:id="fieldIcon" iconName="utility:lock" size="x-small" class="unhover"/>
+							</button>
+						</aura:set>
+					</aura:if>
+				</aura:if>
+			</div>
+			<aura:if isTrue="{! !empty(v.errorMessage)}">
+				<div class="slds-has-error">
+					<div class="slds-form-element__help" id="error-message-unique-id">{!v.errorMessage}</div>
+				</div>
+			</aura:if>
+		</div>
+	<!--</aura:if>-->
+</aura:component>

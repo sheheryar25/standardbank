@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SingletrackCMS__SF_Full_Address__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <formula>IF(ISBLANK(SingletrackCMS__Address_Line_1__c) , &apos;&apos; , SingletrackCMS__Address_Line_1__c )
++&quot;&quot;+ 
+IF(ISBLANK(SingletrackCMS__Address_Line_2__c) , &apos;&apos; , &quot;,&quot;+SingletrackCMS__Address_Line_2__c)
++&quot;&quot;+ 
+IF(ISBLANK(SingletrackCMS__Address_Line_3__c) , &apos;&apos; , &quot;,&quot;+SingletrackCMS__Address_Line_3__c)
++&quot;&quot;+ 
+IF(ISBLANK(SingletrackCMS__Address_City__c) , &apos;&apos; , &quot;,&quot;+SingletrackCMS__Address_City__c )
++&quot;&quot;+ 
+IF(ISBLANK(SingletrackCMS__Address_County__c) , &apos;&apos; , &quot;,&quot;+SingletrackCMS__Address_County__c )
++&quot;&quot;+ 
+IF(ISBLANK(SingletrackCMS__Address_Country__c) , &apos;&apos; , &quot;,&quot;+SingletrackCMS__Address_Country__c )
++&quot;&quot;+ 
+IF(ISBLANK(SingletrackCMS__Address_Postal_Code__c) , &apos;&apos; , &quot;,&quot;+SingletrackCMS__Address_Postal_Code__c)</formula>
+    <label>SF Full Address</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

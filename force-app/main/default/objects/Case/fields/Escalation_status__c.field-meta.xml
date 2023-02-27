@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Escalation_status__c</fullName>
+    <externalId>false</externalId>
+    <label>Escalation Status (Legacy)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AE / RM</fullName>
+                <default>false</default>
+                <label>AE / RM</label>
+            </value>
+            <value>
+                <fullName>Head of Operations, Intl Aware</fullName>
+                <default>false</default>
+                <label>Head of Operations, Intl Aware</label>
+            </value>
+            <value>
+                <fullName>OPM Aware</fullName>
+                <default>false</default>
+                <label>OPM Aware</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

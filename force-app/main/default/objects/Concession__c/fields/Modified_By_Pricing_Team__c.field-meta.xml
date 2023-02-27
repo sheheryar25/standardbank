@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Modified_By_Pricing_Team__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Flags if Pricing Team have edited a concession prior to Approving</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Flags if Pricing Team have edited a concession prior to Approving</inlineHelpText>
+    <label>Modified By Pricing Team</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

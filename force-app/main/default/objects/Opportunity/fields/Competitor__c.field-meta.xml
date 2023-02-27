@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Competitor__c</fullName>
+    <description>Competitor won / lost against</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Competitor won / lost against</inlineHelpText>
+    <label>Competitor</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>StageName</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Global Market</fullName>
+                <default>false</default>
+                <label>Global Market</label>
+            </value>
+            <value>
+                <fullName>Local Market</fullName>
+                <default>false</default>
+                <label>Local Market</label>
+            </value>
+            <value>
+                <fullName>No Competitor</fullName>
+                <default>false</default>
+                <label>No Competitor</label>
+            </value>
+            <value>
+                <fullName>Regional Market</fullName>
+                <default>false</default>
+                <label>Regional Market</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>3 - Closed Won</controllingFieldValue>
+            <controllingFieldValue>4 - Closed Lost</controllingFieldValue>
+            <valueName>Global Market</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>3 - Closed Won</controllingFieldValue>
+            <controllingFieldValue>4 - Closed Lost</controllingFieldValue>
+            <valueName>Local Market</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>3 - Closed Won</controllingFieldValue>
+            <valueName>No Competitor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>3 - Closed Won</controllingFieldValue>
+            <controllingFieldValue>4 - Closed Lost</controllingFieldValue>
+            <valueName>Regional Market</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

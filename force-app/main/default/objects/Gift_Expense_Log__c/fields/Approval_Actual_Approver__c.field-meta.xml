@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approval_Actual_Approver__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Approval Reporting Field - Populated via trigger during approval process; Not shown on Page
+
+Case 1051: Gift / Expense Logs : C Reinecke</description>
+    <externalId>false</externalId>
+    <label>Approval Actual Approver</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Gift_Approvers</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

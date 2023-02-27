@@ -1,0 +1,157 @@
+<!--
+ - Created by Mykhailo Reznyk on 15.11.2019.
+ -->
+
+<aura:component description="PBB_Lifestyle_Financial_Risk">
+
+    <aura:attribute access="public" name="recordId" type="Id"/>
+    <aura:attribute access="public" name="data" type="Object"/>
+    <aura:attribute access="private" name="wrapper" type="Object"/>
+
+    <div class="c-container">
+        <div class="componentGrid slds-grid slds-wrap ">
+            <div class="componentTitle slds-text-heading_small slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_1-of-1">{#$Label.c.PBB_Financial_Risk_Component_Title}</div>
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_2-of-4 slds-large-size_1-of-6 slds-p-vertical_small">
+                <aura:if isTrue="{!empty(v.data)}">
+                    <lightning:spinner alternativeText="Loading" size="small"/>
+                </aura:if>
+                <div class="layoutColumn">
+                    <aura:if isTrue="{!v.data}">
+                        <aura:if
+                                isTrue="{!or(v.data.riskAndFacilitiesAPIReturnedError, or(v.data.riskAndFacilitiesData == null, v.data.riskAndFacilitiesData.ERI1 == null))}">
+                            <c:pbb_fieldErrorMessage
+                                    isEmptyDataError="{!not(v.data.riskAndFacilitiesAPIReturnedError)}"/>
+                            <!--                                <p class="slds-text-heading&#45;&#45;medium slds-p-vertical_x-small">-</p>-->
+                            <aura:set attribute="else">
+                                <aura:if isTrue="{!v.data.riskAndFacilitiesData.ERI1 le 19}">
+                                    <p class="greenColored slds-text-heading_medium slds-p-vertical_x-small">{!v.data.riskAndFacilitiesData.ERI1}</p>
+                                    <aura:set attribute="else">
+                                        <p class="redColored slds-text-heading_medium slds-p-vertical_x-small">{!v.data.riskAndFacilitiesData.ERI1}</p>
+                                    </aura:set>
+                                </aura:if>
+                            </aura:set>
+                        </aura:if>
+                    </aura:if>
+                    <p class="description slds-text-body_small slds-p-vertical_x-small"> {#$Label.c.PBB_Financial_Risk_Component_ERI}
+                        <lightning:helptext content="{#$Label.c.PBB_Financial_Risk_Component_ERI_Helptext}"/>
+                    </p>
+                </div>
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_2-of-4 slds-large-size_1-of-6 slds-p-vertical_small">
+                <div class="layoutColumn">
+                    <aura:if isTrue="{!v.data}">
+                        <aura:if
+                                isTrue="{!or(v.data.riskAndFacilitiesAPIReturnedError, or(v.data.riskAndFacilitiesData == null, v.data.riskAndFacilitiesData.judgementFlag == null))}">
+                            <c:pbb_fieldErrorMessage
+                                    isEmptyDataError="{!not(v.data.riskAndFacilitiesAPIReturnedError)}"/>
+                            <aura:set attribute="else">
+                                <aura:if isTrue="{!v.data.riskAndFacilitiesData.judgementFlag == false}">
+                                    <p class="greenColored slds-text-heading_medium slds-p-vertical_x-small">No</p>
+                                    <aura:set attribute="else">
+                                        <p class="redColored slds-text-heading_medium slds-p-vertical_x-small">Yes</p>
+                                    </aura:set>
+                                </aura:if>
+                            </aura:set>
+                        </aura:if>
+                    </aura:if>
+                    <p class="description slds-text-body_small slds-p-vertical_x-small">{#$Label.c.PBB_Financial_Risk_Component_Entity_Judgments}
+                        <lightning:helptext
+                                content="{#$Label.c.PBB_Financial_Risk_Component_Entity_Judgements_Helptext}"/>
+                    </p>
+                </div>
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_2-of-4 slds-large-size_1-of-6 slds-p-vertical_small">
+                <div class="layoutColumn">
+                    <aura:if isTrue="{!v.data}">
+                        <aura:if
+                                isTrue="{!or(v.data.riskAndFacilitiesAPIReturnedError, or(v.data.riskAndFacilitiesData == null, v.data.riskAndFacilitiesData.directorJudgementFlag == null))}">
+                            <c:pbb_fieldErrorMessage
+                                    isEmptyDataError="{!not(v.data.riskAndFacilitiesAPIReturnedError)}"/>
+                            <aura:set attribute="else">
+                                <aura:if isTrue="{!v.data.riskAndFacilitiesData.directorJudgementFlag == false}">
+                                    <p class="greenColored slds-text-heading_medium slds-p-vertical_x-small">No</p>
+                                    <aura:set attribute="else">
+                                        <p class="redColored slds-text-heading_medium slds-p-vertical_x-small">Yes</p>
+                                    </aura:set>
+                                </aura:if>
+                            </aura:set>
+                        </aura:if>
+                    </aura:if>
+                    <p class="description slds-text-body_small slds-p-vertical_x-small">{#$Label.c.PBB_Financial_Risk_Component_Principle_Judgments}
+                        <lightning:helptext
+                                content="{#$Label.c.PBB_Financial_Risk_Component_Principle_Judgments_Helptext	}"/>
+                    </p>
+                </div>
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_2-of-4 slds-large-size_1-of-6 slds-p-vertical_small">
+                <div class="layoutColumn">
+                    <aura:if isTrue="{!v.data}">
+                        <aura:if
+                                isTrue="{!or(v.data.riskAndFacilitiesAPIReturnedError, v.data.riskAndFacilitiesData == null)}">
+                            <c:pbb_fieldErrorMessage
+                                    isEmptyDataError="{!not(v.data.riskAndFacilitiesAPIReturnedError)}"/>
+                            <aura:set attribute="else">
+                                <aura:if isTrue="{!v.data.riskAndFacilitiesData.riskMonitoringFlag == false}">
+                                    <p class="greenColored slds-text-heading_medium slds-p-vertical_x-small">No</p>
+                                    <aura:set attribute="else">
+                                        <p class="redColored slds-text-heading_medium slds-p-vertical_x-small">Yes</p>
+                                    </aura:set>
+                                </aura:if>
+                            </aura:set>
+                        </aura:if>
+                    </aura:if>
+                    <p class="description slds-text-body_small slds-p-vertical_x-small">{#$Label.c.PBB_Financial_Risk_Component_Watchlist_Flag}
+                        <lightning:helptext content="{#$Label.c.PBB_Financial_Risk_Component_Watchlist_Flag_Helptext}"/>
+                    </p>
+                </div>
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_2-of-4 slds-large-size_1-of-6 slds-p-vertical_small">
+                <div class="layoutColumn">
+                    <aura:if isTrue="{!v.data}">
+                        <aura:if
+                                isTrue="{!or(v.data.riskAndFacilitiesAPIReturnedError, or(v.data.riskAndFacilitiesData == null, v.data.riskAndFacilitiesData.totalDaysInDishonours == null))}">
+                            <c:pbb_fieldErrorMessage
+                                    isEmptyDataError="{!not(v.data.riskAndFacilitiesAPIReturnedError)}"/>
+                            <aura:set attribute="else">
+                                <aura:if isTrue="{!v.data.riskAndFacilitiesData.totalDaysInDishonours == 0}">
+                                    <p class="greenColored slds-text-heading_medium slds-p-vertical_x-small">{!v.data.riskAndFacilitiesData.totalDaysInDishonours}</p>
+                                    <aura:set attribute="else">
+                                        <p class="redColored slds-text-heading_medium slds-p-vertical_x-small">{!v.data.riskAndFacilitiesData.totalDaysInDishonours}</p>
+                                    </aura:set>
+                                </aura:if>
+                            </aura:set>
+                        </aura:if>
+                    </aura:if>
+                    <p class="description slds-text-body_small slds-p-vertical_x-small">{#$Label.c.PBB_Financial_Risk_Component_Days_In_Dishonour_L6M}
+                        <lightning:helptext
+                                content="{#$Label.c.PBB_Financial_Risk_Component_Days_In_Dishonour_L6M_Helptext}"/>
+                    </p>
+
+                </div>
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_2-of-4 slds-large-size_1-of-6 slds-p-vertical_small">
+                <div class="layoutColumn">
+                    <aura:if isTrue="{!v.data}">
+                        <aura:if
+                                isTrue="{!or(v.data.riskAndFacilitiesAPIReturnedError, or(v.data.riskAndFacilitiesData == null, v.data.riskAndFacilitiesData.totalDaysInExcess == null))}">
+                            <c:pbb_fieldErrorMessage
+                                    isEmptyDataError="{!not(v.data.riskAndFacilitiesAPIReturnedError)}"/>
+                            <aura:set attribute="else">
+                                <aura:if isTrue="{!v.data.riskAndFacilitiesData.totalDaysInExcess == 0}">
+                                    <p class="greenColored slds-text-heading_medium slds-p-vertical_x-small">{!v.data.riskAndFacilitiesData.totalDaysInExcess}</p>
+                                    <aura:set attribute="else">
+                                        <p class="redColored slds-text-heading_medium slds-p-vertical_x-small">{!v.data.riskAndFacilitiesData.totalDaysInExcess}</p>
+                                    </aura:set>
+                                </aura:if>
+                            </aura:set>
+                        </aura:if>
+                    </aura:if>
+                    <p class="description slds-text-body_small slds-p-vertical_x-small">{#$Label.c.PBB_Financial_Risk_Component_Days_In_Excess_L6M}
+                        <lightning:helptext
+                                content="{#$Label.c.PBB_Financial_Risk_Component_Days_In_Excess_L6M_Helptext}"/>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</aura:component>

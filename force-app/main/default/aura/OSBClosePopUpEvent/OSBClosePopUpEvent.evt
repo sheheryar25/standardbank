@@ -1,0 +1,5 @@
+<aura:event type="COMPONENT" description="ClosePopUpEvent">
+    <aura:attribute name="message" type="String" default="Pop up closed." access="public" />
+    <aura:attribute name="pageNumber" type="Integer" access="public"/>
+    <aura:attribute name="optionSelected" type="String" access="public"/>
+</aura:event>

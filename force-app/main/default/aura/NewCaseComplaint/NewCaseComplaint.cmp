@@ -1,0 +1,10 @@
+<!--
+ - Created by mhabbab on 09/09/2019.
+ - US-3849 to create new case complaint record
+ -->
+
+<aura:component description="NewCaseComplaint" implements="lightning:isUrlAddressable,force:lightningQuickAction">
+
+    <aura:attribute type="String" name="recordId" default="{!v.pageReference.state.c__recordId}"/>
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
+</aura:component>

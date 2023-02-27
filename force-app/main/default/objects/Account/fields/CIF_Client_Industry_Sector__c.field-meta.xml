@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CIF_Client_Industry_Sector__c</fullName>
+    <externalId>false</externalId>
+    <label>CRT Client Industry Sector</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Asset Managers</fullName>
+                <default>false</default>
+                <label>Asset Managers</label>
+            </value>
+            <value>
+                <fullName>Corporates</fullName>
+                <default>false</default>
+                <label>Corporates</label>
+            </value>
+            <value>
+                <fullName>Financial Institutions</fullName>
+                <default>false</default>
+                <label>Financial Institutions</label>
+            </value>
+            <value>
+                <fullName>Insurance &amp; Pension Funds</fullName>
+                <default>false</default>
+                <label>Insurance &amp; Pension Funds</label>
+            </value>
+            <value>
+                <fullName>Official Institutions</fullName>
+                <default>false</default>
+                <label>Official Institutions</label>
+            </value>
+            <value>
+                <fullName>Private Clients</fullName>
+                <default>false</default>
+                <label>Private Clients</label>
+            </value>
+            <value>
+                <fullName>Unknown Sector</fullName>
+                <default>true</default>
+                <label>Unknown Sector</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

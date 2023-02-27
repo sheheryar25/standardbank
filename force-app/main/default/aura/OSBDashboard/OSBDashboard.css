@@ -1,0 +1,318 @@
+.THIS {
+    position: relative;
+    padding-top:32px;
+}
+
+.THIS .embeddedServiceIcon {
+    position: absolute;
+    left: 40%;
+}
+
+.THIS .dashboard {
+    display: grid;
+    grid-template-areas: "solutions" "News" "APIS" "EnhancedSolutions";
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+    grid-gap: 24px;
+    grid-auto-flow: dense;
+    padding: 0 2% 0 2%;
+    background: #f6f6f6;
+    margin-bottom: -176px;
+}
+
+@media(min-width:651px) and (max-width:1279px){
+    .THIS .dashboard {
+        grid-template-columns: repeat(auto-fit, minmax(33.33%, 1fr));
+    }
+}
+
+@media(min-width: 1280px){
+    .THIS .dashboard {
+        grid-template-columns: repeat(auto-fit, minmax(15%, 1fr));
+    }
+}
+
+.THIS .adjustDashboard {
+    margin-top: -50px;
+}
+
+.THIS .solutionTitle {
+    padding-left: 2%;
+}
+
+@media(min-width: 1280px){
+    .THIS .solutionTitle {
+        margin-top:32px;
+    }
+}
+
+.THIS .dashboardSecOne {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(50%, 1fr));
+    grid-gap: 24px;
+    grid-auto-flow: dense;  
+    padding: 0 2% 0 2%;
+    background: #f6f6f6;
+    margin-top: 10px;
+}
+
+@media(min-width:651px) and (max-width:1279px){
+    .THIS .dashboardSecOne  {
+        grid-template-columns: repeat(3, minmax(30%, 1fr));
+    }
+}
+
+@media(min-width: 1280px){
+    .THIS .dashboardSecOne  {
+        grid-template-columns: repeat(auto-fit, minmax(auto,268px));
+    }
+}
+
+.THIS .tile__header {
+    color: #0033AA;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-bottom: 8px;
+}
+
+.THIS .tile__link {
+    color: #0089ff;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 23px;
+    box-shadow: none;
+}
+
+.THIS .tile__link_left {
+    color: #0089ff;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 23px;
+    box-shadow: none;
+}
+
+.THIS .yourSolutionMultiple {
+    grid-column: span 2;
+}
+
+.THIS .cOSBAPIProducts {
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+.THIS .cOSBSolutionShowcase {
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+.THIS .cOSBInsightsHub {
+    grid-row: span 2 !important;
+    grid-column: span 2 !important;
+}
+
+@media(max-width:1279px){
+    .THIS .cOSBAPIProducts {
+        grid-column: span 1;
+    }
+    
+    .THIS .cOSBSolutionShowcase {
+        grid-column: span 1;
+    }
+    
+    .THIS .cOSBInsightsHub {
+        grid-column: span 1 !important;
+    }
+}
+
+.THIS .cOSBYourSolutionTile {
+    order: 1;
+}
+
+.THIS .cOSBRegisteredApplicationsTile {
+    order: 2;
+}
+
+@media(max-width: 624px) {
+    .THIS .dashboard>div {
+        grid-column: span 1 !important;
+    }
+}
+
+.THIS .dashboard>div {
+    min-height: 238px;
+    display: flex;
+    flex-direction: column;
+}
+
+.THIS .dashboardSecOne>div {
+    min-height: 238px;
+    display: flex;
+    flex-direction: column;
+}
+
+.THIS .dashboardSecOne>div>div {
+    flex: 1;
+}
+
+.THIS .dashboard>div>div {
+    flex: 1;
+}
+
+.THIS .newCase__success {
+    display: flex;
+    align-items: center;
+    border: 1px solid #0e8a00;
+    border-radius: 4px;
+    background: #fff;
+    position: absolute;
+    width: 44%;
+    min-height: 10px;
+    flex-direction: initial;
+    margin-left: 25%;
+    margin-right: 25%;
+    Top: 14%;
+    z-index: 400;
+}
+
+.THIS .newCase__success__left {
+    padding: 13px 16px;
+    background: #0e8a00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+.THIS .newCase__success__icon {
+    font-size: 24px;
+    color: #fff;
+}
+
+.THIS .newCase__success__right {
+    padding: 0 18px 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 51px;
+}
+
+.THIS .newCase__success__text {
+    color: #222222;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.54px;
+    line-height: 14px;
+    margin-right: 18px;
+}
+
+.THIS .newCase__success__close {
+    background: transparent;
+}
+
+.THIS .newCase__success__close i {
+    color: #767670;
+}
+
+.THIS .firstRow {
+    order: 2 !important;
+}
+
+.THIS .forceCommunityEmbeddedServiceHelpButton {
+    z-index: 14 !important;
+}
+
+.THIS .flatButton {
+    bottom: 0px;
+}
+
+.THIS .dashboard_header-dropdown {
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    height: 100%;
+
+    display: none;
+}
+
+.THIS .dropdown_link-with-notification .header__unread-notification {
+    height: 16px;
+    min-width: 16px;
+    margin-top: 10px;
+    background-color:  #0089FF;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+}
+
+.THIS .uit_link {
+    border-top: 0.5px solid #DBDBDB;
+    flex-grow: 1;
+}
+
+.THIS .uit_link_inner {
+    border-top: 0.5px solid #DBDBDB;
+    flex-grow: 1;
+}
+
+.THIS .header__unread-notifications {
+    position: relative;
+    top: -5px;
+    right: 15px;
+    display: inline-block;
+    margin-right: -16px;
+  }
+  
+.THIS .header__unread-notification {
+    height: 16px;
+    min-width: 16px;
+    background-color:  #0089FF;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+}
+
+.THIS .header__unread-notification-number {
+    color: white;
+    font-size: 10px;
+    align-items: center;
+    display: flex;
+}
+
+.THIS .header__unread-notifications-container {
+    flex-grow: 1;
+}
+
+.THIS .dropdown_link-with-notification {
+    display: flex;
+    align-items: center;
+}
+
+.THIS .header__unread-notifications-container .header__unread-notifications {
+    position: relative;
+    top: -2px;
+    right: 15px;
+    display: inline-block;
+    margin-right: 0px;
+}
+
+.THIS li{
+    flex-grow: 1;
+    list-style: none;
+}
+
+.THIS .mobile_menu {
+    margin-top: 8px;
+}
+
+@media(max-width: 1279px){
+    .THIS .cOSBInsightsHub.insights-container--tile {
+        padding-top: 0px;
+    }
+}
+
+@media(max-width: 651px){
+    .THIS .cOSBAPIProducts {
+        padding-top: 0px;
+    }
+}

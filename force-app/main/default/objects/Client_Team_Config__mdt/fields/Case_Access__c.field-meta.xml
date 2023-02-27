@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Access__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <label>Case Access</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Full Access</fullName>
+                <default>true</default>
+                <label>Full Access</label>
+            </value>
+            <value>
+                <fullName>Private</fullName>
+                <default>false</default>
+                <label>Private</label>
+            </value>
+            <value>
+                <fullName>Read/Write</fullName>
+                <default>false</default>
+                <label>Read/Write</label>
+            </value>
+            <value>
+                <fullName>Read Only</fullName>
+                <default>false</default>
+                <label>Read Only</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

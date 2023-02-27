@@ -1,0 +1,5 @@
+<design:component>
+    <design:attribute name="isAPIProduct"/>
+    <design:attribute name="showBannerMessage"/>
+    <design:attribute name="showBadgeOnlyLogo"/>
+</design:component>

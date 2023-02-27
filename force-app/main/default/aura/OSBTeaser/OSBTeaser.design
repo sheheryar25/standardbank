@@ -1,0 +1,9 @@
+<design:component>
+    <design:attribute name="title" />
+    <design:attribute name="content" />
+    <design:attribute name="imageId" />
+    <design:attribute name="textOnRight" />
+    <design:attribute name="link" />
+    <design:attribute name="linkLabel" />
+    <design:attribute name="backgroundColor" />
+</design:component>

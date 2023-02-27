@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Submit_for_Onboarding</fullName>
+    <availability>online</availability>
+    <description>Button to submit the form for on-boarding</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Submit for Onboarding</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/33.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/33.0/apex.js&quot;)} 
+
+var errorstring = &quot;&quot;; 
+var errorstring1 = &quot;&quot;; 
+
+var clientRecordTypeID = sforce.connection.query(&quot;select name,contactRecordTypeID__c from contact_Record_Type__c where name=&apos;Client Contact Record Type&apos;&quot;); 
+records = clientRecordTypeID.getArray(&quot;records&quot;); 
+var crt = records[0].contactRecordTypeID__c; 
+
+var isCommB = &apos;{!$Profile.Name}&apos; == &apos;Commercial Banking Custom Std User&apos; || 
+&apos;{!$Profile.Name}&apos; == &apos;Commercial Banking Custom Std User - Mobile&apos;; 
+
+var users= sforce.connection.query(&quot;SELECT User_CIB_Global_Area__c FROM User Where Id = &apos;{!$User.Id}&apos;&quot;); 
+records= users.getArray(&quot;records&quot;); 
+var currentUser = records[0];
+
+var isCIB = currentUser.User_CIB_Global_Area__c == &apos;CIBI&apos; || currentUser.User_CIB_Global_Area__c == &apos;CIBROA&apos; || currentUser.User_CIB_Global_Area__c == &apos;CIBSA&apos; || currentUser.User_CIB_Global_Area__c == &apos;CIB Global&apos;; 
+
+sforce.connection.sessionId = window.ApiUtils.getSessionId(); 
+var userID = window.UserContext.userId; 
+
+var contactCheck = sforce.connection.query(&quot;SELECT id,name,recordTypeId FROM Contact WHERE accountID= &apos;{!Account.Id}&apos; AND recordTypeId = &apos;&quot;+crt+ &quot;&apos;&quot;); 
+
+records = contactCheck.getArray(&quot;records&quot;); 
+var clientContactListSize= records.length; 
+
+if({!ISPICKVAL( Account.KYC_Location__c , &apos;SBSA - Standard Bank of South Africa Ltd&apos;)} 
+&amp;&amp; ({!INCLUDES(Account.Relationship_Roles__c, &quot;Client&quot;)} 
+|| {!INCLUDES(Account.Relationship_Roles__c, &quot;Managed Fund&quot;)} 
+|| {!INCLUDES(Account.Relationship_Roles__c, &quot;Corresponding Bank&quot;)}) 
+|| {!ISPICKVAL( Account.KYC_Location__c , &quot;SBCI - Cote D’Ivoire&quot;)}) {
+
+if({!ISNULL(Account.Registration_Number__c)} 
+|| {!ISPICKVAL(Account.Regulatory_Code__c, &apos;&apos;)} 
+|| ({!ISPICKVAL(Account.Business_Classification__c, &apos;&apos;)} 
+&amp;&amp; {!NOT(ISPICKVAL(Account.Client_Type_OnBoard__c,&apos;Branch&apos;))}) 
+|| {!ISPICKVAL(Account.Client_Type_OnBoard__c, &apos;&apos;)} 
+|| {!ISNULL(Account.BillingStreet)} 
+|| {!ISNULL(Account.Relevant_Regulator_or_Approved_Regulated__c)} 
+|| {!ISPICKVAL(Account.Professional_or_Non_Professional_Client__c, &apos;&apos;)} 
+|| {!ISNULL(Account.Source_of_Wealth__c)} 
+|| {!ISNULL(Account.Expected_Income__c)} 
+|| {!ISNULL(Account.Client_Co_ordinator__c)} 
+|| {!ISNULL(Account.Source_of_Funds__c)} 
+|| {!ISPICKVAL(Account.Nature_of_Relationship__c, &apos;&apos;)} 
+|| {!ISNULL(Account.Services_Products_Expected_or_currently__c)} 
+|| {!ISNULL(Account.Anticipated_Level_Volume_of_Activity__c)} 
+|| {!ISNULL(Account.Nature_of_business_activity__c)} 
+|| {!ISPICKVAL(Account.Business_Relationship_Inconsistent__c, &apos;&apos;)} 
+|| &apos;{!Account.Relationship_Roles__c}&apos; == &apos;&apos; 
+|| (clientContactListSize &lt; 1 &amp;&amp; &apos;{!Account.KYC_Contact__c}&apos; == &apos;&apos;) 
+|| {!ISPICKVAL(Account.Client_Relationship_Hierarchy__c,&apos;&apos;)} 
+|| {!ISPICKVAL(Account.Client_Sector__c, &apos;&apos;)} 
+|| {!ISPICKVAL(Account.Client_Sub_Sector__c, &apos;&apos;)} 
+|| (&apos;{!Account.Status__c}&apos; == &apos;Submitted for Approval&apos;) 
+|| ((({!ISPICKVAL(Account.Client_Relationship_Hierarchy__c,&apos;Group Parent&apos;)} 
+|| {!ISPICKVAL(Account.Client_Relationship_Hierarchy__c,&apos;Immediate Parent&apos;)} 
+|| {!ISPICKVAL(Account.Client_Relationship_Hierarchy__c,&apos;Child&apos;)}) 
+&amp;&amp; (&apos;{!Account.Status__c}&apos; != &apos;Approved&apos;) 
+&amp;&amp; (userID != &apos;{!Account.Client_Co_ordinatorId__c}&apos;))? true : false) 
+/*New Fields included AK 21/07/2017*/ 
+|| (isCommB == false 
+&amp;&amp;({!ISPICKVAL(Account.Business_Support_and_Recovery__c, &apos;&apos;)} 
+|| {!ISPICKVAL(Account.Client_contacted_in_person__c, &apos;&apos;)} 
+|| {!ISPICKVAL(Account.Entity_Actively_Trade__c, &apos;&apos;)} 
+|| {!ISPICKVAL(Account.Country_of_Revenue__c, &apos;&apos;)} 
+|| {!ISPICKVAL(Account.KYC_Team_Location__c, &apos;&apos;)}))){ 
+
+if(isCIB == false){
+	errorstring += ({!ISNULL(Account.Registration_Number__c)} ? &quot;Registration Number\n&quot; : &quot;&quot;); 
+	}
+errorstring += ({!ISPICKVAL(Account.Client_Type_OnBoard__c, &apos;&apos;)} ? &quot;Client Type\n&quot; : &quot;&quot;); 
+errorstring += ({!ISPICKVAL(Account.Client_Type_OnBoard__c,&apos;Branch&apos;)}?&quot;&quot;:({!ISPICKVAL(Account.Business_Classification__c, &apos;&apos;)} ? &quot;Business Classification\n&quot; : &quot;&quot;)); 
+errorstring += ({!ISPICKVAL(Account.Regulatory_Code__c, &apos;&apos;)} ? &quot;Regulatory Code\n&quot; : &quot;&quot;); 
+errorstring += ({!ISNULL(Account.BillingStreet)} ? &quot;Registered Address\n&quot; : &quot;&quot;); 
+errorstring += ({!ISNULL(Account.Client_Co_ordinator__c)} ? &quot;Client Coordinator\n&quot; : &quot;&quot;); 
+errorstring += ({!ISPICKVAL(Account.Client_Relationship_Hierarchy__c, &apos;&apos;)} ? &quot;Client Relationship Hierarchy\n&quot; : &quot;&quot;); 
+errorstring += ({!ISPICKVAL(Account.Client_Sector__c, &apos;&apos;)} ? &quot;Client Sector\n&quot; : &quot;&quot;); 
+errorstring += ({!ISPICKVAL(Account.Client_Sub_Sector__c, &apos;&apos;)} ? &quot;Client Sub-Sector\n&quot; : &quot;&quot;); 
+errorstring += ({!ISNULL(Account.Relevant_Regulator_or_Approved_Regulated__c)} ? &quot;Relevant Regulator or Approved Regulated\n&quot; : &quot;&quot;); 
+errorstring += ({!ISPICKVAL(Account.Professional_or_Non_Professional_Client__c, &apos;&apos;)} ? &quot;Professional or Non Professional Client\n&quot; : &quot;&quot;); 
+errorstring += ({!ISNULL(Account.Source_of_Wealth__c)} ? &quot;Source of Wealth\n&quot; : &quot;&quot;); 
+errorstring += ({!ISNULL(Account.Expected_Income__c)} ? &quot;Expected Income\n&quot; : &quot;&quot;); 
+errorstring += ({!ISNULL(Account.Source_of_Funds__c)} ? &quot;Source of Funds\n&quot; : &quot;&quot;); 
+errorstring += ({!ISPICKVAL(Account.Nature_of_Relationship__c, &apos;&apos;)} ? &quot;Nature of Relationship\n&quot; : &quot;&quot;); 
+errorstring += ({!ISNULL(Account.Services_Products_Expected_or_currently__c)} ? &quot;Services/Products Expected or currently\n&quot; : &quot;&quot;); 
+errorstring += ({!ISNULL(Account.Anticipated_Level_Volume_of_Activity__c)} ? &quot;Anticipated Level / Volume of Activity\n&quot; : &quot;&quot;); 
+errorstring += ({!ISNULL(Account.Nature_of_business_activity__c)} ? &quot;Nature Of Business Activity\n&quot; : &quot;&quot;); 
+if(&apos;{!Account.Relationship_Roles__c}&apos; == &apos;&apos;) 
+errorstring += &quot;Relationship Roles\n&quot;; 
+errorstring += ({!ISPICKVAL(Account.Business_Relationship_Inconsistent__c, &apos;&apos;)} ? &quot;Business/Relationship Inconsistent\n&quot; : &quot;&quot;); 
+errorstring += ((clientContactListSize &lt; 1 &amp;&amp; &apos;{!Account.KYC_Contact__c}&apos; == &apos;&apos;)?&quot;\n\nThere must be at least one Contact linked to this Client. Either select an existing KYC Contact, or create a new Contact on this Client\n&quot;:&quot;&quot;); 
+
+/*New Fields included AK 21/07/2017 */ 
+if(isCommB == false){ 
+errorstring += ({!ISPICKVAL(Account.Business_Support_and_Recovery__c, &apos;&apos;)} ? &quot;Business Support and Recovery\n&quot; : &quot;&quot;); 
+errorstring += ({!ISPICKVAL(Account.Client_contacted_in_person__c, &apos;&apos;)} ? &quot;Met Client in Person\n&quot; : &quot;&quot;); 
+errorstring += ({!ISPICKVAL(Account.Entity_Actively_Trade__c, &apos;&apos;)} ? &quot;Does Entity Actively Trade\n&quot; : &quot;&quot;); 
+errorstring += ({!ISPICKVAL(Account.Country_of_Revenue__c, &apos;&apos;)} ? &quot;Country of Revenue\n&quot; : &quot;&quot;); 
+errorstring += ({!ISPICKVAL(Account.KYC_Team_Location__c, &apos;&apos;)} ? &quot;KYC Team Location\n&quot; : &quot;&quot;); 
+} 
+
+if(&apos;{!Account.Status__c}&apos; == &apos;Submitted for Approval&apos;){ 
+errorstring1 += &quot;The record is awaiting approval from the Proposed CC therefore Client onboarding cannot start\n&quot;; 
+} 
+else { 
+errorstring1 += ({!ISPICKVAL(Account.Client_Relationship_Hierarchy__c,&apos;&apos;)} || {!ISPICKVAL(Account.Client_Sector__c, &apos;&apos;)} 
+|| {!ISPICKVAL(Account.Client_Sub_Sector__c, &apos;&apos;)} || 
+{!ISNULL(Account.Client_Co_ordinator__c)} ? &quot;&quot;:((({!ISPICKVAL(Account.Client_Relationship_Hierarchy__c,&apos;Group Parent&apos;)} 
+|| {!ISPICKVAL(Account.Client_Relationship_Hierarchy__c,&apos;Immediate Parent&apos;)} || {!ISPICKVAL(Account.Client_Relationship_Hierarchy__c,&apos;Child&apos;)}) 
+&amp;&amp; (&apos;{!Account.Status__c}&apos; != &apos;Approved&apos;) &amp;&amp; ( userID != &apos;{!Account.Client_Co_ordinatorId__c}&apos;)) ? 
+&quot;The record must be submitted for approval to the Proposed CC before Client Onboarding can start\n&quot; : &quot;&quot;)); 
+} 
+
+alert((errorstring != &quot;&quot; ? &quot;Please complete the following fields in order to Submit:\n&quot;:&quot;&quot;) + errorstring +&quot;\n&quot; +errorstring1 ); 
+} 
+else{ 
+window.parent.location.href=&quot;/apex/Send_for_Onboarding?id={!Account.Id}&quot;; 
+} 
+} 
+else{ 
+if({!ISNULL(Account.Name)} || ( {!ISNULL(Account.Percentage_Holding_Onboarding__c)}) || {!ISNULL(Account.Registration_Number__c)} || {!ISNULL(Account.BillingStreet)} || {!ISNULL(Account.SWIFT_Code__c)} || {!ISPICKVAL(Account.Client_Sector__c, &apos;&apos;)} || {!ISPICKVAL(Account.Client_Sub_Sector__c, &apos;&apos;)} || {!ISPICKVAL(Account.Client_Relationship_Hierarchy__c, &apos;&apos;)} || {!ISNULL(Account.Client_Co_ordinator__c)} || {!ISPICKVAL(Account.KYC_Complete__c, &apos;&apos;)} || &apos;{!Account.Relationship_Roles__c}&apos; == &apos;&apos; || (clientContactListSize &lt; 1 &amp;&amp; &apos;{!Account.KYC_Contact__c}&apos; == &apos;&apos;) || (&apos;{!Account.Status__c}&apos; == &apos;Submitted for Approval&apos;) || 
+((({!ISPICKVAL(Account.Client_Relationship_Hierarchy__c,&apos;Group Parent&apos;)} 
+|| {!ISPICKVAL(Account.Client_Relationship_Hierarchy__c,&apos;Immediate Parent&apos;)} 
+|| {!ISPICKVAL(Account.Client_Relationship_Hierarchy__c,&apos;Child&apos;)}) &amp;&amp; (&apos;{!Account.Status__c}&apos; != &apos;Approved&apos;) 
+&amp;&amp; (userID != &apos;{!Account.Client_Co_ordinatorId__c}&apos;))? true : false)){
+
+if(isCIB == false){
+       errorstring += currentUser+&quot;\n&quot;;
+	errorstring += ({!ISNULL(Account.SWIFT_Code__c)} ? &quot;SWIFT Code\n&quot; : &quot;&quot;); 
+	errorstring += ({!ISNULL(Account.Registration_Number__c)} ? &quot;Registration Number\n&quot; : &quot;&quot;); 
+} 
+errorstring += ({!ISNULL(Account.Name)} ? &quot;Client Name\n&quot; : &quot;&quot;); 
+errorstring += ({!ISNULL(Account.Percentage_Holding_Onboarding__c)} ? &quot;Percentage Holding\n&quot; : &quot;&quot;); 
+errorstring += ({!ISNULL(Account.BillingStreet)} ? &quot;Registered Address\n&quot; : &quot;&quot;); 
+//errorstring += ({!ISPICKVAL(Account.Regulatory_Code__c, &apos;&apos;)} ? &quot;Regulatory Code\n&quot; : &quot;&quot;); 
+errorstring += ({!ISPICKVAL(Account.Client_Sector__c, &apos;&apos;)} ? &quot;Client Sector\n&quot; : &quot;&quot;); 
+errorstring += ({!ISPICKVAL(Account.Client_Sub_Sector__c, &apos;&apos;)} ? &quot;Client Sub-Sector\n&quot; : &quot;&quot;); 
+errorstring += ({!ISNULL(Account.Client_Co_ordinator__c)} ? &quot;Client Coordinator\n&quot; : &quot;&quot;); 
+errorstring += ({!ISPICKVAL(Account.Client_Relationship_Hierarchy__c, &apos;&apos;)} ? &quot;Client Relationship Hierarchy\n&quot; : &quot;&quot;); 
+if(&apos;{!Account.Relationship_Roles__c}&apos; == &apos;&apos;) 
+errorstring += &quot;Relationship Roles\n&quot;; 
+errorstring += ({!ISPICKVAL(Account.KYC_Complete__c, &apos;&apos;)} ? &quot;KYC Complete\n&quot; : &quot;&quot;); 
+errorstring += ((clientContactListSize &lt; 1 &amp;&amp; &apos;{!Account.KYC_Contact__c}&apos; == &apos;&apos;)?&quot;\n\nThere must be at least one Contact linked to this Client. Either select an existing KYC Contact, or create a new Contact on this Client\n&quot;:&quot;&quot;); 
+
+if(&apos;{!Account.Status__c}&apos; == &apos;Submitted for Approval&apos;) { 
+errorstring1 = errorstring1 + &quot;The record is awaiting approval from the Proposed CC therefore Client onboarding cannot start\n&quot;; 
+} 
+else { 
+errorstring1 = errorstring1+({!ISPICKVAL(Account.Client_Relationship_Hierarchy__c,&apos;&apos;)} || {!ISPICKVAL(Account.Client_Sector__c, &apos;&apos;)} 
+|| {!ISPICKVAL(Account.Client_Sub_Sector__c, &apos;&apos;)} || 
+{!ISNULL(Account.Client_Co_ordinator__c)} ? &quot;&quot;:((({!ISPICKVAL(Account.Client_Relationship_Hierarchy__c,&apos;Group Parent&apos;)} 
+|| {!ISPICKVAL(Account.Client_Relationship_Hierarchy__c,&apos;Immediate Parent&apos;)} || {!ISPICKVAL(Account.Client_Relationship_Hierarchy__c,&apos;Child&apos;)}) 
+&amp;&amp; (&apos;{!Account.Status__c}&apos; != &apos;Approved&apos;) &amp;&amp; ( userID != &apos;{!Account.Client_Co_ordinatorId__c}&apos;))? &quot;The record must be submitted for approval to the Proposed CC before Client Onboarding can start\n&quot; : &quot;&quot;)); 
+} 
+
+alert((errorstring != &quot;&quot; ? &quot;Please complete the following fields in order to Submit:\n&quot;:&quot;&quot;) + errorstring +&quot;\n&quot; +errorstring1 ); 
+} 
+else{ 
+window.parent.location.href=&quot;/apex/Send_for_Onboarding?id={!Account.Id}&quot;; 
+} 
+
+}</url>
+</WebLink>

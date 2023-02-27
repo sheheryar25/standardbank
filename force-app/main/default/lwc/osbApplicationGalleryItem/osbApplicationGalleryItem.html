@@ -1,0 +1,47 @@
+<template>
+    <template if:true={thirdParty}>
+        <div class="solutionShowcaseItem3rd" onclick={createmodalwindow} data-id="applicationModalClicked"
+            data-text="Application Gallery | Third Party Applicaion Clicked">
+            <div class="solutionShowcaseItem__logo3rd">
+                <lightning-formatted-rich-text id="outputRT" class="logoSolution3rd" value={logo}>
+                </lightning-formatted-rich-text>
+            </div>
+            <div class="solutionShowcaseItem__title">
+                <template if:true={solTM}>
+                    <p>{title}<sup class="tmClass">TM</sup></p>
+                </template>
+                <template if:false={solTM}>
+                    <p>{title}</p>
+                </template>
+            </div>
+            <div class="solutionShowcaseItem__content">
+                <p>{content}</p>
+            </div>
+        </div>
+    </template>
+    <template if:false={thirdParty}>
+        <div class="solutionShowcaseItem" onclick={createmodalwindow} data-id="applicationModalClicked"
+            data-text="Application Gallery | Standard Bank Applicaion Clicked">
+            <div class="solutionShowcaseItem__logo">
+                <img src={SBLogo} class="logoSolution">
+            </div>
+            <div class="solutionShowcaseItem__title">
+                <template if:true={solTM}>
+                    <p>{title}<sup class="tmClass">TM</sup></p>
+                </template>
+                <template if:false={solTM}>
+                    <p>{title}</p>
+                </template>
+            </div>
+            <div class="solutionShowcaseItem__content">
+                <p>{content}</p>
+            </div>
+        </div>
+    </template>
+    <template if:true={isOpen}>
+        <c-osb-modallwc isopen={isOpen} modaltitle={title} modallogo={largelogo} modalcontent={content}
+            modalfirstbuttonurl={link} modalscndbuttonurl={solutionsiteurl} modaltype={secondLevel}
+            recordid={solutionid} currenttab={currentTab} isonshowcase={isOnShowcase} onclose={modalCloseHandler}
+            applicationowner={applicationowner}></c-osb-modallwc>
+    </template>
+</template>

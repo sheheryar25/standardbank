@@ -1,0 +1,151 @@
+<aura:component controller="AccountHierarchy_LTN_CTRL" >
+	
+	<aura:attribute name="accountId" type="Id" default="" />
+    <aura:attribute name="contacts" type="Contact[]" default="[]" />
+    <aura:attribute name="filterRole" type="String" default="" />
+    <aura:attribute name="contactRoles" type="DTO_SelectOption[]" default="[]" />
+
+    <aura:attribute name="sortCollumn" type="String" default=""   access="private"  />
+    <aura:attribute name="sortOrder"     type="Integer" default="-1" access="private" /> 
+
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
+
+
+    <lightning:select name="mySelect" label="Contact Role(s) at Client" aura:id="mySelect" value="{!v.filterRole}">
+        <option label="--- None ---" selected="{!v.filterRole == ''}" value=""/>
+         <aura:iteration items="{!v.contactRoles}" var="option">
+            <option label="{!option.label}" selected="{!v.filterRole == option.value}" value="{!option.value}"/>
+        </aura:iteration> 
+    </lightning:select>
+
+    <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-table_fixed-layout" role="grid">
+  		<thead>
+    		<tr class="slds-text-title_caps">
+      			<th class="slds-is-sortable  slds-text-title_caps slds-truncate slds-cell-wrap" scope="col" title="NAME" onclick="{!c.sortData}" data-record="Name"  >
+        			<div class="slds-grid slds-grid_vertical-align-center slds-th__action">
+        				<a class="slds-text-link_reset" >
+                            NAME
+                        </a>
+                        <aura:if isTrue="{!v.sortCollumn == 'Name'}">
+                            <aura:if isTrue="{!v.sortOrder > 0}" >
+                                <lightning:icon iconName="utility:arrowdown" size="xx-small" />
+                                <aura:set attribute="else">
+                                    <lightning:icon iconName="utility:arrowup" size="xx-small" />
+                                </aura:set>
+                            </aura:if>
+                        </aura:if> 
+                    </div> 
+                </th>
+                <th class="slds-is-sortable  slds-text-title_caps slds-truncate slds-cell-wrap" scope="col" title="CLIENT NAME" onclick="{!c.sortData}" data-record="Account.Name">
+        			<div class="slds-grid slds-grid_vertical-align-center slds-th__action">
+                        <a class="slds-text-link_reset" >
+        				    CLIENT NAME
+                        </a>
+                        <aura:if isTrue="{!v.sortCollumn == 'Account.Name'}">
+                            <aura:if isTrue="{!v.sortOrder > 0}" >
+                                <lightning:icon iconName="utility:arrowdown" size="xx-small" />
+                                <aura:set attribute="else">
+                                    <lightning:icon iconName="utility:arrowup" size="xx-small" />
+                                </aura:set>
+                            </aura:if>
+                        </aura:if>
+                    </div> 
+                </th>
+                <th class="slds-is-sortable  slds-text-title_caps slds-truncate slds-cell-wrap" scope="col" title="PHONE" onclick="{!c.sortData}" data-record="Phone">
+        			<div class="slds-grid slds-grid_vertical-align-center slds-th__action">
+        				<a class="slds-text-link_reset" >
+                            PHONE
+                        </a>
+                        <aura:if isTrue="{!v.sortCollumn == 'Phone'}">
+                            <aura:if isTrue="{!v.sortOrder > 0}" >
+                                <lightning:icon iconName="utility:arrowdown" size="xx-small" />
+                                <aura:set attribute="else">
+                                    <lightning:icon iconName="utility:arrowup" size="xx-small" />
+                                </aura:set>
+                            </aura:if>
+                        </aura:if>
+                    </div> 
+                </th>
+                <th class="slds-is-sortable  slds-text-title_caps slds-truncate slds-cell-wrap" scope="col" title="PHONE" onclick="{!c.sortData}" data-record="Email">
+                    <div class="slds-grid slds-grid_vertical-align-center slds-th__action">
+                        <a class="slds-text-link_reset" >
+                            EMAIL
+                        </a>
+                        <aura:if isTrue="{!v.sortCollumn == 'Email'}">
+                            <aura:if isTrue="{!v.sortOrder > 0}" >
+                                <lightning:icon iconName="utility:arrowdown" size="xx-small" />
+                                <aura:set attribute="else">
+                                    <lightning:icon iconName="utility:arrowup" size="xx-small" />
+                                </aura:set>
+                            </aura:if>
+                        </aura:if>
+                    </div> 
+                </th>
+                <th class="slds-is-sortable  slds-text-title_caps slds-truncate slds-cell-wrap" scope="col" title="CONTACT ROLE(S) AT CLIENT" onclick="{!c.sortData}" data-record="Contact_Role_s_at_Client__c">
+        			<div class="slds-grid slds-grid_vertical-align-center slds-th__action">
+        				<a class="slds-text-link_reset" >
+                            CONTACT ROLE(S) AT CLIENT
+                        </a>
+                        <aura:if isTrue="{!v.sortCollumn == 'Contact_Role_s_at_Client__c'}">
+                            <aura:if isTrue="{!v.sortOrder > 0}" >
+                                <lightning:icon iconName="utility:arrowdown" size="xx-small" />
+                                <aura:set attribute="else">
+                                    <lightning:icon iconName="utility:arrowup" size="xx-small" />
+                                </aura:set>
+                            </aura:if>
+                        </aura:if>
+                    </div> 
+                </th>
+                <th class="slds-is-sortable  slds-text-title_caps slds-truncate slds-cell-wrap" scope="col" title="OWNER NAME" onclick="{!c.sortData}" data-record="Owner.Name">
+        			<div class="slds-grid slds-grid_vertical-align-center slds-th__action">
+        				<a class="slds-text-link_reset" >
+                            OWNER NAME
+                        </a>
+                        <aura:if isTrue="{!v.sortCollumn == 'Owner.Name'}">
+                            <aura:if isTrue="{!v.sortOrder > 0}" >
+                                <lightning:icon iconName="utility:arrowdown" size="xx-small" />
+                                <aura:set attribute="else">
+                                    <lightning:icon iconName="utility:arrowup" size="xx-small" />
+                                </aura:set>
+                            </aura:if>
+                        </aura:if>
+                    </div>  
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+        	<aura:iteration items="{!v.contacts}" var="con">
+                <aura:if isTrue="{!v.filterRole == '' || v.filterRole == con.Contact_Role_s_at_Client__c}">
+        			<tr class="slds-hint-parent" id="tree0-node0" role="row" aria-level="1">
+                    
+          			   	<td class="slds-truncate" title="{!con.Name}"> 
+                            <a href="{!'/one/one.app?#/sObject/'+ con.Id + '/view'}" target="_blank"> 
+          			   		      {!con.Name}
+                            </a>
+                       	</td>
+                       	<td class="slds-truncate" title="{!con.Account.Name}"> 
+                            <a href="{!'/one/one.app?#/sObject/'+ con.AccountId + '/view'}" target="_blank"> 
+          			   		      {!con.Account.Name}
+                            </a>
+                       	</td>
+                       	<td class="slds-truncate" title="{!con.Phone}"> 
+          			   		{!con.Phone}
+                       	</td>
+                       	<td class="slds-truncate" title="{!con.Email}"> 
+          			   		{!con.Email}
+                       	</td>
+                       	<td class="slds-truncate" title="{!con.Contact_Role_s_at_Client__c}"> 
+          			   		{!con.Contact_Role_s_at_Client__c}
+                       	</td> 
+                       	<td class="slds-truncate" title="{!con.Owner.Name}"> 
+          			   		<a href="{!'/one/one.app?#/sObject/'+ con.OwnerId + '/view'}" target="_blank">
+                                  {!con.Owner.Name}
+                            </a>
+                       	</td>
+                	</tr>
+                </aura:if>
+            </aura:iteration>
+        </tbody> 
+    </table>
+
+</aura:component>

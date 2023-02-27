@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Client_Hierarchy__c</fullName>
+    <description>US-1297:CommB - Create and Expose CommB Client Hierarchy field on Client page layout and lookup dialog</description>
+    <externalId>false</externalId>
+    <formula>IF(AND(RecordType.DeveloperName = &apos;Commercial_Banking_Client&apos;, OR (ISPICKVAL(CIF_Client_Active_Code__c, &quot;A&quot;),
+ISPICKVAL(CIF_Client_Active_Code__c, &quot;Active&quot;),
+ISPICKVAL(CIF_Client_Active_Code__c, &quot;P&quot;),
+ISPICKVAL(CIF_Client_Active_Code__c, &quot;Potential&quot;))),
+CASE(CRT_Client_Types__c,
+&apos;CRT Immediate Parent&apos;,&quot;Immediate Parent&quot;,
+&apos;CRT Top Parent&apos;,&quot;Ultimate Group Parent&quot;,
+&apos;Non CRT Account&apos;,&quot;Not in CRT&quot;,
+&apos;CRT Child&apos;,&quot;Child&quot;,
+&apos;PBB Client&apos;,&quot;PBB Client&quot;,&quot;&quot;),IF(AND(RecordType.DeveloperName = &apos;Commercial_Banking_Client&apos;, OR (ISPICKVAL(CIF_Client_Active_Code__c, &quot;I&quot;),
+ISPICKVAL(CIF_Client_Active_Code__c, &quot;Inactive&quot;)
+)),
+CASE(CRT_Client_Types__c,
+&apos;CRT Immediate Parent&apos;,&quot;Inactive Immediate Parent&quot;,
+&apos;CRT Top Parent&apos;,&quot;Inactive Ultimate Group Parent&quot;,
+&apos;Non CRT Account&apos;,&quot;Inactive&quot;,
+&apos;CRT Child&apos;,&quot;Inactive Child&quot;,
+&apos;PBB Client&apos;,&quot;Inactive PBB Client&quot;,
+&quot;&quot;),&quot;&quot; ))</formula>
+    <inlineHelpText>Indicates the hierarchy level of a CommB client, eg. Child, Immediate Parent, Ultimate Group Parent</inlineHelpText>
+    <label>Client Hierarchy</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

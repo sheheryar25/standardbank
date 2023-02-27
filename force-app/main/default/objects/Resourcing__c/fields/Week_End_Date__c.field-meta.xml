@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Week_End_Date__c</fullName>
+    <defaultValue>TODAY() + (6 - WEEKDAY( TODAY() ))</defaultValue>
+    <description>Date of the end of the business week [SFP-4974]</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Date of the end of the business week</inlineHelpText>
+    <label>Week End Date</label>
+    <required>true</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

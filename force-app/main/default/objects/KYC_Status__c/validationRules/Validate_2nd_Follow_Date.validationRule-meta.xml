@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validate_2nd_Follow_Date</fullName>
+    <active>true</active>
+    <description>Validates 2nd Follow up Date to be filled after 1st follow up is filled and to be greater than 1st follow up date</description>
+    <errorConditionFormula>OR(ISNULL(  X1st_Client_follow_up__c ) &amp;&amp; NOT(ISNULL(  X2nd_Client_follow_up__c )),  X1st_Client_follow_up__c &gt;  X2nd_Client_follow_up__c ) &amp;&amp; NOT( $Setup.Environment_Variable__c.Ignore_Validation_Rule__c )</errorConditionFormula>
+    <errorMessage>1st Client Follow Up Date must be completed before the 2nd Client Follow Up Date and the 2nd Client Follow Up Date must be later than the 1st Client Follow Up Date</errorMessage>
+</ValidationRule>

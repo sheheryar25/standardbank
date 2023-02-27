@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Additional_Strategic_Rationale__c</fullName>
+    <description>Detailed strategic rationale for the transaction including details of how this delivers into the overall client service plan.
+
+            For Type 2 and 4 transactions only, the 1-page Annexure may be used to provide additional information on the client strategy.  Additional information or submissions exceeding the 1 page will not be accepted.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Max Characters: 3500</inlineHelpText>
+    <label>Additional Strategic Rationale</label>
+    <length>3500</length>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Html</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

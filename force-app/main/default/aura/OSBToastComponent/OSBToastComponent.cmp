@@ -1,0 +1,26 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes,force:appHostable" access="global" >
+    <aura:attribute name="toastType" type="String"/>
+    <aura:attribute name="toastMessage" type="String"/>
+    <aura:attribute name="closePopup" type="Boolean"/>
+    <aura:attribute name="top" type="String"/>
+    <aura:attribute name="left" type="String"/>
+
+    <aura:if isTrue="{!v.closePopup==true}">
+    	<div class="toast_container" style="{!'top:' + v.top+ ';left:' + v.left}">
+            <div class="{!v.toastType=='success' ? 'toast_success' : 'toast_warning'}">
+                <div class="{!v.toastType=='success' ? 'toast__success_left' : 'toast_warning_left'}">
+                    <aura:if isTrue="{!v.toastType == 'success'}">
+                        <i class="ms-icn_check_normal toast__icon"></i>
+                        <aura:set attribute="else">
+                            <i class="ms-icn_warning_solid toast__icon"></i>
+                        </aura:set>
+                    </aura:if>
+                </div>
+                <div class="toast__right">
+                    <span class="toast__text">{!v.toastMessage}</span>
+                    <button onclick="{!c.closeToast}" class="btn toast__close" data-id="uitlink_link" data-text="Toast | Close"><i class="ms-icn_close_circle_solid"></i></button>
+                </div>
+            </div>
+        </div>
+    </aura:if>
+</aura:component>

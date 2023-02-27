@@ -1,0 +1,68 @@
+<aura:component controller="PBB_Lifestyle_HighlightPanelCtrl"
+    implements="flexipage:availableForAllPageTypes,force:hasRecordId">
+    <aura:attribute access="private" name="kycStatus" type="String" />
+    <aura:attribute access="private" name="debtReview" type="String" />
+    <aura:attribute access="private" name="errorKycStatus" type="String" />
+    <aura:attribute access="private" name="errorDebtReview" type="String" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <lightning:card>
+        <lightning:recordViewForm recordId="{!v.recordId}" objectApiName="Account">
+            <div class="slds-grid slds-p-horizontal_medium highlight">
+                <div class="slds-p-horizontal_large">
+                    <lightning:outputField fieldName="BPID__c" />
+                </div>
+                <div class="slds-p-horizontal_large">
+                    <lightning:outputField fieldName="Registration_Number__c" />
+                </div>
+                <div class="slds-p-horizontal_large">
+                    <lightning:outputField fieldName="Relationship_Commenced__c" />
+                </div>
+                <div class="slds-p-horizontal_large" style="position: relative;">
+                    <aura:if isTrue="{!and(empty(v.kycStatus), empty(v.errorKycStatus) )}">
+                        <lightning:spinner alternativeText="Loading" size="small"></lightning:spinner>
+                    </aura:if>
+                    <div class="{! 'slds-form-element ' + !empty(v.errorKycStatus) ? 'slds-has-error' : ''}">
+                        <span class="slds-form-element__label">KYC Status</span>
+                        <div class="slds-form-element__control">
+                            <div class="slds-form-element__static">
+                                <aura:if isTrue="{!and(empty(v.kycStatus), !empty(v.errorKycStatus) )}">
+                                    <lightning:icon iconName="utility:error" alternativeText="Error!" title="Error"
+                                        size="x-small" />
+                                    <aura:set attribute="else">
+                                        {!v.kycStatus}
+                                    </aura:set>
+                                </aura:if>
+                            </div>
+                        </div>
+                        <div class="slds-form-element__help">{!v.errorKycStatus}</div>
+                    </div>
+                </div>
+                <div class="slds-p-horizontal_large" style="position: relative;">
+                    <div class="{! 'slds-form-element ' + !empty(v.errorDebtReview) ? 'slds-has-error' : ''}">
+                        <span class="slds-form-element__label">Debt Review</span>
+                        <div class="slds-form-element__control">
+                            <div class="slds-form-element__static">
+                                <aura:if isTrue="{!and(empty(v.debtReview), !empty(v.errorDebtReview) )}">
+                                    <lightning:icon iconName="utility:error" alternativeText="Error!" title="Error"
+                                        size="x-small" />
+                                    <aura:set attribute="else">
+                                        {!v.debtReview}
+                                    </aura:set>
+                                </aura:if>
+                            </div>
+                        </div>
+                        <div class="slds-form-element__help">{!v.errorDebtReview}</div>
+                    </div>
+                    <aura:if isTrue="{!and(empty(v.debtReview), empty(v.errorDebtReview) )}">
+                        <lightning:spinner alternativeText="Loading" size="small"></lightning:spinner>
+                    </aura:if>
+                </div>
+                <div class="slds-p-horizontal_large">
+                    <lightning:outputField fieldName="OwnerId" />
+                </div>
+            </div>
+        </lightning:recordViewForm>
+    </lightning:card>
+</aura:component>

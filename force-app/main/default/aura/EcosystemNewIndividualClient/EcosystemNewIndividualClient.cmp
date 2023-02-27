@@ -1,0 +1,105 @@
+<aura:component controller="StdBank_Ltn_Ecosystem">
+	<aura:attribute name="account" type="Account" />
+
+	<aura:attribute name="isLoading" type="Boolean" default="true" access="private" />
+	<aura:attribute name="isWaiting" type="Boolean" default="false" access="private" />
+	<aura:attribute name="enableSave" type="Boolean" default="false" access="private" />
+	<aura:attribute name="hasError" type="Boolean" default="false" access="private" />
+	<aura:attribute name="errorMessage" type="String" access="private"/>
+
+	<aura:registerEvent name="oncancel" type="c:ecosystemCancel" />
+	<aura:registerEvent name="oncreated" type="c:ecosystemCreated" />
+
+	<aura:attribute name="pbbDivisionOptions" type="Object[]" access="private"/>
+	<aura:attribute name="responsibleRegionOptions" type="Object[]" access="private"/>
+
+	<aura:handler name="init" action="{!c.doInit}" value="{!this}" />
+
+	<!-- Make modal overlay SF nav bar. See helper.applyCSS and helper.revertCssChange -->
+	<aura:attribute name="cssStyle" type="String" access="private"/>
+	<style>{!v.cssStyle}</style>
+
+	<section role="dialog" class="slds-modal slds-fade-in-open">
+		<div class="slds-modal__container">
+			<div class="slds-is-relative slds-scrollable_y">
+				<aura:if isTrue="{!or(v.isWaiting, v.isLoading)}">
+					<div class="slds-spinner_container">
+			    		<div role="status" class="slds-spinner slds-spinner_medium">
+			      			<span class="slds-assistive-text">Waiting</span>
+			      			<div class="slds-spinner__dot-a"></div>
+			      			<div class="slds-spinner__dot-b"></div>
+			    		</div>
+			  		</div>
+				</aura:if>
+				<header class="slds-modal__header">
+					<lightning:buttonIcon iconName="utility:close" class="slds-button_icon slds-modal__close" variant="bare-inverse" size="large" title="Close" alternativeText="Close" onclick="{!c.onCancel}" />
+					<h2 class="slds-text-heading_medium slds-hyphenate">Create Individual Client</h2>
+				</header>
+				<div class="slds-modal__content slds-p-around_medium">
+					<aura:if isTrue="{!v.hasError}">
+						<figure class="slds-box slds-m-bottom_medium">
+						  	<div class="slds-media slds-media_center">
+						    	<div class="slds-media__figure">
+									<lightning:icon iconName="utility:warning" variant="error" alternativeText="warning" size="small" />
+								</div>
+								<div class="slds-media__body">
+									<p class="slds-text-color_error">{!v.errorMessage}</p>
+								</div>
+							</div>
+						</figure>
+					</aura:if>
+
+					<div class="slds-section slds-is-open">
+						<h3 class="slds-section__title slds-theme_shade">
+							<span class="slds-truncate slds-p-horizontal_small" title="PBB Division">PBB Division</span>
+						</h3>
+						<div class="slds-form slds-form_horizontal">
+							<lightning:select aura:id="select-division" label="PBB Division" value="{!v.account.PBB_Division__c}">
+								<option value="" disabled="false" selected="true">--None--</option>
+								<aura:iteration items="{!v.pbbDivisionOptions}" var="option">
+									<option value="{!option.value}">{!option.label}</option>
+								</aura:iteration>
+							</lightning:select>
+						</div>
+					</div>
+
+					<div class="slds-section slds-is-open">
+						<h3 class="slds-section__title slds-theme_shade">
+							<span class="slds-truncate slds-p-horizontal_small" title="Personal Information">Personal Information</span>
+						</h3>
+						<div class="slds-form slds-form_horizontal">
+							<lightning:input label="First Name" value="{!v.account.First_Name__c}"/>
+							<lightning:input label="Surname" value="{!v.account.Surname__c}"/>
+							<lightning:input label="Phone Number" value="{!v.account.Phone_Number__c}"/>
+							<lightning:input label="Email Address" value="{!v.account.Email_Address__c}"/>
+						</div>
+					</div>
+
+					<div class="slds-section slds-is-open">
+						<h3 class="slds-section__title slds-theme_shade">
+							<span class="slds-truncate slds-p-horizontal_small" title="Company Information">Company Information</span>
+						</h3>
+						<div class="slds-form slds-form_horizontal">
+							<lightning:input label="Company Name" value="{!v.account.Name}" required="true"/>
+							<lightning:input label="Registration Number" value="{!v.account.Registration_Number__c}"/>
+							<lightning:select aura:id="select-region" label="Responsible Region" value="{!v.account.Responsible_Region__c}">>
+								<option value="" disabled="false" selected="true">--None--</option>
+								<aura:iteration items="{!v.responsibleRegionOptions}" var="option">
+									<option value="{!option.value}">{!option.label}</option>
+								</aura:iteration>
+							</lightning:select>
+							<c:UTL_LookupField sObjectName="Account" fieldName="Client_Co_ordinator__c" fieldLabel="Proposed Client Co-ordinator" assignTo="{!v.account.Client_Co_ordinator__c}"/>
+						</div>
+					</div>
+
+				</div>
+				<footer class="slds-modal__footer">
+					<button class="slds-button slds-button_neutral" onclick="{!c.onCancel}">Cancel</button>
+					<button class="slds-button slds-button_brand" onclick="{!c.onSave}">Save</button>
+				</footer>
+			</div>
+		</div>
+	</section>
+	<div class="slds-backdrop slds-backdrop_open"></div>
+	
+</aura:component>

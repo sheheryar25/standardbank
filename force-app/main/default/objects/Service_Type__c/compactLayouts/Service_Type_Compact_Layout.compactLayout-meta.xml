@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Service_Type_Compact_Layout</fullName>
+    <fields>CIB_Service_Tier__c</fields>
+    <fields>Entitlement__c</fields>
+    <fields>Active__c</fields>
+    <label>Service Type Compact Layout</label>
+</CompactLayout>

@@ -1,0 +1,38 @@
+.THIS {
+    background: #F2F3F4;
+}
+
+.THIS .page404 {
+    max-width: 800px;
+    padding: 144px 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.THIS .page404__image {
+    margin-left: auto;
+}
+
+.THIS .page404__title {
+    text-align: center;
+    color: #0A2240;
+    font-size: 52px;
+    font-weight: 200;
+    line-height: 60px;
+    margin-top: 15px;
+}
+
+.THIS .page404__subtitle {
+    color: #0A2240;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.THIS .page404__btn {
+    width: 300px;
+    margin-top: 50px;
+}

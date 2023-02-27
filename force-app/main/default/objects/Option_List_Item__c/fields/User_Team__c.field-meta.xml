@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>User_Team__c</fullName>
+    <description>SGPRT-369 Select Product on Cross Border Case record. This will allow users from specific teams to view only records relevant to them via lookup filter criteria</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This value relates to the team a user belongs to based on their user record.</inlineHelpText>
+    <label>Team</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Team</valueSetName>
+    </valueSet>
+</CustomField>

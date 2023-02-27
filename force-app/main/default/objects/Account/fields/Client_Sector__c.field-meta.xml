@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Client_Sector__c</fullName>
+    <description>Field Label Rename from &apos;CIB SA Sector&apos; to &apos;Global Sector&apos;, Nov &apos;10
+
+#EN-226 - The primary sector in which the Client operates. This field is used in CRT and MI reporting</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The primary sector in which the Client operates</inlineHelpText>
+    <label>Client Sector</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Consumer</fullName>
+                <default>false</default>
+                <label>Consumer</label>
+            </value>
+            <value>
+                <fullName>Financial Institutions</fullName>
+                <default>false</default>
+                <label>Financial Institutions</label>
+            </value>
+            <value>
+                <fullName>Industrials</fullName>
+                <default>false</default>
+                <label>Industrials</label>
+            </value>
+            <value>
+                <fullName>Internal / Grouped</fullName>
+                <default>false</default>
+                <label>Internal / Grouped</label>
+            </value>
+            <value>
+                <fullName>Mining and Metals</fullName>
+                <default>false</default>
+                <label>Mining and Metals</label>
+            </value>
+            <value>
+                <fullName>Oil and Gas</fullName>
+                <default>false</default>
+                <label>Oil and Gas</label>
+            </value>
+            <value>
+                <fullName>Power and Infrastructure</fullName>
+                <default>false</default>
+                <label>Power and Infrastructure</label>
+            </value>
+            <value>
+                <fullName>Real Estate</fullName>
+                <default>false</default>
+                <label>Real Estate</label>
+            </value>
+            <value>
+                <fullName>Sovereign / Public Sector</fullName>
+                <default>false</default>
+                <label>Sovereign / Public Sector</label>
+            </value>
+            <value>
+                <fullName>Telecoms and Media</fullName>
+                <default>false</default>
+                <label>Telecoms and Media</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

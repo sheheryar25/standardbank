@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hand_Off_compact_layout</fullName>
+    <fields>Subject</fields>
+    <fields>Status</fields>
+    <fields>Priority</fields>
+    <fields>CreatedById</fields>
+    <fields>OwnerId</fields>
+    <fields>Date_Needed__c</fields>
+    <label>Hand-Off compact layout</label>
+</CompactLayout>

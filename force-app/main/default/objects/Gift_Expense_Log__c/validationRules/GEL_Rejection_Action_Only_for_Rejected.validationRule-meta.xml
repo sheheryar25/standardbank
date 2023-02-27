@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GEL_Rejection_Action_Only_for_Rejected</fullName>
+    <active>true</active>
+    <description>Only supply a rejection action when the Gift / Event Log is rejected
+
+Case 1051: Gift / Expense Logs : C Reinecke</description>
+    <errorConditionFormula>LEN(TEXT( Rejection_Action__c  ))&gt;0 &amp;&amp; (TEXT( Status__c )  &lt;&gt;  &quot;Rejected&quot;)</errorConditionFormula>
+    <errorDisplayField>Rejection_Action__c</errorDisplayField>
+    <errorMessage>You may only capture the rejection action for entries that have been rejected</errorMessage>
+</ValidationRule>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Save_and_Close__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>SGPRT-3950 used to flag a case to trigger automation to set status to closed for High Volume Manual Case Creation</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please select this checkbox if you intend on saving and closing this case. Don&apos;t forget to fill in the Service Type Name, Root Cause and Root Cause Resolution if you do select this checkbox.</inlineHelpText>
+    <label>Save and Close</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

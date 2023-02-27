@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SBSA_Role__c</fullName>
+    <description>The role the bank plays in the transaction.  Typically one of the following: Underwriter, Arranger, Participant, Sole Lender</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The role the bank plays in the transaction.</inlineHelpText>
+    <label>SBSA Role</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Underwriter</fullName>
+                <default>false</default>
+                <label>Underwriter</label>
+            </value>
+            <value>
+                <fullName>Arranger</fullName>
+                <default>false</default>
+                <label>Arranger</label>
+            </value>
+            <value>
+                <fullName>Participant</fullName>
+                <default>false</default>
+                <label>Participant</label>
+            </value>
+            <value>
+                <fullName>Sole Lender</fullName>
+                <default>false</default>
+                <label>Sole Lender</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

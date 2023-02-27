@@ -1,0 +1,84 @@
+<aura:component controller="StdBank_Ltn_Ecosystem">
+	<aura:attribute name="groupNumber" type="String" default=""/>
+	<aura:attribute name="textSizeContainer" type="String"/>
+	<!--aura:attribute name="titles" type="String[]"/>
+	<aura:attribute name="types" type="String[]"/>
+	<aura:attribute name="fieldNames" type="String[]"/--> 
+
+	<aura:attribute name="isLoading" type="Boolean" default="true" access="private"/>
+
+	<aura:attribute name="radialLegends" type="Object[]" access="private"/>
+	<aura:attribute name="radialValues" type="Decimal[]" access="private"/>
+	<aura:attribute name="radialCircleText" type="String" access="private"/>
+
+	<aura:attribute name="dtfPipeline" type="String" access="private"/>
+	<aura:attribute name="dtfBanked" type="String" access="private"/>
+
+	<aura:attribute name="barLegendText" type="String" access="private"/>
+	<aura:attribute name="barValues" type="Decimal[]" access="private"/>
+	<aura:attribute name="barTooltips" type="String[]" access="private"/>
+
+	<aura:attribute name="hierarchyMembers" type="Object[]" access="private"/>
+
+	<aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
+
+	<aura:if isTrue="{!v.isLoading}">
+        <div class="slds-spinner_container" style="position: relative; height: 4 em;">
+            <div class="slds-spinner_brand slds-spinner slds-spinner_small">
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+        <aura:set attribute="else">
+        	<div style="width:1322px;">
+        		<div style="display:inline-block;vertical-align:top;" class="slds-border_right">
+				<c:ChartRadialProgress height="300"
+		    		boxWidth="700"
+		    		boxHeight="500"
+		    		title="OPPORTUNITIES"
+		    		legends="{!v.radialLegends}"
+		    		values="{!v.radialValues}"
+		    		circleText="{!v.radialCircleText}" 
+		    		circleLegend="Closed Won"/>
+				</div>
+				<div style="display:inline-block;width:900px;">
+		    		<div class="slds-media slds-media_center slds-m-around_medium slds-border_bottom slds-p-bottom_small">
+		    			<div class="slds-media__figure">
+							<span class="slds-icon_container slds-icon-action-update slds-icon_container_circle">
+								  <img src="{!$Resource.SLDS202 + '/assets/icons/action/update.svg'}" class="slds-icon slds-icon_small slds-icon-standard-update" style="border-width: 0;" alt="Money" title="Money" />
+							</span>
+						</div>
+		    			<div class="slds-media__body slds-text-heading_small slds-grid">
+				    		<div class="slds-size_1-of-2" title="Total value of products captured as opportunities for this Relationship Group">
+			    				DELIVER-THE-FIRM PIPELINE <span style="color:#2D82BD;font-size:1.2em">&#x25b8; {!v.dtfPipeline}</span>
+			    			</div>
+				    		<div class="slds-size_1-of-2" title="Total Operating Income for this Relationship Group">
+	    						DELIVER-THE-FIRM BANKED <span style="color:rgb(124, 210, 42);font-size:1.2em">&#x25b8; {!v.dtfBanked}</span>
+			    			</div>
+			    		</div>
+		    		</div>
+					<div style="display:inline-block;width:900px;">
+						<c:ChartHorizontalBar height="270"
+			    			boxWidth="1500"
+			    			boxHeight="450"
+			    			title="CLIENT HIERARCHY TOTAL REVENUE &amp; PROFITABILITY" 
+			    			legends="[['Net Interest Income (NII)'], ['Net Interest Revenue (NIR)'], ['Operating Income (OI)'], ['Headline Earnings (HE)']]"
+			    			labels="['NII', 'NIR', 'OI', 'HE']"
+			    			legendText="{!v.barLegendText}"
+			    			values="{!v.barValues}"
+			    			tooltips="{!v.barTooltips}"
+			    			textSizeContainer="{!v.textSizeContainer}"/>
+					</div>
+				</div>
+
+				<div class="slds-border_top slds-m-top_small slds-p-top_medium"></div>
+
+				<c:EcosystemAccountHierarchy hierarchyMembers="{!v.hierarchyMembers}"
+					title="CLIENT HIERARCHY REVENUE &amp; PROFITABILITY"
+				/>
+
+			</div>
+		</aura:set>
+	</aura:if>
+	
+</aura:component>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OA_Segment_Client__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Enables the flagging of OA segment clients (US-1696).</description>
+    <externalId>false</externalId>
+    <label>OA Segment Client</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

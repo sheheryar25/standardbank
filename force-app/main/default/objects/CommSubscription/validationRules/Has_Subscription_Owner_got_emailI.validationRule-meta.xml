@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Has_Subscription_Owner_got_emailI</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(NOT(ISBLANK( Subscription_Owner__c )),
+            ISBLANK(Subscription_Owner__r.Email_Address__c) )</errorConditionFormula>
+    <errorMessage>Subscription Owner has to got an email filled</errorMessage>
+</ValidationRule>

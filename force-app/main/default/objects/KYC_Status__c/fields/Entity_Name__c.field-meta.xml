@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Entity_Name__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE( Entity_Code__c ,&quot;SBCI&quot;, &quot;Cote d&apos;Ivoire&quot;, &quot;ARG&quot; , &quot;Standard Bank Argentina SA&quot; , &quot;BSI&quot;, &quot;Banco Standard de Investimentos S.A.&quot;, &quot;LIB&quot;, &quot;Liberty Group Ltd&quot;,&quot;SALL&quot;,&quot;Standard Advisory London Limited&quot;,&quot;SBA&quot;,&quot;Standard Bank Asia Ltd&quot; ,
+&quot;SBAO&quot; , &quot;Standard Bank de Angola SA&quot; ,&quot;SBAU&quot; , &quot;Standard Bank Plc, Sydney Branch&quot; ,&quot;SBBW&quot; , &quot;Stanbic Bank Botswana Ltd&quot; ,&quot;SBCD&quot; ,&quot;Stanbic Bank Congo SARL&quot; ,
+&quot;SBGH&quot; , &quot;Stanbic Bank Ghana Ltd&quot; ,&quot;SBGS&quot; , &quot;Standard Bank Group Securities&quot; ,&quot;SBKE&quot; , &quot;CFC Stanbic Bank Ltd Kenya&quot; ,&quot;SBLS&quot; ,&quot;Standard Lesotho Bank Ltd&quot; , 
+&quot;SBMU&quot; , &quot;Standard Bank (Mauritius) Ltd&quot;,&quot;SBMW&quot;, &quot;Standard Bank Ltd Malawi&quot;, &quot;SBMZ&quot; , &quot;Standard Bank SARL Mozambique&quot; ,&quot;SBN&quot; , &quot;Stanbic IBTC Bank Plc&quot; , &quot;SBNA&quot; ,&quot;Standard Bank Namibia Ltd&quot; ,&quot;SBSA&quot; ,&quot;Standard Bank of South Africa Ltd&quot; ,&quot;SBSZ&quot; , &quot;Standard Bank Swaziland Ltd&quot; ,&quot;SBT&quot; , &quot;Standard Bank of South Africa Ltd, Taipei&quot; ,&quot;SBTZ&quot; , &quot;Stanbic Bank Tanzania Ltd&quot; ,&quot;SBU&quot; , &quot;Standard Bank Unlu&quot; ,&quot;SBUG&quot; , &quot;Stanbic Bank Uganda Ltd&quot; ,&quot;SBZM&quot; ,&quot;Stanbic Bank Zambia Ltd&quot; , &quot;SBZW&quot; , &quot;Stanbic Bank Zimbabwe Ltd&quot; ,&quot;SFL&quot; , &quot;Standard Finance (Isle of Man) Ltd&quot; ,
+&quot;SMBA&quot; , &quot;Standard Merchant Bank Asia Ltd&quot; ,&quot;SSAL&quot; , &quot;Standard Securities Asia Ltd&quot; ,&quot;ZSB&quot; , &quot;ZAO Standard Bank&quot; ,&quot;&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Entity Name</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

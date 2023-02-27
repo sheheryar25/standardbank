@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EDD_PEP__c</fullName>
+    <description>Have there been any PEPS identified in relation to the client? If there are PEPS involved, has this been tabled at the relevant High Risk Committee.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Have there been any PEPS identified in relation to the client? If there are PEPS involved, has this been tabled at the relevant High Risk Committee.</inlineHelpText>
+    <label>EDD &amp; PEP</label>
+    <length>60</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

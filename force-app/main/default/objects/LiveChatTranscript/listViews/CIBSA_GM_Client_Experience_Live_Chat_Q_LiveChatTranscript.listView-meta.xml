@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CIBSA_GM_Client_Experience_Live_Chat_Q_LiveChatTranscript</fullName>
+    <filterScope>Queue</filterScope>
+    <label>CIBSA GM Client Experience Live Chat Q</label>
+    <queue>CIBSA_GM_Client_Experience_Live_Chat_Q</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

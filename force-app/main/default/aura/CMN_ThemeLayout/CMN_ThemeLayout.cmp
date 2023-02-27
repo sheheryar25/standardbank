@@ -1,0 +1,69 @@
+<!-- **
+* @description  : SBG Common Theme Layout.
+*/ -->
+<aura:component implements="forceCommunity:themeLayout" access="global">
+
+  <aura:attribute name="isUserLoggedIn" type="Boolean" default="false" access="public" />
+  <aura:attribute name="showHeroFullWidth" type="Boolean" default="false" access="public" />
+
+  <aura:attribute name="fullWidthBanner" type="Aura.Component[]" access="public" />
+
+  <aura:attribute name="otherNotices" type="Aura.Component[]" access="public" />
+  <aura:attribute name="importantNotices" type="Aura.Component[]" access="public" />
+  
+  <aura:attribute name="pageTitle" type="Aura.Component[]" access="public" />
+  <aura:attribute name="themeHeader" type="Aura.Component[]" access="public" />
+  <aura:attribute name="useCompactHeader" type="Boolean" default="false" access="public" />
+
+  <aura:attribute name="headerWithNavigation" type="Aura.Component[]" access="public" />
+  <aura:attribute name="themeHero" type="Aura.Component[]" access="public" />
+  <aura:attribute name="showHero" type="Boolean" default="true" access="public" />
+  
+  <aura:attribute name="showFullWidthBlueFirstRow" type="Boolean" default="true" access="public" />
+  <aura:attribute name="fullWidthBlueRow" type="Aura.Component[]" access="public" />
+
+  <aura:attribute name="body" type="Aura.Component[]" access="public" />
+  <aura:attribute name="themeFooter" type="Aura.Component[]" access="public" />
+  <!-- standard containers -->
+  <aura:attribute name="search" type="Aura.Component[]" required="false" access="public" />
+  <aura:attribute name="navBar" type="Aura.Component[]" required="false" access="public" />
+  <aura:attribute name="profileMenu" type="Aura.Component[]" required="false" access="public" />
+
+  <aura:handler name="init" value="{!this}" action="{!c.init}" />
+
+  <div class="theme-page">
+
+    <header>
+      <aura:if isTrue="{! !v.isUserLoggedIn}"><div role="group" aria-label="Other notices">{! v.importantNotices }</div></aura:if>
+      <div role="group" aria-label="Other notices">{! v.otherNotices }</div>
+      <div role="group" aria-label="Header with main navigation" >
+        <aura:if isTrue="{!v.useCompactHeader}">{!v.themeHeader}
+        <aura:set attribute="else">
+          <c:CMN_NavigationMenu profileMenu="{! v.profileMenu }"></c:CMN_NavigationMenu>
+          </aura:set>
+        </aura:if>
+      </div>
+    </header>
+
+    <div role="main">
+      <div class="theme-full-width-banner"><aura:if isTrue="{!v.fullWidthBanner}">{!v.fullWidthBanner}</aura:if></div>
+      <aura:if isTrue="{!v.pageTitle}"><div class="theme-container">{!v.pageTitle}</div></aura:if>
+      <aura:if isTrue="{!v.showHero}">
+        <div role="group" aria-label="Hero" class="{! v.showHeroFullWidth?'':'theme-container' }">{! v.themeHero }</div>
+      </aura:if>
+      <aura:if isTrue="{!v.showFullWidthBlueFirstRow}">
+        <div class="fullWidthBlueFirstRow">
+          <div class="theme-container">{!v.fullWidthBlueRow}</div>
+        </div>
+      </aura:if>
+
+      <div class="theme-container">{!v.body}</div>
+    </div>
+
+    <footer class="footer">
+      {!v.themeFooter}
+    </footer>
+
+  </div>
+
+</aura:component>

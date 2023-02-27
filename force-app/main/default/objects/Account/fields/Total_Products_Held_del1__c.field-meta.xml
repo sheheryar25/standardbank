@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Products_Held_del1__c</fullName>
+    <description>SFP-9319 [f] This field stores a count of the products that the client has with the bank</description>
+    <externalId>false</externalId>
+    <label>Total Products Held</label>
+    <summaryForeignKey>Financial_Account__c.Client__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

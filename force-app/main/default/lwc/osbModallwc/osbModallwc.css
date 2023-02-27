@@ -1,0 +1,444 @@
+.osbModal {
+  background: rgba(238, 238, 238, 0.8) !important;
+  position: fixed !important;
+  padding: 0 !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex !important;
+  align-items: unset !important;
+  z-index: 9999;
+  overflow-y: scroll;
+  justify-content: center;
+}
+
+.mainModal {
+  height: 483px;
+  width: 1000px;
+  border-radius: 4px;
+  background: linear-gradient(135deg, #0a2240 0%, #054b82 100%);
+  box-shadow: 0 6px 25px 0 rgba(0, 0, 0, 0.1);
+  margin-top: 159px;
+}
+
+.mainModal3rdParty {
+  background: #ffffff;
+  width: 1000px;
+  height: 483px;
+  border-radius: 4px;
+  box-shadow: 0 6px 25px 0 rgba(0, 0, 0, 0.1);
+  margin-top: 159px;
+}
+
+.modalHeader {
+  margin-right: 0;
+  min-height: 40px;
+  border-bottom: 0px solid #0a2240;
+  margin-bottom: 7.57px;
+  margin-top: 0px;
+}
+
+.outputRT {
+  height: 69px;
+  width: 59px;
+  margin: auto;
+}
+
+.modalComingSoonSolution {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.modalComingSoonAPI {
+  margin-top: 112px;
+  text-align: center;
+}
+
+.comingSoonText {
+  color: #ffffff;
+  font-family: BentonSans;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  text-align: center;
+  text-transform: none;
+}
+
+.modalLogoDiv {
+  height: 59px;
+  width: 69px;
+  margin: auto;
+  margin-bottom: 18.38px;
+}
+
+.logoSolution {
+  width: 100% !important;
+  height: 144px;
+  border-radius: 50%;
+}
+
+.modalTitle {
+  text-transform: none;
+  align-content: center;
+  text-align: center;
+
+  margin-bottom: 16.79px;
+}
+
+.linedivider hr {
+  width: 240px;
+  border: 0px solid rgb(104, 91, 60);
+  height: 2px;
+  background: linear-gradient(135deg, #695b3a 0%, #a48c5c 100%);
+  margin: auto;
+  margin-bottom: 12px;
+}
+.tmClass{
+  position: relative;
+  font-size: 40%;
+  line-height: 0;
+  vertical-align: baseline;
+  top: -1.2em;
+  left: -0.6em;
+}
+
+.modalTitleSub {
+  text-align: center;
+}
+
+.modalTitleTextSolution {
+  color: #FFFFFF;
+  font-family: "BentonSans";
+  font-weight: 200;
+  font-size: 57px;
+  letter-spacing: 0;
+  line-height: 60px;
+  text-align: center;
+  margin: auto;
+  text-transform: none;
+}
+
+.modalTitleTextSolution3rd {
+  color: #032d5e;
+  height: auto;
+  width: auto;
+
+  font-family: BentonSans;
+  font-size: 40px;
+  font-weight: 200;
+  letter-spacing: 0;
+  line-height: 40px;
+  text-align: center;
+  margin: auto;
+}
+
+.modalTitleTextAPI {
+  margin-top: 84px;
+  color: #ffffff;
+  text-align: center;
+  font-family: BentonSans;
+  font-size: 57px;
+  font-weight: 200;
+  line-height: 60px;
+  text-transform: none;
+}
+
+.modalBody {
+  margin: auto;
+  margin-bottom: 22.53px;
+}
+
+.modalBodySub {
+  margin: 0 auto;
+  text-align: center;
+  color: #ffffff;
+  font-family: BentonSans;
+  font-size: 15px;
+  line-height: 24px;
+  width: fit-content;
+  max-width: 617px;
+  font-weight: 300;
+  letter-spacing: 0;
+}
+
+.modalBodySub3rd {
+  color: #032d5e;
+  margin: 0 auto;
+  text-align: center;
+  font-family: BentonSans;
+  font-size: 15px;
+  line-height: 24px;
+  width: fit-content;
+  max-width: 617px;
+  letter-spacing: 0;
+}
+
+.adjustTable {
+  margin-left: 0px;
+  margin-top: 100px;
+}
+
+.adjustList {
+  margin-left: 460px;
+  margin-top: 282px;
+}
+
+.modalButtonContainer {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 25.66px;
+}
+
+.modalFirstButton {
+  width: 260px;
+  display: inline-block;
+  margin: 10px 10px 10px 10px;
+}
+
+.firstButton {
+  width: 100%;
+  max-width: 296px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 2px;
+  color: #ffffff;
+  background-color: #0089ff;
+}
+
+.firstButton:hover {
+  height: 50px;
+}
+
+.modalSecondButton {
+  display: inline-block;
+  width: 260px;
+  margin: 0 10px 10px 10px;
+}
+
+.secondButton {
+  height: 50px;
+  width: 100%;
+  max-width: 296px;
+  border-radius: 2px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 20px;
+  background: none;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-family: BentonSans;
+  letter-spacing: 1px;
+}
+
+.secondButton3rd {
+  height: 50px;
+  width: 100%;
+  max-width: 296px;
+  border-radius: 2px;
+  font-size: 14px;
+  text-align: center;
+  background: none;
+  color: #0089ff;
+  letter-spacing: 1px;
+  line-height: 20px;
+  border: 1px solid #0089ff;
+  font-family: BentonSans;
+}
+
+.marketPlaceLink {
+  text-transform: uppercase;
+  color: #FFFFFF;
+  font-family: BentonSans;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 13px;
+  text-align: center;
+  background-color: inherit;
+  border: none;
+ 
+}
+
+.marketPlaceLink3rd {
+  text-transform: uppercase;
+  color: #0089ff;
+  font-family: BentonSans;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 13px;
+  text-align: center;
+  height: 13px;
+  width: 209px;
+}
+
+.close3rd {
+  margin-top: 22.33px;
+  margin-right: 23.88px;
+  float: right;
+  box-sizing: border-box;
+  height: 23.65px;
+  width: 25.25px;
+  background-color: #ffffff;
+}
+
+.close {
+  margin-top: 22.33px;
+  margin-right: 23.88px;
+  float: right;
+  height: 25.67px;
+  width: 25.25px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.close-white {
+  margin-top: 22.33px;
+  margin-right: 23.88px;
+  float: right;
+  height: 25.67px;
+  width: 25.25px;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #aaaaaa;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mainModal.onboarding__screen {
+  height: 62%;
+  width: 52.5%;
+  padding: 6%;
+  min-height: unset;
+  margin: auto;
+}
+
+.onboardingButton {
+  text-transform: uppercase;
+}
+
+.modalTitleTextAPI.onboarding__title {
+  margin-top: unset;
+}
+
+
+.onboarding__body {
+  width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.onboarding__screen {
+  overflow-y: unset;
+}
+
+.mainModal.onboarding__screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-y: unset;
+}
+
+.modalTitle.onboarding__screen {
+  padding: unset;
+}
+
+.modalMarketPlaceLink {
+  text-align: center;
+  padding: 0 20px 0 20px;
+  margin-bottom: 37px;
+}
+
+@media only screen and (min-device-width: 320px) and (max-width: 480px) {
+  .mainModal,
+  .mainModal3rdParty,
+  .modallist_div {
+    width: 93%;
+    height: 513px;
+    max-height: unset !important;
+    position: absolute;
+    margin-top: 134px;
+  }
+
+  .modalTitleTextSolution,
+  .modalTitleTextSolution3rd,
+  .modalTitleTextAPI {
+    font-size: 32px;
+    letter-spacing: 1.33px;
+    line-height: 32px;
+    text-align: center;
+  }
+
+  .modalHeader {
+    min-height: 20px;
+    margin-bottom: 10px;
+  }
+
+  .modalLogoDiv {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    height: 64px;
+    width: 55px;
+  }
+
+  .modalTitle {
+    margin-bottom: 14px;
+  }
+
+  .modalBody {
+    margin-bottom: 10px;
+  }
+
+  .modalBodySub {
+    font-size: 16px;
+    line-height: 20px;
+    padding: 10px;
+    height: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .modalBodySub3rd {
+    font-size: 16px;
+    line-height: 24px;
+    height: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 10px;
+  }
+
+  .linedivider hr {
+    width: 120px;   
+    margin-bottom: 7.1px;
+  }
+
+  .secondButton {
+    box-sizing: border-box;
+    height: 50px;
+    width: 260px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+  }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) {
+  .mainModal,
+  .mainModal3rdParty,
+  .modallist_div {
+    width: 90%;
+  }
+}

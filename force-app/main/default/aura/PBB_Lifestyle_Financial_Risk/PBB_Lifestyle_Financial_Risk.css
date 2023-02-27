@@ -1,0 +1,48 @@
+/**
+ * Created by Mykhailo Reznyk on 15.11.2019.
+ */
+
+.THIS .componentGrid .slds-col {
+     text-align: center;
+}
+
+.THIS{
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    height: 100%;
+    padding-right: 5px;
+}
+
+.THIS .componentGrid {
+     background: #FFFFFF;
+     border: 1px solid #DDDBDA;
+     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.10);
+     border-radius: 4px;
+     width: 100%;
+     position: relative;
+}
+
+.THIS .componentTitle{
+    padding-top: 10px;
+    padding-left: 10px;
+    font-weight: 400;
+}
+
+.THIS lightning-helptext{ 
+    line-height: 25px;
+    margin-right: -5px;
+    padding-left: 5px;
+}
+
+.THIS .greenColored {
+    color: green;
+}
+
+.THIS .redColored {
+    color: red;
+}
+
+.THIS .relative {
+    position: relative !important; 
+}

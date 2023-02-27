@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Distribution_Party_Status__c</fullName>
+    <description>US-4609/ SGPRT-623 Status of the potential sale with the investor</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates the status of the potential sale with the Investor OR the status with the seller.</inlineHelpText>
+    <label>Distribution Party Status</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Initial Engagement</fullName>
+                <default>true</default>
+                <label>Initial Engagement</label>
+            </value>
+            <value>
+                <fullName>Credit Process</fullName>
+                <default>false</default>
+                <label>Credit Process</label>
+            </value>
+            <value>
+                <fullName>Credit Approved</fullName>
+                <default>false</default>
+                <label>Credit Approved</label>
+            </value>
+            <value>
+                <fullName>Transferred</fullName>
+                <default>false</default>
+                <label>Transferred</label>
+            </value>
+            <value>
+                <fullName>Declined</fullName>
+                <default>false</default>
+                <label>Declined</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

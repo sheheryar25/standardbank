@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Related_to_Campaign__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Case#1168 - Rudolf Niehaus - 12/2012
+            Campaign Management</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The Campaign to which the meeting is applicable.</inlineHelpText>
+    <label>Related to Campaign</label>
+    <referenceTo>Campaign</referenceTo>
+    <relationshipLabel>Event Reports</relationshipLabel>
+    <relationshipName>Event_Reports</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

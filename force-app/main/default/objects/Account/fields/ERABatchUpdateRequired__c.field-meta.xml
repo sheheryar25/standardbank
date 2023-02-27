@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ERABatchUpdateRequired__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Helps identify if ERA associated with Event Reports of the client need to be updated w.r.t to EN 661</description>
+    <externalId>false</externalId>
+    <label>ERABatchUpdateRequired</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

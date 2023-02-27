@@ -1,0 +1,3 @@
+<aura:event type="COMPONENT" description="Event template subject" >
+	<aura:attribute name="subject" type="String" />
+</aura:event>

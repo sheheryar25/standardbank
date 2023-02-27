@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Plan__c</fullName>
+    <description>SPF-9094 Lookup to the client selected Plan for the API subscription</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Lookup to the client selected Plan for the API subscription</inlineHelpText>
+    <label>Plan</label>
+    <length>255</length>
+    <referenceTo>acm_pkg__AnypointApiGroupTiers__x</referenceTo>
+    <relationshipLabel>Subscriptions</relationshipLabel>
+    <relationshipName>Subscriptions</relationshipName>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>ExternalLookup</type>
+</CustomField>

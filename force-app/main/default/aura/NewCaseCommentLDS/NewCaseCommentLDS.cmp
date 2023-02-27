@@ -1,0 +1,23 @@
+<aura:component controller="NewCaseComment_Controller" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+	<aura:attribute name="caseCommentText" type="string" default=""/>
+    <fieldset class="slds-form_compound">
+  		<legend class="slds-form-element__label slds-text-title">Case Comment<abbr class="slds-required" title="required">*</abbr></legend>
+        <div class="slds-form-element">
+            <div class="slds-grid">
+                <div class="slds-col">
+                    <label class="slds-form-element__label" for="textarea-input-01"> 
+                        <ui:inputTextArea class="slds-textarea" cols="60" rows="4" placeholder="Comment" value="{!v.caseCommentText}"/>
+                    </label>
+                </div>
+            </div>    
+        </div>
+    </fieldset>
+    <div class="slds-form-element">
+  		<div class="slds-grid">
+  			<div class="slds-col">
+                <ui:button class="slds-button slds-button_brand" label="Save" press="{!c.customSave}"/>
+                <ui:button class="slds-button slds-button_brand" label="Cancel" press="{!c.customCancel}"/>
+            </div>
+        </div>
+    </div>
+</aura:component>

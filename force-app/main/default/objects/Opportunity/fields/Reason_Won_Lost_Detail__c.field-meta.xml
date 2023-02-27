@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_Won_Lost_Detail__c</fullName>
+    <description>Related detail for winning / losing the Opportunity</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Related detail for winning / losing this Opportunity</inlineHelpText>
+    <label>Reason Won / Lost Detail</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>ReasonForWinLossPickList__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Appetite for Client / Sector</fullName>
+                <default>false</default>
+                <label>Appetite for Client / Sector</label>
+            </value>
+            <value>
+                <fullName>Client / Transaction Risk</fullName>
+                <default>false</default>
+                <label>Client / Transaction Risk</label>
+            </value>
+            <value>
+                <fullName>Client Governance / Regulatory Restrictions</fullName>
+                <default>false</default>
+                <label>Client Governance / Regulatory Restrictions</label>
+            </value>
+            <value>
+                <fullName>Client not Aligned with SB Geographic Footprint</fullName>
+                <default>false</default>
+                <label>Client not Aligned with SB Geographic Footprint</label>
+            </value>
+            <value>
+                <fullName>Delays in Credit Approval</fullName>
+                <default>false</default>
+                <label>Delays in Credit Approval</label>
+            </value>
+            <value>
+                <fullName>Delays in Implementation Phase</fullName>
+                <default>false</default>
+                <label>Delays in Implementation Phase</label>
+            </value>
+            <value>
+                <fullName>Efficiencies in Banking Platforms, Systems and Channels</fullName>
+                <default>false</default>
+                <label>Efficiencies in Banking Platforms, Systems and Channels</label>
+            </value>
+            <value>
+                <fullName>Favourable Client Onboarding (KYC) Turnaround</fullName>
+                <default>false</default>
+                <label>Favourable Client Onboarding (KYC) Turnaround</label>
+            </value>
+            <value>
+                <fullName>Individual Excellence and Service</fullName>
+                <default>false</default>
+                <label>Individual Excellence and Service</label>
+            </value>
+            <value>
+                <fullName>Inefficiencies in Banking Platforms, Systems and Channels</fullName>
+                <default>false</default>
+                <label>Inefficiencies in Banking Platforms, Systems and Channels</label>
+            </value>
+            <value>
+                <fullName>Inefficient Interaction and Service from Key Business Rep</fullName>
+                <default>false</default>
+                <label>Inefficient Interaction and Service from Key Business Rep</label>
+            </value>
+            <value>
+                <fullName>Inefficient Interaction and Service from  Opportunity Team</fullName>
+                <default>false</default>
+                <label>Inefficient Interaction and Service from  Opportunity Team</label>
+            </value>
+            <value>
+                <fullName>Insufficient Security</fullName>
+                <default>false</default>
+                <label>Insufficient Security</label>
+            </value>
+            <value>
+                <fullName>Key Relationship Bank</fullName>
+                <default>false</default>
+                <label>Key Relationship Bank</label>
+            </value>
+            <value>
+                <fullName>Not Clients Primary Relationship Bank</fullName>
+                <default>false</default>
+                <label>Not Clients Primary Relationship Bank</label>
+            </value>
+            <value>
+                <fullName>Opportunity Team Excellence and Service</fullName>
+                <default>false</default>
+                <label>Opportunity Team Excellence and Service</label>
+            </value>
+            <value>
+                <fullName>Poor Response from Opportunity Team</fullName>
+                <default>false</default>
+                <label>Poor Response from Opportunity Team</label>
+            </value>
+            <value>
+                <fullName>Prompt Credit Approval Process</fullName>
+                <default>false</default>
+                <label>Prompt Credit Approval Process</label>
+            </value>
+            <value>
+                <fullName>SB Geographic Footprint</fullName>
+                <default>false</default>
+                <label>SB Geographic Footprint</label>
+            </value>
+            <value>
+                <fullName>Seamless Implementation</fullName>
+                <default>false</default>
+                <label>Seamless Implementation</label>
+            </value>
+            <value>
+                <fullName>Swift Response from Opportunity Team</fullName>
+                <default>false</default>
+                <label>Swift Response from Opportunity Team</label>
+            </value>
+            <value>
+                <fullName>Unfavourable Client Onboarding (KYC) Turnaround</fullName>
+                <default>false</default>
+                <label>Unfavourable Client Onboarding (KYC) Turnaround</label>
+            </value>
+            <value>
+                <fullName>Mandate terminated/expired</fullName>
+                <default>false</default>
+                <label>Mandate terminated/expired</label>
+            </value>
+            <value>
+                <fullName>Process abandoned</fullName>
+                <default>false</default>
+                <label>Process abandoned</label>
+            </value>
+            <value>
+                <fullName>Offer received too low</fullName>
+                <default>false</default>
+                <label>Offer received too low</label>
+            </value>
+            <value>
+                <fullName>Client bid too low</fullName>
+                <default>false</default>
+                <label>Client bid too low</label>
+            </value>
+            <value>
+                <fullName>Pricing too high</fullName>
+                <default>false</default>
+                <label>Pricing too high</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Client Irrelevance / Unfavourable Relationship</controllingFieldValue>
+            <valueName>Client Governance / Regulatory Restrictions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Irrelevance / Unfavourable Relationship</controllingFieldValue>
+            <valueName>Client not Aligned with SB Geographic Footprint</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Irrelevance / Unfavourable Relationship</controllingFieldValue>
+            <valueName>Inefficiencies in Banking Platforms, Systems and Channels</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Irrelevance / Unfavourable Relationship</controllingFieldValue>
+            <valueName>Inefficient Interaction and Service from Key Business Rep</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Irrelevance / Unfavourable Relationship</controllingFieldValue>
+            <valueName>Inefficient Interaction and Service from  Opportunity Team</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Irrelevance / Unfavourable Relationship</controllingFieldValue>
+            <valueName>Not Clients Primary Relationship Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Relevance / Relationship</controllingFieldValue>
+            <valueName>Efficiencies in Banking Platforms, Systems and Channels</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Relevance / Relationship</controllingFieldValue>
+            <valueName>Individual Excellence and Service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Relevance / Relationship</controllingFieldValue>
+            <valueName>Key Relationship Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Relevance / Relationship</controllingFieldValue>
+            <valueName>Opportunity Team Excellence and Service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Relevance / Relationship</controllingFieldValue>
+            <valueName>SB Geographic Footprint</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Favourable Response Time</controllingFieldValue>
+            <valueName>Favourable Client Onboarding (KYC) Turnaround</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Favourable Response Time</controllingFieldValue>
+            <valueName>Prompt Credit Approval Process</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Favourable Response Time</controllingFieldValue>
+            <valueName>Seamless Implementation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Favourable Response Time</controllingFieldValue>
+            <valueName>Swift Response from Opportunity Team</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unfavourable Market Pricing</controllingFieldValue>
+            <valueName>Offer received too low</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unfavourable Market Pricing</controllingFieldValue>
+            <valueName>Client bid too low</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unfavourable Market Pricing</controllingFieldValue>
+            <valueName>Pricing too high</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unfavourable Response Time</controllingFieldValue>
+            <valueName>Delays in Credit Approval</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unfavourable Response Time</controllingFieldValue>
+            <valueName>Delays in Implementation Phase</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unfavourable Response Time</controllingFieldValue>
+            <valueName>Poor Response from Opportunity Team</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unfavourable Response Time</controllingFieldValue>
+            <valueName>Unfavourable Client Onboarding (KYC) Turnaround</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Credit</controllingFieldValue>
+            <valueName>Appetite for Client / Sector</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Credit</controllingFieldValue>
+            <valueName>Client / Transaction Risk</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Credit</controllingFieldValue>
+            <valueName>Insufficient Security</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Strategy Change</controllingFieldValue>
+            <valueName>Mandate terminated/expired</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Strategy Change</controllingFieldValue>
+            <valueName>Process abandoned</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

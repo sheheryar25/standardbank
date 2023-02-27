@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Lead_Source__c</fullName>
+    <description>SFP-5352 Field to identify where Lead originates from</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The primary source of where this product originated from as a lead.</inlineHelpText>
+    <label>Product Lead Source</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Advertisement</fullName>
+                <default>false</default>
+                <label>Advertisement</label>
+            </value>
+            <value>
+                <fullName>Automated lead</fullName>
+                <default>false</default>
+                <label>Automated lead</label>
+            </value>
+            <value>
+                <fullName>Business Banking</fullName>
+                <default>false</default>
+                <label>Business Banking</label>
+            </value>
+            <value>
+                <fullName>Business partner</fullName>
+                <default>false</default>
+                <label>Business partner</label>
+            </value>
+            <value>
+                <fullName>China Banking</fullName>
+                <default>false</default>
+                <label>China Banking</label>
+            </value>
+            <value>
+                <fullName>CNHW Banking</fullName>
+                <default>false</default>
+                <label>CNHW Banking</label>
+            </value>
+            <value>
+                <fullName>Commercial Banking</fullName>
+                <default>false</default>
+                <label>Commercial Banking</label>
+            </value>
+            <value>
+                <fullName>Ecosystem</fullName>
+                <default>false</default>
+                <label>Ecosystem</label>
+            </value>
+            <value>
+                <fullName>Enterprise Direct</fullName>
+                <default>false</default>
+                <label>Enterprise Direct</label>
+            </value>
+            <value>
+                <fullName>Event/Shows</fullName>
+                <default>false</default>
+                <label>Event/Shows</label>
+            </value>
+            <value>
+                <fullName>Intercountry referrals</fullName>
+                <default>false</default>
+                <label>Intercountry referrals</label>
+            </value>
+            <value>
+                <fullName>Online</fullName>
+                <default>false</default>
+                <label>Online</label>
+            </value>
+            <value>
+                <fullName>Walk in</fullName>
+                <default>false</default>
+                <label>Walk in</label>
+            </value>
+            <value>
+                <fullName>Wholesale Banking</fullName>
+                <default>false</default>
+                <label>Wholesale Banking</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

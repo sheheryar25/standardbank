@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Uganda_Active_Products</fullName>
+    <columns>PRODUCT2.NAME</columns>
+    <columns>PRODUCT2.DESCRIPTION</columns>
+    <columns>PRODUCT2.ACTIVE</columns>
+    <columns>PRODUCT2.FAMILY</columns>
+    <columns>Product_Group__c</columns>
+    <columns>Client_Segment__c</columns>
+    <columns>Product_Country__c</columns>
+    <columns>ExternalIdentifier__c</columns>
+    <columns>PRODUCT2.CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Product_Country__c</field>
+        <operation>includes</operation>
+        <value>Uganda</value>
+    </filters>
+    <filters>
+        <field>PRODUCT2.ACTIVE</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>Uganda Active Products</label>
+    <sharedTo>
+        <roleAndSubordinatesInternal>BCC_AR_Uganda</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

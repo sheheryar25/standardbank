@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CustodySubCategory__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Custody Sub-Category</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Africa Region query</fullName>
+                <default>true</default>
+                <label>Africa Region query</label>
+            </value>
+            <value>
+                <fullName>ARM Codes</fullName>
+                <default>false</default>
+                <label>ARM Codes</label>
+            </value>
+            <value>
+                <fullName>Authorised Signatory Lists</fullName>
+                <default>false</default>
+                <label>Authorised Signatory Lists</label>
+            </value>
+            <value>
+                <fullName>Billing Invoice Payment Method</fullName>
+                <default>false</default>
+                <label>Billing Invoice Payment Method</label>
+            </value>
+            <value>
+                <fullName>CA Calculations</fullName>
+                <default>false</default>
+                <label>CA Calculations</label>
+            </value>
+            <value>
+                <fullName>CA Claims</fullName>
+                <default>false</default>
+                <label>CA Claims</label>
+            </value>
+            <value>
+                <fullName>CA Diary</fullName>
+                <default>false</default>
+                <label>CA Diary</label>
+            </value>
+            <value>
+                <fullName>CA Election Instruction</fullName>
+                <default>false</default>
+                <label>CA Election Instruction</label>
+            </value>
+            <value>
+                <fullName>CA Entitlement Confirmations</fullName>
+                <default>false</default>
+                <label>CA Entitlement Confirmations</label>
+            </value>
+            <value>
+                <fullName>CA Event Details</fullName>
+                <default>false</default>
+                <label>CA Event Details</label>
+            </value>
+            <value>
+                <fullName>CA Income and Dividend</fullName>
+                <default>false</default>
+                <label>CA Income and Dividend</label>
+            </value>
+            <value>
+                <fullName>CA Meeting Details</fullName>
+                <default>false</default>
+                <label>CA Meeting Details</label>
+            </value>
+            <value>
+                <fullName>CA Proxy</fullName>
+                <default>false</default>
+                <label>CA Proxy</label>
+            </value>
+            <value>
+                <fullName>Cash Accounts Not Loaded on Cashman</fullName>
+                <default>false</default>
+                <label>Cash Accounts Not Loaded on Cashman</label>
+            </value>
+            <value>
+                <fullName>Cash Accrued Interest</fullName>
+                <default>false</default>
+                <label>Cash Accrued Interest</label>
+            </value>
+            <value>
+                <fullName>Cash Add Account to BOL</fullName>
+                <default>false</default>
+                <label>Cash Add Account to BOL</label>
+            </value>
+            <value>
+                <fullName>Cash Amend Cash Account</fullName>
+                <default>false</default>
+                <label>Cash Amend Cash Account</label>
+            </value>
+            <value>
+                <fullName>Cash Audit Req Balance Certificate</fullName>
+                <default>false</default>
+                <label>Cash Audit Req Balance Certificate</label>
+            </value>
+            <value>
+                <fullName>Cash Bank Statement Request</fullName>
+                <default>false</default>
+                <label>Cash Bank Statement Request</label>
+            </value>
+            <value>
+                <fullName>Cash - CATS Entries</fullName>
+                <default>false</default>
+                <label>Cash - CATS Entries</label>
+            </value>
+            <value>
+                <fullName>Cash Forecast</fullName>
+                <default>false</default>
+                <label>Cash Forecast</label>
+            </value>
+            <value>
+                <fullName>Cash Interest Rate Request</fullName>
+                <default>false</default>
+                <label>Cash Interest Rate Request</label>
+            </value>
+            <value>
+                <fullName>Cashman Account Process</fullName>
+                <default>false</default>
+                <label>Cashman Account Process</label>
+            </value>
+            <value>
+                <fullName>Cash Market Information</fullName>
+                <default>false</default>
+                <label>Cash Market Information</label>
+            </value>
+            <value>
+                <fullName>Cash Missing Mt950</fullName>
+                <default>false</default>
+                <label>Cash Missing Mt950</label>
+            </value>
+            <value>
+                <fullName>Cash Panel Verification</fullName>
+                <default>false</default>
+                <label>Cash Panel Verification</label>
+            </value>
+            <value>
+                <fullName>Cash Req Current Balance</fullName>
+                <default>false</default>
+                <label>Cash Req Current Balance</label>
+            </value>
+            <value>
+                <fullName>Cash Request for OVD Breakdown</fullName>
+                <default>false</default>
+                <label>Cash Request for OVD Breakdown</label>
+            </value>
+            <value>
+                <fullName>Cash Unknown Credits and Debits</fullName>
+                <default>false</default>
+                <label>Cash Unknown Credits and Debits</label>
+            </value>
+            <value>
+                <fullName>Cash - ZAPS Entries</fullName>
+                <default>false</default>
+                <label>Cash - ZAPS Entries</label>
+            </value>
+            <value>
+                <fullName>CA WHT</fullName>
+                <default>false</default>
+                <label>CA WHT</label>
+            </value>
+            <value>
+                <fullName>CCOMS Add / Remove Access Paths</fullName>
+                <default>false</default>
+                <label>CCOMS Add / Remove Access Paths</label>
+            </value>
+            <value>
+                <fullName>CCOMS Add / Remove Accounts</fullName>
+                <default>false</default>
+                <label>CCOMS Add / Remove Accounts</label>
+            </value>
+            <value>
+                <fullName>CCOMS Add / Remove Users</fullName>
+                <default>false</default>
+                <label>CCOMS Add / Remove Users</label>
+            </value>
+            <value>
+                <fullName>CCOMS Take on Client</fullName>
+                <default>false</default>
+                <label>CCOMS Take on Client</label>
+            </value>
+            <value>
+                <fullName>CIF Confirmations</fullName>
+                <default>false</default>
+                <label>CIF Confirmations</label>
+            </value>
+            <value>
+                <fullName>Client Account List</fullName>
+                <default>false</default>
+                <label>Client Account List</label>
+            </value>
+            <value>
+                <fullName>Client MIS Reports</fullName>
+                <default>false</default>
+                <label>Client MIS Reports</label>
+            </value>
+            <value>
+                <fullName>Custody &amp; Reg Physical Security</fullName>
+                <default>false</default>
+                <label>Custody &amp; Reg Physical Security</label>
+            </value>
+            <value>
+                <fullName>Custody &amp; Reg Remat/Demat Process</fullName>
+                <default>false</default>
+                <label>Custody &amp; Reg Remat/Demat Process</label>
+            </value>
+            <value>
+                <fullName>Custody &amp; Reg Transfer to Crest</fullName>
+                <default>false</default>
+                <label>Custody &amp; Reg Transfer to Crest</label>
+            </value>
+            <value>
+                <fullName>Custody &amp; Reg Withdrawal of Stock</fullName>
+                <default>false</default>
+                <label>Custody &amp; Reg Withdrawal of Stock</label>
+            </value>
+            <value>
+                <fullName>DC Account Closure</fullName>
+                <default>false</default>
+                <label>DC Account Closure</label>
+            </value>
+            <value>
+                <fullName>DC Account Opening</fullName>
+                <default>false</default>
+                <label>DC Account Opening</label>
+            </value>
+            <value>
+                <fullName>DC Account Opening - Omnibus</fullName>
+                <default>false</default>
+                <label>DC Account Opening - Omnibus</label>
+            </value>
+            <value>
+                <fullName>DC Account Opening - SDA</fullName>
+                <default>false</default>
+                <label>DC Account Opening - SDA</label>
+            </value>
+            <value>
+                <fullName>DIS</fullName>
+                <default>false</default>
+                <label>DIS</label>
+            </value>
+            <value>
+                <fullName>FATCA</fullName>
+                <default>false</default>
+                <label>FATCA</label>
+            </value>
+            <value>
+                <fullName>Fee Amendment</fullName>
+                <default>false</default>
+                <label>Fee Amendment</label>
+            </value>
+            <value>
+                <fullName>FI Trade Status</fullName>
+                <default>false</default>
+                <label>FI Trade Status</label>
+            </value>
+            <value>
+                <fullName>FI Unexcor Request</fullName>
+                <default>false</default>
+                <label>FI Unexcor Request</label>
+            </value>
+            <value>
+                <fullName>GC ACCOUNT AMENDMENTS</fullName>
+                <default>false</default>
+                <label>GC ACCOUNT AMENDMENTS</label>
+            </value>
+            <value>
+                <fullName>GC Account Closure</fullName>
+                <default>false</default>
+                <label>GC Account Closure</label>
+            </value>
+            <value>
+                <fullName>GC Account Opening</fullName>
+                <default>false</default>
+                <label>GC Account Opening</label>
+            </value>
+            <value>
+                <fullName>GC ADD / REMOVE ACCOUNT FROM PROFILE</fullName>
+                <default>false</default>
+                <label>GC ADD / REMOVE ACCOUNT FROM PROFILE</label>
+            </value>
+            <value>
+                <fullName>GC ADD MARKET / CURR REQ</fullName>
+                <default>false</default>
+                <label>GC ADD MARKET / CURR REQ</label>
+            </value>
+            <value>
+                <fullName>GC ADD SWIFT ADDRESS TO ACC</fullName>
+                <default>false</default>
+                <label>GC ADD SWIFT ADDRESS TO ACC</label>
+            </value>
+            <value>
+                <fullName>GC AMEND ACCOUNT BILLING GROUP</fullName>
+                <default>false</default>
+                <label>GC AMEND ACCOUNT BILLING GROUP</label>
+            </value>
+            <value>
+                <fullName>GC CASH TRANSFER</fullName>
+                <default>false</default>
+                <label>GC CASH TRANSFER</label>
+            </value>
+            <value>
+                <fullName>GC CODING REQUEST</fullName>
+                <default>false</default>
+                <label>GC CODING REQUEST</label>
+            </value>
+            <value>
+                <fullName>GC CONFIRMATION OF BILLING SET UP</fullName>
+                <default>false</default>
+                <label>GC CONFIRMATION OF BILLING SET UP</label>
+            </value>
+            <value>
+                <fullName>GC CONFIRMATION OF SWIFT ADDRESS</fullName>
+                <default>false</default>
+                <label>GC CONFIRMATION OF SWIFT ADDRESS</label>
+            </value>
+            <value>
+                <fullName>GC CONF OF INSTRUCTING PARTY</fullName>
+                <default>false</default>
+                <label>GC CONF OF INSTRUCTING PARTY</label>
+            </value>
+            <value>
+                <fullName>GC CORPORATE ACTIONS</fullName>
+                <default>false</default>
+                <label>GC CORPORATE ACTIONS</label>
+            </value>
+            <value>
+                <fullName>GC INFORM LINKAGE</fullName>
+                <default>false</default>
+                <label>GC INFORM LINKAGE</label>
+            </value>
+            <value>
+                <fullName>GC MARKET INFORMATION</fullName>
+                <default>false</default>
+                <label>GC MARKET INFORMATION</label>
+            </value>
+            <value>
+                <fullName>GC NON RECEIPT OF SWIFT MSGS</fullName>
+                <default>false</default>
+                <label>GC NON RECEIPT OF SWIFT MSGS</label>
+            </value>
+            <value>
+                <fullName>GC Non-Receipt of Swift Msgs</fullName>
+                <default>false</default>
+                <label>GC Non-Receipt of Swift Msgs</label>
+            </value>
+            <value>
+                <fullName>GC ORIGINAL TSQ AND ATTESTATION</fullName>
+                <default>false</default>
+                <label>GC ORIGINAL TSQ AND ATTESTATION</label>
+            </value>
+            <value>
+                <fullName>GC PANEL 4 VERIFICATION</fullName>
+                <default>false</default>
+                <label>GC PANEL 4 VERIFICATION</label>
+            </value>
+            <value>
+                <fullName>GC REMOVE REPORTING FROM ACC</fullName>
+                <default>false</default>
+                <label>GC REMOVE REPORTING FROM ACC</label>
+            </value>
+            <value>
+                <fullName>GC REMOVE SWIFT ADDRESS</fullName>
+                <default>false</default>
+                <label>GC REMOVE SWIFT ADDRESS</label>
+            </value>
+            <value>
+                <fullName>GC REQ FOR BILLING DETAILS</fullName>
+                <default>false</default>
+                <label>GC REQ FOR BILLING DETAILS</label>
+            </value>
+            <value>
+                <fullName>GC REQ FOR HOLDINGS / CASH BALANCE</fullName>
+                <default>false</default>
+                <label>GC REQ FOR HOLDINGS / CASH BALANCE</label>
+            </value>
+            <value>
+                <fullName>GC REQ FOR INV/MORE INFO ON CHARGES</fullName>
+                <default>false</default>
+                <label>GC REQ FOR INV/MORE INFO ON CHARGES</label>
+            </value>
+            <value>
+                <fullName>GC REQ FOR SSI&apos;S (SETTL DETAILS)</fullName>
+                <default>false</default>
+                <label>GC REQ FOR SSI&apos;S (SETTL DETAILS)</label>
+            </value>
+            <value>
+                <fullName>GC REQ FOR TRANSACTION REPORT</fullName>
+                <default>false</default>
+                <label>GC REQ FOR TRANSACTION REPORT</label>
+            </value>
+            <value>
+                <fullName>GC REQUEST FOR IBAN</fullName>
+                <default>false</default>
+                <label>GC REQUEST FOR IBAN</label>
+            </value>
+            <value>
+                <fullName>GC SWIFT MESSAGE REQUEST</fullName>
+                <default>false</default>
+                <label>GC SWIFT MESSAGE REQUEST</label>
+            </value>
+            <value>
+                <fullName>GC WORKBENCH</fullName>
+                <default>false</default>
+                <label>GC WORKBENCH</label>
+            </value>
+            <value>
+                <fullName>Hiport Indicator</fullName>
+                <default>false</default>
+                <label>Hiport Indicator</label>
+            </value>
+            <value>
+                <fullName>Holdings Report</fullName>
+                <default>false</default>
+                <label>Holdings Report</label>
+            </value>
+            <value>
+                <fullName>Instructing Party Errors</fullName>
+                <default>false</default>
+                <label>Instructing Party Errors</label>
+            </value>
+            <value>
+                <fullName>Interest Dispute</fullName>
+                <default>false</default>
+                <label>Interest Dispute</label>
+            </value>
+            <value>
+                <fullName>IWT Related Queries</fullName>
+                <default>false</default>
+                <label>IWT Related Queries</label>
+            </value>
+            <value>
+                <fullName>Match &amp; Tolerance SI</fullName>
+                <default>false</default>
+                <label>Match &amp; Tolerance SI</label>
+            </value>
+            <value>
+                <fullName>MM Autocreate</fullName>
+                <default>false</default>
+                <label>MM Autocreate</label>
+            </value>
+            <value>
+                <fullName>MM Interest Calculations</fullName>
+                <default>false</default>
+                <label>MM Interest Calculations</label>
+            </value>
+            <value>
+                <fullName>MM Matured Security not Removed</fullName>
+                <default>false</default>
+                <label>MM Matured Security not Removed</label>
+            </value>
+            <value>
+                <fullName>MM Maturity Date</fullName>
+                <default>false</default>
+                <label>MM Maturity Date</label>
+            </value>
+            <value>
+                <fullName>MM SOR Request</fullName>
+                <default>false</default>
+                <label>MM SOR Request</label>
+            </value>
+            <value>
+                <fullName>MM Trader Role</fullName>
+                <default>false</default>
+                <label>MM Trader Role</label>
+            </value>
+            <value>
+                <fullName>Month End Interest</fullName>
+                <default>false</default>
+                <label>Month End Interest</label>
+            </value>
+            <value>
+                <fullName>Movement Report</fullName>
+                <default>false</default>
+                <label>Movement Report</label>
+            </value>
+            <value>
+                <fullName>MT535</fullName>
+                <default>false</default>
+                <label>MT535</label>
+            </value>
+            <value>
+                <fullName>MT536</fullName>
+                <default>false</default>
+                <label>MT536</label>
+            </value>
+            <value>
+                <fullName>MT537</fullName>
+                <default>false</default>
+                <label>MT537</label>
+            </value>
+            <value>
+                <fullName>MT54X Swifts</fullName>
+                <default>false</default>
+                <label>MT54X Swifts</label>
+            </value>
+            <value>
+                <fullName>MT564</fullName>
+                <default>false</default>
+                <label>MT564</label>
+            </value>
+            <value>
+                <fullName>MT566</fullName>
+                <default>false</default>
+                <label>MT566</label>
+            </value>
+            <value>
+                <fullName>MT940 / 950</fullName>
+                <default>false</default>
+                <label>MT940 / 950</label>
+            </value>
+            <value>
+                <fullName>Name Change</fullName>
+                <default>false</default>
+                <label>Name Change</label>
+            </value>
+            <value>
+                <fullName>Payment of Fees</fullName>
+                <default>false</default>
+                <label>Payment of Fees</label>
+            </value>
+            <value>
+                <fullName>Req for Trade Instructions</fullName>
+                <default>false</default>
+                <label>Req for Trade Instructions</label>
+            </value>
+            <value>
+                <fullName>Request for Information</fullName>
+                <default>false</default>
+                <label>Request for Information</label>
+            </value>
+            <value>
+                <fullName>Request for Vostro Invoices</fullName>
+                <default>false</default>
+                <label>Request for Vostro Invoices</label>
+            </value>
+            <value>
+                <fullName>Rollover SI</fullName>
+                <default>false</default>
+                <label>Rollover SI</label>
+            </value>
+            <value>
+                <fullName>SL Credit</fullName>
+                <default>false</default>
+                <label>SL Credit</label>
+            </value>
+            <value>
+                <fullName>SL Debit</fullName>
+                <default>false</default>
+                <label>SL Debit</label>
+            </value>
+            <value>
+                <fullName>STT Related</fullName>
+                <default>false</default>
+                <label>STT Related</label>
+            </value>
+            <value>
+                <fullName>STT Related Queries</fullName>
+                <default>false</default>
+                <label>STT Related Queries</label>
+            </value>
+            <value>
+                <fullName>Swift Message Frequency</fullName>
+                <default>false</default>
+                <label>Swift Message Frequency</label>
+            </value>
+            <value>
+                <fullName>Tax Related Queries</fullName>
+                <default>false</default>
+                <label>Tax Related Queries</label>
+            </value>
+            <value>
+                <fullName>Trade Status</fullName>
+                <default>false</default>
+                <label>Trade Status</label>
+            </value>
+            <value>
+                <fullName>WHT Related Queries</fullName>
+                <default>false</default>
+                <label>WHT Related Queries</label>
+            </value>
+            <value>
+                <fullName>Client POA&apos;s</fullName>
+                <default>false</default>
+                <label>Client POA&apos;s</label>
+            </value>
+            <value>
+                <fullName>Request for Copy Of SLA</fullName>
+                <default>false</default>
+                <label>Request for Copy Of SLA</label>
+            </value>
+            <value>
+                <fullName>DC Auto Borrow Billing Query</fullName>
+                <default>false</default>
+                <label>DC Auto Borrow Billing Query</label>
+            </value>
+            <value>
+                <fullName>DC Debt Description</fullName>
+                <default>false</default>
+                <label>DC Debt Description</label>
+            </value>
+            <value>
+                <fullName>DC Debit of Fees Not Reflecting</fullName>
+                <default>false</default>
+                <label>DC Debit of Fees Not Reflecting</label>
+            </value>
+            <value>
+                <fullName>DC Invoice and Debit Do Not Correspond</fullName>
+                <default>false</default>
+                <label>DC Invoice and Debit Do Not Correspond</label>
+            </value>
+            <value>
+                <fullName>DC Invoice Contact Excluded on Mail</fullName>
+                <default>false</default>
+                <label>DC Invoice Contact Excluded on Mail</label>
+            </value>
+            <value>
+                <fullName>DC Invoice Do Not Correspond</fullName>
+                <default>false</default>
+                <label>DC Invoice Do Not Correspond</label>
+            </value>
+            <value>
+                <fullName>DC Loading RPTINV3 Report</fullName>
+                <default>false</default>
+                <label>DC Loading RPTINV3 Report</label>
+            </value>
+            <value>
+                <fullName>DC Loading RPTINV4 Report</fullName>
+                <default>false</default>
+                <label>DC Loading RPTINV4 Report</label>
+            </value>
+            <value>
+                <fullName>DC SSI Set Up Query</fullName>
+                <default>false</default>
+                <label>DC SSI Set Up Query</label>
+            </value>
+            <value>
+                <fullName>DC Transition</fullName>
+                <default>false</default>
+                <label>DC Transition</label>
+            </value>
+            <value>
+                <fullName>DC Request for Invoice</fullName>
+                <default>false</default>
+                <label>DC Request for Invoice</label>
+            </value>
+            <value>
+                <fullName>DC Request to Debit Account</fullName>
+                <default>false</default>
+                <label>DC Request to Debit Account</label>
+            </value>
+            <value>
+                <fullName>DC Request for Outstanding Charges</fullName>
+                <default>false</default>
+                <label>DC Request for Outstanding Charges</label>
+            </value>
+            <value>
+                <fullName>DC Req To Waive Transaction Fees</fullName>
+                <default>false</default>
+                <label>DC Req To Waive Transaction Fees</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

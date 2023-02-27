@@ -1,0 +1,18 @@
+<aura:component implements="lightning:actionOverride">
+
+    <aura:attribute name="component" type="String" access="public" required="true" default="c:NewOpportunity"/>
+    <aura:attribute name="attributes" type="Object" access="public"/>
+
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
+    <ui:scrollerWrapper class="scrollerSize slds-scrollable_y">
+        <div class="innerDivWrapper">
+            <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open" aria-modal="true"
+                     style="position: relative; top: -50px;">
+                <div class="slds-modal__container" aura:id="modalContainer">
+
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </div>
+    </ui:scrollerWrapper>
+</aura:component>

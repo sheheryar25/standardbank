@@ -1,0 +1,119 @@
+<aura:component controller="PBBLifeStyleConversationCtrl" >
+    <aura:attribute name="clientId" type="string" access="public"/>
+    <aura:attribute name="respMap" type="Map" access="private"/>
+    <aura:attribute name="catFieldMap" type="Map" access="private"/>
+    <aura:attribute name="highValueFieldMap" type="Map" access="private"/>
+    <aura:attribute name="resplist" type="list" access="private"/>
+    <aura:attribute name="reasMap" type="Map" access="private"/>
+    <aura:attribute name="options" type="List" access="private"/>
+    <aura:attribute name="recordData" type="Conversation__c[]" access="private"/>
+    <aura:attribute name="isLoading" type="boolean" default='false' access="private"/>
+    <aura:attribute name="currentSavedId" type="string"  access="private" />
+    <lightning:notificationsLibrary aura:id="notifLib"/>
+    <ltng:require scripts="{!$Resource.UTL_JavaScript}" afterScriptsLoaded="{!c.init}"/>
+    <aura:handler name="pickListEvent" event="c:UTL_PickList_Event" action="{!c.handleComponentEvent}"/>
+
+    <aura:iteration items="{!v.recordData}" var="rec" indexVar="i">
+    <lightning:card >
+    <aura:renderIf isTrue="{!and(v.isLoading,rec.Id==v.currentSavedId) }">
+        <lightning:spinner class="sslds-is-relative" alternativeText="Loading" size="medium" />
+    </aura:renderIf> 
+        <aura:set attribute="title">
+            
+            <a href="{!'/'+rec.Id}">{!rec.Name }</a>
+        </aura:set>
+        <aura:set attribute="actions">      
+                <button type="button" class="slds-button slds-button_brand" data-id="{!rec.Id}"  onclick = "{! c.saveRecord}">Save</button>
+        </aura:set>
+        <div class="slds-section slds-is-open">
+                        
+            <lightning:layout multipleRows="true" >
+
+                <lightning:layoutItem size="12" padding="around-small">
+                    <div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent">
+                        <span class="slds-form-element__label">Description</span>
+                        <div class="slds-form-element__control">
+                            <div class="slds-form-element__static">{!rec.Description__c}</div>
+                        </div>
+                    </div>
+                </lightning:layoutItem>
+            </lightning:layout>
+            
+             <lightning:layout multipleRows="true" >
+                 
+                 <lightning:layoutItem size="4" padding="around-small">
+                     <div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent">
+                         <span class="slds-form-element__label">Category</span>
+                         <div class="slds-form-element__control">
+                             <div class="slds-form-element__static">{!rec.Category__c}</div>
+                         </div>
+                     </div>
+                 </lightning:layoutItem>
+                 
+                 <lightning:layoutItem size="4" padding="around-small">
+                     <div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent">
+                         <span class="slds-form-element__label">Sub-Category</span>
+                         <div class="slds-form-element__control">
+                             <div class="slds-form-element__static">{!rec.Subcategory__c}</div>
+                         </div>
+                     </div>
+                 </lightning:layoutItem>
+                 
+
+                 <lightning:layoutItem size="4" padding="around-small">                     
+                     <div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent">
+                         <span class="slds-form-element__label">Expected OI</span>
+                         <div class="slds-form-element__control">
+                             <div class="slds-form-element__static">{!rec.Expected_OI__c}</div>
+                         </div>
+                     </div>
+                 </lightning:layoutItem>
+            </lightning:layout>
+            
+            
+            <lightning:layout multipleRows="true" >
+                <lightning:layoutItem size="6" padding="around-small">
+                    <c:UTL_PickList showSearch="true" recId="{!rec.Id}"  isDependent="true" fieldName="Response" dependencyMap="{!rec.reasMap}" returnedDependency="{!rec.reaslist}" assignTo="{!rec.Response__c}"  options="{!rec.resplist}" />
+                    <aura:if isTrue="{!rec.isInValidResp}">
+                        <p style="color:#c23934;white-space: pre-wrap;">Complete this field</p>
+                    </aura:if>
+                </lightning:layoutItem>
+                
+                <lightning:layoutItem size="6" padding="around-small">
+                    <c:UTL_PickList showSearch="true"   fieldName="Reason" assignTo="{!rec.Reason__c}"   options="{!rec.reaslist}" />
+                    <aura:if isTrue="{!rec.isInValidReas}">
+                        <p style="color:#c23934;white-space: pre-wrap;">Complete this field</p>
+                    </aura:if>
+                </lightning:layoutItem>
+                
+                
+                
+                
+                <lightning:layoutItem size="6" padding="around-small">
+                    <lightning:textarea  aura:id="Comments" name="Comments" label="Comments" value="{!rec.Comments__c}" required="false" />
+                    <aura:if isTrue="{!rec.isInValidComment}">
+                        <p style="color:#c23934;white-space: pre-wrap;">Complete this field</p>
+                    </aura:if>
+                    
+                </lightning:layoutItem>
+                
+                
+                
+                
+                <lightning:layoutItem size="6" padding="around-small">
+                    <lightning:input type="datetime" value="{!rec.Future_Contact_Date__c}" name="input1"  label="Future Contact Date" />
+                    
+                </lightning:layoutItem>
+                
+            </lightning:layout>
+            
+        </div>
+        
+    </lightning:card>
+    </aura:iteration>
+    <aura:if isTrue="{!v.recordData.length==0}">
+        <lightning:card >
+            <div class="slds-text-align_center slds-text-heading_medium">Client has no open conversations</div>
+        </lightning:card>
+    </aura:if>
+</aura:component>

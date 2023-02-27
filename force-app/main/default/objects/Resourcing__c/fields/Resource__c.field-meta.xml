@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Resource__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Name of the banker who has done the work. Same value as owner field. [SFP-4974]</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Name of the banker</inlineHelpText>
+    <label>Resource</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>User.Business_Unit__c</field>
+            <operation>equals</operation>
+            <valueField>$User.Business_Unit__c</valueField>
+        </filterItems>
+        <isOptional>true</isOptional>
+    </lookupFilter>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Resourcings</relationshipName>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

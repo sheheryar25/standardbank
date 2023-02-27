@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Milestone__c</fullName>
+    <externalId>false</externalId>
+    <label>Milestone</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Opportunity_Type__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Identify and engage merger target</fullName>
+                <default>false</default>
+                <label>Identify and engage merger target</label>
+            </value>
+            <value>
+                <fullName>Detailed evaluation of merger target and merger discussions</fullName>
+                <default>false</default>
+                <label>Detailed evaluation of merger target and merger discussions</label>
+            </value>
+            <value>
+                <fullName>Due diligence</fullName>
+                <default>false</default>
+                <label>Due diligence</label>
+            </value>
+            <value>
+                <fullName>Execute transaction</fullName>
+                <default>false</default>
+                <label>Execute transaction</label>
+            </value>
+            <value>
+                <fullName>Transaction awaiting shareholder &amp; regulatory approvals</fullName>
+                <default>false</default>
+                <label>Transaction awaiting shareholder &amp; regulatory approvals</label>
+            </value>
+            <value>
+                <fullName>Conditions precedent met: Deal closed</fullName>
+                <default>false</default>
+                <label>Conditions precedent met: Deal closed</label>
+            </value>
+            <value>
+                <fullName>Shareholder engagement</fullName>
+                <default>false</default>
+                <label>Shareholder engagement</label>
+            </value>
+            <value>
+                <fullName>Identify and engage M&amp;A target</fullName>
+                <default>false</default>
+                <label>Identify and engage M&amp;A target</label>
+            </value>
+            <value>
+                <fullName>Detailed evaluation of target</fullName>
+                <default>false</default>
+                <label>Detailed evaluation of target</label>
+            </value>
+            <value>
+                <fullName>Non-binding offer submitted</fullName>
+                <default>false</default>
+                <label>Non-binding offer submitted</label>
+            </value>
+            <value>
+                <fullName>Offer through to next round</fullName>
+                <default>false</default>
+                <label>Offer through to next round</label>
+            </value>
+            <value>
+                <fullName>Binding offer submitted</fullName>
+                <default>false</default>
+                <label>Binding offer submitted</label>
+            </value>
+            <value>
+                <fullName>Prepare company for sale</fullName>
+                <default>false</default>
+                <label>Prepare company for sale</label>
+            </value>
+            <value>
+                <fullName>Send IM to interested buyers</fullName>
+                <default>false</default>
+                <label>Send IM to interested buyers</label>
+            </value>
+            <value>
+                <fullName>Expressions of interest received</fullName>
+                <default>false</default>
+                <label>Expressions of interest received</label>
+            </value>
+            <value>
+                <fullName>Formal offers received</fullName>
+                <default>false</default>
+                <label>Formal offers received</label>
+            </value>
+            <value>
+                <fullName>Offer accepted &amp; execute transaction</fullName>
+                <default>false</default>
+                <label>Offer accepted &amp; execute transaction</label>
+            </value>
+            <value>
+                <fullName>Engage and advise company on BEE transaction</fullName>
+                <default>false</default>
+                <label>Engage and advise company on BEE transaction</label>
+            </value>
+            <value>
+                <fullName>Negotiate structure and pricing</fullName>
+                <default>false</default>
+                <label>Negotiate structure and pricing</label>
+            </value>
+            <value>
+                <fullName>Funding confirmation</fullName>
+                <default>false</default>
+                <label>Funding confirmation</label>
+            </value>
+            <value>
+                <fullName>Regulatory engagement</fullName>
+                <default>false</default>
+                <label>Regulatory engagement</label>
+            </value>
+            <value>
+                <fullName>Shareholder approvals (if applicable)</fullName>
+                <default>false</default>
+                <label>Shareholder approvals (if applicable)</label>
+            </value>
+            <value>
+                <fullName>Transaction awaiting regulatory approval</fullName>
+                <default>false</default>
+                <label>Transaction awaiting regulatory approval</label>
+            </value>
+            <value>
+                <fullName>Engage and prepare company for listing</fullName>
+                <default>false</default>
+                <label>Engage and prepare company for listing</label>
+            </value>
+            <value>
+                <fullName>Due diligence/ Documentation</fullName>
+                <default>false</default>
+                <label>Due diligence/ Documentation</label>
+            </value>
+            <value>
+                <fullName>Public launch (ITF)</fullName>
+                <default>false</default>
+                <label>Public launch (ITF)</label>
+            </value>
+            <value>
+                <fullName>IPO roadshows</fullName>
+                <default>false</default>
+                <label>IPO roadshows</label>
+            </value>
+            <value>
+                <fullName>Book building and allocations</fullName>
+                <default>false</default>
+                <label>Book building and allocations</label>
+            </value>
+            <value>
+                <fullName>Company IPOs, settlement and after-market stabilisation</fullName>
+                <default>false</default>
+                <label>Company IPOs, settlement and after-market stabilisation</label>
+            </value>
+            <value>
+                <fullName>Deal closed</fullName>
+                <default>false</default>
+                <label>Deal closed</label>
+            </value>
+            <value>
+                <fullName>Engage and advise company on equity capital raise/ sell-down strategy</fullName>
+                <default>false</default>
+                <label>Engage and advise company on equity capital raise/ sell-down strategy</label>
+            </value>
+            <value>
+                <fullName>Offering documentation</fullName>
+                <default>false</default>
+                <label>Offering documentation</label>
+            </value>
+            <value>
+                <fullName>Investor engagement</fullName>
+                <default>false</default>
+                <label>Investor engagement</label>
+            </value>
+            <value>
+                <fullName>Bookbuild and allocations</fullName>
+                <default>false</default>
+                <label>Bookbuild and allocations</label>
+            </value>
+            <value>
+                <fullName>Shares listed and settlement</fullName>
+                <default>false</default>
+                <label>Shares listed and settlement</label>
+            </value>
+            <value>
+                <fullName>Engage and prepare company for rights offer</fullName>
+                <default>false</default>
+                <label>Engage and prepare company for rights offer</label>
+            </value>
+            <value>
+                <fullName>Public launch</fullName>
+                <default>false</default>
+                <label>Public launch</label>
+            </value>
+            <value>
+                <fullName>Management roadshow</fullName>
+                <default>false</default>
+                <label>Management roadshow</label>
+            </value>
+            <value>
+                <fullName>Closing of subscription period</fullName>
+                <default>false</default>
+                <label>Closing of subscription period</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Merger - Public</controllingFieldValue>
+            <controllingFieldValue>Merger - Private</controllingFieldValue>
+            <valueName>Identify and engage merger target</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Merger - Public</controllingFieldValue>
+            <controllingFieldValue>Merger - Private</controllingFieldValue>
+            <valueName>Detailed evaluation of merger target and merger discussions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Merger - Public</controllingFieldValue>
+            <controllingFieldValue>BEE</controllingFieldValue>
+            <controllingFieldValue>Merger - Private</controllingFieldValue>
+            <controllingFieldValue>Sell Side - Public</controllingFieldValue>
+            <controllingFieldValue>Sell Side - Private</controllingFieldValue>
+            <valueName>Due diligence</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Merger - Public</controllingFieldValue>
+            <controllingFieldValue>Merger - Private</controllingFieldValue>
+            <controllingFieldValue>Buy Side - Public</controllingFieldValue>
+            <controllingFieldValue>Buy Side - Private</controllingFieldValue>
+            <controllingFieldValue>Sell Side - Public</controllingFieldValue>
+            <controllingFieldValue>Sell Side - Private</controllingFieldValue>
+            <valueName>Execute transaction</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Merger - Public</controllingFieldValue>
+            <controllingFieldValue>Merger - Private</controllingFieldValue>
+            <controllingFieldValue>Buy Side - Public</controllingFieldValue>
+            <controllingFieldValue>Buy Side - Private</controllingFieldValue>
+            <controllingFieldValue>Sell Side - Public</controllingFieldValue>
+            <controllingFieldValue>Sell Side - Private</controllingFieldValue>
+            <valueName>Transaction awaiting shareholder &amp; regulatory approvals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Merger - Public</controllingFieldValue>
+            <controllingFieldValue>BEE</controllingFieldValue>
+            <controllingFieldValue>Merger - Private</controllingFieldValue>
+            <controllingFieldValue>Buy Side - Public</controllingFieldValue>
+            <controllingFieldValue>Buy Side - Private</controllingFieldValue>
+            <controllingFieldValue>Sell Side - Public</controllingFieldValue>
+            <controllingFieldValue>Sell Side - Private</controllingFieldValue>
+            <valueName>Conditions precedent met: Deal closed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Merger - Public</controllingFieldValue>
+            <valueName>Shareholder engagement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BEE</controllingFieldValue>
+            <controllingFieldValue>Sell Side - Public</controllingFieldValue>
+            <controllingFieldValue>Sell Side - Private</controllingFieldValue>
+            <valueName>Expressions of interest received</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BEE</controllingFieldValue>
+            <controllingFieldValue>Sell Side - Private</controllingFieldValue>
+            <valueName>Offer accepted &amp; execute transaction</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BEE</controllingFieldValue>
+            <valueName>Engage and advise company on BEE transaction</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BEE</controllingFieldValue>
+            <valueName>Negotiate structure and pricing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BEE</controllingFieldValue>
+            <valueName>Funding confirmation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BEE</controllingFieldValue>
+            <valueName>Regulatory engagement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BEE</controllingFieldValue>
+            <valueName>Shareholder approvals (if applicable)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BEE</controllingFieldValue>
+            <valueName>Transaction awaiting regulatory approval</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ABB</controllingFieldValue>
+            <controllingFieldValue>Rights Offer</controllingFieldValue>
+            <controllingFieldValue>IPO</controllingFieldValue>
+            <valueName>Deal closed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ABB</controllingFieldValue>
+            <valueName>Engage and advise company on equity capital raise/ sell-down strategy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ABB</controllingFieldValue>
+            <valueName>Offering documentation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ABB</controllingFieldValue>
+            <valueName>Investor engagement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ABB</controllingFieldValue>
+            <valueName>Bookbuild and allocations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ABB</controllingFieldValue>
+            <valueName>Shares listed and settlement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rights Offer</controllingFieldValue>
+            <controllingFieldValue>IPO</controllingFieldValue>
+            <valueName>Due diligence/ Documentation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rights Offer</controllingFieldValue>
+            <valueName>Engage and prepare company for rights offer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rights Offer</controllingFieldValue>
+            <valueName>Public launch</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rights Offer</controllingFieldValue>
+            <valueName>Management roadshow</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rights Offer</controllingFieldValue>
+            <valueName>Closing of subscription period</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPO</controllingFieldValue>
+            <valueName>Engage and prepare company for listing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPO</controllingFieldValue>
+            <valueName>Public launch (ITF)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPO</controllingFieldValue>
+            <valueName>IPO roadshows</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPO</controllingFieldValue>
+            <valueName>Book building and allocations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IPO</controllingFieldValue>
+            <valueName>Company IPOs, settlement and after-market stabilisation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Buy Side - Public</controllingFieldValue>
+            <controllingFieldValue>Buy Side - Private</controllingFieldValue>
+            <valueName>Identify and engage M&amp;A target</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Buy Side - Public</controllingFieldValue>
+            <controllingFieldValue>Buy Side - Private</controllingFieldValue>
+            <valueName>Detailed evaluation of target</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Buy Side - Public</controllingFieldValue>
+            <controllingFieldValue>Buy Side - Private</controllingFieldValue>
+            <valueName>Non-binding offer submitted</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Buy Side - Public</controllingFieldValue>
+            <controllingFieldValue>Buy Side - Private</controllingFieldValue>
+            <valueName>Offer through to next round</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Buy Side - Public</controllingFieldValue>
+            <controllingFieldValue>Buy Side - Private</controllingFieldValue>
+            <valueName>Binding offer submitted</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sell Side - Public</controllingFieldValue>
+            <controllingFieldValue>Sell Side - Private</controllingFieldValue>
+            <valueName>Prepare company for sale</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sell Side - Public</controllingFieldValue>
+            <controllingFieldValue>Sell Side - Private</controllingFieldValue>
+            <valueName>Send IM to interested buyers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sell Side - Public</controllingFieldValue>
+            <valueName>Formal offers received</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

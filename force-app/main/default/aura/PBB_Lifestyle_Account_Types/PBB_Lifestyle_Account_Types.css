@@ -1,0 +1,65 @@
+/**
+ * Created by Mykhailo Reznyk on 22.11.2019.
+ */
+
+.THIS{
+    overflow-x: hidden;
+    position: relative;
+    background: #FFFFFF;
+    border: 1px solid #DDDBDA;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.10);
+    border-radius: 4px;
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    height: 100%;
+    padding-left: 5px;
+}
+
+.THIS .slds-col{
+    padding-left: 5px;
+    padding-right: 5px;
+    overflow-wrap: break-word;
+}
+
+.THIS .componentGrid {
+    position: relative;
+}
+
+.THIS .componentTitle{
+    padding-top: 10px;
+    padding-left: 10px;
+    font-weight: 400;
+}
+
+.THIS .productItemIcon{
+    background-color: rgb(86,188,157);
+}
+
+.THIS lightning-icon, .THIS .productCategory{
+     cursor: pointer;
+}
+
+.THIS .chevronIcon {
+     position: absolute;
+}
+
+.THIS .chevronrightIcon {
+     right: 0px;
+     top: 50%;
+     transform: translateY(-50%);
+}
+
+.THIS .chevronleftIcon {
+     left:0px;
+     top: 50%;
+     transform: translateY(-50%);
+}
+
+.THIS .hide {
+    display: none;
+}
+
+.THIS .show {
+    display: block;
+}

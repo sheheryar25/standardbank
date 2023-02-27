@@ -1,0 +1,6 @@
+<design:component>
+    <design:attribute name="showHero" label="Show Hero"/>
+    <design:attribute name="showHeroFullWidth" label="Make Hero full screen width"/>
+    <design:attribute name="useCompactHeader" label="Use compact header (not custom header)"/>
+    <design:attribute name="showFullWidthBlueFirstRow" label="Show full width blue first row"/>
+</design:component>

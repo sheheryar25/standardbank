@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Group_Parent_CIB_Target_Client__c</fullName>
+    <description>This Group Parent client was identified during the budget process. (US-2236)</description>
+    <externalId>false</externalId>
+    <formula>If(RecordTypeId = &quot;012200000004aix&quot;, CIB_Target_Client__c,If(Not(Group_Parent__c = &quot;&quot;) , Group_Parent__r.CIB_Target_Client__c,false))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>This Group Parent client was identified as an Individually Budgeted Client (IBC) during the budget process.</inlineHelpText>
+    <label>Group Parent IBC</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

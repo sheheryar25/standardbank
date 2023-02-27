@@ -1,0 +1,97 @@
+<aura:component controller="StdBank_Ltn_Ecosystem">
+
+	<!--Public Attributes-->
+	<aura:attribute name="accountName" type="String" access="public"/>
+	<aura:attribute name="banked" type="Boolean" default="true"/>
+	<aura:attribute name="prh" type="String" access="public" default="null"/>
+
+	<!--Private Attributes -->
+	<aura:attribute name="account" type="Account" access="private"
+					description="This will hold the account object"/>
+	<aura:attribute name="isLoading" type="Boolean" default="true" access="private"
+					description="This will be true when component is waiting for data to load"/>
+	<aura:attribute name="isWaiting" type="Boolean" default="false" access="private"
+					description="This will be used when component is waiting"/>
+	<aura:attribute name="currentUserId" type="String" access="private"
+					description="This will hold the current user's ID"/>
+	<aura:attribute name="recordTypeId" type="Id" access="private"
+					description="This will hold the record type ID"/>
+	<aura:attribute name="options" type="Object[]" access="private"
+					description="This will hold list of picklist options"/>
+	<aura:attribute name="enableSave" type="Boolean" default="false" access="private"
+					description="If true, the Save button will be enabled"/>
+	<aura:attribute name="hasError" type="Boolean" default="false" access="private" />
+	<aura:attribute name="errorMessage" type="String" access="private" />
+	<aura:attribute name="client_coordinator" type="String" access="private"/>
+
+	<aura:registerEvent name="oncancel" type="c:ecosystemCancel" />
+	<aura:registerEvent name="oncreated" type="c:ecosystemCreated" />
+
+	<aura:handler name="init" action="{!c.doInit}" value="{!this}" />
+
+	<section role="dialog" class="slds-modal slds-fade-in-open">
+		<div class="slds-modal__container">
+			<div class="slds-is-relative">
+				<aura:if isTrue="{!or(v.isWaiting, v.isLoading)}">
+					<lightning:spinner variant="brand" size="medium" alternativeText="Loading"/>
+				</aura:if>
+				<header class="slds-modal__header">
+					<aura:if isTrue="{!v.banked}">
+						<h2 class="slds-text-heading_medium slds-hyphenate" style="font-family:verdana;color:Gray">Create Known Banked Client</h2>
+					<aura:set attribute="else">
+						<h2 class="slds-text-heading_medium slds-hyphenate" style="font-family:verdana;color:Gray">Create Known Unbanked Client</h2>
+					</aura:set>
+					</aura:if>
+				</header>
+				<div class="slds-modal__content slds-p-around_medium">
+					<aura:if isTrue="{!v.hasError}">
+						<figure class="slds-box slds-m-bottom_medium">
+						  	<div class="slds-media slds-media_center">
+						    	<div class="slds-media__figure">
+									<lightning:icon iconName="utility:warning" variant="error" alternativeText="warning" size="small" />
+								</div>
+								<div class="slds-media__body">
+									<p class="slds-text-color_error">{!v.errorMessage}</p>
+								</div>
+							</div>
+						</figure>
+					</aura:if>
+					<div class="slds-form slds-form_horizontal">
+						<div class="slds-form-element">
+							<lightning:input aura:id="account-name" label="Name" required="true" onchange="{!c.onNameChange}" value="{!v.accountName}"/>
+						</div>
+						<aura:if isTrue="{!v.banked}">
+							<div class="slds-form-element">
+								<lightning:input aura:id="account-cif" label="CIF/BPID" required="true" onchange="{!c.onCifChange}" value=""/>
+							</div>
+						</aura:if>
+						<div class="slds-form slds-form-element">
+							<lightning:select aura:id="select-type" onchange="{!c.onSelectChange}" label="Primary Relationship Holder" required="true">
+								<option disabled="{!true}" selected="{!true}">--None--</option>
+								<aura:if isTrue="{!empty(v.prh)}">
+									<aura:iteration items="{!v.options}" var="current_option">
+										<option value="{!current_option.value}" disabled="{!and(v.prh!=current_option.value,v.prh!=null)}" selected="{!v.prh == current_option.value}">{!current_option.label}</option>
+									</aura:iteration>
+									<aura:set attribute="else">
+										<option value="{!v.prh}"  selected="true">{!v.prh}</option>
+									</aura:set>
+								</aura:if>
+
+							</lightning:select>
+						</div>
+						<aura:if isTrue="{!not(v.banked)}">
+							<div class="slds-form-element">
+								<c:UTL_LookupField required="{!true}"  sObjectName="Account" fieldName="Client_Co_ordinator__c"
+												   fieldLabel="Proposed Client Coordinator" assignTo="{!v.client_coordinator}" onchange="{!c.onPCCChange}"/>
+							</div>
+						</aura:if>
+					</div>
+				</div>
+				<footer class="slds-modal__footer">
+					<lightning:button variant="neutral" label="Cancel" onclick="{!c.onCancel}"/>
+					<lightning:button variant="brand" label="Save" disabled="{!not( v.enableSave )}" onclick="{!c.onSave}"/>
+				</footer>
+			</div>
+		</div>
+	</section>
+</aura:component>

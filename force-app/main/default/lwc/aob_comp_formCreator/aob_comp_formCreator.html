@@ -1,0 +1,72 @@
+<template>
+    <div  class="aob_card_container slds-p-horizontal_large slds-p-vertical_x-large ao-border-radius">
+         <!--Form Header-->
+         <c-aob_comp_form-header put-title-left="true" title={screenTitle} sub-title={screenSubtitle}>
+        </c-aob_comp_form-header>
+        <c-aob_comp_spinner if:false={isLoaded} ></c-aob_comp_spinner>
+        <template for:each={sections} for:item="section" for:index="sectionIndex">
+                <div if:true={section.title} key={section.id} class="aob_screen-section-title slds-align_absolute-center aob_border-bottom">
+                    {section.title}</div>
+                <div key={section.id} class="slds-grid slds-gutters_large slds-wrap">
+                <template for:each={section.fields} for:item="field" for:index="index">
+                    <div key={field} class={section.gridClass} if:false={field.isHidden}>
+                        <input if:true={field.isCheckbox} type="checkbox" name={field.name} id={field.id}  onchange={genericFieldChange}/>
+                        <label if:true={field.isCheckbox} class="slds-checkbox__label" for={field.id}>
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">{field.label}</span>
+                          </label>
+                        <label if:false={field.isCheckbox} class="aob_screen-field-label slds-m-bottom_none">{field.label}
+                            <c-aob_comp_tooltip if:true={field.helpTxt} message={field.helpTxt}>
+                            </c-aob_comp_tooltip>
+                        </label>
+                        <lightning-input if:true={field.isInput} key={field.id}
+                                        placeholder={field.placeholder} type="text"
+                                        variant="label-hidden"
+                                        message-when-value-missing={field.errorMesage}
+                                        data-name={field.name}
+                                        message-when-pattern-mismatch={field.errorMesage}
+                                        pattern={field.pattern}
+                                        data-error={field.errorMessage}
+                                        onchange={genericFieldChange}
+                                        ></lightning-input>
+                        <div if:true={field.isOutput}> {field.value}</div>
+                        <c-aob_comp_acpicklist if:true={field.isCombobox} sapfield={field.mriTable} 
+                                                name={field.name}
+                                                missing-value-message={field.errorMessage}
+                                                placeholder="Please select" onchange={genericComponentChange}></c-aob_comp_acpicklist>
+                        <div if:true={field.isMultiselect}>
+                            <c-aob_comp_multiselectfilter sapfield={field.mriTable}
+                                                    required={field.isRequired}
+                                                    name={field.name}
+                                                    maxselected={field.maxSelected}
+                                                    missing-value-message={field.errorMessage}
+                                                    placeholder="Please select" onchange={multiselectCompChange}></c-aob_comp_multiselectfilter>
+                            <p if:true={getMsError} class="aob_error_input_label">{multiselectError}</p> 
+                        </div>
+                        <div if:true={field.isRadio} class="slds-grid aob_form_row aob_grid_sm">
+                            <template for:each={field.options} for:item="radioItem" for:index="radioIndex">
+                                <div key={radioItem.id} class="slds-p-right_xx-large">
+                                    <input type="radio"  data-name={field.name} data-value={radioItem.value} data-id={field.id} data-show={field.childShowingValue} name={field.id} onchange={genericRadioChange}>
+                                    <label class="aob_screen-section-paragraph" for={field.id}  >
+                                        {radioItem.label}</label>
+                                </div>
+                            </template>  <br/>
+                        </div>
+
+                        <lightning-formatted-rich-text if:true={field.image} value={field.image}></lightning-formatted-rich-text>
+                        <p key={field} class="aob_error_input_label" if:true={field.showError}>{field.errorMessage}</p>
+                        <c-aob_comp_tax-countries if:true={field.isTax} data-name="tax" onchange={genericComponentChange}></c-aob_comp_tax-countries>
+                        <p if:true={field.isTax} class="aob_error_input_label">{taxListError}</p>                  
+                    </div>
+                </template>
+            </div>
+        </template>
+        <!--Navigation Buttons-->
+        <div if:true={isLoaded} class="aob_display-flex aob_mobile_1_of_1 slds-size_1-of-1 aob_margin_horizontal_auto slds-m-vertical_small aob_navigation_buttons">
+            <lightning-button class="slds-size_1-of-2 aob_mobile_1_of_1 aob_margin_horizontal_auto slds-m-vertical_xx-small aob_text_align_center slds-p-horizontal_small"
+            variant="neutral" label="Back" title="Back" onclick={backToPreviousPage}></lightning-button>
+            <lightning-button class="slds-size_1-of-2 aob_mobile_1_of_1 aob_margin_horizontal_auto slds-m-vertical_xx-small aob_text_align_center slds-p-horizontal_small"
+            variant="brand" label="continue" title="continue" onclick={continueToNextPage}></lightning-button>
+        </div>
+    </div>
+</template>

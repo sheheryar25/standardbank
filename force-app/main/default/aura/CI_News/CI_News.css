@@ -1,0 +1,27 @@
+.THIS .slick-prev:before {
+  color: rgb(94, 149, 201);
+}
+
+.THIS .slick-next:before {
+    color: rgb(94, 149, 201);
+}
+
+.THIS .button_selected {
+     text-decoration: none ;
+     color: rgb(0, 95, 178) ;
+     background-color: rgb(244, 246, 249) ;
+}
+
+.THIS .article_container {
+  min-width: 250px;
+  max-width: 250px;
+  max-height: 140px;
+}
+
+.THIS .desktop_background {
+    background-color: white;
+}
+
+.THIS .help-text {
+    vertical-align: super;
+}
