@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Competitor_Name__c</fullName>
+    <description>SFP-9325 [c] This field is introduced for CVCA feature to allow printable view of the Client Page similar to the CVCA Template.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Name of another Bank that the Client is intending on approaching or has approached for the provision of the product or service</inlineHelpText>
+    <label>Competitor Name</label>
+    <length>80</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

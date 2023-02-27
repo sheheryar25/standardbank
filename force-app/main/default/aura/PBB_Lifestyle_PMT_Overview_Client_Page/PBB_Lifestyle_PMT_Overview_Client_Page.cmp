@@ -1,0 +1,175 @@
+<!--
+ - Created by Mykhailo Reznyk on 04.11.2019.
+ -->
+
+<aura:component controller="PBB_Lifestyle_PMT_Overview_Controller" description="PBB_Lifestyle_PMT_Overview_Client_Page" implements="force:hasRecordId,flexipage:availableForAllPageTypes">
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+ 
+    <aura:attribute access="private" name="revenueProfit" type="Revenue_and_Profitability__c"/>
+
+    <div class="c-container">
+
+        <div class="testGrid slds-grid slds-wrap">
+            <div class="componentTitle slds-text-heading_small slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_1-of-1">{#$Label.c.PBB_Client_Revenue_Component_Title}</div>
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_1-of-7 slds-p-vertical_small">
+                <div class="layoutColumn">
+                    <p class="YTDrow slds-text-heading_medium slds-p-vertical_x-small">{#$Label.c.PBB_Client_Revenue_Component_YTD}</p>
+                    <p class="monthRow slds-text-body_small slds-p-vertical_x-small ">
+                        <aura:if isTrue="{!v.revenueProfit.PMT_extract_date__c}">
+                                <lightning:formattedDateTime value="{!v.revenueProfit.PMT_extract_date__c}" year="numeric" month="long"/>
+                            <aura:set attribute="else">
+                                -
+                            </aura:set>
+                        </aura:if>
+                        &nbsp;{#$Label.c.PBB_Currency}
+                    </p>
+                    <p class="columnTitle slds-p-vertical_x-small" style="display:inline-block"></p>
+                </div>
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3 slds-large-size_1-of-7 slds-p-vertical_small">
+                <div class="layoutColumn">
+                    <p class="YTDrow slds-text-heading_medium slds-p-vertical_x-small">
+                        <aura:if isTrue="{!or(v.revenueProfit.YTD_Operating_Income__c, v.revenueProfit.YTD_Operating_Income__c == 0)}">
+                             <lightning:formattedNumber value="{!v.revenueProfit.YTD_Operating_Income__c}" maximumFractionDigits="2"/>
+                            <aura:set attribute="else">
+                                0
+                            </aura:set>
+                        </aura:if>
+                    </p>
+                    <p class="monthRow slds-text-body_small slds-p-vertical_x-small">
+                        <aura:if isTrue="{!or(v.revenueProfit.Operating_Income__c, v.revenueProfit.Operating_Income__c == 0)}">
+                             <lightning:formattedNumber value="{!v.revenueProfit.Operating_Income__c}" maximumFractionDigits="2"/>
+                            <aura:set attribute="else">
+                                0
+                            </aura:set>
+                        </aura:if>
+                    </p>
+                    <p class="columnTitle slds-text-body_small slds-p-vertical_x-small"> {#$Label.c.PBB_Client_Revenue_Component_OI} <lightning:helptext content="{#$Label.c.PBB_Client_Revenue_Component_OI_Helptext}" /></p>
+
+                </div>
+
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3 slds-large-size_1-of-7 slds-p-vertical_small ">
+                <div class="layoutColumn">
+                    <p class="YTDrow slds-text-heading_medium slds-p-vertical_x-small">
+                        <aura:if isTrue="{!or(v.revenueProfit.YTD_Net_Interest_Income__c, v.revenueProfit.YTD_Net_Interest_Income__c == 0)}">
+                             <lightning:formattedNumber value="{!v.revenueProfit.YTD_Net_Interest_Income__c}" maximumFractionDigits="2"/>
+                            <aura:set attribute="else">
+                                0
+                            </aura:set>
+                        </aura:if>
+                    </p>
+                    <p class="monthRow slds-text-body_small slds-p-vertical_x-small">
+                        <aura:if isTrue="{!or(v.revenueProfit.Net_Interest_Income__c, v.revenueProfit.Net_Interest_Income__c == 0)}">
+                             <lightning:formattedNumber value="{!v.revenueProfit.Net_Interest_Income__c}" maximumFractionDigits="2"/>
+                            <aura:set attribute="else">
+                                0
+                            </aura:set>
+                        </aura:if>
+                    </p>
+                    <p class="columnTitle slds-text-body_small slds-p-vertical_x-small">{#$Label.c.PBB_Client_Revenue_Component_NII} <lightning:helptext content="{#$Label.c.PBB_Client_Revenue_Component_NII_Helptext}" /></p>
+
+                </div>
+
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3 slds-large-size_1-of-7 slds-p-vertical_small">
+                <div class="layoutColumn">
+                    <p class="YTDrow slds-text-heading_medium slds-p-vertical_x-small">
+                        <aura:if isTrue="{!or(v.revenueProfit.YTD_Non_Interest_Revenue__c, v.revenueProfit.YTD_Non_Interest_Revenue__c == 0)}">
+                             <lightning:formattedNumber value="{!v.revenueProfit.YTD_Non_Interest_Revenue__c}" maximumFractionDigits="2"/>
+                            <aura:set attribute="else">
+                                0
+                            </aura:set>
+                        </aura:if>
+                    </p>
+                    <p class="monthRow slds-text-body_small slds-p-vertical_x-small">
+                        <aura:if isTrue="{!or(v.revenueProfit.Non_Interest_Revenue__c, v.revenueProfit.Non_Interest_Revenue__c == 0)}">
+                             <lightning:formattedNumber value="{!v.revenueProfit.Non_Interest_Revenue__c}" maximumFractionDigits="2"/>
+                            <aura:set attribute="else">
+                                0
+                            </aura:set>
+                        </aura:if>
+                    </p>
+                    <p class="columnTitle slds-text-body_small slds-p-vertical_x-small">{#$Label.c.PBB_Client_Revenue_Component_NIR} <lightning:helptext content="{#$Label.c.PBB_Client_Revenue_Component_NIR_Helptext}" /></p>
+
+                </div>
+
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3 slds-large-size_1-of-7 slds-p-vertical_small">
+                <div class="layoutColumn">
+                    <p class="YTDrow slds-text-heading_medium slds-p-vertical_x-small">
+                        <aura:if isTrue="{!or(v.revenueProfit.YTD_Impairments__c, v.revenueProfit.YTD_Impairments__c == 0)}">
+                             <lightning:formattedNumber value="{!v.revenueProfit.YTD_Impairments__c}" maximumFractionDigits="2"/>
+                            <aura:set attribute="else">
+                                0
+                            </aura:set>
+                        </aura:if>
+                    </p>
+                    <p class="monthRow slds-text-body_small slds-p-vertical_x-small">
+                        <aura:if isTrue="{!or(v.revenueProfit.Impairments__c, v.revenueProfit.Impairments__c == 0)}">
+                             <lightning:formattedNumber value="{!v.revenueProfit.Impairments__c}" maximumFractionDigits="2"/>
+                            <aura:set attribute="else">
+                                0
+                            </aura:set>
+                        </aura:if>
+                    </p>
+                    <p class="columnTitle slds-text-body_small slds-p-vertical_x-small">{#$Label.c.PBB_Client_Revenue_Component_Impairments} <lightning:helptext content="{#$Label.c.PBB_Client_Revenue_Component_Impairments_Helptext}" /></p>
+
+                </div>
+
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3 slds-large-size_1-of-7 slds-p-vertical_small">
+                <div class="layoutColumn">
+                    <p class="YTDrow slds-text-heading_medium slds-p-vertical_x-small">
+                        <aura:if isTrue="{!or(v.revenueProfit.YTD_Avarage_Debit_Balance__c, v.revenueProfit.YTD_Avarage_Debit_Balance__c == 0)}">
+                             <lightning:formattedNumber value="{!v.revenueProfit.YTD_Avarage_Debit_Balance__c}" maximumFractionDigits="2"/>
+                            <aura:set attribute="else">
+                                0
+                            </aura:set>
+                        </aura:if>
+                    </p>
+                    <p class="monthRow slds-text-body_small slds-p-vertical_x-small">
+                        <aura:if isTrue="{!or(v.revenueProfit.Avarage_Debit_Balance__c, v.revenueProfit.Avarage_Debit_Balance__c == 0)}">
+                             <lightning:formattedNumber value="{!v.revenueProfit.Avarage_Debit_Balance__c}" maximumFractionDigits="2"/>
+                            <aura:set attribute="else">
+                                0
+                            </aura:set>
+                        </aura:if>
+                    </p>
+                    <p class="columnTitle slds-text-body_small slds-p-vertical_x-small">{#$Label.c.PBB_Client_Revenue_Component_Debit_Balance} <lightning:helptext content="{#$Label.c.PBB_Client_Revenue_Component_Debit_Balance_Helptext}" /></p>
+
+                </div>
+
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3 slds-large-size_1-of-7 slds-p-vertical_small">
+                <div class="layoutColumn">
+                    <p class="YTDrow slds-text-heading_medium slds-p-vertical_x-small">
+                        <aura:if isTrue="{!or(v.revenueProfit.YTD_Avarage_Credit_Balance__c, v.revenueProfit.YTD_Avarage_Credit_Balance__c == 0)}">
+                             <lightning:formattedNumber value="{!v.revenueProfit.YTD_Avarage_Credit_Balance__c}" maximumFractionDigits="2"/>
+                            <aura:set attribute="else">
+                                0
+                            </aura:set>
+                        </aura:if>
+                    </p>
+                    <p class="monthRow slds-text-body_small slds-p-vertical_x-small">
+                        <aura:if isTrue="{!or(v.revenueProfit.Avarage_Credit_Balance__c, v.revenueProfit.Avarage_Credit_Balance__c == 0)}">
+                             <lightning:formattedNumber value="{!v.revenueProfit.Avarage_Credit_Balance__c}" maximumFractionDigits="2"/>
+                            <aura:set attribute="else">
+                                0
+                            </aura:set>
+                        </aura:if>
+                    </p>
+                    <p class="columnTitle slds-text-body_small slds-p-vertical_x-small">{#$Label.c.PBB_Client_Revenue_Component_Credit_Balance} <lightning:helptext content="{#$Label.c.PBB_Client_Revenue_Component_Credit_Balance_Helptext}" /></p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+</aura:component>

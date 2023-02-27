@@ -1,0 +1,131 @@
+<!--
+ - Created by zwalczewska on 15.11.2019.
+ -->
+
+<aura:component description="PBB_Lifestyle_Financial_Information"
+                implements="force:hasRecordId,flexipage:availableForAllPageTypes">
+
+    <aura:attribute access="public" name="data" type="Object" default="{}"/>
+    <aura:attribute access="public" name="accountInfo" type="Object"/>
+
+    <div class="c-container">
+        <div class="componentGrid slds-grid slds-wrap ">
+            <div class="componentTitle slds-text-heading_small slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_1-of-1">{#$Label.c.PBB_Financial_Information_Component_Title}</div>
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3 slds-large-size_1-of-6 slds-p-vertical_small">
+                <div class="columnLayout">
+                    <aura:if isTrue="{!empty(v.data)}">
+                        <lightning:spinner alternativeText="Loading" size="small"/>
+                    </aura:if>
+                </div>
+                <div class="columnLayout">
+                    <p class="firstRow slds-text-heading_medium slds-p-vertical_x-small">
+                        {#$Label.c.PBB_Currency}
+                    </p>
+                    <p class="rowTitle slds-text-body_small slds-p-vertical_x-small">{#$Label.c.PBB_Currency_Word}
+                        <lightning:helptext content="{#$Label.c.PBB_Currency_Helptext}"/>
+                    </p>
+                </div>
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3 slds-large-size_1-of-6 slds-p-vertical_small">
+                <div class="columnLayout">
+                    <p class="firstRow slds-text-heading_medium slds-p-vertical_x-small">
+                        <aura:if isTrue="{!v.data}">
+                            <aura:if
+                                    isTrue="{!or(v.data.riskAndFacilitiesAPIReturnedError, or(v.data.riskAndFacilitiesData == null, v.data.riskAndFacilitiesData.sumOfExpMonthlyCrTurn == null))}">
+                                <c:pbb_fieldErrorMessage
+                                        isEmptyDataError="{!not(v.data.riskAndFacilitiesAPIReturnedError)}"/>
+                                <aura:set attribute="else">
+                                    <lightning:formattedNumber
+                                            value="{!v.data.riskAndFacilitiesData.sumOfExpMonthlyCrTurn}"
+                                            maximumFractionDigits="2"/>
+                                </aura:set>
+                            </aura:if>
+                        </aura:if>
+                    </p>
+                    <p class="rowTitle slds-text-body_small slds-p-vertical_x-small">{#$Label.c.PBB_Financial_Information_Component_ECTO}
+                        <lightning:helptext content="{#$Label.c.PBB_Financial_Information_Component_ECTO_Helptext}"/>
+                    </p>
+                </div>
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3 slds-large-size_1-of-6 slds-p-vertical_small">
+                <div class="columnLayout">
+                    <p class="firstRow slds-text-heading_medium slds-p-vertical_x-small">
+                        <aura:if isTrue="{!v.data}">
+                            <aura:if
+                                    isTrue="{!or(v.data.riskAndFacilitiesAPIReturnedError, or(v.data.riskAndFacilitiesData == null, v.data.riskAndFacilitiesData.sumOfCurrentLimit == null))}">
+                                <c:pbb_fieldErrorMessage
+                                        isEmptyDataError="{!not(v.data.riskAndFacilitiesAPIReturnedError)}"/>
+                                <aura:set attribute="else">
+                                    <lightning:formattedNumber value="{!v.data.riskAndFacilitiesData.sumOfCurrentLimit}" maximumFractionDigits="2"/>
+                                </aura:set>
+                            </aura:if>
+                        </aura:if>
+                    </p>
+                    <p class="rowTitle slds-text-body_small slds-p-vertical_x-small">{#$Label.c.PBB_Financial_Information_Component_Total_Limit}
+                        <lightning:helptext content="{#$Label.c.PBB_Financial_Information_Total_Limit_Helptext}"/>
+                    </p>
+                </div>
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3 slds-large-size_1-of-6 slds-p-vertical_small">
+                <div class="columnLayout">
+                    <p class="firstRow slds-text-heading_medium slds-p-vertical_x-small">
+                        <aura:if isTrue="{!v.data}">
+                            <aura:if
+                                    isTrue="{!or(v.data.balanceAPIReturnedError, or(v.data.balanceData == null, v.data.balanceData.totalExposure == null))}">
+                                <c:pbb_fieldErrorMessage
+                                        isEmptyDataError="{!not(v.data.balanceAPIReturnedError)}"/>
+                                <aura:set attribute="else">
+                                    <lightning:formattedNumber value="{!v.data.balanceData.totalExposure}" maximumFractionDigits="2"/>
+                                </aura:set>
+                            </aura:if>
+                        </aura:if>
+                    </p>
+                    <p class="rowTitle slds-text-body_small slds-p-vertical_x-small">{#$Label.c.PBB_Financial_Information_Component_Total_Exposure}
+                        <lightning:helptext
+                                content="{#$Label.c.PBB_Financial_Information_Component_Total_Exposure_Helptext}"/>
+                    </p>
+                </div>
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3 slds-large-size_1-of-6 slds-p-vertical_small">
+                <div class="columnLayout">
+                    <p class="firstRow slds-text-heading_medium slds-p-vertical_x-small">
+                        <aura:if isTrue="{!v.data}">
+                            <aura:if
+                                    isTrue="{!or(v.data.riskAndFacilitiesAPIReturnedError, or(v.data.riskAndFacilitiesData == null, v.data.riskAndFacilitiesData.ERL1 == null))}">
+                                <c:pbb_fieldErrorMessage
+                                        isEmptyDataError="{!not(v.data.riskAndFacilitiesAPIReturnedError)}"/>
+                                <aura:set attribute="else">
+                                    <lightning:formattedNumber value="{!v.data.riskAndFacilitiesData.ERL1}" maximumFractionDigits="2"/>
+                                </aura:set>
+                            </aura:if>
+                        </aura:if>
+                    </p>
+                    <p class="rowTitle slds-text-body_small slds-p-vertical_x-small">{#$Label.c.PBB_Financial_Information_Component_ERL}
+                        <lightning:helptext content="{#$Label.c.PBB_Financial_Information_Component_ERL_Helptext}"/>
+                    </p>
+                </div>
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3 slds-large-size_1-of-6 slds-p-vertical_small">
+                <div class="columnLayout">
+                    <p class="firstRow slds-text-heading_medium slds-p-vertical_x-small">
+                        <aura:if isTrue="{!v.data}">
+                            <aura:if
+                                    isTrue="{!or(v.data.riskAndFacilitiesAPIReturnedError, or(v.data.riskAndFacilitiesData == null, v.data.riskAndFacilitiesData.headroom == null))}">
+                                <c:pbb_fieldErrorMessage
+                                        isEmptyDataError="{!not(v.data.riskAndFacilitiesAPIReturnedError)}"/>
+                                <aura:set attribute="else">
+                                    <lightning:formattedNumber value="{!v.data.riskAndFacilitiesData.headroom}" maximumFractionDigits="2"/>
+                                </aura:set>
+                            </aura:if>
+                        </aura:if>
+                    </p>
+                    <p class="rowTitle slds-text-body_small slds-p-vertical_x-small">{#$Label.c.PBB_Financial_Information_Component_Headroom}
+                        <lightning:helptext
+                                content="{#$Label.c.PBB_Financial_Information_Component_Headroom_Helptext}"/>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</aura:component>

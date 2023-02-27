@@ -1,0 +1,32 @@
+<aura:component >
+  <aura:attribute name="attachments" type="Object[]" default="[]" />
+  <aura:attribute name="errorAttachments" type="Boolean" default="false" access="private" />
+
+  <aura:handler name="deleteAttachment" event="c:sendEmailDeleteAttachment" action="{!c.onDeleteAttachment}" />
+
+  <div class="{!v.errorAttachments ? 'slds-form-element slds-has-error' : 'slds-form-element'}">
+    <span class="slds-form-element__label">Attachments</span>
+    <div class="slds-form-element__control">
+      <div class="slds-pill_container">
+        <aura:iteration items="{!v.attachments}" var="attachment" indexVar="index">
+          <c:SendEmailAttachment attachment="{!attachment}" index="{!index}" />
+        </aura:iteration>
+      </div>
+      <div class="slds-file-selector slds-file-selector_files">
+        <div aura:id="dropzone" class="slds-file-selector__dropzone" ondragover="{!c.onDragOver}" ondrop="{!c.onDrop}">
+          <input class="slds-file-selector__input slds-assistive-text" accept="*/*" type="file" aura:id="file-upload-input" onchange="{!c.onChangeFileInput}" multiple="true"/>
+          <label class="slds-file-selector__body" onclick="{!c.onClick}">
+            <span class="slds-file-selector__button slds-button slds-button_neutral">
+              <c:svgIcon svgPath="{!$Resource.SLDS202 + '/assets/icons/utility-sprite/svg/symbols.svg#upload'}" class="slds-button__icon slds-button__icon_left" />
+              Upload Files
+            </span>
+            <span class="slds-file-selector__text slds-medium-show">or Drop Files</span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <aura:if isTrue="{!v.errorAttachments}">
+      <div class="slds-form-element__help">Attachments size is too big</div>
+    </aura:if>
+  </div>  
+</aura:component>

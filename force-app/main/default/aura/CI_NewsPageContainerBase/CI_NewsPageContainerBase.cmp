@@ -1,0 +1,10 @@
+<aura:component description="CI_NewsPageContainerBase" extensible="true" abstract="true">
+    <aura:registerEvent name="navToComponent" type="c:CI_EvtNavigateToComponent"/>
+    <aura:registerEvent name="setHeadingEvent" type="c:CI_EvtGeneralCmp"/>
+
+    <ltng:require styles="/resource/MaterialIcons/material-icons.css, /resource/CI_Style/CI_Style.css" scripts="{!$Resource.CI_Utilities + '/Utilities.js'}"
+    />
+    <div>
+            {!v.body}
+    </div>
+</aura:component>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reporting_Priority__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>EN-0855. New field created to track priority opportunities in order to reflect them in monthly Manco reports</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select this opportunity if it should appear on global management reporting</inlineHelpText>
+    <label>Reporting Priority</label>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

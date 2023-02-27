@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Distribution_Party_Bid_Price__c</fullName>
+    <description>Enter the bidding margin that accompanies investor&apos;s indicative appetite level OR margin offered by the seller
+If Variable: input total margin in % above the applicable base rate quoted to client. If below, input with minus symbol.
+If Fixed: input all-in fixed rate in %. 
+If Preference Share: input the applicable % of Prime as quoted to client.
+If Insurance: Weighted Average insurance premium in % US-4609/ SGPRT-623</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter the bidding margin that accompanies investor&apos;s indicative appetite level OR margin offered by the seller
+If Variable: input total margin in % above the applicable base rate quoted to client. If below, input with minus symbol.
+If Fixed: input all-in fixed rate in %. 
+If Preference Share: input the applicable % of Prime as quoted to client.
+If Insurance: Weighted Average insurance premium in %</inlineHelpText>
+    <label>Distribution Party Bid Price (%)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>3</scale>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

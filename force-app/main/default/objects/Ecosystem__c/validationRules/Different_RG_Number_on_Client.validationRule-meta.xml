@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Different_RG_Number_on_Client</fullName>
+    <active>false</active>
+    <description>US-2389 - CommB - Adding Relationship Group name to the Ecosystem</description>
+    <errorConditionFormula>AND(
+  NOT(ISBLANK(Client_Name__c)),
+  Relationship_Group_Number__c !=  Client_Name__r.Relationship_Group_Number__c
+)</errorConditionFormula>
+    <errorDisplayField>Client_Name__c</errorDisplayField>
+    <errorMessage>Relationship Group Number has to be the same on both Ecosystem and Client.</errorMessage>
+</ValidationRule>

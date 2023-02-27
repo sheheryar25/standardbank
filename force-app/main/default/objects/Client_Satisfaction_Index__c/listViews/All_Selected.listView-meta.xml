@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Selected</fullName>
+    <columns>NAME</columns>
+    <columns>Client__c</columns>
+    <columns>Overall_CIB_CSI_Rating_Number__c</columns>
+    <columns>Overall_CIB_CSI_Rating_Indicator__c</columns>
+    <columns>Survey_Year__c</columns>
+    <columns>OWNER.FIRST_NAME</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>CSI_Credit_Turnaround__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Client__c</field>
+        <operation>contains</operation>
+        <value>MTN,Barloworld,JPMorgan</value>
+    </filters>
+    <label>All - Selected</label>
+</ListView>

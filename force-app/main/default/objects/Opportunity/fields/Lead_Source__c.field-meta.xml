@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Source__c</fullName>
+    <description>As a sales person I want to be able to select a Source for the opportunity in order for me to estimate the probability of deal closure and report on Opportunity Sources</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The primary source where this opportunity originated from as a lead</inlineHelpText>
+    <label>Lead Source</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Client Engagement</fullName>
+                <default>false</default>
+                <label>Client Engagement</label>
+            </value>
+            <value>
+                <fullName>Client Plan</fullName>
+                <default>false</default>
+                <label>Client Plan</label>
+            </value>
+            <value>
+                <fullName>Cross Sell</fullName>
+                <default>true</default>
+                <label>Cross Sell</label>
+            </value>
+            <value>
+                <fullName>Implementation</fullName>
+                <default>false</default>
+                <label>Implementation</label>
+            </value>
+            <value>
+                <fullName>Lead Analytics Tool</fullName>
+                <default>false</default>
+                <label>Lead Analytics Tool</label>
+            </value>
+            <value>
+                <fullName>Request for Proposal</fullName>
+                <default>false</default>
+                <label>Request for Proposal</label>
+            </value>
+            <value>
+                <fullName>Research</fullName>
+                <default>false</default>
+                <label>Research</label>
+            </value>
+            <value>
+                <fullName>Service</fullName>
+                <default>false</default>
+                <label>Service</label>
+            </value>
+            <value>
+                <fullName>Game Changer</fullName>
+                <default>false</default>
+                <label>Game Changer</label>
+            </value>
+            <value>
+                <fullName>Ecosystem Manager</fullName>
+                <default>false</default>
+                <label>Ecosystem Manager</label>
+            </value>
+            <value>
+                <fullName>Akili Insight</fullName>
+                <default>false</default>
+                <label>Akili Insight</label>
+            </value>
+            <value>
+                <fullName>Advertisement</fullName>
+                <default>false</default>
+                <label>Advertisement</label>
+            </value>
+            <value>
+                <fullName>Africa-China</fullName>
+                <default>false</default>
+                <label>Africa-China</label>
+            </value>
+            <value>
+                <fullName>Campaign Lead</fullName>
+                <default>false</default>
+                <label>Campaign Lead</label>
+            </value>
+            <value>
+                <fullName>CCC Lead</fullName>
+                <default>false</default>
+                <label>CCC Lead</label>
+            </value>
+            <value>
+                <fullName>CIB</fullName>
+                <default>false</default>
+                <label>CIB</label>
+            </value>
+            <value>
+                <fullName>Customer Referral</fullName>
+                <default>false</default>
+                <label>Customer Referral</label>
+            </value>
+            <value>
+                <fullName>Ecosystem</fullName>
+                <default>false</default>
+                <label>Ecosystem</label>
+            </value>
+            <value>
+                <fullName>Email</fullName>
+                <default>false</default>
+                <label>Email</label>
+            </value>
+            <value>
+                <fullName>Employee Referral</fullName>
+                <default>false</default>
+                <label>Employee Referral</label>
+            </value>
+            <value>
+                <fullName>External Referral</fullName>
+                <default>false</default>
+                <label>External Referral</label>
+            </value>
+            <value>
+                <fullName>Inbound call</fullName>
+                <default>false</default>
+                <label>Inbound call</label>
+            </value>
+            <value>
+                <fullName>Internal Referral (HQ or Branch)</fullName>
+                <default>false</default>
+                <label>Internal Referral (HQ or Branch)</label>
+            </value>
+            <value>
+                <fullName>Outbound call</fullName>
+                <default>false</default>
+                <label>Outbound call</label>
+            </value>
+            <value>
+                <fullName>Personal Banking</fullName>
+                <default>false</default>
+                <label>Personal Banking</label>
+            </value>
+            <value>
+                <fullName>Seminar - Internal</fullName>
+                <default>false</default>
+                <label>Seminar - Internal</label>
+            </value>
+            <value>
+                <fullName>Seminar - Partner</fullName>
+                <default>false</default>
+                <label>Seminar - Partner</label>
+            </value>
+            <value>
+                <fullName>Social Media</fullName>
+                <default>false</default>
+                <label>Social Media</label>
+            </value>
+            <value>
+                <fullName>Trade Show</fullName>
+                <default>false</default>
+                <label>Trade Show</label>
+            </value>
+            <value>
+                <fullName>Walk-in Client</fullName>
+                <default>false</default>
+                <label>Walk-in Client</label>
+            </value>
+            <value>
+                <fullName>Web</fullName>
+                <default>false</default>
+                <label>Web</label>
+            </value>
+            <value>
+                <fullName>Word of mouth</fullName>
+                <default>false</default>
+                <label>Word of mouth</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

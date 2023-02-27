@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DRP_FMA_Discrepancy_Complaint_only</fullName>
+    <active>true</active>
+    <description>FMA Discrepancies can only be logged under Complaint Type</description>
+    <errorConditionFormula>AND(FMA_Discrepancy__c, NOT(ISPICKVAL( Type, &quot;Complaint&quot;)))</errorConditionFormula>
+    <errorDisplayField>Type</errorDisplayField>
+    <errorMessage>FMA Discrepancy must be logged under a Complaint</errorMessage>
+</ValidationRule>

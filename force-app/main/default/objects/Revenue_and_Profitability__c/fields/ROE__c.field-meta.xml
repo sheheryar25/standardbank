@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ROE__c</fullName>
+    <description>Return on Equity (ROE) - a ratio in % that provides insight into the efficiency of a customer at generating profits from each unit of shareholder equity (EN-927).</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Return on Equity (ROE) - a ratio in % that provides insight into the efficiency of a customer at generating profits from each unit of shareholder equity.</inlineHelpText>
+    <label>ROE</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

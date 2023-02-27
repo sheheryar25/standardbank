@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Client_Summary_Last_Updated__c</fullName>
+    <description>EN-0695-Last Date/Time when Summary field was updated</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The Date and Time that the Client Summary values were last updated / calculated</inlineHelpText>
+    <label>Client Summary Last Updated</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>DateTime</type>
+</CustomField>

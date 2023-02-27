@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Initiative__c</fullName>
+    <description>Free text field where the Banker can input additional details about the initiative
+[SFP-4978]</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Additional details regarding the initiative</inlineHelpText>
+    <label>Initiative</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Administration</fullName>
+                <default>false</default>
+                <label>Administration</label>
+            </value>
+            <value>
+                <fullName>Internal strategy</fullName>
+                <default>false</default>
+                <label>Internal strategy</label>
+            </value>
+            <value>
+                <fullName>Leave</fullName>
+                <default>false</default>
+                <label>Leave</label>
+            </value>
+            <value>
+                <fullName>Training</fullName>
+                <default>false</default>
+                <label>Training</label>
+            </value>
+            <value>
+                <fullName>Recruitment</fullName>
+                <default>false</default>
+                <label>Recruitment</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

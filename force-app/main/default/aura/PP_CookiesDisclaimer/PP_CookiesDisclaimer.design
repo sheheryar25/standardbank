@@ -1,0 +1,5 @@
+<design:component>
+	<design:attribute name="privacyPolicyLink" label="Privacy Policy Link"/>
+    <design:attribute name="privacyPolicyLinkLabel" label="Privacy Policy Link label"/>
+    <design:attribute name="privacyPolicyText" label="Privacy Policy Text"/>
+</design:component>

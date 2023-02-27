@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Gain_Partner_Services_email_address__c</fullName>
+    <description>This address is used for communicating instructions to Gain Partner Services. It is used when an instruction to block or unblock a trading account is issued to Gain from Standard Bank.</description>
+    <externalId>false</externalId>
+    <label>Gain Partner Services email address</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Email</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ICBC_KYC_records__c</fullName>
+    <description>This fields counts for a client the number of KYC records with entity codes belonging to ICBC : SBHK,SBL,SBSG,SCJL,SRC. Only available to System Admins and Business Admin</description>
+    <externalId>false</externalId>
+    <label># of ICBC KYC records</label>
+    <summaryFilterItems>
+        <field>KYC_Status__c.Entity_Code__c</field>
+        <operation>equals</operation>
+        <value>SBHK,SBL,SBSG,SCJL,SRC</value>
+    </summaryFilterItems>
+    <summaryForeignKey>KYC_Status__c.Client__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

@@ -1,0 +1,14 @@
+<aura:component>
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    <aura:handler name="destroy" value="{!this}" action="{!c.handleDestroy}"/>
+    <div class="loading">
+        <div class="siteforceSpinnerManager siteforcePanelsContainer">
+            <div class="mask"></div>
+            <div class="loadingCon global siteforceLoadingBalls">
+                <span class="loadingBall first"></span>
+                <span class="loadingBall second"></span>
+                <span class="loadingBall third"></span>
+            </div>
+        </div>
+    </div>
+</aura:component>

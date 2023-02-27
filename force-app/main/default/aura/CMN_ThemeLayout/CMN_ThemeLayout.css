@@ -1,0 +1,177 @@
+/* clears the default community padding 
+.THIS {
+	--sds-c-button-brand-spacing-inline-start: 1em;
+	--sds-c-button-brand-spacing-inline-end: 1em;
+	--lwc-spacingMedium: 0;
+}
+*/
+
+.THIS {
+  /* .co.za */
+  --white-color: #fff;
+  --stature-blue: #0a2240;
+  --primary-blue: #0033aa;
+  --tertiary-color: #0089ff;
+  --positive-color: #0e8a00;
+  --negative-color: #e70011;
+  --accent-color: #f61;
+  --notification-color: #ffb822;
+  --identifyer-color: #b34fc5;
+  --font-dark-color: #1e1e2f;
+  --font-medium-color: #434549;
+  --font-light-color: #6d7278; 
+  --gray-dark-color: #b9c5d4;
+  --gray-medium-color: #edf0f3;
+  --gray-light-color: #f0f6fb;
+  --primary-color-light: #e5eaf6;
+  --background-gray: #d9e1e5;
+  --secondary-color-light: #0acffe;
+  --bg-red-light: #fff5f5;
+  --bg-red-light-hover: #ffe5e5;
+  --bg-tertiary-blue-light: #f2f9ff;
+  --bg-tertiary-blue-hover: #e5f3ff;
+  --bg-primary-blue-light-select: #f0f3fa;
+  --secondary-blue: #335cbb;
+  --input-disabled-color: #e6e9eb;
+
+  /* .com */
+  --PRIMARY-COLOR: var(--primary-blue);
+  --PRIMARY-COLOR-GRADIENT: #6497ff;
+  --PRIMARY-COLOR-ALPHA: rgba(0, 51, 170, 168);
+  --SECONDARY-COLOR: var(--tertiary-color);
+  --SECONDARY-COLOR-GRADIENT: #64edff;
+  --SECONDARY-COLOR-ALPHA: rgba(0, 137, 255, 168);
+  --TERTIARY-COLOR: #00AADD;
+  --TERTIARY-COLOR-GRADIENT: #64ffff;
+  --TERTIARY-COLOR-ALPHA: rgba(0, 170, 221, 168);
+  --POSITIVE-COLOR: #0E8A00;
+  --POSITIVE-COLOR-GRADIENT: #72ee64;
+  --POSITIVE-COLOR-ALPHA: rgba(14, 138, 0, 168);
+  --NEGATIVE-COLOR: #E0000F;
+  --NEGATIVE-COLOR-GRADIENT: #ff6473;
+  --NEGATIVE-COLOR-ALPHA: rgba(224, 0, 15, 168);
+  --ACCENT-COLOR: #FF6611;
+  --ACCENT-COLOR-GRADIENT: #ffca75;
+  --ACCENT-COLOR-ALPHA: rgba(255, 102, 17, 168);
+  --NOTIFICATION-COLOR: #FFB822;
+  --NOTIFICATION-COLOR-GRADIENT: #ffff86;
+  --NOTIFICATION-COLOR-ALPHA: rgba(255, 184, 34, 168);
+  --IDENTIFIER-COLOR: #B34FC5;
+  --IDENTIFIER-COLOR-GRADIENT: #ffb3ff;
+  --IDENTIFIER-COLOR-ALPHA: rgba(179, 79, 197, 168);
+  --WHITE-COLOR: #FFFFFF;
+  --GRAY-DARK-COLOR: #DBDBDB;
+  --GRAY-MEDIUM-COLOR: #EDEDED;
+  --GRAY-LIGHT-COLOR: #F6F6F6;
+  --FONT-DARK-COLOR: #222222;
+  --FONT-MEDIUM-COLOR: #444444;
+  --FONT-LIGHT-COLOR: #707070;
+  --GRAPH1: #222222;
+  --GRAPH2: #00A1AF;
+  --GRAPH3: #B3C2E4;
+  --GRAPH4: #FF6611;
+  --GRAPH5: #0033AA;
+  --GRAPH6: #CCCCCC;
+  --GRAPH7: #00AADD;
+  --GRAPH8: #00C18B;
+  --GRAPH9: #675DC6;
+  --GRAPH10: #B34FC5;
+  --GRAPH11: #FFB822;
+  --PRIMARY-COLOR-LIGHT: #E5EAF6;
+
+  --FONT-FAMILY: var(--lwc-fontFamilyHeader);
+  --titles-color: #3c4b6c;
+
+  /* SLDS overrides */
+  --lwc-colorTextIconDefault: var(--white-color);
+
+  /* Styling hooks */
+  --sds-c-button-radius-border: 0;
+  /* messes up the upload file button on case support page --sds-c-button-color-background: var(--tertiary-color); */
+  --sds-c-button-sizing-border: 0;
+  --sds-c-button-spacing-block-start: .3em;
+  --sds-c-button-spacing-block-end: .3em;
+  --sds-c-button-line-height: auto;
+  --sds-c-radio-color-border: var(--gray-dark-color);
+  --lwc-colorBorderInput: var(--gray-dark-color);
+
+  position: relative;
+  background: var(--GRAY-LIGHT-COLOR);
+  width: 100%;
+  overflow-x: clip;
+}
+.THIS * { font-family: var(--FONT-FAMILY); font-weight: normal; font-stretch: normal; font-style: normal; letter-spacing: normal; }
+.THIS .theme-container { width: auto; margin: 0 auto; }
+.THIS .theme-full-width-banner { position: relative; }
+
+/* Community default styles overrides */
+.THIS .forceCommunityFlowCommunity { background: transparent; }
+.THIS .forceCommunityThemeLogo:hover a,
+.THIS .forceCommunityThemeLogo a:hover { text-decoration: none; }
+.THIS .flowruntimeBody .section { margin-bottom: 3em; background: var(--white-color); padding: 3em 2em; }
+/* makes background colors full width */
+.THIS .forceCommunitySection .cb-section_background, .THIS .forceCommunitySection .cb-section_backgroundOverlay { width: 150vw; left: -50%; }
+
+@media screen and (max-width: 640px) {
+  .THIS .theme-container { padding: 0 8px; }
+}
+
+@media screen and (min-width: 640px) and (max-width: 1279px) {
+  .THIS .theme-container { padding: 0 30px; }
+}
+
+@media screen and (min-width: 1280px) {
+  .THIS .theme-container { width: 1220px; }
+  .THIS .themeLogo { position: relative; }
+  .THIS .themeLogo a:hover { text-decoration: none!important; }
+  .THIS .forceCommunityThemeLogo .logoImage:after {
+    color: var(--white-color);
+    content: "Standard Bank";
+    display: block;
+    font-size: 20px;
+    margin-left: 44px;
+    padding-top: 32%;
+    width: 373px;
+  }
+  }
+
+.THIS h1.title {
+  color: var(--titles-color);
+  font-size: 47px; font-weight: 200; line-height: 1.21;
+  margin: 0.5rem 0 1rem 0;
+  text-align: center;
+}
+
+.THIS h2.title {
+  color: var(--stature-blue);
+  font-size: 20px; font-weight: 500; line-height: 1.35; letter-spacing: 1px;
+  height: auto; width: auto;
+}
+
+.THIS h2.subtitle {
+  color: var(--titles-color);
+  font-size: 28px; font-weight: 300; line-height: 1.07;
+}
+
+.THIS .text-large { font-size: 22px; line-height: 1.45; }
+.THIS .text-normal { font-size: 15px; line-height: 1.67; }
+.THIS .text-small { font-size: 11px; line-height: 1.64; font-weight: 500; letter-spacing: 1px; }
+
+.THIS .arrowIcon {
+  height: 9px;
+  margin-left: 6px;
+  object-fit: contain;
+  padding-bottom: 1px;
+}
+
+.THIS .breadcrumbs {
+  color: var(--tertiary-color);
+  font-size: 13px; line-height: 1.23;
+  margin-bottom: 20px;
+  padding-top: 30px;
+}
+
+.THIS .sub-breadcrumbs { padding-left: 4px; }
+
+.THIS .inverse { color: var(--white-color); }
+.THIS .fullWidthBlueFirstRow { background-image: linear-gradient(114deg, #0033a1, #00a1e0); }

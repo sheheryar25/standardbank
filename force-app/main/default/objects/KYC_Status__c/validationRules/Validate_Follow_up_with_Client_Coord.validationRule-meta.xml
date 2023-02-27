@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validate_Follow_up_with_Client_Coord</fullName>
+    <active>true</active>
+    <description>Validate Follow up with Client Coordinator field to check if the field is populated before the Escalation date has been populated</description>
+    <errorConditionFormula>OR(ISNULL(Escalation_Date__c) &amp;&amp; NOT(ISNULL( Follow_up_with_Client_Coordinator__c )), Escalation_Date__c &gt; Follow_up_with_Client_Coordinator__c ) &amp;&amp; NOT( $Setup.Environment_Variable__c.Ignore_Validation_Rule__c )</errorConditionFormula>
+    <errorMessage>Escalation Date must be completed before filling Follow up with Client Coordinator and  Follow up with Client Coordinator must be greater than Escalation Date</errorMessage>
+</ValidationRule>

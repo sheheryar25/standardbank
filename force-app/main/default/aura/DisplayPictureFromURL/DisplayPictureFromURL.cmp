@@ -1,0 +1,7 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+    <aura:attribute name="sourceURL" type="String" default="/img/search/no-results.png" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+  	<div align="center">  
+    	<img src="{!v.sourceURL}"/>
+    </div>
+</aura:component>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>For_Admin</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>Client_Team_Compact_Layout</compactLayoutAssignment>
+    <description>This record type if defined only for Admin profiles to allow them to look at all the access values</description>
+    <label>For_Admin</label>
+    <picklistValues>
+        <picklist>Case_Access__c</picklist>
+        <values>
+            <fullName>Private</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Read Only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Read%2FWrite</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Client_Access__c</picklist>
+        <values>
+            <fullName>Full Access</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Read Only</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Read%2FWrite</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Client_Role__c</picklist>
+        <values>
+            <fullName>Analyst</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BCC Account Analyst</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BCC Business Development Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BCC CSU Agent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BCC CSU Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BCC Ecosystem Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BCC Portfolio Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BCC Product Specialist</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BCC Relationship Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BCC Service Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Development Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Officer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Executive Sponsor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Executive Stakeholder</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GM Client Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GM Execution Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Global Transaction Banker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Investor Services Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner Relationship Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Specialist</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales%2FCell Head</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Advisor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Advisory Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Structurer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade Finance Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trader</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Contact_Access__c</picklist>
+        <values>
+            <fullName>Private</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Read Only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Read%2FWrite</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Opportunity_Access__c</picklist>
+        <values>
+            <fullName>Private</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Read Only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Read%2FWrite</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

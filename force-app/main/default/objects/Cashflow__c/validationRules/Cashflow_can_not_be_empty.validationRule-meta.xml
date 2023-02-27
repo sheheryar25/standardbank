@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cashflow_can_not_be_empty</fullName>
+    <active>true</active>
+    <description>It is an error if the Cashflow field is empty. This rule enforces records being created/updated through the API and Apex.</description>
+    <errorConditionFormula>ISNULL(Cashflow__c)</errorConditionFormula>
+    <errorDisplayField>Cashflow__c</errorDisplayField>
+    <errorMessage>Cashflow can not be empty</errorMessage>
+</ValidationRule>

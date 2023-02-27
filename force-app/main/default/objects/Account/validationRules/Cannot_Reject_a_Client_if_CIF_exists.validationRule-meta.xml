@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_Reject_a_Client_if_CIF_exists</fullName>
+    <active>true</active>
+    <description>This Validation Rule is created to  make sure no rejections occur from GoldTier is Client has a CIF number</description>
+    <errorConditionFormula>AND( NOT( ISBLANK( CIF__c ) ) , ISPICKVAL( Status__c, &quot;Rejected by GoldTier&quot;))</errorConditionFormula>
+    <errorMessage>Cannot reject client as CIF number already exists</errorMessage>
+</ValidationRule>

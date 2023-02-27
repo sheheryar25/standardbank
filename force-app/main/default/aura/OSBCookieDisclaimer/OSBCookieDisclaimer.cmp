@@ -1,0 +1,23 @@
+<aura:component description="OSBCookieDisclaimer" implements="forceCommunity:availableForAllPageTypes" access="global">
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    <aura:attribute name="context" type="String" />
+    <div id="cookie-disclaimer" class="mobile__cookie-disclaimer">
+        <div aura:id="header-cookie--container" class="header_mainSec">
+            <div  class="header-cookie--container header_InnerSec header-cookie--open slds-grid">
+                <div>
+                    <div class="header_cookie-disclaimer--message">
+                        We use cookies to make your experience with us better. By continuing to use our website without
+                        changing the settings, you are agreeing to our use of cookies. To find out more see our
+                        <a class="header_cookie-disclaimer--message--link"
+                           href="{!$Label.c.OSB_Privacy_Policy_URL}" target="_blank"
+                           data-id= "uitlink_link"
+                           data-text= "Cookie Disclaimer | Privacy Statement">privacy statement.</a>
+                    </div>
+                </div>
+                <button onclick="{!c.closeDisclaimer}" class="header_cookie-disclaimer--close slds-size_1-of-6 slds-medium-size_1-of-12 slds-large-size_1-of-12" data-id="uitlink_link" data-text="Cookie Disclaimer | Close">
+                    <i class="header_cookie-disclaimer--close--icon ms-icn_close"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</aura:component>

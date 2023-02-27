@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Nature_of_Business__c</fullName>
+    <description>The nature of the clients business and the relating high-level strategy adopted by the Bank</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The nature of the clients business and the relating high-level strategy adopted by the Bank</inlineHelpText>
+    <label>Nature of Business</label>
+    <length>650</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>6</visibleLines>
+</CustomField>

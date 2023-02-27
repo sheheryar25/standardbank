@@ -1,0 +1,13 @@
+/**
+ * Created by Chibuye Kunda on 2019/04/29.
+ * US-3812: Quick Links Page enhancement
+ */
+
+/* this is the main container on the page
+ */
+.THIS.main_container {
+
+    border: 1px solid #d8dde6;
+    margin: 10px 0 20px 0;
+
+}

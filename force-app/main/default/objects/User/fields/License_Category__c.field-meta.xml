@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>License_Category__c</fullName>
+    <description>US-4157 - field is required to detail the type of license category that a user has. This field is used in the My Access integration to exclude users from being deactivated if they never log in.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The manner in which the user utilises the Salesforce license. Currently used as an exception for users that are not required to login but still require a license.</inlineHelpText>
+    <label>License Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No login required</fullName>
+                <default>false</default>
+                <label>No login required</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

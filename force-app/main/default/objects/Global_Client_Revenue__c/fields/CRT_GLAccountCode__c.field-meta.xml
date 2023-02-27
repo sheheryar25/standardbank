@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CRT_GLAccountCode__c</fullName>
+    <description>General Ledger account number based on balance sheet/income statement (SFP-5166)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>General Ledger account number based on balance sheet/income statement</inlineHelpText>
+    <label>GL Account Code</label>
+    <length>80</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

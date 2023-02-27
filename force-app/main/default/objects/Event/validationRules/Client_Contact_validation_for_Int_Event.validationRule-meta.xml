@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Client_Contact_validation_for_Int_Event</fullName>
+    <active>true</active>
+    <description>US-1548:External Event should have client contact records and Internal Event should be associated with Bank Contact records</description>
+    <errorConditionFormula>(AND(ISPICKVAL( Meeting_Audience__c , &apos;Internal&apos;), 
+Report_Client_Contact__r.RecordType.DeveloperName = &apos;SA_Client_Contact_Record_Type&apos; ))</errorConditionFormula>
+    <errorMessage>You cannot have a Client Contact value on an Internal Meeting</errorMessage>
+</ValidationRule>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DRP_Escalation_Date__c</fullName>
+    <description>DRP specific formula field for determining the date of escalation for Material Terms, Valuation, and Collateral under the Apllicable To field</description>
+    <externalId>false</externalId>
+    <formula>IF (
+            AND (
+            NOT(ISBLANK(Case_Origination_Date__c)),
+            FMA_Discrepancy__c,
+            ISPICKVAL(Applicable_To__c, &quot;Material Term&quot;)
+            ),
+            CASE (MOD(Case_Origination_Date__c - DATE( 1900, 1, 7 ), 7 ),
+            3, Case_Origination_Date__c + 2 + 3,
+            4, Case_Origination_Date__c + 2 + 3,
+            5, Case_Origination_Date__c + 2 + 3,
+            6, Case_Origination_Date__c + 1 + 3,
+            Case_Origination_Date__c + 3
+            ),
+            IF (
+            AND (
+            NOT(ISBLANK(Case_Origination_Date__c)),
+            FMA_Discrepancy__c,
+            OR(ISPICKVAL(Applicable_To__c, &quot;Valuation&quot;), ISPICKVAL(Applicable_To__c, &quot;Collateral&quot;))
+            ),
+            CASE(MOD(Case_Origination_Date__c - DATE( 1900, 1, 7 ), 7 ),
+            1, Case_Origination_Date__c + 2 + 5,
+            2, Case_Origination_Date__c + 2 + 5,
+            3, Case_Origination_Date__c + 2 + 5,
+            4, Case_Origination_Date__c + 2 + 5,
+            5, Case_Origination_Date__c + 2 + 5,
+            6, Case_Origination_Date__c + 1 + 5,
+            Case_Origination_Date__c + 5
+            ),
+            NULL
+            )
+            )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>DRP Escalation Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

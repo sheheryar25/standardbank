@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CSI_Credit_Turnaround__c</fullName>
+    <description>Rating of the Credit turnaround time and process</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Rate your experience with Standard Bank’s Credit process from request to pay out.</inlineHelpText>
+    <label>CSI Credit Turnaround</label>
+    <precision>16</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

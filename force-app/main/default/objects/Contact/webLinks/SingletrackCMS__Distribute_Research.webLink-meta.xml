@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SingletrackCMS__Distribute_Research</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>DEPRECATED</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>return;</url>
+</WebLink>

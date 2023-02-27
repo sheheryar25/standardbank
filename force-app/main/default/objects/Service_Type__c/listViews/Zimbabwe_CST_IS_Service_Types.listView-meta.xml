@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Zimbabwe_CST_IS_Service_Types</fullName>
+    <columns>NAME</columns>
+    <columns>ServiceType__c</columns>
+    <columns>Category__c</columns>
+    <columns>Sub_Category__c</columns>
+    <columns>CIB_Service_Tier__c</columns>
+    <columns>Entitlement__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>User_Team__c</field>
+        <operation>equals</operation>
+        <value>Africa Regions-Client Services-IS-CS-Zimbabwe</value>
+    </filters>
+    <label>Zimbabwe CST IS Service Types</label>
+    <sharedTo>
+        <roleAndSubordinatesInternal>CIB_Customer_Contact_Center_IS_Zimbabwe_Division</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

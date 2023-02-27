@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EventReport_Create_New_Opportunity</fullName>
+    <availability>online</availability>
+    <description>Custom button to navigate user to a standard new opportunity page</description>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Create New Opportunity</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/006/e?{!$Label.PrimaryEventReportCustomFieldId}={!Call_Report__c.Name}&amp;{!$Label.PrimaryEventReportCustomFieldId}_lkid={!Call_Report__c.Id}&amp;accid={!Call_Report__c.Relate_to_ClientId__c}&amp;retURL=/{!Call_Report__c.EventId__c}</url>
+</WebLink>

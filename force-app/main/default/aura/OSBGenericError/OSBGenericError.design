@@ -1,0 +1,13 @@
+<design:component label="Generic error page values">
+	<design:attribute name="title" label="Title of error"/>
+    <design:attribute name="subtitle" label="Subtitle of error"/>
+    <design:attribute name="context" label="Context where error will be used"/>
+    <design:attribute name="showMultiButtons" label="1 or 2 buttons"/>
+    <design:attribute name="primaryButtonText" label="Primary button label"/>
+    <design:attribute name="primaryButtonLink" label="Primary button link"/>
+    <design:attribute name="secondaryButtonText" label="Secondary button label"/>
+    <design:attribute name="secondaryButtonLink" label="Secondary button link"/>
+    <design:attribute name="navPage" label="Community page for nav service"/>
+    <design:attribute name="imageName" label="Name of icon image to show"/>
+    <design:attribute name="requiresLogout" label="Will the page require access to logout url"/>
+</design:component>

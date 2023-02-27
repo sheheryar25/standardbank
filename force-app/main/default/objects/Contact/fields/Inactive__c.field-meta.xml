@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Inactive__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicates the status of the contact at the client. This status is used to improve contact searches .Inactive Contacts are excluded from lookup searches</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates the status of the contact at the client. This status is used to improve contact searches.</inlineHelpText>
+    <label>Inactive</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,116 @@
+<aura:component implements="force:hasRecordId,force:appHostable,flexipage:availableForAllPageTypes,lightning:isUrlAddressable" extends="c:CI_Base">
+    <aura:attribute name="recordId" type="String" default="{!v.pageReference.state.c__recordId}"/>
+    <aura:attribute name="record" type="Object" />
+    <aura:handler name="change" value="{!v.pageReference}" action="{!c.reInit}"/>
+
+    <force:recordData recordId="{!v.recordId}" layoutType="COMPACT" targetFields="{!v.record}" />
+
+    <c:CI_RevenueService aura:id="revenue_service"/>
+
+    <ui:scrollerWrapper class="scrollerSize">
+        <aura:if isTrue="{!or($Browser.isAndroid, $Browser.isIOS)}">
+
+            <div class="insights_header slds-grid slds-p-around_small slds-grid_vertical-align-center">
+                <span class="slds-icon_container slds-icon-custom-custom43">
+                    <lightning:icon iconName="custom:custom43" size="medium" alternativeText="Client Insights" />
+                </span>
+                <h2 class="slds-m-left_small header-title-container slds-truncate">
+                    <span class="slds-text-heading_small slds-truncate">{!v.record.Name} Insights</span>
+                </h2>
+            </div>
+            <div>
+                <lightning:tabset>
+                    <lightning:tab>
+                        <aura:set attribute="label">
+                            DASHBOARD
+                        </aura:set>
+
+                        <!--<c:CI_Gems context="notification" showEmptyStatus="false" recordId="{!v.recordId}" />-->
+
+                        <div class="slds-size_1-of-1 slds-medium-size_1-of-4 slds-large-size_1-of-6 slds-p-around_x-small" >
+                            <c:CI_ClientsRevenueBudget recordId="{!v.recordId}" />
+                        </div>
+                        <div class="slds-size_1-of-1 slds-medium-size_1-of-4 slds-large-size_1-of-6 slds-p-around_x-small" >
+                            <c:CI_CROCAndROE recordId="{!v.recordId}" />
+                        </div>
+                        <div class="slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3 slds-p-around_x-small">
+                            <c:CI_ClientsCYPipeline recordId="{!v.recordId}" />
+                        </div>
+                        <div class="slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3 slds-p-around_x-small">
+                            <c:CI_ClientsCYWonRevenue recordId="{!v.recordId}" />
+                        </div>
+                        <div class="slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3 slds-p-around_x-small">
+                            <c:CI_CreditUtilisationVsLimit recordId="{!v.recordId}" />
+                        </div>
+                        <div class="slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3 slds-p-around_x-small">
+                            <c:CI_ClientsPRMC recordId="{!v.recordId}" />
+                        </div>
+                        <div class="slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3 slds-p-around_x-small">
+                            <c:CI_ClientsNoOfMeetings recordId="{!v.recordId}" />
+                        </div>
+                        <div class="slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3 slds-p-around_x-small">
+                            <c:CI_ClientsCSIScore recordId="{!v.recordId}" />
+                        </div>
+                    </lightning:tab>
+
+                    <lightning:tab>
+                        <aura:set attribute="label">
+                            NEWS
+                        </aura:set>
+
+                        <c:CI_News recordId="{!v.recordId}" />
+                    </lightning:tab>
+                </lightning:tabset>
+            </div>
+
+            <aura:set attribute="else">
+                <!--<c:CI_Gems recordId="{!v.recordId}" heading="Gems" showEmptyStatus="false" hideHeadingIfEmpty="true" />-->
+
+                <div class="slds-grid slds-grid_vertical-stretch slds-wrap">
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3">
+                        <div class="slds-grid slds-grid_vertical max_height">
+                            <div class="slds-col slds-p-around_x-small height_1-of-3" >
+                                <c:CI_ClientsRevenueBudget recordId="{!v.recordId}" />
+                            </div>
+                            <div class="slds-col slds-p-around_x-small height_1-of-3" >
+                                <c:CI_ClientsCYPipeline recordId="{!v.recordId}" />
+                            </div>
+                            <div class="slds-col slds-p-around_x-small height_1-of-3">
+                                <c:CI_ClientsNoOfMeetings recordId="{!v.recordId}" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3">
+                        <div class="slds-grid slds-grid_vertical max_height">
+                            <div class="slds-p-around_x-small height_50">
+                                <c:CI_CROCAndROE recordId="{!v.recordId}" />
+                            </div>
+                            <div class="slds-p-around_x-small height_50">
+                                <c:CI_CreditUtilisationVsLimit recordId="{!v.recordId}" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3">
+                        <div class="slds-grid slds-grid_vertical max_height">
+                            <div class="slds-p-around_x-small height_1-of-3">
+                                <c:CI_ClientsCYWonRevenue recordId="{!v.recordId}" />
+                            </div>
+                            <div class="slds-p-around_x-small height_1-of-3">
+                                <c:CI_ClientsCSIScore recordId="{!v.recordId}" />
+                            </div>
+                            <div class="slds-p-around_x-small height_1-of-3">
+                                <c:CI_ClientsPRMC recordId="{!v.recordId}" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slds-text-heading_small bold slds-m-bottom_xx-small slds-m-left_small slds-p-top_large"></div>
+                <div class="negative_top_margin slds-p-bottom_large slds-m-top_medium">
+                    <c:CI_News recordId="{!v.recordId}" />
+                </div>
+            </aura:set>
+        </aura:if>
+    </ui:scrollerWrapper>
+
+</aura:component>

@@ -1,0 +1,7 @@
+.THIS {
+    height: inherit;
+}
+
+.THIS .scrollerSize {
+    height: 95%;
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_for_SOW_Products_Division</fullName>
+    <active>true</active>
+    <description>Check if SOW products have been created, then Division and/or Currency can not be changed. Delete the record and create again.</description>
+    <errorConditionFormula>AND(
+    Tech_Number_of_SOW_Products__c  &gt;= 1,
+    ISCHANGED(Division__c)
+   )</errorConditionFormula>
+    <errorMessage>This Division already exists under the Share of Wallet Product. Please edit the existing Share of Wallet Product, or create a new Share of Wallet Product for the relevant Division.</errorMessage>
+</ValidationRule>

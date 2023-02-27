@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cap_Guidance_Facility_Price__c</fullName>
+    <description>Pricing Ceiling Guidance given by Arranger for debt syndication expressed in %
+SGPRT-624</description>
+    <externalId>false</externalId>
+    <formula>Product__r.Cap_Guidance_Facility_Price__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Pricing Ceiling Guidance given by Arranger for debt syndication expressed in %</inlineHelpText>
+    <label>Cap Guidance Facility Price (%)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

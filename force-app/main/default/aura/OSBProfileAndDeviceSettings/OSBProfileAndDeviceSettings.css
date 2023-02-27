@@ -1,0 +1,107 @@
+.THIS .dashboard {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  color: #1a1a1a;
+  padding: 56px 0;
+}
+.THIS .dashboard__content {
+  display: flex;
+}
+.THIS .dashboard__left {
+  max-width: 20%;
+  min-width: 0%;
+  margin-left: 4%;
+}
+.THIS .dashboard__right {
+  max-width: 60%;
+  width: -webkit-fill-available;
+  min-width: 70%;
+}
+.THIS .dashboard__navigation {
+  position: sticky;
+  top: 142px;
+  margin-top: 120px;
+}
+.THIS .dashboard__navigation-title {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25px;
+  text-transform: uppercase;
+}
+.THIS .dashboard__navigation-item-container {
+  line-height: 25px;
+  margin-top: 16px;
+  cursor: pointer;
+}
+.THIS .dashboard__navigation-item {
+  font-size: 16px;
+  font-weight: 400;
+  color: #0089ff;
+  position: relative;
+}
+.THIS .dashboard__navigation-item__selected {
+  font-weight: 500;
+}
+.THIS .dashboard__navigation-item__selected::before {
+  content: "";
+  position: absolute;
+  height: 24px;
+  width: 4px;
+  border-radius: 3px;
+  background-color: #0089ff;
+  left: -16px;
+}
+@media (min-width: 650px) and (max-width: 1200px) {
+  .THIS .dashboard__left {
+    display: none;
+  }
+  .cOSBProfileAndDeviceSettings .dashboard__right {
+    max-width: 100%;
+    width: -webkit-fill-available;
+  }
+  .THIS .dashboard__right {
+    padding-left: 10px;
+    width: 100%;
+  }
+}
+@media (max-width: 1024px) {
+  .THIS .newCase-container.mt_72 {
+    margin-top: 0;
+  }
+  .THIS .newCase-container {
+    padding-right: 20px;
+    padding-left: 20px;
+    width: 752px;
+  }
+  .THIS .dashboard__left {
+    display: none;
+  }
+}
+@media (max-width: 649px) {
+  .THIS .newCase {
+    margin-top: 32px;
+  }
+  .THIS .newCase__buttons {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .THIS .dashboard__right {
+    padding-left: 1%;
+    max-width: 100%;
+  }
+  .THIS .newCase-container {
+    padding-right: 11px;
+    padding-left: 0px;
+    width: 352px;
+  }
+  .THIS .mt_72 {
+    margin-top: -24px;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .THIS .newCase-container {
+    width: 98%;
+  }
+}

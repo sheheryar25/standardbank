@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Client_Team_Compact_Layout</fullName>
+    <fields>Name</fields>
+    <fields>Team_Member__c</fields>
+    <fields>Client_Role__c</fields>
+    <fields>Core__c</fields>
+    <fields>Client_Coordinator__c</fields>
+    <fields>Client_Coordinator_BM__c</fields>
+    <fields>GTB__c</fields>
+    <label>Client Team Compact Layout</label>
+</CompactLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Review_Date__c</fullName>
+    <description>SFP-9319 [c] This field is introduced for CVCA feature to allow printable view of the Client Page similar to the CVCA Template.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The annual review date for the client’s portfolio</inlineHelpText>
+    <label>Review Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

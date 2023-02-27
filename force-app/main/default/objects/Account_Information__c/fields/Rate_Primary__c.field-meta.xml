@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rate_Primary__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>This field identifies the interest rate (either debit balance or credit balance) that the client holds on the product</inlineHelpText>
+    <label>Rate (Primary)</label>
+    <length>10</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

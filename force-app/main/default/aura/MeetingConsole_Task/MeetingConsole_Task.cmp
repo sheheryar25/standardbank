@@ -1,0 +1,52 @@
+<!--
+ - Created by Chibuye Kunda on 2019/11/26.
+ -->
+
+<aura:component controller="MeetingConsole_TasksController" access="global"  implements="force:appHostable,flexipage:availableForAllPageTypes" description="MeetingConsole_Task">
+    <aura:attribute name="columns" type="List"/>
+    <aura:attribute name="lookUps" type="List" default="[]"/>
+    <aura:attribute name="error" type="Object" default="{iserror:false,message:''}"/>
+    <aura:handler name="init" value="{! this }"  action="{!c.init}"/>
+    <aura:attribute name="taskId" type="string" default=""/>
+    <aura:attribute name="nbacId" type="string" default=""/>
+    <aura:attribute name="gpClientName" type="string" default=""/>
+    <aura:attribute name="access" type="string" />
+   <aura:method name="dataTableMethodTask" action="{!c.dataTableMethodTask}">
+        <aura:attribute name="nbacdata" type="Map"/>
+    </aura:method>
+    <aura:method name="dataTableMethodEditTask" action="{!c.dataTableMethodEditTask}">
+        <aura:attribute name="task" type="Map"/>
+    </aura:method>
+    <aura:method name="dataTableMethodViewTask" action="{!c.dataTableMethodViewTask}">
+        <aura:attribute name="task" type="Map"/>
+    </aura:method>
+    <aura:method name="userHasAccess" action="{!c.userHasAccess}">
+        <aura:attribute name="perm" type="Map"/>
+    </aura:method>
+    <aura:handler event="force:showToast" action="{!c.handleTaskToastEvent}"/>
+
+    <article class="slds-card" style="background-color: #f3f2f2 !important; min-height: 110px;overflow-x: hidden;">
+        <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+
+                <div class="slds-media__body">
+                    <h2 class="slds-card__header-title">
+                        Tasks
+                    </h2>
+                </div>
+                <div class="slds-no-flex">
+                    <aura:renderIf isTrue="{!v.nbacId!=''}">
+                        <lightning:button  label="Add" title="Create new task" onclick="{! c.dataTableAddTask }"/>
+                        <aura:set attribute="else">
+                            <lightning:button  label="Add" title="Create new task" onclick="{! c.dataTableAddTask }" disabled="true"/>
+                        </aura:set>
+                    </aura:renderIf>
+                </div>
+            </header>
+        </div>
+
+        <c:DataTable aura:id="child" lookUps="{!v.lookUps}" error="{!v.error}" columns="{!v.columns}" showRowNumberColumn="false"/>
+
+
+    </article>
+</aura:component>

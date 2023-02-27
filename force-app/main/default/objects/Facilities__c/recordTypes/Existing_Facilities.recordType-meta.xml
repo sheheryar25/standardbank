@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Existing_Facilities</fullName>
+    <active>true</active>
+    <description>Client’s Existing Facilities with Standard Bank</description>
+    <label>Existing Facilities</label>
+    <picklistValues>
+        <picklist>Facility_Grand_Parent_Product_GPP__c</picklist>
+        <values>
+            <fullName>Bonds</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electronic Payments %26 Collections</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Equity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Equity Derivatives</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>International Trade Products</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Liquidity Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Loans</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Physical Payments %26 Collections</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VAF</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Facility_Parent_Product_PP__c</picklist>
+        <values>
+            <fullName>Asset Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bond Positions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CFC Accounts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Call Loans</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Card</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cashman Account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Derivatives</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Current Account %28Not Linked to Cashman%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Equities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Equity Loans</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FX Options</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GSTBF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lending Guarantees</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Letters of Credit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Loans Term</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Performance Guarantees</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shareholder Loans</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Structured Trade Finance</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Facility_Product__c</picklist>
+        <values>
+            <fullName>Back-to-Back Guarantee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Back-to-Back LC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Call Loan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corp Banking Pref Shares</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Discount LC%27s - Non-SB Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Discount LC%27s - SB Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Export LC%27s</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Import LC%27s</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inward Foreign Guarantee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Local Guarantee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Advances</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outward Foreign Guarantee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Overdraft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PF - Property Loan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shipping Guarantee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Term Lending</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Institution_Type__c</picklist>
+        <values>
+            <fullName>Bank</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-Bank</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type__c</picklist>
+        <values>
+            <fullName>Direct</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Indirect</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

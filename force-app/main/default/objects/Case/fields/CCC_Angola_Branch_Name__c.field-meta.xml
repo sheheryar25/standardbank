@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCC_Angola_Branch_Name__c</fullName>
+    <externalId>false</externalId>
+    <label>Branch Name</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Origin</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>AAA Namibe</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>AAA Namibe</label>
+            </value>
+            <value>
+                <fullName>Belas</fullName>
+                <default>false</default>
+                <label>Belas</label>
+            </value>
+            <value>
+                <fullName>Cabinda</fullName>
+                <default>false</default>
+                <label>Cabinda</label>
+            </value>
+            <value>
+                <fullName>Dolce Vita</fullName>
+                <default>false</default>
+                <label>Dolce Vita</label>
+            </value>
+            <value>
+                <fullName>Gika</fullName>
+                <default>false</default>
+                <label>Gika</label>
+            </value>
+            <value>
+                <fullName>Hotel Presidente</fullName>
+                <default>false</default>
+                <label>Hotel Presidente</label>
+            </value>
+            <value>
+                <fullName>Lar do Patriota</fullName>
+                <default>false</default>
+                <label>Lar do Patriota</label>
+            </value>
+            <value>
+                <fullName>Maianga</fullName>
+                <default>false</default>
+                <label>Maianga</label>
+            </value>
+            <value>
+                <fullName>Maxi-Porto Amboim</fullName>
+                <default>false</default>
+                <label>Maxi-Porto Amboim</label>
+            </value>
+            <value>
+                <fullName>Namibe</fullName>
+                <default>false</default>
+                <label>Namibe</label>
+            </value>
+            <value>
+                <fullName>Rei Katyavala</fullName>
+                <default>false</default>
+                <label>Rei Katyavala</label>
+            </value>
+            <value>
+                <fullName>Shoprite Belas</fullName>
+                <default>false</default>
+                <label>Shoprite Belas</label>
+            </value>
+            <value>
+                <fullName>Shoprite Huambo</fullName>
+                <default>false</default>
+                <label>Shoprite Huambo</label>
+            </value>
+            <value>
+                <fullName>Shoprite Lobito</fullName>
+                <default>false</default>
+                <label>Shoprite Lobito</label>
+            </value>
+            <value>
+                <fullName>Shoprite Lubango</fullName>
+                <default>false</default>
+                <label>Shoprite Lubango</label>
+            </value>
+            <value>
+                <fullName>Shoprite Viana</fullName>
+                <default>false</default>
+                <label>Shoprite Viana</label>
+            </value>
+            <value>
+                <fullName>Sogepower</fullName>
+                <default>false</default>
+                <label>Sogepower</label>
+            </value>
+            <value>
+                <fullName>Torre Ambiente</fullName>
+                <default>false</default>
+                <label>Torre Ambiente</label>
+            </value>
+            <value>
+                <fullName>Torre Elyse</fullName>
+                <default>false</default>
+                <label>Torre Elysée</label>
+            </value>
+            <value>
+                <fullName>Xyami Kilamba</fullName>
+                <default>false</default>
+                <label>Xyami Kilamba</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Branch</controllingFieldValue>
+            <valueName>Belas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Branch</controllingFieldValue>
+            <valueName>Cabinda</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Branch</controllingFieldValue>
+            <valueName>Dolce Vita</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Branch</controllingFieldValue>
+            <valueName>Gika</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Branch</controllingFieldValue>
+            <valueName>Hotel Presidente</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Branch</controllingFieldValue>
+            <valueName>Lar do Patriota</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Branch</controllingFieldValue>
+            <valueName>Maianga</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Branch</controllingFieldValue>
+            <valueName>Maxi-Porto Amboim</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Branch</controllingFieldValue>
+            <valueName>Namibe</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Branch</controllingFieldValue>
+            <valueName>Rei Katyavala</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Branch</controllingFieldValue>
+            <valueName>Shoprite Belas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Branch</controllingFieldValue>
+            <valueName>Shoprite Huambo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Branch</controllingFieldValue>
+            <valueName>Shoprite Lobito</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Branch</controllingFieldValue>
+            <valueName>Shoprite Lubango</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Branch</controllingFieldValue>
+            <valueName>Shoprite Viana</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Branch</controllingFieldValue>
+            <valueName>Sogepower</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Branch</controllingFieldValue>
+            <valueName>Torre Ambiente</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Branch</controllingFieldValue>
+            <valueName>Torre Elyse</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Branch</controllingFieldValue>
+            <valueName>Xyami Kilamba</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

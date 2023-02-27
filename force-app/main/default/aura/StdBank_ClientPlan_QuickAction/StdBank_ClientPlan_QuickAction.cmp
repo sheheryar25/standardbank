@@ -1,0 +1,16 @@
+<aura:component controller="StdBank_Ltn_ClientHelper" implements="force:lightningQuickActionWithoutHeader,force:hasRecordId" access="global">
+	<aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="record"   type="Account" access="private" />
+    <aura:attribute name="isLoading" type="Boolean" default="true" access="private" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:if isTrue="{!v.isLoading}">
+        <div id="waitdsp" >
+            <center>
+                <br/><br/>
+                <label style="font-family: Salesforce Sans, Arial, sans-serif;font-size: 14px;">Loading...</label>
+                <br/><br/>
+                <img src="{!$Resource.SF1_Loading_GIF}" alt="" title="Redirecting..." width="196"/>
+            </center>
+        </div>
+    </aura:if>
+</aura:component>

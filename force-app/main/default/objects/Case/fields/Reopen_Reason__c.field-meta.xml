@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reopen_Reason__c</fullName>
+    <description>SGPRT-795 - Reason for Re-opened case (pick-list)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select a case reopen reason from the list of reason. Then click save to reopen the case.</inlineHelpText>
+    <label>Reopen Reason</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Thank you/ acknowledgement of receipt</fullName>
+                <default>false</default>
+                <label>Thank you/ acknowledgement of receipt</label>
+            </value>
+            <value>
+                <fullName>Acknowledgement of receipt</fullName>
+                <default>false</default>
+                <label>Acknowledgement of receipt</label>
+            </value>
+            <value>
+                <fullName>Query not sufficiently addressed</fullName>
+                <default>false</default>
+                <label>Query not sufficiently addressed</label>
+            </value>
+            <value>
+                <fullName>No response from client</fullName>
+                <default>false</default>
+                <label>No response from client</label>
+            </value>
+            <value>
+                <fullName>Response received post closure</fullName>
+                <default>false</default>
+                <label>Response received post closure</label>
+            </value>
+            <value>
+                <fullName>Query closed in error</fullName>
+                <default>false</default>
+                <label>Query closed in error</label>
+            </value>
+            <value>
+                <fullName>Client escalation post closure</fullName>
+                <default>false</default>
+                <label>Client escalation post closure</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

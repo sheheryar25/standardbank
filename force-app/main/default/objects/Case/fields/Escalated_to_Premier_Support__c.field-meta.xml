@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Escalated_to_Premier_Support__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Please check this field if the Case has been Escalated to Premier Support</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please check this field if the Case has been Escalated to Premier Support</inlineHelpText>
+    <label>Escalated to Premier Support</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

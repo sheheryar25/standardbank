@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Finance_Approved_Fee_Recognition__c</fullName>
+    <description>This field indicates the Finance agreed percentage of total fees revenue to be realised upfront (SGPRT-1703)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates the finance agreed percentage of Total fees revenue to be realised upfront.</inlineHelpText>
+    <label>Finance Approved Fee Recognition %</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

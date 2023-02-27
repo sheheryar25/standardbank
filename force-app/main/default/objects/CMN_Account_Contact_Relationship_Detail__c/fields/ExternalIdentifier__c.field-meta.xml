@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ExternalIdentifier__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>SFP-10768 [s] A unique key made up from the External Country + External System Id and External Id that identifies the origin of this record. (Eg ZA01123456789 is a record from South Africa (ZA) and SAP (01) with Id 123456789)</description>
+    <externalId>true</externalId>
+    <label>External Identifier</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

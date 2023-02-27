@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approved_By__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Case#1168 - 11/2011 - Rudolf Niehaus
+            The Standard Bank Contact who has approved the Campaign</description>
+    <externalId>false</externalId>
+    <label>Approved By</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Contact.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Bank Contact Record Type</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Campaigns</relationshipLabel>
+    <relationshipName>Campaigns</relationshipName>
+    <required>false</required>
+    <type>Lookup</type>
+</CustomField>

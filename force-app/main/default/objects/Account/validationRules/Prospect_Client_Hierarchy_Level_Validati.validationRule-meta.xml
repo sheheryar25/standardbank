@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prospect_Client_Hierarchy_Level_Validati</fullName>
+    <active>true</active>
+    <description>Whenever Client Relationship Hierarchy is immediate parent or child, parent account field becomes mandatory</description>
+    <errorConditionFormula>(OR(ISPICKVAL(Client_Relationship_Hierarchy__c,&quot;Immediate Parent&quot;),ISPICKVAL(Client_Relationship_Hierarchy__c,&quot;Child&quot;)))&amp;&amp;(ISBLANK(ParentId))&amp;&amp; (RecordType.Name=&apos;Prospect&apos; || RecordType.Name=&apos;Potential (Goldtier)&apos; || RecordType.Name=&apos;Potential (CIF)&apos; || RecordType.Name=&apos;Potential Client&apos;)</errorConditionFormula>
+    <errorMessage>Please select a Parent Account</errorMessage>
+</ValidationRule>

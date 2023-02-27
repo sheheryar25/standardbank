@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailFolder xmlns="http://soap.sforce.com/2006/04/metadata">
+    <accessType>Shared</accessType>
+    <name>Zambia CST Templates</name>
+    <publicFolderAccess>ReadOnly</publicFolderAccess>
+    <sharedTo>
+        <roleAndSubordinatesInternal>CIB_Customer_Contact_Center_IS_Zambia_Division</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>CIB_Customer_Contact_Center_Zambia_Division</roleAndSubordinatesInternal>
+    </sharedTo>
+</EmailFolder>

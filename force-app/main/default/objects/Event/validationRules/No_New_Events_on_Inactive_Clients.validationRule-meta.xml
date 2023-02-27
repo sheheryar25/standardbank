@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_New_Events_on_Inactive_Clients</fullName>
+    <active>false</active>
+    <description>Stops the creation of new events on inactive clients</description>
+    <errorConditionFormula>ISPICKVAL( Account.CIF_Client_Active_Code__c , &quot;I&quot;)</errorConditionFormula>
+    <errorMessage>You cannot create a new Events on an Inactive Client. Please create the Contact against an active Client.</errorMessage>
+</ValidationRule>

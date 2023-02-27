@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TCM_Details__c</fullName>
+    <description>Include the TCM breakdown of Funding Limits, Client Group Economics, Transaction Economics, Concentration Analysis and Ancillary Requirements.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Include the TCM breakdown of Funding Limits, Client Group Economics, Transaction Economics, Concentration Analysis and Ancillary Requirements. Insert all details here.
+            Max Characters: 2400</inlineHelpText>
+    <label>TCM Details</label>
+    <length>2400</length>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Html</type>
+    <visibleLines>25</visibleLines>
+</CustomField>

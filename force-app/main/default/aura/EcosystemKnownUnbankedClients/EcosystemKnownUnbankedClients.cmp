@@ -1,0 +1,141 @@
+<aura:component controller="StdBank_Ltn_Ecosystem"> 
+	<aura:attribute name="groupNumber" type="String" />
+	<aura:attribute name="type" type="String" />
+	<aura:attribute name="idType" type="String" />
+	<aura:attribute name="ecosystem" type="Ecosystem__c" access="private"/>
+	<aura:attribute name="oldBankedClients" type="DTO_Ecosystem.BankedClient[]" access="private" default="[]"/>
+	<aura:attribute name="bankedClients" type="DTO_Ecosystem.BankedClient[]" access="private" default="[]" />
+	<aura:attribute name="enableDelete" type="Boolean" default="false" access="private" />
+	<aura:attribute name="allSelected" type="Boolean" default="false" access="private" />
+	<aura:attribute name="confirmDelete" type="Boolean" default="false" access="private" />
+	<aura:attribute name="isWaiting" type="Boolean" default="true" access="private" />
+	<aura:attribute name="newEntity" type="Boolean" default="false" access="private" />
+
+	<aura:attribute name="convertToBanked" type="Boolean" default="false" access="private"/>
+	<aura:attribute name="idToConvert" type="Id" access="private"/>
+
+	<aura:registerEvent name="entityChange" type="c:ecosystemEntityChange" />
+
+	<aura:handler name="init" action="{!c.doInit}" value="{!this}" />
+	<aura:handler action="{!c.onEntityChange}" event="c:ecosystemEntityUnbankedChange" />
+
+    <lightning:navigation aura:id="nav_service"/>
+
+	<aura:if isTrue="{!v.confirmDelete}">
+		<c:ModalConfirm header="Delete Entities"
+			text="Are you sure you want to delete selected Entities?"
+			neutralText="Cancel"
+			brandText="Delete"
+			onneutral="{!c.onDeleteClose}"
+			onbrand="{!c.onDeleteConfirm}"
+			onclose="{!c.onDeleteClose}"/>
+	</aura:if>
+
+	<aura:if isTrue="{!v.newEntity}">
+		<c:EcosystemNewEntity recordId="{#v.ecosystem.Id}" type="{#v.type}" unbanked="{!true}" oncancel="{!c.onNewCancel}" oncreated="{!c.onCreated}"/>
+	</aura:if>
+
+	<article class="slds-card">
+		<div class="slds-card__header slds-grid">
+		    <header class="slds-media slds-media_center slds-has-flexi-truncate">
+		      	<div class="slds-media__figure">
+		      		<lightning:icon iconName="standard:account" size="small" alternativeText="Account"/>
+		      	</div>
+		      	<div class="slds-media__body">
+		        	<h2>
+		          		<a href="javascript:void(0);" class="slds-card__header-link slds-truncate" title="[object Object]">
+		            		<span class="slds-text-heading_small">Known Unbanked Clients</span>
+		          		</a>
+	        		</h2>
+		      	</div>
+		    </header>
+		    <div class="slds-no-flex">
+		      	<ul class="slds-button-group-list">
+			  		<li>
+			    		<button class="slds-button slds-button_neutral" disabled="{!not(v.enableDelete)}" onclick="{!c.onDelete}">Delete</button>
+			  		</li>
+			  		<li>
+			  	  		<button class="slds-button slds-button_neutral" onclick="{!c.onNew}">{!$Label.c.New}</button>
+			  		</li>
+				</ul>
+		    </div>
+	  	</div>
+	  	<div class="slds-card__body slds-card__body_inner slds-is-relative">
+			<aura:if isTrue="{!v.isWaiting}">
+				<div class="slds-spinner_container">
+					<div class="slds-spinner slds-spinner_small">
+						<div class="slds-spinner__dot-a"></div>
+						<div class="slds-spinner__dot-b"></div>
+					</div>
+				</div>
+			</aura:if>
+			<table class="slds-table slds-table_bordered slds-table_cell-buffer">
+				<thead>
+					<tr class="slds-text-title_caps">
+						<th style="width:2rem;">
+							<span class="slds-checkbox">
+						      	<input type="checkbox" name="options" id="{!v.idType + 'unbanked-checkbox-all'}" checked="{!v.allSelected}" onchange="{!c.onAllChange}" disabled="{!v.bankedClients.length == 0}" />
+						      	<label class="slds-checkbox__label" for="{!v.idType + 'unbanked-checkbox-all'}">
+						        	<span class="slds-checkbox_faux"></span>
+						      	</label>
+						  	</span>
+						</th>
+						<th class="slds-truncate">Client Name</th>
+						<th class="slds-truncate">Status</th>
+						<th class="slds-truncate">Primary Relationship Holder</th>
+						<th class="slds-truncate">Proposed Client Coordinator</th>
+						<th class="slds-truncate"></th>
+					</tr>
+				</thead>
+				<tbody>
+					<aura:iteration items="{!v.bankedClients}" var="bankedClient" indexVar="index">
+						<tr data-index="{!index}">
+							<td>
+								<span class="slds-checkbox">
+							      	<input type="checkbox" name="options" id="{!v.idType + 'unbanked-checkbox-' + index}" checked="{!bankedClient.selected}" onchange="{!c.onItemChange}"/>
+							      	<label class="slds-checkbox__label" for="{!v.idType + 'unbanked-checkbox-' + index}">
+							        	<span class="slds-checkbox_faux"></span>
+							      	</label>
+							  	</span>
+							</td>
+
+
+							<aura:if isTrue="{!or(bankedClient.primaryRelationshipHolder=='Commercial Banking',bankedClient.primaryRelationshipHolder=='Corporate and Investment Banking')}">
+								<td>
+									<lightning:button variant="base" label="{!bankedClient.name}" name="{!bankedClient.entityId}" onclick="{!c.redirectToClient}"/>
+								</td>
+								<td>{!bankedClient.status}</td>
+								<td>{!bankedClient.primaryRelationshipHolder}</td>
+								<td>{!bankedClient.clientCoordinatorName}</td>
+								<td style="text-align: right;">
+									<lightning:button title="{!bankedClient.primaryRelationshipHolder}" class="slds-button slds-button_brand"
+													  name="{!bankedClient.entityId + '-convertBtn'}"  onclick="{!c.onConvertClick}">
+										Convert
+									</lightning:button>
+								</td>
+								<aura:set attribute="else">
+									<td>{!bankedClient.entityName}</td>
+									<td>N/A</td>
+									<td>{!bankedClient.primaryRelationshipHolder}</td>
+									<td>N/A</td>
+									<td style="text-align: right;">
+										<lightning:button disabled="true" title="{!bankedClient.primaryRelationshipHolder}" class="slds-button slds-button_brand"
+														  name="{!bankedClient.entityId + '-convertBtn'}"  onclick="{!c.onConvertClick}">
+											Convert
+										</lightning:button>
+									</td>
+								</aura:set>
+							</aura:if>
+
+
+						</tr>
+					</aura:iteration>
+				</tbody>
+			</table>
+	  	</div>
+	</article>
+	<aura:if isTrue="{!v.convertToBanked}">
+		<c:EcosystemConvertClientToBanked accountId="{!v.idToConvert}" oncancel="{!c.onConvertCancel}" onsave="{!c.onConvertDone}" />
+	</aura:if>
+
+</aura:component>

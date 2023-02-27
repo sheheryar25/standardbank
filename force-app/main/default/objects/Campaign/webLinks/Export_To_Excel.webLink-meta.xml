@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Export_To_Excel</fullName>
+    <availability>online</availability>
+    <description>Case#1168 - Rudofl Niehus - 11/2011</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Export To Excel</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>/apex/CampaignMembersToExcel?campId={!Campaign.Id}</url>
+</WebLink>

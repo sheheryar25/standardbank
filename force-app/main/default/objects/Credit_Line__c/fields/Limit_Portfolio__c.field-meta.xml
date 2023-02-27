@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Limit_Portfolio__c</fullName>
+    <description>Adaptiv cube reference used to breakdown limit information. Salesforce is required to show Issuer, Customer and Facility Cube data only.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Adaptiv cube reference used to breakdown limit information</inlineHelpText>
+    <label>Limit Portfolio</label>
+    <length>50</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

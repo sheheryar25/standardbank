@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Transaction_Description__c</fullName>
+    <description>Brief description of the transaction being contemplated.  Remember this is not a credit committee meeting.
+
+            For Type 3 and 4 transactions only, the 1-page Annexure may be used to provide additional information associated with the risk and complexity of the transaction.  Additional information or submissions exceeding the 1 page will not be accepted.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Transaction Overview. Concise overview of the business/sector the Client is involved in. No more than 4 lines to be provided.</inlineHelpText>
+    <label>Transaction Description</label>
+    <length>1700</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>4</visibleLines>
+</CustomField>

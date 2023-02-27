@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CommB_Amount_Required_on_Transfer_Query</fullName>
+    <active>true</active>
+    <description>US-1773</description>
+    <errorConditionFormula>AND ( 
+  RecordType.DeveloperName  = &quot;CommB_Client_Case&quot;,
+  ISPICKVAL( Type , &quot;Query&quot;), 
+  OR (
+    ISNULL(Amount__c) ,
+    ISBLANK(Amount__c) 
+  ),
+  OR ( 
+    TEXT( Classification__c ) = &quot;Transfer - Inter BANK&quot;, 
+    TEXT( Classification__c ) = &quot;Transfer - 3rd Party&quot;, 
+    TEXT( Classification__c ) = &quot;Transfer - Inter Account&quot; 
+  ) 
+)</errorConditionFormula>
+    <errorDisplayField>Amount__c</errorDisplayField>
+    <errorMessage>Amount is required when the Type is Query and the Product Classification is one of Transfers. Please populate a value in this field</errorMessage>
+</ValidationRule>

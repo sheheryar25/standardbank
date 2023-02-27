@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Change Request Management</fullName>
+    <isActive>true</isActive>
+    <values>
+        <fullName>Approved</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Approved for Production</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Business Requirements Design</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>CRM Solutions Testing</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Closed</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Development</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Functional Design</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>New</fullName>
+        <default>true</default>
+    </values>
+    <values>
+        <fullName>Not Approved</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>On Hold</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Post Implementation Testing</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Submitted for CAB</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Technical Design</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>UAT Sign-off</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>UAT Testing</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Unit Testing</fullName>
+        <default>false</default>
+    </values>
+</BusinessProcess>

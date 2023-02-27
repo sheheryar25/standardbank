@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Client_Segment__c</fullName>
+    <description>case#1263 - Rudolf Niehaus
+AB – Flow or Single Service Client
+ABC – Multi-Product, Low Ratio Client
+ABCD – Multi-Product, High Ratio Client</description>
+    <externalId>false</externalId>
+    <inlineHelpText>AB – Flow or Single Service Client
+ABC – Multi-Product, Low Ratio Client
+ABCD – Multi-Product, High Ratio Client</inlineHelpText>
+    <label>Client Segment</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Not Assigned</fullName>
+                <default>true</default>
+                <label>Not Assigned</label>
+            </value>
+            <value>
+                <fullName>AB</fullName>
+                <default>false</default>
+                <label>AB</label>
+            </value>
+            <value>
+                <fullName>ABC</fullName>
+                <default>false</default>
+                <label>ABC</label>
+            </value>
+            <value>
+                <fullName>ABCD</fullName>
+                <default>false</default>
+                <label>ABCD</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

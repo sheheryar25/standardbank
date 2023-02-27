@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Compliance_Classification__c</fullName>
+    <description>Category of a Compliance case</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Category of a Compliance case</inlineHelpText>
+    <label>Compliance Classification</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Applicable_To__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Data Privacy Breached – PoPi</fullName>
+                <default>false</default>
+                <label>Data Privacy Breached – PoPi</label>
+            </value>
+            <value>
+                <fullName>EDD</fullName>
+                <default>false</default>
+                <label>EDD</label>
+            </value>
+            <value>
+                <fullName>FATCA</fullName>
+                <default>false</default>
+                <label>FATCA</label>
+            </value>
+            <value>
+                <fullName>Introcerts</fullName>
+                <default>false</default>
+                <label>Introcerts</label>
+            </value>
+            <value>
+                <fullName>KYC - Amendments/All</fullName>
+                <default>false</default>
+                <label>KYC - Amendments/All</label>
+            </value>
+            <value>
+                <fullName>KYC - Complete</fullName>
+                <default>false</default>
+                <label>KYC - Complete</label>
+            </value>
+            <value>
+                <fullName>KYC - Mandate Overall</fullName>
+                <default>false</default>
+                <label>KYC - Mandate Overall</label>
+            </value>
+            <value>
+                <fullName>Mandate Lookup</fullName>
+                <default>false</default>
+                <label>Mandate Lookup</label>
+            </value>
+            <value>
+                <fullName>Treating Customer Fairly (TFC)</fullName>
+                <default>false</default>
+                <label>Treating Customer Fairly (TFC)</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Compliance</controllingFieldValue>
+            <valueName>Data Privacy Breached – PoPi</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compliance</controllingFieldValue>
+            <valueName>EDD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compliance</controllingFieldValue>
+            <valueName>FATCA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compliance</controllingFieldValue>
+            <valueName>Introcerts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compliance</controllingFieldValue>
+            <valueName>KYC - Amendments/All</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compliance</controllingFieldValue>
+            <valueName>KYC - Complete</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compliance</controllingFieldValue>
+            <valueName>KYC - Mandate Overall</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compliance</controllingFieldValue>
+            <valueName>Mandate Lookup</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compliance</controllingFieldValue>
+            <valueName>Treating Customer Fairly (TFC)</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

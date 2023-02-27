@@ -1,0 +1,28 @@
+<aura:component extends="c:CI_Base">
+    <aura:attribute name="gem" type="Object" />
+    <aura:attribute name="context" type="String" />
+    <aura:registerEvent name="gemDismissedEvent" type="c:CI_EvtGeneralCmp" />
+    <aura:registerEvent name="gemDeletedEvent" type="c:CI_EvtGeneralCmp" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <c:CI_GemService aura:id="gemService" />
+
+    <div aura:id="gem_card" class="gem_card green_background slds-grid slds-grid_align-spread slds-p-around_small">
+        <div class="slds-col slds-truncate slds-p-right_xx-small clickable" onclick="{!c.handleClick}">
+            <div class="slds-grid gem_text">
+                <div class="slds-col">
+                    <lightning:icon iconName="utility:check" size="small" class="icon_white" variant="base" />
+                </div>
+                <div class="slds-col slds-p-left_x-small slds-p-top_xxx-small">
+                    {!v.gem.typeText}
+                </div>
+                <div class="slds-col slds-p-left_xx-small slds-p-top_xxx-small slds-truncate">
+                    {!v.gem.variableText}
+                </div>
+            </div>
+        </div>
+        <div class="slds-col">
+            <lightning:buttonIcon iconName="utility:close" variant="bare-inverse" size="large" onclick="{!c.remove}" />
+        </div>
+    </div>
+
+</aura:component>

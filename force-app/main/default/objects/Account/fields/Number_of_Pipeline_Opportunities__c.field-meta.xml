@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_of_Pipeline_Opportunities__c</fullName>
+    <description>EN-0695-Number of Open Opportunities on this Client (All time, Rolled up)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The total Number of Open Opportunities (No time filter, Including Subsidiary Clients)</inlineHelpText>
+    <label>Number of Pipeline Opportunities</label>
+    <precision>8</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

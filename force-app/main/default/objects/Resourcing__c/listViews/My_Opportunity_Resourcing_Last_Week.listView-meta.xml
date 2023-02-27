@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Opportunity_Resourcing_Last_Week</fullName>
+    <columns>NAME</columns>
+    <columns>Opportunity__c</columns>
+    <columns>Resource__c</columns>
+    <columns>Week_Start_Date__c</columns>
+    <columns>Week_End_Date__c</columns>
+    <columns>Opportunity_Type__c</columns>
+    <columns>Milestone__c</columns>
+    <columns>Time_Spent__c</columns>
+    <columns>Previous_Week_Time_Spent__c</columns>
+    <columns>Intensity_Forecast__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>Week_End_Date__c</field>
+        <operation>equals</operation>
+        <value>LAST_WEEK</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Resourcing__c.Opportunity_Resourcing</value>
+    </filters>
+    <label>My Opportunity Resourcing Last week</label>
+    <sharedTo>
+        <roleAndSubordinatesInternal>CIB_Global_IB_Corporate_Finance_Business_Unit</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

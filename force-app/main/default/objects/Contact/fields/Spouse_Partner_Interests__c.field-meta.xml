@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Spouse_Partner_Interests__c</fullName>
+    <description>SFP-9320 [c] What does the client&apos;s Spouse/Partner enjoy (hobbies, etc)</description>
+    <externalId>false</externalId>
+    <label>Spouse/Partner Interests</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Aircraft</fullName>
+                <default>false</default>
+                <label>Aircraft</label>
+            </value>
+            <value>
+                <fullName>All-Terrain vehicles</fullName>
+                <default>false</default>
+                <label>All-Terrain vehicles</label>
+            </value>
+            <value>
+                <fullName>Antique collecting</fullName>
+                <default>false</default>
+                <label>Antique collecting</label>
+            </value>
+            <value>
+                <fullName>Art</fullName>
+                <default>false</default>
+                <label>Art</label>
+            </value>
+            <value>
+                <fullName>Astronomy</fullName>
+                <default>false</default>
+                <label>Astronomy</label>
+            </value>
+            <value>
+                <fullName>Automotive work/repair</fullName>
+                <default>false</default>
+                <label>Automotive work/repair</label>
+            </value>
+            <value>
+                <fullName>Baseball</fullName>
+                <default>false</default>
+                <label>Baseball</label>
+            </value>
+            <value>
+                <fullName>Basketball</fullName>
+                <default>false</default>
+                <label>Basketball</label>
+            </value>
+            <value>
+                <fullName>Bird watching</fullName>
+                <default>false</default>
+                <label>Bird watching</label>
+            </value>
+            <value>
+                <fullName>Camping/hiking</fullName>
+                <default>false</default>
+                <label>Camping/hiking</label>
+            </value>
+            <value>
+                <fullName>Civic activities</fullName>
+                <default>false</default>
+                <label>Civic activities</label>
+            </value>
+            <value>
+                <fullName>Cooking</fullName>
+                <default>false</default>
+                <label>Cooking</label>
+            </value>
+            <value>
+                <fullName>Cultural events</fullName>
+                <default>false</default>
+                <label>Cultural events</label>
+            </value>
+            <value>
+                <fullName>Current affairs</fullName>
+                <default>false</default>
+                <label>Current affairs</label>
+            </value>
+            <value>
+                <fullName>Electronics</fullName>
+                <default>false</default>
+                <label>Electronics</label>
+            </value>
+            <value>
+                <fullName>Entertainment</fullName>
+                <default>false</default>
+                <label>Entertainment</label>
+            </value>
+            <value>
+                <fullName>Fashion</fullName>
+                <default>false</default>
+                <label>Fashion</label>
+            </value>
+            <value>
+                <fullName>Fine art</fullName>
+                <default>false</default>
+                <label>Fine art</label>
+            </value>
+            <value>
+                <fullName>Fishing</fullName>
+                <default>false</default>
+                <label>Fishing</label>
+            </value>
+            <value>
+                <fullName>Fitness</fullName>
+                <default>false</default>
+                <label>Fitness</label>
+            </value>
+            <value>
+                <fullName>Foreign Travel</fullName>
+                <default>false</default>
+                <label>Foreign Travel</label>
+            </value>
+            <value>
+                <fullName>Gardening</fullName>
+                <default>false</default>
+                <label>Gardening</label>
+            </value>
+            <value>
+                <fullName>Golf</fullName>
+                <default>false</default>
+                <label>Golf</label>
+            </value>
+            <value>
+                <fullName>Gourmet Cooking</fullName>
+                <default>false</default>
+                <label>Gourmet Cooking</label>
+            </value>
+            <value>
+                <fullName>Health</fullName>
+                <default>false</default>
+                <label>Health</label>
+            </value>
+            <value>
+                <fullName>History</fullName>
+                <default>false</default>
+                <label>History</label>
+            </value>
+            <value>
+                <fullName>Hockey</fullName>
+                <default>false</default>
+                <label>Hockey</label>
+            </value>
+            <value>
+                <fullName>Home Improvement or Repair</fullName>
+                <default>false</default>
+                <label>Home Improvement or Repair</label>
+            </value>
+            <value>
+                <fullName>Humanitarian/world relief</fullName>
+                <default>false</default>
+                <label>Humanitarian/world relief</label>
+            </value>
+            <value>
+                <fullName>Hunting</fullName>
+                <default>false</default>
+                <label>Hunting</label>
+            </value>
+            <value>
+                <fullName>Interior decorating</fullName>
+                <default>false</default>
+                <label>Interior decorating</label>
+            </value>
+            <value>
+                <fullName>Jewelry</fullName>
+                <default>false</default>
+                <label>Jewelry</label>
+            </value>
+            <value>
+                <fullName>Knitting or Needlework</fullName>
+                <default>false</default>
+                <label>Knitting or Needlework</label>
+            </value>
+            <value>
+                <fullName>Medical or health</fullName>
+                <default>false</default>
+                <label>Medical or health</label>
+            </value>
+            <value>
+                <fullName>Money opportunities</fullName>
+                <default>false</default>
+                <label>Money opportunities</label>
+            </value>
+            <value>
+                <fullName>Motorcycle riding</fullName>
+                <default>false</default>
+                <label>Motorcycle riding</label>
+            </value>
+            <value>
+                <fullName>Motorcycles</fullName>
+                <default>false</default>
+                <label>Motorcycles</label>
+            </value>
+            <value>
+                <fullName>Music</fullName>
+                <default>false</default>
+                <label>Music</label>
+            </value>
+            <value>
+                <fullName>Photography</fullName>
+                <default>false</default>
+                <label>Photography</label>
+            </value>
+            <value>
+                <fullName>Reading (Books, magazines, etc)</fullName>
+                <default>false</default>
+                <label>Reading (Books, magazines, etc)</label>
+            </value>
+            <value>
+                <fullName>Real estate</fullName>
+                <default>false</default>
+                <label>Real estate</label>
+            </value>
+            <value>
+                <fullName>Religious</fullName>
+                <default>false</default>
+                <label>Religious</label>
+            </value>
+            <value>
+                <fullName>Running/jogging</fullName>
+                <default>false</default>
+                <label>Running/jogging</label>
+            </value>
+            <value>
+                <fullName>Sailing</fullName>
+                <default>false</default>
+                <label>Sailing</label>
+            </value>
+            <value>
+                <fullName>Science/New Technology</fullName>
+                <default>false</default>
+                <label>Science/New Technology</label>
+            </value>
+            <value>
+                <fullName>Scuba</fullName>
+                <default>false</default>
+                <label>Scuba</label>
+            </value>
+            <value>
+                <fullName>Sewing</fullName>
+                <default>false</default>
+                <label>Sewing</label>
+            </value>
+            <value>
+                <fullName>Shoes</fullName>
+                <default>false</default>
+                <label>Shoes</label>
+            </value>
+            <value>
+                <fullName>Soccer</fullName>
+                <default>false</default>
+                <label>Soccer</label>
+            </value>
+            <value>
+                <fullName>Tennis</fullName>
+                <default>false</default>
+                <label>Tennis</label>
+            </value>
+            <value>
+                <fullName>Theater/Performing Arts</fullName>
+                <default>false</default>
+                <label>Theater/Performing Arts</label>
+            </value>
+            <value>
+                <fullName>Wine Appreciation</fullName>
+                <default>false</default>
+                <label>Wine Appreciation</label>
+            </value>
+            <value>
+                <fullName>Wood Working</fullName>
+                <default>false</default>
+                <label>Wood Working</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>8</visibleLines>
+</CustomField>

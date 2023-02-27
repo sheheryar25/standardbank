@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Amount_can_not_be_empty</fullName>
+    <active>true</active>
+    <description>This will only affect records through the API or Apex as the page layout already has the field as Required. Used to enforce data being entered via Visualforce pages.</description>
+    <errorConditionFormula>ISNULL( Amount__c )</errorConditionFormula>
+    <errorDisplayField>Amount__c</errorDisplayField>
+    <errorMessage>Amount can not be empty</errorMessage>
+</ValidationRule>

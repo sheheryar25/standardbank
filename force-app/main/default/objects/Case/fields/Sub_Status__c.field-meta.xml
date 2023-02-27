@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Status__c</fullName>
+    <description>SGPRT-376 - This sub-status field is applicable for cross border when a case in-progress status</description>
+    <externalId>false</externalId>
+    <label>Sub-Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Awaiting client response</fullName>
+                <default>false</default>
+                <label>Awaiting client response</label>
+            </value>
+            <value>
+                <fullName>Awaiting external bank response</fullName>
+                <default>false</default>
+                <label>Awaiting external bank response</label>
+            </value>
+            <value>
+                <fullName>Awaiting internal response</fullName>
+                <default>false</default>
+                <label>Awaiting internal response</label>
+            </value>
+            <value>
+                <fullName>In Progress</fullName>
+                <default>true</default>
+                <label>In Progress</label>
+            </value>
+            <value>
+                <fullName>Query escalation</fullName>
+                <default>false</default>
+                <label>Query escalation</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

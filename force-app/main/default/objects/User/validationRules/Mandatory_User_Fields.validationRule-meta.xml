@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mandatory_User_Fields</fullName>
+    <active>true</active>
+    <description>Validate that the user&apos;s city has been populated. 
+VI 03-06-2010 updated existing rule to include other mandatory fields.
+CR 14-06-2011 Regression - Deactivated for Mass User Profile Change, Changed Name from Mandatory City to Mandatory User Fields.</description>
+    <errorConditionFormula>IF(
+	AND(Profile.Name &lt;&gt; &quot;OneHub Community User Login&quot;, 
+		Profile.Name &lt;&gt; &quot;ACM Community User Login&quot;,
+		Profile.Name &lt;&gt; &quot;Custom Base Customer Community Plus Login User&quot;,
+		Profile.Name &lt;&gt; &quot;Internal API Marketplace Member&quot;
+	), 
+	(City=NULL || Country=NULL || State=NULL || TEXT(User_CIB_Global_Area__c)=NULL || TEXT(User_Division__c)=NULL || TEXT(Business_Unit__c)=NULL) 
+	&amp;&amp;( TEXT( UserType) &lt;&gt; &quot;Guest&quot;), 
+	false
+)</errorConditionFormula>
+    <errorMessage>One or more of the following fields are not populated: 
+CIB Global Area, User Division, Business Unit, Country, State/Province, City. 
+Please enter a value.</errorMessage>
+</ValidationRule>

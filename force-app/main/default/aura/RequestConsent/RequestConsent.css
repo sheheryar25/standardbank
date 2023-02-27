@@ -1,0 +1,38 @@
+/**
+ - Created by Nocks Mulea Emmanuel on 2020/06/10.
+ */
+
+.THIS.slds-modal__container{
+    max-width: 100% !important;
+    width:80% !important;
+}
+
+.THIS .radio-button{
+    margin-right: 60px !important;
+}
+
+.THIS.info_msg{
+    color: #464646;
+    padding: 5px;
+    margin: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    font-size: 13px;
+    line-height: 18px;
+    border-color: #ccc;
+    background-color: #eee;
+    opacity: 1;
+    transition: opacity .2s ease-out;
+    border-color: #bee6ff;
+    background-color: #f5fcff;
+}
+.THIS button{
+    position: inherit;
+}
+@media (min-width: 48em){
+    .THIS.slds-modal__container{
+        max-width: 100% !important;
+        width:80% !important;
+    }
+}

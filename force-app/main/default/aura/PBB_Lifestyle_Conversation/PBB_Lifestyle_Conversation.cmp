@@ -1,0 +1,366 @@
+<aura:component controller="PBBLifeStyleConversationCtrl" implements="lightning:actionOverride,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+	<aura:attribute name="readOnly" type="boolean" default="true" access="public"/>
+	<aura:attribute name="subCatlist" type="List" access="public"/>
+	<aura:attribute name="respMap" type="Map" access="public"/>
+	<aura:attribute name="catFieldMap" type="Map" access="public"/>
+	<aura:attribute name="highValueFieldMap" type="Map" access="public"/>
+	<aura:attribute name="resplist" type="list" access="public"/>
+	<aura:attribute name="reasMap" type="Map" access="public"/>
+	<aura:attribute name="reaslist" type="list" access="public"/>
+	<aura:attribute name="recordId" type="Id" access="public"/>
+	<aura:attribute name="options" type="List" access="public"/>
+	<aura:attribute name="requiredFields" type="List" default="[false,false,false,false,false,false,false,false,false,false]" access="public"/>
+	<aura:attribute name="recordData" type="Conversation__c" access="public"/>
+	<aura:attribute name="prevRecordData" type="Conversation__c" access="public"/>
+	<aura:attribute name="isLoading" type="boolean" default='false' access="public"/>
+	<aura:attribute name="isRelatedTo" type="boolean" default='true' access="public"/>
+	<aura:attribute name="isInfo" type="boolean" default='true' access="public"/>
+	<lightning:notificationsLibrary aura:id="notifLib"/>
+	<ltng:require scripts="{!$Resource.UTL_JavaScript}" afterScriptsLoaded="{!c.init}"/>
+	<aura:handler name="pickListEvent" event="c:UTL_PickList_Event" action="{!c.handleComponentEvent}"/>
+	<lightning:card >
+		<aura:renderIf isTrue="{!v.isLoading}">
+			<lightning:spinner class="sslds-is-relative" alternativeText="Loading" size="medium" />
+		</aura:renderIf>
+		<div class="slds-section slds-is-open">
+			<h3 class="slds-section__title" style="margin-left: 20px;margin-right: 20px;margin-bottom: 16px;" onclick="{!c.toggleInfo}">
+				<button aria-controls="expando-unique-id" aria-expanded="true" class="slds-button slds-section__title-action">
+					<aura:if isTrue="{!v.isInfo}">
+						<lightning:icon style="padding-right: 10px;"  iconName="utility:chevrondown" size="x-small" alternativeText="chevrondown" title="chevrondown" />
+						<aura:set attribute="else">
+							<lightning:icon style="padding-right: 10px;"  iconName="utility:chevronright" size="x-small" alternativeText="chevronright" title="chevronright" />
+						</aura:set>
+					</aura:if>
+					<span class="slds-truncate" title="Section Title">Information</span>
+				</button>
+			</h3>
+			<lightning:layout multipleRows="true" class="pad-21-left-right" aura:id="Info">
+				<lightning:layoutItem size="6" padding="around-small">
+					<aura:if isTrue="{!v.readOnly}">
+						<div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent">
+							<span class="slds-form-element__label">Name</span>
+							<div class="slds-form-element__control">
+								<div class="slds-form-element__static">{!v.recordData.Name}</div>
+								<button class="slds-button slds-button_icon " title="Edit: Name" onclick="{! c.handleEditRecord }">
+									<lightning:icon iconName="utility:edit" size="xx-small" alternativeText="Edit" />
+									<span class="slds-assistive-text">Edit: Name</span>
+								</button>
+							</div>
+						</div>
+						<aura:set attribute="else">
+							<lightning:input aura:id="Name" readonly="true" type="text" name="Name" label="Name" value="{!v.recordData.Name}" required="true" />
+							<aura:if isTrue="{!v.requiredFields[0]}">
+								<p style="color:#c23934;white-space: pre-wrap;">Complete this field</p>
+							</aura:if>
+						</aura:set>
+					</aura:if>
+				</lightning:layoutItem>
+				<lightning:layoutItem size="6" padding="around-small">
+					<aura:if isTrue="{!v.readOnly}">
+						<div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent">
+							<span class="slds-form-element__label">Expected OI</span>
+							<div class="slds-form-element__control">
+								<div class="slds-form-element__static">ZAR {!v.recordData.Expected_OI__c}</div>
+								<button class="slds-button slds-button_icon " title="Edit: Expected OI" onclick="{! c.handleEditRecord }">
+									<lightning:icon iconName="utility:edit" size="xx-small" alternativeText="Edit" />
+									<span class="slds-assistive-text">Edit: Expected OI</span>
+								</button>
+							</div>
+						</div>
+						<aura:set attribute="else">
+							<lightning:input aura:id="Expected OI" readonly="true" type="text" name="Expected OI" label="Expected OI" value="{!v.recordData.Expected_OI__c}"  />
+							<aura:if isTrue="{!v.requiredFields[1]}">
+								<p style="color:#c23934;white-space: pre-wrap;">Complete this field</p>
+							</aura:if>
+						</aura:set>
+					</aura:if>
+				</lightning:layoutItem>
+				<lightning:layoutItem size="6" padding="around-small">
+					<aura:if isTrue="{!v.readOnly}">
+						<div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent">
+							<span class="slds-form-element__label">Description</span>
+							<div class="slds-form-element__control">
+								<div class="slds-form-element__static">{!v.recordData.Description__c}</div>
+								<button class="slds-button slds-button_icon " title="Edit: Description" onclick="{! c.handleEditRecord }">
+									<lightning:icon iconName="utility:edit" size="xx-small" alternativeText="Edit" />
+									<span class="slds-assistive-text">Edit: Description</span>
+								</button>
+							</div>
+						</div>
+						<aura:set attribute="else">
+							<lightning:textarea readonly="true" aura:id="Description" name="Description" label="Description" value="{!v.recordData.Description__c}"  />
+							<aura:if isTrue="{!v.requiredFields[2]}">
+								<p style="color:#c23934;white-space: pre-wrap;">Complete this field</p>
+							</aura:if>
+						</aura:set>
+					</aura:if>
+				</lightning:layoutItem>
+				<lightning:layoutItem size="6" padding="around-small">
+					<aura:if isTrue="{!v.readOnly}">
+						<div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent">
+							<span class="slds-form-element__label">Response</span>
+							<div class="slds-form-element__control">
+								<div class="slds-form-element__static">{!v.recordData.Response__c}</div>
+								<button class="slds-button slds-button_icon " title="Edit: Response" onclick="{! c.handleEditRecord }">
+									<lightning:icon iconName="utility:edit" size="xx-small" alternativeText="Edit" />
+									<span class="slds-assistive-text">Edit: Response</span>
+								</button>
+							</div>
+						</div>
+						<aura:set attribute="else">
+							<c:UTL_PickList showSearch="true" recId="{!v.recordData.Id}" isDependent="true" fieldName="Response"  assignTo="{!v.recordData.Response__c}" dependencyMap="{!v.reasMap}" returnedDependency="{!v.reaslist}"   options="{!v.resplist}" />
+							<aura:if isTrue="{!v.requiredFields[3]}">
+								<p style="color:#c23934;white-space: pre-wrap;">Complete this field</p>
+							</aura:if>
+						</aura:set>
+					</aura:if>
+				</lightning:layoutItem>
+				<lightning:layoutItem size="6" padding="around-small">
+					<aura:if isTrue="{!v.readOnly}">
+						<div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent">
+							<span class="slds-form-element__label">High Value CD</span>
+							<div class="slds-form-element__control">
+								<div class="slds-form-element__static">{!v.recordData.PBB_HighValueCD__c}</div>
+								<button class="slds-button slds-button_icon " title="Edit: High Value CD" onclick="{! c.handleEditRecord }">
+									<lightning:icon iconName="utility:edit" size="xx-small" alternativeText="Edit" />
+									<span class="slds-assistive-text">Edit: High Value CD</span>
+								</button>
+							</div>
+						</div>
+						<aura:set attribute="else">
+							<lightning:input aura:id="High Value CD" readonly="true"  type="text" name="High Value CD" label="High Value CD" value="{!v.recordData.PBB_HighValueCD__c}"  />
+							<aura:if isTrue="{!v.requiredFields[4]}">
+								<p style="color:#c23934;white-space: pre-wrap;">Complete this field</p>
+							</aura:if>
+						</aura:set>
+					</aura:if>
+				</lightning:layoutItem>
+				<lightning:layoutItem size="6" padding="around-small">
+					<aura:if isTrue="{!v.readOnly}">
+						<div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent">
+							<span class="slds-form-element__label">Reason</span>
+							<div class="slds-form-element__control">
+								<div class="slds-form-element__static">{!v.recordData.Reason__c}</div>
+								<button class="slds-button slds-button_icon " title="Edit: Reason" onclick="{! c.handleEditRecord }">
+									<lightning:icon iconName="utility:edit" size="xx-small" alternativeText="Edit" />
+									<span class="slds-assistive-text">Edit: Reason</span>
+								</button>
+							</div>
+						</div>
+						<aura:set attribute="else">
+							<c:UTL_PickList showSearch="false" recId="{!v.recordData.Id}"   fieldName="Reason" assignTo="{!v.recordData.Reason__c}"   options="{!v.reaslist}" />
+							<aura:if isTrue="{!v.requiredFields[5]}">
+								<p style="color:#c23934;white-space: pre-wrap;">Complete this field</p>
+							</aura:if>
+						</aura:set>
+					</aura:if>
+				</lightning:layoutItem>
+				<lightning:layoutItem size="6" padding="around-small">
+					<aura:if isTrue="{!v.readOnly}">
+						<div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent">
+							<span class="slds-form-element__label">Category</span>
+							<div class="slds-form-element__control">
+								<div class="slds-form-element__static">{!v.recordData.Category__c}</div>
+								<button class="slds-button slds-button_icon " title="Edit: Category" onclick="{! c.handleEditRecord }">
+									<lightning:icon iconName="utility:edit" size="xx-small" alternativeText="Edit" />
+									<span class="slds-assistive-text">Edit: Category</span>
+								</button>
+							</div>
+						</div>
+						<aura:set attribute="else">
+							<lightning:input aura:id="Category" readonly="true"  type="text" name="Category" label="Category" value="{!v.recordData.Category__c}"  />
+							<aura:if isTrue="{!v.requiredFields[6]}">
+								<p style="color:#c23934;white-space: pre-wrap;">Complete this field</p>
+							</aura:if>
+						</aura:set>
+					</aura:if>
+				</lightning:layoutItem>
+				<lightning:layoutItem size="6" padding="around-small">
+					<aura:if isTrue="{!v.readOnly}">
+						<div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent">
+							<span class="slds-form-element__label">Comments</span>
+							<div class="slds-form-element__control">
+								<div class="slds-form-element__static">{!v.recordData.Comments__c}</div>
+								<button class="slds-button slds-button_icon " title="Edit: Comments" onclick="{! c.handleEditRecord }">
+									<lightning:icon iconName="utility:edit" size="xx-small" alternativeText="Edit" />
+									<span class="slds-assistive-text">Edit: Comments</span>
+								</button>
+							</div>
+						</div>
+						<aura:set attribute="else">
+							<lightning:textarea  aura:id="Comments" name="Comments" label="Comments" value="{!v.recordData.Comments__c}" required="false" />
+							<aura:if isTrue="{!v.requiredFields[7]}">
+								<p style="color:#c23934;white-space: pre-wrap;">Complete this field</p>
+							</aura:if>
+						</aura:set>
+					</aura:if>
+				</lightning:layoutItem>
+				<lightning:layoutItem size="6" padding="around-small">
+					<aura:if isTrue="{!v.readOnly}">
+						<div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent">
+							<span class="slds-form-element__label">Sub-Category</span>
+							<div class="slds-form-element__control">
+								<div class="slds-form-element__static">{!v.recordData.Subcategory__c}</div>
+								<button class="slds-button slds-button_icon " title="Edit: Sub-Category" onclick="{! c.handleEditRecord }">
+									<lightning:icon iconName="utility:edit" size="xx-small" alternativeText="Edit" />
+									<span class="slds-assistive-text">Edit: Sub-Category</span>
+								</button>
+							</div>
+						</div>
+						<aura:set attribute="else">
+						 <lightning:input aura:id="Sub-Category" readonly="true"  type="text" name="Sub-Category" label="Sub-Category" value="{!v.recordData.Subcategory__c}"  />
+							<aura:if isTrue="{!v.requiredFields[8]}">
+								<p style="color:#c23934;white-space: pre-wrap;">Complete this field</p>
+							</aura:if>
+						</aura:set>
+					</aura:if>
+				</lightning:layoutItem>
+				<lightning:layoutItem size="6" padding="around-small">
+					<aura:if isTrue="{!v.readOnly}">
+						<div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent">
+							<span class="slds-form-element__label">Future Contact Date</span>
+							<div class="slds-form-element__control">
+								<lightning:formattedDateTime value="{!v.recordData.Future_Contact_Date__c}" timeZone="{! $Locale.timezone }"  day="numeric" month="numeric"  year="numeric"  hour="2-digit"
+        minute="2-digit" />
+								<button class="slds-button slds-button_icon " title="Edit: Future Contact Date" onclick="{! c.handleEditRecord }">
+									<lightning:icon iconName="utility:edit" size="xx-small" alternativeText="Edit" />
+									<span class="slds-assistive-text">Edit: Future Contact Date</span>
+								</button>
+							</div>
+						</div>
+						<aura:set attribute="else">
+							<lightning:input type="datetime" value="{!v.recordData.Future_Contact_Date__c}" name="input1"  label="Future Contact Date" />
+						</aura:set>
+					</aura:if>
+				</lightning:layoutItem>
+			</lightning:layout>
+			<h3 class="slds-section__title" style="margin-left: 20px;margin-right: 20px;" onclick="{!c.toggleRelated}">
+				<button aria-controls="expando-unique-id" aria-expanded="true" class="slds-button slds-section__title-action">
+					<aura:if isTrue="{!v.isRelatedTo}">
+						<lightning:icon style="padding-right: 10px;"  iconName="utility:chevrondown" size="x-small" alternativeText="chevrondown" title="chevrondown" />
+						<aura:set attribute="else">
+							<lightning:icon style="padding-right: 10px;"  iconName="utility:chevronright" size="x-small" alternativeText="chevronright" title="chevronright" />
+						</aura:set>
+					</aura:if>
+					<span class="slds-truncate" title="Section Title">Related To</span>
+				</button>
+			</h3>
+			<lightning:layout multipleRows="true" class="pad-21-left-right" aura:id="relatedTo">
+				<lightning:layoutItem size="6" padding="around-small">
+					<aura:if isTrue="{!v.readOnly}">
+						<div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent">
+							<span class="slds-form-element__label">Client</span>
+							<div class="slds-form-element__control">
+								<div class="slds-form-element__static">
+									<a force-hoverablelink_hoverablelink="" href="{!'/lightning/r/'+v.recordData.Client__r.Id+'/view'}" tabindex="0" class="flex-wrap-ie11">
+										<span force-hoverablelink_hoverablelink="">{!v.recordData.Client__r.Name}</span>
+									</a>
+								</div>
+								<button class="slds-button slds-button_icon " title="Edit: Client" onclick="{! c.handleEditRecord }">
+									<lightning:icon iconName="utility:edit" size="xx-small" alternativeText="Edit" />
+									<span class="slds-assistive-text">Edit: Client</span>
+								</button>
+							</div>
+						</div>
+						<aura:set attribute="else">
+							<c:UTL_LookupField isOnRemoveBtn="true"  sObjectName="Conversation__c" fieldName="Client__c" fieldLabel="Client"
+assignTo="{!v.recordData.Client__c}"  required="true"/>
+							<aura:if isTrue="{!v.requiredFields[9]}">
+								<p style="color:#c23934;white-space: pre-wrap;">Complete this field</p>
+							</aura:if>
+						</aura:set>
+					</aura:if>
+				</lightning:layoutItem>
+				<lightning:layoutItem size="6" padding="around-small">
+					<div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent">
+						<span class="slds-form-element__label">Last Modified By</span>
+						<div class="slds-form-element__control">
+							<div class="slds-form-element__static">
+								<a force-hoverablelink_hoverablelink="" href="{!'/lightning/r/'+v.recordData.LastModifiedBy.Id+'/view'}" tabindex="0" class="flex-wrap-ie11">
+									<span force-hoverablelink_hoverablelink="">{!v.recordData.LastModifiedBy.Name}</span>
+								</a>
+            , 
+            
+								<lightning:formattedDateTime value="{!v.recordData.LastModifiedDate}" timeZone="{! $Locale.timezone }"  day="numeric" month="numeric"  year="numeric"  hour="2-digit"
+            minute="2-digit" />
+							</div>
+						</div>
+					</div>
+				</lightning:layoutItem>
+				<lightning:layoutItem size="6" padding="around-small">
+					<div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent">
+						<span class="slds-form-element__label">Owner</span>
+						<div class="slds-form-element__control">
+							<div class="slds-form-element__static">
+								<a force-hoverablelink_hoverablelink="" href="{!'/lightning/r/'+v.recordData.Owner.Id+'/view'}" tabindex="0" class="flex-wrap-ie11">
+									<span force-hoverablelink_hoverablelink="">{!v.recordData.Owner.Name}</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</lightning:layoutItem>
+                
+                <lightning:layoutItem size="6" padding="around-small">
+					<div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent">
+						<span class="slds-form-element__label">BPID</span>
+						<div class="slds-form-element__control">
+							<div class="slds-form-element__static">
+									<span >{!v.recordData.BPID__c}</span>								
+							</div>
+						</div>
+					</div>
+				</lightning:layoutItem>
+                
+                <lightning:layoutItem size="6" padding="around-small">
+					<div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent">
+						<span class="slds-form-element__label">Registration Number</span>
+						<div class="slds-form-element__control">
+							<div class="slds-form-element__static">
+									<span >{!v.recordData.Registration_Number__c}</span>								
+							</div>
+						</div>
+					</div>
+				</lightning:layoutItem>
+                
+                <lightning:layoutItem size="6" padding="around-small">
+					<div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent">
+						<span class="slds-form-element__label">File Id</span>
+						<div class="slds-form-element__control">
+							<div class="slds-form-element__static">
+									<span >{!v.recordData.PBB_File_Id__c}</span>								
+							</div>
+						</div>
+					</div>
+				</lightning:layoutItem>
+                
+                <lightning:layoutItem size="6" padding="around-small">
+					<div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent">
+						<span class="slds-form-element__label">External Id</span>
+						<div class="slds-form-element__control">
+							<div class="slds-form-element__static">
+									<span >{!v.recordData.ExternalId__c}</span>								
+							</div>
+						</div>
+					</div>
+				</lightning:layoutItem>
+                
+                <lightning:layoutItem size="6" padding="around-small">
+					<div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent">
+						<span class="slds-form-element__label">Lead Id</span>
+						<div class="slds-form-element__control">
+							<div class="slds-form-element__static">
+									<span >{!v.recordData.ExternalIdLeadKey__c}</span>								
+							</div>
+						</div>
+					</div>
+				</lightning:layoutItem>                
+			</lightning:layout>
+		</div>
+		<aura:if isTrue="{! !v.readOnly}">
+			<footer class="slds-modal__footer slds-align_absolute-center">
+				<button type="button" class="slds-button slds-button_neutral"  onclick="{! c.cancelEditRecord }">Cancel</button>
+				<button type="button" class="slds-button slds-button_brand" onclick = "{! c.saveRecord}">Save</button>
+			</footer>
+		</aura:if>
+	</lightning:card>
+</aura:component>

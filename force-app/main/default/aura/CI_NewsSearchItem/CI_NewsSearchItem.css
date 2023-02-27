@@ -1,0 +1,22 @@
+.THIS .boldText{
+    font-weight: bold;
+}
+
+.THIS.icon_green svg {
+    fill: token(SBGreenPositive);
+}
+
+.THIS .text_green  {
+    color:  token(SBGreenPositive);
+}
+
+.THIS .clickable {
+    cursor: pointer;
+}
+.THIS.icon_green {
+    color:  token(SBGreenPositive);
+}
+
+.THIS .cursor_pointer:hover {
+    cursor:pointer;
+}

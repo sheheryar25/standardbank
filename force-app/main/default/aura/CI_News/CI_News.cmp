@@ -1,0 +1,75 @@
+<aura:component extends="c:CI_Base" implements="flexipage:availableForAllPageTypes" controller="CI_NewsController">
+    <aura:attribute name="newsArticles" type="Object[]"/>
+    <aura:attribute name="savedArticles" type="Object[]" access="private"/>
+    <aura:attribute name="allArticles" type="Object[]" access="private"/>
+    <aura:attribute name="showingSaved" type="Boolean" access="private" default="false"/>
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="errorMsg" type="String"/>
+    <aura:attribute name="statusMsg" type="String"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler name="articleSavedEvent" event="c:CI_EvtGeneralCmp" action="{!c.articleSavedHandler}"/>
+    <c:CI_NewsService aura:id="newsService"/>
+
+    <div class="desktop_background slds-p-around_small">
+        <div class="slds-line-height_reset slds-text-heading_small bold slds-m-bottom_xx-small slds-m-left_small is_absolute" style="float:left">
+            Smart News
+            <lightning:helptext class="help-text"
+                    content="The Smart News functionality provides a tailored news feed,
+                    displaying news related to your portfolio of clients and associated sectors.
+                     To see all available News please click on “More…”"
+            />
+        </div>
+        <div class="slds-m-bottom_medium slds-p-around_x-small slds-text-align_right">
+            <lightning:buttonGroup>
+                <lightning:button label="All" onclick="{!c.showAll}" class="{!if(!v.showingSaved,'button_selected')}"/>
+                <lightning:button label="Saved" onclick="{!c.showSaved}" class="{!if(v.showingSaved,'button_selected')}"/>
+                 <lightning:button label="More..." onclick="{!c.navigateToAdvancedBrowsing}"/>
+            </lightning:buttonGroup>
+        </div>
+
+        <div class="slds-text-heading_small slds-p-left_small">{!v.errorMsg}</div>
+
+
+        <article aura:id="status_msg" class="card_with_shadow slds-hide slds-m-around_small">
+            <div class="slds-p-around_small">
+                <p class="slds-text-heading_small slds-text-align_center">
+                    {!v.statusMsg}
+                </p>
+            </div>
+        </article>
+
+        <div aura:id="news_section" class="slds-hide ">
+            <aura:if isTrue="{!or($Browser.isAndroid, $Browser.isIOS)}">
+
+                <aura:iteration items="{!v.newsArticles}" var="newsArticle" indexVar="index">
+                    <div class="slds-p-around_x-small">
+                        <c:CI_NewsCard id="{!newsArticle.An__c}" index="{!index}" title="{!newsArticle.formattedTitle}"
+                                       publisherName="{!newsArticle.Publisher_Name__c}"
+                                       publicationDate="{!newsArticle.formattedPublicationDate}"
+                                       isLead="{!newsArticle.Pred__c}" clientId="{!v.recordId}"
+                                       showingSaved="{!v.showingSaved}"/>
+                    </div>
+                </aura:iteration>
+
+                <aura:set attribute="else">
+                    <c:CI_Carousel aura:id="news_carousel">
+                        <div class="slds-grid">
+                            <aura:iteration items="{!v.newsArticles}" var="newsArticle" indexVar="index">
+                                <div class="slds-col slds-p-horizontal_x-small article_container">
+                                    <c:CI_NewsCard id="{!newsArticle.An__c}" index="{!index}"
+                                                   title="{!newsArticle.formattedTitle}"
+                                                   publisherName="{!newsArticle.Publisher_Name__c}"
+                                                   publicationDate="{!newsArticle.formattedPublicationDate}"
+                                                   isLead="{!newsArticle.Pred__c}"
+                                                   clientId="{!v.recordId}" showingSaved="{!v.showingSaved}"/>
+                                </div>
+                            </aura:iteration>
+                        </div>
+                    </c:CI_Carousel>
+                </aura:set>
+
+            </aura:if>
+        </div>
+    </div>
+
+</aura:component>

@@ -1,0 +1,25 @@
+<template>
+    <div class="slds-grid slds-wrap teaser__content" data-id="teaserosb">
+        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_1-of-2 teaser__content ">
+            <img src={solutionLogo} class="bannerLogo" data-id="image-container"/>
+            <br>
+            <lightning-formatted-rich-text value={mainContent}></lightning-formatted-rich-text>
+            <br>
+            <lightning-formatted-rich-text value={subContent}></lightning-formatted-rich-text>
+            <br>
+            <div class="btn-container">
+                <div if:true={link}>
+                    <a class="btn btn--blue teaser__button" href={link} data-id="uitlink_link_btn1" style={btnStyle}
+                        data-text={adobeText}>{linkLabel}</a>
+                </div>
+                <div if:true={showOneHubBtn}>
+                    <a class="btn btn--blue teaser__button" href="/s" data-id="uitlink_link_return"
+                        style={btnStyleOneHub} data-text={adobeText}>RETURN TO ONEHUB</a>
+                </div>
+            </div>
+        </div>
+        <div class="slds-col slds-size_1-of-1 slds-show_large slds-large-size_1-of-2 banner__image-container">
+            <img src={image} class="banner__image" />
+        </div>
+    </div>
+</template>

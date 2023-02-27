@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Concession_approval_rest_RT_field_checks</fullName>
+    <active>true</active>
+    <description>US-1630 CommB - CMS - 8 - RM Submits Request for Approval. 
+This validation rule is required to check if all required fields are filled before an approval process is initiated</description>
+    <errorConditionFormula>AND(
+	Submit_for_Approval__c == True, 
+	(IF( 
+		OR(
+			(ISBLANK( Risk_Group_Number__c )), 
+			(ISBLANK(Risk_Group_Name__c )),
+			(ISBLANK( Latest_Risk_Grade_CRS_MRS__c )),
+			(ISBLANK( Client__c )),
+			(ISBLANK( CIF_Number__c )),
+			(ISBLANK( Market_Segment__c)),
+			OR(
+				AND( 
+					RecordType.DeveloperName ==&apos;Trade&apos;,
+					OR(
+						(ISBLANK(Total_TT_Volume__c )),
+						(ISBLANK(Total_TT_Value__c )),
+						(ISBLANK(Total_LC_Volume__c )),
+						(ISBLANK(Total_LC_Value__c )),
+						(ISBLANK(Total_FBC_Volume__c )),
+						(ISBLANK(Total_FBC_Value__c )),
+						(ISBLANK(Average_TT_Value__c )),
+						(ISBLANK(Weighted_Risk_Grade__c )),
+						(ISBLANK(Average_FBC_Price__c )),
+						(ISBLANK(Average_FBC_Value__c )),
+						(ISBLANK(Average_LC_Price__c )),
+						(ISBLANK(Average_LC_Value__c )),
+						(ISBLANK(Average_TT_Price__c )),
+						(ISBLANK(TEXT(Transaction_Type__c) )),
+						(ISBLANK(Transaction_Volume__c )),
+						(ISBLANK(Transaction_Value__c )),
+						(ISBLANK(SMT_Deal_Number__c )),
+						(ISBLANK(Maximum_Fee__c )),
+						(ISBLANK(Minimum_Fee__c )),
+						(ISBLANK(Ad_Valorem__c )),
+						(ISBLANK(TEXT(Base_Rate__c) )) 
+					)
+				), 
+				AND(
+					RecordType.DeveloperName ==&apos;Transactional&apos;,
+					OR(
+						(ISBLANK(Total_Cheque_Issuing_Volume__c )),
+						(ISBLANK(Total_Cheque_Deposit_Volume__c )),
+						(ISBLANK(Total_Cheque_Encashment_Volume__c )),
+						(ISBLANK(Total_Cheque_Encashment_Value__c )),
+						(ISBLANK(Total_Cash_Withdrawal_Volume__c )),
+						(ISBLANK(Total_Cash_Withdrawal_Value__c )),
+						(ISBLANK(Average_Cash_Withdrawal_Price__c )),
+						(ISBLANK(Average_Cheque_Encashment_Price__c )),
+						(ISBLANK( Average_Cheque_Deposit_Price__c )),
+						(ISBLANK(Total_Cheque_Deposit_Value__c )),
+						(ISBLANK(Average_Cheque_Issuing_Price__c )),
+						(ISBLANK(Total_Cheque_Issuing_Value__c )),
+						(ISBLANK(Table_Number__c )),
+						(ISBLANK(Transaction_Volume__c )),
+						(ISBLANK(Transaction_Value__c )),
+						(ISBLANK(SMT_Deal_Number__c )),
+						(ISBLANK( Ad_Valorem__c )) 
+					)
+				), 
+				AND( 
+					RecordType.DeveloperName ==&apos;Merchant_Acquiring&apos;,
+					OR(
+						(ISBLANK(Total_Credit_Turnover__c )),
+						(ISBLANK(Credit_Weighted_Average_Price__c )),
+						(ISBLANK(Debit_Weighted_Average_Price__c )),
+						(ISBLANK(Total_Debit_Turnover__c )),
+						(ISBLANK(Merchant_Number__c )),
+						(ISBLANK(TEXT(Transaction_Type__c) )),
+						(ISBLANK(	Commission_Rate__c)),
+						(ISBLANK(Turnover__c )) 
+					)
+				) 
+			)
+		), TRUE,FALSE) 
+	) 
+)</errorConditionFormula>
+    <errorMessage>Please ensure that all fields in the Client Information, Financials and Concession Information sections are populated.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Form_of_Sale__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Strategy which was used to achieve the sale.</inlineHelpText>
+    <label>Form of Sale</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>BDX</fullName>
+                <default>false</default>
+                <label>BDX</label>
+            </value>
+            <value>
+                <fullName>CLN</fullName>
+                <default>false</default>
+                <label>CLN</label>
+            </value>
+            <value>
+                <fullName>Funded Subpart</fullName>
+                <default>false</default>
+                <label>Funded Subpart</label>
+            </value>
+            <value>
+                <fullName>Issuer Trust</fullName>
+                <default>false</default>
+                <label>Issuer Trust</label>
+            </value>
+            <value>
+                <fullName>Libfin Credit Fund</fullName>
+                <default>false</default>
+                <label>Libfin Credit Fund</label>
+            </value>
+            <value>
+                <fullName>Outright</fullName>
+                <default>false</default>
+                <label>Outright</label>
+            </value>
+            <value>
+                <fullName>Portfolio Sale - Outright</fullName>
+                <default>false</default>
+                <label>Portfolio Sale - Outright</label>
+            </value>
+            <value>
+                <fullName>Stanlib Credit fund</fullName>
+                <default>false</default>
+                <label>Stanlib Credit fund</label>
+            </value>
+            <value>
+                <fullName>Unfunded Subpart</fullName>
+                <default>false</default>
+                <label>Unfunded Subpart</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Concession_approval_field_value_check</fullName>
+    <active>true</active>
+    <description>US-1630 CommB - CMS - 8 - RM Submits Request for Approval.
+This validation rule is required to check if all required fields are filled before an approval process is initiated</description>
+    <errorConditionFormula>AND(
+	Submit_for_Approval__c == True, 
+	(IF( 
+		OR(
+			OR( 
+				(ISBLANK( Risk_Group_Number__c )), 
+				(ISBLANK(Risk_Group_Name__c )),
+				(ISBLANK( Latest_Risk_Grade_CRS_MRS__c )),
+				(ISBLANK( Client__c )),
+				(ISBLANK( CIF_Number__c )),
+				(ISBLANK( Market_Segment__c))),
+				OR(
+					AND(
+						RecordType.DeveloperName ==&apos;BOL&apos;,
+						OR(
+							(ISBLANK( Total_Payments__c )),
+							(ISBLANK(Total_Payments_Weighted_Average_Price__c )),
+							(ISBLANK(Total_Collection__c )),
+							(ISBLANK(Tot_Value_Added_Trans_Weighted_Avg_Price__c )),
+							(ISBLANK(Total_Value_Added_Transactions__c )),
+							(ISBLANK(Total_Collection_Weighted_Average_Price__c )),
+							(ISBLANK(TEXT(Transaction_Group__c) )),
+							(ISBLANK(TEXT(BOL_Transaction_Type__c) )),
+							(ISBLANK(Base_Rate__c) ),
+                                                        (ISBLANK(Ad_Valorem__c) ),
+							(ISBLANK(SMT_Deal_Number__c )),
+							(ISBLANK(Transaction_Value__c )),
+							(ISBLANK(Transaction_Volume__c)),
+							(ISBLANK(BOL_User_ID__c ))
+						)
+					), 
+					AND( 
+						RecordType.DeveloperName ==&apos;Cash_Acquiring&apos;,
+						OR(
+							(ISBLANK(Total_Branch_Cash_Turnover__c )),
+							(ISBLANK(Total_Branch_Cash_Volume__c )),
+							(ISBLANK(Weighted_Average_Branch_Price__c )),
+							(ISBLANK(Total_Cash_Centre_Cash_Turnover__c )),
+							(ISBLANK(Total_Cash_Centre_Cash_Volume__c )),
+							(ISBLANK(Weighted_Average_Autosafe_Price__c )),
+							(ISBLANK(Weighted_Average_Cash_Price__c )),
+							(ISBLANK(Total_Autosafe_Cash_Volume__c )),
+							(ISBLANK(Total_Autosafe_Cash_Turnover__c )),
+							(ISBLANK(Total_Cash_Centre_Cash_Volume__c )),
+							(ISBLANK(TEXT(Cash_Acquiring_Channel_Type__c)) ),
+							(ISBLANK(TEXT(Cash_Acquiring_Base_Rate__c ))),
+							(ISBLANK(Cash_Volume__c )),
+							(ISBLANK(Ad_Valorem__c )),
+							(ISBLANK(Table_Number__c )),
+							(ISBLANK(SMT_Deal_Number__c ))
+						)
+					), 
+					AND( 
+						RecordType.DeveloperName ==&apos;Investments&apos;,
+						OR(
+							(ISBLANK(Total_Liability_Balances__c )),
+							(ISBLANK(Weighted_Average_Net_Margin__c )),
+							(ISBLANK(Weighted_Average_Margin_To_Prime__c )),
+							(ISBLANK(TEXT(Investment_Product_Type__c))),
+							(ISBLANK(Balance__c )),
+							(ISBLANK(SMT_Deal_Number__c )),
+							(ISBLANK(Interest_To_Client__c )),
+							(ISBLANK(Term__c ))
+						) 
+					), 
+					AND( 
+						RecordType.DeveloperName ==&apos;Lending&apos;,
+						OR(
+							(ISBLANK(Total_Exposure__c )),
+							(ISBLANK(Weighted_Average_Margin_Above_Prime__c )),
+							(ISBLANK(Weighted_Risk_Grade__c )),
+							(ISBLANK(SMT_Deal_Number__c )),
+							(ISBLANK(Product_Limit__c )),
+							(ISBLANK(Term__c )),
+							(ISBLANK(Margin_Above_Prime__c )),
+							(ISBLANK(Initiation_Fee__c )),
+							IF(
+								NOT(ISPICKVAL(Lending_Product_Type__c,&apos;Overdraft&apos;)),
+								FALSE, 
+								OR(
+									ISBLANK(Review_Fee__c ),
+									ISBLANK(TEXT(Review_Fee_Type__c)),
+									ISBLANK(Unutilised_Facility_Fee__c ),
+									ISBLANK(Average_OD_Utilisation__c ),
+									ISBLANK(Review_Extension_Fee__c)
+								)
+							)
+						) 
+					)
+				)
+		), TRUE,FALSE)) 
+)</errorConditionFormula>
+    <errorMessage>Please ensure that all fields in the Client Information, Financials and Concession Information sections are populated.</errorMessage>
+</ValidationRule>

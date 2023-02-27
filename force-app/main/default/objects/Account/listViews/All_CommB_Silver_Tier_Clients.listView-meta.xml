@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_CommB_Silver_Tier_Clients</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.SITE</columns>
+    <columns>ACCOUNT.ADDRESS1_STATE</columns>
+    <columns>ACCOUNT.PHONE1</columns>
+    <columns>ACCOUNT.TYPE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Commercial_Tier__c</field>
+        <operation>equals</operation>
+        <value>Silver</value>
+    </filters>
+    <filters>
+        <field>Primary_Relationship_Holder__c</field>
+        <operation>equals</operation>
+        <value>Commercial Banking</value>
+    </filters>
+    <label>All CommB Silver Tier Clients</label>
+    <sharedTo>
+        <roleAndSubordinates>Commercial_Banking</roleAndSubordinates>
+    </sharedTo>
+</ListView>

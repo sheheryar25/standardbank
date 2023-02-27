@@ -1,0 +1,94 @@
+<aura:component description="StdBank_Ltn_SELECT">
+    <!-- Extenral -->
+    <aura:attribute name="data" type="Array" default="[]" description="Map of data for input"/>
+    <aura:attribute name="selected" type="Object"/>
+
+    <!-- Internal -->
+    <aura:attribute name="isOpen" type="Boolean" default="true" access="PRIVATE"/>
+    <aura:attribute name="isLoading" type="Boolean" default="true" access="PRIVATE"/>
+    <aura:attribute name="isSearchValid" type="Boolean" default="false" access="PRIVATE"/>
+
+    <!-- Operational -->
+    <aura:attribute name="search" type="String" access="PRIVATE"/>
+    <aura:attribute name="dataSorted" type="Array" default="[]" access="PRIVATE"/>
+
+    <!-- INIT -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler name="change" value="{!v.data}" action="{!c.onChangeInput}"/>
+    <aura:handler name="change" value="{!v.selected}" action="{!c.checkCleared}"/>
+    <aura:handler name="optionSelected" event="c:StdBank_Ltn_OptionSelected" action="{!c.assignValue}"/>
+
+    <aura:if isTrue="{!v.isLoading}">
+        <div class="slds-spinner_container">
+            <div class="slds-spinner slds-spinner_small" aria-hidden="false" role="alert">
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+        <aura:set attribute="else">
+            <div class="{! 'slds-picklist slds-dropdown-trigger slds-dropdown-trigger_click' + (v.isOpen == true ? 'slds-is-open' : '')}"
+                 aria-expanded="true"
+                 style="min-width: 100%;">
+                <div class="slds-button-group" role="group">
+                    <!-- IF -->
+                    <aura:if isTrue="{!v.isOpen}">
+                        <ui:inputText class="slds-input slds-button slds-button_icon-border" value="{!v.search}"
+                                      placeholder="Type to search" updateOn="input" keyup="{!c.search}"/>
+                        <c:StdBank_Ltn_BUTTON class="slds-button slds-button_icon-border"
+                                              svgClass="slds-button__icon"
+                        					  svgCategory="utility" svgType="search"
+                                              svgFill="black"
+                                              disabled="true"/>
+                        <!-- ELSE -->
+                        <aura:set attribute="else">
+                            <ui:inputText class="slds-input slds-button slds-button_icon-border"
+                                          value="{!v.selected.Name}" disabled="true"/>
+                            <c:StdBank_Ltn_BUTTON class="slds-button slds-button_icon-border"
+                                                  svgClass="slds-button__icon"
+                        						  svgCategory="utility" svgType="close"
+                                                  svgFill="black"
+                                                  onclick="{!c.searchClear}"/>
+                        </aura:set>
+                    </aura:if>
+                </div>
+                <div class="slds-dropdown slds-dropdown_left slds-dropdown_menu" style="min-width: 100%">
+                    <ul class="slds-dropdown__list slds-dropdown_length-6" role="menu">
+                        <aura:if isTrue="{!v.isSearchValid}">
+                            <!-- Has result -->
+                            <li class="slds-dropdown__item" style="text-align: center;">
+                                <p class="slds-truncate info">Results for: {!v.search}</p>
+                            </li>
+                            <li class="slds-dropdown__item slds-has-divider_top-space"></li>
+                            <span>
+                                <aura:if isTrue="{!v.dataSorted.length != 0}">
+                                    <!-- Has result -->
+                                    <aura:iteration items="{!v.dataSorted}" var="item">
+                                        <!-- Filtered items -->
+                                        <span>
+                                            <c:StdBank_Ltn_SELECTOPTION class="slds-dropdown__item"
+                                                                        classText="slds-truncate"
+                                                                        data="{!item}"
+                                                                        highlight="{!v.search}"/>
+                                        </span>
+                                    </aura:iteration>
+                                    <aura:set attribute="else">
+                                        <!-- Nothing found -->
+                                        <li class="slds-dropdown__item" style="text-align: center;">
+                                            <p class="slds-truncate">Nothing found</p>
+                                        </li>
+                                    </aura:set>
+                                </aura:if>
+                            </span>
+                            <aura:set attribute="else">
+                                <li class="{! 'slds-dropdown__item ' + (v.filterConfig.notEmpty ? 'slds-has-divider_top-space' : '')}"
+                                    style="text-align: center;">
+                                    <p class="slds-truncate info">Type at least 3 chars to initiate full search</p>
+                                </li>
+                            </aura:set>
+                        </aura:if>
+                    </ul>
+                </div>
+            </div>
+        </aura:set>
+    </aura:if>
+</aura:component>

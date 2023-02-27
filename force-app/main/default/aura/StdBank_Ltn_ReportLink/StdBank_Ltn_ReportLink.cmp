@@ -1,0 +1,13 @@
+<aura:component controller="StdBank_Ltn_ReportLinkController" implements="flexipage:availableForAllPageTypes,force:hasRecordId">
+   <aura:attribute name="reportName" type="String" />
+   <aura:attribute name="title" type="String" />
+   <aura:attribute name="reportUrl" type="String" access="private"/>
+   <aura:attribute name="recordId" type="Id" />
+   <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+	  <div style="position: relative; z-index: 10;">
+	    <a href="{!v.reportUrl}" target="_blank">
+		    <c:StdBank_Ltn_SVG class="slds-button__icon slds-button__icon_left" category="utility" fill="" type="up"/>
+		    <span class="slds-truncate">{!$Label.c.View_Report}</span>
+	    </a>
+	  </div>
+</aura:component>

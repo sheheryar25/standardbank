@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DRP_FMA_Discrepancy_editable_once</fullName>
+    <active>true</active>
+    <description>DRP Validation Rule ensuring the FMA Discrepancy field can only be edited once and after being completed cannot be modified</description>
+    <errorConditionFormula>AND(
+            ISCHANGED(FMA_Discrepancy__c),
+            NOT(
+            PRIORVALUE(FMA_Discrepancy__c) = FALSE
+            )
+            )</errorConditionFormula>
+    <errorDisplayField>FMA_Discrepancy__c</errorDisplayField>
+    <errorMessage>FMA Discrepancy can only be set once</errorMessage>
+</ValidationRule>

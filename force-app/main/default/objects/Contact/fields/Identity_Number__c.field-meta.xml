@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Identity_Number__c</fullName>
+    <description>Digital Onboarding: This field stores the Authorised Person&apos;s ID number and is used by the KYC Consultants during the KYC Process. This field is only visible to the Custom KYC User Profile and the Onboarding API profile.</description>
+    <externalId>false</externalId>
+    <label>Identity Number</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>TextArea</type>
+</CustomField>

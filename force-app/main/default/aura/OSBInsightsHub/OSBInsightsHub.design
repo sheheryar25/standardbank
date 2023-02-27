@@ -1,0 +1,4 @@
+<design:component>
+    <design:attribute name="full" />
+    <design:attribute name="tile" />
+</design:component>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Grand_Parent_Product__c</fullName>
+    <description>SFP-12591 Used to group Insurance products</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select the appropriate product to be linked with the Policy</inlineHelpText>
+    <label>Grand Parent Product</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Parent_Product__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Accident &amp; Health</fullName>
+                <default>false</default>
+                <label>Accident &amp; Health</label>
+            </value>
+            <value>
+                <fullName>Credit Life</fullName>
+                <default>false</default>
+                <label>Credit Life</label>
+            </value>
+            <value>
+                <fullName>Hybrid</fullName>
+                <default>false</default>
+                <label>Hybrid</label>
+            </value>
+            <value>
+                <fullName>Insurance of the Person</fullName>
+                <default>false</default>
+                <label>Insurance of the Person</label>
+            </value>
+            <value>
+                <fullName>Liability</fullName>
+                <default>false</default>
+                <label>Liability</label>
+            </value>
+            <value>
+                <fullName>Motor (lending)</fullName>
+                <default>false</default>
+                <label>Motor (lending)</label>
+            </value>
+            <value>
+                <fullName>Motor (non lending linked)</fullName>
+                <default>false</default>
+                <label>Motor (non lending linked)</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Property (lending)</fullName>
+                <default>false</default>
+                <label>Property (lending)</label>
+            </value>
+            <value>
+                <fullName>Property (non lending linked)</fullName>
+                <default>false</default>
+                <label>Property (non lending linked)</label>
+            </value>
+            <value>
+                <fullName>SME Group Life</fullName>
+                <default>false</default>
+                <label>SME Group Life</label>
+            </value>
+            <value>
+                <fullName>SME Life insurance</fullName>
+                <default>false</default>
+                <label>SME Life insurance</label>
+            </value>
+            <value>
+                <fullName>SME Short term</fullName>
+                <default>false</default>
+                <label>SME Short term</label>
+            </value>
+            <value>
+                <fullName>Surety</fullName>
+                <default>false</default>
+                <label>Surety</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Multiperil or stand alone</controllingFieldValue>
+            <valueName>Accident &amp; Health</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Multiperil or stand alone</controllingFieldValue>
+            <controllingFieldValue>Specialist</controllingFieldValue>
+            <valueName>Liability</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Multiperil or stand alone</controllingFieldValue>
+            <controllingFieldValue>Motor vehicles and fleet</controllingFieldValue>
+            <valueName>Motor (non lending linked)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Multiperil or stand alone</controllingFieldValue>
+            <controllingFieldValue>Agriculture</controllingFieldValue>
+            <controllingFieldValue>Aviation</controllingFieldValue>
+            <controllingFieldValue>Construction &amp; Engineering</controllingFieldValue>
+            <controllingFieldValue>General</controllingFieldValue>
+            <controllingFieldValue>Marine</controllingFieldValue>
+            <valueName>Property (non lending linked)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Specialist</controllingFieldValue>
+            <controllingFieldValue>Agriculture</controllingFieldValue>
+            <valueName>Hybrid</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Specialist</controllingFieldValue>
+            <controllingFieldValue>General</controllingFieldValue>
+            <controllingFieldValue>Health</controllingFieldValue>
+            <controllingFieldValue>Life</controllingFieldValue>
+            <controllingFieldValue>Motor vehicles and fleet</controllingFieldValue>
+            <valueName>Insurance of the Person</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VAF Other Assets</controllingFieldValue>
+            <controllingFieldValue>Agriculture</controllingFieldValue>
+            <controllingFieldValue>Commercial Property</controllingFieldValue>
+            <controllingFieldValue>Marine</controllingFieldValue>
+            <valueName>Property (lending)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VAF Motor</controllingFieldValue>
+            <valueName>Motor (lending)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General</controllingFieldValue>
+            <valueName>SME Short term</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Guarantee</controllingFieldValue>
+            <valueName>Surety</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Life</controllingFieldValue>
+            <valueName>Credit Life</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Life</controllingFieldValue>
+            <valueName>SME Group Life</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Life</controllingFieldValue>
+            <valueName>SME Life insurance</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

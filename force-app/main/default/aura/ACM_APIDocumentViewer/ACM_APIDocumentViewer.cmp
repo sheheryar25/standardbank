@@ -1,0 +1,71 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+    
+    <aura:attribute  name="headerText" type="String" access="global"/>
+    <aura:attribute  name="ShieldType" type="Boolean" access="global"/>
+    <aura:attribute  name="ShieldBackingicon1svg" type="String" access="global"/>
+    <aura:attribute  name="ACMHomepageicon1svg" type="String" access="global"/>
+    <aura:attribute  name="ACMHomepageicon2svg" type="String" access="global"/>
+    <aura:attribute  name="ACMHomepageicon3svg" type="String" access="global"/>
+    <aura:attribute  name="ACMHomepageicon4svg" type="String" access="global"/>
+
+
+    <aura:attribute name="section1api" type="string" access="global"/>
+    <aura:attribute name="section1section" type="string" access="global"/>
+    <aura:attribute name="section1selectedPage" type="string" access="global"/>
+
+    
+    <aura:attribute name="section2api" type="string" access="global"/>
+    <aura:attribute name="section2section" type="string" access="global"/>
+    <aura:attribute name="section2selectedPage" type="string" access="global"/>
+
+    <aura:attribute name="section3api" type="string" access="global"/>
+    <aura:attribute name="section3section" type="string" access="global"/>
+    <aura:attribute name="section3selectedPage" type="string" access="global"/>
+
+    <aura:attribute name="section4api" type="string" access="global"/>
+    <aura:attribute name="section4section" type="string" access="global"/>
+    <aura:attribute name="section4selectedPage" type="string" access="global"/>
+
+        <!-- Scripts -->
+        <!-- <ltng:require scripts="{!$Resource.reactAppBundle}" afterScriptsLoaded="{!c.afterScriptsLoaded}" /> -->
+        <!-- Styles Attributes -->
+        <aura:attribute name="showButtons" type="Boolean" default="true" access="global" />
+        <aura:attribute name="cardHeight" type="String" default="Medium" access="global" />
+        <aura:attribute name="cardMargin" type="String" default="Medium" access="global" />
+        <aura:attribute name="cardBorder" type="String" default="Thin" access="global" />
+        <aura:attribute name="cardBorderRadius" type="String" default="Small" access="global" />
+        <aura:attribute name="cardBoxShadow" type="String" default="Medium" access="global" />
+        <aura:attribute name="detailsLabel" type="String" access="global" />
+        <aura:attribute name="groupDetailsLabel" default="Group Details" type="String" access="global" />
+        <aura:attribute name="learnMoreLabel" type="String" default="Learn more" access="global" />
+        <aura:attribute name="iconPosition" type="String" access="global" />
+        <!-- Record Attributes -->
+        <aura:attribute name="record" type="Object" access="global" />
+        <aura:attribute name="recordId" type="String" access="global" />
+        <aura:attribute name="recordDataFields" type="String[]" access="global"/>
+        <!-- Loader Attributes -->
+        <aura:attribute name="isLoadingApiVersion" type="Boolean" access="global" default="true" />
+        <aura:attribute name="isLoadingScript" type="Boolean" access="global" default="true" />
+        <!-- Navigation Attributes -->
+        <aura:attribute name="page" type="String" access="global" />
+        <aura:if isTrue="{!or(v.isLoadingApiVersion, v.isLoadingScript)}">
+            <!-- <c:loadingOverlay /> -->
+        </aura:if>
+        <!-- Handlers -->
+        <!-- <aura:handler name="init" value="{!this}" action="{!c.doInit}" /> -->
+        <!-- <aura:handler name="change" value="{!v.showButtons}" action="{!c.checkReactInit}" /> -->
+        <!-- Utils -->
+        <!-- <c:LightningUtils aura:id="lightningUtils"/> -->
+    
+        <!-- Body -->
+        <!-- <aura:if isTrue="{!v.recordDataFields.length > 0}"> -->
+            <force:recordData
+                aura:id="record"
+                recordId="a6t0E0000006c7uQAA"
+                targetFields="{!v.record}"
+                recordUpdated="{!c.recordUpdated}"
+                mode="VIEW"
+                fields="{!v.recordDataFields}" />
+        <!-- </aura:if> -->
+        <div aura:id="ApiVersionCard" />
+</aura:component>

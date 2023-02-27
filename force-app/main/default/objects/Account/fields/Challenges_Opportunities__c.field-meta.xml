@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Challenges_Opportunities__c</fullName>
+    <description>SFP-9319 [c] User needs to indicate any challenges/opportunities identified with client</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Challenges faced in operating environment (internally or externally driven)? Opportunities present in industry? Outlook for the medium to long term? Can the Bank help resolve some challenges, add value and help client leverage opportunities in sector?</inlineHelpText>
+    <label>Challenges/Opportunities</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

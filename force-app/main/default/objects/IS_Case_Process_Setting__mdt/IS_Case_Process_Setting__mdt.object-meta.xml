@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>RN - CloudSmiths - holds the settings for the Investors services case support processes - This meta data type is reference in Apex code</description>
+    <label>IS Case Process Setting</label>
+    <pluralLabel>IS Case Process Settings</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

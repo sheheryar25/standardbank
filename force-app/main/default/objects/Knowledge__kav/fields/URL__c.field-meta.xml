@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>URL__c</fullName>
+    <description>OneHub: This field stores the Product ID from the API Portal to generate the swagger. (US-3979)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>URL to generate API Detail page with Swagger</inlineHelpText>
+    <label>Product ID</label>
+    <length>1000</length>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

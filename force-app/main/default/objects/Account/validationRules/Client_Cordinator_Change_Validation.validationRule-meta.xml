@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Client_Cordinator_Change_Validation</fullName>
+    <active>true</active>
+    <description>Validation Rule to restrict users to update the Client Coordinator on the page layout. Only Admin can change the Client Coordinator for all the record types.</description>
+    <errorConditionFormula>AND(
+ISCHANGED(OwnerId),
+NOT( $Setup.Execution__c.Skip_Validations__c ),
+OR(
+$Setup.Execution__c.Skip_Named_Validation__c == null,
+NOT(CONTAINS( $Setup.Execution__c.Skip_Named_Validation__c , &apos;Client_Cordinator_Change_Validation&apos;))),
+NOT(Ignore_CCValidation__c),
+RecordType.Name &lt;&gt; &apos;Prospect&apos;,
+RecordType.Name &lt;&gt; &apos;Potential (Goldtier)&apos;,
+RecordType.Name &lt;&gt; &apos;Potential (CIF)&apos;,
+RecordType.Name &lt;&gt; &apos;Potential Client&apos;,
+NOT(AND(RecordType.Name = &apos;Personal Business Banking Client&apos;,  $User.FirstName = &quot;Automated&quot;, $User.LastName = &quot;Process&quot;)),
+$Profile.Name &lt;&gt; &quot;Business Administrator&quot;,
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+$Profile.Name &lt;&gt; &quot;Api User&quot;,
+$Profile.Name &lt;&gt; &quot;API Only User&quot;)</errorConditionFormula>
+    <errorDisplayField>OwnerId</errorDisplayField>
+    <errorMessage>You do not have the level of access necessary to perform the operation you requested. Please contact your administrator if you require an update to be made to the Client Coordinator, as Client Coordinator updates can only be made by your administrator.</errorMessage>
+</ValidationRule>

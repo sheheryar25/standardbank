@@ -1,0 +1,26 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+	<aura:attribute name="title" type="String" />
+    <aura:attribute name="content" type="String" />
+    <aura:attribute name="linkLabel" type="String" />
+    <aura:attribute name="link" type="String" />
+    <aura:attribute name="imageId" type="String" />
+    
+    <lightning:navigation aura:id="navService"/>
+
+    <div id="login" class="teaser-container">
+        <div class="banner">
+            <div class="banner__left slds-size_6-of-6 slds-medium-size_7-of-12 slds-large-size_3-of-8">
+                <div class="banner__title mb_16">{!v.title}</div>
+                <div class="banner__content mb_32">
+                    <p>
+                    	{!v.content}
+                    </p>
+                </div>
+                <a class="btn banner__btn" href="{!v.link}" data-id= "uitlink_link" data-text= "Landing Page | Begin Your Journey | Get In Touch">{!v.linkLabel}</a>
+            </div>
+            <div class="banner__right slds-size_6-of-6 slds-medium-size_5-of-12 slds-large-size_5-of-8">
+            	<img class="banner__image" src="{!$Resource.OSB_Images + v.imageId}"/>
+            </div>
+        </div>
+    </div>
+</aura:component>

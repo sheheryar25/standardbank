@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Provincial_Pricing_Manager__c</fullName>
+    <description>US-1588 CommB - CMS - 10 - Pricing Team Approves Concession Request</description>
+    <externalId>false</externalId>
+    <label>Provincial Pricing Manager</label>
+    <relationshipName>PPM</relationshipName>
+    <restrictedAdminField>false</restrictedAdminField>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Hierarchy</type>
+</CustomField>

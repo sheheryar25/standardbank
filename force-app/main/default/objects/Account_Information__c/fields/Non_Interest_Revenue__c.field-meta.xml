@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Non_Interest_Revenue__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Non-Interest Revenue (NIR) is income that is not derived from interest income i.e. service fees and transactional fees</inlineHelpText>
+    <label>Non Interest Revenue</label>
+    <precision>17</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

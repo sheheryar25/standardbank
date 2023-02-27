@@ -1,0 +1,7 @@
+<!--
+ - Created by Chibuye Kunda on 2020/02/20.
+ -->
+
+<aura:event type="COMPONENT" description="ClientEcosystem_Event">
+    <aura:attribute name="data" type="string"/>
+</aura:event>

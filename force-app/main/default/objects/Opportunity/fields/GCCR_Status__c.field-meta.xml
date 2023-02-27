@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GCCR_Status__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Status of the Opportunity with respect to Conflicts Clearance</inlineHelpText>
+    <label>GCCR Status</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Submitted for Conflicts Clearing</fullName>
+                <default>false</default>
+                <label>Submitted for Conflicts Clearing</label>
+            </value>
+            <value>
+                <fullName>Awaiting Response from the Conflicts Control Room</fullName>
+                <default>false</default>
+                <label>Awaiting Response from the Conflicts Control Room</label>
+            </value>
+            <value>
+                <fullName>Cleared</fullName>
+                <default>false</default>
+                <label>Cleared</label>
+            </value>
+            <value>
+                <fullName>Not Cleared</fullName>
+                <default>false</default>
+                <label>Not Cleared</label>
+            </value>
+            <value>
+                <fullName>Cleared with Conditions</fullName>
+                <default>false</default>
+                <label>Cleared with Conditions</label>
+            </value>
+            <value>
+                <fullName>Re-submitted for Conflicts Clearing as Key Information has been Modified</fullName>
+                <default>false</default>
+                <label>Re-submitted for Conflicts Clearing as Key Information has been Modified</label>
+            </value>
+            <value>
+                <fullName>Not Required</fullName>
+                <default>false</default>
+                <label>Not Required</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

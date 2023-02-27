@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailFolder xmlns="http://soap.sforce.com/2006/04/metadata">
+    <accessType>Shared</accessType>
+    <name>Cote d&apos;Ivoire CST Templates</name>
+    <publicFolderAccess>ReadOnly</publicFolderAccess>
+    <sharedTo>
+        <roleAndSubordinatesInternal>CIB_Customer_Contact_Center_Cote_d_Ivoire_Division</roleAndSubordinatesInternal>
+    </sharedTo>
+</EmailFolder>

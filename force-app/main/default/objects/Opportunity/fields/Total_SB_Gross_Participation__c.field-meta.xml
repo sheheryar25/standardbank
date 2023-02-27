@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_SB_Gross_Participation__c</fullName>
+    <description>The total amount that SB will be providing the client. Change to Notional field SGPRT-1229</description>
+    <externalId>false</externalId>
+    <formula>Total_SB_Gross_Participation_Num__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>The total amount that SB will be providing the client (sum of SB participation)</inlineHelpText>
+    <label>Total SB Gross Participation</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

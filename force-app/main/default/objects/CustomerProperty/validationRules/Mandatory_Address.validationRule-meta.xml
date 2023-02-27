@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mandatory_Address</fullName>
+    <active>true</active>
+    <description>SFP-10316 The Address is mandatory for all RecordTypes</description>
+    <errorConditionFormula>OR(
+  ISBLANK( Street ),
+  ISBLANK( City ),
+  ISBLANK( PostalCode ),
+  ISBLANK( Country )
+)</errorConditionFormula>
+    <errorMessage>The Address is a mandatory field for all Record Types</errorMessage>
+</ValidationRule>

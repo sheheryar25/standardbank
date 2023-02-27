@@ -1,0 +1,20 @@
+<aura:component controller="StdBank_Ltn_ClientsCSIScoreController" implements="flexipage:availableForAllPageTypes,force:hasRecordId">
+    <aura:attribute name="CSIScore" type="String" />
+    <aura:attribute name="CSIScoreText" type="String" />
+    <aura:attribute name="recordId" type="String" />
+	<aura:attribute name="color" type="String" default=" "/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+	<div style="height:100%">
+		<article class="border-box slds-card slds-is-relative" style="height:100%">
+			<div class="slds-grid slds-p-around_small " style="height:100%">
+				<div class="slds-col slds-align-middle">
+					<p class="slds-text-body_small slds-text-align_center"> {!$Label.c.CSI_Score} </p>
+					<div class="{! 'slds-text-heading_medium slds-text-align_center ' + v.color}"><ui:outputtext value="{!v.CSIScore}" /></div>
+					<div class="slds-text-body_small slds-text-align_center"><ui:outputtext value="{!v.CSIScoreText}" /></div>
+				</div>
+			</div>
+			<c:UTL_HelpText text="{!$Label.c.Help_Text_CSI_Score}" />
+		</article>
+	</div>
+</aura:component>

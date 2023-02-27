@@ -1,0 +1,22 @@
+.DashboardSection {
+  padding-top: 40px;
+  width: 100% !important;
+  height: auto;
+}
+.ApplicationMarketPlaceSection {
+  width: 100% !important;
+  height: auto;
+}
+.whiteBackground {
+  height: auto;
+  width: 100% !important;
+  background-color: #ffffff;
+}
+.AddPadding {
+  width: 100% !important;
+  height: auto;
+  padding: 0px 110px;
+}
+.hidden {
+  display: hidden;
+}

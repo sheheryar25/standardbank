@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_FBC_Volume__c</fullName>
+    <description>The total number of Future Bills of Collection</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The total number of Future Bills of Collection</inlineHelpText>
+    <label>Total FBC Volume</label>
+    <precision>7</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

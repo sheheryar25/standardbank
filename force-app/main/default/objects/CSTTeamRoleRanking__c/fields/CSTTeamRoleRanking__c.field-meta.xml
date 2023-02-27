@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CSTTeamRoleRanking__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>CST Team Role Ranking is for ranking to the core team members.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>CST Team Role Ranking value , unique value used to sort Core Team Roles. Values to be numeric from 01-99, or ranking will not work correctly.</inlineHelpText>
+    <label>CSTTeamRoleRanking</label>
+    <length>2</length>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

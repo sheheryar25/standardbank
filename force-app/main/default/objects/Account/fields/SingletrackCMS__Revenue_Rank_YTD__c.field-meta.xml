@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SingletrackCMS__Revenue_Rank_YTD__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <formula>TEXT(SingletrackCMS__Revenue_Rank_Value_YTD__c) &amp; &quot;/&quot; &amp;  TEXT(SingletrackCMS__Revenue_Rank_Group_YTD__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Revenue Rank YTD</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

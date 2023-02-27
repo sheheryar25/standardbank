@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Client_Name__c</fullName>
+    <deleteConstraint>Cascade</deleteConstraint>
+    <description>This is the name of the client in mention (EN-927).</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the name of the client in mention.</inlineHelpText>
+    <label>Client Name</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Revenues and Profitabilities</relationshipLabel>
+    <relationshipName>Revenues_and_Profitabilities</relationshipName>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Zambia_CST_CIB_Escalated_Cases</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>Service_Type_Reporting__c</columns>
+    <columns>Category_Reporting__c</columns>
+    <columns>Last_Breach__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.ESCALATION_STATE</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Case_Owner_Team__c</field>
+        <operation>equals</operation>
+        <value>Africa Regions-Client Services-CIB-CS-Zambia</value>
+    </filters>
+    <label>Zambia CST CIB - Escalated Cases</label>
+    <sharedTo>
+        <roleAndSubordinatesInternal>CIB_Customer_Contact_Center_Zambia_Division</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

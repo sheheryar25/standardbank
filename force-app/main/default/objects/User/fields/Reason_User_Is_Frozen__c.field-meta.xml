@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_User_Is_Frozen__c</fullName>
+    <description>Field stores the reason why user is frozen</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Why is User being Frozen</inlineHelpText>
+    <label>Reason User Is Frozen</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>User Being Offboarded</fullName>
+                <default>false</default>
+                <label>User Being Offboarded</label>
+            </value>
+            <value>
+                <fullName>User Being Migrated</fullName>
+                <default>false</default>
+                <label>User Being Migrated</label>
+            </value>
+            <value>
+                <fullName>User on Maternity Leave</fullName>
+                <default>false</default>
+                <label>User on Maternity Leave</label>
+            </value>
+            <value>
+                <fullName>User on Sabbatical</fullName>
+                <default>false</default>
+                <label>User on Sabbatical</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

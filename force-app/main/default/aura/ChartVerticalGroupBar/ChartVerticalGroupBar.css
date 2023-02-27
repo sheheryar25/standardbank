@@ -1,0 +1,8 @@
+.THIS .axis-vertical text {
+	    	fill: #9199a7;
+	    	font-family: Arial;
+	    	font-size: 20px; }
+.THIS .axis-vertical path {
+	    	stroke: rgb(0, 0, 0, 0.1); }
+.THIS .axis-vertical line {
+	    	stroke: rgba(0, 0, 0, 0.1); }

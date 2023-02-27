@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AdvisoryEditProbabilityDenied</fullName>
+    <active>true</active>
+    <description>US-4021: Prevent Advisory users from editing Probability field value.
+00002944: Added flag evaluation override this rule when closing</description>
+    <errorConditionFormula>AND
+(
+(OR(ISPICKVAL($User.User_Team__c, &apos;Sector Advisory&apos;),
+ISPICKVAL($User.User_Team__c, &apos;Advisory South Africa&apos;),
+ISPICKVAL($User.User_Team__c, &apos;Advisory Africa Regions&apos;)  
+)),
+ISPICKVAL($User.User_Division__c , &apos;Investment Banking&apos;),
+ISCHANGED(Probability),
+IgnoreDrawDownValidation__c = FALSE,
+OverrideOnClose__c = FALSE
+)</errorConditionFormula>
+    <errorDisplayField>Probability</errorDisplayField>
+    <errorMessage>Probability cannot be updated on an advisory related opportunity. Please update the Risk Weighted Value (%) on the related product/s.</errorMessage>
+</ValidationRule>

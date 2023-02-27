@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Custom Setting created to store System Admin/Business Admin Profile IDs to allow deletion of tasks</description>
+    <enableFeeds>false</enableFeeds>
+    <label>SystemAdmin_BA_profileID_task_Deletion</label>
+    <visibility>Public</visibility>
+</CustomObject>

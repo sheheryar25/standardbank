@@ -1,0 +1,22 @@
+<aura:component controller="StdBank_Ltn_ClientsCYPipelineController" implements="flexipage:availableForAllPageTypes,force:hasRecordId">
+
+    <aura:attribute name="totalPipeline" type="integer" />
+    <aura:attribute name="isoCode" type="String" />
+	<aura:attribute name="color" type="String" default=" "/>
+    <aura:attribute name="recordId" type="String" />
+	<aura:attribute name="help" type="String" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+	<div style="height:100%">
+		<article class="border-box slds-card slds-is-relative " style="height:100%">
+			<div class="slds-grid slds-p-around_small  " style="height:100%">
+				<div class="slds-col slds-align-middle">
+					<p class="slds-text-body_small slds-text-align_center">{!$Label.c.Total_CY_Pipeline}</p>
+					<div class="{!'slds-text-heading_medium slds-text-align_center ' + v.color}">{!v.isoCode + ' '}<ui:outputnumber value="{!v.totalPipeline}" format="0.00" /> M</div>
+				</div>
+			</div>
+		   <aura:renderIf isTrue="{!v.recordId != null}">
+				<c:UTL_HelpText text="{!v.help}" />
+			</aura:renderIf>
+		</article>
+	</div>
+</aura:component>

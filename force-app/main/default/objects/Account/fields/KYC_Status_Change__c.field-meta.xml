@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>KYC_Status_Change__c</fullName>
+    <description>Know Your Customer Status, US-4426</description>
+    <externalId>false</externalId>
+    <label>KYC Status Change</label>
+    <summaryFilterItems>
+        <field>KYC_Status__c.Status__c</field>
+        <operation>equals</operation>
+        <value>R</value>
+    </summaryFilterItems>
+    <summaryForeignKey>KYC_Status__c.Client__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

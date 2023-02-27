@@ -1,0 +1,62 @@
+/**
+ * Created by milipinski on 20.06.2018.
+ */
+.THIS.card-border {
+    padding: 1rem;
+    padding-top: 0;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1) !important;
+    border: 1px solid rgb(221, 219, 218) !important;;
+    border-radius: .25rem !important;
+}
+.THIS .slds-scrollable_y{
+    overflow:visible !important;
+}
+.THIS .slds-scrollable_x {
+    overflow:visible !important;
+}
+
+.THIS .scroll-table{
+    display: block;
+    overflow-x: scroll;
+}
+
+.THIS .checkbox-group-style{
+    width: fit-content;
+    position: absolute;
+    z-index: 10000;
+    background: white;
+    left: 12rem;
+    top: 0.8rem;
+}
+
+.THIS lightning-checkbox-group .slds-form-element__control span:first-child .slds-form-element__label{
+    font-weight: bold;
+    color: #1b5297;
+}
+
+.THIS .short-select{
+    width: 4rem;
+    display: inline-block;
+}
+
+.THIS .short-select .slds-form-element__label{
+    padding: 0;
+}
+
+.THIS .slds-card__footer lightning-icon{
+    cursor: pointer;
+}
+
+.THIS .inactive-chevron{
+     cursor: default !important;
+}
+
+.THIS .inactive-chevron svg{
+    fill: lightgray;
+}
+
+.THIS .page-number-label{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}

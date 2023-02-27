@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Headroom__c</fullName>
+    <description>&quot;Available credit limit to lend to the client for corporate cards, overdraft, BRCP, term loans
+US-4409
+US-4425
+US-4291&quot;</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Maximum amount that the bank can lend to the client, based on turnover</inlineHelpText>
+    <label>Headroom</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

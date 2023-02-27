@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Source_of_Funds_Type__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Primary Source of Business Funding. Refer to Annual Financial Statements and Financial Websites (Forbes, Reuters, etc.)</inlineHelpText>
+    <label>Source of Funds Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>BEE Transaction</fullName>
+                <default>false</default>
+                <label>BEE Transaction</label>
+            </value>
+            <value>
+                <fullName>Card Cash Backs</fullName>
+                <default>false</default>
+                <label>Card Cash Backs</label>
+            </value>
+            <value>
+                <fullName>Card Refunds / Reversals</fullName>
+                <default>false</default>
+                <label>Card Refunds / Reversals</label>
+            </value>
+            <value>
+                <fullName>Card Sales</fullName>
+                <default>false</default>
+                <label>Card Sales</label>
+            </value>
+            <value>
+                <fullName>Gift</fullName>
+                <default>false</default>
+                <label>Gift</label>
+            </value>
+            <value>
+                <fullName>Grant Recipient</fullName>
+                <default>false</default>
+                <label>Grant Recipient</label>
+            </value>
+            <value>
+                <fullName>Inheritance</fullName>
+                <default>false</default>
+                <label>Inheritance</label>
+            </value>
+            <value>
+                <fullName>Insurance Payout</fullName>
+                <default>false</default>
+                <label>Insurance Payout</label>
+            </value>
+            <value>
+                <fullName>Investment Payout</fullName>
+                <default>false</default>
+                <label>Investment Payout</label>
+            </value>
+            <value>
+                <fullName>Irregular Income</fullName>
+                <default>false</default>
+                <label>Irregular Income</label>
+            </value>
+            <value>
+                <fullName>Legal Settlement</fullName>
+                <default>false</default>
+                <label>Legal Settlement</label>
+            </value>
+            <value>
+                <fullName>Liquidation of Assets</fullName>
+                <default>false</default>
+                <label>Liquidation of Assets</label>
+            </value>
+            <value>
+                <fullName>Lump Sum Payout</fullName>
+                <default>false</default>
+                <label>Lump Sum Payout</label>
+            </value>
+            <value>
+                <fullName>Pension Payout</fullName>
+                <default>false</default>
+                <label>Pension Payout</label>
+            </value>
+            <value>
+                <fullName>Profit from Business Activity</fullName>
+                <default>false</default>
+                <label>Profit from Business Activity</label>
+            </value>
+            <value>
+                <fullName>Regular Income</fullName>
+                <default>false</default>
+                <label>Regular Income</label>
+            </value>
+            <value>
+                <fullName>Salary / Wage Income</fullName>
+                <default>false</default>
+                <label>Salary / Wage Income</label>
+            </value>
+            <value>
+                <fullName>Shareholder Loans</fullName>
+                <default>false</default>
+                <label>Shareholder Loans</label>
+            </value>
+            <value>
+                <fullName>Winnings</fullName>
+                <default>false</default>
+                <label>Winnings</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

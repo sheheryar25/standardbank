@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HasDocument__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>US-3316 - field used in validation rule that checks if NBAC Joint Venture record has any file</description>
+    <externalId>false</externalId>
+    <label>HasDocument</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

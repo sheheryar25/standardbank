@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Save_and_Close_Validation</fullName>
+    <active>true</active>
+    <description>SGPRT-3950 Prevents root cause, root cause resolution and service type name from being blank if save and close case field is true.</description>
+    <errorConditionFormula>AND(
+  Save_and_Close__c = TRUE ,
+  RecordType.DeveloperName = &apos;Cross_Border_CoE_Record_Type&apos; ,
+  OR(ISBLANK(Root_Cause__c ),
+  ISBLANK( Root_Cause_Resolution__c ),
+  ISBLANK( Service_Type_Name__c ) 
+)  
+)</errorConditionFormula>
+    <errorMessage>Service Type Name, Root Cause or Root Cause Resolution cannot be blank if you select &apos;Save and Close&apos;.</errorMessage>
+</ValidationRule>

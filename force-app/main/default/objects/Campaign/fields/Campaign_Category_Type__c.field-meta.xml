@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Campaign_Category_Type__c</fullName>
+    <description>Case#1168 - 11/2011 - Rudolf Niehaus
+            The specific type of campaign that is applied depending on campaign that is selected</description>
+    <externalId>false</externalId>
+    <label>Campaign Category Type</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Campaign_Category__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Breakfast</fullName>
+                <default>false</default>
+                <label>Breakfast</label>
+            </value>
+            <value>
+                <fullName>Lunch</fullName>
+                <default>false</default>
+                <label>Lunch</label>
+            </value>
+            <value>
+                <fullName>Dinner</fullName>
+                <default>false</default>
+                <label>Dinner</label>
+            </value>
+            <value>
+                <fullName>Conference</fullName>
+                <default>false</default>
+                <label>Conference</label>
+            </value>
+            <value>
+                <fullName>Seminar</fullName>
+                <default>false</default>
+                <label>Seminar</label>
+            </value>
+            <value>
+                <fullName>Presentation</fullName>
+                <default>false</default>
+                <label>Presentation</label>
+            </value>
+            <value>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+                <label>Meeting</label>
+            </value>
+            <value>
+                <fullName>Signature Event</fullName>
+                <default>false</default>
+                <label>Signature Event</label>
+            </value>
+            <value>
+                <fullName>Flagship Event</fullName>
+                <default>false</default>
+                <label>Flagship Event</label>
+            </value>
+            <value>
+                <fullName>Generic</fullName>
+                <default>false</default>
+                <label>Generic</label>
+            </value>
+            <value>
+                <fullName>Golf</fullName>
+                <default>false</default>
+                <label>Golf</label>
+            </value>
+            <value>
+                <fullName>Champagne Glasses</fullName>
+                <default>false</default>
+                <label>Champagne Glasses</label>
+            </value>
+            <value>
+                <fullName>Cocktail</fullName>
+                <default>false</default>
+                <label>Cocktail</label>
+            </value>
+            <value>
+                <fullName>Formal Dinner</fullName>
+                <default>false</default>
+                <label>Formal Dinner</label>
+            </value>
+            <value>
+                <fullName>Prize giving event</fullName>
+                <default>false</default>
+                <label>Prize giving event</label>
+            </value>
+            <value>
+                <fullName>Standard bank building</fullName>
+                <default>false</default>
+                <label>Standard bank building</label>
+            </value>
+            <value>
+                <fullName>African Earth</fullName>
+                <default>false</default>
+                <label>African Earth</label>
+            </value>
+            <value>
+                <fullName>African Elephant</fullName>
+                <default>false</default>
+                <label>African Elephant</label>
+            </value>
+            <value>
+                <fullName>Digital Conference</fullName>
+                <default>false</default>
+                <label>Digital Conference</label>
+            </value>
+            <value>
+                <fullName>Coffee</fullName>
+                <default>false</default>
+                <label>Coffee</label>
+            </value>
+            <value>
+                <fullName>Important Information</fullName>
+                <default>false</default>
+                <label>Important Information</label>
+            </value>
+            <value>
+                <fullName>Notification</fullName>
+                <default>false</default>
+                <label>Notification</label>
+            </value>
+            <value>
+                <fullName>Transactional Products &amp; Services</fullName>
+                <default>false</default>
+                <label>Transactional Products &amp; Services</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>1 - Bespoke</controllingFieldValue>
+            <controllingFieldValue>7 - PA Event</controllingFieldValue>
+            <valueName>Breakfast</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1 - Bespoke</controllingFieldValue>
+            <valueName>Lunch</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1 - Bespoke</controllingFieldValue>
+            <valueName>Dinner</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>2 - Value Add</controllingFieldValue>
+            <valueName>Conference</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>2 - Value Add</controllingFieldValue>
+            <valueName>Seminar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>2 - Value Add</controllingFieldValue>
+            <valueName>Presentation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>2 - Value Add</controllingFieldValue>
+            <valueName>Meeting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>3 - Brought to you by CIB</controllingFieldValue>
+            <valueName>Signature Event</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>3 - Brought to you by CIB</controllingFieldValue>
+            <valueName>Flagship Event</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>7 - PA Event</controllingFieldValue>
+            <valueName>Generic</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>7 - PA Event</controllingFieldValue>
+            <valueName>Golf</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>7 - PA Event</controllingFieldValue>
+            <valueName>Champagne Glasses</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>7 - PA Event</controllingFieldValue>
+            <valueName>Cocktail</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>7 - PA Event</controllingFieldValue>
+            <valueName>Formal Dinner</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>7 - PA Event</controllingFieldValue>
+            <valueName>Prize giving event</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>7 - PA Event</controllingFieldValue>
+            <valueName>Standard bank building</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>7 - PA Event</controllingFieldValue>
+            <valueName>African Earth</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>7 - PA Event</controllingFieldValue>
+            <valueName>African Elephant</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>7 - PA Event</controllingFieldValue>
+            <valueName>Digital Conference</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>7 - PA Event</controllingFieldValue>
+            <valueName>Coffee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Operational Mailer</controllingFieldValue>
+            <valueName>Important Information</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Operational Mailer</controllingFieldValue>
+            <valueName>Notification</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Operational Mailer</controllingFieldValue>
+            <valueName>Transactional Products &amp; Services</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

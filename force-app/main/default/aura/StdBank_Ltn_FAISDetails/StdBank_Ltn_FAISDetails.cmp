@@ -1,0 +1,9 @@
+<aura:component controller="StdBank_Ltn_RegulatoryInfo"  implements="flexipage:availableForRecordHome,force:lightningQuickActionWithoutHeader,force:hasRecordId,force:hasSObjectName">
+
+    <h3 class="slds-section__title slds-theme_shade">
+        <span class="slds-truncate slds-p-around">Financial Advisory and Intermediary Services (FAIS)</span>
+    </h3>
+    <c:FieldSet recordId="{!v.recordId}" sObjectName="{!v.sObjectName}"
+                fieldSet="FAIS_fields" columns="2" showBorder="false" fieldExternal="CurrencyIsoCode"/>
+
+</aura:component>

@@ -1,0 +1,568 @@
+.THIS .add-remove-devices {
+  padding: 30px 0px 10px;
+  display: flex;
+  width: 95%;
+}
+.THIS .body.modal-open {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+.THIS .slds-button {
+  vertical-align: middle;
+  color: #0089ff;
+}
+.THIS .device-table {
+  padding-left: 6%;
+}
+.THIS .column1 {
+  width: 200px;
+}
+.THIS .table-data.column1 {
+  vertical-align: middle;
+}
+.THIS .column2 {
+  width: 80px;
+  vertical-align: middle;
+}
+.THIS .column3 {
+  width: 120px;
+  vertical-align: middle;
+}
+.THIS .column4 {
+  width: 100px;
+  vertical-align: middle;
+}
+.THIS .column5 {
+  width: 100px;
+  vertical-align: middle;
+}
+.THIS .column6 {
+  width: 50px;
+  vertical-align: middle;
+}
+.THIS .ms-icn_check_circle {
+  font-size: 25px;
+  color: #002db1;
+  padding-left: 17%;
+}
+.THIS.cOSBNewDeviceModal .largeIcon {
+  font-size: 187px;
+  color: #0089ff;
+  margin-left: -30px;
+}
+.THIS .ms-icn_bin {
+  font-size: 25px;
+  color: #002db1;
+}
+.THIS .ms-icn_phone_iphone {
+  font-size: 24px;
+  vertical-align: middle;
+  color: #002db1;
+  padding: 10px;
+}
+.cOSBDeviceManagement .ms-icn_phone_android {
+  font-size: 24px;
+  vertical-align: middle;
+  color: #002db1;
+  padding: 10px;
+}
+.THIS .icn svg {
+  fill: #0033aa;
+  height: 14px;
+  width: 14px;
+  margin-left: 5px;
+  margin-top: 4px;
+}
+.THIS .QueryType {
+  padding-top: 32px;
+}
+.THIS .contact-us {
+  color: #0a2240;
+  font-family: BentonSans;
+  font-size: 57px;
+  font-weight: 200;
+  line-height: 57px;
+  text-align: center;
+  padding-bottom: 56px;
+}
+.THIS .containerDetails {
+  position: relative;
+  margin: 0 auto;
+}
+.THIS .cOSBPagination.navigation-container {
+  width: 92%;
+  height: 30px;
+  display: flex;
+  /* margin: 0 auto; */
+  justify-content: space-evenly;
+}
+.THIS .slds-select {
+  height: 48px;
+  border-radius: 2px;
+}
+.THIS .newCase {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.THIS .device-rectangle {
+  background: #fff;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  margin-top: 37px;
+  height: 780px;
+  width: 1008px;
+  background-color: #ffffff;
+}
+.THIS .device-list {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+.THIS .newCase__buttons {
+  background-color: #f6f6f6;
+}
+.THIS .newCase__buttons-container {
+  height: 80px;
+  margin: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.THIS .newCase__buttons-container > div:nth-child(1) {
+  padding-right: 6px;
+}
+.THIS .newCase__buttons-container > div:nth-child(2) {
+  padding-left: 6px;
+}
+.THIS .device__title {
+  color: #666666;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 0.83px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: none;
+}
+.THIS .device__subtitle {
+  color: #666666;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 24px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+.THIS .newCase__form--input--Add {
+  margin-bottom: 24px;
+}
+.THIS .newCase__form--input input,
+.THIS .newCase__form--input textArea {
+  border: 1px solid #cccccc;
+  border-radius: 2px;
+  background-color: #ffffff;
+}
+.THIS .newCase__form--input input[type="email"] {
+  border: 1px solid #f4f4f4;
+  background-color: #ffffff;
+}
+.THIS .newCase__form--input input {
+  height: 48px;
+}
+.THIS .newCase__form--input textArea {
+  height: 120px;
+}
+.THIS .newCase__form--textarea {
+  height: 144px;
+}
+.THIS .newCase__form--input label {
+  color: #4a4a4a;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 18px;
+  text-transform: uppercase;
+  padding-top: 32px;
+}
+.THIS .newCase__form--input input::placeholder,
+.THIS .newCase__form--input textArea::placeholder {
+  color: rgb(118, 118, 118);
+  font-weight: 200;
+}
+.THIS .newCase__button {
+  width: 100%;
+  float: right;
+  background-color: #33aaff;
+}
+.THIS .newCase__link {
+  color: #0089ff;
+  text-decoration: underline;
+  font-weight: 400;
+}
+.THIS .newCase__icon {
+  padding: 16px;
+  border-radius: 50%;
+  align-self: center;
+  margin-bottom: 24px;
+  width: 80px;
+  height: 80px;
+}
+.THIS .newCase__icon label {
+  bottom: 0;
+  position: absolute;
+  right: 0px;
+  float: right;
+  background-color: #ffffff;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  box-shadow: 0 6px 25px 0 rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.THIS .newCase__icon i {
+  font-size: 48px;
+  color: #fff;
+}
+.THIS .device-list.device__title {
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 0.83px;
+  line-height: 24px;
+}
+.THIS .newCase__header {
+  height: 40px;
+  background-color: #f6f6f6;
+  color: #222222;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.58px;
+  line-height: 14px;
+  padding: 14px 24px;
+  margin: 32px 0 24px 0;
+}
+.THIS abbr.slds-required {
+  display: none;
+}
+.THIS .newCase__form--disclaimer {
+  height: 22px;
+  color: #0a2240;
+  font-family: BentonSans;
+  font-size: 14px;
+  line-height: 22px;
+  padding-bottom: inherit;
+}
+.THIS .newCase__form--documentTypeGroup .slds-form-element__label {
+  height: 1.13%;
+
+  color: #4a4a4a;
+  font-family: BentonSans;
+  font-size: 14px !important;
+  font-weight: 300;
+  line-height: 18px;
+}
+.THIS
+  .newCase__form--documentTypeGroup
+  .slds-form-element__control
+  .slds-radio {
+  display: inline-block !important;
+}
+.THIS .newCase__form--documentTypeGroup .slds-form-element__legend {
+  color: #4a4a4a;
+  font-size: 16px !important;
+  font-weight: 300;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+.THIS .newCase__form--documentTypeGroup .slds-form-element__control {
+  padding-top: 10px;
+}
+.THIS .slds-radio__label {
+  margin-right: 39px;
+}
+.THIS .newCase__form--label--span {
+  color: #4a4a4a;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 18px;
+  text-transform: uppercase;
+  position: relative;
+  top: 30px;
+}
+.THIS .workDetailsRectange {
+  height: 40px;
+  background-color: #f6f6f6;
+  padding-bottom: 32px;
+  margin-left: -24px;
+  margin-top: 8px;
+}
+.THIS .rectangle {
+  height: 40px;
+  color: #222222;
+  background-color: #f6f6f6;
+  font-family: BentonSans;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.58px;
+  padding-top: 10px;
+  margin-left: 5%;
+}
+.THIS .linked-devices {
+  margin-left: 2%;
+}
+.THIS .newCase__success {
+  display: flex;
+  align-items: center;
+  border: 1px solid #0e8a00;
+  border-radius: 4px;
+  background: #fff;
+  position: absolute;
+  width: 44%;
+  min-height: 10px;
+  flex-direction: initial;
+  margin-left: 15%;
+  top: 9%;
+  z-index: 1; /*was 400*/
+}
+.THIS .newCase__success__left {
+  padding: 13px 16px;
+  background: #0e8a00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+
+.THIS .newCase__success__icon {
+  font-size: 24px;
+  color: #fff;
+}
+
+.THIS .newCase__success__right {
+  padding: 0 18px 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-left: 51px;
+}
+.THIS .newCase__success__text {
+  color: #222222;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.54px;
+  line-height: 14px;
+  margin-right: 18px;
+}
+.THIS .newCase__success__close {
+  background: transparent;
+}
+.THIS .newCase__success__close i {
+  color: #767670;
+}
+.THIS .Sign__icon {
+  padding-top: 18px;
+  padding-right: 16px;
+  padding-bottom: 14px;
+  padding-left: 16px;
+  background: #0033aa;
+  border-radius: 50%;
+  align-self: center;
+  margin-bottom: 24px;
+}
+.THIS .Sign__icon i {
+  font-size: 48px;
+  color: #fff;
+  font-variant: normal;
+}
+.THIS .grey-line-break {
+  box-sizing: border-box;
+  height: 2px;
+  width: 204%;
+  margin-bottom: 10px;
+  border: 1px solid #ededed;
+}
+.THIS .table-heading {
+  height: 11px;
+  color: #002db1;
+  font-family: BentonSans;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  line-height: 12px;
+}
+.THIS .ms-icn_add_circle {
+  font-size: xx-large;
+}
+.THIS .add-icon i {
+  width: 125px;
+  font-size: 30px;
+}
+.THIS .add-device {
+  color: #0089ff;
+  height: 19px;
+  width: 267px;
+  font-family: BentonSans;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 19px;
+  padding-left: 57px;
+  position: absolute;
+  display: inline-flex;
+  vertical-align: middle;
+}
+.THIS .device {
+  padding-left: 5%;
+  width: 50%;
+  font-size: 15px;
+  font-family: BentonSans;
+}
+.THIS .noHighlight:focus {
+  box-shadow: none;
+}
+.THIS .remove-all-devices {
+  height: 33px;
+  color: #0089ff;
+  font-family: BentonSans;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  line-height: 12px;
+  text-align: right;
+  position: relative;
+  width: 50%;
+}
+.THIS .plus {
+  font-size: 24px;
+  justify-content: center;
+  font-weight: 500;
+}
+.THIS .header__button {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  line-height: 20px;
+  background: #0089ff;
+  padding: 24px 45px;
+  margin: -8px 0;
+  color: #fff;
+  border: 0;
+}
+.THIS .header__button--icon {
+  display: block;
+  font-size: 24px;
+}
+@media (max-width: 1023px) {
+  .cOSBDeviceManagement .device-table {
+    padding-left: 6%;
+  }
+}
+@media (min-width: 1024px) {
+  .THIS .rectangle {
+    width: 90%;
+    height: 40px;
+    color: #222222;
+    font-family: BentonSans;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.58px;
+    margin-left: 5%;
+  }
+  .THIS .add-remove-devices {
+    display: flex;
+    align-items: flex-end;
+  }
+}
+@media (max-width: 1279px) {
+  .THIS.device-container,
+  .THIS .device-rectangle {
+    padding-left: 12px;
+    padding-right: 20px;
+    width: auto;
+    max-width: 100%;
+    min-width: 90%;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .THIS .device-container,
+  .THIS .device-rectangle {
+    max-width: 100%;
+    min-width: 90%;
+  }
+}
+@media (min-width: 1280px) {
+  .THIS .device-rectangle {
+    margin-top: 68px;
+    width: 100%;
+  }
+  .THIS .device-container {
+    max-width: 100%;
+    min-width: 90%;
+  }
+}
+@media (min-width: 200px) and (max-width: 649px) {
+  .THIS .ms-icn_phone_iphone {
+    padding: 0px;
+  }
+  .THIS .ms-icn_phone_android {
+    padding: 0px;
+  }
+  .THIS .device-list {
+    padding: 20px 24px;
+    display: none;
+  }
+  .THIS.device-container {
+    width: 100%;
+    padding: 0;
+  }
+  .THIS .device-rectangle {
+    height: 658px;
+    width: 100%;
+    padding: 2%;
+  }
+  .THIS .rectangle {
+    margin-left: 5%;
+    margin-top: 2%;
+    width: 90%;
+  }
+  .cOSBDeviceManagement .linked-devices {
+    margin-left: 2%;
+    width: 270px;
+  }
+  .cOSBDeviceManagement .remove-all-devices {
+    display: table-cell;
+    height: 26px;
+  }
+  .THIS .heading-row {
+    display: none;
+  }
+  .THIS .data-row {
+    height: 50px;
+    width: 890px;
+  }
+  .THIS .column4,
+  .THIS .column5,
+  .THIS .column6 {
+    vertical-align: middle;
+  }
+  .THIS .column2 {
+    display: none;
+  }
+  .THIS .column3 {
+    display: none;
+  }
+  .THIS .add-device {
+    padding-left: 13px;
+    height: 31px;
+    width: 105px;
+  }
+  .THIS .device {
+    padding-left: 5%;
+    width: 50%;
+    font-size: 15px;
+    font-family: BentonSans;
+  }
+  .cOSBDeviceManagement .add-remove-devices {
+    padding: 30px 0 30px;
+    display: flex;
+  }
+}

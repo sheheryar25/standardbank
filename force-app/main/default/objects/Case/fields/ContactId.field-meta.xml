@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ContactId</fullName>
+    <inlineHelpText>The person at the Client who raised the case with Standard Bank</inlineHelpText>
+    <lookupFilter>
+        <active>true</active>
+        <booleanFilter>(1 AND 2) OR (3 AND ((4 AND 5) OR ( NOT (5) AND 7))) OR (6 AND 8) OR (9)</booleanFilter>
+        <errorMessage>Contact value does not exist or does not match filter criteria. New Client Cases can only be linked to active Client Contacts and User Cases must be linked to Bank Contacts.</errorMessage>
+        <filterItems>
+            <field>$Source.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>User Case, CCC User Case, PBB User Case, CCC Angola, Cross Border CoE Record Type, Cross Border CoE Closed Record Type</value>
+        </filterItems>
+        <filterItems>
+            <field>Contact.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Bank Contact Record Type</value>
+        </filterItems>
+        <filterItems>
+            <field>$Source.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>CIB Client Case, CommB Client Case, CCC Angola, Cross Border CoE Record Type, Cross Border CoE Closed Record Type</value>
+        </filterItems>
+        <filterItems>
+            <field>Contact.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Client Contact Record Type</value>
+        </filterItems>
+        <filterItems>
+            <field>Contact.Inactive__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </filterItems>
+        <filterItems>
+            <field>$Source.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>CIB Customer Query</value>
+        </filterItems>
+        <filterItems>
+            <field>$Source.Id</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </filterItems>
+        <filterItems>
+            <field>Contact.RecordTypeId</field>
+            <operation>notEqual</operation>
+            <value>Bank Contact Record Type</value>
+        </filterItems>
+        <filterItems>
+            <field>$Source.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>TPS Client Case, CCC Angola, Cross Border CoE Record Type, Cross Border CoE Closed Record Type, ACM Case</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

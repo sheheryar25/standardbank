@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Country__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Country</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>South Africa</fullName>
+                <default>true</default>
+                <label>South Africa</label>
+            </value>
+            <value>
+                <fullName>Lesotho</fullName>
+                <default>false</default>
+                <label>Lesotho</label>
+            </value>
+            <value>
+                <fullName>Botswana</fullName>
+                <default>false</default>
+                <label>Botswana</label>
+            </value>
+            <value>
+                <fullName>Ghana</fullName>
+                <default>false</default>
+                <label>Ghana</label>
+            </value>
+            <value>
+                <fullName>Kenya</fullName>
+                <default>false</default>
+                <label>Kenya</label>
+            </value>
+            <value>
+                <fullName>Nigeria</fullName>
+                <default>false</default>
+                <label>Nigeria</label>
+            </value>
+            <value>
+                <fullName>Uganda</fullName>
+                <default>false</default>
+                <label>Uganda</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

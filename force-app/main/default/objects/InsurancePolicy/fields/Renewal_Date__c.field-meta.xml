@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Renewal_Date__c</fullName>
+    <description>SFP-12591 Date when the cover has to be renewed if the opportunity is a renewal</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter the date cover will be renewed.</inlineHelpText>
+    <label>Renewal Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

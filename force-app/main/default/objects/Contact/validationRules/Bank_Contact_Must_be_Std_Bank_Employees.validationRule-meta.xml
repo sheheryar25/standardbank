@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bank_Contact_Must_be_Std_Bank_Employees</fullName>
+    <active>true</active>
+    <description>This validation triggers when a Bank Contact record type is selected and the Client is Mapped to a client either than Standard Bank Employees</description>
+    <errorConditionFormula>AND( RecordType.Name = &quot;Bank Contact Record Type&quot; ,  NOT( Account.Name = &quot;Standard Bank Employees&quot;) )</errorConditionFormula>
+    <errorDisplayField>AccountId</errorDisplayField>
+    <errorMessage>Bank Contacts should be related to Client &quot;Standard Bank Employees&quot;</errorMessage>
+</ValidationRule>

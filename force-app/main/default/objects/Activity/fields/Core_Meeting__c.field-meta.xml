@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Core_Meeting__c</fullName>
+    <description>Event Management - Core Indicator (EN-0877)</description>
+    <externalId>false</externalId>
+    <formula>/*
+Data Type	Formula	 	 
+IF(
+OR( 
+ISPICKVAL(Meeting_Purpose__c, &apos;Core Client Team Meeting&apos;),
+ISPICKVAL(Meeting_Purpose__c, &apos;Client Entertainment&apos;),
+ISPICKVAL(Meeting_Purpose__c, &apos;Client Meeting&apos;),
+ISPICKVAL(Meeting_Purpose__c, &apos;Client Road Show&apos;),
+ISPICKVAL(Meeting_Purpose__c, &apos;Market Research Update&apos;)
+), 
+True, False)
+*/
+
+Related_Event_Report__r.Core_Meeting__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Interactions that develop the strategic relationship of the client. This applies to the following internal meeting, Core Client Team Meeting and the following external: Client Entertainment, Client Meeting, Client Roadshow, Market Research Update</inlineHelpText>
+    <label>Core Meeting</label>
+    <type>Checkbox</type>
+</CustomField>

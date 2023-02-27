@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CIB_Target_Client_Previous_Year__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>These are clients that were identified during the prior years budget process. (US-2236)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>These are clients as identified during the prior years budget process.</inlineHelpText>
+    <label>Individually Budgeted Client–Prior Year</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

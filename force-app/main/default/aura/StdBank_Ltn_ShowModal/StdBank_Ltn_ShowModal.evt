@@ -1,0 +1,4 @@
+<aura:event type="COMPONENT" description="StdBank_Ltn_ShowModal">
+    <aura:attribute name="type" type="String" />
+    <aura:attribute name="data" type="ProcessInstanceWorkitem" />
+</aura:event>

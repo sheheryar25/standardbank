@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Resourcing</fullName>
+    <columns>NAME</columns>
+    <columns>Resource__c</columns>
+    <columns>Description__c</columns>
+    <columns>Week_End_Date__c</columns>
+    <columns>Time_Spent__c</columns>
+    <columns>Resourcing_Focus__c</columns>
+    <filterScope>Mine</filterScope>
+    <label>My Resourcing</label>
+    <sharedTo>
+        <roleAndSubordinatesInternal>CIB_Global_IB_Corporate_Finance_Business_Unit</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

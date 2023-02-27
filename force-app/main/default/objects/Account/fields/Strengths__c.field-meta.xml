@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Strengths__c</fullName>
+    <description>SFP-9319 [c] This field is introduced for CVCA feature to allow printable view of the Client Page similar to the CVCA Template.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>A summary of the Client’s strengths and how this relates to other competitors and their position in the market</inlineHelpText>
+    <label>Strengths</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

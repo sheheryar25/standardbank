@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Populate_Facility_Price</fullName>
+    <active>true</active>
+    <description>User should populate either Cap Guidance Facility Price (%) or Set Facility Price (%) when Distribution Required is yes- SGPRT-626</description>
+    <errorConditionFormula>OR(
+AND( RecordType.DeveloperName = &apos;Primary_Arranging_Advisory&apos;,  ISPICKVAL(Distribution_Required__c, &apos;yes&apos;) , ISBLANK(  Cap_Guidance_Facility_Price__c ),ISBLANK(  Set_Facility_Price__c ))
+,AND( RecordType.DeveloperName = &apos;Primary_Arranging_Advisory&apos;,  ISPICKVAL(Distribution_Required__c, &apos;yes&apos;) , NOT(ISBLANK(  Cap_Guidance_Facility_Price__c )),NOT(ISBLANK(  Set_Facility_Price__c )))
+)</errorConditionFormula>
+    <errorMessage>Please ensure that you enter Cap Guidance Facility Price (%) OR Set Facility Price (%)</errorMessage>
+</ValidationRule>

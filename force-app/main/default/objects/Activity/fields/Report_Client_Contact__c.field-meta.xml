@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Report_Client_Contact__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Client Contact</label>
+    <lookupFilter>
+        <active>true</active>
+        <errorMessage>Please enter a valid Client Contact for External Meetings only. Bank Contacts (Employees) cannot be captured.</errorMessage>
+        <filterItems>
+            <field>Contact.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Client Contact Record Type</value>
+        </filterItems>
+        <filterItems>
+            <field>Contact.Inactive__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Activities</relationshipLabel>
+    <relationshipName>Client_Contacts</relationshipName>
+    <required>false</required>
+    <type>Lookup</type>
+</CustomField>

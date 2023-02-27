@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Balance_Sheet_of_Booking__c</fullName>
+    <description>Field contains a list of Standard Bank Legal Entities - C-00000456. Field Label changed.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The Standard Bank Legal Entity is where Asset / Revenue will be booked. If divided between more than one Legal Entity, please create a separate Product for each.</inlineHelpText>
+    <label>Legal Entity of Booking</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Angola - Standard Bank de Angola S.A.</fullName>
+                <default>false</default>
+                <label>Angola - Standard Bank de Angola S.A.</label>
+            </value>
+            <value>
+                <fullName>Botswana - Stanbic Bank Botswana Limited</fullName>
+                <default>false</default>
+                <label>Botswana - Stanbic Bank Botswana Limited</label>
+            </value>
+            <value>
+                <fullName>Brazil - Banco Standard de Investimentos S.A.</fullName>
+                <default>false</default>
+                <label>Brazil - Banco Standard de Investimentos S.A.</label>
+            </value>
+            <value>
+                <fullName>China - Standard Resources (China) Limited</fullName>
+                <default>false</default>
+                <label>China - Standard Resources (China) Limited</label>
+            </value>
+            <value>
+                <fullName>Côte d&apos;Ivoire - Stanbic Bank</fullName>
+                <default>false</default>
+                <label>Côte d&apos;Ivoire - Stanbic Bank</label>
+            </value>
+            <value>
+                <fullName>D R Congo - Stanbic Bank RDC s.a.r.l.</fullName>
+                <default>false</default>
+                <label>D R Congo - Stanbic Bank RDC s.a.r.l.</label>
+            </value>
+            <value>
+                <fullName>Ghana - Stanbic Bank Ghana Limited</fullName>
+                <default>false</default>
+                <label>Ghana - Stanbic Bank Ghana Limited</label>
+            </value>
+            <value>
+                <fullName>Hong Kong - Standard Bank Asia Limited</fullName>
+                <default>false</default>
+                <label>Hong Kong - Standard Bank Asia Limited</label>
+            </value>
+            <value>
+                <fullName>Isle of Man - Standard Bank Isle of Man Branch</fullName>
+                <default>false</default>
+                <label>Isle of Man - Standard Bank Isle of Man Branch</label>
+            </value>
+            <value>
+                <fullName>Isle of Man - Standard Bank Isle of Man Limited</fullName>
+                <default>false</default>
+                <label>Isle of Man - Standard Bank Isle of Man Limited</label>
+            </value>
+            <value>
+                <fullName>Isle of Man - Standard Finance (Isle of Man) Ltd</fullName>
+                <default>false</default>
+                <label>Isle of Man - Standard Finance (Isle of Man) Ltd</label>
+            </value>
+            <value>
+                <fullName>Jersey - Standard Bank Jersey Limited</fullName>
+                <default>false</default>
+                <label>Jersey - Standard Bank Jersey Limited</label>
+            </value>
+            <value>
+                <fullName>Kenya - Stanbic Bank Kenya Limited</fullName>
+                <default>false</default>
+                <label>Kenya - Stanbic Bank Kenya Limited</label>
+            </value>
+            <value>
+                <fullName>Lesotho - Standard Lesotho Bank Limited</fullName>
+                <default>false</default>
+                <label>Lesotho - Standard Lesotho Bank Limited</label>
+            </value>
+            <value>
+                <fullName>Malawi - Standard Bank Limited</fullName>
+                <default>false</default>
+                <label>Malawi - Standard Bank Limited</label>
+            </value>
+            <value>
+                <fullName>Mauritius - Standard Bank (Mauritius) Limited</fullName>
+                <default>false</default>
+                <label>Mauritius - Standard Bank (Mauritius) Limited</label>
+            </value>
+            <value>
+                <fullName>Mozambique - Standard Bank s.a.r.l.</fullName>
+                <default>false</default>
+                <label>Mozambique - Standard Bank s.a.r.l.</label>
+            </value>
+            <value>
+                <fullName>Namibia - Standard Bank Namibia Limited</fullName>
+                <default>false</default>
+                <label>Namibia - Standard Bank Namibia Limited</label>
+            </value>
+            <value>
+                <fullName>Nigeria - Stanbic IBTC Bank PLC</fullName>
+                <default>false</default>
+                <label>Nigeria - Stanbic IBTC Bank PLC</label>
+            </value>
+            <value>
+                <fullName>Singapore - Standard Merchant Bank (Asia) Limited</fullName>
+                <default>false</default>
+                <label>Singapore - Standard Merchant Bank (Asia) Limited</label>
+            </value>
+            <value>
+                <fullName>South Africa - The Standard Bank of South Africa Limited</fullName>
+                <default>false</default>
+                <label>South Africa - The Standard Bank of South Africa Limited</label>
+            </value>
+            <value>
+                <fullName>Swaziland - Standard Bank Swaziland Limited</fullName>
+                <default>false</default>
+                <label>Swaziland - Standard Bank Swaziland Limited</label>
+            </value>
+            <value>
+                <fullName>Tanzania - Stanbic Bank Tanzania Limited</fullName>
+                <default>false</default>
+                <label>Tanzania - Stanbic Bank Tanzania Limited</label>
+            </value>
+            <value>
+                <fullName>Uganda - Stanbic Bank Uganda Limited</fullName>
+                <default>false</default>
+                <label>Uganda - Stanbic Bank Uganda Limited</label>
+            </value>
+            <value>
+                <fullName>United Kingdom - Standard Bank Plc</fullName>
+                <default>false</default>
+                <label>United Kingdom - Standard Bank Plc</label>
+            </value>
+            <value>
+                <fullName>United States of America - Standard Americas, Inc.</fullName>
+                <default>false</default>
+                <label>United States of America - Standard Americas, Inc.</label>
+            </value>
+            <value>
+                <fullName>Zambia - Stanbic Bank Zambia Limited</fullName>
+                <default>false</default>
+                <label>Zambia - Stanbic Bank Zambia Limited</label>
+            </value>
+            <value>
+                <fullName>Zimbabwe - Stanbic Bank Zimbabwe Limited</fullName>
+                <default>false</default>
+                <label>Zimbabwe - Stanbic Bank Zimbabwe Limited</label>
+            </value>
+            <value>
+                <fullName>Standard Bank Insurance Brokers</fullName>
+                <default>false</default>
+                <label>Standard Bank Insurance Brokers</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

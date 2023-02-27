@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mandatory_fields_Direct_Marketing_Mailer</fullName>
+    <active>true</active>
+    <description>SFP-5277 - If Type: Direct Marketing, Campaign category: Operational Mailer, Campaign Category Type is not blank, the second fields are mandatory: Email Subject, Email Body,
+Email signature.</description>
+    <errorConditionFormula>AND(
+ISPICKVAL( Type , &apos;Direct Marketing&apos;),
+ISPICKVAL( Campaign_Category__c , &apos;Operational Mailer&apos;),
+NOT(ISBLANK(TEXT( Campaign_Category_Type__c ))),
+OR(
+ISBLANK( Email_Subject__c ),
+LEN( Email_Body__c ) = 0,
+LEN( Email_Signature_rt__c ) = 0
+)
+)</errorConditionFormula>
+    <errorMessage>If Type: Direct Marketing, Campaign category: Operational Mailer, Campaign Category Type is not blank, the following fields are mandatory: Email Subject, Email Body,
+Email signature.</errorMessage>
+</ValidationRule>

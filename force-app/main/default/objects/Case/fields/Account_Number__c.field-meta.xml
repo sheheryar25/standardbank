@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Number__c</fullName>
+    <description>Account number of the product (US-1495).
+            SGPRT-536 - Change help text</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The account number used to identify a specific account/product for the client</inlineHelpText>
+    <label>Account Number</label>
+    <length>80</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

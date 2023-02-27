@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>true</doesSendEmailToMembers>
+    <name>PartnerConnect Support Queue - Uganda</name>
+    <queueMembers>
+        <users>
+            <user>asiimwea3@stanbic.com.bcw</user>
+            <user>mbogod@stanbic.com.cib</user>
+            <user>beinganae@stanbic.com.bcw</user>
+            <user>naamalae@stanbic.com.bcw</user>
+            <user>johnb@stanbic.com</user>
+            <user>asiimwep@stanbic.com.bcw</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Call_Report__c</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

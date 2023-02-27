@@ -1,0 +1,14 @@
+<aura:component controller="CI_GemController" extends="c:CI_Base">
+    <aura:method name="getGems">
+        <aura:attribute name="clientId" type="String" />
+        <aura:attribute name="callback" type="function" />
+    </aura:method>
+    <aura:method name="deleteGem">
+        <aura:attribute name="gemId" type="String" />
+        <aura:attribute name="callback" type="function" />
+    </aura:method>
+    <aura:method name="dismissGem">
+        <aura:attribute name="gemId" type="String" />
+        <aura:attribute name="callback" type="function" />
+    </aura:method>
+</aura:component>

@@ -1,0 +1,11 @@
+/**
+ * Created by Chibuye Kunda on 2019/12/06.
+ */
+
+.THIS .agenda-btn-icon .slds-button{
+    color: red;
+}
+.THIS .slds-card {
+    min-height: 110px;
+    overflow-x: hidden;
+}

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Closure_Suspended_Reason__c</fullName>
+    <description>Closure / Suspended Reason</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Closure / Suspended Reason</inlineHelpText>
+    <label>Closure/Suspended Reason</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No Documents Provided</fullName>
+                <default>false</default>
+                <label>No Documents Provided</label>
+            </value>
+            <value>
+                <fullName>Record created in error</fullName>
+                <default>false</default>
+                <label>Record created in error</label>
+            </value>
+            <value>
+                <fullName>Exited</fullName>
+                <default>false</default>
+                <label>Exited</label>
+            </value>
+            <value>
+                <fullName>Duplicate record</fullName>
+                <default>false</default>
+                <label>Duplicate record</label>
+            </value>
+            <value>
+                <fullName>Suspended</fullName>
+                <default>false</default>
+                <label>Suspended</label>
+            </value>
+            <value>
+                <fullName>Inactive/Dormant</fullName>
+                <default>false</default>
+                <label>Inactive/Dormant</label>
+            </value>
+            <value>
+                <fullName>Parent Closed</fullName>
+                <default>false</default>
+                <label>Parent Closed</label>
+            </value>
+            <value>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+                <label>Rejected</label>
+            </value>
+            <value>
+                <fullName>De-Registered</fullName>
+                <default>false</default>
+                <label>De-Registered</label>
+            </value>
+            <value>
+                <fullName>Closed on Take-on</fullName>
+                <default>false</default>
+                <label>Closed on Take-on</label>
+            </value>
+            <value>
+                <fullName>Relationship moved to retail</fullName>
+                <default>false</default>
+                <label>Relationship moved to retail</label>
+            </value>
+            <value>
+                <fullName>Liquidated</fullName>
+                <default>false</default>
+                <label>Liquidated</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Merger &amp; Acquisition</fullName>
+                <default>false</default>
+                <label>Merger &amp; Acquisition</label>
+            </value>
+            <value>
+                <fullName>Amend Owner Form</fullName>
+                <default>false</default>
+                <label>Amend Owner Form</label>
+            </value>
+            <value>
+                <fullName>Sanctioned Entity</fullName>
+                <default>false</default>
+                <label>Sanctioned Entity</label>
+            </value>
+            <value>
+                <fullName>Pending</fullName>
+                <default>false</default>
+                <label>Pending</label>
+            </value>
+            <value>
+                <fullName>KYC Outstanding</fullName>
+                <default>false</default>
+                <label>KYC Outstanding</label>
+            </value>
+            <value>
+                <fullName>Propagated</fullName>
+                <default>false</default>
+                <label>Propagated</label>
+            </value>
+            <value>
+                <fullName>Awaiting Closure</fullName>
+                <default>false</default>
+                <label>Awaiting Closure</label>
+            </value>
+            <value>
+                <fullName>Dispensation Expired</fullName>
+                <default>false</default>
+                <label>Dispensation Expired</label>
+            </value>
+            <value>
+                <fullName>BS&amp;R</fullName>
+                <default>false</default>
+                <label>BS&amp;R</label>
+            </value>
+            <value>
+                <fullName>Blocked</fullName>
+                <default>false</default>
+                <label>Blocked</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lending_Product_Type__c</fullName>
+    <description>Lending product type</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Lending product type</inlineHelpText>
+    <label>Lending Product Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Agricultural Production Loan</fullName>
+                <default>false</default>
+                <label>Agricultural Production Loan</label>
+            </value>
+            <value>
+                <fullName>Business Revolving Credit Product</fullName>
+                <default>false</default>
+                <label>Business Revolving Credit Product</label>
+            </value>
+            <value>
+                <fullName>Business Term Loan</fullName>
+                <default>false</default>
+                <label>Business Term Loan</label>
+            </value>
+            <value>
+                <fullName>Commercial Property Finance</fullName>
+                <default>false</default>
+                <label>Commercial Property Finance</label>
+            </value>
+            <value>
+                <fullName>Debtors’ Finance</fullName>
+                <default>false</default>
+                <label>Debtors’ Finance</label>
+            </value>
+            <value>
+                <fullName>Medium Term Loan</fullName>
+                <default>false</default>
+                <label>Medium Term Loan</label>
+            </value>
+            <value>
+                <fullName>Overdraft</fullName>
+                <default>false</default>
+                <label>Overdraft</label>
+            </value>
+            <value>
+                <fullName>VAF Full Maintenance Lease</fullName>
+                <default>false</default>
+                <label>VAF Full Maintenance Lease</label>
+            </value>
+            <value>
+                <fullName>VAF Installment Sale</fullName>
+                <default>false</default>
+                <label>VAF Installment Sale</label>
+            </value>
+            <value>
+                <fullName>VAF Operating Rental</fullName>
+                <default>false</default>
+                <label>VAF Operating Rental</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

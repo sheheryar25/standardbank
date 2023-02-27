@@ -1,0 +1,25 @@
+.THIS {
+    background: #f6f6f6;
+    overflow: hidden;
+}
+
+.THIS .bookmarks__title {
+	color: #0A2240;
+	font-size: 47px;
+	font-weight: 200;
+	line-height: 47px;
+    margin-bottom: 32px;
+}
+
+.THIS .bookmarks__feed {
+    flex-direction: column;
+    background-color: #ffffff;
+    max-width: 100%;
+    padding: 24px 24px 48px;
+}
+
+@media(max-width: 1024px) {
+    .THIS .isBookmarked:before {
+        content: unset;
+    }
+}

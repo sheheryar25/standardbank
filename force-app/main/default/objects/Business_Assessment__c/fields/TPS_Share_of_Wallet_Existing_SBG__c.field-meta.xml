@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TPS_Share_of_Wallet_Existing_SBG__c</fullName>
+    <description>Estimated percentage share of the Client&apos;s spend Standard Bank has within Transactional Products and Services</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Estimated percentage share of the Client&apos;s spend Standard Bank has within Transactional Products and Services</inlineHelpText>
+    <label>TPS Share of Wallet (Existing) SBG %</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

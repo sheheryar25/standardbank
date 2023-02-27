@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Week_Number_Created__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( 
+YEAR(DATEVALUE(CreatedDate))=2009, 
+&quot;2009 &quot;&amp;TEXT(MOD( 
+FLOOR((DATEVALUE(CreatedDate)-DATEVALUE(&quot;2009-01-05&quot;))/7), 
+52) 
++1), 
+IF(YEAR(DATEVALUE(CreatedDate))=2010, 
+&quot;2010 &quot;&amp;TEXT(MOD(FLOOR((DATEVALUE(CreatedDate)-DATEVALUE(&quot;2010-01-04&quot; ))/7), 
+52) 
++1), 
+&quot;&quot; 
+) 
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Week Number Created</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,35 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+    <aura:attribute name="showBannerMessage" type="Boolean" default="false" access="public"/>
+    <aura:attribute name="showBadgeOnlyLogo" type="Boolean" default="false" access="public"/>
+    <aura:attribute name="showCookieDisclaimer" type="Boolean" default="true" access="private"/>
+    <aura:attribute name="isAPIProduct" type="Boolean" default="false" access="private"/>
+    <aura:handler name="render" value="{!this}" action="{!c.init}"/>
+    <ltng:require scripts="{!$Resource.OSBNavBarResize + '/OSBHeaderNavBarResizeSideNavigation.js'}" />
+
+    <div class="header-container" id="headerContainer">
+        <aura:if isTrue="{!v.showBannerMessage}">
+            <c:OSBHeaderBannerMessage/>
+        </aura:if>
+        <aura:if isTrue="{!v.showCookieDisclaimer}">
+             <c:OSBCookieDisclaimer/> 
+        </aura:if>
+        
+        <div class="header slds-grid slds-wrap flex_align_center" id="header">
+			<aura:if isTrue="{!v.showBadgeOnlyLogo}">
+                <div class="header__logo" id="sbBadgeLogoContainer">
+                    <a class="breadcrumbs__item" href="/s/" data-id= "uitlink_link" data-text= "Header | Logo">
+                        <img src="{!$Resource.OSB_logoBadge}" id="sbBadgeLogo"/>
+                    </a>
+                </div>
+				<aura:set attribute="else">
+					<div class="header__logo slds-size_4-of-12" id="sbLogoContainer">
+                        <a class="logoContainer" href="/s/" id="sbLogo" data-id= "uitlink_link" data-text= "Header | Logo"></a>
+                    </div>
+                    <div class="header__navigation slds-size_8-of-12" id="headerNav"> 
+                        <c:OSBHeaderNavigation isAPIProduct="{!v.isAPIProduct}"/>
+                    </div>
+				</aura:set>
+			</aura:if>
+        </div>
+    </div>
+</aura:component>

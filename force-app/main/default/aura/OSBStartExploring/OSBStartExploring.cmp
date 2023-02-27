@@ -1,0 +1,18 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+    <aura:attribute name="title" type="String" />
+    <aura:attribute name="linkLabel1" type="String" />
+    <aura:attribute name="link1" type="String" />
+    <aura:attribute name="linkLabel2" type="String"/>
+    <aura:attribute name="link2" type="String"/>
+    <div class="startExploring-container">
+        <div class="startExploring" id="startexplore">
+            <div class="startExploring__title">{!v.title}</div>
+            <div class="startExploring__buttons">
+                <aura:if isTrue="{!v.linkLabel1 != ''}">
+                    <a class="btn btn--whitenoborder" href="{!v.link1}" data-id="uitlink_link" data-text="{!'Start Exploring | ' + v.linkLabel1 }">{!v.linkLabel1}</a>
+                </aura:if>
+                <a class="btn btn--whitenoborder" href="{!v.link2}" data-id="uitlink_link" data-text="{!'Start Exploring | ' + v.linkLabel2 }">{!v.linkLabel2}</a>
+            </div>
+        </div>
+    </div>
+</aura:component>

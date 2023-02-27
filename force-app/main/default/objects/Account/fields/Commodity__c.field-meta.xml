@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Commodity__c</fullName>
+    <description>SFP-9319 [c] Commodities which the client deals with.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please see &quot;Commodities&quot; Component on the sidebar to view descriptions.</inlineHelpText>
+    <label>Commodity</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Animals</fullName>
+                <default>false</default>
+                <label>Animals</label>
+            </value>
+            <value>
+                <fullName>Aquaculture</fullName>
+                <default>false</default>
+                <label>Aquaculture</label>
+            </value>
+            <value>
+                <fullName>Dairy</fullName>
+                <default>false</default>
+                <label>Dairy</label>
+            </value>
+            <value>
+                <fullName>Floriculture</fullName>
+                <default>false</default>
+                <label>Floriculture</label>
+            </value>
+            <value>
+                <fullName>Forestry</fullName>
+                <default>false</default>
+                <label>Forestry</label>
+            </value>
+            <value>
+                <fullName>Fruit</fullName>
+                <default>false</default>
+                <label>Fruit</label>
+            </value>
+            <value>
+                <fullName>Grain Crops</fullName>
+                <default>false</default>
+                <label>Grain Crops</label>
+            </value>
+            <value>
+                <fullName>Inputs</fullName>
+                <default>false</default>
+                <label>Inputs</label>
+            </value>
+            <value>
+                <fullName>Oil-Seed Crops</fullName>
+                <default>false</default>
+                <label>Oil-Seed Crops</label>
+            </value>
+            <value>
+                <fullName>Other Crops</fullName>
+                <default>false</default>
+                <label>Other Crops</label>
+            </value>
+            <value>
+                <fullName>Poultry</fullName>
+                <default>false</default>
+                <label>Poultry</label>
+            </value>
+            <value>
+                <fullName>Processed</fullName>
+                <default>false</default>
+                <label>Processed</label>
+            </value>
+            <value>
+                <fullName>Specialized</fullName>
+                <default>false</default>
+                <label>Specialized</label>
+            </value>
+            <value>
+                <fullName>Vegetables</fullName>
+                <default>false</default>
+                <label>Vegetables</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

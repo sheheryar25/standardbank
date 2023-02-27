@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CommB_Product_Case_Mandatory_Fields</fullName>
+    <active>true</active>
+    <description>US-1635 - If Applicable To = Product, then appropriate fields must be populated.</description>
+    <errorConditionFormula>AND (
+  ISPICKVAL(Applicable_To__c , &quot;Product&quot;),
+  OR (  
+     ISBLANK( TEXT(Parent_Product__c)),
+     ISBLANK( TEXT(Product__c )),
+     ISBLANK( TEXT(Classification__c)),
+     ISBLANK( Account_Number__c)
+  )
+)</errorConditionFormula>
+    <errorMessage>If this case applies to a Product, then these fields must be populated: Parent Product, Product, Product Classification, Account Number</errorMessage>
+</ValidationRule>

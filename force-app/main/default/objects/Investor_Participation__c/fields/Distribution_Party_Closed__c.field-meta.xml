@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Distribution_Party_Closed__c</fullName>
+    <description>US-4609/ SGPRT-623 The amount of trade closed at with each investor for the portion of the sell down</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter the amount trade was closed at with each investor for the portion of the sell down that relates to the specific distribution method OR the amount trade was closed at with the seller</inlineHelpText>
+    <label>Distribution Party Closed</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

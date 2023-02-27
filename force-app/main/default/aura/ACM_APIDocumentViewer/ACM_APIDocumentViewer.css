@@ -1,0 +1,370 @@
+.THIS.component {
+    margin-bottom: 2em;
+  }
+
+
+.THIS .title {
+    font-family: bentonsans-extra-light-webfont;
+    width: 100%;
+    margin: 0 0 15px;
+}
+  
+  @media screen and (min-width: 992px) {
+    .THIS.component {
+      margin-bottom: 4em;
+    }
+  }
+  
+  .THIS .component--inner-item {
+    margin-bottom: 2em;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .THIS .component--inner-item {
+      margin-bottom: 0;
+    }
+  }
+  
+  .THIS.value-proposition .value-proposition__title {
+    margin-bottom: 60px;
+    margin-top: 60px;
+    color: #0134a2;
+    font-size: 27px;
+  }
+  
+  @media screen and (min-width: 992px) {
+    .THIS .value-proposition__title {
+      margin-bottom: 2em;
+      margin-top: 2em;
+    }
+  }
+  
+  .THIS .value-proposition .col {
+    padding: 0;
+  }
+  
+  .THIS .value-proposition__row {
+    padding: 0 1em;
+  }
+  
+  .THIS .value-proposition--multirow .col:first-of-type {
+    padding-left: 0;
+  }
+  
+  .THIS .value-proposition--multirow .col:last-of-type {
+    padding-right: 0;
+  }
+  
+  .THIS .value-proposition--multirow .col .value-proposition-item {
+    position: relative;
+    margin-bottom: 0;
+  }
+  
+  @media screen and (min-width: 992px) {
+    .THIS .value-proposition--multirow .col .value-proposition-item {
+      padding: 4em 1.3em 4.6em;
+      margin-top: 3.6em;
+    }
+  }
+  
+  @media screen and (min-width: 992px) {
+    .THIS .value-proposition--multirow
+      .col
+      .value-proposition-item
+      .value-proposition-item__shield {
+      transform: translate(-50%, -40%);
+    }
+  }
+  
+  @media screen and (min-width: 992px) {
+    .THIS .value-proposition--multirow .col:nth-of-type(n + 5) .value-proposition-item {
+      padding-bottom: 1.82em;
+      margin-top: 0;
+    }
+  }
+  
+  .THIS .value-proposition__header {
+    position: relative;
+    top: -2.6em;
+    margin-bottom: 2.6em;
+  }
+  
+  .THIS .value-proposition-item {
+    padding: 0 2em;
+    text-align: center;
+    -webkit-box: 1;
+    -moz-box: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -webkit-flex-shrink: 0;
+    -ms-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -webkit-flex-basis: auto;
+    -ms-flex-basis: auto;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+  }
+  
+  @media screen and (min-width: 992px) {
+    .THIS .value-proposition-item {
+      background: #fff;
+      padding: 4em 1.3em 2em;
+      margin-top: 4.6em;
+    }
+  }
+  
+  .THIS .value-proposition-item .title--white {
+    color: #3c4b6c;
+  }
+  
+  @media screen and (min-width: 992px) {
+    .THIS .value-proposition-item .title--white {
+      color: #fff;
+    }
+  }
+  
+  .THIS .value-proposition-item__description {
+    display: none;
+    margin-bottom: 1em;
+    font-family: bentonsans-regular-webfont;
+    color: #3c4b6c;
+    font-size: 13px;
+    line-height: 22px;
+    max-width: 100%;
+  }
+  
+  @media (min-width: 576px) {
+    .THIS .value-proposition-item__description {
+      font-size: calc(0.44643vw + 10.42857px);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .THIS .value-proposition-item__description {
+      font-size: 15px;
+    }
+   
+  }
+  
+  @media (min-width: 576px) {
+    .THIS .value-proposition-item__description {
+      line-height: calc(0.66964vw + 18.14286px);
+    }
+    .THIS .title--module-sub-title {
+        line-height: calc(2.45536vw + 10.85714px);
+    }
+    .THIS .title--module-sub-title {
+        font-size: calc(1.78571vw + 9.71429px);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .THIS .value-proposition-item__description {
+      line-height: 25px;
+    }
+  }
+  
+  @media screen and (min-width: 480px) {
+    .THIS .value-proposition-item__description {
+      display: block;
+    }
+  }
+  
+  .THIS .value-proposition-item__text-white {
+    color: #3c4b6c;
+  }
+  
+  @media screen and (min-width: 992px) {
+    .THIS .value-proposition-item__text-white {
+      color: #fff;
+    }
+  }
+  
+  @media screen and (min-width: 992px) {
+    .THIS .value-proposition-item--blue {
+      background: #0033a1;
+    }
+  }
+  
+  @media screen and (min-width: 992px) {
+    .THIS .value-proposition--white .value-proposition-item--blue {
+      background: #0033a1;
+    }
+  }
+  
+  .THIS .value-proposition-item__shield {
+    width: 50px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 0.75rem;
+  }
+  
+  @media (min-width: 576px) {
+    .THIS .value-proposition-item__shield {
+      width: calc(11.16071vw - 14.28571px);
+      margin-bottom: 1.5rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .THIS .value-proposition-item__shield {
+      width: 100px;
+    }
+  }
+  
+  @media screen and (min-width: 992px) {
+    .THIS .value-proposition-item__shield {
+      margin: 0 auto;
+      position: absolute;
+      left: 50%;
+      top: 0%;
+      transform: translate(-50%, 0);
+    }
+  }
+  
+  .THIS .value-proposition-item__shield-icon {
+    width: 26px;
+    height: auto;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  @media (min-width: 576px) {
+    .THIS .value-proposition-item__shield-icon {
+      width: calc(2.00893vw + 14.42857px);
+    }
+  }
+  .THIS .value-proposition-item__shield-icon img {
+    filter: brightness(0) invert(1); /*Use this to ensure our icons are always white*/
+    width: 20px;
+    height: 20px;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .THIS .value-proposition-item__shield-icon img {
+      width: 35px;
+      height: 35px;
+    }
+  }
+  
+  .THIS .value-proposition-item__shield-icon ~ img {
+    /*used to realign shield backing */
+    margin-bottom: -0.75rem;
+  }
+  
+  @media screen and (min-width: 480px) {
+    .THIS .value-proposition-item__shield-icon ~ img {
+      margin-bottom: -1rem;
+    }
+  }
+  
+  @media screen and (min-width: 768px) {
+    .THIS .value-proposition-item__shield-icon ~ img {
+      margin-bottom: -1.5rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .THIS .value-proposition-item__shield-icon {
+      width: 35px;
+    }
+    .THIS .title--module-sub-title {
+        line-height: 36px;
+    }
+    .THIS .title--module-sub-title {
+        font-size: 28px;
+    }
+  }
+  
+  .THIS .value-proposition-item__shield-skew {
+    width: 86px;
+    height: 86px;
+    object-fit: contain;
+    box-shadow: 0 14px 23px 0 rgba(0, 0, 0, 0.15);
+    background-image: linear-gradient(121deg, #0033a1 0%, #1f59d8 100%);
+    transform: skewX(-25deg);
+    position: relative;
+    z-index: 0;
+    margin-bottom: 2em;
+  }
+  
+  .THIS .value-proposition-item__shield-skew .value-proposition-item__shield-icon {
+    transform: translate(-50%, -50%) skewX(25deg);
+  }
+  
+  @media screen and (max-width: 767px) {
+    .THIS .value-proposition-item__shield-skew {
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .THIS .value-proposition-item__shield-skew {
+      width: 58px;
+      height: 58px;
+      margin-bottom: 20px;
+    }
+  }
+
+    .THIS.value-proposition .col, .THIS.value-proposition .col-1, .THIS.value-proposition .col-10, .THIS.value-proposition .col-11, .THIS.value-proposition .col-12, .THIS.value-proposition .col-2, .THIS.value-proposition .col-3, .THIS.value-proposition .col-4, .THIS.value-proposition .col-5, .THIS.value-proposition .col-6, .THIS.value-proposition .col-7, .THIS.value-proposition .col-8, .THIS.value-proposition .col-9, .THIS.value-proposition .col-auto, .THIS.value-proposition .col-lg, .THIS.value-proposition .col-lg-1, .THIS.value-proposition .col-lg-10, .THIS.value-proposition .col-lg-11, .THIS.value-proposition .col-lg-12, .THIS.value-proposition .col-lg-2, .THIS.value-proposition .col-lg-3, .THIS.value-proposition .col-lg-4, .THIS.value-proposition .col-lg-5, .THIS.value-proposition .col-lg-6, .THIS.value-proposition .col-lg-7, .THIS.value-proposition .col-lg-8, .THIS.value-proposition .col-lg-9, .THIS.value-proposition .col-lg-auto, .THIS.value-proposition .col-md, .THIS.value-proposition .col-md-1, .THIS.value-proposition .col-md-10, .THIS.value-proposition .col-md-11, .THIS.value-proposition .col-md-12, .THIS.value-proposition .col-md-2, .THIS.value-proposition .col-md-3, .THIS.value-proposition .col-md-4, .THIS.value-proposition .col-md-5, .THIS.value-proposition .col-md-6, .THIS.value-proposition .col-md-7, .THIS.value-proposition .col-md-8, .THIS.value-proposition .col-md-9, .THIS.value-proposition .col-md-auto, .THIS.value-proposition .col-sm, .THIS.value-proposition .col-sm-1, .THIS.value-proposition .col-sm-10, .THIS.value-proposition .col-sm-11, .THIS.value-proposition .col-sm-12, .THIS.value-proposition .col-sm-2, .THIS.value-proposition .col-sm-3, .THIS.value-proposition .col-sm-4, .THIS.value-proposition .col-sm-5, .THIS.value-proposition .col-sm-6, .THIS.value-proposition .col-sm-7, .THIS.value-proposition .col-sm-8, .THIS.value-proposition .col-sm-9, .THIS.value-proposition .col-sm-auto, .THIS.value-proposition .col-xl, .THIS.value-proposition .col-xl-1, .THIS.value-proposition .col-xl-10, .THIS.value-proposition .col-xl-11, .THIS.value-proposition .col-xl-12, .THIS.value-proposition .col-xl-2, .THIS.value-proposition .col-xl-3, .THIS.value-proposition .col-xl-4, .THIS.value-proposition .col-xl-5, .THIS.value-proposition .col-xl-6, .THIS.value-proposition .col-xl-7, .THIS.value-proposition .col-xl-8, .THIS.value-proposition .col-xl-9, .THIS.value-proposition .col-xl-auto {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+  .THIS.value-proposition .col {
+    padding: 0;
+  }
+
+   .THIS .row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.THIS .flex-column {
+    -ms-flex-direction: column !important;
+    flex-direction: column !important;
+}
+.THIS .d-flex {
+    display: -ms-flexbox !important;
+    display: flex !important;
+}
+.THIS .value-proposition .col{
+    padding: 0;
+}
+
+  .THIS .col-6 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+  @media screen and (min-width: 768px) {
+   
+    .THIS .col-md-3 {
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+
+  }
+
+  .THIS .title--module-sub-title {
+    font-size: 20px;
+    line-height: 25px;
+    color: #3c4b6c;
+    text-transform: none;
+}

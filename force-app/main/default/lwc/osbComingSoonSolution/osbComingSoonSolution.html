@@ -1,0 +1,42 @@
+<template>
+    <template if:true={ComingSoonSolutionsRequest}>
+        <div class="ComingSoonSol">
+            <lightning-layout>
+                <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12">
+                    <div class="ComingSoonMain">
+                        <template if:true={solOwner}>
+                            <div class="SolutionSizes SolutionNameThird">
+                                <div class="TitleClass">
+                                    <h1>COMING SOON</h1>
+                                </div>
+                                <div class="mainName">
+                                    <p>{solTitle}</p>
+                                </div>
+                                <div class="subName">
+                                    <p>{solIntro}</p>
+                                </div>
+                            </div>
+                        </template>
+                        <template if:false={solOwner}>
+                            <div class="SolutionSizes SolutionName">
+                                <div class="TitleClass">
+                                    <h1>COMING SOON</h1>
+                                </div>
+                                <div class="mainName">
+                                    <p>{solTitle}</p>
+                                </div>
+                                <div class="subName">
+                                    <p>{solIntro}</p>
+                                </div>
+                            </div>
+                        </template>
+                        <div class="SolutionSizes GreyBlock">
+                            <img src={ComingSoonImage} class="imageComing">
+                        </div>
+                    </div>
+                </lightning-layout-item>
+            </lightning-layout>
+        </div>
+        </br>
+    </template>
+</template>

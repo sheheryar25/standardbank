@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Credit_Risk__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>SPGRT - 1025 : Field displays the name of the Credit Risk Client Team Member on the Client</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Credit Risk Client Team member on the Client</inlineHelpText>
+    <label>Credit Risk</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>ClientsCreditRisk</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

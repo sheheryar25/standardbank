@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Booking_Countries__c</fullName>
+    <description>The country in which Standard Bank Legal Entity to which the included opportunities are being booked against</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The country in which Standard Bank Legal Entity to which the included opportunities are being booked against</inlineHelpText>
+    <label>Booking Country/ies</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Angola</fullName>
+                <default>false</default>
+                <label>Angola</label>
+            </value>
+            <value>
+                <fullName>Botswana</fullName>
+                <default>false</default>
+                <label>Botswana</label>
+            </value>
+            <value>
+                <fullName>Brazil</fullName>
+                <default>false</default>
+                <label>Brazil</label>
+            </value>
+            <value>
+                <fullName>China</fullName>
+                <default>false</default>
+                <label>China</label>
+            </value>
+            <value>
+                <fullName>Côte d&apos;Ivoire</fullName>
+                <default>false</default>
+                <label>Côte d&apos;Ivoire</label>
+            </value>
+            <value>
+                <fullName>D R Congo</fullName>
+                <default>false</default>
+                <label>D R Congo</label>
+            </value>
+            <value>
+                <fullName>Ghana</fullName>
+                <default>false</default>
+                <label>Ghana</label>
+            </value>
+            <value>
+                <fullName>Hong Kong</fullName>
+                <default>false</default>
+                <label>Hong Kong</label>
+            </value>
+            <value>
+                <fullName>Isle of Man</fullName>
+                <default>false</default>
+                <label>Isle of Man</label>
+            </value>
+            <value>
+                <fullName>Jersey</fullName>
+                <default>false</default>
+                <label>Jersey</label>
+            </value>
+            <value>
+                <fullName>Kenya</fullName>
+                <default>false</default>
+                <label>Kenya</label>
+            </value>
+            <value>
+                <fullName>Lesotho</fullName>
+                <default>false</default>
+                <label>Lesotho</label>
+            </value>
+            <value>
+                <fullName>Malawi</fullName>
+                <default>false</default>
+                <label>Malawi</label>
+            </value>
+            <value>
+                <fullName>Mauritius</fullName>
+                <default>false</default>
+                <label>Mauritius</label>
+            </value>
+            <value>
+                <fullName>Mozambique</fullName>
+                <default>false</default>
+                <label>Mozambique</label>
+            </value>
+            <value>
+                <fullName>Namibia</fullName>
+                <default>false</default>
+                <label>Namibia</label>
+            </value>
+            <value>
+                <fullName>Nigeria</fullName>
+                <default>false</default>
+                <label>Nigeria</label>
+            </value>
+            <value>
+                <fullName>Singapore</fullName>
+                <default>false</default>
+                <label>Singapore</label>
+            </value>
+            <value>
+                <fullName>South Africa</fullName>
+                <default>false</default>
+                <label>South Africa</label>
+            </value>
+            <value>
+                <fullName>Swaziland</fullName>
+                <default>false</default>
+                <label>Swaziland</label>
+            </value>
+            <value>
+                <fullName>Tanzania</fullName>
+                <default>false</default>
+                <label>Tanzania</label>
+            </value>
+            <value>
+                <fullName>Uganda</fullName>
+                <default>false</default>
+                <label>Uganda</label>
+            </value>
+            <value>
+                <fullName>United Kingdom</fullName>
+                <default>false</default>
+                <label>United Kingdom</label>
+            </value>
+            <value>
+                <fullName>United States of America</fullName>
+                <default>false</default>
+                <label>United States of America</label>
+            </value>
+            <value>
+                <fullName>Zambia</fullName>
+                <default>false</default>
+                <label>Zambia</label>
+            </value>
+            <value>
+                <fullName>Zimbabwe</fullName>
+                <default>false</default>
+                <label>Zimbabwe</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

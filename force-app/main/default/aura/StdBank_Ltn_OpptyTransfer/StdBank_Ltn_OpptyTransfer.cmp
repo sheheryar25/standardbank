@@ -1,0 +1,22 @@
+<aura:component description="StdBank_Ltn_OpptyTransfer" controller="StdBank_Ltn_OpptyTransfer" implements="force:lightningQuickActionWithoutHeader,force:hasRecordId">
+	<!-- System variables -->
+    <aura:attribute name="recordId" type="Id" />
+
+    <!-- Private variables -->
+    <aura:attribute name="isLoading" type="Boolean" default="true" access="private" />
+
+    <!-- Init Handler -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <!-- Body -->
+    <aura:if isTrue="{!v.isLoading}">
+        <div id="waitdsp" >
+            <center>
+                <br/><br/>
+                <label style="font-family: Salesforce Sans, Arial, sans-serif;font-size: 14px;">Loading...</label>
+                <br/><br/>
+                <img src="{!$Resource.SF1_Loading_GIF}" alt="" title="Redirecting..." width="196"/>
+            </center>
+        </div>
+    </aura:if>
+</aura:component>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Escalation_Date_Complete_when_Escaleated</fullName>
+    <active>true</active>
+    <description>Update the Ecalation Date if the Esccalation to Premier Support checkbox is checked.</description>
+    <errorConditionFormula>Escalated_to_Premier_Support__c  = TRUE &amp;&amp; ISBLANK (Escalated_to_Premier_Support_Date__c )</errorConditionFormula>
+    <errorDisplayField>Escalated_to_Premier_Support_Date__c</errorDisplayField>
+    <errorMessage>Please complete the Date Escalated</errorMessage>
+</ValidationRule>

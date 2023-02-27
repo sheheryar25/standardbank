@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Credit_Paper_Application_Created__c</fullName>
+    <description>Date that the Digital Credit Paper was created SGPRT-1201</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Date that the Digital Credit Paper was created</inlineHelpText>
+    <label>Credit Paper Application Created</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

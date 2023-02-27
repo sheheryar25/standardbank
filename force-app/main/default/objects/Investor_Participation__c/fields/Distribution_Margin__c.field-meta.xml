@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Distribution_Margin__c</fullName>
+    <description>The margin to be earned by the investor OR margin purchased at.
+SGPRT-3852</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The margin to be earned by the investor OR margin purchased at.
+If Variable: input total margin in % above the applicable base rate quoted to client. If below, input with minus symbol.
+If Fixed: input all-in fixed rate in %.
+If Preference Share: input the applicable % of Prime as quoted to client.
+If Insurance: Weighted Average insurance premium in %</inlineHelpText>
+    <label>Distribution Margin (%)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>3</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

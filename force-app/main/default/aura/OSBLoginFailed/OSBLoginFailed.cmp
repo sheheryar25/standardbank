@@ -1,0 +1,22 @@
+<!-- add implements="forceCommunity:availableForAllPageTypes" to surface the component in community builder -->
+<aura:component implements="forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes" access="global">
+    <aura:attribute name="notLoggedIn" type="Boolean" default="false" access="private"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <lightning:navigation aura:id="navService"/>
+    
+    <aura:if isTrue="{!v.notLoggedIn}">
+        <div class="loginError-container">
+            <div class="loginError">
+                <h1 class="loginError__title">Sign In Failed</h1>
+                <div class="loginError__form">
+                    <div class="loginError__subtitle">
+                        We're sorry. It seems there was a problem signing into your dashboard. Take a break and come back in a bit to try again. If this problem persists please, 
+                        <a class="loginError__link" href="/s/contact-us" data-id="uitlink_link" data-text="Login Failed | Let Us Know">let us know</a>. Again, sorry for the inconvenience this may cause you.
+                        <button onclick="{!c.returnToHomePage}" class="btn btn--blue loginError__submitBtn loginError__button" data-id="uitlink_link" data-text="Login Failed | Return to homepage">Return to homepage</button> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aura:if>
+</aura:component>

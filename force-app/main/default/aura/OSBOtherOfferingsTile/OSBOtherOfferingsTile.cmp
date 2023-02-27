@@ -1,0 +1,10 @@
+<aura:component>
+	<div class="otherOfferings__container--tile">
+        <h2 class="tile__header">Other offerings</h2>
+        <div class="otherOfferings--tile">
+            <a href="https://www.businessonline.standardbank.com/bol/" class="link otherOfferings--tile__link" target="_blank" data-id="uitlink_link" data-text="Other Offerings | Business Online">Business Online</a>
+            <a href="https://www.businessonline.standardbank.co.za/" class="link otherOfferings--tile__link" target="_blank" data-id="uitlink_link" data-text="Other Offerings | Business Online SA">Business Online SA</a>
+            <a href="https://emarkettrader.standardbank.com/auth/NSWebController?event=VIEW_LOGIN_EVENT" class="link otherOfferings--tile__link" target="_blank" data-id="uitlink_link" data-text="Other Offerings | eMarket Trader">eMarket Trader</a>
+        </div>
+    </div>
+</aura:component>

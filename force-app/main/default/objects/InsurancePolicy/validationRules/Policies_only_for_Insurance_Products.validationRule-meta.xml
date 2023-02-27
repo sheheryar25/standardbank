@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Policies_only_for_Insurance_Products</fullName>
+    <active>true</active>
+    <description>SFP-10316 Policy can be linked only with Insurance Products created by the &quot;Insurance&quot; division Users</description>
+    <errorConditionFormula>AND(
+ NOT(ISBLANK( SB_Product__c )),
+ OR(
+   TEXT(SB_Product__r.CreatedBy.User_Division__c) &lt;&gt; &apos;Insurance&apos;,
+   SB_Product__r.RecordType.DeveloperName &lt;&gt; &apos;Insurance&apos;
+ )
+)</errorConditionFormula>
+    <errorMessage>Insurance Policy can be linked only with Insurance Products created by &apos;Insurance&apos; division Users.</errorMessage>
+</ValidationRule>

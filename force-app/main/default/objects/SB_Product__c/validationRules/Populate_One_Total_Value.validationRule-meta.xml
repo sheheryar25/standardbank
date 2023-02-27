@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Populate_One_Total_Value</fullName>
+    <active>true</active>
+    <description>Reviewed:Case#7027: Make the Product Revenues Mandatory using the same validation.SF Case#1146 - 03/2011 - Rudolf NiehausValidation rule to make sure one of the total values are populated as these values are used to calculate the Gross P&amp;L Amount fields.</description>
+    <errorConditionFormula>IF(AND(
+OR(
+AND(ISNEW(), ISBLANK(Total_Fees__c),ISBLANK(Total_Margin__c)),
+OR(
+AND(ISCHANGED(Total_Fees__c),ISBLANK(Total_Fees__c)),AND(ISCHANGED(Total_Margin__c),ISBLANK(Total_Margin__c))
+)
+),
+$RecordType.DeveloperName &lt;&gt; &quot;Commercial_Banking&quot;,
+$RecordType.DeveloperName &lt;&gt; &quot;CommB_Lending&quot;,
+$RecordType.DeveloperName &lt;&gt; &quot;Advisory&quot;,
+$RecordType.DeveloperName &lt;&gt; &quot;Insurance&quot;),true,false)</errorConditionFormula>
+    <errorMessage>Please populate Total field values on product. Input zero if there is no associated Fees or Margin.</errorMessage>
+</ValidationRule>

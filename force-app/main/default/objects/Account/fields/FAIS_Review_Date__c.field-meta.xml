@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FAIS_Review_Date__c</fullName>
+    <description>US-1980: FAIS - To store FAIS related information in SF : FAIS Status, NAV, AUM and FAIS Review Date</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the date on which FAIS status is reviewed</inlineHelpText>
+    <label>FAIS Review Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

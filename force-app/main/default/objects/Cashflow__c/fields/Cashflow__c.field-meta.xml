@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cashflow__c</fullName>
+    <description>Used to record both in- and outflows.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Used to record both in- and outflows</inlineHelpText>
+    <label>Cashflow</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SB_Product__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>SFP-12679 - Lookup to custom product object.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The source of where the policy originates from</inlineHelpText>
+    <label>Insurance Opportunity Reference</label>
+    <lookupFilter>
+        <active>true</active>
+        <errorMessage>Insurance Opportunity Reference and Name Insured have to be linked, please change Opportunity Reference or choose appropriate Name Insured.</errorMessage>
+        <filterItems>
+            <field>SB_Product__c.RecordType.DeveloperName</field>
+            <operation>equals</operation>
+            <value>Insurance</value>
+        </filterItems>
+        <filterItems>
+            <field>SB_Product__c.Opportunity__r.AccountId</field>
+            <operation>equals</operation>
+            <valueField>$Source.NameInsuredId</valueField>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>SB_Product__c</referenceTo>
+    <relationshipLabel>Insurance Policies</relationshipLabel>
+    <relationshipName>Insurance_Policies</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

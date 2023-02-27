@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GUID__c</fullName>
+    <caseSensitive>true</caseSensitive>
+    <description>GUID used for Gateway API integration. This is the unique value that for security reasons is used instead of BPID to retrieve data for the client, US-4557</description>
+    <externalId>true</externalId>
+    <label>GUID</label>
+    <length>36</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

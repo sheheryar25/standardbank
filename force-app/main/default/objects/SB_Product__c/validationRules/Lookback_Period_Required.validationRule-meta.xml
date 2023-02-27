@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lookback_Period_Required</fullName>
+    <active>true</active>
+    <description>Make Lookback Period mandatory for certain Base Rates.</description>
+    <errorConditionFormula>AND (
+    OR(
+        ISPICKVAL( Base_Rate__c , &apos;SOFR&apos;),
+        ISPICKVAL( Base_Rate__c , &apos;TERM SOFR&apos;),
+        ISPICKVAL( Base_Rate__c , &apos;SONIA&apos;),
+        ISPICKVAL( Base_Rate__c , &apos;ESTR&apos;),
+        ISPICKVAL( Base_Rate__c , &apos;TONA&apos;),
+        ISPICKVAL( Base_Rate__c , &apos;SARON&apos;)
+    ),
+    
+    ISBLANK( Lookback_Period__c ) 
+)</errorConditionFormula>
+    <errorMessage>When Base Rate has the following selections: 
+SOFR, TERM SOFR, SONIA, ESTR, TONA, SARON
+then the Lookback Period can&apos;t be left blank.</errorMessage>
+</ValidationRule>

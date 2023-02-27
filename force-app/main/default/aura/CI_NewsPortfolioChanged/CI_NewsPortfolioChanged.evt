@@ -1,0 +1,3 @@
+<aura:event type="APPLICATION" description="CI_NewsPortfolioChanged">
+    <aura:attribute name="isMyPortfolio" type="Boolean" required="true"/>
+</aura:event>

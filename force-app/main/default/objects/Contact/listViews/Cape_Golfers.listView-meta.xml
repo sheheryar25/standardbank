@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cape_Golfers</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>Golf_Handicap__c</columns>
+    <columns>Shirt_Size__c</columns>
+    <columns>CONTACT.PHONE1</columns>
+    <columns>CONTACT.PHONE3</columns>
+    <columns>CONTACT.ADDRESS2_CITY</columns>
+    <columns>Interests__c</columns>
+    <columns>CORE.USERS.FIRST_NAME</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CONTACT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Contact.SA_Client_Contact_Record_Type</value>
+    </filters>
+    <filters>
+        <field>Inactive__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Interests__c</field>
+        <operation>includes</operation>
+        <value>Golf</value>
+    </filters>
+    <filters>
+        <field>CONTACT.PHONE1</field>
+        <operation>startsWith</operation>
+        <value>021,041,+2721,+2741</value>
+    </filters>
+    <label>Cape Golfers</label>
+    <sharedTo>
+        <roleAndSubordinates>Corporate_Investment_Banking</roleAndSubordinates>
+    </sharedTo>
+</ListView>

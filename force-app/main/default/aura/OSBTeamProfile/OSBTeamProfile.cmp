@@ -1,0 +1,299 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes,c:OSBOnboardingHandler"
+    controller="OSB_TeamProfile_Ctrl" access="global"> 
+    <aura:attribute name="newCase" type="Case" default="{ 'sobjectType': 'Case' }" access="public"/>
+    <aura:attribute name="newContact" type="Contact" default="{ 'sobjectType': 'Contact' }" access="public"/>
+    <aura:attribute name="contactsList" type="Contact[]" access="private"/>
+    <aura:attribute name="caseCreated" type="Boolean" default="false" access="private"/>
+    <aura:attribute name="showMarketgramPopup" type="Boolean" default="false" access="private"/>
+    <aura:attribute name="showErrorToast" type="Boolean" default="false" access="private"/>
+    <aura:attribute name="showLoading" type="Boolean" default="false" access="private"/>
+    <aura:attribute name="section" type="String" default="Invite_Members" access="public"/>
+    <aura:attribute name="description" type="String" access="private"/>
+	<aura:attribute name="selectedNavItem" type="String" access="public"/>
+    <aura:attribute name="Designation" type="String" access="public"/>
+    <aura:attribute name="reasonForPopup" type="String" default="" access="private"/>
+    <aura:attribute name="titleForPopup" type="String" default="" access="private"/>
+    <aura:attribute name="contentForPopup" type="String" default="" access="private"/>
+    <aura:attribute name="clickedButton" type="String" default="" access="private"/>
+    <aura:attribute name="disclaimer" type="String" access="private"/>
+    <aura:attribute name="emailPattern" type="String" access="private"/> 
+
+    <aura:handler name="init" value="{!this}" action="{!c.init}" />
+    <aura:handler name="closePopUpEvent" event="c:OSBClosePopUpEvent" action="{!c.handlePopupClose}" />
+    <aura:handler name="change" value="{!v.popUpCurrentPage}" action="{!c.handlePopupPageChange}"/>
+    <aura:handler name="change" value="{!v.section}" action="{!c.handleSectionChange}"/>
+    <aura:registerEvent name="navigationEvent" type="c:OSBNavigationEvent"/>
+
+    <aura:attribute name="NumberOFInvites" type="String[]" default="1,2,3,4" access="private"/>
+    <aura:attribute name="NumSent" type="String" default="0" access="private"/>
+	<aura:attribute name="contactId" type="String" access="public"/>
+
+    <aura:attribute name="setIndexesInInit" type="Boolean" default="true" access="public"/>
+    <aura:attribute name="accessLevel" type="Boolean" default="false" access="public"/>
+    <aura:attribute name="showToast" type="Boolean" default="false" access="private"/>
+    <aura:attribute name="toastMessage" type="String" default="" access="private"/>
+    <aura:attribute name="toastType" type="String" default="success" access="private"/>
+    <aura:attribute name="pendingApprovals" type="Contact[]" access="private"/>
+    <aura:attribute name="sentInvite" type="Contact[]" access="private"/>
+    <aura:attribute name="teamDetails" type="Contact[]" access="private"/>
+ 	<aura:attribute name="userMap" type="Map" access="public"/>
+	    
+    <aura:handler event="c:OSBMarketplaceTabEvent" action="{!c.handleOptionChanged}"/>
+    
+    <lightning:navigation aura:id="navService"/>
+    
+     <div class="marketplace">
+        <div class="marketplace__content">
+            <div class="marketplace__left slds-large-size_2-of-12 mt_72">
+                <nav class="marketplace__navigation" aura:id="side-navigation">
+                    <h2 class="marketplace__navigation-title">TEAM PROFILE</h2>
+                    <ul class="marketplace__navigation-items mb_32">
+                        <li class="marketplace__navigation-item-container" data-id="side_nav_link" data-text="Team Profile | Invite team members">
+                            <span onclick="{!c.handleNavItemChange}"
+                                class="marketplace__navigation-item marketplace__navigation-item__selected" id="inviteMembers"
+                                aura:id="Invite_Members" data-tab-name="Invite_Members">
+                                Invite team members</span>
+                        </li>
+                        <li class="marketplace__navigation-item-container" data-id="side_nav_link" data-text="Team Profile | Pending approvals">
+                            <span onclick="{!c.handleNavItemChange}" class="marketplace__navigation-item" id="approvals"
+                                aura:id="Approvals" data-tab-name="Approvals">
+                                Pending approvals
+                            </span>
+                        </li> 
+                        <li class="marketplace__navigation-item-container" data-id="side_nav_link" data-text="Team Profile | Team details">
+                            <span onclick="{!c.handleNavItemChange}" class="marketplace__navigation-item" id="teamDetails"
+                                aura:id="Team_Details" data-tab-name="Team_Details">
+                                Team details
+                            </span>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+         	
+            <div class="newCase-container slds-size_6-of-6 slds-medium-size_12-of-12 slds-large-size_6-of-12" aura:id="form">
+                
+                <aura:if isTrue="{!v.showLoading}">
+                    <div>
+                        <c:OSBLoadingScreen></c:OSBLoadingScreen>
+                    </div>
+                </aura:if>
+        
+                <div class="newCase newCase--optl">
+                   <aura:if isTrue="{!v.showToast}">
+                       <c:OSBToastComponent closePopup="{!v.showToast}" toastType="{!v.toastType}" left="50%" top="160px"
+                                            toastMessage="{!v.toastMessage}">
+                       </c:OSBToastComponent>
+                    </aura:if>
+                    <form aura:id="changeIt" class="newCase__form">
+                        <aura:if isTrue="{!v.section == 'Invite_Members'}">
+                            <div aura:id="adjustIcon" class="align_Icon">
+                                 <div class="align_Icon_center">
+                                	<img src="/resource/OSB_iconEmail/OSB_iconEmail/ms-icn.png" />
+                                 </div>
+                            </div>
+                            <h1 class="newCase__title">Invite team members</h1>
+                            <div class="newCase__subtitle">
+                                <aura:if isTrue="{!v.Designation == 'authorised person'}">
+                                	As an {!v.Designation}, you can invite team members and be able to manage their access.
+                                    <aura:set attribute="else">
+                                    As a {!v.Designation}, you can invite team members and be able to manage their access.
+                                    </aura:set>
+                                </aura:if>
+                            </div>
+                            <div class="rectangle">
+                                <div class="SectionHeading">
+                                    Invites
+                                </div>
+                            </div>
+                            <aura:iteration items="{!v.NumberOFInvites}" var="item" indexVar="idx">
+                                <div class="add_member">
+                                    <lightning:input aura:id="FirstName" label=""
+                                                         class="{!v.accessLevel ? 'team__form--input--name slds-size_6-of-6 slds-medium-size_2-of-12 slds-large-size_2-of-12' : 'team__form--input--name--after'}"
+                                                         labelClass="team__form--label"
+                                                         value=""
+                                                         placeholder="Name"
+                                                         messageWhenValueMissing="Enter a first name"
+                                                         required="false"/>
+                                    <lightning:input aura:id="LastName" label=""
+                                                         class="{!v.accessLevel ? 'team__form--input--name slds-size_6-of-6 slds-medium-size_2-of-12 slds-large-size_2-of-12' : 'team__form--input--name--after'}"
+                                                         labelClass="team__form--label"
+                                                         value=""
+                                                         placeholder="Surname"
+                                                         messageWhenValueMissing="Enter a last name"
+                                                         required="false"/>
+                                    <lightning:input aura:id="Email" label=""
+                                                         class="{!v.accessLevel ? 'team__form--input slds-size_6-of-6 slds-medium-size_4-of-12 slds-large-size_4-of-12' : 'adjustEmail'}"
+                                                         labelClass="team__form--label"
+                                                         value=""
+                                                         type="email"
+                                                         placeholder="Work email address"
+                                                         messageWhenTypeMismatch="You entered an incorrect email address. Please try again"
+                                                         messageWhenPatternMismatch="You entered an incorrect email address. Please try again"
+                                                         messageWhenValueMissing="Enter a valid email"
+                                                         pattern="{!v.emailPattern}"
+                                                         required="false"/>
+                                    <aura:if isTrue="{!v.accessLevel}">
+                                        <div class="invite__button" data-id="uitlink_link" data-text="Team Profile | Invite Team Members | Can Invite Toggle">
+                                            <lightning:input type="toggle" name="toggleButton" aura:id="toggle" label="Can invite other?" class="invite--padding"
+                                                             onchange="{!c.getToggleButtonValue}"/>
+                                        </div>
+                                   </aura:if>
+                                </div>
+                            </aura:iteration>
+                            <div class="addAnother_btn slds-size_6-of-6 slds-medium-size_2-of-12 slds-large-size_1-of-6">
+                                <span data-id="uitlink_link" data-text="Team Profile | Invite Team Members | Add Another">
+                                    <lightning:button label="ADD ANOTHER" class="btnStyle btn--gray newCase__button" onclick="{!c.AddAnother}" />
+                                </span>
+                            </div>
+                            <aura:if isTrue="{!v.showMarketgramPopup}">
+                                <c:OSBMarketGramPopup title="{!v.titleForPopup}" content="{!v.contentForPopup}" />
+                            </aura:if>
+                        </aura:if>
+                        <aura:if isTrue="{!v.section == 'Approvals'}">
+                            <div aura:id="adjustIcon" class="align_Icon">
+                                <div class="align_Icon_center">
+                                	<img src="/resource/OSB_iconEmail/OSB_iconEmail/ms-icn-tick.png" />
+                                </div>
+                            </div>
+                            <h1 class="newCase__title">Pending approvals</h1>
+                            <div class="newCase__subtitle">
+                                <aura:if isTrue="{!v.Designation == 'authorised person'}">
+                                	As an {!v.Designation}, you can invite team members and be able to manage their access.
+                                    <aura:set attribute="else">
+                                    As a {!v.Designation}, you can invite team members and be able to manage their access.
+                                    </aura:set>
+                                </aura:if>
+                            </div>
+                            <div class="rectangle">
+                                <div class="SectionHeading">
+                                    Sent Invites
+                                </div>
+                            </div>
+                            <div class="team_Invites_sec">
+                                <aura:if isTrue="{!v.sentInvite.length == 0}">
+                                    <span style="margin-bottom:48px">You have no sent invites.</span>
+                                    
+                                    <aura:set attribute="else">
+                                        <aura:iteration items="{!v.sentInvite}" var="contact" indexVar="index">
+                                                <p>{!contact.FirstName}</p>
+                                                <p>{!contact.LastName}</p>
+                                                <p>{!contact.Email}</p>
+                                                <input type="hidden" id="{!'inviteContactId' + index}" name="Contact Id" value="{!contact.Id}"/>
+                                            <lightning:formattedDateTime class="InviteSentDate" value="{!not(empty(contact.OSB_Date_Invite_Resent__c)) ? contact.OSB_Date_Invite_Resent__c  : contact.OSB_Date_Invite_Sent__c}" year="numeric" month="numeric" day="numeric" />
+                                                <button class="btnStyle btn--gray invite__button slds-size_6-of-6 slds-medium-size_2-of-12 slds-large-size_1-of-6" type='button' onclick="{!c.resendOneSpaceInvite}" id="{!'btnResendInvite' + index}"
+                                                data-id="uitlink_link" data-text="Team Profile | Pending Approvals | Resend Invite">
+                                                    RESEND INVITE
+                                                </button>
+                                        </aura:iteration>
+                                    </aura:set>
+                                </aura:if>
+                            </div>
+                            <div class="rectangle">
+                                <div class="SectionHeading">
+                                    Approvals
+                                </div>
+                            </div>
+                            <div class="team_Approval_sec">
+                                <aura:if isTrue="{!v.pendingApprovals.length == 0}">
+                                    <span>You have no pending approvals.</span>
+                                    
+                                    <aura:set attribute="else">
+                                        <aura:iteration items="{!v.pendingApprovals}" var="contact" indexVar="index">
+                                                <p>{!contact.FirstName}</p>
+                                                <p>{!contact.LastName}</p>
+                                                <p>{!contact.Email}</p>
+                                                <input type="hidden" id="{!'contactId' + index}" name="Contact Id" value="{!contact.Id}"/>
+                                                <button class="btnStyle btn--gray invite__button slds-size_6-of-6 slds-medium-size_2-of-12 slds-large-size_1-of-6" type='button' onclick="{!c.declineOneSpaceAccess}" id="{!'btnDecline' + index}"
+                                                data-id="uitlink_link" data-text="Team Profile | Pending Approvals | Decline">
+                                                    DECLINE
+                                                </button>
+                                                <button class="btnStyle btn--gray invite__button padLeft slds-size_6-of-6 slds-medium-size_2-of-12 slds-large-size_1-of-6" type='button' onclick="{!c.approveOneSpaceAccess}" id="{!'btnApprove' + index}"
+                                                data-id="uitlink_link" data-text="Team Profile | Pending Approvals | Approve">
+                                                    APPROVE
+                                                </button>
+                                        </aura:iteration>
+                                    </aura:set>
+                                </aura:if>
+                            </div>
+                            <aura:if isTrue="{!v.showMarketgramPopup}">
+                                <c:OSBMarketGramPopup title="{!v.titleForPopup}" content="{!v.contentForPopup}" />
+                            </aura:if>
+                        </aura:if>
+                        <aura:if isTrue="{!v.section == 'Team_Details'}">
+                            <div aura:id="adjustIcon" class="align_Icon">
+                                <div class="align_Icon_center">
+                                	<img src="/resource/OSB_iconEmail/OSB_iconEmail/ms-icn-people.png" />
+                                </div> 
+                            </div>
+                            <h1 class="newCase__title">Team details</h1>
+                            <div class="newCase__subtitle aligncenter">
+                                <aura:if isTrue="{!v.Designation == 'authorised person'}">
+                                	As an {!v.Designation},  you are able to deactivate a team member profile.
+                                    <p><lightning:formattedRichText value="{!v.disclaimer}" /></p>
+                                    <aura:set attribute="else">                                        
+                                    As a {!v.Designation}, you are able to deactivate a team member profile.
+                                    <p><lightning:formattedRichText value="{!v.disclaimer}" /></p>    
+                                    </aura:set>
+                                </aura:if>
+                            </div>
+                            <div class="rectangle">
+                                <div class="SectionHeading">
+                                    Team details
+                                </div>
+                            </div>
+                            <div class="detail_section">
+                                <aura:if isTrue="{!v.teamDetails.length == 0}">
+                                    <span>You have no team members.</span>
+                                    
+                                    <aura:set attribute="else">
+                                        <aura:iteration items="{!v.teamDetails}" var="contact" indexVar="index">
+                                            <p>{!contact.FirstName}</p>
+                                            <p>{!contact.LastName}</p>
+                                            <p>{!contact.Email}</p>
+                                            <p>{!contact.OSB_Community_Access_Role__c}</p>
+                                            <input type="hidden" id="{!'contact' + index}" name="Contact Id" value="{!contact.Id}"/>
+                                            <button class="btnStyle btn--gray invite__button" type='button' onclick="{!c.deactivateUserOneHubAccess}" id="{!'btnRemove' + index}"
+                                            data-id="uitlink_link" data-text="Team Profile | Team Details | Deactivate">
+                                                DEACTIVATE
+                                            </button>
+                                        </aura:iteration>
+                                    </aura:set>
+                                </aura:if>
+                            </div>
+                            <aura:if isTrue="{!v.showMarketgramPopup}">
+                                <c:OSBMarketGramPopup title="{!v.titleForPopup}"
+                                                      content="{!v.contentForPopup}" />
+                            </aura:if>
+                        </aura:if>
+                        
+                    </form>
+                    <aura:if isTrue="{!v.section == 'Invite_Members'}">
+                        <div class="newCase__buttons">
+                            <div class="newCase__buttons-container slds-size_6-of-6 slds-medium-size_8-of-12 slds-large-size_4-of-6">
+                                <span class="slds-size_3-of-6 slds-medium-size_2-of-12 slds-large-size_1-of-6" data-id="uitlink_link" data-text="Team Profile | Invite Team Members | Cancel">
+                                    <lightning:button label="Cancel"
+                                                    class="btnStyle btn--gray newCase__button"
+                                                    onclick="{!c.cancel}"/>
+                                </span>
+
+                                <span class="slds-size_3-of-6 slds-medium-size_2-of-12 slds-large-size_1-of-6" data-id="uitlink_link" data-text="Team Profile | Invite Team Members | Send">
+                                    <lightning:button label="SEND"
+                                                    class="btnStyle btn--darkblue newCase__button"
+                                                    onclick="{!c.sendInvite}"/>
+                                </span>
+                            </div>
+                        </div>
+                    </aura:if>  
+                </div>
+            </div>
+         </div>
+         <c:OSBPopUp title="{!v.popUpTitle}"
+                     content="{!v.popUpContent}"
+                     previousLabel="{!v.popUpPreviousLabel}"
+                     positionElement="{!v.popUpElement}"
+                     displayPopUp="{!v.showPopUp}"
+                     pageNumber="{!v.popUpCurrentPage}"
+                     showPageNumber="{!v.showPageNumber}"
+                     maxPages="{!v.popUpMaxPages}"/>
+    </div>
+</aura:component>

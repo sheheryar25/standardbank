@@ -1,0 +1,495 @@
+.THIS {
+    margin-top: 120px;
+}
+
+.THIS .AdjustLength{
+    margin-bottom: 0;
+}
+
+.THIS .QueryType{
+    padding-top: 32px;
+    display:inline-block;
+}
+
+.THIS .contactBoxMain{
+    flex-wrap: wrap;
+}
+
+.THIS .setContactBox {
+    margin-bottom: 16px;
+}
+
+.THIS .contact-us {
+	color: #0a2240;
+    font-family: BentonSans;
+    font-size: 57px;
+    font-weight: 200;
+    line-height: 57px;
+    text-align: center;
+    padding-bottom: 56px;
+}
+
+.THIS .containerDetails{
+    position: relative;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.THIS .slds-select {
+    height: 48px;
+    border-radius: 2px;
+}
+
+.THIS .newCase {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.THIS .newCase.newCase--optl {
+    background: #fff;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.25);
+}
+
+.THIS .newCase__form {
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 32px;
+}
+
+.THIS .newCase__buttons {
+    background-color: #F6F6F6;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.THIS .newCase__button:last-child {
+    margin-left: 16px;
+}
+
+.THIS .newCase__title {
+    color: #0A2240;
+    font-size: 57px;
+    font-weight: 200;
+    line-height: 57px;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.THIS .newCase__subtitle {
+    color: #666666;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 24px;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.THIS .newCase__form--input--Add {
+    margin-bottom: 24px;
+}
+
+.THIS .newCase__form--input input,
+.THIS .newCase__form--input textArea {
+    border: 1px solid #CCCCCC;
+    border-radius: 2px;
+    background-color: #FFFFFF;
+}
+
+.THIS .newCase__form--input input {
+    height: 48px;
+}
+
+.THIS .newCase__form--input textArea {
+    height: 120px;
+}
+
+.THIS .newCase__form--input label {
+    color: #4A4A4A;
+    font-size: 16px;
+    font-weight: 300;	
+    line-height: 18px;
+    text-transform: uppercase;
+}
+
+.THIS .newCase__form--input input::placeholder,
+.THIS .newCase__form--input textArea::placeholder{
+    color: rgb(118, 118, 118);
+    font-weight: 200;
+}
+
+.THIS  .btnStyle {
+    display: block;
+    height: 50px;
+    padding: 15px 0;
+    border: 0;
+    border-radius: 2px;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 13px;
+    text-transform: uppercase;
+    text-align: center;
+    transition: all .15s ease-in;
+    cursor: pointer;
+}
+
+.THIS .newCase__button {
+    width: 100%;
+    float: right;
+    max-height: 40px;
+    padding: 15px 0;
+}
+
+.THIS .newCase__button.btn--darkblue {
+    background-color: #0033AA;
+    color: #FFFFFF;
+}
+
+.THIS .newCase__button.btn--gray {
+    background-color: #ededed;
+    color: #0033AA;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.3);
+}
+
+.THIS .newCase__button.btn--gray:hover,
+.THIS .newCase__button.btn--gray:focus {
+    background: #0089ff;
+    color: #fff;
+}
+
+.THIS .newCase__button.btn--darkblue:hover,
+.THIS .newCase__button.btn--darkblue:focus {
+    background: #0069c4;
+    color: #fff;
+}
+
+.THIS .newCase__link {
+    color: #0089FF;
+    text-decoration: underline;
+    font-weight: 400;
+}
+
+.THIS .newCase__icon {
+    padding: 16px;
+    background: #0033AA;
+    border-radius: 50%;
+    align-self: center;
+    margin-bottom: 24px;
+}
+
+.THIS .newCase__icon i {
+    font-size: 48px;
+    color: #fff;
+    margin-right: 5px;
+}
+
+.THIS .newCase--optl .newCase__title {
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 0.83px;
+    line-height: 24px;
+}
+
+.THIS .newCase__header {
+    height: 40px;
+    background-color: #F6F6F6;
+    color: #222222;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.58px;
+    line-height: 14px;
+    padding: 14px 24px;
+    margin: 32px 0 24px 0;
+}
+
+.THIS abbr.slds-required {
+    display: none;
+}
+
+.THIS .newCase__form--disclaimer{
+    height: 22px;
+    max-width: 600px;
+    color: #0A2240;
+    font-family: BentonSans;
+    font-size: 14px;
+    line-height: 22px;
+    padding-bottom: inherit;
+}
+
+.THIS .newCase__form--industryContainer{
+    position: relative;
+}
+
+.THIS .newCase__form--industryIcon{
+    position: absolute;
+    font-size: 20px;
+    color: #CCCCCC;
+    right: 16px;
+    top: 40px;
+}
+
+.THIS .newCase__form--dialingCodeIcon{
+    position: absolute;
+    font-size: 20px;
+    color: #CCCCCC;
+    right: 3px;
+    top: 34px;
+}
+
+.THIS .newCase__form--dialingCode .slds-select_container::before{
+    visibility: hidden;
+}
+
+.THIS .newCase__form--dialingCode .slds-select_container::after{
+    bottom: 21.5px;
+    right: 8px;
+}
+
+.THIS .newCase__form--dialingCode  .slds-select_container .slds-select{
+    padding-right: 1.3rem;
+}
+
+.THIS .slds-radio__label{
+    margin-right: 39px;
+}
+
+
+.THIS .newCase__form--label--span{
+    color: #4a4a4a;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+
+.THIS .cellphone-container {
+    flex-direction: column;
+}
+
+.THIS .cellphone-container .slds-form-element__label {
+    display: none;
+}
+.THIS .cellphone-container>div {
+    display: inline-flex;
+}
+
+.THIS .countryCode {
+    text-align: right;
+    margin-left:auto;
+}
+
+.THIS .rectangle {
+	height: 40px;
+    background-color: #f6f6f6;
+}
+
+.THIS .customer-service-for {
+	height: 13px;
+	color: #222222;
+	font-family: BentonSans;
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: 0.58px;
+	padding-top: 10px; 
+    margin-left: 24px;
+}
+
+.THIS .customRadioGroup{
+   display:flex;
+   flex-direction:row;
+}
+
+.THIS .customRadioCls .slds-form-element__control .slds-radio{
+    display : inline-block !important; 
+}
+
+.THIS .customRadioCls{
+	color: #4A4A4A;
+	font-family: BentonSans;
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 18px;
+}
+
+.THIS .newCase__form--dialingCode{
+    position: relative;
+    display: inline-grid;
+}
+
+.THIS .newCase__form--dialingCode .slds-select{
+    max-width: 180px;
+}
+
+.THIS .newCase__success {
+    display: flex;
+    align-items: center;
+    border: 1px solid #0e8a00;
+    border-radius: 4px;
+    background: #fff;
+    position: absolute;
+    max-width: 44%;
+    min-height: 10px;
+    flex-direction: initial;
+    margin-left: 28%;
+    margin-right: 25%;
+    top: 14.5%;
+    z-index: 1; /*was 400*/
+}
+
+.THIS .successChange {
+        top: 485px;
+}
+
+.THIS .newCase__success__left {
+    padding: 13px 16px;
+    background: #0e8a00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+.THIS .newCase__success__icon {
+    font-size: 24px;
+    color: #fff;
+}
+
+.THIS .newCase__success__right {
+    padding: 0 18px 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100%;
+    margin-left: 51px;
+}
+
+.THIS .newCase__success__text {
+    color: #222222;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.54px;
+    line-height: 14px;
+    margin-right: 18px;
+}
+
+.THIS .newCase__success__close {
+    background: transparent;
+}
+
+.THIS .newCase__success__close i {
+    color: #767670;
+}
+
+.THIS .slds-textarea:focus{
+    border-color:#0089FF;
+}
+
+.THIS .newCase__form--input.phoneNumberInput{
+    margin-left: 16px;
+    width: 70%;    
+}
+
+.THIS .QueryType,
+.THIS .newCase__form--input {
+    padding-bottom: 24px;
+}
+
+@media(max-width: 480px) {
+    .THIS .QueryType {
+        padding-top: 24px;
+    }
+
+    .THIS .cellphone-container .CellSection {
+        padding-left: 8px;
+    }
+
+    .THIS .cellphone-container .CellSection .slds-input {
+        padding-right: 0.5rem;
+    }
+
+    .THIS .customRadioCls .slds-form-element__control {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .THIS .customRadioCls .slds-form-element__control .slds-radio:nth-child(1),
+    .THIS .customRadioCls .slds-form-element__control .slds-radio:nth-child(2) {
+        padding-bottom: 16px;
+    }
+
+    .THIS .newCase__form--input label {
+        padding-top: inherit;
+    }
+
+    .THIS .CellSection {
+        padding-right: 0 !important;
+    }
+
+    .THIS .newCase__buttons {
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .THIS .newCase__button {
+        max-width: unset !important;
+        margin: 0;
+    }
+}
+
+@media(max-width: 1023px) {
+    .THIS .containerDetails {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .THIS .newCase__form {
+        padding: 40px 32px 0;
+    }
+
+    .THIS .rectangle {
+        margin-left: -16px;
+        margin-right: -16px;
+    }
+
+    .THIS .cellphone-container .CellSection {
+        padding-left: 8px;
+    }
+}
+
+@media(min-width: 1024px) {
+    .THIS .cellphone-container .CellSection {
+        padding-left: 4px;
+    }
+
+    .THIS .rectangle {
+        margin-left: -24px;
+        margin-right: -24px;
+    }
+}
+
+@media(min-width: 768px) {
+    .THIS .newCase__buttons {
+        padding-right: 16.6667%;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .THIS .containerDetails {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1280px) and (max-width: 1439px) {
+    .THIS .containerDetails {
+        width: 75%;
+    }
+}

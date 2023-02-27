@@ -1,0 +1,56 @@
+<aura:component >
+    <aura:attribute name="title" type="String" access="public"/>
+    <aura:attribute name="content" type="String" access="public"/>
+    <aura:attribute name="positionElement" type="Object" access="public"/>
+    <aura:attribute name="pageNumber" type="Integer" default="1" access="public"/>
+    <aura:attribute name="maxPages" type="Integer" required="true" access="public"/>
+    <aura:attribute name="nextLabel" type="String" default="Yes, got it" access="public"/>
+    <aura:attribute name="previousLabel" type="String" access="public"/>
+    <aura:attribute name="redirectUrl" type="String" access="public"/>
+    <aura:attribute name="showPageNumber" type="Boolean" default="true" access="public"/>
+    <aura:attribute name="displayPopUp" type="Boolean" default="true" access="public"/>
+    <aura:attribute name="isDoneRendering" type="Boolean" default="true" access="private"/>
+
+    <aura:handler name="render" value="this" action="{!c.onRender}"/>
+    <aura:handler name="change" value="{!v.positionElement}" action="{!c.handleChangePosition}"/>
+    <aura:handler name="change" value="{!v.pageNumber}" action="{!c.handleChangePage}"/>
+    <aura:registerEvent name="closePopUpEvent" type="c:OSBClosePopUpEvent"/>
+
+    <div class="popUp-container">
+        <aura:if isTrue="{!v.displayPopUp}">
+            <div class="popUp-box" aura:id="popUpBox">
+                <div class="popUp-title mb_8"><aura:unescapedHtml value="{!v.title}"/></div>
+                <div class="popUp-content mb_16"><aura:unescapedHtml value="{!v.content}"/></div>
+                    <div class="slds-grid">
+                        <!--left element-->
+                        <aura:if isTrue="{!v.pageNumber == 1}">
+                            <aura:set attribute="else">
+                                <aura:if isTrue="{!not(empty(v.previousLabel))}">
+                                    <div class="popUp-previous__label pointer" onclick="{!c.handleClose}">{!v.previousLabel}</div>
+                                    <aura:set attribute="else">
+                                        <i class="ms-icn_chevron_left popUp-icon pointer" onclick="{!c.handlePrevious}" data-id="uitlink_link" data-text="{!'Popup | Previous'}"></i>
+                                    </aura:set>
+                                </aura:if>
+                            </aura:set>
+                        </aura:if>
+                        <!--middle element-->
+                        <div class="popUp-pages">
+                            <aura:if isTrue="{!v.showPageNumber}">
+                                {!v.pageNumber + ' of ' + v.maxPages}
+                            </aura:if>
+                        </div>
+                        <!--right element-->
+                        <aura:if isTrue="{!v.pageNumber == v.maxPages}">
+                            <div class="popUp-next__label pointer" onclick="{!c.handleNext}">{!v.nextLabel}</div>
+                            <aura:set attribute="else">
+                                <i class="ms-icn_chevron_right popUp-icon pointer" onclick="{!c.handleNext}" data-id="uitlink_link" data-text="{!'Popup  | Next'}"></i>
+                            </aura:set>
+                        </aura:if>
+                    </div>
+            </div>
+            <div class="popUp-overlay popUp-visible" aura:id="visibleOverlay" id="visibleOverlay"></div>
+            <div class="popUp-overlay popUp-invisible"></div>
+        </aura:if>
+    </div>
+
+</aura:component>

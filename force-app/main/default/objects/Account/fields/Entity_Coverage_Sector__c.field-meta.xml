@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Entity_Coverage_Sector__c</fullName>
+    <description>CIF Customer CIB IntI Sector - Feed from CRT Customer Detail feed
+Removed from CRT feed, Nov &apos;10. Hidden and to be deleted in future.</description>
+    <externalId>false</externalId>
+    <label>Entity Coverage Sector</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Group_Parent_Coverage_Sector__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AFRICAN GOVERNMENT</fullName>
+                <default>false</default>
+                <label>AFRICAN GOVERNMENT</label>
+            </value>
+            <value>
+                <fullName>AGRICULTURE</fullName>
+                <default>false</default>
+                <label>AGRICULTURE</label>
+            </value>
+            <value>
+                <fullName>AUTO</fullName>
+                <default>false</default>
+                <label>AUTO</label>
+            </value>
+            <value>
+                <fullName>CT CORPORATES</fullName>
+                <default>false</default>
+                <label>CT CORPORATES</label>
+            </value>
+            <value>
+                <fullName>DBN CORPORATES</fullName>
+                <default>false</default>
+                <label>DBN CORPORATES</label>
+            </value>
+            <value>
+                <fullName>DEVELOPMENT FINANCIAL INSTITUTION (DFI)</fullName>
+                <default>false</default>
+                <label>DEVELOPMENT FINANCIAL INSTITUTION (DFI)</label>
+            </value>
+            <value>
+                <fullName>DIVERSIFIED INDUSTRIES</fullName>
+                <default>false</default>
+                <label>DIVERSIFIED INDUSTRIES</label>
+            </value>
+            <value>
+                <fullName>DIVERSIFIED INDUSTRIES - SA</fullName>
+                <default>false</default>
+                <label>DIVERSIFIED INDUSTRIES - SA</label>
+            </value>
+            <value>
+                <fullName>EB&amp;SI</fullName>
+                <default>false</default>
+                <label>EB&amp;SI</label>
+            </value>
+            <value>
+                <fullName>FAMILY CONGLOMERATES</fullName>
+                <default>false</default>
+                <label>FAMILY CONGLOMERATES</label>
+            </value>
+            <value>
+                <fullName>FI - G10</fullName>
+                <default>false</default>
+                <label>FI - G10</label>
+            </value>
+            <value>
+                <fullName>FI - INTERNATIONAL</fullName>
+                <default>false</default>
+                <label>FI - INTERNATIONAL</label>
+            </value>
+            <value>
+                <fullName>FI - LATAM</fullName>
+                <default>false</default>
+                <label>FI - LATAM</label>
+            </value>
+            <value>
+                <fullName>FI - OTHER</fullName>
+                <default>false</default>
+                <label>FI - OTHER</label>
+            </value>
+            <value>
+                <fullName>FI - SA</fullName>
+                <default>false</default>
+                <label>FI - SA</label>
+            </value>
+            <value>
+                <fullName>FOREIGN GOVERNMENT/EMBASSY</fullName>
+                <default>false</default>
+                <label>FOREIGN GOVERNMENT/EMBASSY</label>
+            </value>
+            <value>
+                <fullName>GIO</fullName>
+                <default>false</default>
+                <label>GIO</label>
+            </value>
+            <value>
+                <fullName>GLOBAL FUND</fullName>
+                <default>false</default>
+                <label>GLOBAL FUND</label>
+            </value>
+            <value>
+                <fullName>IDG - CENTRAL BANKS / AFRICAN GOVERNMENT</fullName>
+                <default>false</default>
+                <label>IDG - CENTRAL BANKS / AFRICAN GOVERNMENT</label>
+            </value>
+            <value>
+                <fullName>IDG - DEVELOPMENT FINANCIAL INSTITUTION (DFI)</fullName>
+                <default>false</default>
+                <label>IDG - DEVELOPMENT FINANCIAL INSTITUTION (DFI)</label>
+            </value>
+            <value>
+                <fullName>IDG - INTERNATIONAL ORGANISATION (IO)</fullName>
+                <default>false</default>
+                <label>IDG - INTERNATIONAL ORGANISATION (IO)</label>
+            </value>
+            <value>
+                <fullName>INTERNATIONAL ORGANISATION (IO)</fullName>
+                <default>false</default>
+                <label>INTERNATIONAL ORGANISATION (IO)</label>
+            </value>
+            <value>
+                <fullName>INVESTOR COVERAGE</fullName>
+                <default>false</default>
+                <label>INVESTOR COVERAGE</label>
+            </value>
+            <value>
+                <fullName>JHB CORPORATES</fullName>
+                <default>false</default>
+                <label>JHB CORPORATES</label>
+            </value>
+            <value>
+                <fullName>MINING &amp; METALS</fullName>
+                <default>false</default>
+                <label>MINING &amp; METALS</label>
+            </value>
+            <value>
+                <fullName>MINING &amp; METALS - SA</fullName>
+                <default>false</default>
+                <label>MINING &amp; METALS - SA</label>
+            </value>
+            <value>
+                <fullName>NBFI</fullName>
+                <default>false</default>
+                <label>NBFI</label>
+            </value>
+            <value>
+                <fullName>NBFI - SA</fullName>
+                <default>false</default>
+                <label>NBFI - SA</label>
+            </value>
+            <value>
+                <fullName>NON COVERAGE</fullName>
+                <default>false</default>
+                <label>NON COVERAGE</label>
+            </value>
+            <value>
+                <fullName>Oil &amp; Gas - SA</fullName>
+                <default>false</default>
+                <label>Oil &amp; Gas - SA</label>
+            </value>
+            <value>
+                <fullName>Power, Infrastructure &amp; Renewables</fullName>
+                <default>false</default>
+                <label>Power, Infrastructure &amp; Renewables</label>
+            </value>
+            <value>
+                <fullName>Power, Infrastructure &amp; Renewables - SA</fullName>
+                <default>false</default>
+                <label>Power, Infrastructure &amp; Renewables - SA</label>
+            </value>
+            <value>
+                <fullName>PTA CORPORATES</fullName>
+                <default>false</default>
+                <label>PTA CORPORATES</label>
+            </value>
+            <value>
+                <fullName>PUBLIC SECTOR</fullName>
+                <default>false</default>
+                <label>PUBLIC SECTOR</label>
+            </value>
+            <value>
+                <fullName>RETAILERS</fullName>
+                <default>false</default>
+                <label>RETAILERS</label>
+            </value>
+            <value>
+                <fullName>TELECOMS &amp; MEDIA</fullName>
+                <default>false</default>
+                <label>TELECOMS &amp; MEDIA</label>
+            </value>
+            <value>
+                <fullName>TELECOMS &amp; MEDIA - SA</fullName>
+                <default>false</default>
+                <label>TELECOMS &amp; MEDIA - SA</label>
+            </value>
+            <value>
+                <fullName>Oil &amp; Gas</fullName>
+                <default>false</default>
+                <label>Oil &amp; Gas</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

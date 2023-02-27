@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>AccountServicesQueue</name>
+    <queueMembers>
+        <users>
+            <user>bhishan.daya@standardbank.co.za</user>
+            <user>cheryl.billings@standardbank.co.za</user>
+            <user>eugandran.naidoo@standardbank.co.za</user>
+            <user>lerato.mane@standardbank.co.za</user>
+            <user>mpho.tlhotlhole@standardbank.co.za</user>
+            <user>nathaniel.chettiar@standardbank.co.za</user>
+            <user>priscilla.phala@standardbank.co.za</user>
+            <user>robyn.esau@standardbank.co.za</user>
+            <user>thabisile.damons@standardbank.co.za</user>
+            <user>vanessa.naicker@standardbank.co.za</user>
+            <user>zanele.motaung@standardbank.co.za</user>
+            <user>zoliswa.lutumbu2@standardbank.co.za</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Call_Report__c</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

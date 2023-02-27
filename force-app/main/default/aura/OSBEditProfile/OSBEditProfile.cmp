@@ -1,0 +1,176 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes,force:appHostable" controller="OSB_EditProfile_CTRL">
+    <lightning:navigation aura:id="navService"/>
+    <aura:attribute name="Edit" type="Boolean" default="true" access="private"/>
+    <aura:attribute name="industryDict" type="String[]" access="private"/>
+    <aura:attribute name="userMap" type="Map" access="private"/>
+    <aura:attribute name="userProfilePic" type="String" access="public"/>
+    <aura:attribute name="userProfilePicType" type="String" access="private"/>
+    <aura:attribute name="userProfilePicBase64" type="String" access="private"/>
+    <aura:attribute name="userProfilePicChanged" type="Boolean" default="false" access="private"/>
+    <aura:attribute name="userProfileUpdatedSuccessfully" type="Boolean" default="false" access="private"/>
+    <aura:attribute name="toastMessage" type="String" access="private"/>
+    <aura:attribute name="toastType" type="String" access="private"/>
+    <aura:attribute name="showMessageToast" type="Boolean" default="false" access="private"/>
+    <aura:attribute name="loading" type="Boolean" default="False" access="private"/>
+    <aura:attribute name="pingReturnedData" type="Boolean" default="False" access="private"/>
+    <aura:attribute name="phoneCodes" type="String[]" access="private"/> 
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    <aura:handler name="change" value="{!v.userProfilePicType}" action="{!c.updateProfilePicture}"/>
+    <aura:handler name="change" value="{!v.showMessageToast}" action="{!c.closeTimedToast}"/>
+        
+    <div class="newCase-container">
+        <aura:if isTrue="{!v.loading}">
+            <c:OSBLoadingScreen/>
+        </aura:if>
+        <div class="newCase newCase--optl  slds-size_6-of-6 slds-medium-size_8-of-12 slds-large-size_4-of-6">            
+            <aura:if isTrue="{!v.showMessageToast}">
+                <c:OSBToastComponent closePopup="{!v.showMessageToast}" toastType="{!v.toastType}"
+                                     toastMessage="{!v.toastMessage}" left="50%" top="128px">
+                </c:OSBToastComponent>
+            </aura:if>
+            <aura:if isTrue="{!v.pingReturnedData}">     
+                <form class="newCase__form slds-size_6-of-6 slds-medium-size_8-of-12 slds-large-size_4-of-6">                    
+                    <aura:if isTrue="{!v.Edit}"> 
+                        <aura:if isTrue="{!v.subMittingCase}">
+                            <div>
+                                <c:OSBLoadingScreen></c:OSBLoadingScreen>
+                            </div>
+                        </aura:if> 
+                        
+                        <div id="profilePicContainer" class="newCase__icon" style="{! 'background:url(\'' + v.userProfilePicBase64 +'\');position: relative;background-size: 80px 80px;' }">
+                            <label for="upload" data-id="uitlink_link" data-text="Profile | Edit Profile Picture">
+                                <lightning:icon iconName="utility:edit" class="icn" style="color:#0033AA;" alternativeText="Edit Profile Picture" title="Edit Profile Picture"/>
+                                <input type="file" id="upload" style="display:none" onchange="{!c.onChangePicture}" accept="image/*"/>
+                            </label>
+                        </div>                        
+                        <h1 class="newCase__title">Profile</h1>
+                        <div class="newCase__subtitle">
+                            You can edit and save any changes made to your profile here. 
+                        </div>
+                        
+                        <div class="rectangle">
+                            <div class="customer-service-for">
+                                Personal details
+                            </div>
+                        </div>                        
+                        <lightning:input aura:id="firstname" label="name"
+                                         class="newCase__form--input"
+                                         labelClass="newCase__form--label"
+                                         placeholder="Enter first name"
+                                         value="{!v.userMap.givenName}"
+                                         messageWhenValueMissing="Enter a valid first name"
+                                         required="true"/>
+                        
+                        <lightning:input aura:id="surname" label="surname"
+                                         class="newCase__form--input"
+                                         labelClass="newCase__form--label"
+                                         placeholder="Enter surname"
+                                         value="{!v.userMap.familyName}"
+                                         messageWhenValueMissing="Enter a valid surname"
+                                         required="true"/>
+                        
+                        <span></span>                        
+                        <span class="newCase__form--label--span">CELLPHONE Number</span>
+                        <div class="slds-grid">
+                            <div class="newCase__form--dialingCode slds-size_2-of-6 slds-medium-size_1-of-4 slds-large-size_1-of-4">
+                                <lightning:select aura:id="dialingCode"
+                                                  label=""
+                                                  class="newCase__form--input slds-col"
+                                                  required="true"
+                                                  messageWhenValueMissing="Enter a valid dialing code"
+                                                  value="{!v.userMap.countryCode}">
+                                    
+                                    <aura:iteration items="{!v.phoneCodes}" var="codes">
+                                        <option class="signUp__form--input" value="{!codes}" text="{!codes}"></option>
+                                    </aura:iteration>
+                                </lightning:select>
+                            </div>     
+                            <lightning:input aura:id="cellphoneNumber"
+                                             class="newCase__form--input slds-col slds-size_4-of-6 slds-medium-size_3-of-4 slds-large-size_3-of-4 phoneNumberInput newCase__form--input--Add"
+                                             labelClass="newCase__form--label"
+                                             placeholder="Enter a cellphone number"
+                                             messageWhenValueMissing="Enter a valid cellphone number"
+                                             value="{!v.userMap.phoneNumber}"
+                                             required="true"/>
+                            
+                        </div>
+                        
+                        <div class="workDetailsRectange">
+                            <div class="customer-service-for">
+                                Work details
+                            </div>
+                        </div>
+                        
+                        <lightning:input aura:id="workEmail" label="work email"
+                                         class="newCase__form--input" type="email"
+                                         labelClass="newCase__form--label" disabled="true"
+                                         placeholder="Enter a valid email address"
+                                         messageWhenValueMissing="Enter a valid email address"
+                                         value="{!v.userMap.email}"
+                                         required="true"/>
+                        <lightning:input aura:id="companyName" label="company name"
+                                         class="newCase__form--input"
+                                         labelClass="newCase__form--label"
+                                         placeholder="Enter a company name"
+                                         value="{!v.userMap.organization}"
+                                         messageWhenValueMissing="Enter a valid company name"
+                                         required="true"/>
+                        <div aura:id="industryContainer" class="newCase__form--industryContainer">
+                            <lightning:select aura:id="industry"
+                                              label="company industry"
+                                              class="newCase__form--input"
+                                              required="true"
+                                              messageWhenValueMissing="Enter a valid industry"
+                                              value="{!v.userMap.industry}">
+                                
+                                <option value="">Enter the industry you are in</option>
+                                <aura:iteration items="{!v.industryDict}" var="industry">
+                                    <option value="{!industry}" text="{!industry}"></option>
+                                </aura:iteration>  
+                            </lightning:select>
+                        </div>
+                        <lightning:input aura:id="jobTitle" label="job title"
+                                         class="newCase__form--input"
+                                         labelClass="newCase__form--label"
+                                         placeholder="Enter a job title"
+                                         messageWhenValueMissing="Enter a valid job title"
+                                         value="{!v.userMap.title}"
+                                         required="true"/>          
+                    </aura:if>        
+                </form>
+                <div class="newCase__buttons">
+                    <div class="newCase__buttons-container slds-size_6-of-6 slds-medium-size_8-of-12 slds-large-size_4-of-6">
+                        
+                        <div class="slds-size_3-of-6 slds-medium-size_1-of-4 slds-large-size_2-of-8" data-id="uitlink_link" data-text="Profile | Cancel">
+                            <lightning:button label="Cancel"
+                                              class="btn btn--gray newCase__button"
+                                              onclick="{!c.cancel}"/>
+                        </div>
+                        
+                        <div class="slds-size_3-of-6 slds-medium-size_1-of-4 slds-large-size_2-of-8" data-id="uitlink_link" data-text="Profile | Save">
+                            <lightning:button label="Save"
+                                              class="btn btn--darkblue newCase__button"
+                                              onclick="{!c.updateUser}"/>
+                        </div>
+                    </div>
+                </div>
+                <aura:set attribute="else">
+                    <form class="newCase__form error-form slds-size_6-of-6 slds-medium-size_8-of-12 slds-large-size_4-of-6">
+                        <div id="DisplayErrorPage" class="slds-container_center slds-container_large error-format">
+                            <aura:if isTrue="{!v.loading == false}">
+                                <div class="icon-format">
+                                    <i class="ms-icn_alert_circle_outline"></i>
+                                </div>
+                                We have experienced an unexpected error
+                                <div>
+                                    <lightning:button variant="base" label="RELOAD" title="Reload profile" onclick="{!c.handleReload}"/>
+                                </div>
+                            </aura:if>
+                        </div>
+                    </form>
+                </aura:set>
+            </aura:if>  
+        </div>
+    </div> 
+    
+</aura:component>

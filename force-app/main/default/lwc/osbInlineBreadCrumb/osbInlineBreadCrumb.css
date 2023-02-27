@@ -1,0 +1,54 @@
+ul.breadcrumb {
+  padding: 10px 0px;
+  list-style: none;
+  background-color: inherit;
+}
+ul.breadcrumb li {
+  display: inline;
+  font-size: 16px;
+}
+.my-icon {
+  --sds-c-icon-color-foreground-default: #00a9df;
+  padding: 5px;
+}
+ul.breadcrumb li a {
+  color: #767676;
+  text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+  color: #0089ff;
+  text-decoration: underline;
+}
+.breadLink {
+  font-family: "Calibri";
+  padding: 52px 0px 5px 1rem;
+  background-color: white;
+  font-size: 15px;
+}
+.adjust {
+  color: #00a9df !important;
+  font-size: 13px !important;
+}
+.container {
+  margin-bottom: 52px;
+}
+
+@media (max-width: 768px) {
+  .breadcrumb {
+    display: flex;
+  }
+  .my-icon {
+    margin-top: 10px;
+  }
+  .container {
+    margin-bottom: 41px;
+    line-height: normal;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    margin-bottom: 0px;
+    line-height: initial;
+  }
+}

@@ -1,0 +1,24 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId">
+	<aura:attribute name="field" type="String" access="global" />
+    <aura:attribute name="recordId" type="String" />
+	<aura:attribute name="showTick" type="String" default="false" access="private" />
+	<aura:attribute name="record" type="Object" access="private"/>
+	<aura:attribute name="simpleRecord" type="SObject" access="private"/>
+	<aura:attribute name="error" type="String" access="private" />
+	<div class="slds-float_right">
+		<aura:if isTrue="{!v.showTick}">
+			<lightning:icon iconName="utility:check" size="small" class="icon_positive" alternativeText="Section completed"/>
+			<aura:set attribute="else">
+				<lightning:icon iconName="utility:close" size="small" variant="error" alternativeText="Section not completed"/>
+			</aura:set>
+		</aura:if>
+	</div>
+	<force:recordData aura:id="forceRecord" 
+		recordId="{!v.recordId}" 
+		layoutType="FULL"
+		mode="VIEW" 
+		targetRecord="{!v.record}" 
+		targetFields="{!v.simpleRecord}" 
+		targetError="{!v.error}" 
+		recordUpdated="{!c.handleRecordChange}"/>
+</aura:component>

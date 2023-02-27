@@ -1,0 +1,9 @@
+<aura:component description="addCustomClientContainer" implements="lightning:isUrlAddressable,force:lightningQuickAction">
+    <aura:attribute type="String" name="recordId" default="{!v.pageReference.state.c__recordId}"/>
+    <aura:handler name="change" value="{!v.pageReference}" action="{!c.reInit}"/>
+        <div class="scrollerSize">
+            <div class="innerDivWrapper slds-scrollable">
+            <c:addCustomClient account="{!v.recordId}" isMobile="{!$Browser.isPhone || $Browser.isTablet}" onsaveandnew="{!c.reInit}"/>
+            </div>
+        </div>
+</aura:component>

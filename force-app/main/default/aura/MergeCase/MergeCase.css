@@ -1,0 +1,32 @@
+.THIS .inputSize {
+    width:100%; 
+}
+.THIS .tooltip {
+    position: absolute;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+.THIS .radio{
+    margin: 10px 10px 0px 0px;
+}
+.THIS .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 350px;
+    background:#ffffff; 
+    color:#6c6c6c;
+    text-align: center;
+    padding: 5px 0;
+    display:inline; 
+    position:absolute; 
+    border:1px solid #66b3ff;
+    border-radius: 13px;
+    /* Position the tooltip */
+    position: absolute;
+    border:1px solid #66b3ff;
+    box-shadow: -4px -5px 8px #36A1AD;
+    z-index:99;
+}
+
+.THIS .tooltip:hover .tooltiptext {
+    visibility: visible;
+}

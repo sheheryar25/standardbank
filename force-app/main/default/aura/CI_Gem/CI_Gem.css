@@ -1,0 +1,20 @@
+.THIS .gem_card {
+    border: 1px solid rgb(221, 219, 218);
+    border-radius: .25rem;
+}
+
+.THIS .icon_white svg {
+    fill: white;
+}
+
+.THIS .green_background{
+    background-color: #04844b;
+}
+
+.THIS .gem_text {
+    color: white;
+}
+
+.THIS .clickable {
+    cursor: pointer;
+}

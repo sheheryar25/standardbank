@@ -1,0 +1,918 @@
+<apex:page docType="html-5.0" showHeader="false" sidebar="false" name="Client Plan Dashboard" title="Client Plan Dashboard"  standardStyleSheets="true" standardController="Account"  extensions="ClientPlanDashboardClass" >
+      <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+      <apex:stylesheet value="{!$Resource.ClientPlanCSS}" />
+      <apex:includeScript value="{!URLFOR($Resource.CamJQuery, 'jquery-1.8.3.min.js')}"/>
+       <script>
+        
+       function ChartLabelRenderer(val) {
+       
+         if(Number(val) == 0){
+          return '';
+        }
+        else{
+         var num1 = String(val).split(".");
+         return num1[0].toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+        }
+        
+       }
+       
+       function pieChartDivision (item){
+        if(item == 'GM' ){ 
+        return  Number("{!pieChartDivMap['GM']}").toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") +  ' ' + '(' + Number("{!((pieChartDivMap['GM'])/totalDivSum)}"*100).toFixed(2) + '%' + ')'; 
+       }
+       if(item == 'IB'){ 
+        return  Number("{!pieChartDivMap['IB']}").toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") +  ' ' + '(' + Number("{!((pieChartDivMap['IB'])/totalDivSum)}"*100).toFixed(2) + '%' + ')'; 
+       }
+       if(item == 'TPS' ){ 
+        return  Number("{!pieChartDivMap['TPS']}").toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") +  ' ' + '(' + Number("{!((pieChartDivMap['TPS'])/totalDivSum)}"*100).toFixed(2) + '%' + ')'; 
+       }
+       if(item == 'Other' ){ 
+        return  Number("{!pieChartDivMap['Other']}").toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") +  ' ' + '(' + Number("{!((pieChartDivMap['Other'])/totalDivSum)}"*100).toFixed(2) + '%' + ')'; 
+        }
+       }
+       
+       function pieChartDivisionHover(klass, item) {
+        for(var temp in item['storeItem']['data']){
+         
+         if(item['storeItem']['data'][temp] == 'GM'){
+         this.setTitle('GM : '  + "{!ISO}"  +  ' ' + Number("{!pieChartDivMap['GM']}").toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") +  ' ' + '(' + Number("{!((pieChartDivMap['GM'])/totalDivSum)}"*100).toFixed(2) + '%' + ')') ;
+         }
+         if(item['storeItem']['data'][temp] == 'IB'){
+         this.setTitle('IB : '  + "{!ISO}"  +  ' ' + Number("{!pieChartDivMap['IB']}").toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") +  ' ' + '(' + Number("{!((pieChartDivMap['IB'])/totalDivSum)}"*100).toFixed(2) + '%' + ')') ;
+         }
+         if(item['storeItem']['data'][temp] == 'TPS'){
+         this.setTitle('TPS : '  + "{!ISO}"  +  ' ' + Number("{!pieChartDivMap['TPS']}").toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") +  ' ' + '(' + Number("{!((pieChartDivMap['TPS'])/totalDivSum)}"*100).toFixed(2) + '%'  + ')');
+         }
+         if(item['storeItem']['data'][temp] == 'Other'){
+         this.setTitle('Other : '  + "{!ISO}"  +  ' ' + Number("{!pieChartDivMap['Other']}").toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") +  ' ' + '(' + Number("{!((pieChartDivMap['Other'])/totalDivSum)}"*100).toFixed(2) + '%' + ')') ;
+         }
+        } 
+       }        
+       
+       function pieChartCountry (item){ 
+          if(item == "{!countryLst[0]}"){
+            return   Number("{!pieChartCountryMap[countryLst[0]]}").toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") +  ' ' + '(' + Number("{!((pieChartCountryMap[countryLst[0]])/totalCountrySum)}"*100).toFixed(2) + '%' + ')'; 
+          }
+          if(item == "{!countryLst[1]}"){
+            return   Number("{!pieChartCountryMap[countryLst[1]]}").toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") +  ' ' + '(' + Number("{!((pieChartCountryMap[countryLst[1]])/totalCountrySum)}"*100).toFixed(2) + '%' + ')'; 
+          }
+          if(item == "{!countryLst[2]}"){
+            return   Number("{!pieChartCountryMap[countryLst[2]]}").toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") +  ' ' + '(' + Number("{!((pieChartCountryMap[countryLst[2]])/totalCountrySum)}"*100).toFixed(2) + '%' + ')'; 
+          }
+          if(item == "{!countryLst[3]}"){
+            return   Number("{!pieChartCountryMap[countryLst[3]]}").toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") +  ' ' + '(' + Number("{!((pieChartCountryMap[countryLst[3]])/totalCountrySum)}"*100).toFixed(2) + '%' + ')'; 
+          }
+          if(item == "{!countryLst[4]}"){
+            return  Number("{!pieChartCountryMap[countryLst[4]]}").toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") +  ' ' + '(' + Number("{!((pieChartCountryMap[countryLst[4]])/totalCountrySum)}"*100).toFixed(2) + '%' + ')'; 
+          }
+          if(item == "{!countryLst[5]}"){
+            return   Number("{!pieChartCountryMap[countryLst[5]]}").toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") +  ' ' + '(' + Number("{!((pieChartCountryMap[countryLst[5]])/totalCountrySum)}"*100).toFixed(2) + '%' + ')'; 
+          }
+       }
+       
+       function pieChartCountryHover(klass, item) {
+        for(var temp in item['storeItem']['data']){
+         
+         if(item['storeItem']['data'][temp] == "{!countryLst[0]}"){
+         this.setTitle(item['storeItem']['data'][temp] + ' : '  + "{!ISO}"  +  ' ' + Number("{!pieChartCountryMap[countryLst[0]]}").toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") +  ' ' + '(' + Number("{!((pieChartCountryMap[countryLst[0]])/totalCountrySum)}"*100).toFixed(2) + '%' + ')') ;
+         }
+         if(item['storeItem']['data'][temp] == "{!countryLst[1]}"){
+         this.setTitle(item['storeItem']['data'][temp] + ' : '  + "{!ISO}"  +  ' ' + Number("{!pieChartCountryMap[countryLst[1]]}").toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") +  ' ' + '(' + Number("{!((pieChartCountryMap[countryLst[1]])/totalCountrySum)}"*100).toFixed(2) + '%' + ')') ;
+         }
+         if(item['storeItem']['data'][temp] == "{!countryLst[2]}"){
+         this.setTitle(item['storeItem']['data'][temp] + ' : '  + "{!ISO}"  +  ' ' + Number("{!pieChartCountryMap[countryLst[2]]}").toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") +  ' ' + '(' + Number("{!((pieChartCountryMap[countryLst[2]])/totalCountrySum)}"*100).toFixed(2) + '%' + ')') ;
+         }
+         if(item['storeItem']['data'][temp] == "{!countryLst[3]}"){
+         this.setTitle(item['storeItem']['data'][temp] + ' : '  + "{!ISO}"  +  ' ' + Number("{!pieChartCountryMap[countryLst[3]]}").toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") +  ' ' + '(' + Number("{!((pieChartCountryMap[countryLst[3]])/totalCountrySum)}"*100).toFixed(2) + '%' + ')') ;
+         }
+         if(item['storeItem']['data'][temp] == "{!countryLst[4]}"){
+         this.setTitle(item['storeItem']['data'][temp] + ' : '  + "{!ISO}"  +  ' ' + Number("{!pieChartCountryMap[countryLst[4]]}").toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") +  ' ' + '(' + Number("{!((pieChartCountryMap[countryLst[4]])/totalCountrySum)}"*100).toFixed(2) + '%' + ')') ;
+         }
+         if(item['storeItem']['data'][temp] == "{!countryLst[5]}"){
+         this.setTitle(item['storeItem']['data'][temp] + ' : '  + "{!ISO}"  +  ' ' + Number("{!pieChartCountryMap[countryLst[5]]}").toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") +  ' ' + '(' + Number("{!((pieChartCountryMap[countryLst[5]])/totalCountrySum)}"*100).toFixed(2) + '%' + ')') ;
+         }
+        } 
+       }  
+       
+      
+       
+       function axisFormat(value){
+        var num1 = String(value).split(".");
+        return num1[0].toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
+       }
+      
+       
+        function hoverFormat(klass, item) {
+         var xField = item.xField;
+         var yField = item.yField;
+         var name = String(item['value']).split(",");
+         var amount = item.storeItem.get(yField);
+         
+         var num = amount.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+         var num1 = String(num).split(".");
+         
+         this.setTitle(name[0] + ' : ' + "{!ISO}" + ' ' +num1[0]);
+        
+        }
+       
+      </script>
+    </head>
+    <body>
+      <apex:form id="headerform" >
+            <table align="center"  width="100%" style="border:none;">
+              <tr>
+                  <!-- Display the Account Name -->
+                <td  valign="top" style="border:none;" colspan="4">
+                  <Strong>
+                      <font size="4" style="text-align: center;margin-left:33%">
+                        <apex:outputtext style="font-family:Arial;font-size:28px;font-weight:normal;font-style:normal;text-align: center;text-decoration:none;color:#333333;"
+                          Value="{!ClientPlanName}"></apex:outputtext>
+                      </font>
+                   </Strong>
+                  <apex:image style="float:right;" url="{!URLFOR($Resource.CamProducts,'StandardBankTrans.png')}"
+                    width="250" height="60" />
+                 </td>
+                </tr>
+                 <tr>
+                 <td width="40%" valign="top">
+                 <apex:OutputText style="font-family:Arial;font-size:14px;" value="Individually Budgeted Client (IBC) :" />
+                   <Strong>
+                    <apex:OutputText style="font-family:Arial;font-size:14px;" value="Yes" rendered="{!Account.CIB_Target_Client__c}" />
+                    <apex:OutputText style="font-family:Arial;font-size:14px;" value="No" rendered="{!NOT(Account.CIB_Target_Client__c)}" />
+                  </Strong>
+                  <br/>
+                   <apex:OutputText style="font-family:Arial;font-size:14px;" value="Viewing Date :" />
+                  &nbsp;&nbsp;
+                  <Strong>
+                    <apex:outputtext style="font-family:Arial;font-size:14px;" value="{0,date, d MMM yyyy}">
+                      <apex:param value="{!viewDate}" />
+                    </apex:outputtext>
+                  </Strong>
+                </td>
+                <td width="2%" >
+                  <span>
+                    <apex:image url="{!URLFOR($Resource.CamProducts,'USDZAR2.png')}" height="60"/>
+                  </span>
+                  </td><td>
+                  <apex:selectList value="{!cPlanCurrencyTop}"
+                    multiselect="false" size="1">
+                    <apex:selectOptions value="{!currencies}" />
+                  </apex:selectList>
+                  <apex:commandButton value="Refresh" action="{!refreshPage}"
+                    id="acctheButton2" ></apex:commandButton>
+                </td>
+                 <td valign="top" style="padding-left:13%;">
+                 <apex:outputText style="font-family:Arial;font-size:14px;" value="CROC (%) :" /> 
+                  <FONT face="Arial" SIZE="2">
+                   <strong>
+                   <apex:outputText style="font-family:Arial;font-size:14px;" value="{0, number, ###,###,###,###.##} %" rendered="{!NOT(ISNULL(CROCZAR))}">
+                   <apex:param value="{!CROCZAR}"/>
+                   </apex:outputText>
+                   </strong>
+                   </FONT>  
+                   <br/>
+                  <FONT face="Arial" SIZE="2">
+                  <apex:outputText style="font-family:Arial;font-size:14px;" value="Capital Utilisation  {!ISO} :" />
+                   <strong>
+                   <apex:outputText style="font-family:Arial;font-size:14px;" value="{0, number, ###,###,###,###.##}" rendered="{!NOT(ISNULL(capUtilization))}">
+		          <apex:param value="{!capUtilization}"/>
+		          </apex:outputText>
+		          </strong>
+		           </FONT>
+                   <br/>
+                    <apex:OutputText style="font-family:Arial;font-size:14px;" value="CRT data as of : "  />
+                    <strong>
+                    <apex:outputtext style="font-family:Arial;font-size:14px;" value="{0,date, d MMM yyyy}">
+                      <apex:param value="{!crtDate}" />
+                    </apex:outputtext></strong>
+                 </td>
+              </tr>
+            </table>
+          
+    <table style="margin: 0px auto;border:none;" align="center" cellpadding="2" cellspacing="2" width="100%" >
+              
+              <tr>
+                <th  align="left" bgcolor="#5C87A1" valign="top" width="100%" height="15" style="border:none;"> 
+                  <p style="text-align: center;">
+                    <FONT COLOR="white" SIZE="2">Client Revenue</FONT>
+                  </p> 
+               </th>
+               </tr> 
+            </table>
+            <table border="0" align="center" cellpadding="2" cellspacing="16" >
+             <tr>
+             <td style="border:solid 1px;border-color:#DDDDDD;border-radius: 15px;-moz-border-radius: 15px;-webkit-border-radius: 15px;">
+                  <p style="text-align: center;">
+                    <FONT COLOR="Black" SIZE="2"><Strong>Revenue YTD vs Previous Year Revenue by Division ('000) ({!ISO})</Strong></FONT>
+                  </p>
+                  <p style="text-align: center;">
+                    <FONT COLOR="Black" SIZE="2">
+                    <Strong><apex:outputText value="The graph returned no results" rendered="{!barChartOne}"/></Strong>
+                   </FONT>
+                   </p>
+                <apex:chart name="MyChart" height="300" width="800" animate="true"  data="{!DataTotal}" colorSet="#659EC7,#C0C0C0" resizable="true">
+                <apex:legend position="bottom" />
+                <apex:axis type="Category" position="left" title="Divisions" grid="false"
+                    fields="name" >
+                    <apex:chartLabel rotate="315" />
+                    </apex:axis>
+                   <apex:axis type="Numeric" position="top" title="Revenue" grid="false" minimum="0"
+                    fields="cYearYTD,pYearYTD"  >
+                    <apex:chartLabel rotate="315" rendererFn="axisFormat" />
+                      <apex:outputtext style="float:right" value="{0,date, d MMM yyyy}">
+                      <apex:param value="{!crtDate}" />
+                    </apex:outputtext>
+                    <apex:OutputText style="float:right" value="CRT data as of : "  />
+                    </apex:axis>
+                    <apex:barSeries orientation="horizontal" axis="top" groupGutter="0" 
+                     yField="name" xField="cYearYTD,pYearYTD" title="Revenue YTD,Previous Year Revenue" tips="true" id="barchart">
+                    <apex:chartLabel rotate="315" display="outside" rendererFn="ChartLabelRenderer" />
+                   <apex:chartTips width="150" rendererFn="hoverFormat"/>
+                    </apex:barSeries>
+                 </apex:chart>
+                 </td>
+             </tr>
+            </table>
+             <table style="margin: 0px auto;border:none;" align="center" cellpadding="2" cellspacing="2" width="100%" >
+              
+              <tr>
+                <th  align="left" bgcolor="#5C87A1" valign="top" width="100%" height="15" style="border:none;"> 
+                  <p style="text-align: center;">
+                    <FONT COLOR="white" SIZE="2">Total Wallet vs Revenues vs Budget</FONT>
+                  </p>
+               </th>
+               </tr> 
+            </table>
+            <table border="0" align="center" cellpadding="2" cellspacing="16">
+            
+             <tr>
+             <td style="border:solid 1px;border-color:#DDDDDD;border-radius: 15px;-moz-border-radius: 15px;-webkit-border-radius: 15px;">
+                <p style="text-align: center;">
+                    <FONT COLOR="Black" SIZE="2"><strong>Total Wallet vs Revenue YTD vs Budget by Division ('000) ({!ISO})</strong></FONT>
+                  </p>
+                <p style="text-align: center;">
+                    <FONT COLOR="Black" SIZE="2">
+                    <Strong><apex:outputText value="The graph returned no results" rendered="{!barChartTwo}"/></Strong>
+                   </FONT>
+                   </p>
+                <apex:chart name="MyChart3" height="400" width="750" animate="true"  data="{!SoWGCRTotal}" colorSet="#659EC7,#84C225,#C0C0C0" resizable="true" >
+                <apex:legend position="bottom"/>
+                <apex:axis type="Category" position="bottom" title="Divisions" grid="false"
+                    fields="name" >
+                    <apex:chartLabel rotate="315"/>
+                    </apex:axis>
+                   <apex:axis type="Numeric" position="left" title="Amount" grid="false" minimum="0"
+                    fields="tWallet,tRevenue,tBudget" >
+                    <apex:chartLabel rotate="315" rendererFn="axisFormat"/>
+                    <apex:outputtext style="float:right" value="{0,date, d MMM yyyy}">
+                      <apex:param value="{!crtDate}" />
+                    </apex:outputtext>
+                    <apex:OutputText style="float:right" value="CRT data as of : "  />
+                    </apex:axis>
+                    <apex:barSeries orientation="vertical" axis="left" groupGutter="0"
+                     xField="name" yField="tWallet,tRevenue,tBudget" title="Total Wallet,Revenues,Budgets" tips="true" id="barchart2">
+                     <apex:chartLabel display="outside" rotate="315" rendererFn="ChartLabelRenderer"/>
+                     <apex:chartTips width="150" rendererFn="hoverFormat"/>
+                    </apex:barSeries>
+                 </apex:chart>
+                 </td>
+                 <td style="border:solid 1px;border-color:#DDDDDD;border-radius: 15px;-moz-border-radius: 15px;-webkit-border-radius: 15px;">
+                  <p style="text-align: center;">
+                    <FONT COLOR="Black" SIZE="2"><strong>Total Wallet vs Revenue YTD vs Budget for Global Markets ('000) ({!ISO})</strong></FONT>
+                  </p>
+                  <p style="text-align: center;">
+                    <FONT COLOR="Black" SIZE="2">
+                    <Strong><apex:outputText value="The graph returned no results" rendered="{!barChartThree}"/></Strong>
+                   </FONT>
+                   </p>
+                <apex:chart name="MyChart4" height="400" width="750" animate="true"  data="{!SoWGCRDataGM}" colorSet="#659EC7,#84C225,#C0C0C0" resizable="true" >
+                <apex:legend position="bottom"/>
+                <apex:axis type="Category" position="bottom" title="Global Market Products" grid="false"
+                    fields="name" >
+                    <apex:chartLabel rotate="315"/>
+                    </apex:axis>
+                   <apex:axis type="Numeric" position="left" title="Amount" grid="false" minimum="0"
+                    fields="tWallet,tRevenue,tBudget" >
+                    <apex:chartLabel rotate="315" rendererFn="axisFormat"/>
+                    <apex:outputtext style="float:right" value="{0,date, d MMM yyyy}">
+                      <apex:param value="{!crtDate}" />
+                    </apex:outputtext>
+                    <apex:OutputText style="float:right" value="CRT data as of : "  />
+                    </apex:axis>
+                    <apex:barSeries orientation="vertical" axis="left" groupGutter="0"
+                     xField="name" yField="tWallet,tRevenue,tBudget" title="Total Wallet,Revenues,Budgets" tips="true" id="barchart3">
+                     <apex:chartLabel display="outside" rotate="315" rendererFn="ChartLabelRenderer"/>
+                     <apex:chartTips width="150" rendererFn="hoverFormat"/>
+                    </apex:barSeries>
+                 </apex:chart>
+                 </td>
+             </tr>
+             
+              <tr>
+             <td style="border:solid 1px;border-color:#DDDDDD;border-radius: 15px;-moz-border-radius: 15px;-webkit-border-radius: 15px;">
+                <p style="text-align: center;">
+                    <FONT COLOR="Black" SIZE="2"><strong>Total Wallet vs Revenue YTD vs Budget for Investment Banking ('000) ({!ISO})</strong></FONT>
+                  </p>
+                  <p style="text-align: center;">
+                    <FONT COLOR="Black" SIZE="2">
+                    <Strong><apex:outputText value="The graph returned no results" rendered="{!barChartFour}"/></Strong>
+                   </FONT>
+                   </p>
+                <apex:chart name="MyChart5" height="400" width="750" animate="true"  data="{!SoWGCRDataIB}" colorSet="#659EC7,#84C225,#C0C0C0" resizable="true" >
+                <apex:legend position="bottom"/>
+                <apex:axis type="Category" position="bottom" title="Investment Banking Products" grid="false"
+                    fields="name" >
+                    <apex:chartLabel rotate="315"/>
+                    </apex:axis>
+                   <apex:axis type="Numeric" position="left" title="Amount" grid="false" minimum="0"
+                    fields="tWallet,tRevenue,tBudget" >
+                    <apex:chartLabel rotate="315" rendererFn="axisFormat"/>
+                    <apex:outputtext style="float:right" value="{0,date, d MMM yyyy}">
+                      <apex:param value="{!crtDate}" />
+                    </apex:outputtext>
+                    <apex:OutputText style="float:right" value="CRT data as of : "  />
+                    </apex:axis>
+                    <apex:barSeries orientation="vertical" axis="left" groupGutter="0" 
+                     xField="name" yField="tWallet,tRevenue,tBudget" title="Total Wallet,Revenues,Budgets" tips="true" id="barchart4">
+                     <apex:chartLabel display="outside" rotate="315" rendererFn="ChartLabelRenderer"/>
+                     <apex:chartTips width="150" rendererFn="hoverFormat"/>
+                    </apex:barSeries>
+                 </apex:chart>
+                 </td>
+                 <td style="border:solid 1px;border-color:#DDDDDD;border-radius: 15px;-moz-border-radius: 15px;-webkit-border-radius: 15px;">
+                  <p style="text-align: center;">
+                    <FONT COLOR="Black" SIZE="2"><strong>Total Wallet vs Revenue YTD vs Budget for Transactional Products and Services ('000) ({!ISO})</strong></FONT>
+                  </p>
+                  <p style="text-align: center;">
+                    <FONT COLOR="Black" SIZE="2">
+                    <Strong><apex:outputText value="The graph returned no results" rendered="{!barChartFive}"/></Strong>
+                   </FONT>
+                   </p>
+                <apex:chart name="MyChart6" height="400" width="750" animate="true"  data="{!SoWGCRDataTPS}" colorSet="#659EC7,#84C225,#C0C0C0" resizable="true" >
+                <apex:legend position="bottom"/>
+                <apex:axis type="Category" position="bottom" title="Transactional Products and Services Products" grid="false"
+                    fields="name" >
+                    <apex:chartLabel orientation="vertical" rotate="315"/>
+                    </apex:axis>
+                   <apex:axis type="Numeric" position="left" title="Amount" grid="false" minimum="0"
+                    fields="tWallet,tRevenue,tBudget" >
+                    <apex:chartLabel rotate="315" rendererFn="axisFormat"/>
+                    <apex:outputtext style="float:right" value="{0,date, d MMM yyyy}">
+                      <apex:param value="{!crtDate}" />
+                    </apex:outputtext>
+                    <apex:OutputText style="float:right" value="CRT data as of : "  />
+                    </apex:axis>
+                    <apex:barSeries orientation="vertical" axis="left" groupGutter="0" 
+                     xField="name" yField="tWallet,tRevenue,tBudget" title="Total Wallet,Revenues,Budgets" tips="true" id="barchart5">
+                     <apex:chartLabel display="outside"  rotate="315" rendererFn="ChartLabelRenderer"/>
+                     <apex:chartTips width="150" rendererFn="hoverFormat"/>
+                    </apex:barSeries>
+                 </apex:chart>
+                 </td>
+             </tr>
+             
+            </table> 
+             <table style="margin: 0px auto;border:none;" align="center" cellpadding="2" cellspacing="2" width="100%" >
+              
+              <tr>
+                <th  align="left" bgcolor="#5C87A1" valign="top" width="100%" height="15" style="border:none;"> 
+                  <p style="text-align: center;">
+                    <FONT COLOR="white" SIZE="2">Revenue Tracking </FONT>
+                  </p>
+               </th>
+               </tr> 
+            </table>
+            <table style="border:solid 1px;border-color:#DDDDDD;border-radius: 15px;-moz-border-radius: 15px;-webkit-border-radius: 15px;" align="center">
+             <tr>
+             <td>
+                 <p style="text-align: center;"> 
+                    <FONT COLOR="Black" SIZE="2"><strong>Revenue last 12 Months by Division ('000) ({!ISO})</strong></FONT>
+                  </p>
+                  <p style="text-align: center;">
+                    <FONT COLOR="Black" SIZE="2"> 
+                    <Strong><apex:outputText value="The graph returned no results" rendered="{!barChartSix}"/></Strong>
+                   </FONT>
+                   </p>
+                 <apex:chart name="MyChart7" height="400" width="1200" animate="true"  data="{!barHistoryData}" colorSet="#659EC7,#84C225,#C0C0C0,#8AD4E3" resizable="true" >
+                <apex:legend position="bottom"/>
+                <apex:axis type="Category" position="bottom" title="Month/Year" grid="false"
+                    fields="name" >
+                    <apex:chartLabel rotate="315"/>
+                    </apex:axis>
+                   <apex:axis type="Numeric" position="left" title="Amount" grid="false" minimum="0"
+                    fields="cmonthGMYTD,cmonthIBYTD,cmonthOtherYTD,cmonthTPSYTD" >
+                    <apex:chartLabel rotate="315" rendererFn="axisFormat"/>
+                    <apex:outputtext style="float:right" value="{0,date, d MMM yyyy}">
+                      <apex:param value="{!crtDate}" />
+                    </apex:outputtext>
+                    <apex:OutputText style="float:right" value="CRT data as of : "  />
+                    </apex:axis>
+                    <apex:barSeries orientation="vertical" axis="left" groupGutter="0" stacked="true" 
+                     xField="name" yField="cmonthGMYTD,cmonthIBYTD,cmonthOtherYTD,cmonthTPSYTD" title="GM,IB,Other,TPS" tips="true" id="barchart6">
+                     <apex:chartLabel display="insideEnd"   rendererFn="ChartLabelRenderer"/>
+                     <apex:chartTips width="150" rendererFn="hoverFormat"/>
+                    </apex:barSeries>
+                 </apex:chart>
+                 </td>
+             </tr>
+            </table>
+             <table style="margin: 0px auto;border:none;" align="center" cellpadding="2" cellspacing="2" width="100%" >
+              <tr>
+                <th  align="left" bgcolor="#5C87A1" valign="top" width="100%" height="15" style="border:none;"> 
+                  <p style="text-align: center;">
+                    <FONT COLOR="white" SIZE="2">Overview of Revenues</FONT>
+                  </p>
+               </th>
+               </tr> 
+            </table>
+            <table border="0" align="center" cellpadding="2" cellspacing="16">
+             <tr>
+             <td style="border:solid 1px;border-color:#DDDDDD;border-radius: 15px;-moz-border-radius: 15px;-webkit-border-radius: 15px;">
+              <p style="text-align: center;">
+                    <FONT COLOR="Black" SIZE="2"><strong>Revenue YTD by Division ('000) ({!ISO}) </strong></FONT>
+                  </p>
+               <p style="text-align: center;">
+                    <FONT COLOR="Black" SIZE="2"> 
+                    <Strong><apex:outputText value="The graph returned no results" rendered="{!barChartSeven}"/></Strong>
+                   </FONT>
+                   </p>
+                    <apex:image url="{!URLFOR($Resource.CamProducts,'step1.jpg')}"
+                    width="350" height="350" rendered="{!barChartSeven}"/>
+                   <apex:chart height="350" width="400" data="{!DataPieChartByDiv}" resizable="true" colorSet="#659EC7,#84C225,#C0C0C0,#8AD4E3" rendered="{!NOT(barChartSeven)}">
+                    <apex:pieSeries dataField="cYearRev" labelField="name" > 
+                    <apex:chartLabel display="middle" orientation="vertical"  rendererFn="pieChartDivision"/>
+                    <apex:chartTips width="150" rendererFn="pieChartDivisionHover"/>
+                    <apex:outputtext style="float:right" value="{0,date, d MMM yyyy}">
+                      <apex:param value="{!crtDate}" />
+                    </apex:outputtext>
+                    <apex:OutputText style="float:right" value="CRT data as of : "  />
+                    </apex:pieSeries> 
+                    <apex:legend position="bottom"/>
+                </apex:chart>
+              </td>
+               <td style="border:solid 1px;border-color:#DDDDDD;border-radius: 15px;-moz-border-radius: 15px;-webkit-border-radius: 15px;">
+              <p style="text-align: center;">
+                    <FONT COLOR="Black" SIZE="2"><strong>Revenue YTD by Country ('000) ({!ISO}) </strong></FONT>
+                  </p>
+                  <p style="text-align: center;">
+                    <FONT COLOR="Black" SIZE="2"> 
+                    <Strong><apex:outputText value="The graph returned no results" rendered="{!barChartEight}"/></Strong>
+                   </FONT>
+                   </p>
+                    <apex:image url="{!URLFOR($Resource.CamProducts,'step1.jpg')}"
+                    width="350" height="350" rendered="{!barChartEight}"/>
+               <apex:chart height="350" width="800" data="{!DataPieChartByCountry}" resizable="true" colorSet="#659EC7,#84C225,#C0C0C0,#8AD4E3,#DDDDDD,#F5CB55" rendered="{!NOT(barChartEight)}">
+			        <apex:pieSeries dataField="cYearRev" labelField="name" > 
+			        <apex:chartLabel display="middle" orientation="vertical"  field="name" rendererFn="pieChartCountry"/>
+			        <apex:chartTips width="150" rendererFn="pieChartCountryHover"/>
+			        <apex:outputtext style="float:right" value="{0,date, d MMM yyyy}">
+                      <apex:param value="{!crtDate}" />
+                    </apex:outputtext>
+                    <apex:OutputText style="float:right" value="CRT data as of : "  />
+			        </apex:pieSeries> 
+			        <apex:legend position="bottom"/>
+			     </apex:chart>
+			     <br/>
+                 <apex:outputText style="float:right" value="Displaying Top Five Countries, balance grouped as OTHER" />
+              </td>
+             </tr>
+            </table>
+             <table style="margin: 0px auto;border:none;" align="center" cellpadding="2" cellspacing="2" width="100%" >
+              <tr>
+                <th  align="left" bgcolor="#5C87A1" valign="top" width="100%" height="15" style="border:none;"> 
+                  <p style="text-align: center;">
+                    <FONT COLOR="white" SIZE="2">Tracking of Revenues, Budgets and Pipeline ('000) ({!ISO})</FONT>
+                  </p>
+               </th>
+               </tr> 
+            </table>
+            <table border="0" align="center" cellpadding="2" cellspacing="16">
+              <tr>
+             <td width="40%" style="border:solid 1px;border-color:#DDDDDD;border-radius: 15px;-moz-border-radius: 15px;-webkit-border-radius: 15px;">
+			    <p style="text-align: center;">
+                    <FONT COLOR="Black" SIZE="2"><Strong>Budget vs Revenue YTD vs Total Pipeline('000) ({!ISO})</Strong></FONT>
+                  </p>
+			   <p style="text-align: center;">
+                    <FONT COLOR="Black" SIZE="2"> 
+                    <Strong><apex:outputText value="The graph returned no results" rendered="{!barChartThirteen}"/></Strong>
+                   </FONT>
+                   </p>   
+			    <apex:chart name="MyChart15" height="300" width="500" animate="true"  data="{!lstsowDataTotal}"   colorSet="#659EC7,#84C225,#C0C0C0"   resizable="true" >
+                <apex:legend position="bottom"/>
+                <apex:axis type="Category" position="left" title="Total Pipeline" grid="false"
+                    fields="name" dashSize="2">
+                    <apex:chartLabel rotate="315"/>
+                    </apex:axis>
+                   <apex:axis type="Numeric" dashSize="2" position="top" title="Amount" grid="false" minimum="0"
+                    fields="tRevenue,tBudget,tpipeline" >
+                    <apex:chartLabel rotate="315" rendererFn="axisFormat"/> 
+                    <apex:outputtext style="float:right" value="{0,date, d MMM yyyy}">
+                      <apex:param value="{!crtDate}" />
+                    </apex:outputtext>
+                    <apex:OutputText style="float:right" value="CRT data as of : "  />
+                    </apex:axis>
+                    <apex:barSeries orientation="horizontal" axis="top" groupGutter="0"
+                     yField="name" xField="tRevenue,tBudget,tpipeline" title="Revenue,Budget,Total Pipeline" tips="true" yPadding="40">
+                     <apex:chartLabel rotate="315" display="outside" rendererFn="ChartLabelRenderer"/>
+                     <apex:chartTips width="150" rendererFn="hoverFormat"/>
+                    </apex:barSeries>
+                 </apex:chart>
+			   </td>
+			   <td width="60%" style="border:solid 1px;border-color:#DDDDDD;border-radius: 15px;-moz-border-radius: 15px;-webkit-border-radius: 15px;" >
+			    <p style="text-align: center;">
+                    <FONT COLOR="Black" SIZE="2"><Strong>Client and Subsidiary Top Five Opportunities </Strong></FONT>
+                  </p>
+                <table border="1" style="border-collapse: collapse;border-color:#696969;" align="center" width="80%"    cellspacing="  2"    cellpadding="  2"  >
+                   <tr>
+                        <th bgcolor="#5C87A1" valign="top" width="30%" style="text-align:center;"><FONT COLOR="white" SIZE="2"> Opportunity Name </FONT></th>
+                        <th bgcolor="#5C87A1" valign="top" width="30%" style="text-align:center;"><FONT COLOR="white" SIZE="2"> Grand Parent Product </FONT></th>
+                        <th bgcolor="#5C87A1" valign="top" width="30%" style="text-align:center;"><FONT COLOR="white" SIZE="2"> Stage - Probability </FONT></th>
+                        <th bgcolor="#5C87A1" valign="top" width="10%" style="text-align:center;"><FONT COLOR="white" SIZE="2"><div> Current Year </div><div>Weighted Revenue</div> </FONT> </th>
+                    </tr>
+                    
+
+                    <apex:repeat value="{!OpportunitylstAll}" var="gm" rows="5">
+                    <tr>
+                        <td bgcolor="#C0C0C0" valign="bottom"><FONT COLOR="#5C87A1" SIZE="2"> 
+                        <apex:outputLink value="/{!gm.opp.Id}" id="theOpp" target="_blank">{!gm.opp.Name} 
+                        </apex:outputLink> </FONT> 
+                        </td>                        
+                        <td bgcolor="#C0C0C0" valign="bottom"><FONT COLOR="black" SIZE="2"> {!gm.grandProductName}</FONT> </td>
+                        <td bgcolor="#C0C0C0" valign="bottom"><FONT COLOR="black" SIZE="2"> {!gm.opp.StageName} - {!gm.opp.Probability} %</FONT> </td>
+                        <td bgcolor="#C0C0C0" valign="bottom"><FONT COLOR="black" SIZE="2"> 
+                         <apex:outputText value="{0, number, ###,###,###,##0}" rendered="{!IF(ROUND(gm.currentRev,0) != 0 , true ,false)}"> 
+                                <apex:param value="{!ROUND(gm.currentRev,0)}"/>
+                            </apex:outputText>
+                       </FONT> </td>
+                    </tr> 
+                    </apex:repeat>
+                    <tr>
+                        <td bgcolor="#C0C0C0" valign="bottom"><FONT COLOR="black" SIZE="2"> Rest of Pipeline </FONT></td>
+                        <td bgcolor="#C0C0C0" valign="bottom"><FONT COLOR="black" SIZE="2">  </FONT></td>
+                        <td bgcolor="#C0C0C0" valign="bottom"><FONT COLOR="black" SIZE="2">  </FONT></td>
+                        <td bgcolor="#C0C0C0" valign="bottom"><FONT COLOR="black" SIZE="2"> 
+                        <apex:outputText value="{0, number, ###,###,###,##0}" rendered="{!IF(ROUND(SumAll-SumFiveAll,0) != 0 , true ,false)}"> 
+                                <apex:param value="{!ROUND(SumAll-SumFiveAll,0)}"/>
+                            </apex:outputText>
+                        </FONT> </td>
+                    </tr>
+                    <tr>
+                        <th bgcolor="#5C87A1" valign="bottom"><FONT COLOR="white" SIZE="2"> Total </FONT></th>
+                        <th bgcolor="#5C87A1" valign="bottom"><FONT COLOR="white" SIZE="2">  </FONT></th>
+                        <th bgcolor="#5C87A1" valign="bottom"><FONT COLOR="white" SIZE="2">  </FONT></th>
+                        <th bgcolor="#5C87A1" valign="bottom"><FONT COLOR="white" SIZE="2"> 
+                        <apex:outputText value="{0, number, ###,###,###,##0}" rendered="{!IF(ROUND(SumAll,0) != 0 ,true ,false)}"> 
+                                <apex:param value="{!ROUND(SumAll,0)}"/>
+                            </apex:outputText>
+                       </FONT> </th>
+                    </tr>
+                </table>
+            </td>
+             </tr>
+             
+            
+             <tr>
+             <td width="40%" style="border:solid 1px;border-color:#DDDDDD;border-radius: 15px;-moz-border-radius: 15px;-webkit-border-radius: 15px;">
+			    <p style="text-align: center;">
+                    <FONT COLOR="Black" SIZE="2"><Strong>Budget vs Revenue YTD for GM ('000) ({!ISO})</Strong></FONT>
+                  </p>
+			   <p style="text-align: center;">
+                    <FONT COLOR="Black" SIZE="2"> 
+                    <Strong><apex:outputText value="The graph returned no results" rendered="{!barChartNine}"/></Strong>
+                   </FONT>
+                   </p>   
+			    <apex:chart name="MyChart10" height="300" width="500" animate="true"  data="{!gaugeDataGM}"   colorSet="#659EC7,#84C225,#C0C0C0"   resizable="true" >
+                <apex:legend position="bottom"/>
+                <apex:axis type="Category" position="left" title="GM" grid="false"
+                    fields="name" dashSize="2">
+                    <apex:chartLabel rotate="315"/>
+                    </apex:axis>
+                   <apex:axis type="Numeric" dashSize="2" position="top" title="Amount" grid="false" minimum="0"
+                    fields="size,limitSize,tpipeline" >
+                    <apex:chartLabel rotate="315" rendererFn="axisFormat"/> 
+                    <apex:outputtext style="float:right" value="{0,date, d MMM yyyy}">
+                      <apex:param value="{!crtDate}" />
+                    </apex:outputtext>
+                    <apex:OutputText style="float:right" value="CRT data as of : "  />
+                    </apex:axis>
+                    <apex:barSeries orientation="horizontal" axis="top" groupGutter="0"
+                     yField="name" xField="size,limitSize,tpipeline" title="Revenue,Budget,GM Pipeline" tips="true" yPadding="40">
+                     <apex:chartLabel rotate="315" display="outside" rendererFn="ChartLabelRenderer"/>
+                     <apex:chartTips width="150" rendererFn="hoverFormat"/>
+                    </apex:barSeries>
+                 </apex:chart>
+			   </td>
+			   <td width="60%" style="border:solid 1px;border-color:#DDDDDD;border-radius: 15px;-moz-border-radius: 15px;-webkit-border-radius: 15px;" >
+			    <p style="text-align: center;">
+                    <FONT COLOR="Black" SIZE="2"><Strong>Client and Subsidiary Top Five Opportunities for GM</Strong></FONT>
+                  </p>
+                <table  border="1" style="border-collapse: collapse; border-color:#696969;" align="center" width="80%"     cellspacing="  2"    cellpadding="  2"   >
+                   <tr>
+                        <th bgcolor="#5C87A1" valign="top" width="30%" style="text-align:center;"><FONT COLOR="white" SIZE="2"> Opportunity Name </FONT></th>
+                        <th bgcolor="#5C87A1" valign="top" width="30%" style="text-align:center;"><FONT COLOR="white" SIZE="2"> Grand Parent Product </FONT></th>
+                        <th bgcolor="#5C87A1" valign="top" width="30%" style="text-align:center;"><FONT COLOR="white" SIZE="2"> Stage - Probability </FONT></th>
+                        <th bgcolor="#5C87A1" valign="top" width="10%" style="text-align:center;"><FONT COLOR="white" SIZE="2"><div> Current Year </div><div>Weighted Revenue</div> </FONT> </th>
+                    </tr>
+                    
+
+                    <apex:repeat value="{!OpportunitylstGlobalMarkets}" var="gm" rows="5">
+                    <tr>
+                        <td bgcolor="#C0C0C0" valign="bottom"><FONT COLOR="#5C87A1" SIZE="2"> 
+                        <apex:outputLink value="/{!gm.opp.Id}" id="theOpp" target="_blank">{!gm.opp.Name} 
+                        </apex:outputLink> </FONT> 
+                        </td>                        
+                        <td bgcolor="#C0C0C0" valign="bottom"><FONT COLOR="black" SIZE="2"> {!gm.grandProductName}</FONT> </td>
+                        <td bgcolor="#C0C0C0" valign="bottom"><FONT COLOR="black" SIZE="2"> {!gm.opp.StageName} - {!gm.opp.Probability} %</FONT> </td>
+                        <td bgcolor="#C0C0C0" valign="bottom"><FONT COLOR="black" SIZE="2"> 
+                         <apex:outputText value="{0, number, ###,###,###,##0}" rendered="{!IF(ROUND(gm.currentRev,0) != 0 , true ,false)}"> 
+                                <apex:param value="{!ROUND(gm.currentRev,0)}"/>
+                            </apex:outputText>
+                       </FONT> </td>
+                    </tr> 
+                    </apex:repeat>
+                    <tr>
+                        <td bgcolor="#C0C0C0" valign="bottom"><FONT COLOR="black" SIZE="2"> Rest of Pipeline </FONT></td>
+                        <td bgcolor="#C0C0C0" valign="bottom"><FONT COLOR="black" SIZE="2">  </FONT></td>
+                        <td bgcolor="#C0C0C0" valign="bottom"><FONT COLOR="black" SIZE="2">  </FONT></td>
+                        <td bgcolor="#C0C0C0" valign="bottom"><FONT COLOR="black" SIZE="2"> 
+                        <apex:outputText value="{0, number, ###,###,###,##0}" rendered="{!IF(ROUND(SumGM-SumFiveGM,0) != 0 , true ,false)}"> 
+                                <apex:param value="{!ROUND(SumGM-SumFiveGM,0)}"/>
+                            </apex:outputText>
+                        </FONT> </td>
+                    </tr>
+                    <tr>
+                        <th bgcolor="#5C87A1" valign="bottom"><FONT COLOR="white" SIZE="2"> Total </FONT></th>
+                        <th bgcolor="#5C87A1" valign="bottom"><FONT COLOR="white" SIZE="2">  </FONT></th>
+                        <th bgcolor="#5C87A1" valign="bottom"><FONT COLOR="white" SIZE="2">  </FONT></th>
+                        <th bgcolor="#5C87A1" valign="bottom"><FONT COLOR="white" SIZE="2"> 
+                        <apex:outputText value="{0, number, ###,###,###,##0}" rendered="{!IF(ROUND(SumGM,0) != 0 ,true ,false)}"> 
+                                <apex:param value="{!ROUND(SumGM,0)}"/>
+                            </apex:outputText>
+                       </FONT> </th>
+                    </tr>
+                </table>
+                  <p style="text-align: center;">
+                    <FONT COLOR="Black" SIZE="2">
+                <apex:OutputText style="float:center" value="  Opportunities in the table are based on the Opportunity  Owner User Division"  />
+                </FONT>
+                </p>
+            </td>
+             </tr>
+             
+             <tr>
+             <td width="40%" style="border:solid 1px;border-color:#DDDDDD;border-radius: 15px;-moz-border-radius: 15px;-webkit-border-radius: 15px;">
+			    <p style="text-align: center;">
+                    <FONT COLOR="Black" SIZE="2"><Strong>Budget vs Revenue YTD for TPS ('000) ({!ISO})</Strong></FONT>
+                  </p>
+			    <p style="text-align: center;">
+                    <FONT COLOR="Black" SIZE="2"> 
+                    <Strong><apex:outputText value="The graph returned no results" rendered="{!barChartTen}"/></Strong>
+                   </FONT>
+                   </p>
+			    <apex:chart name="MyChart11" height="300" width="500" animate="true"  data="{!gaugeDataTPS}"   colorSet="#659EC7,#84C225,#C0C0C0"   resizable="true" >
+                <apex:legend position="bottom"/>
+                <apex:axis type="Category" position="left" title="TPS" grid="false"
+                    fields="name" dashSize="2">
+                    <apex:chartLabel rotate="315"/>
+                    </apex:axis>
+                   <apex:axis type="Numeric" dashSize="2" position="top" title="Amount" grid="false" minimum="0"
+                    fields="size,limitSize,tpipeline" >
+                    <apex:chartLabel rotate="315" rendererFn="axisFormat"/> 
+                    <apex:outputtext style="float:right" value="{0,date, d MMM yyyy}">
+                      <apex:param value="{!crtDate}" />
+                    </apex:outputtext>
+                    <apex:OutputText style="float:right" value="CRT data as of : "  />
+                    </apex:axis>
+                    <apex:barSeries orientation="horizontal" axis="top" groupGutter="0"
+                     yField="name" xField="size,limitSize,tpipeline"   title="Revenue,Budget,TPS Pipeline"    tips="true" yPadding="40">
+                     <apex:chartLabel rotate="315" display="outside" rendererFn="ChartLabelRenderer"/>
+                     <apex:chartTips width="150" rendererFn="hoverFormat"/>
+                    </apex:barSeries>
+                 </apex:chart>
+			   </td>
+			  <td width="60%" style="border:solid 1px;border-color:#DDDDDD;border-radius: 15px;-moz-border-radius: 15px;-webkit-border-radius: 15px;">
+               <p style="text-align: center;">
+                    <FONT COLOR="Black" SIZE="2"><Strong>Client and Subsidiary Top Five Opportunities for TPS</Strong></FONT>
+                  </p>
+                <table border="1" style="border-collapse: collapse;border-color:#696969;" align="center" width="80%" cellspacing="  2"   cellpadding="  2"  >
+                    <tr>
+                        <th bgcolor="#5C87A1" valign="top" width="30%" style="text-align:center;"><FONT COLOR="white" SIZE="2"> Opportunity Name </FONT></th>
+                        <th bgcolor="#5C87A1" valign="top" width="30%" style="text-align:center;"><FONT COLOR="white" SIZE="2"> Grand Parent Product </FONT></th>
+                        <th bgcolor="#5C87A1" valign="top" width="30%" style="text-align:center;"><FONT COLOR="white" SIZE="2"> Stage - Probability </FONT></th>
+                        <th bgcolor="#5C87A1" valign="top" width="10%" style="text-align:center;"><FONT COLOR="white" SIZE="2"><div> Current Year </div><div>Weighted Revenue</div> </FONT> </th>
+                    </tr>
+                    
+
+                    <apex:repeat value="{!OpportunitylstTPS}" var="gm" rows="5">
+                    <tr>
+                        <td bgcolor="#C0C0C0" valign="bottom"><FONT COLOR="#5C87A1" SIZE="2"> 
+                        <apex:outputLink value="/{!gm.opp.Id}" id="theOpp" target="_blank">{!gm.opp.Name} 
+                        </apex:outputLink> </FONT> 
+                        </td>                        
+                        <td bgcolor="#C0C0C0" valign="bottom"><FONT COLOR="black" SIZE="2"> {!gm.grandProductName} </FONT> </td>                        
+                        <td bgcolor="#C0C0C0" valign="bottom"><FONT COLOR="black" SIZE="2"> {!gm.opp.StageName} - {!gm.opp.Probability} %</FONT> </td>
+                        <td bgcolor="#C0C0C0" valign="bottom"><FONT COLOR="black" SIZE="2"> 
+                         <apex:outputText value="{0, number, ###,###,###,##0}" rendered="{!If(ROUND(gm.currentRev,0) != 0 , true ,false)}"> 
+                                <apex:param value="{!ROUND(gm.currentRev,0)}"/>
+                            </apex:outputText>
+                        </FONT> </td>
+                    </tr>
+                    </apex:repeat>
+                    <tr>
+                        <td bgcolor="#C0C0C0" valign="bottom"><FONT COLOR="black" SIZE="2"> Rest of Pipeline </FONT></td>
+                        <td bgcolor="#C0C0C0" valign="bottom"><FONT COLOR="black" SIZE="2">  </FONT></td>
+                        <td bgcolor="#C0C0C0" valign="bottom"><FONT COLOR="black" SIZE="2">  </FONT></td>
+                        <td bgcolor="#C0C0C0" valign="bottom"><FONT COLOR="black" SIZE="2">
+                         <apex:outputText value="{0, number, ###,###,###,##0}" rendered="{!If(ROUND(SumTPS-SumFiveTPS,0) != 0 , true ,false)}"> 
+                                <apex:param value="{!ROUND(SumTPS-SumFiveTPS,0)}"/>
+                            </apex:outputText>
+                        </FONT> </td>
+                    </tr>
+                    <tr>
+                        <th bgcolor="#5C87A1" valign="bottom"><FONT COLOR="white" SIZE="2"> Total </FONT></th>
+                        <th bgcolor="#5C87A1" valign="bottom"><FONT COLOR="white" SIZE="2">  </FONT></th>
+                        <th bgcolor="#5C87A1" valign="bottom"><FONT COLOR="white" SIZE="2">  </FONT></th>
+                        <th bgcolor="#5C87A1" valign="bottom"><FONT COLOR="white" SIZE="2"> 
+                        <apex:outputText value="{0, number, ###,###,###,##0}" rendered="{!If(ROUND(SumTPS,0) != 0 ,true ,false)}"> 
+                                <apex:param value="{!ROUND(SumTPS,0)}"/>
+                            </apex:outputText>
+                        </FONT> </th>
+                    </tr>
+                </table>
+              <p style="text-align: center;">
+                    <FONT COLOR="Black" SIZE="2">
+                <apex:OutputText style="float:center" value="  Opportunities in the table are based on the Opportunity  Owner User Division"  />
+                </FONT>
+                </p>
+            </td>
+             </tr>
+             
+             <tr>
+             <td width="40%" style="border:solid 1px;border-color:#DDDDDD;border-radius: 15px;-moz-border-radius: 15px;-webkit-border-radius: 15px;">
+			  <p style="text-align: center;">
+                    <FONT COLOR="Black" SIZE="2"><Strong>Budget vs Revenue YTD for IB ('000) ({!ISO})</Strong></FONT>
+                  </p>
+			  <p style="text-align: center;">
+                    <FONT COLOR="Black" SIZE="2"> 
+                    <Strong><apex:outputText value="The graph returned no results" rendered="{!barChartEleven}"/></Strong>
+                   </FONT>
+                   </p> 
+			   <apex:chart name="MyChart12" height="300" width="500" animate="true"  data="{!gaugeDataIB}"   colorSet="#659EC7,#84C225,#C0C0C0"   resizable="true" >
+                <apex:legend position="bottom"/>
+                <apex:axis type="Category" position="left" title="IB" grid="false"
+                    fields="name" dashSize="2">
+                    <apex:chartLabel rotate="315"/>
+                    </apex:axis>
+                   <apex:axis type="Numeric" dashSize="2" position="top" title="Amount" grid="false" minimum="0"
+                    fields="size,limitSize,tpipeline" >
+                    <apex:chartLabel rotate="315" rendererFn="axisFormat"/> 
+                    <apex:outputtext style="float:right" value="{0,date, d MMM yyyy}">
+                      <apex:param value="{!crtDate}" />
+                    </apex:outputtext>
+                    <apex:OutputText style="float:right" value="CRT data as of : "  />
+                    </apex:axis>
+                    <apex:barSeries orientation="horizontal" axis="top" groupGutter="0"
+                     yField="name" xField="size,limitSize,tpipeline" title="Revenue,Budget,IB Pipeline" tips="true" yPadding="40">
+                     <apex:chartLabel rotate="315" display="outside" rendererFn="ChartLabelRenderer"/>
+                     <apex:chartTips width="150" rendererFn="hoverFormat"/>
+                    </apex:barSeries>
+                 </apex:chart>
+			   </td>
+			   <td width="60%" style="border:solid 1px;border-color:#DDDDDD;border-radius: 15px;-moz-border-radius: 15px;-webkit-border-radius: 15px;">
+               <p style="text-align: center;">
+                    <FONT COLOR="Black" SIZE="2"><Strong>Client and Subsidiary Top Five Opportunities for IB</Strong></FONT>
+                  </p>
+                <table border="1" style="border-collapse: collapse;border-color:#696969;" align="center" width="80%"   cellspacing="  2"   cellpadding="  2"   >
+                    <tr>
+                        <th bgcolor="#5C87A1" valign="top" width="30%" style="text-align:center;"><FONT COLOR="white" SIZE="2"> Opportunity Name </FONT></th>
+                        <th bgcolor="#5C87A1" valign="top" width="30%" style="text-align:center;"><FONT COLOR="white" SIZE="2"> Grand Parent Product </FONT></th>
+                        <th bgcolor="#5C87A1" valign="top" width="30%" style="text-align:center;"><FONT COLOR="white" SIZE="2"> Stage - Probability </FONT></th>
+                        <th bgcolor="#5C87A1" valign="top" width="10%" style="text-align:center;"><FONT COLOR="white" SIZE="2"><div> Current Year </div><div>Weighted Revenue</div> </FONT></th>
+                    </tr>
+                     
+
+                    <apex:repeat value="{!OpportunitylstIB}" var="gm" rows="5">
+                    <tr>
+                        <td bgcolor="#C0C0C0" valign="bottom"><FONT COLOR="#5C87A1" SIZE="2"> 
+                        <apex:outputLink value="/{!gm.opp.Id}" id="theOpp" target="_blank">{!gm.opp.Name} 
+                        </apex:outputLink> </FONT> 
+                        </td>                        
+                        <td bgcolor="#C0C0C0" valign="bottom"><FONT COLOR="black" SIZE="2"> {!gm.grandProductName} </FONT> </td>
+                        <td bgcolor="#C0C0C0" valign="bottom"><FONT COLOR="black" SIZE="2"> {!gm.opp.StageName} - {!gm.opp.Probability} %</FONT> </td>
+                        <td bgcolor="#C0C0C0" valign="bottom"><FONT COLOR="black" SIZE="2">
+                        <apex:outputText value="{0, number, ###,###,###,##0}" rendered="{!If(ROUND(gm.currentRev,0) != 0 ,true,false)}"> 
+                                <apex:param value="{!ROUND(gm.currentRev,0)}"/>
+                            </apex:outputText>
+                        </FONT> </td>
+                    </tr>
+                    </apex:repeat>
+                    <tr>
+                        <td bgcolor="#C0C0C0" valign="bottom"><FONT COLOR="black" SIZE="2"> Rest of Pipeline </FONT></td>
+                        <td bgcolor="#C0C0C0" valign="bottom"><FONT COLOR="black" SIZE="2">  </FONT></td>
+                        <td bgcolor="#C0C0C0" valign="bottom"><FONT COLOR="black" SIZE="2">  </FONT></td>
+                        <td bgcolor="#C0C0C0" valign="bottom"><FONT COLOR="black" SIZE="2"> 
+                        <apex:outputText value="{0, number, ###,###,###,##0}" rendered="{!If(ROUND(SumIB-SumFiveIB,0) != 0 ,true,false)}"> 
+                                <apex:param value="{!ROUND(SumIB-SumFiveIB,0)}"/>
+                            </apex:outputText>
+                       </FONT> </td>
+                    </tr>
+                    <tr>
+                        <th bgcolor="#5C87A1" valign="bottom"><FONT COLOR="white" SIZE="2"> Total </FONT></th>
+                        <th bgcolor="#5C87A1" valign="bottom"><FONT COLOR="white" SIZE="2">  </FONT></th>
+                        <th bgcolor="#5C87A1" valign="bottom"><FONT COLOR="white" SIZE="2">  </FONT></th>
+                        <th bgcolor="#5C87A1" valign="bottom"><FONT COLOR="white" SIZE="2"> 
+                        <apex:outputText value="{0, number, ###,###,###,##0}" rendered="{!If(ROUND(SumIB,0) != 0 ,true ,false)}"> 
+                                <apex:param value="{!ROUND(SumIB,0)}"/> 
+                            </apex:outputText>
+                        </FONT> </th>
+                    </tr>
+                </table>
+                 <p style="text-align: center;">
+                    <FONT COLOR="Black" SIZE="2">
+                <apex:OutputText style="float:center" value="  Opportunities in the table are based on the Opportunity  Owner User Division"  />
+                </FONT>
+                </p>
+             </td>
+             </tr>
+             </table>
+         <table style="margin: 0px auto;border:none;" align="center" cellpadding="2" cellspacing="2" width="100%" >
+              
+              <tr>
+                <th  align="left" bgcolor="#5C87A1" valign="top" width="100%" height="15" style="border:none;"> 
+                  <p style="text-align: center;">
+                    <FONT COLOR="white" SIZE="2">{!IF(accountObj.isEconomicGroupParent,$Label.Economic_Group,'')} Credit Lines</FONT>
+                  </p> 
+               </th>
+               </tr> 
+            </table>
+            <table border="0" align="center" cellpadding="2" cellspacing="16" >
+             <tr>
+                 <td style="border:solid 1px;border-color:#DDDDDD;border-radius: 15px;-moz-border-radius: 15px;-webkit-border-radius: 15px;">
+             <p style="text-align: center;">
+                    <FONT COLOR="Black" SIZE="2"><strong>Credit Limit vs Total Utilisation ('000) ({!ISO})</strong> </FONT>
+                  </p>
+                  <p style="text-align: center;">
+                    <FONT COLOR="Black" SIZE="2"> 
+                    <Strong><apex:outputText value="The graph returned no results" rendered="{!barChartTwelve}"/></Strong>
+                   </FONT>
+                   </p> 
+                <apex:chart name="MyChartCL" height="300" width="800" animate="true"  data="{!CreditTotal}" colorSet="#659EC7,#C0C0C0" resizable="true" >
+                <apex:legend position="bottom"/>
+                <apex:axis type="Category" position="left" title="Products" grid="false"
+                    fields="name" >
+                    <apex:chartLabel rotate="315"/>
+                    </apex:axis>
+                   <apex:axis type="Numeric" position="top" grid="false" minimum="0"
+                    fields="cLimit,tUtiliz" >
+                    <apex:chartLabel rotate="315" rendererFn="axisFormat"/> 
+                    </apex:axis>
+                    <apex:barSeries orientation="horizontal" axis="top" groupGutter="0"
+                     yField="name" xField="cLimit,tUtiliz" title="Credit Limit,Total Utilisation" tips="true" >
+                     <apex:chartLabel rotate="315" display="outside" rendererFn="ChartLabelRenderer"/>
+                     <apex:chartTips width="150" rendererFn="hoverFormat"/>
+                    </apex:barSeries>
+                 </apex:chart>
+                 </td>
+             </tr>
+            </table>
+           
+    <table style="width:100%; font-family:Arial;text-align:center;"  border="0" cellpadding="0">
+      <tr>
+        <td style="width:100%; font-family:Arial;text-align:center;border:none;">
+          <apex:outputLabel STYLE="color:Red ;font-size:11px ; font-family:Arial;text-align:center; "  value="Real Estate is incorporated within IB Debt Products" />
+          <br/> 
+          <apex:outputLabel STYLE="color:Red ;font-size:11px ; font-family:Arial;text-align:center; "  value="This system / document is only available to authorised users and is governed by Standard Bank’s information management and compliance policies. As it may contain confidential and price sensitive information, take appropriate care before distributing. Consult compliance if you are in any doubt." />
+        </td>
+      </tr>
+      <tr>
+        <td style="width:100%; font-family:Arial;text-align:center;border:none;">
+          <apex:outputLabel STYLE="color:Red ;font-size:11px ; font-family:Arial;text-align:center; "  value="{!$Label.Help_Text_EGP_Credit_Lines_Warning}" />
+        </td>
+      </tr>
+    </table>
+    <br/><br/>
+    <table style="border:none;" align="center" cellspacing="0" cellpadding="0">
+      <tr> 
+        <td style="border:none;" valign="middle" align="center">
+          <span>
+            <apex:image url="{!URLFOR($Resource.CamProducts,'USDZAR2.png')}" height="60" />
+          </span>
+        </td>
+        <td style="border:none;" valign="middle"  align="left">
+          <apex:selectList value="{!cPlanCurrency}"
+            multiselect="false" size="1">
+            <apex:selectOptions value="{!currencies}" />
+          </apex:selectList>
+          <apex:commandButton value="Refresh" action="{!refreshPage1}" 
+            id="acctheButton" ></apex:commandButton>
+        </td>
+      </tr>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+  </apex:form></body>
+</apex:page>

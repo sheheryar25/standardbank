@@ -1,0 +1,19 @@
+<aura:component description="StdBank_Ltn_SELECTOPTION">
+    <!-- Data -->
+    <aura:attribute name="data" 		type="Object" />
+    <aura:attribute name="class" 		type="String" />
+    <aura:attribute name="classText" 	type="String" />
+    <aura:attribute name="highlight" 	type="String" />
+
+    <!-- Register event -->
+    <aura:registerEvent name="optionSelected" type="c:StdBank_Ltn_OptionSelected" />
+
+    <!-- Component -->
+    <li class="{!v.class}">
+        <a href="javascript:void(0);" onclick="{!c.doClick}">
+            <p class="{!v.classText}" aura:id="text">
+                    {!v.data.Name}
+            </p>
+        </a>
+    </li>
+</aura:component>

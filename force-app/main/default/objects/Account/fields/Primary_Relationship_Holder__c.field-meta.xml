@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Primary_Relationship_Holder__c</fullName>
+    <description>The field determines whether the client is a CIB or a CB client (EN-908).</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The field determines whether the client is a CIB or a PBB client (Commercial, Business, Small Enterprises or Personal)</inlineHelpText>
+    <label>Primary Relationship Holder</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Personal Banking</fullName>
+                <default>false</default>
+                <label>Personal Banking</label>
+            </value>
+            <value>
+                <fullName>Business Banking</fullName>
+                <default>false</default>
+                <label>Business Banking</label>
+            </value>
+            <value>
+                <fullName>Commercial Banking</fullName>
+                <default>false</default>
+                <label>Commercial Banking</label>
+            </value>
+            <value>
+                <fullName>Corporate and Investment Banking</fullName>
+                <default>false</default>
+                <label>Corporate and Investment Banking</label>
+            </value>
+            <value>
+                <fullName>Other PBB Divisions</fullName>
+                <default>false</default>
+                <label>Other PBB Divisions</label>
+            </value>
+            <value>
+                <fullName>Enterprise Banking</fullName>
+                <default>false</default>
+                <label>Enterprise Banking</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

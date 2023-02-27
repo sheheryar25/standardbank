@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>IS Service Managers Queue</name>
+    <queueMembers>
+        <users>
+            <user>gwenda.lewis@standardbank.co.za</user>
+            <user>sibongile.zwane@standardbank.co.za</user>
+            <user>nathan.reddy@standardbank.co.za</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Call_Report__c</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

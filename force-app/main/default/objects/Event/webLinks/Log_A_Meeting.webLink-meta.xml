@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Log_A_Meeting</fullName>
+    <availability>online</availability>
+    <description>EMEA_SOW_StandardBank_009: Requirement 22: Enable users to click a &apos;Log A Meeting&apos; button and pre-populate a new Event record with field values.
+Currently only usable from Client, Contact or Opportunity.</description>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>Log A Meeting</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <requireRowSelection>false</requireRowSelection>
+    <url>/00U/e?what_id={!Opportunity.Id}&amp;evt10=Meeting&amp;retURL=/{!Opportunity.Id}</url>
+</WebLink>

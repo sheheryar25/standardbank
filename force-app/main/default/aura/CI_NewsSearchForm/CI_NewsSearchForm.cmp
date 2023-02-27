@@ -1,0 +1,138 @@
+<aura:component description="CI_NewsSearchForm" controller="CI_NewsSearchFormController" implements="force:AppHostable">
+    <aura:attribute name="SearchParams" type="List"
+                    default="['Sb_Group_Sectors','Sb_Sub_Sectors','Pred','Countries']"/>
+    <aura:attribute name="CurrentUser" type="Object"/>
+    <aura:attribute name="isMyPortfolio" type="Boolean" default="false" access="global"/>
+    <aura:attribute name="recordId" type="String" access="global"/>
+    <aura:attribute name="showFilters" type="Boolean" default="false" access="global"/>
+    <aura:attribute name="isMyPortfolioChanged" type="Boolean" default="false" access="global"/>
+    <aura:attribute name="regionsList" type="list" access="private"/>
+    <aura:attribute name="countriesList" type="list" access="private"/>
+    <aura:attribute name="region2Countries" type="map" access="private"/>
+    <aura:attribute name="disabledCountries" type="boolean" default="false" access="private"/>
+    <aura:attribute name="region" type="String" access="private"/>
+    <aura:attribute name="regionCountry" type="String" access="private"/>
+    <aura:attribute name="clientCommBRecordTypeId" type="String" access="private" />
+
+    <aura:handler name="init" value="this" action="{!c.init}"/>
+
+    <aura:registerEvent name="CI_NewsSearchParamsChanged" type="c:CI_NewsSearchParamsChanged"/>
+    <aura:registerEvent name="CI_NewsPortfolioChanged" type="c:CI_NewsPortfolioChanged"/>
+    <aura:registerEvent name="CI_SmartNewsFilterDisplay" type="c:CI_SmartNewsFilterDisplay"/>
+
+    <lightning:card title="Smart News" iconName="standard:channel_programs">
+        <aura:set attribute="actions">
+            <lightning:buttonIcon size="large" class="filterButton" iconName="utility:filter" variant="bare"
+                                  onclick="{! c.showFilters }" alternativeText="Show Filters" title="Search"/>
+        </aura:set>
+        <div class="NewsSearchForm">
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_3-of-8 desktopPadding">
+                    <lightning:recordEditForm objectApiName="Account" recordTypeId="{!v.clientCommBRecordTypeId}">
+                        <lightning:inputField class="leftSide resetPadding" fieldName="Client_Sector__c" aura:id="Sb_Group_Sectors"/>
+                        <lightning:inputField class="rightSide resetPadding" fieldName="Client_Sub_Sector__c" aura:id="Sb_Sub_Sectors"/>
+                    </lightning:recordEditForm>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_2-of-8 desktopPadding">
+                    <div class="leftSide">
+                        <label class="slds-form-element__label">Region</label>
+                        <lightning:helptext class="customIcon"
+                                            content="All News related to this chosen location will be displayed in the News Feed below."/>
+                        <lightning:combobox class="selectRegion"
+                                            aura:id = 'Regions'
+                                            value="{!v.region}"
+                                            onchange="{!c.onControllerFieldChange}"
+                                            options="{!v.regionsList}"
+                                            label=""
+                                            variant="label-hidden"
+                                            placeholder="--None--">
+                        </lightning:combobox>
+
+                    </div>
+                    <div class="rightSide">
+                        <label class="slds-form-element__label">Country</label>
+                        <lightning:helptext class="customIcon"
+                                            content="All News related to this chosen location will be displayed in the News Feed below."/>
+                        <ui:scrollerWrapper class="scrollerSize">
+                            <lightning:combobox class="selectRegion"
+                                                aura:id = 'Countries'
+                                                value="{!v.regionCountry}"
+                                                disabled="{!v.disabledCountries}"
+                                                options="{!v.countriesList}"
+                                                label=""
+                                                variant="label-hidden"
+                                                placeholder="--None--">
+                            </lightning:combobox>
+                        </ui:scrollerWrapper>
+                    </div>
+                </div>
+                <aura:if isTrue="{!or($Browser.isIPad, $Browser.isTablet)}">
+                    <div class="slds-col slds-grid_vertical slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_2-of-8 slds-p-left_xx-large">
+                        <div class="leftSide slds-col" style="width:30%; margin-bottom: 17px;">
+                            <label class="slds-form-element__label">Lead</label>
+                            <lightning:helptext class="customIcon"
+                                                content="Toggle ON, to view News articles that have been flagged as potential leads.
+                                 Click on the article “Lead” button to create a new opportunity."/>
+                            <lightning:input label="" type="toggle" aura:id="Pred"
+                                             messageToggleInactive="" messageToggleActive=""/>
+                        </div>
+                        <aura:if isTrue="{!v.recordId == null}">
+                            <div class="rightSide slds-col" style="width:74%;">
+                                <label class="slds-form-element__label">My Portfolio of Clients</label>
+                                <lightning:helptext class="customIcon"
+                                                    content="Toggle ON, to only view News related to your Portfolio of Clients."/>
+                                <lightning:input type="toggle" label="" aura:id="isMyPortfolio" value="{!v.isMyPortfolio}"
+                                                 checked="{!v.isMyPortfolio}" onchange="{!c.myPortfolioChange}"
+                                                 messageToggleInactive="" messageToggleActive=""/>
+                            </div>
+                        </aura:if>
+                        <aura:if isTrue="{!v.recordId != null}">
+                            <div class="rightSide" style="width:74%">
+                                <label class="slds-form-element__label">My Portfolio of Clients</label>
+                                <lightning:helptext class="customIcon"
+                                                    content="Toggle ON, to only view News related to your Portfolio of Clients."/>
+                                <lightning:input type="toggle" disabled="true" label="" aura:id="" checked="false"
+                                                 messageToggleInactive="" messageToggleActive=""/>
+                            </div>
+                        </aura:if>
+                    </div>
+                </aura:if>
+                <aura:if isTrue="{!not(or($Browser.isIPad, $Browser.isTablet))}">
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_2-of-8 desktopPadding desktopToggles">
+                    <div class="leftSide slds-col" style="width:24%; float:left;">
+                        <label class="slds-form-element__label">Lead</label>
+                        <lightning:helptext class="customIcon"
+                                            content="Toggle ON, to view News articles that have been flagged as potential leads.
+                                 Click on the article “Lead” button to create a new opportunity."/>
+                        <lightning:input label="" type="toggle" aura:id="Pred"
+                                         messageToggleInactive="" messageToggleActive=""/>
+                    </div>
+                    <aura:if isTrue="{!v.recordId == null}">
+                        <div class="rightSide slds-col" style="width:74%; float:right;">
+                            <label class="slds-form-element__label">My Portfolio of Clients</label>
+                            <lightning:helptext class="customIcon"
+                                                content="Toggle ON, to only view News related to your Portfolio of Clients."/>
+                            <lightning:input type="toggle" label="" aura:id="isMyPortfolio" value="{!v.isMyPortfolio}"
+                                             checked="{!v.isMyPortfolio}" onchange="{!c.myPortfolioChange}"
+                                             messageToggleInactive="" messageToggleActive=""/>
+                        </div>
+                    </aura:if>
+                    <aura:if isTrue="{!v.recordId != null}">
+                        <div class="rightSide slds-col" style="width:74%; float:right;">
+                            <label class="slds-form-element__label">My Portfolio of Clients</label>
+                            <lightning:helptext class="customIcon"
+                                                content="Toggle ON, to only view News related to your Portfolio of Clients."/>
+                            <lightning:input type="toggle" disabled="true" label="" aura:id="" checked="false"
+                                             messageToggleInactive="" messageToggleActive=""/>
+                        </div>
+                    </aura:if>
+                </div>
+                </aura:if>
+                <div class="slds-col slds-text-align_center slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_1-of-8 slds-align_absolute-center">
+                    <lightning:button class="slds-button_brand desktopButton" label="Apply"
+                                      onclick="{!c.doApply}" aura:id="ApplyButton"/>
+                </div>
+            </div>
+        </div>
+    </lightning:card>
+</aura:component>

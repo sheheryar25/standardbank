@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Facility_Size__c</fullName>
+    <description>The size of the facility that the client needs. Each facility required should be its own product. If the SB participation needs to be booked across multiple balance sheets, then the facility size should be split pro-rata into multiple products. SGPRT-1229</description>
+    <externalId>false</externalId>
+    <formula>Product__r.Facility_Size__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>The size of the facility that the client needs. Each facility required should be its own product. If the SB participation needs to be booked across multiple balance sheets, then the facility size should be split pro-rata into multiple products.</inlineHelpText>
+    <label>Facility Size</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

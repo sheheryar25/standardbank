@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Target_Client_Contact_Category__c</fullName>
+    <description>Case#1168 - 11/2011 - Rudolf Niehaus
+            The target level of clients contacts for the campaign based on the organisational hierarchy designation</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Senior Executive = the most senior employees in an organisation;
+            Senior Manager = less senior employees in an organisation;
+            Manager = general managerial employees in an organisation;
+            Staff = general employees in an organisation</inlineHelpText>
+    <label>Target Client Contact Category</label>
+    <required>false</required>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Senior Executive</fullName>
+                <default>false</default>
+                <label>Senior Executive</label>
+            </value>
+            <value>
+                <fullName>Senior Manager</fullName>
+                <default>false</default>
+                <label>Senior Manager</label>
+            </value>
+            <value>
+                <fullName>Manager</fullName>
+                <default>false</default>
+                <label>Manager</label>
+            </value>
+            <value>
+                <fullName>Staff</fullName>
+                <default>false</default>
+                <label>Staff</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

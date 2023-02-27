@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>External_Meetings_Scheduled__c</fullName>
+    <description>EN-0695-Amount of Future External Client Meetings (This Year)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The number of  External Client Meetings scheduled for later this year (After Today)</inlineHelpText>
+    <label>External Meetings Scheduled</label>
+    <precision>4</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

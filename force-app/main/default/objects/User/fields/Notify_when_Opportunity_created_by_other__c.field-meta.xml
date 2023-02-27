@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Notify_when_Opportunity_created_by_other__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>EMEA_SOW_StandardBank_009: Requirement to notify (email) the Client owner when an opportunity is created on the Client by a different user (i.e., who does not own the Client).</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Notify me by email when an opportunity is created for a Client I own by a different user (i.e., who does not own the Client).</inlineHelpText>
+    <label>Notify when Opportunity created by other</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

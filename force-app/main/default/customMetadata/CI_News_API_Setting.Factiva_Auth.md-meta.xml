@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Factiva Auth</label>
+    <protected>false</protected>
+    <values>
+        <field>Client_ID__c</field>
+        <value xsi:type="xsd:string">aZfvKuh6F4epL7021xDRGCqAriGl96JD</value>
+    </values>
+    <values>
+        <field>Endpoint_URL__c</field>
+        <value xsi:type="xsd:string">https://accounts.dowjones.com/oauth2/v1/token</value>
+    </values>
+    <values>
+        <field>Password__c</field>
+        <value xsi:type="xsd:string">b0e897627da44183bc8c85f0534fde11</value>
+    </values>
+    <values>
+        <field>Username__c</field>
+        <value xsi:type="xsd:string">9STA030900-svcaccount@dowjones.com</value>
+    </values>
+</CustomMetadata>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CommB_Client_SBSA_Default</fullName>
+    <active>true</active>
+    <description>US-3537:
+This validation will fire when a commB client is saved, it will check that the KYC Location is set to SBSA</description>
+    <errorConditionFormula>AND(
+CASE($Profile.Name,
+&quot;Api User&quot;, 1,
+&quot;System Administrator&quot;, 1,
+&quot;Business Administrator&quot;, 1,
+0) = 0 ,
+ISPICKVAL( Primary_Relationship_Holder__c , &apos;Commercial Banking&apos; )&amp;&amp;
+NOT( ISPICKVAL( Path_Steps__c, &apos;Create Prospect&apos; ) )&amp;&amp;
+NOT( ISPICKVAL( KYC_Location__c, &apos;SBSA - Standard Bank of South Africa Ltd&apos; ) )&amp;&amp;
+NOT( ISPICKVAL( CIF_Client_Active_Code__c, &apos;Active&apos;  ) )&amp;&amp;
+(
+  ( RecordType.Name = &apos;Potential Client&apos; )||
+  ( RecordType.Name = &apos;Potential (Goldtier)&apos; )||
+  ( RecordType.Name = &apos;Potential (CIF)&apos; )
+))</errorConditionFormula>
+    <errorMessage>Please select KYC Location : SBSA- Standard Bank of South Africa Ltd</errorMessage>
+</ValidationRule>

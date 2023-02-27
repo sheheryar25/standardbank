@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sync_with_Contact__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>SHAVEEN06DEC2010 CASE599 &gt; Create a new contact for this USER, else find the BANK CONTACT based on SAM ACCOUNT name and link its BANK CONTACT&apos;s ID to this USER.</description>
+    <externalId>false</externalId>
+    <label>Sync with Contact</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

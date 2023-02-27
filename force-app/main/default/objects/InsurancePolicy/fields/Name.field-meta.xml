@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Name</fullName>
+    <description>SFP-12591  - Policy number Insurer will provide</description>
+    <inlineHelpText>Policy number the Insurer will provide to Standard Bank.</inlineHelpText>
+    <trackHistory>false</trackHistory>
+</CustomField>

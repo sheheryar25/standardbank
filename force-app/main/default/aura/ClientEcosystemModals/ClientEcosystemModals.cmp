@@ -1,0 +1,57 @@
+<!--
+ - Created by Emmanuel Mulea on 2020/03/09.
+ -->
+
+<aura:component  description="ClientEcosystemModals" implements="lightning:actionOverride,force:hasSObjectName">
+    <aura:attribute name="baseUrl" type="string"/>
+    <aura:attribute name="isRGN" type="Boolean"/>
+    <aura:attribute name="isParent" type="Boolean" />
+    <aura:registerEvent name="ClientEcosystemModal_Event" type="c:ClientEcosystem_Event"/>
+    <aura:if isTrue="{!and(not(v.isRGN),v.isParent)}">
+        <section role="dialog" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <div class="slds-is-relative">
+                    <header class="slds-modal__header">
+                        <lightning:buttonIcon iconName="utility:close" class="slds-button_icon slds-modal__close" variant="bare-inverse" size="large" title="Close" alternativeText="Close" onclick="{!c.onCancel}" />
+                        <h2 class="slds-text-heading_medium slds-hyphenate">Relationship Group Number</h2>
+                    </header>
+                    <div class="slds-modal__content slds-p-around_medium">
+                        <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_warning" role="alert">
+                            <span class="slds-assistive-text">warning</span>
+                            <lightning:icon iconName="utility:warning" size="x-small" class="slds-m-right_x-small" alternativeText="warning"/>
+                            <h2>Please provide Relationship Group Number for this client before you create an ecosystem.</h2>
+                        </div>
+                    </div>
+                    <footer class="slds-modal__footer">
+                        <button class="slds-button slds-button_neutral" onclick="{!c.onCancel}">Cancel</button>
+                    </footer>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </aura:if>
+    <aura:if isTrue="{!and(not(v.isParent),v.isRGN)}">
+        <section role="dialog" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <div class="slds-is-relative">
+                    <header class="slds-modal__header">
+                        <lightning:buttonIcon iconName="utility:close" class="slds-button_icon slds-modal__close" variant="bare-inverse" size="large" title="Close" alternativeText="Close" onclick="{!c.onCancel}" />
+                        <h2 class="slds-text-heading_medium slds-hyphenate">Parent Client</h2>
+                    </header>
+                    <div class="slds-modal__content slds-p-around_medium">
+                        <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_warning" role="alert">
+                            <span class="slds-assistive-text">warning</span>
+                            <lightning:icon iconName="utility:warning" size="x-small" class="slds-m-right_x-small" alternativeText="warning"/>
+                                <h2>Please use Group Parent to create an ecosystem.</h2>
+
+                        </div>
+                    </div>
+                    <footer class="slds-modal__footer">
+                        <button class="slds-button slds-button_neutral" onclick="{!c.onCancel}">Cancel</button>
+                    </footer>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </aura:if>
+</aura:component>

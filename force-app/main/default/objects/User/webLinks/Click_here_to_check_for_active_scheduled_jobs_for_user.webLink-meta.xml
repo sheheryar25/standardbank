@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Click_here_to_check_for_active_scheduled_jobs_for_user</fullName>
+    <availability>online</availability>
+    <description>Checking for active schedule</description>
+    <displayType>link</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Click here to check for active scheduled jobs for user</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!requireScript(&quot;/soap/ajax/21.0/connection.js&quot;)}
+            {!requireScript(&quot;/soap/ajax/21.0/apex.js&quot;)}
+            //alert(&apos;{!User.Id}&apos;);
+
+            //var valOwner =&quot;&apos;00520000000lPx5AAE&apos;&quot;;
+
+            var valOwner =&quot;&apos;&quot;+&apos;{!User.Id}&apos;+&quot;&apos;&quot;;
+            //alert(&apos;varOwner&apos;+valOwner );
+
+            var state = {
+            output : document.getElementById(&quot;output&quot;),
+            startTime : new Date().getTime()
+            };
+
+            var callback = { onSuccess: layoutResults, onFailure: queryFailed,source: state};
+            var query =&quot;Select OwnerId, Id, CronExpression From CronTrigger where OwnerId=&quot;+valOwner;
+            //alert(&apos;=== query====&apos;+query);
+            sforce.connection.query(query,callback);
+
+            function queryFailed(error, source) {
+            //alert(&apos;error&apos;+error);
+            // alert(&apos;query failed&apos;);
+
+            }
+
+            function layoutResults(queryResult, source) {
+            //alert(queryResult);
+            // alert(&apos;in page layout&apos;);
+            if(queryResult.size ==0){
+            alert(&apos;User is not an owner for any active scheduled jobs.&apos;);
+            }
+            if (queryResult.size &gt; 0) {
+            var output = &quot;&quot;;
+
+            //get the records array
+
+            var records = queryResult.getArray(&apos;records&apos;);
+            //alert(records);
+            //loop through the records and construct html string
+
+
+            for (var i = 0; i &lt; records.length; i++) {
+            var contri = records[i];
+            //alert(&apos;contri &apos;+i+contri);
+
+            output += &quot;JOB ID :  &quot;+contri.Id + &apos;\n&apos;;
+            }
+
+            // var newout=&quot;This user is Owner for following active  jobs:&quot; +&apos;\n\n&apos;+output;
+            var vNewOutput =&quot;User has one or more active scheduled jobs. Please unscheduled these jobs before deactivating the user account.&quot;;
+            alert(vNewOutput );
+
+            //render the generated html string
+
+            // source.output.innerHTML = output;
+            }
+            }</url>
+</WebLink>

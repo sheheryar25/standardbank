@@ -1,0 +1,6 @@
+<design:component >
+	<design:attribute name="comp1Name" label="Top left Component" description="Name of the component to be displayed on the top left in columns section" />
+	<design:attribute name="comp2Name" label="2nd Left Component" description="Name of the component to be displayed in the 2nd Left in columns section" />
+	<design:attribute name="comp3Name" label="3rd Left Component" description="Name of the component to be displayed on the 3rd Left in columns section" />
+    <design:attribute name="comp4Name" label="4th Left Component" description="Name of the component to be displayed on the top right in columns section" />
+</design:component>

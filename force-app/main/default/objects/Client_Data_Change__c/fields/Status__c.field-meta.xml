@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <description>The status keeps the track of the record for different approval steps. EN-0676</description>
+    <externalId>false</externalId>
+    <label>Status</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>New</fullName>
+                <default>true</default>
+                <label>New</label>
+            </value>
+            <value>
+                <fullName>Submitted For Approval</fullName>
+                <default>false</default>
+                <label>Submitted For Approval</label>
+            </value>
+            <value>
+                <fullName>Approved – Awaiting Execution</fullName>
+                <default>false</default>
+                <label>Approved – Awaiting Execution</label>
+            </value>
+            <value>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+                <label>Rejected</label>
+            </value>
+            <value>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+                <label>Cancelled</label>
+            </value>
+            <value>
+                <fullName>Data Update Completed</fullName>
+                <default>false</default>
+                <label>Data Update Completed</label>
+            </value>
+            <value>
+                <fullName>Data Update Not Completed</fullName>
+                <default>false</default>
+                <label>Data Update Not Completed</label>
+            </value>
+            <value>
+                <fullName>Approval Step Completed</fullName>
+                <default>false</default>
+                <label>Approval Step Completed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,94 @@
+<aura:component controller="StdBank_Ltn_Ecosystem">
+
+	<!--These are public attributes-->
+	<aura:attribute name="recordId" type="Id" access="public"
+					description="This is the Ecosystem ID that this new enity should be attached to"/>
+	<aura:attribute name="unbanked" type="Boolean" access="public" default="false"
+					description="If this is set to true then we are dealing with an unbanked client"/>
+	<aura:attribute name="type" type="String"/>
+	<aura:attribute name="user_input" type="String" access="public" default=""
+					description="This will hold the user input for the search field" />
+
+	<!--These are private attribute-->
+	<aura:attribute name="enableSave" type="Boolean" default="false" access="private"
+					description="This will be used to indicate if the Save buttons should be enabled"/>
+	<aura:attribute name="isSaving" type="Boolean" default="false" access="private"
+					description="This will hold be used to indicate that the record is currently being saved"/>
+	<aura:attribute name="account" type="Account" access="private" description="This is the account that was selected"/>
+	<aura:attribute name="index" type="Integer" default="-1" access="private" description="This will be used to store index of value that is clicked"/>
+	<aura:attribute name="isWaiting" type="Boolean" default="false" access="private"
+					description="This will indicate that there is a wait for server response and the spinner should be active"/>
+	<aura:attribute name="newClient" type="Boolean" default="false" access="private"
+					description="If this is set to true the new Client modal will be rendered"/>
+	<aura:attribute name="prh_picklist_options" type="List" access="private"/>
+	<aura:attribute name="primaryRelationshipHolder" type="String" access="private" />
+	<aura:attribute name="isCIBorCommB" type="Boolean" access="private" default="true"/>
+	<!--Register events-->
+	<aura:registerEvent name="oncancel" type="c:ecosystemCancel" />
+	<aura:registerEvent name="oncreated" type="c:ecosystemCreated" />
+
+	<!--Register the event handler-->
+	<aura:handler name="init" value="{!this}" action="{!c.onInit}" />
+	<aura:handler name="change" value="{!v.account}" action="{!c.onAccountChange}"/>
+	<aura:handler name="lookup_cleared" event="c:EcosystemLookupClearedEvent" action="{!c.onLookupCleared}"/>
+
+	<section role="dialog" class="slds-modal slds-fade-in-open">
+		<div class="slds-modal__container">
+			<div class="slds-is-relative">
+				<aura:if isTrue="{!v.isWaiting}">
+					<lightning:spinner variant="brand" size="medium" alternativeText="Loading"/>
+				</aura:if>
+				<header class="slds-modal__header">
+					<h2 class="slds-text-heading_medium slds-hyphenate" style="font-family:verdana;color:Gray">
+						<aura:if isTrue="{!v.unbanked}">
+							Create Unbanked Entity
+							<aura:set attribute="else">
+								Create Banked Entity
+							</aura:set>
+						</aura:if>
+					</h2>
+				</header>
+				<div class="slds-modal__content slds-p-around_medium" style="overflow:visible;">
+					<div class="slds-form slds-form_horizontal">
+						<aura:if isTrue="{!v.unbanked}">
+						<div class="slds-form-element">
+							<lightning:select aura:id="prh_select" label="Primary Relationship Holder" required="true" onchange="{!c.onSelectChange}">
+								<option disabled="{!true}" selected="{!empty( v.primaryRelationshipHolder )}">--None--</option>
+								<aura:iteration items="{!v.prh_picklist_options}" var="prh_current_option">
+									<option value="{!prh_current_option}" selected="{!v.primaryRelationshipHolder == prh_current_option}">{!prh_current_option}</option>
+								</aura:iteration>
+							</lightning:select>
+						</div>
+						</aura:if>
+						<div class="slds-form-element">
+
+							<aura:if isTrue="{!v.isCIBorCommB}">
+							<c:EcosystemLookupField aura:id="object_lookup"  is_banked="{!not(v.unbanked)}" new_client="{!v.newClient}"
+													selected_record="{!v.account}" input_value="{!v.user_input}" ecosystem_id="{!v.recordId}"/>
+							<aura:set attribute="else">
+								<lightning:input aura:id="ClientName" label="Client Name" value="{!v.user_input}" onchange="{!c.onClientNameTextChange}"/>
+							</aura:set>
+
+							</aura:if>
+						</div>
+						<aura:if isTrue="{!not( v.unbanked )}">
+							<div class="slds-form-element">
+								<lightning:input aura:id="cif" required="{!not(v.unbanked)}" label="CIF Number" disabled="true" value="{!v.account.CIF__c}"/>
+							</div>
+						</aura:if>
+					</div>
+				</div>
+				<footer class="slds-modal__footer">
+					<lightning:button variant="neutral" label="Cancel" onclick="{!c.onCancel}"/>
+					<lightning:button variant="neutral" label="Save &amp; New" disabled="{!not( v.enableSave )}" onclick="{!c.onSaveAndNew}"/>
+					<lightning:button variant="brand" label="Save" disabled="{!not( v.enableSave )}" onclick="{!c.onSave}"/>
+				</footer>
+			</div>
+		</div>
+	</section>
+	<div class="slds-backdrop slds-backdrop_open"></div>
+	<aura:if isTrue="{!v.newClient}">
+		<c:EcosystemNewClient prh="{!v.primaryRelationshipHolder}" banked="{!not(v.unbanked)}" oncancel="{!c.onNewClientCancel}" oncreated="{!c.onNewClientCreated}" accountName="{!v.user_input}" />
+	</aura:if>
+
+</aura:component>

@@ -1,0 +1,51 @@
+<aura:component controller="Ltn_CreditUtilisationVsLimitCtrl" implements="flexipage:availableForAllPageTypes,force:hasRecordId">
+    <aura:attribute name="utilisation" type="decimal" />
+    <aura:attribute name="limit" type="decimal" />
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="isEconomicGroupParent" type="Boolean" />
+    <aura:attribute name="notAvailable" type="String" />
+    <aura:attribute name="hasCreditLines" type="Boolean"/>
+    <aura:attribute name="isLimited" type="Boolean" />
+    <aura:attribute name="isoCode" type="String" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <article class="slds-card slds-is-relative " style="background-color: inherit; height:100%">
+        <div class="slds-grid slds-card__body slds-p-around_small  border-box" style="height:100%">
+            <div class="slds-col slds-align-middle">
+                <p class="slds-text-body_small slds-text-align_center">
+                    <aura:if isTrue="{!v.isEconomicGroupParent}">
+                        {!$Label.c.Economic_Group_Credit_Limit_and_Utilisation}
+                        <aura:set attribute="else">
+                            {!$Label.c.Client_Credit_Limit_and_Utilisation}
+                        </aura:set>
+                    </aura:if>
+                </p>
+                <div class="slds-text-heading_medium slds-text-align_center">
+                    <aura:if isTrue="{!v.isLimited}">
+                        {!$Label.c.Limited_to_client_team}
+                        <aura:set attribute="else">
+                            <aura:if isTrue="{! !v.hasCreditLines}">
+                                {!v.notAvailable}
+                                <aura:set attribute="else">
+                                    <div class="slds-grid_reverse slds-grid_align-center slds-p-around_small" style="height:100%">
+                                        <div class="slds-col slds-border_bottom">
+                                            {!v.isoCode + ' '} <ui:outputNumber value="{!v.limit}" format="0.00"/> M
+                                        </div>
+                                        <div class="slds-col slds-text-align_center">
+                                            {!v.isoCode + ' '} <ui:outputNumber value="{!v.utilisation}" format="0.00"/> M
+                                        </div>
+                                    </div>
+                                </aura:set>
+                            </aura:if>
+                        </aura:set>
+                    </aura:if>
+                </div>
+            </div>
+        </div>
+        <aura:if isTrue="{!v.isEconomicGroupParent}">
+            <c:UTL_HelpText text="{!$Label.c.Help_Text_Economic_group_credit_limit_and_utilisation}" />
+            <aura:set attribute="else">
+                <c:UTL_HelpText text="{!$Label.c.Help_Text_Client_credit_limit_and_utilisation}" />
+            </aura:set>
+        </aura:if>        
+    </article>
+</aura:component>

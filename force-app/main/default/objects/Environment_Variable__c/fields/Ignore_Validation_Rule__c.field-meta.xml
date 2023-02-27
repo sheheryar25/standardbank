@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ignore_Validation_Rule__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Regression: Case#548 - Replaced user object field with custom setting field. This setting is used as part of the condition in validation rules to ignore the rule.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Set to True if validation rules must be ignored</inlineHelpText>
+    <label>Ignore Validation Rule</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

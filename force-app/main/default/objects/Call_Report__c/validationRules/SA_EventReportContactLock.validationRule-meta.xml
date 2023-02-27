@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SA_EventReportContactLock</fullName>
+    <active>true</active>
+    <description>Case# 1168 - Rudolf Niehaus - 01/2012
+            Make sure the user can not link a contact if there is already a lead linked to this event report</description>
+    <errorConditionFormula>(ISCHANGED( Report_Client_Contact__c ) &amp;&amp; !( CONTAINS(Report_Client_Contact__c, &apos;Deleted&apos;) ))  &amp;&amp; !( ISBLANK( Report_Client_Lead__c ) )</errorConditionFormula>
+    <errorDisplayField>Report_Client_Contact__c</errorDisplayField>
+    <errorMessage>You cannot link a Contact if there is already a Lead linked to this Event Report. First &quot;Delete&quot; the Lead link and then add the Contact link.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Close_Date__c</fullName>
+    <description>&quot;US-4450
+            Timestamp of the feedback (when it was captured)
+            Created by Salesforce at the time pf the saving of the opportunity
+            Part of data export back to Smart2&quot;</description>
+    <externalId>false</externalId>
+    <label>Close Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

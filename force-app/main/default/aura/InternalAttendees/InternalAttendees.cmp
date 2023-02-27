@@ -1,0 +1,129 @@
+<!--
+ - Created by mjaznicki on 29.08.2018.
+ -->
+
+<aura:component description="InternalAttendees" implements="lightning:isUrlAddressable,force:hasRecordId"
+                controller="InternalAttendeeController">
+    <aura:attribute name="attList" type="List"/>
+    <aura:attribute name="currentAttendees" type="List"/>
+    <aura:attribute name="iterator" type="Integer" default="1"/>
+    <aura:attribute name="showSpinner" type="Boolean" default="true"/>
+    <aura:attribute name="isCoreClient" type="Boolean" default="false"/>
+
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler name="change" value="{!v.pageReference}" action="{!c.doInit}"/>
+    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+             aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-modal_large">
+        <ui:scrollerWrapper class="scrollerSize">
+            <div class="{!if($Browser.isPhone , '' , 'slds-modal__container')}">
+                <div style="max-height:90vh">
+                    <header class="slds-modal__header">
+                        <button class="slds-button slds-button_icon-inverse slds-modal__close" onclick="{!c.onCancel}">
+                            <lightning:icon iconName="utility:close" size="medium" variant="bare"/>
+                            <span class="slds-assistive-text">Close</span>
+                        </button>
+                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Add Internal
+                            Attendees</h2>
+                    </header>
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1"
+                         style="overflow:visible">
+                        <aura:if isTrue="{!v.showSpinner}">
+                            <lightning:spinner alternativeText="Loading" size="large" class=""/>
+                        </aura:if>
+                        <aura:if isTrue="{!v.isCoreClient}">
+                            <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_info"
+                                 role="alert">
+                                Internal core client team meetings require at least 2 core client team members in the
+                                Attendees section.
+                            </div>
+                        </aura:if>
+                        <table class="slds-table slds-max-medium-table_stacked">
+                            <thead>
+                            <tr class="slds-text-title_caps">
+                                <th scope="col">
+                                    <div class="slds-truncate" title="Add/Remove">Add/Remove</div>
+                                </th>
+                                <th scope="col">
+                                    <div class="slds-truncate" title="Attendee Name">Attendee Name</div>
+                                </th>
+                                <th scope="col">
+                                    <div class="slds-truncate" title="Client Team Role">Client Team Role</div>
+                                </th>
+                                <th scope="col">
+                                    <div class="slds-truncate" title="Cost Per Attendee">Cost Per Attendee</div>
+                                </th>
+                                <th>
+                                    <table>
+                                        <th scope="col">
+                                            <div class="slds-truncate" title="Status">Status</div>
+                                        </th>
+                                        <th scope="col">
+                                            <div class="slds-truncate" title="Distribution">Distribution</div>
+                                        </th>
+                                    </table>
+                                </th>
+
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <aura:iteration items="{!v.attList}" var="cell">
+
+                                <tr class="{!if(!cell.errorMessage, if(!cell.addRemove,'', 'slds-theme_shade'), 'slds-theme_error slds-text-color_default')}">
+
+                                    <td scope="row" data-label="Add/Remove" class="slds-cell-shrink slds-cell-wrap">
+                                        <ui:inputCheckbox value="{!cell.addRemove}" disabled="{!cell.isOwner}"/>
+                                    </td>
+                                    <td scope="row" data-label="Attendee Name" style="overflow:visible">
+                                        <aura:if isTrue="{!not(cell.isOwner)}">
+                                            <c:recordField showLabel="false" fieldName="Contact_id__c"
+                                                           record="{!cell.sobjAttendee}" editMode="true"/>
+                                            <aura:set attribute="else">
+                                                {!cell.sobjAttendee.Contact_id__r.Name}
+                                            </aura:set>
+                                        </aura:if>
+                                    </td>
+                                    <td scope="row"
+                                        data-label="Client Team Role">{!cell.sobjAttendee.Client_Team_Role__c}</td>
+                                    <td scope="row"
+                                        data-label="Cost Per Attendee">{!cell.sobjAttendee.Costs_Per_Attendee__c}</td>
+                                    <td>
+                                        <table>
+                                            <lightning:recordEditForm objectApiName="Call_Report_Attendees__c">
+                                                <tr>
+                                                    <td scope="row" data-label="Status">
+                                                        <c:recordField showLabel="false" fieldName="Status__c"
+                                                                       record="{!cell.sobjAttendee}"
+                                                                       editMode="true"
+                                                                       includeRecordEditForm="false"/>
+                                                    </td>
+                                                    <td scope="row" data-label="Distribution">
+                                                        <c:recordField showLabel="false" fieldName="Send_Email__c"
+                                                                       record="{!cell.sobjAttendee}"
+                                                                       editMode="true"
+                                                                       includeRecordEditForm="false"/>
+                                                    </td>
+                                                </tr>
+                                            </lightning:recordEditForm>
+                                        </table>
+
+                                    </td>
+                                </tr>
+                            </aura:iteration>
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <footer class="slds-modal__footer" style="{!if($Browser.isPhone ,  'height:100px','')}">
+                        <lightning:button type="button" onclick="{!c.onCancel}" label="Cancel"/>
+                        <lightning:button type="button" onclick="{!c.addRow}" label="Add row"/>
+                        <lightning:button type="button" variant="brand" onclick="{!c.onSave}" label="Save"/>
+                    </footer>
+                </div>
+            </div>
+        </ui:scrollerWrapper>
+    </section>
+
+
+    <div class="{!if($Browser.isPhone , '' , 'slds-backdrop slds-backdrop_open')}"></div>
+</aura:component>

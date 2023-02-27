@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DRP_Applicable_To_req_FMA_Discrepancy</fullName>
+    <active>true</active>
+    <description>When FMA Discrepancy is selected, DRP Applicable To cannot be blank</description>
+    <errorConditionFormula>AND(TEXT( Applicable_To__c ) = NULL, FMA_Discrepancy__c)</errorConditionFormula>
+    <errorDisplayField>Applicable_To__c</errorDisplayField>
+    <errorMessage>Applicable To cannot be blank when FMA Discrepancy is selected</errorMessage>
+</ValidationRule>

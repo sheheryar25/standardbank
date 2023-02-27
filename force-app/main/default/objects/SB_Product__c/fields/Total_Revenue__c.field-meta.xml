@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Revenue__c</fullName>
+    <externalId>false</externalId>
+    <formula>(Total_Fees__c +  Total_Margin__c  +  Total_Other__c) *  Opportunity__r.Probability</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Equals the Total Revenue * the Opportunity Probability Percentage</inlineHelpText>
+    <label>Total Weighted Product Revenue</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

@@ -1,0 +1,4 @@
+<aura:component implements="force:lightningQuickActionWithoutHeader,force:hasRecordId">
+	<aura:handler event="c:ComponentAction" action="{!c.componentActionHandler}"/>
+	<c:NBAC_OpportunitySelection recordId="{!v.recordId}"/>
+</aura:component>

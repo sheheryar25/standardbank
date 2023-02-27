@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Users_Cannot_Delete_KYC_Records</fullName>
+    <active>true</active>
+    <description>This Validation Rule takes care of users trying to delete KYC Records</description>
+    <errorConditionFormula>AND( PriorValue( SBG_KYC_records__c ) &gt; SBG_KYC_records__c , $Profile.Name != &apos;Api User&apos;,$Profile.Name !=&apos;System Administrator&apos;)</errorConditionFormula>
+    <errorMessage>You Cannot Delete KYC Records</errorMessage>
+</ValidationRule>

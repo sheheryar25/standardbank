@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OneHub_Send_Email</fullName>
+    <availability>online</availability>
+    <description>Sends an email to AP client to sign up to OneHub community.</description>
+    <displayType>button</displayType>
+    <height>600</height>
+    <linkType>page</linkType>
+    <masterLabel>OneHub Send Email</masterLabel>
+    <openType>noSidebar</openType>
+    <page>OSB_sendEmailPage</page>
+    <protected>false</protected>
+</WebLink>

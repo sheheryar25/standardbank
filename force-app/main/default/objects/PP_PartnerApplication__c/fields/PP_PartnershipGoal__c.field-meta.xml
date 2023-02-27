@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PP_PartnershipGoal__c</fullName>
+    <description>SFP-11649 - Indicates how the see the partnership working with SBG.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates how the see the partnership working with SBG.</inlineHelpText>
+    <label>Partnership Goal</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Distribute Standard Bank Solutions to our clients, through my channel or platform (i.e. digital or physical)</fullName>
+                <default>false</default>
+                <label>Distribute Standard Bank Solutions to our clients, through my channel or platform (i.e. digital or physical)</label>
+            </value>
+            <value>
+                <fullName>Distribute Our Solutions to Standard Bank clients through their channel or platform (i.e. digital or physical)</fullName>
+                <default>false</default>
+                <label>Distribute Our Solutions to Standard Bank clients through their channel or platform (i.e. digital or physical)</label>
+            </value>
+            <value>
+                <fullName>Co-create new solution with Standard Bank</fullName>
+                <default>false</default>
+                <label>Co-create new solution with Standard Bank</label>
+            </value>
+            <value>
+                <fullName>Sell a product or provide a service directly to Standard Bank (i.e. IT hardware, professional services)</fullName>
+                <default>false</default>
+                <label>Sell a product or provide a service directly to Standard Bank (i.e. IT hardware, professional services)</label>
+            </value>
+            <value>
+                <fullName>Other (Please specify)</fullName>
+                <default>false</default>
+                <label>Other (Please specify)</label>
+            </value>
+            <value>
+                <fullName>Co-create a new product or solution with SBG</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Co-create a new product or solution with SBG</label>
+            </value>
+            <value>
+                <fullName>Distribute SBG products and solutions on my platform</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Distribute SBG products and solutions on my platform</label>
+            </value>
+            <value>
+                <fullName>SBG To distribute my products and solutions</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>SBG To distribute my products and solutions</label>
+            </value>
+            <value>
+                <fullName>Sell a product or solution directly to SBG</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sell a product or solution directly to SBG</label>
+            </value>
+            <value>
+                <fullName>Sell a product or solution to SBG&apos;s client through SBG</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sell a product or solution to SBG&apos;s client through SBG</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

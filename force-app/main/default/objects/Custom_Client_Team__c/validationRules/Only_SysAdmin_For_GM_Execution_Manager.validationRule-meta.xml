@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Only_SysAdmin_For_GM_Execution_Manager</fullName>
+    <active>true</active>
+    <description>SGPRT-834 - Validation to check that only System Admins can add team member with GM Execution Manager role.</description>
+    <errorConditionFormula>OR(
+  AND(
+    ISCHANGED( Client_Role__c ),
+    $Profile.Name != &apos;System Administrator&apos;,
+    OR(
+      PRIORVALUE( Client_Role__c ) = &apos;GM Execution Manager&apos;,
+      ISPICKVAL(Client_Role__c, &apos;GM Execution Manager&apos;) 
+    )
+  ),
+  AND(
+    ISNEW(),
+    $Profile.Name != &apos;System Administrator&apos;,
+    ISPICKVAL(Client_Role__c, &apos;GM Execution Manager&apos;)
+  )
+)</errorConditionFormula>
+    <errorMessage>Insufficient Privileges - You do not have the level of access necessary to Add or Delete GM Execution Manager on this Client. Please contact the CRM Helpdesk (CRMSalesforce@standardbank.co.za) for assistance.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,4 @@
+<aura:event type="APPLICATION" description="deviceManagementEvent" >
+     <aura:attribute name = "devicesToDeleteList"  type ="List" access="public" />
+     <aura:attribute name="selectedOption" type = "Boolean" access="public" />
+</aura:event>

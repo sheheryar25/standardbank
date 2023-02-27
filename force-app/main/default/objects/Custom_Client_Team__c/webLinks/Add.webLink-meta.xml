@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Add</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Add</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <requireRowSelection>false</requireRowSelection>
+    <url>if(&quot;{!Account.OwnerId}&quot;==&quot;{!$User.Id}&quot; ||
+&quot;{!$Profile.Id}&quot;==&quot;00e20000000ibPf&quot; ||
+&quot;{!$Profile.Id}&quot;==&quot;00e20000000nZXI&quot;){
+[CF00N200000033GcN=Opportunity.Name,CF00N200000033GcN_lkid=Opportunity.Id,retURL=Opportunity.Id,saveURL=Opportunity.Id], true)}&quot;);
+window.parent.location = &quot;{!URLFOR($Action.Custom_Client_Team__c.New, &apos;&apos;, [CF00N2000000343iT=Account.Name,CF00N2000000343iT_lkid=Account.Id,retURL=Account.Id,saveURL=Account.Id], true)}&quot;;
+}
+else{
+//window.parent.location = &quot;/apex/InsufficientPrivilegesOnAddCCT?id={!Account.Id}&quot;;
+//window.open(&quot;/apex/InsufficientPrivilegesOnAddCCT&quot;);
+}</url>
+</WebLink>

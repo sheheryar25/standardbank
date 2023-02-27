@@ -1,0 +1,52 @@
+<aura:component controller="OSB_YourSolutionTile_CTRL">
+    <aura:attribute name="registeredApps" type="Object[]" default="null" access="public"/>
+    <aura:attribute name="multiple" type="Boolean" default="true" access="public"/>
+    <aura:attribute name="class" type="String" access="public"/>
+    <aura:attribute name="title" type="String" access="public" />
+    <aura:attribute name="logo" type="String" access="public" />
+    <aura:attribute name="url" type="String" access="public" />
+    <aura:attribute name="solutionId" type="String" access="public" />
+    <aura:attribute name="requiresMfa" type="boolean" access="public" default="false"/>
+    <aura:attribute name="strongAuth" type="boolean" access="public" default="false"/>
+    <aura:attribute name="showMfaRequiredPopup" type="boolean" access="public" default ="false"/>
+    <aura:attribute name="empty" type="Boolean" default="False" access="public" />
+     <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    <lightning:navigation aura:id="navService"/>
+    
+    <div class="{!'yourSolution__container--tile ' + v.class}">
+        <div class="yourSolution__items">
+            
+            <div class="yourSolution--tile">
+                
+                <div class="yourSolution--tile__app">
+                    <div class="yourSolution--tile__app__icon">
+                        <ui:outputRichText value="{!v.logo}"></ui:outputRichText>
+                    </div>
+                    <aura:if isTrue="{!v.title == 'AUTHENTIFI'}">
+                        <div class="yourSolution--tile__app__title">{!v.title}<sup>TM</sup></div>
+                        <aura:set attribute="else">
+                            <div class="yourSolution--tile__app__title">{!v.title}</div>
+                        </aura:set>
+                    </aura:if>
+                </div>
+                <div class="solutionShowcaseItem__link">
+                    <a class="tile__link_left" onclick="{!c.removeSolutionAsFavourite}" data-id= "uitlink_link" data-text= "{!'Dashboard | Subscribed Solution | Remove - ' + v.title}">Remove</a>
+                    <aura:if isTrue="{!(v.strongAuth==false)}">
+                           <aura:if isTrue="{!v.requiresMfa}">
+                               <a class="tile__link grey-link" onclick="{!c.showMfaRequiredModal }" data-id= "uitlink_link" data-text= "{!'Dashboard | Subscribed Solution | Go - ' + v.title}" >Go</a>
+                       
+                        </aura:if>
+                    </aura:if>
+                    <aura:if isTrue="{!or(v.requiresMfa==false,v.strongAuth)}" >
+                        <a class="tile__link " href="{!v.url}" target="_blank" data-id= "uitlink_link" data-text= "{!'Dashboard | Subscribed Solution | Go - ' + v.title}"  >Go</a>
+
+                     </aura:if>
+                    
+                    <aura:if isTrue="{!v.showMfaRequiredPopup}">
+                        <c.OSBNewDeviceModal isOpen="true" mfaRequired="true" />
+                    </aura:if>
+                </div>
+            </div>
+        </div>
+    </div>
+</aura:component>

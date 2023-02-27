@@ -1,0 +1,115 @@
+<aura:component controller="StdBank_Ltn_Ecosystem">
+	<aura:attribute name="groupNumber" type="String" />
+	<aura:attribute name="type" type="String" />
+	<aura:attribute name="fieldName" type="String" />
+	<aura:attribute name="ecosystem" type="Ecosystem__c" access="private" />
+	<aura:attribute name="knownBanked" type="Decimal" access="private" />
+	<aura:attribute name="knownUnbanked" type="Decimal" access="private" />
+	<aura:attribute name="unknownUnbanked" type="Decimal" access="private" />
+	<aura:attribute name="total" type="Decimal" access="private" />
+	<aura:attribute name="isWaiting" type="Boolean" default="true" access="private" />
+	<aura:attribute name="enabledSave" type="Boolean" default="false" access="private" />
+
+	<aura:attribute name="oldUnknownUnbanked" type="Decimal" access="private" />
+
+    <aura:registerEvent name="penetrationEvent" type="c:ecosystemPenetrationChange"/>
+
+	<aura:handler name="init" action="{!c.doInit}" value="{!this}" />
+	<aura:handler action="{!c.doEntityChange}" event="c:ecosystemEntityChange" />
+	<aura:handler action="{!c.doEntityChange}" event="c:ecosystemEntityUnbankedChange" />
+
+	<article class="slds-card">
+	  	<div class="slds-card__header slds-grid">
+	    	<header class="slds-media slds-media_center slds-has-flexi-truncate">
+	      		<div class="slds-media__figure">
+		      		<lightning:icon iconName="standard:record" size="small" alternativeText="Account"/>
+	      		</div>
+	      		<div class="slds-media__body">
+	        		<h2>
+	          			<a href="javascript:void(0);" class="slds-card__header-link slds-truncate" title="[object Object]">
+	            			<span class="slds-text-heading_small">Ecosystem Penetration</span>
+	          			</a>
+	        		</h2>
+	      		</div>
+	    	</header>
+    		<div class="slds-no-flex">
+	      		<button class="slds-button slds-button_neutral" disabled="{!not(v.enabledSave)}" onclick="{!c.btnSave}">Save</button>
+	    	</div>
+	  	</div>
+	  	<div class="slds-card__body slds-card__body_inner slds-is-relative">
+			<aura:if isTrue="{!v.isWaiting}">
+				<div class="slds-spinner_container">
+		    		<div class="slds-spinner slds-spinner_small">
+		      			<span class="slds-assistive-text">Waiting</span>
+		      			<div class="slds-spinner__dot-a"></div>
+		      			<div class="slds-spinner__dot-b"></div>
+		    		</div>
+		  		</div>
+			</aura:if>
+			<table class="slds-table slds-table_bordered  slds-no-row-hover slds-table_cell-buffer">
+				<thead>
+					<tr class="slds-text-title_caps">
+						<th>Element type</th>
+						<th>Known Banked</th>
+						<th>
+							Known Unbanked
+							<lightning:buttonIcon iconName="utility:info" alternativeText="Info" variant="bare" title="Number of client leads/prospects loaded in Salesforce related to this ecosystem" />
+						</th>
+						<th>Unknown Unbanked
+							<lightning:buttonIcon iconName="utility:info" alternativeText="Info" variant="bare" title="Number of potential leads that could be loaded in Salesforce related to this ecosystem" />
+						</th>
+						<th>Total</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="slds-hint-parent">
+						<td class="slds-cell-edit">
+					        <span class="slds-grid slds-grid_align-spread">
+					            <span class="slds-truncate" title="Acme">{!v.type}</span>
+					            <lightning:buttonIcon iconName="utility:lock" alternativeText="Locked" variant="bare" size="small" disabled="{!true}" class="slds-cell-edit__button slds-m-left_x-small" iconClass="slds-button__icon_hint slds-button__icon_lock"/>
+					        </span>
+						</td>
+						<td class="slds-cell-edit">
+					        <span class="slds-grid slds-grid_align-spread">
+					            <span class="slds-truncate" title="Acme">{!v.knownBanked}</span>
+					            <lightning:buttonIcon iconName="utility:lock" alternativeText="Locked" variant="bare" size="small" disabled="{!true}" class="slds-cell-edit__button slds-m-left_x-small" iconClass="slds-button__icon_hint slds-button__icon_lock"/>
+					        </span>
+						</td>
+						<td class="slds-cell-edit">
+					        <span class="slds-grid slds-grid_align-spread">
+					            <span class="slds-truncate" title="Acme">{!v.knownUnbanked}</span>
+					            <lightning:buttonIcon iconName="utility:lock" alternativeText="Locked" variant="bare" size="small" disabled="{!true}" class="slds-cell-edit__button slds-m-left_x-small" iconClass="slds-button__icon_hint slds-button__icon_lock"/>
+					        </span>
+						</td>
+						<td class="slds-cell-edit" aura:id="cell-unknown-unbanked" ondblclick="{!c.onEditUnknown}">
+					        <span class="slds-grid slds-grid_align-spread">
+					            <span class="slds-truncate" title="Acme">{!v.unknownUnbanked}</span>
+					            <lightning:buttonIcon iconName="utility:edit" alternativeText="Edit" variant="bare" size="small" class="slds-cell-edit__button slds-m-left_x-small" iconClass="slds-button__icon_hint slds-button__icon_edit" tabindex="-1" onclick="{!c.onEditUnknown}"/>
+					        </span>
+					        <section aura:id="popup-unknown-unbanked" class="slds-popover slds-popover_edit slds-hide" role="dialog" style="position: absolute; top: 0px; left: 0.0625rem;">
+					            <span id="form-start" tabindex="0"></span>
+					            <div class="slds-popover__body">
+					              	<div class="slds-form-element slds-grid">
+					                	<label class="slds-form-element__label slds-form-element__label_edit slds-no-flex" for="company-01">
+					                  		<span class="slds-assistive-text">Company</span>
+					                	</label>
+					                	<div class="slds-form-element__control slds-grow">
+					                  		<input aura:id="input-unknown-unbanked" class="slds-input" min="0" max="99999999999999" step="1" type="number" value="{!v.unknownUnbanked}" onblur="{!c.onBlurUnknown}"  onkeydown="{!c.onKeydownUnknown}"/>
+					                	</div>
+					              	</div>
+					            </div>
+					            <span id="form-end" tabindex="0"></span>
+					        </section>
+						</td>
+						<td class="slds-cell-edit">
+					        <span class="slds-grid slds-grid_align-spread">
+					            <span class="slds-truncate" title="Acme">{!v.total}</span>
+					            <lightning:buttonIcon iconName="utility:lock" alternativeText="Locked" variant="bare" size="small" disabled="{!true}" class="slds-cell-edit__button slds-m-left_x-small" iconClass="slds-button__icon_hint slds-button__icon_lock"/>
+					        </span>
+						</td>
+					</tr>
+				</tbody>
+					</table>
+	  	</div>
+	</article>
+</aura:component>

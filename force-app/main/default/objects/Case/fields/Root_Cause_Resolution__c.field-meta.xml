@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Root_Cause_Resolution__c</fullName>
+    <description>SGPRT-423 - Field to capture how the root cause was resolved.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>List the actions/measures/process that has been put in place to prevent the client from experiencing the same issue again.</inlineHelpText>
+    <label>Root Cause Resolution</label>
+    <length>1000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

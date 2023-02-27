@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Group_KYC_Review_In_Progress__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>EN:1043 This field will check if client is in the process of a KYC Review.This will be used to report on Clients in KYC</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is an indication if any of the clients within the Group (based on client hierarchy) are under KYC review</inlineHelpText>
+    <label>Group KYC Review In Progress</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

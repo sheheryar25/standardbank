@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Review_Status_Open_Makes_Review_Date_Man</fullName>
+    <active>true</active>
+    <description>If the kyc review status is changed to &quot;open&quot; from &quot;Compliant| Suspended | Closed | Migrated to PBB&quot; then &quot;Review Completed Date&quot; becomes mandatory</description>
+    <errorConditionFormula>( ($Profile.Name = &apos;Custom KYC User&apos; || $Profile.Name = &apos;Custom KYC User Mobile&apos;) 	&amp;&amp;  (CONTAINS($User.Title, &apos;Senior&apos;) || CONTAINS($User.Title, &apos;Manager&apos;) || $User.Id =  Reviewer_Name__c )) &amp;&amp; ISCHANGED( KYC_Review_Status__c ) &amp;&amp;  OR( (ISPICKVAL(KYC_Review_Status__c,&apos;Compliant&apos;)),(ISPICKVAL(KYC_Review_Status__c,&apos;Suspended&apos;)),(ISPICKVAL(KYC_Review_Status__c,&apos;Closed&apos;)),(ISPICKVAL(KYC_Review_Status__c,&apos;Migrated to PBB&apos;))) &amp;&amp; ISNULL( Review_Completed_Date__c ) &amp;&amp; NOT( $Setup.Environment_Variable__c.Ignore_Validation_Rule__c )</errorConditionFormula>
+    <errorDisplayField>Review_Completed_Date__c</errorDisplayField>
+    <errorMessage>Please enter the value of &quot;Review Completed Date&quot;</errorMessage>
+</ValidationRule>

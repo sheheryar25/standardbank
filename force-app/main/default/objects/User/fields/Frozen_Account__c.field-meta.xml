@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Frozen_Account__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Ideas Inc: Sheldon Lazarus
+            This field will indicate if a user account is frozen</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Tick to indicate Frozen Account</inlineHelpText>
+    <label>Frozen Account</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

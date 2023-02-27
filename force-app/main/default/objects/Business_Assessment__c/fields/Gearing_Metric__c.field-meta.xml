@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Gearing_Metric__c</fullName>
+    <externalId>false</externalId>
+    <label>Gearing Metric</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Debt to EBITDA (Gross)</fullName>
+                <default>false</default>
+                <label>Debt to EBITDA (Gross)</label>
+            </value>
+            <value>
+                <fullName>Debt to EBITDA (Net)</fullName>
+                <default>false</default>
+                <label>Debt to EBITDA (Net)</label>
+            </value>
+            <value>
+                <fullName>Debt to Equity</fullName>
+                <default>false</default>
+                <label>Debt to Equity</label>
+            </value>
+            <value>
+                <fullName>Cash Conversion Cycle (Days)</fullName>
+                <default>false</default>
+                <label>Cash Conversion Cycle (Days)</label>
+            </value>
+            <value>
+                <fullName>Loan-to-Value</fullName>
+                <default>false</default>
+                <label>Loan-to-Value</label>
+            </value>
+            <value>
+                <fullName>Current Ratio</fullName>
+                <default>false</default>
+                <label>Current Ratio</label>
+            </value>
+            <value>
+                <fullName>Tangible Equity</fullName>
+                <default>false</default>
+                <label>Tangible Equity</label>
+            </value>
+            <value>
+                <fullName>EBITDA Interest Cover</fullName>
+                <default>false</default>
+                <label>EBITDA Interest Cover</label>
+            </value>
+            <value>
+                <fullName>FFO to Total Debt</fullName>
+                <default>false</default>
+                <label>FFO to Total Debt</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

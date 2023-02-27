@@ -1,0 +1,7 @@
+<design:component>
+    <design:attribute name="show_as_tiles" label="Show as Tiles"
+                      description="If this component should render as tiles, this should be set to true"/>
+    <design:attribute name="column_id" label="Columns IDs" description="This will indicate which Quick Links Column we want, can be separated by ';'"/>
+    <design:attribute name="link_context" label="Quick Link Context - Can be 'Homepage' or SObject name, can be separated by ';'"
+                      description="This will indicate which link context we want can be object name or 'Homepage' or a list separated ';'"/>
+</design:component>

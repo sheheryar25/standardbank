@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>OCH connection</label>
+    <protected>false</protected>
+    <values>
+        <field>AWS_Password__c</field>
+        <value xsi:type="xsd:string">d4[KRzW=Y^#2YDrx</value>
+    </values>
+    <values>
+        <field>AWS_STatement_Auth_Path__c</field>
+        <value xsi:type="xsd:string">/statements/token</value>
+    </values>
+    <values>
+        <field>AWS_Statement_Path__c</field>
+        <value xsi:type="xsd:string">/statements/</value>
+    </values>
+    <values>
+        <field>AWS_Username__c</field>
+        <value xsi:type="xsd:string">salesforceUser</value>
+    </values>
+    <values>
+        <field>Account_Details_Path__c</field>
+        <value xsi:type="xsd:string">/corp/rest/v1/banks/{{bankid}}/bankusers/{{userid}}/accountinquiryrequest</value>
+    </values>
+    <values>
+        <field>Account_Search_Path__c</field>
+        <value xsi:type="xsd:string">/corp/rest/v1/banks/{{bankid}}/bankusers/{{userid}}/customeraccountinquiryrequest</value>
+    </values>
+    <values>
+        <field>Auth_Path__c</field>
+        <value xsi:type="xsd:string">/corp/oAuth/token</value>
+    </values>
+    <values>
+        <field>Balances_Path__c</field>
+        <value xsi:type="xsd:string">/corp/rest/v1/banks/{{bankid}}/bankusers/{{userid}}/custbalanceinquiry</value>
+    </values>
+    <values>
+        <field>Bank_Id__c</field>
+        <value xsi:type="xsd:string">MU</value>
+    </values>
+    <values>
+        <field>Channel_Id__c</field>
+        <value xsi:type="xsd:string">I</value>
+    </values>
+    <values>
+        <field>Client_Id__c</field>
+        <value xsi:type="xsd:string">MU_ONEHUB_CLIENT</value>
+    </values>
+    <values>
+        <field>Client_Secret__c</field>
+        <value xsi:type="xsd:string">SuXVyYxKQJurK9OXoWstUw</value>
+    </values>
+    <values>
+        <field>Corp_Principal__c</field>
+        <value xsi:type="xsd:string">MU</value>
+    </values>
+    <values>
+        <field>Language_Id__c</field>
+        <value xsi:type="xsd:string">001</value>
+    </values>
+    <values>
+        <field>Login_Flag__c</field>
+        <value xsi:type="xsd:string">2</value>
+    </values>
+    <values>
+        <field>Login_Type__c</field>
+        <value xsi:type="xsd:string">4</value>
+    </values>
+    <values>
+        <field>Named_Credential__c</field>
+        <value xsi:type="xsd:string">callout:OCH_API</value>
+    </values>
+    <values>
+        <field>Password__c</field>
+        <value xsi:type="xsd:string">d#demo</value>
+    </values>
+    <values>
+        <field>Statement_Inquiry_Path__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Username__c</field>
+        <value xsi:type="xsd:string">MU.VONEHUB</value>
+    </values>
+</CustomMetadata>

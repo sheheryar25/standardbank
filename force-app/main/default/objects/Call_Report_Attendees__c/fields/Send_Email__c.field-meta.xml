@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_Email__c</fullName>
+    <description>To store the status of Email being sent to Invited Attendees
+
+Case 4296 : Event Report Enhancements: Relabeled Field from Send Email to Distribution</description>
+    <externalId>false</externalId>
+    <label>Distribution</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Status__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Yes</fullName>
+                <default>false</default>
+                <label>Yes</label>
+            </value>
+            <value>
+                <fullName>No</fullName>
+                <default>false</default>
+                <label>No</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Invited</controllingFieldValue>
+            <controllingFieldValue>Attended</controllingFieldValue>
+            <controllingFieldValue>Declined</controllingFieldValue>
+            <controllingFieldValue>No Show</controllingFieldValue>
+            <controllingFieldValue>Distribute Only</controllingFieldValue>
+            <valueName>Yes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Invited</controllingFieldValue>
+            <controllingFieldValue>Attended</controllingFieldValue>
+            <controllingFieldValue>Declined</controllingFieldValue>
+            <controllingFieldValue>No Show</controllingFieldValue>
+            <controllingFieldValue>Distribute Only</controllingFieldValue>
+            <valueName>No</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

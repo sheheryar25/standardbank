@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OSB_Country__c</fullName>
+    <description>This field is used to define the Country/s which Solutions &amp; API&apos;s are available in, this will drive visibility on the dashboard.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Which country/s is the Solution/API available in?</inlineHelpText>
+    <label>Country</label>
+    <required>false</required>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>OSB_Operating_Country</valueSetName>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

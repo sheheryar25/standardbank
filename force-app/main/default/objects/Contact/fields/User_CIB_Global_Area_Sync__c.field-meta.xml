@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>User_CIB_Global_Area_Sync__c</fullName>
+    <externalId>false</externalId>
+    <label>User CIB Global Area</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Africa Regions</fullName>
+                <default>false</default>
+                <label>Africa Regions</label>
+            </value>
+            <value>
+                <fullName>CIB Global</fullName>
+                <default>false</default>
+                <label>CIB Global</label>
+            </value>
+            <value>
+                <fullName>CIBI</fullName>
+                <default>false</default>
+                <label>CIBI</label>
+            </value>
+            <value>
+                <fullName>CIBROA</fullName>
+                <default>false</default>
+                <label>CIBROA</label>
+            </value>
+            <value>
+                <fullName>CIBSA</fullName>
+                <default>false</default>
+                <label>CIBSA</label>
+            </value>
+            <value>
+                <fullName>CommB</fullName>
+                <default>false</default>
+                <label>CommB</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

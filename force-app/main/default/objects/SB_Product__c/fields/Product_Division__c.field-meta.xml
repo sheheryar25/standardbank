@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Division__c</fullName>
+    <description>EN-0815:Represents the product house/division that the product belongs to</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Represents the product house/division that the product belongs to.</inlineHelpText>
+    <label>Product Division</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Grand_Parent_Product__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Business and Commercial Banking</fullName>
+                <default>false</default>
+                <label>Business and Commercial Banking</label>
+            </value>
+            <value>
+                <fullName>Global Markets</fullName>
+                <default>false</default>
+                <label>Global Markets</label>
+            </value>
+            <value>
+                <fullName>Insurance</fullName>
+                <default>false</default>
+                <label>Insurance</label>
+            </value>
+            <value>
+                <fullName>Investment Banking</fullName>
+                <default>false</default>
+                <label>Investment Banking</label>
+            </value>
+            <value>
+                <fullName>Transactional Products and Services</fullName>
+                <default>false</default>
+                <label>Transactional Products and Services</label>
+            </value>
+            <value>
+                <fullName>Vehicle and Asset Finance</fullName>
+                <default>false</default>
+                <label>Vehicle and Asset Finance</label>
+            </value>
+            <value>
+                <fullName>Client Solutions</fullName>
+                <default>false</default>
+                <label>Client Solutions</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>TRADE</controllingFieldValue>
+            <controllingFieldValue>Cash Management</controllingFieldValue>
+            <controllingFieldValue>Channel</controllingFieldValue>
+            <controllingFieldValue>Loans</controllingFieldValue>
+            <controllingFieldValue>VAF</controllingFieldValue>
+            <controllingFieldValue>Working Capital</controllingFieldValue>
+            <controllingFieldValue>Investor Services</controllingFieldValue>
+            <valueName>Transactional Products and Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Distribution</controllingFieldValue>
+            <controllingFieldValue>Group Funding</controllingFieldValue>
+            <controllingFieldValue>Equity Finance</controllingFieldValue>
+            <controllingFieldValue>Loans</controllingFieldValue>
+            <controllingFieldValue>Equity Investments</controllingFieldValue>
+            <controllingFieldValue>VAF</controllingFieldValue>
+            <controllingFieldValue>Primary Arranging/Advisory</controllingFieldValue>
+            <controllingFieldValue>Debt Capital Markets</controllingFieldValue>
+            <controllingFieldValue>Equity Capital Markets</controllingFieldValue>
+            <controllingFieldValue>Securitisation</controllingFieldValue>
+            <controllingFieldValue>Advisory Fees</controllingFieldValue>
+            <valueName>Investment Banking</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Card</controllingFieldValue>
+            <controllingFieldValue>Investments</controllingFieldValue>
+            <controllingFieldValue>Payments</controllingFieldValue>
+            <controllingFieldValue>Trade and Forex</controllingFieldValue>
+            <controllingFieldValue>Transaction Accounts</controllingFieldValue>
+            <controllingFieldValue>Wealth and Insurance</controllingFieldValue>
+            <controllingFieldValue>Loans</controllingFieldValue>
+            <controllingFieldValue>Wealth</controllingFieldValue>
+            <controllingFieldValue>Advisory Fees</controllingFieldValue>
+            <valueName>Business and Commercial Banking</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Base Metals</controllingFieldValue>
+            <controllingFieldValue>Credit</controllingFieldValue>
+            <controllingFieldValue>Equity</controllingFieldValue>
+            <controllingFieldValue>Equity Deposit Term</controllingFieldValue>
+            <controllingFieldValue>Equity Derivatives</controllingFieldValue>
+            <controllingFieldValue>TBC</controllingFieldValue>
+            <controllingFieldValue>FX</controllingFieldValue>
+            <controllingFieldValue>Interest Rates</controllingFieldValue>
+            <controllingFieldValue>Precious Metals</controllingFieldValue>
+            <controllingFieldValue>NCD&apos;s - Structured</controllingFieldValue>
+            <controllingFieldValue>Investment Income</controllingFieldValue>
+            <controllingFieldValue>Funding Associate Income</controllingFieldValue>
+            <controllingFieldValue>Funding Investment Income</controllingFieldValue>
+            <controllingFieldValue>Loans Term Funding</controllingFieldValue>
+            <controllingFieldValue>Share Investment</controllingFieldValue>
+            <controllingFieldValue>Deposits</controllingFieldValue>
+            <controllingFieldValue>Agricultural Products</controllingFieldValue>
+            <controllingFieldValue>Equity Investments</controllingFieldValue>
+            <controllingFieldValue>Commodities</controllingFieldValue>
+            <controllingFieldValue>Net Interest Income</controllingFieldValue>
+            <controllingFieldValue>VAF</controllingFieldValue>
+            <controllingFieldValue>Bonds</controllingFieldValue>
+            <controllingFieldValue>Bulk and Steel</controllingFieldValue>
+            <valueName>Global Markets</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VAF</controllingFieldValue>
+            <valueName>Vehicle and Asset Finance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accident &amp; Health</controllingFieldValue>
+            <controllingFieldValue>Credit Life</controllingFieldValue>
+            <controllingFieldValue>Hybrid</controllingFieldValue>
+            <controllingFieldValue>Insurance of the Person</controllingFieldValue>
+            <controllingFieldValue>Liability</controllingFieldValue>
+            <controllingFieldValue>Motor (lending)</controllingFieldValue>
+            <controllingFieldValue>Motor (non lending linked)</controllingFieldValue>
+            <controllingFieldValue>Property (lending)</controllingFieldValue>
+            <controllingFieldValue>Property (non lending linked)</controllingFieldValue>
+            <controllingFieldValue>SME Group Life</controllingFieldValue>
+            <controllingFieldValue>SME Life insurance</controllingFieldValue>
+            <controllingFieldValue>SME Short term</controllingFieldValue>
+            <controllingFieldValue>Surety</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Insurance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Partnership</controllingFieldValue>
+            <valueName>Client Solutions</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

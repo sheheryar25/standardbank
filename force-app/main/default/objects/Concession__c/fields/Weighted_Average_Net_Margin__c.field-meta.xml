@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Weighted_Average_Net_Margin__c</fullName>
+    <description>The average interest margin made on an investment, as a percentage</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The average interest margin made on an investment, as a percentage</inlineHelpText>
+    <label>Weighted Average Net Margin (%)</label>
+    <precision>4</precision>
+    <required>false</required>
+    <scale>3</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

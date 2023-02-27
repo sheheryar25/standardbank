@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Counterparty__c</fullName>
+    <description>Case#1050 - 05/2011 - Rudolf Niehaus
+New field for the Connected facilities record type</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Name of Counterparty</inlineHelpText>
+    <label>Counterparty</label>
+    <length>1000</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>53.0</apiVersion>
+    <assignments>
+        <name>Set_Checbox</name>
+        <label>Set Checbox</label>
+        <locationX>624</locationX>
+        <locationY>675</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Duplicate_Action_Plan_Template__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>Is_it_duplicate</name>
+        <label>Is it duplicate</label>
+        <locationX>168</locationX>
+        <locationY>542</locationY>
+        <defaultConnector>
+            <targetReference>Set_Checbox</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Existing</defaultConnectorLabel>
+        <rules>
+            <name>Duplicated_Template</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Action_Plan_Temp.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Duplicated Template</label>
+        </rules>
+    </decisions>
+    <description>Sets the Duplicated_Action_Plan_Template__c checkbox to ture for the validation rule if the template is in use. (SFP-8543)</description>
+    <interviewLabel>Prevent Duplicate Action Plan Template {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Prevent Duplicate Action Plan Template</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Action_Plan_Temp</name>
+        <label>Get Action Plan Temp</label>
+        <locationX>176</locationX>
+        <locationY>379</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Is_it_duplicate</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>ActionPlanTemplateVersionId__NotFound</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.ActionPlanTemplateVersionId__NotFound</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>TargetId__NotFound</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.TargetId__NotFound</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>ActionPlan</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Get_Action_Plan_Temp</targetReference>
+        </connector>
+        <object>ActionPlan</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Draft</status>
+</Flow>

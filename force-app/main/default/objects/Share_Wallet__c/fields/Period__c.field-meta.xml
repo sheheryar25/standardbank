@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Period__c</fullName>
+    <description>Case#1050 - 04/2011 - Rudolf Niehaus</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Period Financial Information Covers</inlineHelpText>
+    <label>Period</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Full Year</fullName>
+                <default>true</default>
+                <label>Full Year</label>
+            </value>
+            <value>
+                <fullName>YTD January</fullName>
+                <default>false</default>
+                <label>YTD January</label>
+            </value>
+            <value>
+                <fullName>YTD February</fullName>
+                <default>false</default>
+                <label>YTD February</label>
+            </value>
+            <value>
+                <fullName>YTD March</fullName>
+                <default>false</default>
+                <label>YTD March</label>
+            </value>
+            <value>
+                <fullName>YTD April</fullName>
+                <default>false</default>
+                <label>YTD April</label>
+            </value>
+            <value>
+                <fullName>YTD May</fullName>
+                <default>false</default>
+                <label>YTD May</label>
+            </value>
+            <value>
+                <fullName>YTD June</fullName>
+                <default>false</default>
+                <label>YTD June</label>
+            </value>
+            <value>
+                <fullName>YTD July</fullName>
+                <default>false</default>
+                <label>YTD July</label>
+            </value>
+            <value>
+                <fullName>YTD August</fullName>
+                <default>false</default>
+                <label>YTD August</label>
+            </value>
+            <value>
+                <fullName>YTD September</fullName>
+                <default>false</default>
+                <label>YTD September</label>
+            </value>
+            <value>
+                <fullName>YTD October</fullName>
+                <default>false</default>
+                <label>YTD October</label>
+            </value>
+            <value>
+                <fullName>YTD November</fullName>
+                <default>false</default>
+                <label>YTD November</label>
+            </value>
+            <value>
+                <fullName>YTD December</fullName>
+                <default>false</default>
+                <label>YTD December</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Distribution_Method__c</fullName>
+    <description>How will the Distribution be achieved?  SGPRT-624</description>
+    <externalId>false</externalId>
+    <inlineHelpText>How will the Distribution be achieved?</inlineHelpText>
+    <label>Distribution Method</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Primary syndication</fullName>
+                <default>false</default>
+                <label>Primary syndication</label>
+            </value>
+            <value>
+                <fullName>Syndication post Underwrite</fullName>
+                <default>false</default>
+                <label>Syndication post Underwrite</label>
+            </value>
+            <value>
+                <fullName>Outright Sale</fullName>
+                <default>false</default>
+                <label>Outright Sale</label>
+            </value>
+            <value>
+                <fullName>Outright Purchase</fullName>
+                <default>false</default>
+                <label>Outright Purchase</label>
+            </value>
+            <value>
+                <fullName>Sub-part (funded)</fullName>
+                <default>false</default>
+                <label>Sub-part (funded)</label>
+            </value>
+            <value>
+                <fullName>Sub-part (unfunded)</fullName>
+                <default>false</default>
+                <label>Sub-part (unfunded)</label>
+            </value>
+            <value>
+                <fullName>CLN</fullName>
+                <default>false</default>
+                <label>CLN</label>
+            </value>
+            <value>
+                <fullName>BDX</fullName>
+                <default>false</default>
+                <label>BDX</label>
+            </value>
+            <value>
+                <fullName>Credit Risk Insurance (excl. PRI)</fullName>
+                <default>false</default>
+                <label>Credit Risk Insurance (excl. PRI)</label>
+            </value>
+            <value>
+                <fullName>Political Risk Insurance</fullName>
+                <default>false</default>
+                <label>Political Risk Insurance</label>
+            </value>
+            <value>
+                <fullName>Full Credit Insurance (incl. PRI and CRI)</fullName>
+                <default>false</default>
+                <label>Full Credit Insurance (incl. PRI and CRI)</label>
+            </value>
+            <value>
+                <fullName>Best Efforts</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Best Efforts</label>
+            </value>
+            <value>
+                <fullName>Hard</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Hard</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

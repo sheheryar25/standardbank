@@ -1,0 +1,112 @@
+<aura:component controller="EcosystemLookupFieldController"
+                description="This will search for account records that can be related to a Ecosystem entity">
+
+    <!--These are public attributes-->
+    <aura:attribute name="new_client" type="Boolean" access="public"
+                    description="This is used by parent component to render the new client dialog"/>
+    <aura:attribute name="input_value" type="String" access="public"
+                    description="This value is the user input and will be passed to Ecosystem"/>
+    <aura:attribute name="record_id" type="String" default="" access="public"
+                    description="This is the record ID of the selected record"/>
+    <aura:attribute name="selected_record" type="sObject" default="{}" access="public"
+                    description="This is used to store our selected record"/>
+    <aura:attribute name="is_banked" type="Boolean" default="True" access="public"
+                    description="This will indicate whether or not we are searching for a banked client"/>
+    <aura:attribute name="ecosystem_id" type="String" access="public"
+                    description="This is the ID of the ecosystem we are connecting to"/>
+    <aura:attribute name="field_label" type="String" access="public" default="Client Name"
+                    description="This is the the value that will be displayed as the label"/>
+
+    <!--These are private attributes-->
+    <aura:attribute name="record_list" type="List" access="private"
+                    description="This is the list of matching records returned from the server"/>
+    <aura:attribute name="target_record" type="String" access="private"
+                    description="This is the name of target record that we want"/>
+    <aura:attribute name="server_message" type="String" access="private"
+                    description="This is message returned from the server"/>
+    <aura:attribute name="help_text" type="String" access="private" default=""
+                    description="This will be used to store the help text that will be shown"/>
+    <aura:attribute name="timeout_id" type="Integer" access="private" default="-1"
+                    description="This will hold the ID of our timeout function"/>
+
+    <!--These are public methods-->
+    <aura:method name="clearLookupField" action="{!c.doClearRecord}" access="public"
+                 description="This method will clear the lookup field"/>
+    <aura:method name="populateRecord" action="{!c.doPopulateRecord}" access="public"
+                 description="This method will allow for parent component to directly set an account without searching">
+        <aura:attribute name="selected_record" type="Object" description="The is the object we are setting in this lookup"/>
+    </aura:method>
+
+    <aura:registerEvent name="lookup_field_cleared" type="c:EcosystemLookupClearedEvent"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}" />
+
+    <div onmouseleave="{!c.onBlur}"  aura:id="lookup_result" class="slds-form-element slds-lookup slds-is-closed" data-select="single">
+        <label class="slds-form-element__label" for="lookup-348">{!v.field_label}</label>
+        <lightning:helptext content="{!v.help_text}"/>
+        <div class="slds-form-element__control">
+            <div class="slds-input-has-icon slds-input-has-icon_right">
+                <div class="slds-pill-container slds-hide" aura:id="lookup_pill">
+                    <lightning:pill class="pill-size" label="{!v.selected_record.Name}" name="{!v.selected_record.Name}" onremove="{!c.clear}">
+                        <aura:set attribute="media">
+                            <lightning:icon iconName="standard:account" size="x-small" alternativeText="standard:account"/>
+                        </aura:set>
+                    </lightning:pill>
+                </div>
+                <div aura:id="lookup_field" class="slds-show">
+                    <lightning:icon class="slds-input__icon slds-show" iconName="utility:search" size="x-small" alternativeText="search"/>
+                    <ui:inputText click="{!c.onFocus}" updateOn="keyup" keyup="{!c.onKeyUp}" class="slds-lookup__search-input slds-input"
+                                  value="{!v.target_record}"/>
+                </div>
+                <ul style="min-height:40px;margin-top:0px !important" class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid slds-lookup__menu slds" role="listbox">
+                    <lightning:spinner class="slds-hide" variant="brand" size="small" aura:id="load_spinner"/>
+                    <div style="text-align:center">{!v.server_message}</div>
+                    <aura:iteration items="{!v.record_list}" var="current_record" indexVar="index">
+                        <li id="{!index}" role="presentation" class="slds-listbox__item" onclick="{!c.onRecordSelect}">
+                            <span id="listbox-option-unique-id-01" class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta" role="option">
+                                <span class="slds-media__figure">
+                                    <span class="slds-icon_container" title="Account Icon">
+                                        <lightning:icon iconName="standard:account" class="slds-icon slds-icon_small" size="small" alternativeText="icon"/>
+                                        <span class="slds-assistive-text">Description of icon</span>
+                                    </span>
+                                </span>
+                                <span class="slds-media__body">
+                                    <span class="slds-listbox__option-text slds-listbox__option-text_entity">{!current_record.Name}</span>
+                                    <aura:if isTrue="{!current_record.CIF__c}">
+                                        <div class="slds-text-body_small">
+                                            CIF • {!current_record.CIF__c}
+                                        </div>
+                                        <aura:set attribute="else">
+                                            <div class="slds-text-body_small">
+                                                Status • {!current_record.Status__c}
+                                            </div>
+                                        </aura:set>
+                                    </aura:if>
+                                </span>
+                            </span>
+                        </li>
+                    </aura:iteration>
+                    <li role="presentation" class="slds-listbox__item" onclick="{!c.onNewClientClick}">
+                        <div aura:id="suggestion-list-item" class="slds-media slds-media_center slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta slds-has-focus" role="option">
+                            <div class="slds-media__figure">
+                                <lightning:icon iconName="utility:add" class="slds-m-around_xx-small" size="x-small" alternativeText="Add"/>
+                            </div>
+                            <div class="slds-media__body">
+                                <aura:if isTrue="{!v.is_banked}">
+                                    <div class="slds-listbox__option-text slds-listbox__option-text_entity slds-truncate">
+                                        New Known Banked Client
+                                    </div>
+                                    <aura:set attribute="else">
+                                        <div class="slds-listbox__option-text slds-listbox__option-text_entity slds-truncate">
+                                            New Known Unbanked Client
+                                        </div>
+                                    </aura:set>
+                                </aura:if>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</aura:component>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Owner_Team__c</fullName>
+    <description>SHAVEEN12APR2011CASE074 &gt; Used to store the original Opportunity Owner User details once the Opportunity is Closed. EN - 1168: Renamed label name alone but not the API and updated helptext.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Copy of the corresponding Opportunity Owner&apos;s User object fields in the following scenarios: 
+1. Automatically updated and checks for updates when the opportunity is open. 
+2. Updated when the opportunity is closed and updates only if Owner changes.</inlineHelpText>
+    <label>Opportunity Owner User Team</label>
+    <length>100</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

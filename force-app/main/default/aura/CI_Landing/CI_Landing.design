@@ -1,0 +1,4 @@
+<design:component>
+    <design:attribute name="filteringOnIBC" label="Display data for IBC Clients only"/>
+    <design:attribute name="filteringOnDivisions" label="Filter data by user division"/>
+</design:component>

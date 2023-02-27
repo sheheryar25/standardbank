@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Category__c</fullName>
+    <externalId>false</externalId>
+    <label>Product Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Base Metals</fullName>
+                <default>false</default>
+                <label>Base Metals</label>
+            </value>
+            <value>
+                <fullName>Credit Derivatives</fullName>
+                <default>false</default>
+                <label>Credit Derivatives</label>
+            </value>
+            <value>
+                <fullName>Energy</fullName>
+                <default>false</default>
+                <label>Energy</label>
+            </value>
+            <value>
+                <fullName>Equity Derivatives</fullName>
+                <default>false</default>
+                <label>Equity Derivatives</label>
+            </value>
+            <value>
+                <fullName>ETD Derivatives</fullName>
+                <default>false</default>
+                <label>ETD Derivatives</label>
+            </value>
+            <value>
+                <fullName>Exotics/Hybrids</fullName>
+                <default>false</default>
+                <label>Exotics/Hybrids</label>
+            </value>
+            <value>
+                <fullName>Interest Rate Derivatives</fullName>
+                <default>false</default>
+                <label>Interest Rate Derivatives</label>
+            </value>
+            <value>
+                <fullName>Manual Payments (FTs)</fullName>
+                <default>false</default>
+                <label>Manual Payments (FTs)</label>
+            </value>
+            <value>
+                <fullName>Precious Metals</fullName>
+                <default>false</default>
+                <label>Precious Metals</label>
+            </value>
+            <value>
+                <fullName>Securities</fullName>
+                <default>false</default>
+                <label>Securities</label>
+            </value>
+            <value>
+                <fullName>Structured Products</fullName>
+                <default>false</default>
+                <label>Structured Products</label>
+            </value>
+            <value>
+                <fullName>Treasury (FX/MM)</fullName>
+                <default>false</default>
+                <label>Treasury (FX/MM)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

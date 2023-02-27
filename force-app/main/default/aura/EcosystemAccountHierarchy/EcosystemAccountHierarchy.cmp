@@ -1,0 +1,129 @@
+<aura:component >
+
+	<aura:attribute name="hierarchyMembers" type="Object[]"/>
+    <aura:attribute name="margin" type="Integer" default="0"/>
+	<aura:attribute name="title" type="String" default=""/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.init}" />
+
+ 	<div class="slds-text-heading_small slds-align_absolute-center slds-border_top slds-m-top_small slds-p-top_medium" style="font-family: Arial; font-weight: 200; font-size: 17.5px;">{!v.title}</div><br/>
+
+    <table class="slds-table slds-table_bordered slds-table_fixed-layout" role="grid">
+        <thead>
+            <tr class="slds-line-height_reset">
+                <th  class="slds-truncate slds-cell-wrap" scope="col" style="width: 23rem;" title="CLIENT NAME">
+                    <span style="font-size: .75rem;"> 
+                            CLIENT NAME
+                    </span>
+                </th>
+                <th class="slds-is-sortable slds-is-resizable slds-text-title_caps slds-truncate slds-cell-wrap" scope="col" title="NET INTEREST INCOME (ZAR)"
+                    style="text-align:right">
+                    <span style="font-size: .75rem;">
+                        NET INTEREST INCOME (ZAR)
+                    </span>
+                </th>
+                <th class="slds-is-sortable slds-is-resizable slds-text-title_caps slds-truncate slds-cell-wrap" scope="col" title="NON INTEREST REVENUE (ZAR)"
+                    style="text-align:right">
+                    <span style="font-size: .75rem;">
+                            NON INTEREST REVENUE (ZAR)
+                    </span>
+                </th>
+                <th class="slds-is-sortable slds-is-resizable slds-text-title_caps slds-truncate slds-cell-wrap" scope="col" title="OPERATING INCOME (ZAR)"
+                    style="text-align:right">
+                    <span style="font-size: .75rem;">
+                            OPERATING INCOME (ZAR)
+                    </span>
+                </th>
+                <th class="slds-is-sortable slds-is-resizable slds-text-title_caps slds-truncate slds-cell-wrap" scope="col" title="HEADLINE EARNINGS (ZAR)"
+                    style="text-align:right">
+                    <span style="font-size: .75rem;">
+                            HEADLINE EARNINGS (ZAR)
+                    </span>
+                </th>
+                <th class="slds-is-sortable slds-is-resizable slds-text-title_caps slds-truncate slds-cell-wrap" style="width: 4rem;text-align:right" scope="col" title="ROE %">
+                    <span style="font-size: .75rem;">
+                            ROE %
+                    </span>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <aura:iteration items="{!v.hierarchyMembers}" var="hm">
+                <tr>
+					<td role="gridcell" class="slds-truncate" title="{!hm.name}"> 
+						<div style="{!'margin-left:'+v.margin+'em;'}"> 
+			
+							<!--span onclick="{!c.toggle}">
+								<a>
+		               				<aura:if isTrue="{!v.node.items.length>0}">
+		              					<aura:if isTrue="{!v.expanded}">
+		                      				<lightning:icon iconName="utility:dash" size="x-small"/>
+		                       					<aura:set attribute="else">
+		                            				<lightning:icon iconName="utility:add" size="x-small"/>
+		                       					</aura:set>
+		                      				</aura:if>
+									</aura:if> 
+								</a>
+	          				</span-->
+ 				
+	          				<span class="slds-cell-wrap">
+		          				<a href="{!'/one/one.app?#/sObject/'+ hm.recordId + '/view'}" target="_blank">
+									{!hm.name}
+								</a>
+							</span>
+
+						</div>
+					</td>
+					<td role="gridcell" class="slds-truncate slds-cell-wrap" title="{!hm.profitability.netIncome}">
+                        <div style="text-align:right">
+                            <span>
+                                {!hm.profitability.netIncome}
+                            </span>
+                        </div>
+					</td>
+					<td role="gridcell" class="slds-truncate slds-cell-wrap" title="{!hm.profitability.netRevenue}">
+                        <div style="text-align:right">
+                            <span>
+                                {!hm.profitability.nonRevenue}
+                            </span>
+                        </div>
+					</td>
+					<td role="gridcell" class="slds-truncate slds-cell-wrap" title="{!hm.profitability.operationalIncome}">
+                        <div style="text-align:right">
+                            <span>
+                                {!hm.profitability.operationalIncome}
+                            </span>
+                        </div>
+					</td>
+					<td role="gridcell" class="slds-truncate slds-cell-wrap" title="{!hm.profitability.headlineErnings}">
+                        <div style="text-align:right">
+                            <span>
+                                {!hm.profitability.headlineErnings}
+                            </span>
+                        </div>
+					</td>
+					<td role="gridcell" class="slds-truncate slds-cell-wrap" title="{!hm.profitability.roe / hm.profitability.count}">
+                        <div style="text-align:right">
+                            <span>
+                                <aura:if isTrue="{!hm.profitability.count>0}">
+                                    <lightning:formattedNumber maximumFractionDigits="2"
+                                                value="{!hm.profitability.roe / hm.profitability.count}"/>
+                                    <aura:set attribute="else">
+                                        <lightning:formattedNumber maximumFractionDigits="2"
+                                                    value="0"/>
+                                    </aura:set>
+                                </aura:if>
+                            </span>
+                        </div>
+					</td>
+				</tr>  
+
+ 				<!--aura:if isTrue="{!v.expanded}">
+       				<aura:iteration items="{!v.node.items}" var="node">
+          				<c:StdBank_Ltn_AccountHierarchyListRow node="{!node}" margin="{!v.margin+2}" />  
+       				</aura:iteration> 
+ 				</aura:if-->   
+            </aura:iteration> 
+        </tbody> 
+    </table>
+</aura:component>

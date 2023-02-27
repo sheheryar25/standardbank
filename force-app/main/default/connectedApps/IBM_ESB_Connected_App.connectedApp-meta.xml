@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>ronald.naidoo2@standardbank.co.za</contactEmail>
+    <description>This Connected App is used to integrated into ESB</description>
+    <label>IBM ESB Connected App</label>
+    <oauthConfig>
+        <callbackUrl>https://login.salesforce.com/oauth/jwt/success</callbackUrl>
+        <certificate>MIIG+zCCBeOgAwIBAgIQB18rPxWnVlGRPON1taYcZTANBgkqhkiG9w0BAQsFADBNMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMScwJQYDVQQDEx5EaWdpQ2VydCBTSEEyIFNlY3VyZSBTZXJ2ZXIgQ0EwHhcNMjAwNDA5MDAwMDAwWhcNMjIwNTAzMTIwMDAwWjCBuTELMAkGA1UEBhMCWkExEDAOBgNVBAgTB0dhdXRlbmcxFTATBgNVBAcTDEpvaGFubmVzYnVyZzEuMCwGA1UEChMlU3RhbmRhcmQgQmFuayBvZiBTb3V0aCBBZnJpY2EgTGltaXRlZDEmMCQGA1UECxMdU29sdXRpb24gRGVsaXZlcnkgSW50ZWdyYXRpb24xKTAnBgNVBAMTIG1vYmlsZWJhbmtpbmcuc3RhbmRhcmRiYW5rLmNvLnphMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAt0WSgwhTySAflCvjk7JU+OdFGGyWZ2xrC+Kogjh/33XettZ2dqlsmQ8zDRfgdypRgYzcg/9qmD31thytXMsWPvwe7NDLi9fvGlC8k6bMihQ+M01QZ36MWkeF8JGsCw6ZxsAP95JUqgrpSBnVjM7ISZLb2BF+xVLBFli5981dVesy9YzndL3WaazNvFeq3lC3njJPWBCUIrdp3G7pdxJSpHhUHGpQeCGizEOQHaJlR+DBqKXyN0l6zP5dvfVOcKIb23GIwiOSQqvj/ZmC8k9pZ3CcmRm7hRMi2CR3ozhMSjAcusWipd2uQ0rjy4Sx4Vt3CNWgBNBlqVNsQui99u3IyQIDAQABo4IDaDCCA2QwHwYDVR0jBBgwFoAUD4BhHIIxYdUvKOeNRji0LOHG2eIwHQYDVR0OBBYEFKn8zO1nyCBh6beIYQVj83r7i3VNMCsGA1UdEQQkMCKCIG1vYmlsZWJhbmtpbmcuc3RhbmRhcmRiYW5rLmNvLnphMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwawYDVR0fBGQwYjAvoC2gK4YpaHR0cDovL2NybDMuZGlnaWNlcnQuY29tL3NzY2Etc2hhMi1nNi5jcmwwL6AtoCuGKWh0dHA6Ly9jcmw0LmRpZ2ljZXJ0LmNvbS9zc2NhLXNoYTItZzYuY3JsMEwGA1UdIARFMEMwNwYJYIZIAYb9bAEBMCowKAYIKwYBBQUHAgEWHGh0dHBzOi8vd3d3LmRpZ2ljZXJ0LmNvbS9DUFMwCAYGZ4EMAQICMHwGCCsGAQUFBwEBBHAwbjAkBggrBgEFBQcwAYYYaHR0cDovL29jc3AuZGlnaWNlcnQuY29tMEYGCCsGAQUFBzAChjpodHRwOi8vY2FjZXJ0cy5kaWdpY2VydC5jb20vRGlnaUNlcnRTSEEyU2VjdXJlU2VydmVyQ0EuY3J0MAkGA1UdEwQCMAAwggGABgorBgEEAdZ5AgQCBIIBcASCAWwBagB3AKS5CZC0GFgUh7sTosxncAo8NZgE+RvfuON3zQ7IDdwQAAABcV7Ih4wAAAQDAEgwRgIhAP2o6g0wvHDYqZW1VyLxFWafDSNvT9MyBXK++fyoCINWAiEAqQVgDuw602vaUv3rGJOMxcMDAGVeGyqWFsizy4pO56MAdgAiRUUHWVUkVpY/oS/x922G4CMmY63AS39dxoNcbuIPAgAAAXFeyIe1AAAEAwBHMEUCIHOvlnN/3Ha868fzrqatTVwTHrOA8PuqsX1EGh33t6A9AiEArcRY6SWKx0xFkF+gqhBfcpYwkIgZZSvMLEFWQg6UTaMAdwBByMqx3yJGShDGoToJQodeTjGLGwPr60vHaPCQYpYG9gAAAXFeyIeGAAAEAwBIMEYCIQCTD06+RylaItFUMOTpadXLapS83r8wCKxBf73SkUPUEwIhALvuT/3GQnQL+Gzdsxll5Un0t8ljAGQsF7VDFEFeGBZdMA0GCSqGSIb3DQEBCwUAA4IBAQA0/cM71LTozZoFemvHJp4IEARyYG5EaV7WHIH+FQXDIIWTT0cFf9R4so3/pHJdhAYa4/CjbPopbk3wDD4q8adRJ+G2BuVwxqpcFR9pINDnEv9ZWpXAYoF0mMqX8UUA5fFgwQJJxBFaVFa2cdp70L9hXzXkdsoLD+XnNEQdrJDqAHRT+Z+7yIYrPDLoDpgumCph8po6ECaOrPdxS50gR3cWxzlphlFNrFQZ5vEsNuToPjuI/rTay1RGfDBAr+k/uvxcJ7PawHfy4Mwwwy4wfEprMec+eE4tACCP1NsIq4n0opwdpUylx5ZFwXZf/Q0lApE4RUQhBze09vpXUh6etpPW</certificate>
+        <consumerKey>3MVG9sSN_PMn8tjSodyD28jSJp3CjLRdx3m3nmByd0SQx6BepynA91AWbc5X6P0tJsKmmWkxsLF8uCTaLEo2R</consumerKey>
+        <isAdminApproved>true</isAdminApproved>
+        <isClientCredentialEnabled>false</isClientCredentialEnabled>
+        <isCodeCredentialEnabled>false</isCodeCredentialEnabled>
+        <isCodeCredentialPostOnly>false</isCodeCredentialPostOnly>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isSecretRequiredForRefreshToken>false</isSecretRequiredForRefreshToken>
+        <scopes>Api</scopes>
+        <scopes>RefreshToken</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>ENFORCE</ipRelaxation>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+    <permissionSetName>RequestConsent</permissionSetName>
+    <profileName>API Only User</profileName>
+</ConnectedApp>

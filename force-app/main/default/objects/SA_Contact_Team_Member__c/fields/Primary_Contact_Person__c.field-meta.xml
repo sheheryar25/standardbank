@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Primary_Contact_Person__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Used to specify The Primary Contact Person for the Contact within the Contact Team</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Used to specify The Primary Contact Person for the Contact within the Contact Team</inlineHelpText>
+    <label>Primary Contact Person</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

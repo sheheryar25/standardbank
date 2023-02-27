@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Change_Request_Process_Flow_Development</fullName>
+    <active>true</active>
+    <description>Ensure that the Change Request implementation details are captured before the case Status is changed to &quot;Development&quot;
+
+CRM-Enhanced Cases for Change Request Functionality (C Reinecke 2010/08)</description>
+    <errorConditionFormula>$RecordType.Name = &apos;Change Request&apos; &amp;&amp; (TEXT(Status) = &apos;Development&apos;) &amp;&amp; (ISBLANK(Testing_Details__c) || ISBLANK(Implementation_Details__c) || ISBLANK(Objects_Impacted_choose_all_that_apply__c) || ISBLANK(Estimated_Hours_To_Complete__c) || ISBLANK(Name_Of_Sandbox_Used__c))</errorConditionFormula>
+    <errorMessage>Please make sure you have entered values for Objects Impacted; Estimated Hours to Complete; Name of Sandbox Used; Implementation Details and Testing Details</errorMessage>
+</ValidationRule>

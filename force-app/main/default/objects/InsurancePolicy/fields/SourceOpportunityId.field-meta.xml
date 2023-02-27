@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SourceOpportunityId</fullName>
+    <description>SFP-12591  - Lookup to opportunity object</description>
+    <inlineHelpText>The source opportunity of where the policy originates from.</inlineHelpText>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

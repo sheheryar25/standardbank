@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BEE_Level__c</fullName>
+    <description>This field will indicate client BEE level, this is only applicable to commB</description>
+    <externalId>false</externalId>
+    <inlineHelpText>A reflection of the level of compliance to the B-BBEE Act</inlineHelpText>
+    <label>BEE Level</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>BEE_Code__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Level 1 Contributor</fullName>
+                <default>false</default>
+                <label>Level 1 Contributor</label>
+            </value>
+            <value>
+                <fullName>Level 2 Contributor</fullName>
+                <default>false</default>
+                <label>Level 2 Contributor</label>
+            </value>
+            <value>
+                <fullName>Level 3 Contributor</fullName>
+                <default>false</default>
+                <label>Level 3 Contributor</label>
+            </value>
+            <value>
+                <fullName>Level 4 Contributor</fullName>
+                <default>false</default>
+                <label>Level 4 Contributor</label>
+            </value>
+            <value>
+                <fullName>Level 5 Contributor</fullName>
+                <default>false</default>
+                <label>Level 5 Contributor</label>
+            </value>
+            <value>
+                <fullName>Level 6 Contributor</fullName>
+                <default>false</default>
+                <label>Level 6 Contributor</label>
+            </value>
+            <value>
+                <fullName>Level 7 Contributor</fullName>
+                <default>false</default>
+                <label>Level 7 Contributor</label>
+            </value>
+            <value>
+                <fullName>Level 8 Contributor</fullName>
+                <default>false</default>
+                <label>Level 8 Contributor</label>
+            </value>
+            <value>
+                <fullName>Non-Compliant Contributor</fullName>
+                <default>false</default>
+                <label>Non-Compliant Contributor</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Asian Companies 100% Owned</controllingFieldValue>
+            <controllingFieldValue>Black Companies 100% Owned</controllingFieldValue>
+            <controllingFieldValue>Black Empowered Entity 25% to 50% Owned</controllingFieldValue>
+            <controllingFieldValue>Black Influenced Entity 5% to 25% Owned</controllingFieldValue>
+            <controllingFieldValue>Black Women-Empowered Companies &gt; 50% Owned</controllingFieldValue>
+            <controllingFieldValue>Black Owned Entity &gt; 50% Owned</controllingFieldValue>
+            <controllingFieldValue>Coloured Companies 100% Owned</controllingFieldValue>
+            <valueName>Level 1 Contributor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Asian Companies 100% Owned</controllingFieldValue>
+            <controllingFieldValue>Black Companies 100% Owned</controllingFieldValue>
+            <controllingFieldValue>Black Empowered Entity 25% to 50% Owned</controllingFieldValue>
+            <controllingFieldValue>Black Influenced Entity 5% to 25% Owned</controllingFieldValue>
+            <controllingFieldValue>Black Women-Empowered Companies &gt; 50% Owned</controllingFieldValue>
+            <controllingFieldValue>Black Owned Entity &gt; 50% Owned</controllingFieldValue>
+            <controllingFieldValue>Coloured Companies 100% Owned</controllingFieldValue>
+            <valueName>Level 2 Contributor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Asian Companies 100% Owned</controllingFieldValue>
+            <controllingFieldValue>Black Companies 100% Owned</controllingFieldValue>
+            <controllingFieldValue>Black Empowered Entity 25% to 50% Owned</controllingFieldValue>
+            <controllingFieldValue>Black Influenced Entity 5% to 25% Owned</controllingFieldValue>
+            <controllingFieldValue>Black Women-Empowered Companies &gt; 50% Owned</controllingFieldValue>
+            <controllingFieldValue>Black Owned Entity &gt; 50% Owned</controllingFieldValue>
+            <controllingFieldValue>Coloured Companies 100% Owned</controllingFieldValue>
+            <valueName>Level 3 Contributor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Asian Companies 100% Owned</controllingFieldValue>
+            <controllingFieldValue>Black Companies 100% Owned</controllingFieldValue>
+            <controllingFieldValue>Black Empowered Entity 25% to 50% Owned</controllingFieldValue>
+            <controllingFieldValue>Black Influenced Entity 5% to 25% Owned</controllingFieldValue>
+            <controllingFieldValue>Black Women-Empowered Companies &gt; 50% Owned</controllingFieldValue>
+            <controllingFieldValue>Black Owned Entity &gt; 50% Owned</controllingFieldValue>
+            <controllingFieldValue>Coloured Companies 100% Owned</controllingFieldValue>
+            <valueName>Level 4 Contributor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Asian Companies 100% Owned</controllingFieldValue>
+            <controllingFieldValue>Black Companies 100% Owned</controllingFieldValue>
+            <controllingFieldValue>Black Empowered Entity 25% to 50% Owned</controllingFieldValue>
+            <controllingFieldValue>Black Influenced Entity 5% to 25% Owned</controllingFieldValue>
+            <controllingFieldValue>Black Women-Empowered Companies &gt; 50% Owned</controllingFieldValue>
+            <controllingFieldValue>Black Owned Entity &gt; 50% Owned</controllingFieldValue>
+            <controllingFieldValue>Coloured Companies 100% Owned</controllingFieldValue>
+            <valueName>Level 5 Contributor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Asian Companies 100% Owned</controllingFieldValue>
+            <controllingFieldValue>Black Companies 100% Owned</controllingFieldValue>
+            <controllingFieldValue>Black Empowered Entity 25% to 50% Owned</controllingFieldValue>
+            <controllingFieldValue>Black Influenced Entity 5% to 25% Owned</controllingFieldValue>
+            <controllingFieldValue>Black Women-Empowered Companies &gt; 50% Owned</controllingFieldValue>
+            <controllingFieldValue>Black Owned Entity &gt; 50% Owned</controllingFieldValue>
+            <controllingFieldValue>Coloured Companies 100% Owned</controllingFieldValue>
+            <valueName>Level 6 Contributor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Asian Companies 100% Owned</controllingFieldValue>
+            <controllingFieldValue>Black Companies 100% Owned</controllingFieldValue>
+            <controllingFieldValue>Black Empowered Entity 25% to 50% Owned</controllingFieldValue>
+            <controllingFieldValue>Black Influenced Entity 5% to 25% Owned</controllingFieldValue>
+            <controllingFieldValue>Black Women-Empowered Companies &gt; 50% Owned</controllingFieldValue>
+            <controllingFieldValue>Black Owned Entity &gt; 50% Owned</controllingFieldValue>
+            <controllingFieldValue>Coloured Companies 100% Owned</controllingFieldValue>
+            <valueName>Level 7 Contributor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Asian Companies 100% Owned</controllingFieldValue>
+            <controllingFieldValue>Black Companies 100% Owned</controllingFieldValue>
+            <controllingFieldValue>Black Empowered Entity 25% to 50% Owned</controllingFieldValue>
+            <controllingFieldValue>Black Influenced Entity 5% to 25% Owned</controllingFieldValue>
+            <controllingFieldValue>Black Women-Empowered Companies &gt; 50% Owned</controllingFieldValue>
+            <controllingFieldValue>Black Owned Entity &gt; 50% Owned</controllingFieldValue>
+            <controllingFieldValue>Coloured Companies 100% Owned</controllingFieldValue>
+            <valueName>Level 8 Contributor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Non BEE</controllingFieldValue>
+            <valueName>Non-Compliant Contributor</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_of_Client_Contacts_Declined__c</fullName>
+    <description>Case#1168 - 11/2011 - Rudolf Niehaus
+            Calculated field for the total number of contacts that have Invite Status = Declined and contact record type = Client Contact Record Type</description>
+    <externalId>false</externalId>
+    <label>Number of Client Contacts Declined</label>
+    <summaryFilterItems>
+        <field>CampaignMember.Status</field>
+        <operation>equals</operation>
+        <value>Declined</value>
+    </summaryFilterItems>
+    <summaryFilterItems>
+        <field>CampaignMember.Contact_Record_Type__c</field>
+        <operation>equals</operation>
+        <value>Client Contact Record Type</value>
+    </summaryFilterItems>
+    <summaryForeignKey>CampaignMember.CampaignId</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <type>Summary</type>
+</CustomField>

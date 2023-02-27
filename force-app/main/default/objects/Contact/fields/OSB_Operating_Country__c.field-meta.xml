@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OSB_Operating_Country__c</fullName>
+    <description>This field is used to define a OneHub user&apos;s Operating Country/s which will drive visibility of Solutions &amp; API&apos;s on the users dashboard.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Which country/s does the user operating in?</inlineHelpText>
+    <label>Operating Country</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>OSB_Operating_Country</valueSetName>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

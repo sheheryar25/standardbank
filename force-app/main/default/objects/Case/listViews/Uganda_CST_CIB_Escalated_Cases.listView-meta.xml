@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Uganda_CST_CIB_Escalated_Cases</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>Client__c</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>Service_Type_Reporting__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Case_Owner_Team__c</field>
+        <operation>equals</operation>
+        <value>Africa Regions-Client Services-CIB-CS-Uganda</value>
+    </filters>
+    <filters>
+        <field>CASES.ESCALATION_STATE</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>CASES.CLOSED</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <label>Uganda CST CIB - Escalated Cases</label>
+    <sharedTo>
+        <roleAndSubordinatesInternal>CIB_Customer_Contact_Center_Uganda_Division</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

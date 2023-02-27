@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Actual_Host_Client_Ratio__c</fullName>
+    <description>Case#1168 - 11/2011 - Rudolf Niehaus
+            The actual number of host(s) to the number of client(s) at a campaign</description>
+    <externalId>false</externalId>
+    <label>Actual Host Client Ratio</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1:1</fullName>
+                <default>false</default>
+                <label>1:1</label>
+            </value>
+            <value>
+                <fullName>1:2</fullName>
+                <default>false</default>
+                <label>1:2</label>
+            </value>
+            <value>
+                <fullName>1:3</fullName>
+                <default>false</default>
+                <label>1:3</label>
+            </value>
+            <value>
+                <fullName>1:4</fullName>
+                <default>false</default>
+                <label>1:4</label>
+            </value>
+            <value>
+                <fullName>1:4+</fullName>
+                <default>false</default>
+                <label>1:4+</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

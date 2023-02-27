@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DependsOn__c</fullName>
+    <description>Where or not to show the field but only if the label used has a JavaScript truth value (SGPRT - 1389)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Manages dependencies on field records</inlineHelpText>
+    <label>DependsOn</label>
+    <length>100</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

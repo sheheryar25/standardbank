@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_for_Inactive__c</fullName>
+    <description>Reason as to why a Contact is Inactive on Salesforce</description>
+    <externalId>false</externalId>
+    <label>Reason for Inactive</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Inactive__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Client Inactive</fullName>
+                <default>false</default>
+                <label>Client Inactive</label>
+            </value>
+            <value>
+                <fullName>Deceased</fullName>
+                <default>false</default>
+                <label>Deceased</label>
+            </value>
+            <value>
+                <fullName>Internal Transfer</fullName>
+                <default>false</default>
+                <label>Internal Transfer</label>
+            </value>
+            <value>
+                <fullName>Resigned</fullName>
+                <default>false</default>
+                <label>Resigned</label>
+            </value>
+            <value>
+                <fullName>Retired</fullName>
+                <default>false</default>
+                <label>Retired</label>
+            </value>
+            <value>
+                <fullName>Retrenched</fullName>
+                <default>false</default>
+                <label>Retrenched</label>
+            </value>
+            <value>
+                <fullName>Previous Owner Inactive</fullName>
+                <default>false</default>
+                <label>Previous Owner Inactive</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Client Inactive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Deceased</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Internal Transfer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Resigned</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Retired</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Retrenched</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

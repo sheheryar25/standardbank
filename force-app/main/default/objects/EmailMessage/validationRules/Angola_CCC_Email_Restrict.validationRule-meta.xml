@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Angola_CCC_Email_Restrict</fullName>
+    <active>true</active>
+    <description>US-3506: Restrict CCC users to reply from CCC Email Addresses only.</description>
+    <errorConditionFormula>AND(
+$Profile.Name == &apos;Custom Lightning CCC Service Cloud User&apos;,
+ISPICKVAL($User.Business_Unit__c , &apos;PBB&apos;),
+FromAddress  &lt;&gt;  &quot;reclamacoes@standardbank.co.ao&quot;,
+FromAddress  &lt;&gt;  &quot;apoiocliente@standardbank.co.ao&quot;,
+FromAddress  &lt;&gt;  &quot;pedidoservico@standardbank.co.ao&quot;
+)</errorConditionFormula>
+    <errorMessage>Please ensure you are using an email address  approved for your team.</errorMessage>
+</ValidationRule>

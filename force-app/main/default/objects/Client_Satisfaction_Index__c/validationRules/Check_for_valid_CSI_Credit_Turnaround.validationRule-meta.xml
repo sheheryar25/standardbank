@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_for_valid_CSI_Credit_Turnaround</fullName>
+    <active>true</active>
+    <description>EN-701 CSI - Case automation &amp; data quality control.Validation rule to check the value of CSI Credit Turnaround is in between 0 and 10 and will trigger only when new CSI record is inserted.</description>
+    <errorConditionFormula>AND 
+(   OR( CSI_Credit_Turnaround__c &lt;0,                   CSI_Credit_Turnaround__c &gt;10),
+
+IF( Text(CreatedDate) == null, True, False ) 
+
+)</errorConditionFormula>
+    <errorMessage>The CSI Credit Turnaround value should be between 0 and 10.</errorMessage>
+</ValidationRule>

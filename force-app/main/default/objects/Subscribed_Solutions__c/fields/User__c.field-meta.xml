@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>User__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>OneHub: This field stores which User  the Solution is linked to.(US-4712)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Search for the User to link to this record.</inlineHelpText>
+    <label>User</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Subscribed_Solutions</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

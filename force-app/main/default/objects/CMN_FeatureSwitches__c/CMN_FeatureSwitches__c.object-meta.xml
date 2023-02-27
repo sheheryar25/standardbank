@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>A Hierarchical Custom setting that can be used by developers to switch off features (i.e. disable code, validation rules etc)</description>
+    <enableFeeds>false</enableFeeds>
+    <label>CMN Feature Switches</label>
+    <visibility>Public</visibility>
+</CustomObject>

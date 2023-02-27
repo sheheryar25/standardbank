@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Close</fullName>
+    <availability>online</availability>
+    <description>This will move the Opportunity to Close stage and display the associated page layout for this record type.</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Close</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/22.0/connection.js&quot;)} 
+
+var Query = &quot;SELECT Id,name from RecordType where SObjectType = &apos;Opportunity&apos; and Name = &apos;3 - Closed Opportunity&apos; LIMIT 1&quot;; 
+
+var result = sforce.connection.query(Query); 
+
+var records = result.getArray(&quot;records&quot;); 
+
+if(records[0].Id!=null &amp;&amp; records[0].Id!=&apos;&apos;) { 
+window.location.href=&quot;/{!Opportunity.Id}/e?retURL=/{!Opportunity.Id}&amp;nooverride=1&amp;RecordType=&quot; + records[0].Id + &quot;&amp;opp11=None&amp;opp12=0&quot;; 
+
+}</url>
+</WebLink>

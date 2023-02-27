@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Change_Request_Process_Flow_New</fullName>
+    <active>true</active>
+    <description>Ensure that the status of the Change Request adheres to the defined process flow
+
+CRM-Enhanced Cases for Change Request Functionality (C Reinecke 2010/08)</description>
+    <errorConditionFormula>$RecordType.Name = &apos;Change Request&apos; &amp;&amp; ISNEW() &amp;&amp; (TEXT(Status) != &apos;NEW&apos;)</errorConditionFormula>
+    <errorDisplayField>Status</errorDisplayField>
+    <errorMessage>This is not a valid Status. Please follow the case lifecycle.</errorMessage>
+</ValidationRule>

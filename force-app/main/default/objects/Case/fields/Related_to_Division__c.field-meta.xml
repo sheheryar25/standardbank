@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Related_to_Division__c</fullName>
+    <externalId>false</externalId>
+    <label>Related to Division</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Agência AAA Cabinda</fullName>
+                <default>false</default>
+                <label>Agência AAA Cabinda</label>
+            </value>
+            <value>
+                <fullName>Agência AAA Namibe</fullName>
+                <default>false</default>
+                <label>Agência AAA Namibe</label>
+            </value>
+            <value>
+                <fullName>Abertura de Contas</fullName>
+                <default>false</default>
+                <label>Abertura de Contas</label>
+            </value>
+            <value>
+                <fullName>Abertura de Contas Empresa</fullName>
+                <default>false</default>
+                <label>Abertura de Contas Empresa</label>
+            </value>
+            <value>
+                <fullName>Account Maintenance</fullName>
+                <default>false</default>
+                <label>Account Maintenance</label>
+            </value>
+            <value>
+                <fullName>Audit</fullName>
+                <default>false</default>
+                <label>Audit</label>
+            </value>
+            <value>
+                <fullName>Banc Assurance</fullName>
+                <default>false</default>
+                <label>Banc Assurance</label>
+            </value>
+            <value>
+                <fullName>BB Commercial</fullName>
+                <default>false</default>
+                <label>BB Commercial</label>
+            </value>
+            <value>
+                <fullName>BB Debit Card</fullName>
+                <default>false</default>
+                <label>BB Debit Card</label>
+            </value>
+            <value>
+                <fullName>BB Mortgage Lending</fullName>
+                <default>false</default>
+                <label>BB Mortgage Lending</label>
+            </value>
+            <value>
+                <fullName>BB Small Medium Entity</fullName>
+                <default>false</default>
+                <label>BB Small Medium Entity</label>
+            </value>
+            <value>
+                <fullName>BBP - Kuando Kubango Offices</fullName>
+                <default>false</default>
+                <label>BBP - Kuando Kubango Offices</label>
+            </value>
+            <value>
+                <fullName>Agência Belas</fullName>
+                <default>false</default>
+                <label>Agência Belas</label>
+            </value>
+            <value>
+                <fullName>Belas Private Banking Suite</fullName>
+                <default>false</default>
+                <label>Belas Private Banking Suite</label>
+            </value>
+            <value>
+                <fullName>Belas BB Commercial Suite</fullName>
+                <default>false</default>
+                <label>Belas BB Commercial Suite</label>
+            </value>
+            <value>
+                <fullName>BOL</fullName>
+                <default>false</default>
+                <label>BOL</label>
+            </value>
+            <value>
+                <fullName>Call Centre</fullName>
+                <default>false</default>
+                <label>Call Centre</label>
+            </value>
+            <value>
+                <fullName>Card Acquiring</fullName>
+                <default>false</default>
+                <label>Card Acquiring</label>
+            </value>
+            <value>
+                <fullName>Card Issuing</fullName>
+                <default>false</default>
+                <label>Card Issuing</label>
+            </value>
+            <value>
+                <fullName>Card Operations</fullName>
+                <default>false</default>
+                <label>Card Operations</label>
+            </value>
+            <value>
+                <fullName>Central Verification Unit</fullName>
+                <default>false</default>
+                <label>Central Verification Unit</label>
+            </value>
+            <value>
+                <fullName>Cliente</fullName>
+                <default>false</default>
+                <label>Cliente</label>
+            </value>
+            <value>
+                <fullName>Client Access</fullName>
+                <default>false</default>
+                <label>Client Access</label>
+            </value>
+            <value>
+                <fullName>Client Services</fullName>
+                <default>false</default>
+                <label>Client Services</label>
+            </value>
+            <value>
+                <fullName>Compliance</fullName>
+                <default>false</default>
+                <label>Compliance</label>
+            </value>
+            <value>
+                <fullName>Corporate Banking CIB</fullName>
+                <default>false</default>
+                <label>Corporate Banking CIB</label>
+            </value>
+            <value>
+                <fullName>Credit</fullName>
+                <default>false</default>
+                <label>Credit</label>
+            </value>
+            <value>
+                <fullName>Customer Support</fullName>
+                <default>false</default>
+                <label>Customer Support</label>
+            </value>
+            <value>
+                <fullName>Digital Channels</fullName>
+                <default>false</default>
+                <label>Digital Channels</label>
+            </value>
+            <value>
+                <fullName>Agência Dolce Vita</fullName>
+                <default>false</default>
+                <label>Agência Dolce Vita</label>
+            </value>
+            <value>
+                <fullName>Finance</fullName>
+                <default>false</default>
+                <label>Finance</label>
+            </value>
+            <value>
+                <fullName>Finance Crime Control</fullName>
+                <default>false</default>
+                <label>Finance Crime Control</label>
+            </value>
+            <value>
+                <fullName>Fixed Income Trading</fullName>
+                <default>false</default>
+                <label>Fixed Income Trading</label>
+            </value>
+            <value>
+                <fullName>Forex Trading</fullName>
+                <default>false</default>
+                <label>Forex Trading</label>
+            </value>
+            <value>
+                <fullName>Agência Gika</fullName>
+                <default>false</default>
+                <label>Agência Gika</label>
+            </value>
+            <value>
+                <fullName>Global Markets Sales</fullName>
+                <default>false</default>
+                <label>Global Markets Sales</label>
+            </value>
+            <value>
+                <fullName>Global Markets Trading</fullName>
+                <default>false</default>
+                <label>Global Markets Trading</label>
+            </value>
+            <value>
+                <fullName>Governance</fullName>
+                <default>false</default>
+                <label>Governance</label>
+            </value>
+            <value>
+                <fullName>Head of Branch Control</fullName>
+                <default>false</default>
+                <label>Head of Branch Control</label>
+            </value>
+            <value>
+                <fullName>Head of Service</fullName>
+                <default>false</default>
+                <label>Head of Service</label>
+            </value>
+            <value>
+                <fullName>Agência Hotel Presidente</fullName>
+                <default>false</default>
+                <label>Agência Hotel Presidente</label>
+            </value>
+            <value>
+                <fullName>Huambo</fullName>
+                <default>false</default>
+                <label>Huambo</label>
+            </value>
+            <value>
+                <fullName>Human Capital PBB</fullName>
+                <default>false</default>
+                <label>Human Capital PBB</label>
+            </value>
+            <value>
+                <fullName>IBC Trade &amp; FX</fullName>
+                <default>false</default>
+                <label>IBC Trade &amp; FX</label>
+            </value>
+            <value>
+                <fullName>Investigations</fullName>
+                <default>false</default>
+                <label>Investigations</label>
+            </value>
+            <value>
+                <fullName>IT CIB Application Maintenance &amp; Support</fullName>
+                <default>false</default>
+                <label>IT CIB Application Maintenance &amp; Support</label>
+            </value>
+            <value>
+                <fullName>IT PBB Application Maintenance &amp; Support</fullName>
+                <default>false</default>
+                <label>IT PBB Application Maintenance &amp; Support</label>
+            </value>
+            <value>
+                <fullName>IT PBB Software Asset Management</fullName>
+                <default>false</default>
+                <label>IT PBB Software Asset Management</label>
+            </value>
+            <value>
+                <fullName>Agência Lar do Patriota</fullName>
+                <default>false</default>
+                <label>Agência Lar do Patriota</label>
+            </value>
+            <value>
+                <fullName>Logistics</fullName>
+                <default>false</default>
+                <label>Logistics</label>
+            </value>
+            <value>
+                <fullName>Agência Lubango</fullName>
+                <default>false</default>
+                <label>Agência Lubango</label>
+            </value>
+            <value>
+                <fullName>Agência Maianga</fullName>
+                <default>false</default>
+                <label>Agência Maianga</label>
+            </value>
+            <value>
+                <fullName>Agência Maxi-Porto Amboim</fullName>
+                <default>false</default>
+                <label>Agência Maxi-Porto Amboim</label>
+            </value>
+            <value>
+                <fullName>Operations CIB</fullName>
+                <default>false</default>
+                <label>Operations CIB</label>
+            </value>
+            <value>
+                <fullName>Operations PBB</fullName>
+                <default>false</default>
+                <label>Operations PBB</label>
+            </value>
+            <value>
+                <fullName>Optimisation &amp; Branch Control</fullName>
+                <default>false</default>
+                <label>Optimisation &amp; Branch Control</label>
+            </value>
+            <value>
+                <fullName>Payments</fullName>
+                <default>false</default>
+                <label>Payments</label>
+            </value>
+            <value>
+                <fullName>PBB Products</fullName>
+                <default>false</default>
+                <label>PBB Products</label>
+            </value>
+            <value>
+                <fullName>PBB Workplace Banking</fullName>
+                <default>false</default>
+                <label>PBB Workplace Banking</label>
+            </value>
+            <value>
+                <fullName>Process &amp; Clearing</fullName>
+                <default>false</default>
+                <label>Process &amp; Clearing</label>
+            </value>
+            <value>
+                <fullName>Procurement</fullName>
+                <default>false</default>
+                <label>Procurement</label>
+            </value>
+            <value>
+                <fullName>Recuperação de Crédito</fullName>
+                <default>false</default>
+                <label>Recuperação de Crédito</label>
+            </value>
+            <value>
+                <fullName>Agência Rei Katyavala</fullName>
+                <default>false</default>
+                <label>Agência Rei Katyavala</label>
+            </value>
+            <value>
+                <fullName>Rei Katyavala Private Banking Suite</fullName>
+                <default>false</default>
+                <label>Rei Katyavala Private Banking Suite</label>
+            </value>
+            <value>
+                <fullName>Risk Management</fullName>
+                <default>false</default>
+                <label>Risk Management</label>
+            </value>
+            <value>
+                <fullName>SBA Canais</fullName>
+                <default>false</default>
+                <label>SBA Canais</label>
+            </value>
+            <value>
+                <fullName>Securitisation</fullName>
+                <default>false</default>
+                <label>Securitisation</label>
+            </value>
+            <value>
+                <fullName>Agência Shoprite Belas</fullName>
+                <default>false</default>
+                <label>Agência Shoprite Belas</label>
+            </value>
+            <value>
+                <fullName>Agência Shoprite Huambo</fullName>
+                <default>false</default>
+                <label>Agência Shoprite Huambo</label>
+            </value>
+            <value>
+                <fullName>Agência Shoprite Lobito</fullName>
+                <default>false</default>
+                <label>Agência Shoprite Lobito</label>
+            </value>
+            <value>
+                <fullName>Agência Shoprite Viana</fullName>
+                <default>false</default>
+                <label>Agência Shoprite Viana</label>
+            </value>
+            <value>
+                <fullName>Agência Sogepower</fullName>
+                <default>false</default>
+                <label>Agência Sogepower</label>
+            </value>
+            <value>
+                <fullName>Sogepower BB Commercial Suite</fullName>
+                <default>false</default>
+                <label>Sogepower BB Commercial Suite</label>
+            </value>
+            <value>
+                <fullName>Staff Branch PBB</fullName>
+                <default>false</default>
+                <label>Staff Branch PBB</label>
+            </value>
+            <value>
+                <fullName>Agência Torre Ambiente</fullName>
+                <default>false</default>
+                <label>Agência Torre Ambiente</label>
+            </value>
+            <value>
+                <fullName>Agência Torre Elysee</fullName>
+                <default>false</default>
+                <label>Agência Torre Elysee</label>
+            </value>
+            <value>
+                <fullName>Torre Elysee BB Commercial Suite</fullName>
+                <default>false</default>
+                <label>Torre Elysee BB Commercial Suite</label>
+            </value>
+            <value>
+                <fullName>Torre Elysee Private Banking Suite</fullName>
+                <default>false</default>
+                <label>Torre Elysee Private Banking Suite</label>
+            </value>
+            <value>
+                <fullName>Informação contratual e pré-contratual</fullName>
+                <default>false</default>
+                <label>Informação contratual e pré-contratual</label>
+            </value>
+            <value>
+                <fullName>Devolução</fullName>
+                <default>false</default>
+                <label>Devolução</label>
+            </value>
+            <value>
+                <fullName>Requisição</fullName>
+                <default>false</default>
+                <label>Requisição</label>
+            </value>
+            <value>
+                <fullName>Aceitação recusada</fullName>
+                <default>false</default>
+                <label>Aceitação recusada</label>
+            </value>
+            <value>
+                <fullName>Disponibilização do valor</fullName>
+                <default>false</default>
+                <label>Disponibilização do valor</label>
+            </value>
+            <value>
+                <fullName>Outros</fullName>
+                <default>false</default>
+                <label>Outros</label>
+            </value>
+            <value>
+                <fullName>Agência Xyami Kilamba</fullName>
+                <default>false</default>
+                <label>Agência Xyami Kilamba</label>
+            </value>
+            <value>
+                <fullName>Agência Xyame Kilamba</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Agência Xyame Kilamba</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

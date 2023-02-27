@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ActualAmount</fullName>
+    <description>SFP-12613  - The actual amount of claim.</description>
+    <inlineHelpText>The total amount of claim after excess.</inlineHelpText>
+    <trackHistory>false</trackHistory>
+</CustomField>

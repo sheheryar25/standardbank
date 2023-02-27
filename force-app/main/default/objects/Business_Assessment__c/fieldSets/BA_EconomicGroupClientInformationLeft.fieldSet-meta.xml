@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BA_EconomicGroupClientInformationLeft</fullName>
+    <description>BA &quot;Economic Group Client Information&quot; Section Left Column</description>
+    <displayedFields>
+        <field>Economic_Group_Parent_Client_Name__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <displayedFields>
+        <field>Economic_Group_Client_Country_of_Risk__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <displayedFields>
+        <field>Economic_Group_Client_Risk_Rating__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <label>BA EconomicGroupClientInformationLeft</label>
+</FieldSet>

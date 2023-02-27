@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Client_Plan_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Client Plan Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>To Be Reviewed</fullName>
+                <default>true</default>
+                <label>To Be Reviewed</label>
+            </value>
+            <value>
+                <fullName>Submitted For Approval</fullName>
+                <default>false</default>
+                <label>Submitted For Approval</label>
+            </value>
+            <value>
+                <fullName>Approved</fullName>
+                <default>false</default>
+                <label>Approved</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

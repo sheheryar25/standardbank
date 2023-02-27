@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>KYC_Team_Location__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Location of team that will be responsible for completing Client&apos;s KYC</inlineHelpText>
+    <label>KYC Team Location</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Johannesburg</fullName>
+                <default>false</default>
+                <label>Johannesburg</label>
+            </value>
+            <value>
+                <fullName>Cape Town</fullName>
+                <default>false</default>
+                <label>Cape Town</label>
+            </value>
+            <value>
+                <fullName>Cote d’Ivoire</fullName>
+                <default>false</default>
+                <label>Cote d’Ivoire</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

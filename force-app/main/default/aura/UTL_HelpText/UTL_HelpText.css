@@ -1,0 +1,12 @@
+.THIS .popup {
+    background: t(colorBackgroundAltInverse);
+    border-color: t(colorBackgroundAltInverse);
+    left:-11.7rem; 
+    bottom:2.25rem;  
+}
+.THIS .icon svg {
+    fill: t(colorTextInverseWeak);    
+}
+.THIS .popover {
+     z-index:  7011;
+}

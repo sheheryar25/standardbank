@@ -1,0 +1,66 @@
+<aura:component extends="c:CI_Base" implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId">
+    <aura:handler name="init" value="this" action="{!c.doInit}"/>
+    <aura:attribute name="filteringOnDivisions" type="Boolean" default="true"/>
+    <aura:attribute name="filteringOnIBC" type="Boolean" default="false"/>
+    <aura:attribute name="filteringOnRecordType" type="Boolean" default="true" access="public"/>
+    <aura:attribute name="querySettings" type="Object"/>
+    <c:CI_RevenueService aura:id="revenue_service"/>
+
+    <aura:if isTrue="{!or($Browser.isAndroid, $Browser.isIOS)}">
+
+                <aura:if isTrue="{!v.querySettings != null}">
+                    <lightning:tabset>
+                        <lightning:tab>
+                            <aura:set attribute="label">
+                                PORTFOLIO
+                            </aura:set>
+
+                            <!--<c:CI_Gems context="notification" showEmptyStatus="false"/>-->
+                            <div class="slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3  slds-p-around_x-small">
+                                <c:CI_NumberOfClients querySettings="{!v.querySettings}"/>
+                            </div>
+                            <div class="slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3  slds-p-around_x-small clickable">
+                                <c:CI_RevenueYoY />
+                            </div>
+
+                            <div class="slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3  slds-p-around_x-small  clickable ">
+                                <c:CI_ClientsCYPipeline querySettings="{!v.querySettings}" />
+                            </div>
+                        </lightning:tab>
+
+
+                        <lightning:tab>
+                            <aura:set attribute="label">
+                                NEWS
+                            </aura:set>
+                            <c:CI_News/>
+                        </lightning:tab>
+                    </lightning:tabset>
+                </aura:if>
+
+        <aura:set attribute="else">
+            <div class="desktop_background slds-p-around_small">
+                <!--<c:CI_Gems heading="Gems" showEmptyStatus="false" hideHeadingIfEmpty="true"/>-->
+
+                <p class="slds-text-heading_small bold slds-m-bottom_xx-small slds-m-left_small is_absolute slds-p-top_x-small">My Portfolio of Clients</p>
+                <aura:if isTrue="{!v.querySettings != null}">
+                    <div class="slds-grid slds-grid_vertical-stretch slds-wrap">
+                        <div class="slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3  slds-p-around_x-small">
+                            <c:CI_NumberOfClients querySettings="{!v.querySettings}"/>
+                        </div>
+                        <div class="slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3  slds-p-around_x-small clickable ">
+                            <c:CI_RevenueYoY />
+                        </div>
+                        <div class=" slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3  slds-p-around_x-small clickable">
+                            <c:CI_ClientsCYPipeline querySettings="{!v.querySettings}"/>
+                        </div>
+                    </div>
+                </aura:if>
+
+
+            </div>
+        </aura:set>
+
+    </aura:if>
+
+</aura:component>

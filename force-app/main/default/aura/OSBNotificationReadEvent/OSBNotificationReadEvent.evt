@@ -1,0 +1,3 @@
+<aura:event type="APPLICATION" description="OSBNotificationReadEvent">
+    <aura:attribute name="notificationId" type="String"/>
+</aura:event>

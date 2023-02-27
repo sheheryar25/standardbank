@@ -1,0 +1,566 @@
+.THIS {
+    z-index: 7003; /*changed because it needs to overlay standard chatter dropdown*/
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+
+.THIS .header_menu_item,
+.THIS dropdown__list {
+    color: #666666;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+.THIS .with-shadow {
+    box-shadow: 0 4px 30px 0 rgba(0,0,0,0.2);
+}
+
+.THIS .header-container {
+    background: #0033A1;
+    display:block;
+}
+
+.THIS .header {
+    height: 80px;
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #0033A1;
+}
+
+@media(max-width: 1279px) {
+    .THIS .header {
+        flex-direction: row-reverse;
+    }
+
+    .THIS .cancel_reverse {
+        flex-direction: row;
+    }
+}
+
+@media(min-width:1280px){
+    .THIS .header {
+        height: 80px;
+    }
+}
+
+.THIS .header__logo {
+    position: absolute;
+    padding: 8px 0;
+    margin-left: 16px;
+}
+
+@media(min-width:1280px){
+    .THIS .header__logo {
+        transform: translate(-50%, -50%);
+        top: 50%;
+    }
+}
+
+.THIS .withMenu .header__logo {
+    position: relative;
+    transform: translate(0, 0);
+    left: 0;
+    top: 0;
+}
+
+.THIS .header.withMenu {
+    margin: auto;
+    padding: 8px 0;
+}
+
+.THIS .header__account, .THIS .header__account_logged {
+    height: 100%;
+    display: flex;
+    margin-left: auto;
+    color: #fff;
+    align-items: center;
+}
+
+.THIS .header__account_logged {
+    margin-right: 0 !important;
+}
+
+@media(max-width: 479px) {
+    .THIS .header__account {
+        display: none;
+    }
+}
+
+@media(max-width:1279px){
+    .THIS .hide_on-bigres {
+        display:none;
+    }
+
+    .THIS .header__account {
+        margin-right: 0 !important;
+    }
+}
+
+@media(min-width: 480px) {
+
+    .THIS .header.withMenu {
+        padding-right: 20px;
+        height: 90px;
+    }
+
+    .THIS .header_button {
+        width: 154px;
+        padding-left: 16px;
+    }
+}
+
+.THIS .ms-icn_menu {
+    font-size: 50px;
+    margin-right: 28px;
+    color: #fff;
+}
+
+.THIS .header__user__icon {
+    font-size: 25px;
+    color: #fff;
+}
+
+@media(min-width:1280px){
+    .THIS .header__user__icon {
+        display:none;
+    }
+}
+
+.THIS .header__btn {
+    display: flex;
+    align-items: center;
+    padding: 9px 11px;
+    border: 1px solid #FFFFFF;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    text-transform: uppercase;
+    background: transparent;
+    white-space: nowrap;
+}
+
+.THIS .header__btn__icon {
+    color: #fff;
+}
+
+.THIS .header__btn__icon,
+.THIS .header__user__icon {
+    align-self: center;
+    font-size: 36px;
+}
+
+.THIS .header__user {
+    display: contents;
+    align-items: center;
+    margin-right: 10px;
+    white-space: nowrap;
+}
+
+.THIS .header__user__name {
+    color: #fff;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 300;
+}
+
+.THIS .logoContainer {
+    background-image: t('url(' + brandLogoImage  + ')');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 99;
+    cursor: pointer;
+    position: relative;
+    max-width: 100%;
+    max-height: 53px;
+    display: block;
+    outline: 0;
+    height: 53px;
+}
+
+.THIS .withMenu .logoContainer {
+    background-position: left;
+    margin-left: 0;
+}
+
+@media(max-width: 776px) {
+    .THIS .header__logo {
+        position: relative;
+        top: 0;
+        transform: translate(0, 0);
+        left: 0;
+    }
+}
+
+.THIS .header__button {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    line-height: 20px;
+    background: #0089FF;
+    padding: 24px 45px;
+    margin: -8px 0;
+    color: #fff;
+    border: 0;
+}
+
+.THIS .header__button--left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 8px;
+    font-weight: 300;
+}
+
+.THIS .header__button--left span:first-child {
+    margin-left: 3px;
+}
+
+.THIS .header__button--icon {
+    display: block;
+    font-size: 24px;
+}
+
+.THIS .header__button span {
+    white-space: nowrap;
+}
+
+.THIS .header__navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.THIS .header__navigation li {
+    color: #fff;
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+.THIS .header__navigation .slds-is-active {
+    font-weight: 400;
+}
+
+.THIS .header__navigation--right {
+    margin-left: auto;
+}
+
+.THIS .slds-button:hover,
+.THIS .slds-button:focus,
+.THIS button {
+    color: #fff;
+    font-family: BentonSans;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.THIS .no-hover:hover {
+    color: #fff;
+}
+
+.THIS .slds-m-left_xx-small {
+margin-left: 1rem;
+    display: inline-flex;
+}
+
+.THIS .slds-dropdown {
+    padding: inherit;
+}
+
+.THIS .header__fixed-height {
+    height: 30px;
+}
+
+.THIS .header__overlay {
+    background: #eeeeee;
+    opacity: 0.8;
+    height: -webkit-fill-available;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 150;
+}
+
+.THIS .header__notification {
+    margin-bottom: -1px;
+}
+
+.THIS .notification__bell {
+    font-size: 24px;
+}
+
+.THIS .header_contact {
+    margin-right: 16px;
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: auto;
+    margin-bottom: auto;
+    position: relative;
+}
+
+.THIS .header__contact-container {
+    display: flex;
+    position: relative;
+    height: 100%;
+}
+
+.THIS .withMenu .header__contact-container {
+    margin-left: 5px;
+}
+
+.THIS .withMenu .header__contact-container:hover {
+    color: #0089FF;
+}
+
+.THIS .withMenu .header__contact-container:hover::after {
+    content: "";
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    border: 2px solid #FFFFFF;
+    width: 100%;
+    bottom: -8px;
+}
+
+.THIS .header_dropdown {
+    margin-left: 10px;
+    position: relative;
+}
+
+.THIS .slds-m-left_xx-small {
+    margin-left: 8px;
+}
+
+.THIS .header__unread-notifications {
+position: relative;
+    top: -15px;
+    right: 11px;
+    display: inline-block;
+    margin-right: -16px;
+}
+
+.THIS .header__unread-notifications-container .header__unread-notifications {
+    position: relative;
+    top: -2px;
+    right: 15px;
+    display: inline-block;
+    margin-right: 0px;
+}
+
+.THIS .header__unread-notification {
+    height: 16px;
+    min-width: 16px;
+    background-color: #0089FF;
+    border-radius: 8px;
+}
+
+.THIS .header__unread-notification-number {
+    font-size: 11px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.THIS .three__digits {
+    width: 28px;
+    margin-right: -12px;
+}
+
+.THIS .two__digits {
+    width: 21px;
+    margin-right: -5px;
+}
+
+.THIS .mobile__menu {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    position: fixed;
+}
+
+.THIS .mobile__menu-header {
+    background-color: token(SBPrimaryBlue);
+    height: 64px;
+    width: 100%;
+    padding-right: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.THIS .mobile__menu-sign {
+    background-color: token(OSBLightBlue);
+    color: #fff;
+    height: 48px;
+    width: 100%;
+    line-height: 28px;
+    font-weight: 300;
+    padding-left: 32px;
+    padding-right: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.THIS .mobile__menu-contact {
+    background-color: #fff;
+    color: token(OSBMediumGrey);
+    line-height: 28px;
+    font-weight: 300;
+    padding-left: 32px;
+    padding-top: 7px;
+}
+
+.THIS .ms-icn_close {
+    color: #fff;
+    font-size: 24px;
+}
+
+@media(min-width: 1280px) {
+    .THIS .header.withMenu {
+        margin: auto;
+        height: 90px;
+    }
+
+    .THIS .withMenu .header__logo {
+        margin-left: 17%;
+    }
+}
+
+.THIS .hidden{
+    display: none;
+}
+
+@media(max-width: 1279px) {
+    .THIS .header__logo {
+        position: relative;
+        transform: translate(0, 0);
+        margin: unset;
+        flex-grow: 1;
+        padding: 10px; 
+    }
+}
+
+
+
+@media(max-width: 1279px) {
+    .THIS .header__mobile-menu {
+        flex-grow: 1;
+    }
+}
+
+.THIS .header__icon {
+    border-style: solid;
+    border-radius: 5px;
+    border: 1px solid white;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+@media(min-width: 1280px) {
+  .THIS .header__mobile-menu {
+      display: none;
+  }
+
+  .THIS .header__icon {
+      display: none;
+  }
+}
+
+.THIS .header__unread-notifications__left {
+    position: relative;
+    top: -30px;
+    right: 45px;
+    display: inline-block;
+    color: white;
+}
+
+.THIS .header__line-mobile{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.THIS .header__line-mobile>button>div{
+    padding-right: 20px;
+}
+
+.THIS .header__line-mobile>button>div>img{
+    width: 36px;
+    height: 36px;
+}
+
+.THIS .header_dropdown-full-menu {
+    width: 100%;
+}
+
+.THIS .uit_link_inner>li {
+    list-style: none;
+}
+.THIS .uit_link>li{
+    list-style: none;
+}
+
+.THIS .cOSBBreadcrumb {
+    display: flex;
+    position: revert;
+    margin-top: 0!important;
+}
+
+.THIS .breadcrumbs__container>div {
+    flex-grow: 1;
+}
+
+.THIS .breadcrumb__wide {
+    width: 100%;
+    text-align: center;
+}
+
+.THIS .links__container {
+    position: absolute;
+    width: 100%;
+    background: #FFFFFF;
+
+}
+
+.THIS .hidden_nonmobile{
+    display:none;
+}
+
+.THIS .hidden_link {
+    display: none;
+}
+
+.THIS .partial_link {
+    margin-left: 3px;
+    font-weight: bold;
+
+}
+
+.THIS .terms_link {
+    margin-left: 5px;
+}
+
+.THIS .ct_us {
+    margin-top: 40px;
+}
+
+.THIS .header__button_contatiner{
+    padding-right: 10px;
+}
+
+@media(max-width: 479px){
+    .THIS .hidden_nonmobile{
+      display:flex;
+    }
+}

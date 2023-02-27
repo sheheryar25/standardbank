@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Subset__c</fullName>
+    <description>The subset of products, within this division. Ie: FX, IRD are Product Subsets within the Global Markets Division</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The subset of products, within this division. Ie: FX, IRD are Product Subsets within the Global Markets Division</inlineHelpText>
+    <label>Product Subset</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Advisory</fullName>
+                <default>false</default>
+                <label>Advisory</label>
+            </value>
+            <value>
+                <fullName>Capital Markets</fullName>
+                <default>false</default>
+                <label>Capital Markets</label>
+            </value>
+            <value>
+                <fullName>Cash Equity</fullName>
+                <default>false</default>
+                <label>Cash Equity</label>
+            </value>
+            <value>
+                <fullName>Cash Management</fullName>
+                <default>false</default>
+                <label>Cash Management</label>
+            </value>
+            <value>
+                <fullName>Commodities</fullName>
+                <default>false</default>
+                <label>Commodities</label>
+            </value>
+            <value>
+                <fullName>Credit</fullName>
+                <default>false</default>
+                <label>Credit</label>
+            </value>
+            <value>
+                <fullName>Debt Products</fullName>
+                <default>false</default>
+                <label>Debt Products</label>
+            </value>
+            <value>
+                <fullName>Equity Derivatives</fullName>
+                <default>false</default>
+                <label>Equity Derivatives</label>
+            </value>
+            <value>
+                <fullName>Foreign Exchange</fullName>
+                <default>false</default>
+                <label>Foreign Exchange</label>
+            </value>
+            <value>
+                <fullName>Investor Services</fullName>
+                <default>false</default>
+                <label>Investor Services</label>
+            </value>
+            <value>
+                <fullName>LC African Product</fullName>
+                <default>false</default>
+                <label>LC African Product</label>
+            </value>
+            <value>
+                <fullName>Local Markets and IRT (IRD)</fullName>
+                <default>false</default>
+                <label>Local Markets and IRT (IRD)</label>
+            </value>
+            <value>
+                <fullName>Money Markets</fullName>
+                <default>false</default>
+                <label>Money Markets</label>
+            </value>
+            <value>
+                <fullName>Real Estate</fullName>
+                <default>false</default>
+                <label>Real Estate</label>
+            </value>
+            <value>
+                <fullName>Strategic Investments</fullName>
+                <default>false</default>
+                <label>Strategic Investments</label>
+            </value>
+            <value>
+                <fullName>Structured Finance</fullName>
+                <default>false</default>
+                <label>Structured Finance</label>
+            </value>
+            <value>
+                <fullName>Trade</fullName>
+                <default>false</default>
+                <label>Trade</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

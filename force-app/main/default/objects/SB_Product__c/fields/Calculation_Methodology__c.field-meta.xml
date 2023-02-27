@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Calculation_Methodology__c</fullName>
+    <description>SFP-8493 - Simple interest is the simple arithmetic mean of the daily RFRs.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Simple interest is the simple arithmetic mean of the daily RFRs. NCCR (Compounding Rate) is calculated compounded interest factor based on the difference between the “Cumulative Compounded Effective Rate” for the day and the prior day to arrive at a daily accrual. Compounding balance is calculating compound interest by applying the daily RFR to the principal balance and accrued accumulated unpaid interest on a daily basis. The preferred choice is Compounding Rate</inlineHelpText>
+    <label>Calculation Methodology</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>COMPOUNDING BALANCE</fullName>
+                <default>false</default>
+                <label>COMPOUNDING BALANCE</label>
+            </value>
+            <value>
+                <fullName>COMPOUNDING RATE (NCCR)</fullName>
+                <default>false</default>
+                <label>COMPOUNDING RATE (NCCR)</label>
+            </value>
+            <value>
+                <fullName>SIMPLE</fullName>
+                <default>false</default>
+                <label>SIMPLE</label>
+            </value>
+            <value>
+                <fullName>TERM</fullName>
+                <default>false</default>
+                <label>TERM</label>
+            </value>
+            <value>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+                <label>Not Applicable</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

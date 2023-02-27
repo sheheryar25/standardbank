@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Acct_Name_Change_on_CIF_Accs_I</fullName>
+    <active>true</active>
+    <description>Prevents change to Account Name on Records with a CIF
+
+For_use_with_ApiUser_and_Sys_Admin_users</description>
+    <errorConditionFormula>AND(ISChanged( Name), LEN( CIF__c)&gt;0 ,NOT( $Setup.Environment_Variable__c.Ignore_Validation_Rule__c ))</errorConditionFormula>
+    <errorDisplayField>SingletrackCMS__Active__c</errorDisplayField>
+    <errorMessage>You cannot change the Account Name on Accounts once they have a CIF</errorMessage>
+</ValidationRule>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Populate_Total_Revenue_Amount_CommB</fullName>
+    <active>true</active>
+    <description>Disallow empty Total Revenue (Amount) for Commercial Banking products (EN-869).</description>
+    <errorConditionFormula>ISBLANK(total_revenue_amount__c) &amp;&amp; ($RecordType.DeveloperName = &quot;Commercial_Banking&quot; || $RecordType.DeveloperName = &quot;CommB_Lending&quot;)</errorConditionFormula>
+    <errorMessage>Please enter a value for Total Revenue (Amount).</errorMessage>
+</ValidationRule>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Frozen_Date__c</fullName>
+    <description>This field will store the frozen date when a user is actually deactivated</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Frozen date of User</inlineHelpText>
+    <label>Frozen Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Date</type>
+</CustomField>

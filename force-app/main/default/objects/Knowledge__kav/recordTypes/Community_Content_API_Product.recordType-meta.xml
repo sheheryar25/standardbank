@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Community_Content_API_Product</fullName>
+    <active>true</active>
+    <description>This record type is created for API Products</description>
+    <label>Community Content – API Product</label>
+    <picklistValues>
+        <picklist>Application_Owner__c</picklist>
+        <values>
+            <fullName>3rd Party</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Standard Bank</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Categories__c</picklist>
+        <values>
+            <fullName>Developer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Energy %26 Sustainability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Loans %26 Collateral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Risk Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Support Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Treasury %26 Investments</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>OSB_Country__c</picklist>
+        <values>
+            <fullName>Angola</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Botswana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cote d%E2%80%99Ivoire</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Democratic Republic of Congo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ghana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kenya</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lesotho</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Malawi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mauritius</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mozambique</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Namibia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South Africa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South Sudan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Swaziland%2FEswatini</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tanzania</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uganda</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zambia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zimbabwe</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>OSB_Persona__c</picklist>
+        <values>
+            <fullName>Client</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Staff</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Section__c</picklist>
+        <values>
+            <fullName>Accounts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Branches Network</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cards</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Channels</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer External Communications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Digital</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Investor Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Loans</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pricing List</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transfers</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sub_Section__c</picklist>
+        <values>
+            <fullName>ATM%C2%B4s %5BPBB%5D</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CIT %28Cash in Transit%29 %5BCIB%5D</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cheques %5BPBB%5D</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corporate Customers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Card</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Products</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Simulators</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customized %2F Non Customized Debit Card</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Default messages</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Escrow Accounts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FAQ%E2%80%99s</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Foreign Currency Notes Sale Process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>H2H via ATG %28Pagamentos Domésticos %26 Cross-boarder%29 %5BCIB%5D</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>H2H via BOL %28Pagamentos Domésticos%29 %5BCIB%5D</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IBAN %2F Swift Code</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interest Rates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>International Transfers %28Corporate Customers%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>International Transfers %28Private Customers%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internet Banking %E2%80%93 Corporate Business %28CIB%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internet Banking %E2%80%93 Private Business %28PB%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internet Banking - Business Banking %28BB%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>List of EVB Companies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>National Transfers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OST %28On Site Teller%29 %5BCIB%5D</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>POS %5BPBB%5D</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PS2 %5BCIB%5D</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Private Customers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Savings Accounts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sunset Campaigns</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sweeping Accounts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Swift %5BCIB%5D</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Term Deposits</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

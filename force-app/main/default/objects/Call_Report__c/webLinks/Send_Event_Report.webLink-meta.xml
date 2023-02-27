@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_Event_Report</fullName>
+    <availability>online</availability>
+    <description>This button uses the Ajax toolkit in conjunction with the standard salesforce send email page to send detail on the event report through the aid of a visualforce email tempate to selected recipients. These recipients by default include the internal attendees that have indicated they want the email and optionally the client service team members.
+            Case#4250 Adding the client service team members did not work correctly.</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Send Event Report</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/connection.js&quot;)}
+
+            var qrytemplateId = sforce.connection.query(&quot;select id,name from emailtemplate where Name like &apos;EventReport&apos; Limit 1&quot;);
+            var templateIdrecords = qrytemplateId.getArray(&quot;records&quot;);
+
+            if (templateIdrecords.length &gt; 0){
+            var templateId = templateIdrecords[0].Id;
+            }
+            else{
+            templateId = &apos;00X200000013kCZ&apos;;
+            }
+
+            var Ccaddr = &apos;&apos;;
+            if(&apos;{!Call_Report__c.Relate_to_ClientId__c}&apos; != &apos;&apos;){
+            var resultTeam = sforce.connection.query(&quot;Select u.Id, u.Email From User u Where u.Id IN(Select a.UserId From AccountTeamMember a Where a.Account.Id = &apos;{!Call_Report__c.Relate_to_ClientId__c}&apos;)&quot;);
+            var recordsTeam = resultTeam.getArray(&quot;records&quot;);
+            if (recordsTeam.length &gt; 0) {
+            var addTeam = confirm (&quot;Would you like to send this to the Client Team?&quot;);
+            if (addTeam){
+            for (t=0; t &lt; recordsTeam.length; ++t){
+            Ccaddr=Ccaddr + recordsTeam[t].Email + &apos;;&apos;;
+            }
+            }
+            }
+            }
+            var result = sforce.connection.query(&quot;Select Id, Email__c, Contact_Type__c, Status__c From Call_report_Attendees__c where  Contact_Type__c = &apos;Internal&apos; and Send_Email__c = &apos;Yes&apos; and ((Status__c = &apos;Attended&apos;) or (Status__c = &apos;Invited&apos;) or (Status__c = &apos;Distribute Only&apos;)) and Call_report__c = &apos;{!Call_Report__c.Id}&apos;&quot;);var records = result.getArray(&quot;records&quot;);
+
+            var AddToaddr = &apos;&apos;;
+
+            if (records.length &gt; 0){
+            for (i=0; i &lt; records.length; ++i){
+            AddToaddr=AddToaddr + records[i].Email__c + &apos;;&apos;;
+            }
+            }
+
+            location.replace(&apos;/email/author/emailauthor.jsp?retURL=/{!Call_Report__c.Id}&amp;template_id=&apos; + templateId + &apos;&amp;p3_lkid={!Call_Report__c.Id}&amp;rtype=003&amp;p24=&apos; + AddToaddr + &apos;&amp;p4=&apos; + Ccaddr);</url>
+</WebLink>

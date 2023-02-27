@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Main_Category__c</fullName>
+    <description>The Primary category by which the case is classified (Kele 2013/12)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Primary Case Classification</inlineHelpText>
+    <label>Main Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Accounts</fullName>
+                <default>false</default>
+                <label>Accounts</label>
+            </value>
+            <value>
+                <fullName>Channel</fullName>
+                <default>false</default>
+                <label>Channel</label>
+            </value>
+            <value>
+                <fullName>Compliance</fullName>
+                <default>false</default>
+                <label>Compliance</label>
+            </value>
+            <value>
+                <fullName>Data Management</fullName>
+                <default>false</default>
+                <label>Data Management</label>
+            </value>
+            <value>
+                <fullName>General Management</fullName>
+                <default>false</default>
+                <label>General Management</label>
+            </value>
+            <value>
+                <fullName>Other External</fullName>
+                <default>false</default>
+                <label>Other External</label>
+            </value>
+            <value>
+                <fullName>Other Internal</fullName>
+                <default>false</default>
+                <label>Other Internal</label>
+            </value>
+            <value>
+                <fullName>Payments</fullName>
+                <default>true</default>
+                <label>Payments</label>
+            </value>
+            <value>
+                <fullName>Trade Finance</fullName>
+                <default>false</default>
+                <label>Trade Finance</label>
+            </value>
+            <value>
+                <fullName>User Management</fullName>
+                <default>false</default>
+                <label>User Management</label>
+            </value>
+            <value>
+                <fullName>Client On boarding</fullName>
+                <default>false</default>
+                <label>Client On boarding</label>
+            </value>
+            <value>
+                <fullName>Trailhead</fullName>
+                <default>false</default>
+                <label>Trailhead</label>
+            </value>
+            <value>
+                <fullName>Internal Org</fullName>
+                <default>false</default>
+                <label>Internal Org</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

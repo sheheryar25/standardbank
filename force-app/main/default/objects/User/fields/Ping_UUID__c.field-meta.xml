@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ping_UUID__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>Ping user ID used to correlate the Ping user, Salesforce user and contact SFP-7347</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Identity used in Ping</inlineHelpText>
+    <label>Ping UUID</label>
+    <length>128</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

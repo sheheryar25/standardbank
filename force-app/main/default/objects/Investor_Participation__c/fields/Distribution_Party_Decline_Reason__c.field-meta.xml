@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Distribution_Party_Decline_Reason__c</fullName>
+    <description>US-4609/ SGPRT-623 Distribution Party Decline Reason</description>
+    <externalId>false</externalId>
+    <label>Distribution Party Decline Reason</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Distribution_Party_Status__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Returns</fullName>
+                <default>false</default>
+                <label>Returns</label>
+            </value>
+            <value>
+                <fullName>Pricing/Risk Alignment</fullName>
+                <default>false</default>
+                <label>Pricing/Risk Alignment</label>
+            </value>
+            <value>
+                <fullName>Limit Constraints</fullName>
+                <default>false</default>
+                <label>Limit Constraints</label>
+            </value>
+            <value>
+                <fullName>Credit Fundamentals</fullName>
+                <default>false</default>
+                <label>Credit Fundamentals</label>
+            </value>
+            <value>
+                <fullName>Off Strategy</fullName>
+                <default>false</default>
+                <label>Off Strategy</label>
+            </value>
+            <value>
+                <fullName>Country of Risk Aversion</fullName>
+                <default>false</default>
+                <label>Country of Risk Aversion</label>
+            </value>
+            <value>
+                <fullName>Sector Aversion</fullName>
+                <default>false</default>
+                <label>Sector Aversion</label>
+            </value>
+            <value>
+                <fullName>Transaction Structure</fullName>
+                <default>false</default>
+                <label>Transaction Structure</label>
+            </value>
+            <value>
+                <fullName>Legal Agreement Clauses</fullName>
+                <default>false</default>
+                <label>Legal Agreement Clauses</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Declined</controllingFieldValue>
+            <valueName>Returns</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Declined</controllingFieldValue>
+            <valueName>Pricing/Risk Alignment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Declined</controllingFieldValue>
+            <valueName>Limit Constraints</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Declined</controllingFieldValue>
+            <valueName>Credit Fundamentals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Declined</controllingFieldValue>
+            <valueName>Off Strategy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Declined</controllingFieldValue>
+            <valueName>Country of Risk Aversion</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Declined</controllingFieldValue>
+            <valueName>Sector Aversion</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Declined</controllingFieldValue>
+            <valueName>Transaction Structure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Declined</controllingFieldValue>
+            <valueName>Legal Agreement Clauses</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Declined</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

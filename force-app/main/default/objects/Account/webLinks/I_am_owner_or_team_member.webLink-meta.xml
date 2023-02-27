@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>I_am_owner_or_team_member</fullName>
+    <availability>online</availability>
+    <description>Case# 5029 &gt; RI: Removal of hard coded EMEA URL</description>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>I am owner or team member</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <requireRowSelection>false</requireRowSelection>
+    <url>/00O20000002NWjc</url>
+</WebLink>

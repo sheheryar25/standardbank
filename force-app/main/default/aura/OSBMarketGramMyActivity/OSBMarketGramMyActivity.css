@@ -1,0 +1,360 @@
+.THIS {
+    max-width: 100%;
+}
+
+.THIS .feed__back-button {
+    color: #0089FF;
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.THIS .feed__product-details{
+    padding-bottom:10px;
+    display: flex;
+    flex-direction: row;
+    padding-left: 56px;
+    flex-wrap: wrap;
+}
+
+.THIS .feed__icon {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.THIS .feed__back-label {
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 8px;
+}
+
+.THIS .feed__header-items {
+    position: sticky;
+    z-index: 7001;
+    padding: 40px 0;
+    background-color: #fff;
+    top: 156px;
+    /*margin-bottom: -26px;*/
+}
+
+.THIS .feed__header-items:after,
+.THIS .feed__header-items:before {
+    content: '';
+    position: absolute;
+}
+
+.THIS .feed__header-items:before {
+    top: -56px;
+    left: -28px;
+    background-color: #f6f6f6;
+    height: 32px;
+    width: 110%;
+}
+
+.THIS .feed__header-items:after {
+    top: -24px;
+    background-color: #fff;
+    height: 24px;
+    width: 100%;
+}
+
+.THIS .feed__chatter {
+    padding: 0 96px;
+    padding-top: 10px;
+}
+
+.THIS .header__form{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 1192px;
+}
+
+.THIS .myTable{
+    width: fit-content;
+    margin-left: 56px;
+}
+
+.THIS .myTable tr td{
+    text-align: center;
+}
+
+.THIS .Label{
+    height: 14px;		
+    color: #0A2240;	
+    font-family: BentonSans;	
+    font-size: 14px;	
+    line-height: 14px;	
+}
+
+.THIS .Value{
+    height: 41px;	
+    color: #0A2240;	
+    font-family: BentonSans;	
+    font-size: 40px;	
+    line-height: 41px;	
+}
+
+.THIS td{
+    padding-right: 56px;
+}
+
+.THIS .activity_history{
+    position:-webkit-sticky; 
+    position:sticky; 
+    top:0;
+}
+
+.THIS .myAct {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.THIS .myAct.myAct--optl {
+    background: #fff;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.25);
+}
+
+.THIS .myAct.myAct--noShadow {
+    background: #fff;
+}
+
+.THIS .myTop__form{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding-top: 40px;
+    /*padding-left: 56px;
+    padding-right: 40px;*/
+    padding-bottom: 40px;
+    width: 1192px;
+    min-height: 967px;
+}
+
+.THIS .myAct__form {
+    display: flex;
+    flex-direction: column;
+    /*height: 776px;*/
+    height: 100%;
+    background-color: #ffffff;
+    width: 1192px;
+}
+
+.THIS .myActivity_title{
+	color: #0A2240;
+	font-family: BentonSans;
+	font-size: 47px;
+	font-weight: 200;
+	line-height: 47px;
+    margin-bottom: 62px;
+}
+
+.THIS .feed__icon {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.THIS .feed__back-label {
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 8px;
+}
+
+.THIS .feedActions:after,
+.THIS .feed__underline {
+    border-bottom: 2px solid #EDEDED;
+}
+
+.THIS .feedActions:after {
+    content: "";
+    height: 1px;
+    position: absolute;
+    top: 80px;
+    left: 0px;
+    width: 100%;
+    border-bottom: 1px solid rgb(212, 212, 212);
+}
+
+.THIS .feedActions {
+    margin-bottom: 40px;
+}
+
+.THIS .feed__chatter {
+    padding: 0 24px;
+    background-color:#fff;
+}
+
+.THIS .cuf-feedItemActionTrigger>button,
+.THIS .tabs__content {
+    border: unset;
+}
+
+.THIS div.slds-grid.dummyControlsContainer {
+    align-items: center;
+}
+
+.THIS .forceChatterBasePublisher.baseDefault .slds-button_brand,
+.THIS .dummyButtonSubmitAction {
+    color: #fff;
+    height: 50px;
+    width: 166px;
+    border-radius: 2px;
+    background-color: #0033AA;
+    text-transform: uppercase;
+}
+
+.THIS .cuf-submit .slds-button_brand {
+    color: #fff;
+    border-radius: 2px;
+    background-color: #0033AA;
+    text-transform: uppercase;
+}
+
+.THIS .cuf-submit .slds-button_brand:disabled,
+.THIS .forceChatterBasePublisher.baseDefault .slds-button_brand:disabled {
+    background-color: rgb(201, 199, 197);
+}
+
+.THIS .slds-rich-text-editor__toolbar {
+    background-color: #F5F7FA;
+}
+
+.THIS .dummyButtonCallToAction>span.label.bBody {
+    color: #fff;
+}
+
+.THIS .cuf-refresh .slds-button__icon {
+    fill: #0033AA;
+    width: 24px;
+    height: 24px;
+}
+
+.THIS .cuf-refresh {
+    border: unset;
+}
+
+.THIS .forceChatterSearchInFeed {
+    width: 100%;
+    max-width: unset;
+}
+
+.THIS .searchInFeedInput .slds-input {
+    height: 40px;
+    font-size: 15px;
+    color: #0A2240;
+}
+
+.THIS .feedActions>div {
+    justify-content: start;
+}
+
+.THIS .cuf-body,
+.THIS .cuf-entityLink,
+.THIS article {
+    color: #0A2240;
+    font-size: 15px;
+}
+
+.THIS p>span.forceChatterEntityLink.uiOutputText {
+    display:none;
+}
+
+.THIS .slds-text-color_weak.cuf-timestamp {
+    color: #767676;
+    font-size: 12px;
+    font-weight: 200;
+}
+
+.THIS .cuf-body,
+.THIS .interactions-wrap {
+    padding-left: 44px;
+}
+
+.THIS .forceChatterFeedItem .feed__item-comments--threadedCommunity {
+    background-color: #fff;
+}
+
+.THIS .cuf-commentTrigger  svg.slds-icon-text-default,
+.THIS .likeIconAnchor  svg.slds-icon-text-default {
+    fill: #DBDBDB;
+}
+
+.THIS svg.cuf-likeIcon.selected {
+    fill: #0033AA;
+}
+
+.THIS .forceChatterEntityLink,
+.THIS .cuf-entityLink {
+    pointer-events: none;
+}
+
+.THIS .comment__footer {
+    display: flex;
+}
+
+.THIS .comment__footer:before {
+    font-family: 'osram-microsite-icons' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    color: #dbdbdb;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\e9b9";
+    font-size: 1rem;
+}
+
+.THIS .cuf-feedItemActionTrigger .slds-button__icon,
+.THIS .cuf-commentActionButton .slds-button__icon {
+    fill: #0033aa;
+    width: .875rem;
+    height: .875rem;
+}
+
+.THIS .cuf-publisherTopics.input-field,
+.THIS .tabs__nav,
+.THIS .actionSection.cuf-simpleFeedItemTopics,
+.THIS li.cuf-actionItem:last-child {
+    display: none;
+}
+
+.THIS .feedy__header-items {
+    position: sticky;
+    z-index: 19;
+    background-color: #fff;
+    top: 156px;
+}
+
+.THIS .shouldDisplay .visibilitySwitcher  {
+    display: none;
+}
+
+.THIS .forceChatterFeedInner .feedActions {
+    padding-top: 0;
+}
+
+.THIS .myActivity__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 48px;
+}
+
+@media(max-width: 767px) {
+    .THIS .feed__product-details {
+        justify-content: space-around;
+    }
+
+    .THIS .myActivity__container:nth-child(1) {
+        padding-bottom: 16px;
+    }
+}

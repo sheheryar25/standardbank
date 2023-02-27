@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Distribution_Party_Closed_Date__c</fullName>
+    <description>US-4609/ SGPRT-623 Date that trade was closed at with each investor for the portion of sell down</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter the date trade was closed at with each investor for the portion of the sell down that relates to the specific distribution method OR the amount trade was closed at with the seller.</inlineHelpText>
+    <label>Distribution Party Closed Date</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

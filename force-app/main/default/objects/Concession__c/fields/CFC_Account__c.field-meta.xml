@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CFC_Account__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Is this a Forgeign Currency Account?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Is this a Forgeign Currency Account?</inlineHelpText>
+    <label>CFC Account</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

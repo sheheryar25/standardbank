@@ -1,0 +1,103 @@
+<template>
+    <div class="GalleryFilterSection ">
+        <lightning-layout>
+            <div class="AppGalleryMain slds-grid">
+                <div class="MobileFilter">
+                    <div class="MobileFilterIcon" onclick={ShowFilterMobile}>
+                        <img src={filterLogo} alt="Filter">
+                    </div>
+                    <div class="MobileFilterOptions">
+                        <div class="MobileFilterHeader">
+                            <div class="filterMobileWrapper">
+                                <div class="MobileFilterIconDropDown">
+                                    <img src={filterLogo} alt="Filter">
+                                </div>
+                                <div class="FilterMobileText">
+                                    <p>Filter</p>
+                                </div>
+                                <div class="CloseButtonHolder">
+                                    <img src={OSBCloseIcon} class="CloseButtonFilter" onclick={CloseFilter}
+                                        data-id="uitlink_link" data-text="Application Gallery | Close Icon Filter">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="MobileFilterSelection">
+                            <div class="checB slds slds-size_1-of-1">
+                                <label class="form-control">
+                                    <input type="checkbox" data-value="All Applications" name="options"
+                                        data-id="checkboxCategoryMobile" data-name="options"
+                                        onchange={handleCheckAllMobile}>
+                                    <span class="chckBoxLabel slds-form-element__label">Categories</span>
+                                    <span class="arrow" onclick={slideIt}
+                                        style="margin-top: 10px; right:16px;"><span></span><span></span></span>
+                                </label>
+                            </div>
+                            <template if:true={boolVisible}>
+                                <template if:true={records}>
+                                    <template for:each={records} for:item="record">
+                                        <div class="checB slds slds-size_1-of-1" key={record.Id}>
+                                            <label class="form-control">
+                                                <input key={record.Id} type="checkbox" name="categoriesMobile"
+                                                    data-id="checkboxMobile" data-name="categoriesMobile"
+                                                    value={record.MasterLabel} onchange={handleCheckboxMobile}><span
+                                                    class="chckBoxLabel slds-form-element__label">
+                                                    {record.MasterLabel}</span>
+                                            </label>
+                                        </div>
+                                    </template>
+                                </template>
+                            </template>
+                        </div>
+                        <button class="CloseButton" onclick={doneFilter} data-id="uitlink_link"
+                            data-text="Application Gallery | Close Button Filter">Done</button>
+                    </div>
+                </div>
+                <lightning-layout-item flexibility="auto">
+                    <div style="overflow:auto" class="slds-size_1-of-1">
+                        <c-osb-inline-bread-crumb base-label="Application marketplace" base-link="/mini-mall"
+                            link-label="Application gallery"></c-osb-inline-bread-crumb>
+                    </div>
+                    <div class="filterSection slds-col">
+                        <div class="filterContainer">
+                            <div class="filterlogo slds slds-size_1-of-1">
+                                <img src={filterLogo} alt="Filter" width="18.2px" height="16.33px"
+                                    style="margin: 15px;">
+                                <span class="slds-form-element__label" style="padding: 8px;font-size: 14px;
+                                                        font-weight: 500;">Filter</span>
+                            </div>
+                            <div class="checB slds slds-size_1-of-1">
+                                <label class="form-control">
+                                    <input type="checkbox" data-value="All Applications" name="options"
+                                        data-id="checkboxCategory" data-name="options" onchange={handleCheckAll}>
+                                    <span class="chckBoxLabel slds-form-element__label">Categories</span>
+                                    <div class="wrap"><span class="arrow"
+                                            onclick={slideIt}><span></span><span></span></span></div>
+                                </label>
+                            </div>
+                            <template if:true={boolVisible}>
+                                <template if:true={records}>
+                                    <template for:each={records} for:item="record">
+                                        <div class="checB slds slds-size_1-of-1" key={record.Id}>
+                                            <label class="form-control">
+                                                <input key={record.Id} type="checkbox" name="options" data-id="checkbox"
+                                                    data-name="categories" value={record.MasterLabel}
+                                                    onchange={handleCheckbox}><span
+                                                    class="chckBoxLabel slds-form-element__label">
+                                                    {record.MasterLabel}</span>
+                                            </label>
+                                        </div>
+                                    </template>
+                                </template>
+                            </template>
+                        </div>
+                    </div>
+                </lightning-layout-item>
+                <lightning-layout-item flexibility="auto">
+                    <div class="appSection slds-col">
+                        <c-osb-application-gallerylwc></c-osb-application-gallerylwc>
+                    </div>
+                </lightning-layout-item>
+            </div>
+        </lightning-layout>
+    </div>
+</template>

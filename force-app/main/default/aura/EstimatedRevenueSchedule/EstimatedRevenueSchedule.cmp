@@ -1,0 +1,40 @@
+<aura:component controller="EstimatedRevenueScheduleController" implements="force:lightningQuickAction,flexipage:availableForAllPageTypes,force:hasRecordId" access="global">
+    
+    <aura:attribute name="recordId" type="Id" access="public"/>
+    <aura:attribute name="recCount" type="Integer"/>
+    <aura:handler name="init" value="{!this}" action="{!c.initRecords}" /> <!-- calling doInit method in Component Controller -->    
+    
+    <aura:attribute name="ScheduleList" type="Estimated_Revenue_Schedule__c[]" description="store estimated revenue schedule records list"/> <!-- create Array type Estimated_Revenue_Schedule__c variable-->
+    <aura:attribute name="SB_Product" type="SB_Product__c[]" description="Product Record type"/> <!-- create Array type SB_Product__c variable-->
+    <aura:attribute name="Columns" type="List" />
+    
+    <force:recordData aura:id="productRecord"
+                      recordId="{!v.recordId}"
+                      targetFields="{!v.SB_Product}"
+                      layoutType="FULL"
+                      />
+  
+    <div class="slds-box">
+        <lightning:card > <!--iconName="custom:custom52" title="Estimated Revenue Schedule"-->
+        <!--div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate"-->
+                <div class="slds-media__figure">
+                    <span class="slds-icon_container slds-icon-custom-custom52" title="description of icon when needed">
+                        <lightning:icon iconName="custom:custom52" size="small" alternativeText="List Estimated Revenue Schedule"/>
+                    </span>
+                <!--/div>
+                <div class="slds-media__body"-->
+                    <!--h2-->
+                        <a href="javascript:void(0);" class="slds-card__header-link slds-truncate" title="Estimated revenue Schedule">
+                            <span class="slds-text-heading_small">&nbsp;&nbsp;&nbsp;Estimated Revenue Schedule ({!v.recCount})</span>
+                        </a>
+                    <!--/h2-->
+                </div>
+            <!--/header>
+        </div--> 
+            <lightning:datatable data="{! v.ScheduleList }" columns="{! v.Columns }" keyField="Id" hideCheckboxColumn="true"/>
+        </lightning:card>
+        <button class="slds-button slds-button_neutral" onclick="{!c.navigateToShowAll}">View All</button>
+    </div>
+    
+</aura:component>

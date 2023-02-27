@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Week_Of_The_Year__c</fullName>
+    <description>Week of the year for the resourcing week start date [SFP-4974]</description>
+    <externalId>false</externalId>
+    <formula>CEILING( ( Week_Start_Date__c - DATE( YEAR( Week_Start_Date__c ), 1, 1) + 1) / 7)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Week of the year for the resourcing week start date</inlineHelpText>
+    <label>Week Of The Year</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

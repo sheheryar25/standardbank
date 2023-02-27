@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Category__c</fullName>
+    <description>EN-0864 : Field is currently used to assign to &quot;CIB Customer Query&quot; Case Record Type if value is not blank</description>
+    <externalId>false</externalId>
+    <inlineHelpText>What type of Product/Service the Query relates to</inlineHelpText>
+    <label>Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ARC-IB</fullName>
+                <default>false</default>
+                <label>ARC-IB</label>
+            </value>
+            <value>
+                <fullName>ATG</fullName>
+                <default>false</default>
+                <label>ATG</label>
+            </value>
+            <value>
+                <fullName>Autosafe</fullName>
+                <default>false</default>
+                <label>Autosafe</label>
+            </value>
+            <value>
+                <fullName>Borderless Banking</fullName>
+                <default>false</default>
+                <label>Borderless Banking</label>
+            </value>
+            <value>
+                <fullName>Bulk Payments</fullName>
+                <default>false</default>
+                <label>Bulk Payments</label>
+            </value>
+            <value>
+                <fullName>Business Connect</fullName>
+                <default>false</default>
+                <label>Business Connect</label>
+            </value>
+            <value>
+                <fullName>Business Online</fullName>
+                <default>false</default>
+                <label>Business Online</label>
+            </value>
+            <value>
+                <fullName>Cash Management</fullName>
+                <default>false</default>
+                <label>Cash Management</label>
+            </value>
+            <value>
+                <fullName>Cheque &amp; Card</fullName>
+                <default>false</default>
+                <label>Cheque &amp; Card</label>
+            </value>
+            <value>
+                <fullName>CIT-Value transfer services</fullName>
+                <default>false</default>
+                <label>CIT-Value transfer services</label>
+            </value>
+            <value>
+                <fullName>CollectPlus</fullName>
+                <default>false</default>
+                <label>CollectPlus</label>
+            </value>
+            <value>
+                <fullName>EBB - Electronic Bill Board</fullName>
+                <default>false</default>
+                <label>EBB - Electronic Bill Board</label>
+            </value>
+            <value>
+                <fullName>EBSRCM</fullName>
+                <default>false</default>
+                <label>EBSRCM</label>
+            </value>
+            <value>
+                <fullName>e-Centric Switch (ECS)</fullName>
+                <default>false</default>
+                <label>e-Centric Switch (ECS)</label>
+            </value>
+            <value>
+                <fullName>ETRANZACT</fullName>
+                <default>false</default>
+                <label>ETRANZACT</label>
+            </value>
+            <value>
+                <fullName>FastPay</fullName>
+                <default>false</default>
+                <label>FastPay</label>
+            </value>
+            <value>
+                <fullName>FAX</fullName>
+                <default>false</default>
+                <label>FAX</label>
+            </value>
+            <value>
+                <fullName>Host to Host</fullName>
+                <default>false</default>
+                <label>Host to Host</label>
+            </value>
+            <value>
+                <fullName>International Cash Management</fullName>
+                <default>false</default>
+                <label>International Cash Management</label>
+            </value>
+            <value>
+                <fullName>Investor Services Online</fullName>
+                <default>false</default>
+                <label>Investor Services Online</label>
+            </value>
+            <value>
+                <fullName>IS Online</fullName>
+                <default>false</default>
+                <label>IS Online</label>
+            </value>
+            <value>
+                <fullName>iTrade</fullName>
+                <default>false</default>
+                <label>iTrade</label>
+            </value>
+            <value>
+                <fullName>Nampay</fullName>
+                <default>false</default>
+                <label>Nampay</label>
+            </value>
+            <value>
+                <fullName>NetPlus</fullName>
+                <default>false</default>
+                <label>NetPlus</label>
+            </value>
+            <value>
+                <fullName>new Business Online</fullName>
+                <default>false</default>
+                <label>new Business Online</label>
+            </value>
+            <value>
+                <fullName>PAYDIRECT</fullName>
+                <default>false</default>
+                <label>PAYDIRECT</label>
+            </value>
+            <value>
+                <fullName>Paynet</fullName>
+                <default>false</default>
+                <label>Paynet</label>
+            </value>
+            <value>
+                <fullName>Quantum Trade</fullName>
+                <default>false</default>
+                <label>Quantum Trade</label>
+            </value>
+            <value>
+                <fullName>QuickPay</fullName>
+                <default>false</default>
+                <label>QuickPay</label>
+            </value>
+            <value>
+                <fullName>SFI</fullName>
+                <default>false</default>
+                <label>SFI</label>
+            </value>
+            <value>
+                <fullName>SWIFT</fullName>
+                <default>false</default>
+                <label>SWIFT</label>
+            </value>
+            <value>
+                <fullName>T24 - H2H Connection to KRA system</fullName>
+                <default>false</default>
+                <label>T24 - H2H Connection to KRA system</label>
+            </value>
+            <value>
+                <fullName>T24 - H2H Connection to Safaricom system</fullName>
+                <default>false</default>
+                <label>T24 - H2H Connection to Safaricom system</label>
+            </value>
+            <value>
+                <fullName>Terminos IB</fullName>
+                <default>false</default>
+                <label>Terminos IB</label>
+            </value>
+            <value>
+                <fullName>Transactional Banking</fullName>
+                <default>false</default>
+                <label>Transactional Banking</label>
+            </value>
+            <value>
+                <fullName>Vehicle and Asset Management</fullName>
+                <default>false</default>
+                <label>Vehicle and Asset Management</label>
+            </value>
+            <value>
+                <fullName>ZIMRA E Tax</fullName>
+                <default>false</default>
+                <label>ZIMRA E Tax</label>
+            </value>
+            <value>
+                <fullName>Business Banking Customer Query</fullName>
+                <default>false</default>
+                <label>Business Banking Customer Query</label>
+            </value>
+            <value>
+                <fullName>Card Queries</fullName>
+                <default>false</default>
+                <label>Card Queries</label>
+            </value>
+            <value>
+                <fullName>Chief Executive Customer Queries</fullName>
+                <default>false</default>
+                <label>Chief Executive Customer Queries</label>
+            </value>
+            <value>
+                <fullName>Customer Complaint</fullName>
+                <default>false</default>
+                <label>Customer Complaint</label>
+            </value>
+            <value>
+                <fullName>Electronic Channel Query</fullName>
+                <default>false</default>
+                <label>Electronic Channel Query</label>
+            </value>
+            <value>
+                <fullName>Elite Customer Query</fullName>
+                <default>false</default>
+                <label>Elite Customer Query</label>
+            </value>
+            <value>
+                <fullName>General Customer Query</fullName>
+                <default>false</default>
+                <label>General Customer Query</label>
+            </value>
+            <value>
+                <fullName>Private Banking Customer Query</fullName>
+                <default>false</default>
+                <label>Private Banking Customer Query</label>
+            </value>
+            <value>
+                <fullName>Transactional Query</fullName>
+                <default>false</default>
+                <label>Transactional Query</label>
+            </value>
+            <value>
+                <fullName>Change Request</fullName>
+                <default>false</default>
+                <label>Change Request</label>
+            </value>
+            <value>
+                <fullName>Create User View</fullName>
+                <default>false</default>
+                <label>Create User View</label>
+            </value>
+            <value>
+                <fullName>Data Migration</fullName>
+                <default>false</default>
+                <label>Data Migration</label>
+            </value>
+            <value>
+                <fullName>Data Validation</fullName>
+                <default>false</default>
+                <label>Data Validation</label>
+            </value>
+            <value>
+                <fullName>Deactivate User(s)</fullName>
+                <default>false</default>
+                <label>Deactivate User(s)</label>
+            </value>
+            <value>
+                <fullName>Enhance Functionality</fullName>
+                <default>false</default>
+                <label>Enhance Functionality</label>
+            </value>
+            <value>
+                <fullName>Functional Error</fullName>
+                <default>false</default>
+                <label>Functional Error</label>
+            </value>
+            <value>
+                <fullName>Functionality Query</fullName>
+                <default>false</default>
+                <label>Functionality Query</label>
+            </value>
+            <value>
+                <fullName>General Enquiry</fullName>
+                <default>false</default>
+                <label>General Enquiry</label>
+            </value>
+            <value>
+                <fullName>General Management</fullName>
+                <default>false</default>
+                <label>General Management</label>
+            </value>
+            <value>
+                <fullName>Knowledge Transfer</fullName>
+                <default>false</default>
+                <label>Knowledge Transfer</label>
+            </value>
+            <value>
+                <fullName>Login Issues</fullName>
+                <default>false</default>
+                <label>Login Issues</label>
+            </value>
+            <value>
+                <fullName>New License Request</fullName>
+                <default>false</default>
+                <label>New License Request</label>
+            </value>
+            <value>
+                <fullName>New Record</fullName>
+                <default>false</default>
+                <label>New Record</label>
+            </value>
+            <value>
+                <fullName>New Request</fullName>
+                <default>false</default>
+                <label>New Request</label>
+            </value>
+            <value>
+                <fullName>New User</fullName>
+                <default>false</default>
+                <label>New User</label>
+            </value>
+            <value>
+                <fullName>Not a Case</fullName>
+                <default>false</default>
+                <label>Not a Case</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Password Reset</fullName>
+                <default>false</default>
+                <label>Password Reset</label>
+            </value>
+            <value>
+                <fullName>Production Incident</fullName>
+                <default>false</default>
+                <label>Production Incident</label>
+            </value>
+            <value>
+                <fullName>Reports &amp; Dashboards</fullName>
+                <default>false</default>
+                <label>Reports &amp; Dashboards</label>
+            </value>
+            <value>
+                <fullName>Support</fullName>
+                <default>false</default>
+                <label>Support</label>
+            </value>
+            <value>
+                <fullName>User Management</fullName>
+                <default>false</default>
+                <label>User Management</label>
+            </value>
+            <value>
+                <fullName>E-Alerts</fullName>
+                <default>false</default>
+                <label>E-Alerts</label>
+            </value>
+            <value>
+                <fullName>Mpesa Payments</fullName>
+                <default>false</default>
+                <label>Mpesa Payments</label>
+            </value>
+            <value>
+                <fullName>Corporate Pay</fullName>
+                <default>false</default>
+                <label>Corporate Pay</label>
+            </value>
+            <value>
+                <fullName>ZRA E-Tax Payment</fullName>
+                <default>false</default>
+                <label>ZRA E-Tax Payment</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

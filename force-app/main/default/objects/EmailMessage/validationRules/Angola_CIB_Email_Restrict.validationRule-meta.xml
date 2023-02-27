@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Angola_CIB_Email_Restrict</fullName>
+    <active>true</active>
+    <description>US-3506: Restrict CIB users to reply from CIB Email Addresses only.</description>
+    <errorConditionFormula>AND(
+$Profile.Name == &apos;Custom Lightning CCC Service Cloud User&apos;,
+ISPICKVAL($User.Business_Unit__c , &apos;CIB&apos;),
+FromAddress  &lt;&gt;  &quot;cliente.access@standardbank.co.ao&quot;,
+FromAddress  &lt;&gt;  &quot;canais@standardbank.co.ao&quot;,
+FromAddress  &lt;&gt;  &quot;recuperacao.credito@standardbank.co.ao&quot;,
+FromAddress  &lt;&gt;  &quot;investorservices@standardbank.co.ao&quot;,
+FromAddress  &lt;&gt;  &quot;angola.oildesk@standardbank.co.ao&quot;,
+FromAddress  &lt;&gt;  &quot;customer.support2@standardbank.co.ao&quot;,
+FromAddress  &lt;&gt;  &quot;channels@standardbank.co.ao&quot;,
+FromAddress  &lt;&gt;  &quot;customer.supportbb@standardbank.co.ao&quot;,
+FromAddress  &lt;&gt;  &quot;transferencias@standardbank.co.ao&quot;,
+FromAddress  &lt;&gt;  &quot;tradesupport@standardbank.co.ao&quot;
+)</errorConditionFormula>
+    <errorMessage>Please ensure you are using an email address  approved for your team.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sanctions__c</fullName>
+    <description>Does the client or any of its shareholders conduct business in sanctioned countries or with sanctioned individuals? If relevant, a sanctions questionnaire  is to be completed and logged with the Group Sanctions Desk.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Does the client or any of its shareholders conduct business in sanctioned countries or with sanctioned individuals? If relevant, a sanctions questionnaire  is to be completed and logged with the Group Sanctions Desk.</inlineHelpText>
+    <label>Sanctions</label>
+    <length>60</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

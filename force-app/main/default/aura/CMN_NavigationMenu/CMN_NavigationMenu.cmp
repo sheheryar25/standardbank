@@ -1,0 +1,100 @@
+<!--
+  @description       : 
+  @author            : Wilhelm du Preez
+  @group             : 
+  @last modified on  : 11-30-2021
+  @last modified by  : Wilhelm du Preez
+-->
+<aura:component extends="forceCommunity:navigationMenuBase" implements="forceCommunity:availableForAllPageTypes"
+  access="global" description="Navigation Menu Component">
+
+  <aura:attribute name="navigationLinkSetId" type="String" default="Public" access="private" />
+  <aura:attribute name="mobileLinksCss" type="String" default="dynamicDisplayNone" access="private" />
+  <aura:attribute name="expandMobileMenu" type="Boolean" default="false" access="private" />
+  <aura:attribute name="homepage" type="String" default="" access="private" />
+
+  <aura:attribute name="profileMenu" type="Aura.Component[]" required="false"/>
+
+  <aura:attribute name="loginIntoLabel" type="String" default="Login into" access="private" />
+  <aura:attribute name="experienceNameLabel" type="String" default="Employee Support" access="private" />
+  <aura:attribute name="loginIntoExperienceNameLabel" type="String" default="" access="private" />
+
+  <aura:handler name="init" value="{!this}" action="{!c.onInit}" />
+
+  <div class="nav-container">
+    <nav class="slds-grid desktop-nav">
+      <div class="slds-col logo">
+        <a class="breadcrumbs__item" href="{!v.homepage}" data-id="header_nav_link" data-text="Header | Logo">
+          <img src="{!$Resource.CMN_Assets + '/logos/logo.png'}" id="sbBadgeLogo" />
+        </a>
+      </div>
+      <ul class="slds-grid" onclick="{!c.onClick}">
+
+        <aura:iteration items="{!v.menuItems}" var="item">
+
+          <aura:if isTrue="{!item.label != 'Home'}">
+            <aura:if isTrue="{!item.label == v.loginIntoExperienceNameLabel}">
+
+              <li class="slds-col slds-align_absolute-center menu-items sign-in">
+                <div class="slds-grid">
+
+                  <div class="slds-col slds-m-right_xx-small">
+                    <img src="{!$Resource.CMN_Assets + '/Icons/avtar.png'}" id="sbBadgeLogo" />
+                  </div>
+                  <div class="slds-col">
+                    <a class="anchor" href="javascript:void(0);" data-menu-item-id="{!item.id}">
+                      <p data-menu-item-id="{!item.id}">{!v.loginIntoLabel}</p>
+                      <p data-menu-item-id="{!item.id}">{!v.experienceNameLabel}</p>
+                    </a>
+                  </div>
+                </div>
+              </li>
+
+              <aura:set attribute="else">
+
+                <li class="slds-col slds-align_absolute-center menu-items">
+                    <aura:if isTrue="{!item.subMenu}">
+                      <span data-menu-item-id="{!item.id}">{!item.label}</span>
+                      <ul class="sub-menu">
+                        <aura:iteration items="{!item.subMenu}" var="subItem">
+                          <li><a data-menu-item-id="{!subItem.id}" href="">{!subItem.label}</a></li>
+                        </aura:iteration>
+                      </ul>
+
+                      <aura:set attribute="else">
+                        <a class="anchor" href="javascript:void(0);" data-menu-item-id="{!item.id}">{!item.label}</a>
+                      </aura:set>
+                    </aura:if>
+                </li>
+
+              </aura:set>
+            </aura:if>
+          </aura:if>
+
+        </aura:iteration>
+      </ul>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <nav class="mobile-container">
+      <a href="{!homepage}" class="active">
+        <img src="{!$Resource.CMN_Assets + '/logos/logo.png'}" id="sbBadgeLogo" />
+      </a>
+      <ul onclick="{!c.onClick}">
+        <div id="mobile-Links" class="{!v.mobileLinksCss}">
+          <aura:iteration items="{!v.menuItems}" var="item">
+            <aura:if isTrue="{!item.label != 'Home'}">
+              <li> <a href="javascript:void(0);" data-menu-item-id="{!item.id}"
+                  onclick="{!c.handleMobileMenuClick}">{!item.label}</a></li>
+            </aura:if>
+          </aura:iteration>
+        </div>
+      </ul>
+      <a href="javascript:void(0);" class="icon" onclick="{!c.handleMobileMenuClick}">
+        <div class="hamburger"></div>
+        <div class="hamburger"></div>
+        <div class="hamburger"></div>
+      </a>
+    </nav>
+  </div>
+</aura:component>

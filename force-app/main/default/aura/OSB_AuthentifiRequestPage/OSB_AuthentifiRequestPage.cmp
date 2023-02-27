@@ -1,0 +1,73 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" controller="OSB_RequestPage_CTRL">
+    <aura:attribute name="title" type="String" default="Request access to Authentifi™" access="public"/>
+    <aura:attribute name="newCase" type="Case" default="{ 'sobjectType': 'Case' }" access="private"/>
+    <aura:attribute name="RequestNotComplete" type="Boolean" default="true" access="private"/>
+    <aura:attribute name="loading" type="Boolean" default="False" access="private"/>
+    <aura:attribute name="termsConditionsURL" type="String" access="private"/>
+    <aura:attribute name="termsConditionsDoc" default="Terms_Conditions" type="String" access="public"/>
+    <aura:attribute name="userMap" type="Map" access="private"/>
+    <aura:attribute name="solutionName" default="Authentifi" type="String" access="public"/>
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    <lightning:navigation aura:id="navService"/> 
+    
+    
+    <div class="SignUpRequestSol slds-grid slds-gutters" id="SignUpRequestSol">
+        <aura:if isTrue="{!v.loading}">
+            <c:OSBLoadingScreen />
+        </aura:if>
+        <div class="inputSection slds-col slds-size_4-of-12">
+            <aura:if isTrue="{!v.RequestNotComplete}">
+                <lightning:formattedRichText class="title slds-align_absolute-center" value="{!v.title}"/>
+                <lightning:input aura:id="Fullname" label="Full name"
+                                 class="newRequest__form--input"
+                                 labelClass="newRequest__form--label"
+                                 placeholder="Enter a full name"
+                                 messageWhenValueMissing="Enter a valid full name"
+                                 value="{!v.userMap[0].Name}"
+                                 readonly="true"/>     
+                <lightning:input aura:id="emailAddress" label="Email address"
+                                 class="newRequest__form--input"
+                                 labelClass="newRequest__form--label"
+                                 placeholder="Enter an email address"
+                                 messageWhenValueMissing="Enter a valid email"
+                                 readonly="true"
+                                 messageWhenPatternMismatch="Enter a valid email" 
+                                 value="{!v.userMap[0].Email}"
+                                 pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"/>
+                <lightning:input aura:id="mobileNumber"
+                                 class="newRequest__form--input"
+                                 labelClass="newRequest__form--label"
+                                 label="Mobile number"
+                                 placeholder="Enter a cellphone number"
+                                 messageWhenValueMissing="Enter a valid cellphone number"
+                                 value="{!v.userMap[0].Phone}"
+                                 readonly="true"/>
+                <lightning:input aura:id="Company" label="Company"
+                                 class="newRequest__form--input"
+                                 labelClass="newRequest__form--label"
+                                 placeholder="Enter company name"
+                                 messageWhenValueMissing="Enter a valid company name"
+                                 value="{!v.userMap[0].OSB_Company_name__c}"
+                                 readonly="true"/>
+                <lightning:button label="Request"
+                                  class="btnStyle btn--gray signUp__button"
+                                  onclick="{!c.requestAccess}"/>
+                <aura:set attribute="else">
+                    <div class="submittedSection">
+                        <p>
+                            Your request has been submitted
+                            <br/>A customer service consultant will be in contact with you soon
+                            <br/>Please contact onehub@standardbank.co.za for any queries
+                        </p>
+                        <lightning:button label="Return to onehub"
+                                          class="btnStyle btn--gray signUp__button"
+                                          onclick="{!c.returnToOneHub}"/>
+                    </div>
+                </aura:set>
+            </aura:if>    
+        </div>
+        <div class="rightImage slds-col slds-size_1-of-12 slds-float_right slds-grid_vertical-stretch">
+            <img src="{!$Resource.OSB_Images + '/AuthentifiBluePng.png'}" class="slds-align_absolute-center logoAuth slds-size_5-of-12"/>
+        </div>
+    </div>   
+</aura:component>

@@ -1,0 +1,30 @@
+<aura:component description="CI_NewsSearchList" controller="CI_NewsController">
+    <aura:attribute name="news" type="List"/>
+    <aura:attribute name="isLoading" type="Boolean" default="true"/>
+    <aura:attribute name="showIcons" type="Boolean"/>
+    <aura:attribute name="feedbackArticles" type="List" access="global" />
+    <aura:attribute name="isSavedArticles" type="List"/>
+    <aura:handler name="change" value="{!v.OneNew}" action="{!c.doInit}"/>
+
+    <aura:if isTrue="{!empty(v.news)}">
+        <div class="slds-m-around_medium slds-text-align_center">
+            No available news
+        </div>
+    </aura:if>
+    <aura:if isTrue="{!!empty(v.news)}">
+        <div class="slds-grid slds-wrap slds-scrollable_y" style="height:100%;">
+            <aura:iteration items="{!v.news}" var="newsArticle" indexVar="index">
+                <div class="slds-col slds-p-around-x-large slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_1-of-1">
+                    <c:CI_NewsCard id="{!newsArticle.An__c}" index="{!index}"
+                                   title="{!newsArticle.formattedTitle}"
+                                   publisherName="{!newsArticle.Publisher_Name__c}"
+                                   publicationDate="{!newsArticle.formattedPublicationDate}"
+                                   isLead="{!newsArticle.Pred__c}"
+                                   snippet="{!newsArticle.Snippet__c}"
+                                   moreNewsPage="true"
+                                   clientId="{!v.recordId}" showingSaved="{!v.showingSaved}"/>
+                </div>
+            </aura:iteration>
+        </div>
+    </aura:if>
+</aura:component>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Category__c</fullName>
+    <description>Allows for easier filtering of contacts</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Allows for easier filtering of contacts</inlineHelpText>
+    <label>Contact Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CEO</fullName>
+                <default>false</default>
+                <label>CEO</label>
+            </value>
+            <value>
+                <fullName>CFO</fullName>
+                <default>false</default>
+                <label>CFO</label>
+            </value>
+            <value>
+                <fullName>COO</fullName>
+                <default>false</default>
+                <label>COO</label>
+            </value>
+            <value>
+                <fullName>Group Treasurer</fullName>
+                <default>false</default>
+                <label>Group Treasurer</label>
+            </value>
+            <value>
+                <fullName>Senior Executive</fullName>
+                <default>false</default>
+                <label>Senior Executive</label>
+            </value>
+            <value>
+                <fullName>Senior Manager</fullName>
+                <default>false</default>
+                <label>Senior Manager</label>
+            </value>
+            <value>
+                <fullName>Manager</fullName>
+                <default>false</default>
+                <label>Manager</label>
+            </value>
+            <value>
+                <fullName>Staff</fullName>
+                <default>false</default>
+                <label>Staff</label>
+            </value>
+            <value>
+                <fullName>Developer</fullName>
+                <default>false</default>
+                <label>Developer</label>
+            </value>
+            <value>
+                <fullName>Accounts Clerk</fullName>
+                <default>false</default>
+                <label>Accounts Clerk</label>
+            </value>
+            <value>
+                <fullName>Global Trader</fullName>
+                <default>false</default>
+                <label>Global Trader</label>
+            </value>
+            <value>
+                <fullName>Agri</fullName>
+                <default>false</default>
+                <label>Agri</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

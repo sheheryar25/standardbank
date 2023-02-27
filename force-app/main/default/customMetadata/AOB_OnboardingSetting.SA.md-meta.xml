@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>SA</label>
+    <protected>false</protected>
+    <values>
+        <field>AOB_AccountOwner__c</field>
+        <value xsi:type="xsd:string">0053O000004O42ZQAS</value>
+    </values>
+    <values>
+        <field>AOB_AccountRecordType__c</field>
+        <value xsi:type="xsd:string">IndustriesBusiness</value>
+    </values>
+    <values>
+        <field>AOB_AppStatus__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>AOB_ContactOwnerId__c</field>
+        <value xsi:type="xsd:string">0053O000004O42ZQAS</value>
+    </values>
+    <values>
+        <field>AOB_ContactRecordType__c</field>
+        <value xsi:type="xsd:string">IndustriesBusiness</value>
+    </values>
+    <values>
+        <field>AOB_CountryCode__c</field>
+        <value xsi:type="xsd:string">ZA</value>
+    </values>
+    <values>
+        <field>AOB_Country__c</field>
+        <value xsi:type="xsd:string">South Africa</value>
+    </values>
+    <values>
+        <field>AOB_Currency__c</field>
+        <value xsi:type="xsd:string">R</value>
+    </values>
+    <values>
+        <field>AOB_Language__c</field>
+        <value xsi:type="xsd:string">en_US</value>
+    </values>
+    <values>
+        <field>AOB_Locale__c</field>
+        <value xsi:type="xsd:string">en_GB</value>
+    </values>
+    <values>
+        <field>AOB_PermissionSet__c</field>
+        <value xsi:type="xsd:string">AOB_AuthenticatedCommunityCustomers</value>
+    </values>
+    <values>
+        <field>AOB_Profile__c</field>
+        <value xsi:type="xsd:string">AOB_Authenticated Customer Community 2</value>
+    </values>
+    <values>
+        <field>AOB_SandboxSuffix__c</field>
+        <value xsi:type="xsd:string">standardbank.co.za.devsacomm</value>
+    </values>
+    <values>
+        <field>AOB_SiteId__c</field>
+        <value xsi:type="xsd:string">SB-COZA</value>
+    </values>
+    <values>
+        <field>AOB_SystemId__c</field>
+        <value xsi:type="xsd:string">01</value>
+    </values>
+    <values>
+        <field>AOB_TimeZone__c</field>
+        <value xsi:type="xsd:string">Africa/Johannesburg</value>
+    </values>
+    <values>
+        <field>AOB_accountsUrl__c</field>
+        <value xsi:type="xsd:string">https://www.standardbank.co.za/commerce/business/accounts</value>
+    </values>
+    <values>
+        <field>AOB_emailEncodingKey__c</field>
+        <value xsi:type="xsd:string">UTF-8</value>
+    </values>
+</CustomMetadata>

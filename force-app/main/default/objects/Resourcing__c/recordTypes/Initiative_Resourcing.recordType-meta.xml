@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Initiative_Resourcing</fullName>
+    <active>true</active>
+    <description>Record type for tracking time for activities not related to the opportunities</description>
+    <label>Initiative Resourcing</label>
+    <picklistValues>
+        <picklist>Initiative__c</picklist>
+        <values>
+            <fullName>Administration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal strategy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Leave</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recruitment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Intensity_Forecast__c</picklist>
+        <values>
+            <fullName>Full</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inactive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Milestone__c</picklist>
+        <values>
+            <fullName>Binding offer submitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Book building and allocations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bookbuild and allocations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closing of subscription period</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Company IPOs%2C settlement and after-market stabilisation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conditions precedent met%3A Deal closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deal closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Detailed evaluation of merger target and merger discussions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Detailed evaluation of target</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Due diligence</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Due diligence%2F Documentation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engage and advise company on BEE transaction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engage and advise company on equity capital raise%2F sell-down strategy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engage and prepare company for listing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engage and prepare company for rights offer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Execute transaction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expressions of interest received</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Formal offers received</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Funding confirmation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IPO roadshows</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Identify and engage M%26A target</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Identify and engage merger target</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Investor engagement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Management roadshow</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Negotiate structure and pricing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-binding offer submitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Offer accepted %26 execute transaction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Offer through to next round</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Offering documentation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prepare company for sale</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public launch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public launch %28ITF%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Regulatory engagement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Send IM to interested buyers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shareholder approvals %28if applicable%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shareholder engagement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shares listed and settlement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transaction awaiting regulatory approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transaction awaiting shareholder %26 regulatory approvals</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Opportunity_Type__c</picklist>
+        <values>
+            <fullName>ABB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BEE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Buy Side - Private</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Buy Side - Public</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IPO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Merger - Private</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Merger - Public</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rights Offer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sell Side - Private</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sell Side - Public</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Strategic review</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

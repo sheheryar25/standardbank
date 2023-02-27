@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Where_is_this_used__c</fullName>
+    <description>Captures the details of Classes or Triggers where this particular value is being used</description>
+    <externalId>false</externalId>
+    <label>Where is this used?</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

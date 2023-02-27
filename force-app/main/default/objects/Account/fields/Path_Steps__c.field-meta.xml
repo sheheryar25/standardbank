@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Path_Steps__c</fullName>
+    <description>This will be used onboarding path</description>
+    <externalId>false</externalId>
+    <label>Path Steps</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Create Prospect</fullName>
+                <default>true</default>
+                <label>Create Prospect</label>
+            </value>
+            <value>
+                <fullName>Develop Prospect</fullName>
+                <default>false</default>
+                <label>Develop Prospect</label>
+            </value>
+            <value>
+                <fullName>Submit for On-Boarding</fullName>
+                <default>false</default>
+                <label>Submit for On-Boarding</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

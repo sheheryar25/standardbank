@@ -1,0 +1,141 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes,force:appHostable" access="global" controller="OSB_RegistrationRequest_Ctrl">
+    <aura:attribute name="solution"  type="String" access="private"/>
+    <aura:attribute name="firstCancelClick" type="Boolean" default="false" access="private"/>
+    <aura:attribute name="showToast" type="Boolean" default="false" access="private"/>
+    <aura:attribute name="subMittingCase" type="Boolean" default="false" access="public"/>
+    <aura:attribute name="showToastFail" type="Boolean" default="false" access="private"/>
+    <aura:attribute name="redirectAfterSubmit" type="Boolean" default="false" access="private"/>
+    <aura:attribute name="newCase" type="Case" default="{ 'sobjectType': 'Case' }" access="public"/>
+    <aura:attribute name="logoutURL" type="String" default="" access="private"/>
+    <aura:attribute name="firstName" type="String" default="" access="private"/>
+    <aura:attribute name="lastName" type="String" default="" access="private"/>
+    <aura:attribute name="cellphone" type="String" default="" access="private"/>
+    <aura:attribute name="email" type="String" default="" access="private"/>
+    <aura:attribute name="showCountryNames" type="Boolean" default="false" access="private"/>
+    <aura:attribute name="countryCodes" type="Object[]" access="private"/>
+    <aura:attribute name="dialingCode" type="String" default="South Africa +27" access="public"/>
+
+    <aura:handler name="closePopUpEvent" event="c:OSBClosePopUpEvent" action="{!c.handlePopupClose}" />
+    <lightning:navigation aura:id="navService"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+
+    <div class="form__container" onclick="{!c.resetError}">
+        <aura:if isTrue="{!v.subMittingCase}">
+            <c:OSBLoadingScreen />
+        </aura:if>
+        <div class="signUp slds-size_6-of-6 slds-small-size_12-of-12 slds-medium-size_6-of-6 slds-large-size_3-of-6">
+            <div class="form__container slds-size_6-of-6 slds-small-size_12-of-12 slds-medium-size_5-of-6 slds-large-size_8-of-12">
+                <div class="form__header">
+                    <div class="IdSearch">
+                        <div class="Sign__icon">
+                            <i class="ms-icn_shield_lock"></i>
+                        </div>
+                    </div>
+                    <div class="signUp__title">Welcome to OneHub {!v.UserName}</div>
+                    <div class="format signUp__subtitle">
+                        Before we can give you access to OneHub, we would like to ask that you provide us with some information which will take less than two minutes to complete.
+                        Once done, we will then go through a process of onboarding you and your organisation.
+                    </div>
+                    <div class="format signUp__subtitle">
+                       <span>
+                            If you want to get in touch with us directly you can contact us via <a class="LinkColour">onehub@standardbank.co.za</a> and we will get back to you as soon as possible.
+                       </span>
+                    </div>
+                </div>
+                <aura:if isTrue="{!v.showToast}">
+                    <c:OSBToastComponent closePopup="{!v.showToast}" toastType="success" top="160px" left="50%"
+                                         toastMessage="Request has been sent successfully. You will receive a confirmation via email."/>
+                </aura:if>
+                <aura:if isTrue="{!v.showToastFail}">
+                    <c:OSBToastComponent closePopup="{!v.showToastFail}" toastType="warning" top="160px" left="50%"
+                                         toastMessage="Please complete all required fields and check for errors">
+                    </c:OSBToastComponent>
+                </aura:if>
+
+                <form class="newCase__form mt_32" aura:id="RegForm">
+                    <div class="rectangle">
+                        <div class="lets_get_started">
+                            Personal details
+                        </div>
+                    </div>
+                    <lightning:input aura:id="firstname" label="Name"
+                                     class="signUp__form--input"
+                                     labelClass="signUp__form--label"
+                                     placeholder="Enter first name"
+                                     messageWhenValueMissing="Enter a valid first name"
+                                     value = "{!v.firstName}"
+                                     required="true"/>
+                    <lightning:input aura:id="surname" label="surname"
+                                     class="signUp__form--input"
+                                     labelClass="signUp__form--label"
+                                     placeholder="Enter surname"
+                                     messageWhenValueMissing="Enter a valid surname"
+                                     value = "{!v.lastName}"
+                                     required="true"/>
+
+                    <label class="signUp__form--label_code" id="cellphoneLabel">Cellphone Number</label>
+                    <div class="slds-grid">
+
+                        <div class="newCase__form--dialingCode slds-size_2-of-6 slds-medium-size_2-of-8 slds-large-size_1-of-6">
+                            <c:OSBCountryCodeInput aura:id="dialingCode" selectedCode="{!v.dialingCode}"/>
+                        </div>
+                        <lightning:input aura:id="phone"
+                                         class="newCase__form--input CellSection slds-size_4-of-6 slds-medium-size_6-of-8 slds-large-size_5-of-6"
+                                         labelClass="newCase__form--label"
+                                         label=""
+                                         placeholder="Enter a cellphone number"
+                                         messageWhenValueMissing="Enter a valid cellphone number"
+                                         value="{!v.cellphone}"
+                                         required="true"/>
+                    </div>
+                    <div class="rectangle mt_32">
+                        <div class="lets_get_started">
+                            Work details
+                        </div>
+                    </div>
+                    <lightning:input aura:id="email" label="Work email"
+                                     class="signUp__form--input"
+                                     labelClass="signUp__form--label"
+                                     placeholder="Enter your work email address"
+                                     messageWhenValueMissing="Enter a valid email address"
+                                     value = "{!v.email}"
+                                     required="true"
+                    />
+                    <lightning:input aura:id="jobTitle" label="Job Title"
+                                     class="signUp__form--input"
+                                     labelClass="signUp__form--label"
+                                     placeholder="Enter current job title"
+                                     messageWhenValueMissing="Enter a valid job title"
+                                     required="true"/>
+                    <lightning:input aura:id="companyName" label="Company Name"
+                                     class="signUp__form--input"
+                                     labelClass="signUp__form--label"
+                                     placeholder="Enter company name"
+                                     messageWhenValueMissing="Enter a valid company name"
+                                     required="true"/>
+                    <div class="recapture-container">
+                        <c:osbRecapture aura:id="recaptureChild"/>   
+                    </div>
+                    
+                </form>
+                <aura:if isTrue="{!v.firstCancelClick}">
+                    <c:OSBMarketGramPopup icon="QuestionMark" title="Cancel Sign up?" content="You are about to cancel your application to sign up. Do you want to continue?"/>
+                </aura:if>
+            </div>
+            <div class="signUp_greyAreaBtn PaddingGrey slds-size_1-of-1 slds-grid slds-gutters_x-small">
+                <div data-id="uitlink_link" data-text="Registration | Cancel" class="slds-col slds-size_3-of-6 slds-medium-size_1-of-5 slds-large-size_1-of-5">
+                    <lightning:button label="Cancel"
+                                      class="btnStyle btn--gray signUp__button"
+                                      onclick="{!c.cancel}"/>
+                </div>
+                <div data-id="uitlink_link" data-text="Registration | Sign up" class="slds-col slds-size_3-of-6 slds-medium-size_1-of-5 slds-large-size_1-of-5">
+                    <lightning:button label="Sign up"
+                                      class="btnStyle btn--darkblue signUp__button"
+                                      onclick="{!c.signUp}"
+                                      aura:id="disablebuttonid"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</aura:component>

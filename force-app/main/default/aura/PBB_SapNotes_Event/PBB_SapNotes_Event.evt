@@ -1,0 +1,7 @@
+<!--
+ - Created by Mykhailo Reznyk on 12.03.2020.
+ -->
+
+<aura:event type="APPLICATION" description="PBB_SapNotes_Event">
+    <aura:attribute name="actionsFired" type="String[]"/>
+</aura:event>

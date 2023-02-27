@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Client_LGD_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Client LGD Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>SARB Model</fullName>
+                <default>false</default>
+                <label>SARB Model</label>
+            </value>
+            <value>
+                <fullName>Revised Credit Model</fullName>
+                <default>false</default>
+                <label>Revised Credit Model</label>
+            </value>
+            <value>
+                <fullName>Specialised Lending Model</fullName>
+                <default>false</default>
+                <label>Specialised Lending Model</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

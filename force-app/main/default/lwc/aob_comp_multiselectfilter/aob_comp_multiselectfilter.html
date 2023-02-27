@@ -1,0 +1,43 @@
+<template>
+    <div class="slds-form-element">
+        <div class="slds-form-element__control">
+            <div class="slds-combobox_container">
+                <div id="ms-picklist-dropdown"
+                    class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-picklist ms-picklist-dropdown"
+                    aria-expanded="false" aria-haspopup="listbox" role="combobox">
+                    <div role="none">
+                        <lightning-input class="slds-combobox__input ms-input" id="ms-input" type="text"
+                            value={_selectedItems} required={required} name={name}
+                            message-when-value-missing={missingValueMessage}
+                            placeholder="Please select" readonly></lightning-input>
+                    </div>
+                    <div id="ms-dropdown-items" class="te" role="listbox">
+                        <ul class="customList slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid"
+                            role="presentation">
+                            <template for:each={options} for:item="item">
+                                <div class={item.cssClass} key={item}>
+                                    <c-aob_comp_picklistitem key={item} item={item} onitems={handleItemSelected}>
+                                    </c-aob_comp_picklistitem>
+                                </div>
+                            </template>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slds-form-element">
+        <div class="slds-form-element__control">
+            <template for:each={options} for:item="field" for:index="index">
+                <img if:true={field.Selected} key={item} width="30" alt="delete" src={closeMG} class="slds-float_right customClose"
+                    onclick={deleteSelectedInput} data-index={index} data-value={field.Id}>
+                <label if:true={field.Selected} key={field.Id}
+                    class="aob_screen-field-label slds-m-bottom_none">{field.Name} (AVERAGE MONTHLY AMOUNT)
+                </label>
+                <lightning-input if:true={field.Selected} key={field.Id} type="number" formatter="currency"
+                    data-name={field.Name} placeholder="ZAR 100.00" step="1" variant="label-hidden"></lightning-input>
+            </template>
+        </div>
+    </div>
+</template>

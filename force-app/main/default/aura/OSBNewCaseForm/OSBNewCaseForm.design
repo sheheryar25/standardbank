@@ -1,0 +1,4 @@
+<design:component>
+    <design:attribute name="optl" />
+    <design:attribute name="moreAccess" />
+</design:component>

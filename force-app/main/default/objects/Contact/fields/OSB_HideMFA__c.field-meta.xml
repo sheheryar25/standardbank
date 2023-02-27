@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OSB_HideMFA__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>OneHub: This field is used to not to show the Multi factor authentication registration modal on dashboard.(SGPRT-2614)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Onehub user opted out to see Multi-factor Authentication registration prompt on dashboard.</inlineHelpText>
+    <label>Hide MFA</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

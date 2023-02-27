@@ -1,0 +1,56 @@
+<!--
+ - Created by Mykhailo Reznyk on 22.11.2019.
+ -->
+
+<aura:component controller="PBB_Lifestyle_Account_TypesController" description="PBB_Lifestyle_Account_Types" >
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <aura:attribute access="public" name="recordId" type="Id" />
+    <aura:attribute access="private" name="accountRecord" type="Account"/>
+    <aura:attribute access="private" name="translateDegree" type="Integer" default="0"/>
+    <aura:attribute access="private" name="numberOfClientAccounts" type="Integer" default="0"/>
+
+    <lightning:navigation aura:id="navService"/>
+
+    <div class="c-container">
+
+        <div class="slds-grid">
+            <div class="componentTitle slds-text-heading_small slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_1-of-1 slds-p-vertical_small">{#$Label.c.PBB_Account_Types_Component_Title}</div>
+        </div>
+
+        <div aura:id="thisComponentGrid" class="componentGrid slds-grid ">
+            <aura:if isTrue="{!v.numberOfClientAccounts==2}">
+                <div class="slds-size_1-of-4 slds-medium-size_1-of-4 slds-large-size_1-of-4"></div>
+                <aura:set attribute="else">
+                    <aura:if isTrue="{!v.numberOfClientAccounts >= 3}">
+                        <div class="slds-size_1-of-5 slds-medium-size_1-of-5 slds-large-size_1-of-5"></div>
+                    </aura:if>
+                </aura:set>
+            </aura:if>
+            <aura:iteration items="{!v.accountRecord.Client_Accounts__r}" var="clientAccount" indexVar="index">
+                <aura:if isTrue="{!and(index != 0, and(mod(index, 3) == 0, v.numberOfClientAccounts > 3))}">
+                    <div class="slds-size_1-of-5 slds-medium-size_1-of-5 slds-large-size_1-of-5"></div>
+                    <div class="slds-size_1-of-5 slds-medium-size_1-of-5 slds-large-size_1-of-5"></div>
+                </aura:if>
+                <div class="{!v.numberOfClientAccounts == 1 ? 'slds-col slds-text-heading_small slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_1-of-1 slds-text-align_center slds-p-vertical_small' :
+                              v.numberOfClientAccounts == 2 ? 'slds-col slds-text-heading_small slds-size_1-of-4 slds-medium-size_1-of-4 slds-large-size_1-of-4 slds-text-align_center slds-p-vertical_small' :
+                                                              'slds-col slds-text-heading_small slds-size_1-of-5 slds-medium-size_1-of-5 slds-large-size_1-of-5 slds-text-align_center slds-p-vertical_small'}">
+                    <span onclick="{!c.goToAccountInformation}" data-value="{!clientAccount.Id}"><lightning:icon iconName="standard:product_item" class="productItemIcon"/></span>
+                    <p class="productCategory slds-text-body_small slds-p-vertical_x-small" onclick="{!c.goToAccountInformation}" data-value="{!clientAccount.Id}">{!clientAccount.Product_Category__c}</p>
+                </div>
+            </aura:iteration>
+            <aura:if isTrue="{!v.numberOfClientAccounts==2}">
+                <div class="slds-size_1-of-4 slds-medium-size_1-of-4 slds-large-size_1-of-4"></div>
+                <aura:set attribute="else">
+                    <aura:if isTrue="{!v.numberOfClientAccounts >= 3}">
+                        <div class="slds-size_1-of-5 slds-medium-size_1-of-5 slds-large-size_1-of-5"></div>
+                    </aura:if>
+                </aura:set>
+            </aura:if>
+        </div>
+        <lightning:icon aura:id="chevronrightId" iconName="utility:chevronright" onclick="{!c.doSlide}" class="{!v.numberOfClientAccounts/3 le 1 ? 'chevronIcon chevronrightIcon hide' : 'chevronIcon chevronrightIcon show'}" />
+        <lightning:icon aura:id="chevronleftId" iconName="utility:chevronleft" onclick="{!c.doSlide}" class="chevronIcon chevronleftIcon hide"/>
+    </div>
+
+</aura:component>

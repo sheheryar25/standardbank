@@ -1,0 +1,129 @@
+<aura:component implements="force:lightningQuickAction,force:hasRecordId" controller="MergeCaseController">
+    <aura:attribute name="lstSelectedRecords" type="sObject[]" default="[]" description="Use,for store SELECTED sObject Records"/>
+    <aura:attribute name="listOfSearchRecords" type="List" description="Use,for store the list of search records which returns from apex class"/>
+    <aura:attribute name="SearchKeyWord" type="string"/>
+    <aura:attribute name="objectAPIName" type="string" default="Case"/>
+    <aura:attribute name="IconName" type="string" default="standard:case"/>
+    <aura:attribute name="label" type="string" default=""/>
+    <aura:attribute name="relatedCaseList" type="Object[]" />
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="relatedCaseId" type="String" />
+    <lightning:workspaceAPI aura:id="workspace"/>
+    <!--declare events hendlers-->  
+    <aura:handler name="oSelectedRecordEvent" event="c:MergeCaseEvent" action="{!c.handleComponentEvent}"/>
+    <aura:attribute name="Message" type="String" default=""/> 
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <div onmouseleave="{!c.onblur}" aura:id="searchRes" class="slds-form-element slds-lookup slds-is-close">
+        <label class="slds-form-element__label">{!v.label}</label>
+        <!--This part is for display search bar for lookup-->  
+        <div class="slds-form-element__control">
+            Case Search:
+            <div class="slds-input-has-icon slds-input-has-icon_right">
+                <!-- This markup is for when an record is selected -->
+                <div aura:id="lookup-pill" class="slds-pill-container">
+                    <div aura:id="lookupField" class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right">
+                        <ui:inputText click="{!c.onfocus}"
+                                      updateOn="keyup"
+                                      keyup="{!c.keyPressController}"
+                                      class="slds-lookup__search-input slds-input inputSize"
+                                      value="{!v.SearchKeyWord}"
+                                      placeholder="search.."/>
+                        
+                        <span class="slds-icon_container slds-icon-utility-search slds-input__icon slds-input__icon_right">
+                            <lightning:icon iconName="utility:search" size="x-small" alternativeText="icon"/>
+                        </span>
+                    </div>
+                    <!--Selected Records Pills Section-->
+                    <aura:iteration items="{!v.lstSelectedRecords}" var="sr">
+                                <lightning:pill class="slds-m-around_xx-small" label="{!sr.CaseNumber}" name="{!sr.Id}" onremove="{! c.clear }">
+                                    <aura:set attribute="media">
+                                        <lightning:icon iconName="{!v.IconName}" size="x-small" alternativeText="icon"/>
+                                    </aura:set>
+                                </lightning:pill>
+                    </aura:iteration>
+                </div>
+            </div>
+            <div>
+                <lightning:button label="Merge Now" onclick="{!c.mergeMultipleCaseNow}" variant="brand" class="slds-float_left"/>		
+            </div>
+        </div>
+        <!--This part is for Display typehead lookup result List-->  
+        <ul style="min-height:40px;margin-top:0px !important" class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid slds-lookup__menu slds" role="listbox">
+            <lightning:spinner class="slds-hide" variant="brand" size="small" aura:id="mySpinner"/>
+            <center> {!v.Message}</center>
+            <aura:iteration items="{!v.listOfSearchRecords}" var="singleRec">
+                <!--Child Component--> 
+                <c:MergeRelatedCase oRecord="{!singleRec}" IconName="{!v.IconName}"/>
+            </aura:iteration>
+        </ul>
+    </div>
+    <br></br>
+    <br></br>
+    Related Case:
+    <br></br>
+    <br></br>
+    <table class="slds-table slds-table_cell-buffer">
+        <thead>
+            <tr class="slds-text-title_caps">
+                <th scope="col">
+                    <div class="slds-truncate" title="Action" align="left">Action</div>
+                </th>
+                <th scope="col">
+                    <div class="slds-truncate" title="Select" align="left">Select</div>
+                </th>
+                <th scope="col">
+                    <div class="slds-truncate" title="Case Number" align="left">Subject</div>
+                </th>
+                <th scope="col">
+                    <div class="slds-truncate" title="Status" align="Center">Status</div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <aura:iteration items="{!v.relatedCaseList}" var="ca">  
+                <tr>
+                    <th scope="row">
+                        <div class="slds-truncate" align="left">
+                            <lightning:button onclick="{!c.openNewTab}" title="{!ca.Id}"
+                                              label="{!ca.CaseNumber}"
+                                              iconPosition="left"
+                                              variant="brand"
+                                              type="submit"
+                                              />
+                        </div>
+                    </th>
+                    <th scope="row">
+                        <div class="slds-truncate" title="Cloudhub" align="left">
+                            <ui:inputRadio text="{!ca.Id}" name="relc" change="{!c.logId}"/>
+                        </div>
+                    </th>
+                    <th scope="row">
+                        <div class="slds-truncate" title="Cloudhub" align="left">
+                            <a href="#" class="tooltip" style="cursor: help;">{!ca.Subject}
+                                <div class="tooltiptext">
+                                    <table width="50%">
+                                        <tr><td width="50%" style="font-size:10pt;font-weight:bold">{!ca.CaseNumber}</td><td  width="50%" >&nbsp;</td></tr>
+                                        <tr><td width="50%" style="font-size:8pt;font-weight:bold">Account</td><td style="font-size:8pt;" width="50%">{!ca.Account.Name}</td></tr>
+                                        <tr><td width="50%" style="font-size:8pt;font-weight:bold">Contact</td><td style="font-size:8pt;" width="50%">{!ca.Contact.Name}</td></tr>
+                                        <tr><td width="50%" style="font-size:8pt;font-weight:bold">Owner</td><td style="font-size:8pt;" width="50%">{!ca.Owner.Name}</td></tr>
+                                        <tr><td width="50%" style="font-size:8pt;font-weight:bold">Category</td><td style="font-size:8pt;" width="50%">{!ca.CCC_Angola_Category__c}</td></tr>
+                                        <tr><td width="50%" style="font-size:8pt;font-weight:bold">Sub Category</td><td style="font-size:8pt;" width="50%">{!ca.CCC_Angola_Sub_Category__c}</td></tr>
+                                        <tr><td width="50%" style="font-size:8pt;font-weight:bold">Origin</td><td style="font-size:8pt;" width="50%">{!ca.Origin}</td></tr>
+                                    </table>
+                                </div>
+                            </a>
+                        </div>
+                    </th> 
+                    <th scope="row">
+                        <div class="slds-truncate" title="{!ca.Status}" align="Center">{!ca.Status}</div>
+                    </th>
+                </tr>
+            </aura:iteration>
+        </tbody>
+        <tr>
+            <th scope="row">
+                <lightning:button label="Merge Now" onclick="{!c.mergeCaseNow}" variant="brand" class="slds-m-top_medium"/>
+            </th>
+        </tr>
+    </table>
+</aura:component>

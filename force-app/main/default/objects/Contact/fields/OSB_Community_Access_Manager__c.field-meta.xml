@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OSB_Community_Access_Manager__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>OneHub: This field is used to store who the Authorised Person or Designated Person is that sent the user an invite to sign up for the OneHub Community. (US-4589)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Contact that is responsible for the access for the OneHub community</inlineHelpText>
+    <label>Community Access Manager</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Community Access manager</relationshipLabel>
+    <relationshipName>Community_access_manager</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

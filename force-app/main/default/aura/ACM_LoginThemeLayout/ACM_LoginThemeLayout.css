@@ -1,0 +1,174 @@
+/* clears the default community padding 
+.THIS {
+	--sds-c-button-brand-spacing-inline-start: 1em;
+	--sds-c-button-brand-spacing-inline-end: 1em;
+	--lwc-spacingMedium: 0;
+}
+*/
+
+.THIS {
+  /* .co.za */
+  --white-color: #fff;
+  --stature-blue: #0a2240;
+  --primary-blue: #0033aa;
+  --tertiary-color: #0089ff;
+  --positive-color: #0e8a00;
+  --negative-color: #e70011;
+  --accent-color: #f61;
+  --notification-color: #ffb822;
+  --identifyer-color: #b34fc5;
+  --font-dark-color: #1e1e2f;
+  --font-medium-color: #434549;
+  --font-light-color: #6d7278; 
+  --gray-dark-color: #b9c5d4;
+  --gray-medium-color: #edf0f3;
+  --gray-light-color: #f0f6fb;
+  --primary-color-light: #e5eaf6;
+  --background-gray: #d9e1e5;
+  --secondary-color-light: #0acffe;
+  --bg-red-light: #fff5f5;
+  --bg-red-light-hover: #ffe5e5;
+  --bg-tertiary-blue-light: #f2f9ff;
+  --bg-tertiary-blue-hover: #e5f3ff;
+  --bg-primary-blue-light-select: #f0f3fa;
+  --secondary-blue: #335cbb;
+  --input-disabled-color: #e6e9eb;
+
+  /* .com */
+  --PRIMARY-COLOR: var(--primary-blue);
+  --PRIMARY-COLOR-GRADIENT: #6497ff;
+  --PRIMARY-COLOR-ALPHA: rgba(0, 51, 170, 168);
+  --SECONDARY-COLOR: var(--tertiary-color);
+  --SECONDARY-COLOR-GRADIENT: #64edff;
+  --SECONDARY-COLOR-ALPHA: rgba(0, 137, 255, 168);
+  --TERTIARY-COLOR: #00AADD;
+  --TERTIARY-COLOR-GRADIENT: #64ffff;
+  --TERTIARY-COLOR-ALPHA: rgba(0, 170, 221, 168);
+  --POSITIVE-COLOR: #0E8A00;
+  --POSITIVE-COLOR-GRADIENT: #72ee64;
+  --POSITIVE-COLOR-ALPHA: rgba(14, 138, 0, 168);
+  --NEGATIVE-COLOR: #E0000F;
+  --NEGATIVE-COLOR-GRADIENT: #ff6473;
+  --NEGATIVE-COLOR-ALPHA: rgba(224, 0, 15, 168);
+  --ACCENT-COLOR: #FF6611;
+  --ACCENT-COLOR-GRADIENT: #ffca75;
+  --ACCENT-COLOR-ALPHA: rgba(255, 102, 17, 168);
+  --NOTIFICATION-COLOR: #FFB822;
+  --NOTIFICATION-COLOR-GRADIENT: #ffff86;
+  --NOTIFICATION-COLOR-ALPHA: rgba(255, 184, 34, 168);
+  --IDENTIFIER-COLOR: #B34FC5;
+  --IDENTIFIER-COLOR-GRADIENT: #ffb3ff;
+  --IDENTIFIER-COLOR-ALPHA: rgba(179, 79, 197, 168);
+  --WHITE-COLOR: #FFFFFF;
+  --GRAY-DARK-COLOR: #DBDBDB;
+  --GRAY-MEDIUM-COLOR: #EDEDED;
+  --GRAY-LIGHT-COLOR: #F6F6F6;
+  --FONT-DARK-COLOR: #222222;
+  --FONT-MEDIUM-COLOR: #444444;
+  --FONT-LIGHT-COLOR: #707070;
+  --GRAPH1: #222222;
+  --GRAPH2: #00A1AF;
+  --GRAPH3: #B3C2E4;
+  --GRAPH4: #FF6611;
+  --GRAPH5: #0033AA;
+  --GRAPH6: #CCCCCC;
+  --GRAPH7: #00AADD;
+  --GRAPH8: #00C18B;
+  --GRAPH9: #675DC6;
+  --GRAPH10: #B34FC5;
+  --GRAPH11: #FFB822;
+  --PRIMARY-COLOR-LIGHT: #E5EAF6;
+
+  --FONT-FAMILY: 'BentonSans';
+  --titles-color: #3c4b6c;
+
+  /* SLDS overrides */
+  --lwc-colorTextIconDefault: var(--white-color);
+  /* Styling hooks */
+  --sds-c-button-radius-border: 0;
+  /* messes up the upload file button on case support page --sds-c-button-color-background: var(--tertiary-color); */
+  --sds-c-button-sizing-border: 0;
+  --sds-c-button-spacing-block-start: 0;
+  --sds-c-button-spacing-block-end: 0;
+  --sds-c-button-line-height: auto;
+
+  position: relative;
+}
+
+.THIS {
+  height: 100vh;
+  background: #031E99; /* Old browsers */
+  background: -moz-linear-gradient(top,  #031E99 0%, #0D63EE 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #031E99 0%,#0D63EE 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #031E99 0%,#0D63EE 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#031E99', endColorstr='#0D63EE',GradientType=0 ); /* IE6-9 */
+}
+.THIS * { font-family: var(--FONT-FAMILY, BentonSans); font-weight: normal; font-stretch: normal; font-style: normal; letter-spacing: normal; }
+.THIS header { background: t('url(' + brandLogoImage  + ')') center center no-repeat; background-size: contain; display: block; height: 60px; margin: 0 auto; }
+.THIS .theme-container { width: calc(100% - 2 * 8px); margin: 0 auto; padding: 0; }
+
+.THIS table {
+  font-family: var(--FONT-FAMILY, BentonSans);
+}
+
+/* ACM styles overrides */
+.THIS .acm_pkgLoginForm .rectangle,
+.THIS .acm_pkgSelfRegister .rectangle { display: none; }
+.THIS .acm_pkgLoginForm.login-container,
+.THIS .acm_pkgSelfRegister.login-container { width: auto; height: auto; border-radius: 7px; }
+.THIS .acm_pkgLoginForm .login-section,
+.THIS .acm_pkgSelfRegister .login-section { width: auto; margin: 0; }
+.THIS .acm_pkgLoginForm .logo-container,
+.THIS .acm_pkgSelfRegister .logo-container { width: 100%; height: auto; background: none; padding-top: 20px; display: table; text-align: center;  }
+.THIS .acm_pkgLoginForm .logo-container:after { content: "Sign in to your API Marketplace"; font-size: 22px; }
+.THIS .acm_pkgSelfRegister .logo-container:before { content: "Create your profile"; font-size: 21px; display: table-row; }
+.THIS .acm_pkgSelfRegister .logo-container:after { content: "Create a username & password you'll remember"; font-size: 12px; display: table-row; }
+.THIS .acm_pkgLoginForm .login-button,
+.THIS .acm_pkgSelfRegister .sign-up-button { background: var(--primary-blue); }
+
+.THIS .acm_pkgLoginForm .login-button:before,
+.THIS .acm_pkgSelfRegister .sign-up-button:before { background: none; }
+/* /ACM styles overrides (see media queries for size specific overrides */
+
+@media screen and (max-width: 640px) {
+  .THIS { padding: 10px 0; }
+  .THIS .acm_pkgLoginForm .login-section,
+  .THIS .acm_pkgSelfRegister .login-section { padding: 8px; }
+}
+
+@media screen and (min-width: 640px) and (max-width: 1279px) {
+  .THIS { padding: 20px 0; }
+  .THIS .acm_pkgLoginForm .login-section,
+  .THIS .acm_pkgSelfRegister .login-section { padding: 16px; }
+}
+
+@media screen and (min-width: 1280px) {
+  .THIS { padding: 40px 0; }
+  .THIS .acm_pkgLoginForm .login-section,
+  .THIS .acm_pkgSelfRegister .login-section { padding: 20px; }
+  .THIS .theme-container { width: calc(416px + 2 * var(--lwc-spacingSmall, 0.75rem)); }
+}
+
+
+
+.THIS h1.title {
+  color: var(--titles-color);
+  font-size: 47px; font-weight: 200; line-height: 1.21;
+  margin: 0.5rem 0 1rem 0;
+  text-align: center;
+}
+
+.THIS h2.title {
+  color: var(--stature-blue);
+  font-size: 20px; font-weight: 500; line-height: 1.35; letter-spacing: 1px;
+  height: auto; width: auto;
+}
+
+.THIS h2.subtitle {
+  color: var(--titles-color);
+  font-size: 28px; font-weight: 300; line-height: 1.07;
+}
+
+.THIS .text-large { font-size: 22px; line-height: 1.45; }
+.THIS .text-normal { font-size: 15px; line-height: 1.67; }
+.THIS .text-small { font-size: 11px; line-height: 1.64; font-weight: 500; letter-spacing: 1px; }

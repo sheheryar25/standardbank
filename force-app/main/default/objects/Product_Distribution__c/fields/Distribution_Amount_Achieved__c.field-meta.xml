@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Distribution_Amount_Achieved__c</fullName>
+    <description>The value which has been successfully distributed using this distribution method OR value purchased to date. SGPRT-624</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The value which has been successfully distributed using this distribution method OR value purchased to date</inlineHelpText>
+    <label>Distribution Amount Achieved</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

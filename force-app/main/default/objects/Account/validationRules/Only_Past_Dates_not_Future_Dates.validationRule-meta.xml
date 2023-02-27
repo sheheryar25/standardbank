@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Only_Past_Dates_not_Future_Dates</fullName>
+    <active>true</active>
+    <description>Only Past Dates not Future Dates validation for Relationship Commenced field</description>
+    <errorConditionFormula>Relationship_Commenced__c &gt; TODAY()</errorConditionFormula>
+    <errorDisplayField>Relationship_Commenced__c</errorDisplayField>
+    <errorMessage>You cannot enter future dates</errorMessage>
+</ValidationRule>

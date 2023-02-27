@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CIF_ISIC_Description__c</fullName>
+    <description>This field is set when the industry code is passed into the the account object from CIF</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The ISIC Sub-Sector classification as defined with Client On-boarding</inlineHelpText>
+    <label>CIF ISIC Description</label>
+    <length>200</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

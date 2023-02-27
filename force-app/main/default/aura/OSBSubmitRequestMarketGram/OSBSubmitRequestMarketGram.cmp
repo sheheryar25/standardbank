@@ -1,0 +1,103 @@
+<aura:component
+        implements="forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes,force:appHostable"
+        controller="OSB_SubmitRequestMarketGram_CTRL" access="global">
+    <aura:attribute name="newCase" type="Case" default="{ 'sobjectType': 'Case' }" />
+    <aura:attribute name="caseCreated" type="Boolean" default="false" />
+    <aura:attribute name="showPopup" type="Boolean" default="false" />
+    <aura:attribute name="subMittingCase" type="Boolean" default="false" />
+    <aura:attribute name="showErrorToast" type="Boolean" default="false" />
+    <aura:attribute name="section" type="String" />
+    <aura:attribute name="description" type="String" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.init}" />
+    <aura:handler name="closePopUpEvent" event="c:OSBClosePopUpEvent" action="{!c.handlePopupClose}" />
+
+    <div class="newCase-container">
+        <aura:if isTrue="{!v.subMittingCase}">
+            <div>
+                <c:OSBLoadingScreen></c:OSBLoadingScreen>
+            </div>
+        </aura:if>
+        <div class="newCase newCase--optl">
+            <form aura:id="changeIt" class="newCase__form slds-size_6-of-6 slds-medium-size_8-of-12 slds-large-size_4-of-6">
+                <aura:if isTrue="{!v.caseCreated}">
+                    <aura:if isTrue="{!v.section == 'User Idea'}">
+                        <c:OSBToastComponent closePopup="{!v.caseCreated}" toastType="success" top="77px" left="57%"
+                                             toastMessage="Thank you for submitting your idea. We will be in touch.">
+                        </c:OSBToastComponent>
+                    </aura:if>
+                    <aura:if isTrue="{!v.section == 'Business Problem'}">
+                        <c:OSBToastComponent closePopup="{!v.caseCreated}" toastType="success" top="77px" left="57%"
+                                             toastMessage="Thank you for submitting your business problem. We will be in touch.">
+                        </c:OSBToastComponent>
+                    </aura:if>
+                </aura:if>
+                <aura:if isTrue="{!v.showErrorToast}">
+                    
+                        <c:OSBToastComponent closePopup="{!v.showErrorToast}" toastType="warning" top="77px" left="57%"
+                                             toastMessage="Please use the section provided. Once done you can then submit.">
+                        </c:OSBToastComponent>
+                    
+                </aura:if>
+                <div aura:id="adjustIcon" class="newCase__icon">
+                    <i class="{!v.section=='User Idea'? 'ms-icn_bulb':'ms-icn_form_fill'}"></i>
+                </div>
+                
+                <aura:if isTrue="{!v.section == 'User Idea'}">
+                    <h1 class="newCase__title">Submit an idea</h1>
+                    <div class="newCase__subtitle">
+                        Having an idea is great but having it realised is even better. We understand that sharing
+                        ideas can be daunting as there are a lot of factors that come into play, but we want to
+                        assure you that we will treat your idea discreetly and with the utmost care.
+                    </div>
+                    <div class="newCase__subtitle_2">
+                        You can either send us your idea via the form below or email<br></br>
+                        <div class="newCase__link">onehub@standardbank.co.za</div>.
+                    </div>
+                    <lightning:textArea aura:id="description" label="Your idea"
+                                        class="newCase__form--input newCase__form--textarea" labelClass="newCase__form--label"
+                                        value="{!v.description}" rows="5"
+                                        placeholder="Be as detailed as possible in the desirability, feasibility and viability of your idea"
+                                        messageWhenValueMissing="Please enter your idea in the section provided." required="true" />
+                    <aura:if isTrue="{!v.showPopup}">
+                        <c:OSBMarketGramPopup title="Cancel request?"
+                                              content="By doing so you will clear the form to it’s original state." />
+                    </aura:if>
+                    <aura:set attribute="else">
+                        <h1 class="newCase__title">Submit a business problem</h1>
+                        <div class="newCase__subtitle">
+                            We have been in business for over 150 years, so believe us when we tell you that we
+                            have experience. We understand the frustrations, the pain and the success when an
+                            organisation tackles a business problem and succeeds. All submitted business
+                            problems are treated discreetly and with the utmost care.
+                        </div>
+                        <div class="newCase__subtitle_2">
+                            You can either send us your business problem via the form below or email<br/>
+                            <div class="newCase__link">onehub@standardbank.co.za</div>.
+                        </div>
+                        <lightning:textArea aura:id="description" label="Your business problem"
+                                            class="newCase__form--input newCase__form--textarea" labelClass="newCase__form--label"
+                                            value="{!v.description}" rows="5"
+                                            placeholder="Be as detailed as possible in contextualising the problem"
+                                            messageWhenValueMissing="Please enter your business problem in the section provided."
+                                            required="true" />
+                        <aura:if isTrue="{!v.showPopup}">
+                            <c:OSBMarketGramPopup title="Cancel request?"
+                                                  content="By doing so you will clear the form to it’s original state." />
+                        </aura:if>
+                    </aura:set>
+                </aura:if>
+            </form>
+            <div class="newCase__buttons">
+                <div class="newCase__buttons-container slds-size_6-of-6 slds-medium-size_8-of-12 slds-large-size_4-of-6">
+                    <div class="slds-size_3-of-6 slds-medium-size_1-of-4 slds-large-size_2-of-8" data-id="uitlink_link" data-text="{!'Marketgram | ' + v.section + ' | Cancel'}">
+                        <lightning:button label="Cancel" class="btn btn--gray newCase__button" onclick="{!c.handleCancel}" />
+                    </div>
+                    <div class="slds-size_3-of-6 slds-medium-size_1-of-4 slds-large-size_2-of-8" data-id="uitlink_link" data-text="{!'Marketgram | ' + v.section + ' | Share'}">
+                        <lightning:button label="SHARE" class="btn btn--darkblue newCase__button" onclick="{!c.createCase}" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</aura:component>

@@ -1,0 +1,10 @@
+.THIS .axis text {
+    	fill: rgb(145, 153, 167);
+    	font-family: Arial;
+    	font-size: 20px; }
+
+.THIS .axis path {
+    	stroke: rgba(0, 0, 0, 0.1); }
+    	
+.THIS .axis line {
+    	stroke: rgba(0, 0, 0, 0.1); }

@@ -1,0 +1,9 @@
+<aura:component implements="forceCommunity:themeLayout">
+    <ltng:require styles="{!$Resource.OSB_icons + '/style.css'}" />
+    <ltng:require styles="{!$Resource.OSB_icons_font + '/style.css'}" />
+    <aura:attribute name="profileMenu" type="Aura.Component[]" required="false"/>
+
+    <aura:attribute name="navBar" type="Aura.Component[]" required="false"/>
+    {!v.body}
+    <c:OSBAdobeAnalyticsWrapper />
+</aura:component>

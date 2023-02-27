@@ -1,0 +1,9 @@
+/**
+ * Created by tsobota on 31.07.2018.
+ */
+.THIS .invisibleButton {
+    background: transparent;
+    border: none !important;
+    font-size:0;
+    float : left;
+}

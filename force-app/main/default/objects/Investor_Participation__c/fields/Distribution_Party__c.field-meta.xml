@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Distribution_Party__c</fullName>
+    <description>US-4609/ SGPRT-623 Name of Investors engaged for the portion of the sell down</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter names of investors engaged for the portion of the sell down relating to the specific distribution method OR sellers engaged for the purchase.</inlineHelpText>
+    <label>Distribution Party</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Investor Participations</relationshipLabel>
+    <relationshipName>Investor_Participations</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>true</writeRequiresMasterRead>
+</CustomField>

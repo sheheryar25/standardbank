@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Trading_Division__c</fullName>
+    <description>#EN 391 : Data type was changed from text to picklist for Client Plan Dashboard requirement. (More flexibility in reporting)</description>
+    <externalId>false</externalId>
+    <label>Trading Division</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>GM</fullName>
+                <default>false</default>
+                <label>GM</label>
+            </value>
+            <value>
+                <fullName>IB</fullName>
+                <default>false</default>
+                <label>IB</label>
+            </value>
+            <value>
+                <fullName>OTHER</fullName>
+                <default>false</default>
+                <label>OTHER</label>
+            </value>
+            <value>
+                <fullName>TPS</fullName>
+                <default>false</default>
+                <label>TPS</label>
+            </value>
+            <value>
+                <fullName>VAF</fullName>
+                <default>false</default>
+                <label>VAF</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

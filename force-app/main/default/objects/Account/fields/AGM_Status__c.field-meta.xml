@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AGM_Status__c</fullName>
+    <description>US-3868 Strategic Categorization (AGM) of the clients</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Acquire – Clients we don’t bank with;
+Grow – Client with potential growth;
+Maintain – Maintain current relationship;
+One CIB – Existing global clients;
+Blank – Not categorised</inlineHelpText>
+    <label>AGM Status</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Acquire</fullName>
+                <default>false</default>
+                <label>Acquire</label>
+            </value>
+            <value>
+                <fullName>Grow</fullName>
+                <default>false</default>
+                <label>Grow</label>
+            </value>
+            <value>
+                <fullName>Maintain</fullName>
+                <default>false</default>
+                <label>Maintain</label>
+            </value>
+            <value>
+                <fullName>One CIB</fullName>
+                <default>false</default>
+                <label>One CIB</label>
+            </value>
+            <value>
+                <fullName>Tier 2</fullName>
+                <default>false</default>
+                <label>Tier 2</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

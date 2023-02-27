@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>This field is not visible on the page layout of the Distribution Client, but is being populated by the &quot;Add Distribution Client&quot; related list of the Product. The purpose is to be able to display distribution clients on the related list of Opportunity.</description>
+    <externalId>false</externalId>
+    <label>Opportunity</label>
+    <referenceTo>Opportunity</referenceTo>
+    <relationshipLabel>Distribution Clients</relationshipLabel>
+    <relationshipName>Distribution_Clients</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

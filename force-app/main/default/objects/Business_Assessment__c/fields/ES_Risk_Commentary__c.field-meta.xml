@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ES_Risk_Commentary__c</fullName>
+    <description>The commentary is guided by the outcome of the E&amp;S screening tool:
+            - If a &apos;low&apos; rating is obtained for both the CRA and TRA, no E&amp;S commentary is required
+            - If a &apos;medium&apos; rating is obtained for either CRA or TRA, the transactor should explain why there is a &apos;medium&apos; rating, as well as note that the regional E&amp;S coordinator will be involved in the credit process
+            - If a &apos;high&apos; rating is obtained for either CRA or TRA, the transactor should contact the central E&amp;S team to advise on commentary to include</description>
+    <externalId>false</externalId>
+    <inlineHelpText>- Low rating = No E&amp;S commentary is required
+            - Medium rating = Transactor to explain the issues and note the E&amp;S DD to be done
+            - High Rating = Transactor to contact the central E&amp;S team to advise on commentary to include</inlineHelpText>
+    <label>E &amp; S Risk Commentary</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

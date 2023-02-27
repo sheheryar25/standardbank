@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Client_Strategy__c</fullName>
+    <description>case#1263 - Rudolf Niehaus
+Overall objective, Where/how decision making is done, Opportunities we need to be looking for, Brief plan on how to deliver strategy
+EN#240
+This field was renamed due to the Client Plan phase 1 project. Label and API name have not been aligned because it would require updating code logic.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Standard Bank&apos;s / Stanbic&apos;s Bank strategy to support the Client&apos;s long term strategy and short term objectives (1500 characters or less)</inlineHelpText>
+    <label>Our Strategy For This Client</label>
+    <length>5000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

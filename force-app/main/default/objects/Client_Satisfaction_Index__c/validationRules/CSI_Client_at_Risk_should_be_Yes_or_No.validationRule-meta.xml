@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CSI_Client_at_Risk_should_be_Yes_or_No</fullName>
+    <active>true</active>
+    <description>US:1210:CSI - Case automation &amp; data quality control.This validation rule checks if CSI Client at risk</description>
+    <errorConditionFormula>AND( 
+(IF(AND(NOT(ISPICKVAL(CSI_Client_at_Risk__c,&quot;Yes&quot;)), 
+NOT(ISPICKVAL(CSI_Client_at_Risk__c,&quot;No&quot;))), True, False)), 
+IF(Text(CSI_Client_at_Risk__c)&lt;&gt; null,True,False ))</errorConditionFormula>
+    <errorMessage>The CSI Client at Risk should have a value of Yes or No</errorMessage>
+</ValidationRule>

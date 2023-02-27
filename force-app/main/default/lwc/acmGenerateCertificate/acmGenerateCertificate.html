@@ -1,0 +1,43 @@
+<template>
+    <div class="container-generate-cert" style="background-color: #fff; padding: 47px 69px 84px 69px">
+        <h2 class="generate-certificate">How to generate a certificate</h2>
+        <hr class="styled-asset">
+        <div class="generate-steps">
+            <div>
+                1) Install Keystore explore app <br>
+                2) Select New Keystroke type (JKS) <br>
+                3) Generate Key Pair <br>
+                4) Enter the component name (URL) and Password
+            </div>
+            <div>
+                5) Export and open the certificate <br>
+                6) Delete extra lines and ensure there are no spaces <br>
+                7) Copy the certificate and use on the subscription request below
+            </div>
+        </div>
+
+     <div class="slds-form-element" style="background-color: #fff;">
+        <label class="slds-form-element__label" for="textarea-id-01">
+          <abbr class="slds-required" title="required">* </abbr>OAUTH REDIRECT URL</label>
+        <div class="slds-form-element__control">
+          <textarea id="textarea-id-01" required="" placeholder="" class="slds-textarea"></textarea>
+        </div>
+      </div>
+      <p class="info-text">The URL authenticated OAUTH flows for this application should be redirected to.</p>
+
+      <div class="slds-form-element">
+        <label class="slds-form-element__label" for="textarea-id-02">
+          <abbr class="slds-required" title="required">* </abbr>CERTIFICATE</label>
+        <div class="slds-form-element__control">
+          <textarea id="textarea-id-02" required="" placeholder="" class="slds-textarea"></textarea>
+        </div>
+      </div>
+      <p class="info-text">Paste the content of your application's x509 certificate.</p>
+
+      <div class="buttons">
+        <c-cmn-button name="prevButton" label="PREVIOUS" variant="neutral" w-class="w280"></c-cmn-button>
+        <c-cmn-button name="generateButton" label="GENERATE CERTIFICATE" variant="brand" w-class="w280"></c-cmn-button>
+      </div>
+    </div>
+
+</template>

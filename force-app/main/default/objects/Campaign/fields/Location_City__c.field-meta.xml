@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Location_City__c</fullName>
+    <description>Case#1168 - 11/2011 - Rudolf Niehaus
+            The city where the campaign is being held</description>
+    <externalId>false</externalId>
+    <label>Location City</label>
+    <required>false</required>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Accra</fullName>
+                <default>false</default>
+                <label>Accra</label>
+            </value>
+            <value>
+                <fullName>Apapa</fullName>
+                <default>false</default>
+                <label>Apapa</label>
+            </value>
+            <value>
+                <fullName>Barcelona</fullName>
+                <default>false</default>
+                <label>Barcelona</label>
+            </value>
+            <value>
+                <fullName>Beijing</fullName>
+                <default>false</default>
+                <label>Beijing</label>
+            </value>
+            <value>
+                <fullName>Boston</fullName>
+                <default>false</default>
+                <label>Boston</label>
+            </value>
+            <value>
+                <fullName>Brussels</fullName>
+                <default>false</default>
+                <label>Brussels</label>
+            </value>
+            <value>
+                <fullName>Buenos Aires</fullName>
+                <default>false</default>
+                <label>Buenos Aires</label>
+            </value>
+            <value>
+                <fullName>Cape Town</fullName>
+                <default>false</default>
+                <label>Cape Town</label>
+            </value>
+            <value>
+                <fullName>Dar es Salaam</fullName>
+                <default>false</default>
+                <label>Dar es Salaam</label>
+            </value>
+            <value>
+                <fullName>Dubai</fullName>
+                <default>false</default>
+                <label>Dubai</label>
+            </value>
+            <value>
+                <fullName>Dublin</fullName>
+                <default>false</default>
+                <label>Dublin</label>
+            </value>
+            <value>
+                <fullName>Durban</fullName>
+                <default>false</default>
+                <label>Durban</label>
+            </value>
+            <value>
+                <fullName>Frankfurt</fullName>
+                <default>false</default>
+                <label>Frankfurt</label>
+            </value>
+            <value>
+                <fullName>Garki</fullName>
+                <default>false</default>
+                <label>Garki</label>
+            </value>
+            <value>
+                <fullName>Hong Kong</fullName>
+                <default>false</default>
+                <label>Hong Kong</label>
+            </value>
+            <value>
+                <fullName>Ibadan</fullName>
+                <default>false</default>
+                <label>Ibadan</label>
+            </value>
+            <value>
+                <fullName>Ikeja</fullName>
+                <default>false</default>
+                <label>Ikeja</label>
+            </value>
+            <value>
+                <fullName>Istanbul</fullName>
+                <default>false</default>
+                <label>Istanbul</label>
+            </value>
+            <value>
+                <fullName>Johannesburg</fullName>
+                <default>false</default>
+                <label>Johannesburg</label>
+            </value>
+            <value>
+                <fullName>Kaduna City</fullName>
+                <default>false</default>
+                <label>Kaduna City</label>
+            </value>
+            <value>
+                <fullName>Kampala</fullName>
+                <default>false</default>
+                <label>Kampala</label>
+            </value>
+            <value>
+                <fullName>Kano City</fullName>
+                <default>false</default>
+                <label>Kano City</label>
+            </value>
+            <value>
+                <fullName>Kumasi</fullName>
+                <default>false</default>
+                <label>Kumasi</label>
+            </value>
+            <value>
+                <fullName>Lagos</fullName>
+                <default>false</default>
+                <label>Lagos</label>
+            </value>
+            <value>
+                <fullName>Liverpool</fullName>
+                <default>false</default>
+                <label>Liverpool</label>
+            </value>
+            <value>
+                <fullName>London</fullName>
+                <default>false</default>
+                <label>London</label>
+            </value>
+            <value>
+                <fullName>Mombasa</fullName>
+                <default>false</default>
+                <label>Mombasa</label>
+            </value>
+            <value>
+                <fullName>Nairobi</fullName>
+                <default>false</default>
+                <label>Nairobi</label>
+            </value>
+            <value>
+                <fullName>New York</fullName>
+                <default>false</default>
+                <label>New York</label>
+            </value>
+            <value>
+                <fullName>Port Elizabeth</fullName>
+                <default>false</default>
+                <label>Port Elizabeth</label>
+            </value>
+            <value>
+                <fullName>Port-Harcourt</fullName>
+                <default>false</default>
+                <label>Port-Harcourt</label>
+            </value>
+            <value>
+                <fullName>Pretoria</fullName>
+                <default>false</default>
+                <label>Pretoria</label>
+            </value>
+            <value>
+                <fullName>Rome</fullName>
+                <default>false</default>
+                <label>Rome</label>
+            </value>
+            <value>
+                <fullName>Sao Paolo</fullName>
+                <default>false</default>
+                <label>Sao Paolo</label>
+            </value>
+            <value>
+                <fullName>Shanghai</fullName>
+                <default>false</default>
+                <label>Shanghai</label>
+            </value>
+            <value>
+                <fullName>Singapore</fullName>
+                <default>false</default>
+                <label>Singapore</label>
+            </value>
+            <value>
+                <fullName>Tokyo</fullName>
+                <default>false</default>
+                <label>Tokyo</label>
+            </value>
+            <value>
+                <fullName>Toronto</fullName>
+                <default>false</default>
+                <label>Toronto</label>
+            </value>
+            <value>
+                <fullName>Victoria Island</fullName>
+                <default>false</default>
+                <label>Victoria Island</label>
+            </value>
+            <value>
+                <fullName>Washington</fullName>
+                <default>false</default>
+                <label>Washington</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Distribution_Centre__c</fullName>
+    <description>Where is the Distribution team member based? SGPRT-624</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Where is the Distribution team member based?</inlineHelpText>
+    <label>Distribution Centre</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>East Africa</fullName>
+                <default>false</default>
+                <label>East Africa</label>
+            </value>
+            <value>
+                <fullName>South Africa</fullName>
+                <default>false</default>
+                <label>South Africa</label>
+            </value>
+            <value>
+                <fullName>West Africa</fullName>
+                <default>false</default>
+                <label>West Africa</label>
+            </value>
+            <value>
+                <fullName>Southern and Central Africa</fullName>
+                <default>false</default>
+                <label>Southern and Central Africa</label>
+            </value>
+            <value>
+                <fullName>London</fullName>
+                <default>false</default>
+                <label>London</label>
+            </value>
+            <value>
+                <fullName>International</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>International</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

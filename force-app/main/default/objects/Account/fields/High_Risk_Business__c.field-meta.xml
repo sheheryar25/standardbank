@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>High_Risk_Business__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>These are businesses that represent high money laundering or terrorist financing risk. (eg. arms dealers)</inlineHelpText>
+    <label>High Risk Business</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No</fullName>
+                <default>false</default>
+                <label>No</label>
+            </value>
+            <value>
+                <fullName>Antique Dealer</fullName>
+                <default>false</default>
+                <label>Antique Dealer</label>
+            </value>
+            <value>
+                <fullName>Arms Manufacturer/Dealer/intermediary</fullName>
+                <default>false</default>
+                <label>Arms Manufacturer/Dealer/intermediary</label>
+            </value>
+            <value>
+                <fullName>Art Dealer</fullName>
+                <default>false</default>
+                <label>Art Dealer</label>
+            </value>
+            <value>
+                <fullName>Auction House</fullName>
+                <default>false</default>
+                <label>Auction House</label>
+            </value>
+            <value>
+                <fullName>Bureau de Change</fullName>
+                <default>false</default>
+                <label>Bureau de Change</label>
+            </value>
+            <value>
+                <fullName>Cash (or equiv) Intensive Business</fullName>
+                <default>false</default>
+                <label>Cash (or equiv) Intensive Business</label>
+            </value>
+            <value>
+                <fullName>Casino</fullName>
+                <default>false</default>
+                <label>Casino</label>
+            </value>
+            <value>
+                <fullName>Cheque Cashing / Payday Advance Services</fullName>
+                <default>false</default>
+                <label>Cheque Cashing / Payday Advance Services</label>
+            </value>
+            <value>
+                <fullName>Exchange Traded Carbon Credit</fullName>
+                <default>false</default>
+                <label>Exchange Traded Carbon Credit</label>
+            </value>
+            <value>
+                <fullName>Gem/Jewel Dealer</fullName>
+                <default>false</default>
+                <label>Gem/Jewel Dealer</label>
+            </value>
+            <value>
+                <fullName>Money Service Businesses</fullName>
+                <default>false</default>
+                <label>Money Service Businesses</label>
+            </value>
+            <value>
+                <fullName>Online Gaming and Spreadbetting</fullName>
+                <default>false</default>
+                <label>Online Gaming and Spreadbetting</label>
+            </value>
+            <value>
+                <fullName>Other High Value / Precious Goods Dealer</fullName>
+                <default>false</default>
+                <label>Other High Value / Precious Goods Dealer</label>
+            </value>
+            <value>
+                <fullName>Pawnbroking</fullName>
+                <default>false</default>
+                <label>Pawnbroking</label>
+            </value>
+            <value>
+                <fullName>Precious Metal Dealer</fullName>
+                <default>false</default>
+                <label>Precious Metal Dealer</label>
+            </value>
+            <value>
+                <fullName>Arms Manufacturer/ dealer/ intermediary</fullName>
+                <default>false</default>
+                <label>Arms Manufacturer/ dealer/ intermediary</label>
+            </value>
+            <value>
+                <fullName>Cheque Cashing/ Payday Advance Services</fullName>
+                <default>false</default>
+                <label>Cheque Cashing/ Payday Advance Services</label>
+            </value>
+            <value>
+                <fullName>Churches and other Religious Bodies</fullName>
+                <default>false</default>
+                <label>Churches and other Religious Bodies</label>
+            </value>
+            <value>
+                <fullName>Gem / Jewel Dealer</fullName>
+                <default>false</default>
+                <label>Gem / Jewel Dealer</label>
+            </value>
+            <value>
+                <fullName>Money Services Businesses</fullName>
+                <default>false</default>
+                <label>Money Services Businesses</label>
+            </value>
+            <value>
+                <fullName>Nuclear Industry</fullName>
+                <default>false</default>
+                <label>Nuclear Industry</label>
+            </value>
+            <value>
+                <fullName>Other Gambling Related Activities</fullName>
+                <default>false</default>
+                <label>Other Gambling Related Activities</label>
+            </value>
+            <value>
+                <fullName>Other High Value/ Precious Goods Dealer</fullName>
+                <default>false</default>
+                <label>Other High Value/ Precious Goods Dealer</label>
+            </value>
+            <value>
+                <fullName>Precious Metals Miner / Mining</fullName>
+                <default>false</default>
+                <label>Precious Metals Miner / Mining</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

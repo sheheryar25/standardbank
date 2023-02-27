@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunities__c</fullName>
+    <description>SFP-9319 [c] A summary of the current market opportunities available to the Client</description>
+    <externalId>false</externalId>
+    <inlineHelpText>A summary of the current opportunities available to the Client (business expansion, increased production, new contracts, new product lines, new markets, etc. )</inlineHelpText>
+    <label>Opportunities</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

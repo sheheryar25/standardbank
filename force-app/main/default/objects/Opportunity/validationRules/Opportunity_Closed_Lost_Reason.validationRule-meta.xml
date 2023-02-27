@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Closed_Lost_Reason</fullName>
+    <active>true</active>
+    <description>SFP-9325 [c] When stage is changed to ‘Closed Lost’, the user will then be prompted to select a reason from the Closed Lost Reason pick list field</description>
+    <errorConditionFormula>AND(
+
+(ISPICKVAL(StageName,&quot;4 - Closed Lost&quot;))&amp;&amp;
+ISPICKVAL(ReasonForWinLossPickList__c,&quot;Bank Strategy not Aligned to Client Strategy&quot;)||
+ISPICKVAL(ReasonForWinLossPickList__c,&quot;Client Irrelevance / Unfavourable Relationship&quot;)||
+ISPICKVAL(ReasonForWinLossPickList__c,&quot;Fewer Products Available and Poor Product Fit&quot;)||
+ISPICKVAL(ReasonForWinLossPickList__c,&quot;Unfavourable Market Pricing&quot;)||
+ISPICKVAL(ReasonForWinLossPickList__c,&quot;Unfavourable Response Time&quot;)||
+ISPICKVAL(ReasonForWinLossPickList__c,&quot;Unfavourable Returns from Pricing Structure&quot;),
+
+
+
+RecordType.Name = &quot;Africa_Regions_Opportunity&quot;
+)</errorConditionFormula>
+    <errorDisplayField>ReasonForWinLossPickList__c</errorDisplayField>
+    <errorMessage>Please select a Closed Lost Reason from the Reason Won / Lost field</errorMessage>
+</ValidationRule>

@@ -1,0 +1,24 @@
+<svg
+	xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink" width="17px"
+	height="12px" viewBox="0 0 17 12" version="1.1">
+	<!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+	<title>youtube</title>
+	<desc>Created with Sketch.</desc>
+	<defs>
+		<linearGradient xy="100%" id="gradient">
+			<stop stop-color="#fff" offset="0%"></stop>
+			<stop stop-color="#fff" offset="100%"></stop>
+		</linearGradient>
+	</defs>
+	<g id="Standard-Bank---Icon-Setup" stroke="none" stroke-width="1"
+		fill="none" fill-rule="evenodd"
+		transform="translate(-508.000000, -471.000000)">
+		<g id="youtube" transform="translate(508.000000, 471.000000)"
+			fill="#FFFFFE" fill-rule="nonzero">
+			<path
+				d="M17,9.0081111 L17,2.92966667 C17,2.92966667 17,0 14.070333,0 L2.92825,0 C2.92825,0 0,0 0,2.92966667 L0,9.0081111 C0,9.0081111 0,11.9377778 2.92825,11.9377778 L14.070333,11.9377778 C14.070333,11.9377778 17,11.9377778 17,9.0081111 M11.801306,5.9773889 L6.235694,9.2461111 L6.235694,2.70772222 L11.801306,5.9773889">
+			</path>
+		</g>
+	</g>
+</svg>

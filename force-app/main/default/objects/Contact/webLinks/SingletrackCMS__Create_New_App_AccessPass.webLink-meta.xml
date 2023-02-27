@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SingletrackCMS__Create_New_App_AccessPass</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <height>600</height>
+    <linkType>page</linkType>
+    <masterLabel>Create New App AccessPass</masterLabel>
+    <openType>sidebar</openType>
+    <page>SingletrackCMS__ContactCreateNewAppAccessPass</page>
+    <protected>false</protected>
+</WebLink>

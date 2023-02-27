@@ -1,0 +1,41 @@
+<aura:component controller="Ltn_FieldSetController" implements="flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName">
+
+	<aura:attribute name="fieldSet" type="String" />
+	<aura:attribute name="textAlign" type="String" default="left" />
+	<aura:attribute name="showBorder" type="Boolean" default="true" />
+	<aura:attribute name="editMode" type="Boolean" default="false" />
+	<aura:attribute name="columns" type="Integer" />
+	<aura:attribute name="fields" type="String[]"  default="[]"/>
+	<aura:attribute name="fieldExternal" type="String" />
+	<aura:attribute name="fieldsToDisplay" type="String[]" access="public" default="['Id']"/>
+	<aura:attribute name="recordId" type="String" />
+	<aura:attribute name="sObjectName" type="String" />
+	<aura:attribute name="error" type="String" access="private" />
+	<aura:attribute name="record" type="SObject"/>
+    <aura:attribute name="readOnly" type="Boolean" default="false"/>
+	<aura:attribute name="RecordTypeId" type="Id"/>
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+	<aura:handler event="c:ComponentAction" action="{!c.handleComponentAction}"/>
+	<aura:if isTrue="{! and(!empty(v.fields), v.recordId)}">
+		<force:recordData aura:id="forceRecord"
+						  recordId="{!v.recordId}"
+						  fields="{!v.fields}"
+						  mode="VIEW"
+						  targetFields="{!v.record}"
+						  targetError="{!v.error}"
+						  recordUpdated="{!c.handleRecordUpdated}"/>
+	</aura:if>
+	<aura:if isTrue="{!and(v.record, v.RecordTypeId)}">
+		<div aura:id="content" class="{!if(v.showBorder, 'custom_card')}">
+            <lightning:recordEditForm objectApiName="{!v.sObjectName}" recordTypeId="{!v.RecordTypeId}">
+                <div aura:id="grid" class="{!'slds-grid slds-wrap slds-p-around_x-small '}">
+                    <aura:iteration items="{!v.fieldsToDisplay}" var="field">
+                        <div class="{!'slds-col slds-size_1-of-' + v.columns + ' slds-p-horizontal_x-small slds-text-align_'+v.textAlign}">
+                            <c:recordField record="{!v.record}" fieldName="{!field}" editMode="{!v.editMode}" readOnly="{!v.readOnly}" includeRecordEditForm="false"/>
+                        </div>
+                    </aura:iteration>
+                </div>
+            </lightning:recordEditForm>
+		</div>
+	</aura:if>
+</aura:component>

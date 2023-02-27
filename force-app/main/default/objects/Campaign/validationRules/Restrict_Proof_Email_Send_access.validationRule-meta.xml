@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_Proof_Email_Send_access</fullName>
+    <active>true</active>
+    <description>SFP-5896 - Only System Administrator can edit the &apos;Proof Email Sent&apos; field.</description>
+    <errorConditionFormula>AND(
+  ISCHANGED( Proof_Email_Sent__c ),
+  $Profile.Name  &lt;&gt; &apos;System Administrator&apos;
+)</errorConditionFormula>
+    <errorMessage>Only System Administrator can edit the &apos;Proof Email Sent&apos; field.</errorMessage>
+</ValidationRule>

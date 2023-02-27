@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event_Type__c</fullName>
+    <description>SFP-10892 [c] Event Type is used for Reporting purposes, it replicates the Subject field on Events</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Specific type of Event</inlineHelpText>
+    <label>Event Type</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Action Plan</fullName>
+                <default>false</default>
+                <label>Action Plan</label>
+            </value>
+            <value>
+                <fullName>Call</fullName>
+                <default>false</default>
+                <label>Call</label>
+            </value>
+            <value>
+                <fullName>Call Program: Follow-up Call</fullName>
+                <default>false</default>
+                <label>Call Program: Follow-up Call</label>
+            </value>
+            <value>
+                <fullName>Call Program: Follow-up Meeting</fullName>
+                <default>false</default>
+                <label>Call Program: Follow-up Meeting</label>
+            </value>
+            <value>
+                <fullName>Complete Client Needs Analysis</fullName>
+                <default>false</default>
+                <label>Complete Client Needs Analysis</label>
+            </value>
+            <value>
+                <fullName>Complete Credit Application</fullName>
+                <default>false</default>
+                <label>Complete Credit Application</label>
+            </value>
+            <value>
+                <fullName>Discuss Indicative Term Sheet with Client</fullName>
+                <default>false</default>
+                <label>Discuss Indicative Term Sheet with Client</label>
+            </value>
+            <value>
+                <fullName>Discuss Quote/Proposal/RFP with Client</fullName>
+                <default>false</default>
+                <label>Discuss Quote/Proposal/RFP with Client</label>
+            </value>
+            <value>
+                <fullName>Email</fullName>
+                <default>false</default>
+                <label>Email</label>
+            </value>
+            <value>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+                <label>Meeting</label>
+            </value>
+            <value>
+                <fullName>Obtain Insurance Needs</fullName>
+                <default>false</default>
+                <label>Obtain Insurance Needs</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Review and Update Client Profile/ Account Plan</fullName>
+                <default>false</default>
+                <label>Review and Update Client Profile/ Account Plan</label>
+            </value>
+            <value>
+                <fullName>Review and Update Client Profile on CAMS</fullName>
+                <default>false</default>
+                <label>Review and Update Client Profile on CAMS</label>
+            </value>
+            <value>
+                <fullName>Review and Update Needs Analysis</fullName>
+                <default>false</default>
+                <label>Review and Update Needs Analysis</label>
+            </value>
+            <value>
+                <fullName>Spread Client Financials</fullName>
+                <default>false</default>
+                <label>Spread Client Financials</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

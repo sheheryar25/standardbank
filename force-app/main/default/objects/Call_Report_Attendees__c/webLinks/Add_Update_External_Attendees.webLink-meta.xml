@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Add_Update_External_Attendees</fullName>
+    <availability>online</availability>
+    <description>Case#4252 Only allow the user access to add event report attendees if he also has edit rights to the event report.</description>
+    <displayType>massActionButton</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Add/Update External Attendees</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <requireRowSelection>false</requireRowSelection>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/33.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/33.0/apex.js&quot;)} 
+
+if(JSON.parse(sforce.apex.execute(&quot;ButtonAccess&quot;, &quot;checkInternalAttendeeButton&quot;, 
+{currentUserId:&apos;{!User.Id}&apos;, idEventReport:&apos;{!Call_Report__c.Id}&apos;} ))){ 
+
+window.parent.location.href=&quot;/apex/AddExternalAttendee?reportid={!Call_Report__c.Id}&quot;; 
+
+} 
+
+else { 
+
+alert(&quot;You do not have the required permission to add Attendees to this Event Report. Please request the Event Owner ({!Call_Report__c.OwnerFullName})&quot;); 
+
+}</url>
+</WebLink>

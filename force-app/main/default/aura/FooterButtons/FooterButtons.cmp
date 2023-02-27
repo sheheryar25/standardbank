@@ -1,0 +1,19 @@
+<aura:component >
+	<!-- <aura:attribute name="visible" type="Boolean" default="false" access="private"/> -->
+	<aura:attribute name="saveAction" type="Aura.Action" />
+	<aura:attribute name="cancelAction" type="Aura.Action" />
+	<aura:attribute name="buttons" type="Aura.Component" />
+	<!--<aura:attribute name="components" type="Object[]" default="[['lightning:button',{'label':'Save and Next'}]]"/>
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />-->
+	<!-- <aura:handler event="c:ComponentAction" action="{!c.handleComponentAction}"/> -->
+	<!-- <aura:registerEvent name="componentAction" type="c:ComponentAction" /> -->
+	<!-- <aura:if isTrue="{!v.visible}"> -->
+		<div class="slds-text-align_center forceRecordEditActions" style="position:fixed; bottom: 0;z-index:10 ; width: 66.66%">	
+			<div aura:id="actionsContainer" class="actionsContainer">
+				<lightning:button label="Cancel" onclick="{!v.cancelAction}"/>
+				<lightning:button label="Save" onclick="{!v.saveAction}" class="slds-button_brand" />
+				{!v.buttons}
+			</div>
+		</div>
+	<!-- </aura:if> -->
+</aura:component>

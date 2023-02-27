@@ -1,0 +1,67 @@
+<aura:component description="CI_RevenueDrillDown" implements="force:appHostable" extends="c:CI_Base">
+    <aura:attribute name="recordId" type="String" />
+
+    <aura:attribute name="numberOfClientsPresented" type="Integer" default="0" />
+    <aura:attribute name="groupedByClient" access="private" type="Object[]" />
+    <aura:attribute name="groupedByTopParents" access="private" type="Object[]" />
+    <aura:attribute name="groupedByImmediateParents" access="private" type="Object[]" />
+    <aura:attribute name="groupedByChildClients" access="private" type="Object[]" />
+    <aura:attribute name="columns" type="List" access="private" />
+    <aura:attribute name="gridExpandedRows" type="Object" access="private" />
+    <aura:handler name="init" value="{!this}" action="{!c.init}" />
+    <c:CI_RevenueService aura:id="revenueService" />
+
+    <article aura:id="no_data_msg" class="card_with_shadow slds- slds-m-around_small slds-hide">
+        <div class="slds-p-around_small">
+            <p class="slds-text-heading_small slds-text-align_center">
+                No relevant data found
+            </p>
+        </div>
+    </article>
+
+    <aura:if isTrue="{!or($Browser.isAndroid, $Browser.isIOS)}">
+        <ui:scrollerWrapper class="scrollerSize">
+            <c:CI_RevenueDrillDownMobile groupedByClient="{!v.groupedByTopParents}" numberOfClientsPresented="{!v.numberOfClientsPresented}" title="Top Parent Clients"/>
+            <aura:if isTrue="{! and(!empty(v.groupedByImmediateParents), lessthan(v.groupedByTopParents.length, v.numberOfClientsPresented))}">
+                <c:CI_RevenueDrillDownMobile groupedByClient="{!v.groupedByImmediateParents}" numberOfClientsPresented="{!v.numberOfClientsPresented - v.groupedByTopParents.length}" title="Immediate Parent Clients"/>
+            </aura:if>
+            <aura:if isTrue="{! and(!empty(v.groupedByChildClients), lessthan(v.groupedByTopParents.length + v.groupedByImmediateParents.length, v.numberOfClientsPresented))}">
+                <c:CI_RevenueDrillDownMobile groupedByClient="{!v.groupedByChildClients}" numberOfClientsPresented="{!v.numberOfClientsPresented - v.groupedByTopParents.length - v.groupedByImmediateParents.length}" title="Child Clients"/>
+            </aura:if>
+            <aura:if isTrue="{! v.groupedByClient.length  > v.numberOfClientsPresented}">
+                <div class="slds-align_absolute-center">
+                    <lightning:button label="Show More" onclick="{!c.showMore}" />
+                </div>
+            </aura:if>
+        </ui:scrollerWrapper>
+
+        <aura:set attribute="else">
+            <div>
+                <lightning:card title="Top Parent Clients">
+                    <lightning:treeGrid columns="{!v.columns}" keyField="rowId" aura:id="topParentsTree" hideCheckboxColumn="true" />
+                </lightning:card>
+            </div>
+            <aura:if isTrue="{! and(!empty(v.groupedByImmediateParents), lessthan(v.groupedByTopParents.length, v.numberOfClientsPresented))}">
+                <div>
+                    <lightning:card title="Immediate Parent Clients">
+                        <lightning:treeGrid columns="{!v.columns}" keyField="rowId" aura:id="immediateParentsTree" hideCheckboxColumn="true" />
+                    </lightning:card>
+                </div>
+            </aura:if>
+            <aura:if isTrue="{! and(!empty(v.groupedByChildClients), lessthan(v.groupedByTopParents.length + v.groupedByImmediateParents.length, v.numberOfClientsPresented))}">
+                <div>
+                    <lightning:card title="Child Clients">
+                        <lightning:treeGrid columns="{!v.columns}" keyField="rowId" aura:id="childClientsTree" hideCheckboxColumn="true" />
+                    </lightning:card>
+                </div>
+            </aura:if>
+
+            <aura:if isTrue="{! v.groupedByClient.length > v.numberOfClientsPresented}">
+                <div class="slds-align_absolute-center slds-m-top_small">
+                    <lightning:button label="Show More" onclick="{!c.showMore}" />
+                </div>
+            </aura:if>
+        </aura:set>
+    </aura:if>
+
+</aura:component>

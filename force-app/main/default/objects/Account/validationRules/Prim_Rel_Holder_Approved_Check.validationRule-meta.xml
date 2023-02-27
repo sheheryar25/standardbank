@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prim_Rel_Holder_Approved_Check</fullName>
+    <active>true</active>
+    <description>Disallow changing the value of Primary Relationship Holder once the Client has been approved by its Client Coordinator (EN-961).</description>
+    <errorConditionFormula>AND(ISCHANGED(Primary_Relationship_Holder__c),  ISPICKVAL(Status__c, &quot;Approved&quot;))</errorConditionFormula>
+    <errorDisplayField>Primary_Relationship_Holder__c</errorDisplayField>
+    <errorMessage>Primary Relationship Holder can&apos;t change once the Client has been approved by its Client Coordinator.</errorMessage>
+</ValidationRule>

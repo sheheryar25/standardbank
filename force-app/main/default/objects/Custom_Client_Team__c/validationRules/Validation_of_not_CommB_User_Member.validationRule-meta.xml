@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validation_of_not_CommB_User_Member</fullName>
+    <active>true</active>
+    <description>Improvement of EN-0989 which prevents add a CIB user to a Commercial Banking Client Service Team.</description>
+    <errorConditionFormula>AND(
+$Profile.Name &lt;&gt; &quot;Business Administrator&quot;,
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+
+OR(
+ISPICKVAL(Account__r.Primary_Relationship_Holder__c, &apos;Commercial Banking&apos;),
+ISPICKVAL(Account__r.Primary_Relationship_Holder__c, &apos;Business Banking&apos;)),
+
+OR(ISPICKVAL(Team_Member__r.User_CIB_Global_Area__c, &apos;CIBI&apos;),
+ISPICKVAL(Team_Member__r.User_CIB_Global_Area__c, &apos;CIBROA&apos;),
+ISPICKVAL(Team_Member__r.User_CIB_Global_Area__c, &apos;CIBSA&apos;)
+
+)
+,
+Team_Member__r.Username &lt;&gt;  $Label.PBB_Client_Username 
+)</errorConditionFormula>
+    <errorDisplayField>Case_Access__c</errorDisplayField>
+    <errorMessage>You cannot add a CIB user to a BCC SA Client Service Team, please contact CRM Helpdesk team if an exception is required.</errorMessage>
+</ValidationRule>

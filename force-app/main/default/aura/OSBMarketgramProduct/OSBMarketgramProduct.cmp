@@ -1,0 +1,68 @@
+<aura:component description="OSBMarketgramProduct" controller="OSB_MarketgramProduct_CTRL">
+    <aura:attribute name="product" type="Object"/>
+
+    <aura:registerEvent name="onSelectProductEvent" type="c:OSBOnSelectProductEvent"/>
+
+    <div class="product">
+        <div class="product__content">
+            <div class="product__item">
+                <aura:if isTrue="{!v.product}">
+                    <div class="product__info pointer slds-size_6-of-6 slds-medium-size_8-of-12 slds-large-size_6-of-8" onclick="{!c.handleOnClickProduct}" data-id="uitlink_link" data-text="{!'Marketgram Product | ' + v.product.Title }">
+                        <aura:if isTrue="{!v.product.RecordType.DeveloperName == 'Community_Content_Solution'}">
+                            <div class="product__item__logo">
+                                <ui:outputRichText aura:id="outputRT" value="{!v.product.Large_Solution_Logo__c}" />
+                            </div>
+                        </aura:if>
+
+                        <div class="product__item__content">
+                            <aura:if isTrue="{!v.product.Is_coming_soon__c}">
+                                <div class="product__comingSoon__row">
+                                    <div class="product__comingSoon__item__title">{!v.product.Title}</div>
+                                    <div class="product__comingSoon__label">Coming soon</div>
+                                </div>
+                                <aura:set attribute="else">
+                                        <div class="product__item__title">
+                                            <a target="_blank" data-id="uitlink_link" data-text="{!'Marketgram Product | ' + v.product.Title}">{!v.product.Title}</a>
+                                        </div>
+                                </aura:set>
+                            </aura:if>
+                            <div class="product__item__description">
+                                {!v.product.Introduction__c}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__activity slds-size_6-of-6 slds-medium-size_4-of-12 slds-large-size_2-of-8">
+                        <div class="product__activity-item" data-id="uitlink_link" data-text="{!'Marketgram Product | ' + v.product.Title  + ' | Like'}">
+                            <div class="pointer" onclick="{!c.handleOnClickReaction}" data-type="LIKE">
+                                <lightning:icon iconName="utility:like"
+                                                class="{!v.product.userLikes ? 'product__activity-active' : 'product__activity-inactive'}"/>
+                                                
+                            </div>
+                            <div class="product__activity-number pointer" onclick="{!c.handleOnClickReaction}" data-type="LIKE">
+                                {!v.product.likes} like
+                            </div>
+                        </div>
+                        <div class="product__activity-item" data-id="uitlink_link" data-text="{!'Marketgram Product | ' + v.product.Title + ' | Dislike'}">
+                            <div class="pointer" onclick="{!c.handleOnClickReaction}" data-type="DISLIKE">
+                                <lightning:icon iconName="utility:dislike"
+                                                class="{!v.product.userDislikes ? 'product__activity-active' : 'product__activity-inactive'}"/>
+                            </div>
+                            <div class="product__activity-number pointer" onclick="{!c.handleOnClickReaction}" data-type="DISLIKE">
+                                {!v.product.dislikes} dislike
+                            </div>
+                        </div>
+                        <div class="product__activity-item" data-id="uitlink_link" data-text="{!'Marketgram Product | ' + v.product.Title  + ' | Comment'}">
+                            <div class="pointer" onclick="{!c.handleOnClickProduct}">
+                                <lightning:icon iconName="utility:comments"
+                                                class="{!v.product.userCommented ? 'product__activity-active' : 'product__activity-inactive'}"/>
+                            </div>
+                            <div class="product__activity-number pointer" onclick="{!c.handleOnClickProduct}">
+                                {!v.product.comments} comments
+                            </div>
+                        </div>
+                    </div>
+                </aura:if>
+            </div>
+        </div>
+    </div>
+</aura:component>

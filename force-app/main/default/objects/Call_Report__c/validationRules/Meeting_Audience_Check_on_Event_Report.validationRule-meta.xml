@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Meeting_Audience_Check_on_Event_Report</fullName>
+    <active>true</active>
+    <description>Rule enforces data entry in the following scenarios:
+            1. If Meeting Audience = Internal, then Related To Client must have a value; OR
+            2. If Meeting Audience = External, then Client Contact must have a value</description>
+    <errorConditionFormula>AND( $Setup.Execution__c.Skip_Validations__c = false, IF(ISPICKVAL( Meeting_Audience__c, &apos;&apos;) ,FALSE,IF( ISPICKVAL( Meeting_Audience__c, &apos;Internal&apos;) ,
+            IF( AND(NOT(ISPICKVAL(Meeting_Purpose__c,&apos;NBAC Meeting&apos;)), ISBLANK(Relate_to_Client__c),ISBLANK(Relate_to_Opp__c),ISBLANK(Related_to_Campaign__c)) , True, False) ,  IF( ISBLANK( Report_Client_Contact__c ) , True, False) )))</errorConditionFormula>
+    <errorMessage>Any Internal Meeting must be linked to a Client (or an Opportunity) and any External Meeting must be linked to a Client Contact. Please populate the Related To or the Client Contact accordingly to save the Event</errorMessage>
+</ValidationRule>

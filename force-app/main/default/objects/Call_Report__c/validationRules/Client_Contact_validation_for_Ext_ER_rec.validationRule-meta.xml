@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Client_Contact_validation_for_Ext_ER_rec</fullName>
+    <active>true</active>
+    <description>US-1354:External Event Report should have client contact records and Internal Event Report should be associated with Bank Contact records</description>
+    <errorConditionFormula>AND((AND(ISPICKVAL( Meeting_Audience__c , &apos;External&apos;),
+            Report_Client_Contact__r.RecordType.DeveloperName = &apos;SA_Bank_Contact_Record_Type&apos; )), $Setup.Execution__c.Skip_Validations__c = false)</errorConditionFormula>
+    <errorMessage>You cannot have a Bank Contact value on an External Meeting</errorMessage>
+</ValidationRule>

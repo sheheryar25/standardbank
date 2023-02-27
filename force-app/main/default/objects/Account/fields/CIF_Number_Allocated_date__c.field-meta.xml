@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CIF_Number_Allocated_date__c</fullName>
+    <description>This is the Date and Time value of first update of the CIF Number.(EN-0798)</description>
+    <externalId>false</externalId>
+    <label>CIF Number Allocated Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

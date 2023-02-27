@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Salesforce Support</name>
+    <queueMembers>
+        <users>
+            <user>chris.heaney@standardbank.co.za.sbgbcw</user>
+            <user>clinton.madzivha@standardbank.co.za</user>
+            <user>keneilwe.sanyane@standardbank.co.za</user>
+            <user>levy.letsoalo@standardbank.co.za</user>
+            <user>lindo@bsky.co.za.cib</user>
+            <user>nicolene.coertse@standardbank.co.za.bcw</user>
+            <user>nokuthula.nziyana@standardbank.co.za</user>
+            <user>william.modikoe@standardbank.co.za</user>
+            <user>zimkhitha.komani@standardbank.co.za.sbgbcw</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Call_Report__c</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

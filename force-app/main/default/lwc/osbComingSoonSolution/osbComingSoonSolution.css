@@ -1,0 +1,236 @@
+.ComingSoonSol{
+    height: auto;
+    width: 100% !important;
+}
+
+.ComingSoonMain{
+   padding: 40px 135px 105px 135px;
+    height: auto;
+    width: 100% !important;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.TitleClass{
+    font-family: "BentonSans";
+    text-transform: uppercase;
+    font-weight: 200;
+    font-size: 28px;
+    letter-spacing: 0;
+    line-height: 29px;
+    text-align: center;
+    padding-top: 45px;
+    height: 72px;
+    width: 100%;
+}
+
+.TitleClass h1{
+    height: 27px;
+    width: 100% !important;
+    margin: 0;
+}
+
+.SolutionSizes{
+    height: 100% !important;
+    width: 100% !important;
+}
+
+.SolutionName{
+    height: 100% !important;
+    width: 100% !important;
+    background: linear-gradient(135deg, #0C2644 0%, #15437A 100%);
+    color: #FFFFFF;
+    display: grid;
+    align-content: center;
+}
+
+.SolutionNameThird{
+    height: 100% !important;
+    width: 100% !important;
+    background: linear-gradient(135.27deg, #EDC014 0%, #EB6404 100%);
+    color: #000000;
+    display: grid;
+    align-content: center;
+}
+
+.mainName{
+    padding: 11.5px 0px 0px 0px;
+    height: auto;
+    width: 100% !important;
+    font-family: "BentonSans";
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 3.52vw;
+    letter-spacing: 0;
+    line-height: 50px;
+    text-align: center;
+}
+
+.mainName p{
+    height: auto;
+    display: inline-block;
+    width: 100% !important;
+    margin: 0;
+}
+
+.subName{
+    padding: 19px 35.12px 42px 35.12px;
+    height: auto;
+    width: 100% !important;
+    font-weight: 300;
+    font-family: "BentonSans";
+    font-size: 0.97vw;
+    letter-spacing: 0;
+    line-height: 20px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.subName p{
+    height: auto;
+    width: 100% !important;
+    margin: 0;
+}
+
+.GreyBlock{
+    height: auto;
+    width: 100% !important;
+    background-color: #3C4B6C;
+}
+
+.slds-rich-text-editor__output img {
+    margin-bottom: var(--lwc-spacingSmall,0.75rem);
+    width: 100%;
+    object-fit: cover;
+    height: inherit;
+}
+.imageComing{
+    width: 100%;
+    object-fit: cover ! important ;
+    height: inherit;
+}
+
+@media only screen and (min-width:1900px){ 
+    .mainName{
+        font-size: 3vw;
+    }
+}
+
+@media only screen and (max-width:1320px){ 
+    .subName{
+        font-size: 1.2vw;
+    }
+}
+
+@media only screen and (max-width:1080px){ 
+    .mainName{
+        font-size: 4.49vw;
+    }
+    .subName{
+        font-size: 1.5vw;
+    }
+
+}
+@media only screen and (max-width:1000px){ 
+    .ComingSoonMain{
+        padding: 24px 50px 24px 50px;
+    }
+}
+
+@media only screen and (max-width:850px){ 
+    .ComingSoonMain{
+        padding: 24px 50px 24px 50px;
+     }
+
+    .TitleClass{
+        padding-top: 16px;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 19px;
+        height: 32px;
+    }
+    .TitleClass h1{
+        height: 16px;
+    }
+
+    .mainName{
+        padding: 8px 17px 0px 17px;
+        height: auto;
+        width: 100% !important;
+        font-family: "BentonSans";
+        font-weight: 500;
+        text-transform: uppercase;
+        font-size: 5.5vw;
+        line-height: 40px;
+    }
+
+    .subName{
+        padding: 8px 17px 16px 17px;
+        height: auto;
+        width: 100% !important;
+        font-weight: 300;
+        font-family: "BentonSans";
+        font-size: 2.05vw;
+        letter-spacing: 0;
+        line-height: 20px;
+        text-align: center;
+        overflow: hidden;
+    }
+}
+
+@media only screen and (max-width:690px){ 
+    .mainName{
+        padding: 8px 10px 0px 10px;
+    }
+}
+
+@media only screen and (max-width:600px){ 
+
+    .ComingSoonMain{
+        padding: 24px 20px 24px 20px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .TitleClass{
+        padding-top: 16px;
+        height: 36px;
+        width:100% !important;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .TitleClass h1{
+        height: 20px;
+    }
+
+    .SolutionName{
+        order: 2;
+    }
+    .SolutionNameThird{
+        order: 2;
+    }
+
+    .GreyBlock{
+        order: 1;
+    }
+
+    .mainName{
+        padding: 8px 15px 0px 15px;
+        font-size: 40px;
+        line-height: 45px;
+    }
+
+    .subName{
+        padding: 8px 15px 21px 15px;
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+@media only screen and (max-width:500px){ 
+    .ComingSoonMain{
+        grid-template-rows: 210px 1fr;
+    }
+}

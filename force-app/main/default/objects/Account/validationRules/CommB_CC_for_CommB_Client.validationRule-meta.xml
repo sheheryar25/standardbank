@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CommB_CC_for_CommB_Client</fullName>
+    <active>true</active>
+    <description>Proposed CC&apos;s division must be Commercial Banking for a Commercial Banking client (EN-961).</description>
+    <errorConditionFormula>AND(ISPICKVAL(Primary_Relationship_Holder__c, &quot;Commercial Banking&quot;), (NOT(ISPICKVAL(Client_Co_ordinator__r.User_Division__c, &quot;Commercial Banking&quot;))), (RecordType.DeveloperName = &apos;Potential_CIF&apos; || RecordType.DeveloperName = &apos;Potential_Client&apos; || RecordType.DeveloperName = &apos;Potential_Goldtier&apos;), OwnerId != &quot;005w0000003hihT&quot; /*PBB Clients*/, OwnerId != &quot;00520000000lVHu&quot; /*Archived Clients*/, OwnerId != &quot;00520000000lPx5&quot; /*Salesforce Administration*/)</errorConditionFormula>
+    <errorDisplayField>Client_Co_ordinator__c</errorDisplayField>
+    <errorMessage>Proposed Client Coordinator&apos;s division must be Commercial Banking for a Commercial Banking client.</errorMessage>
+</ValidationRule>

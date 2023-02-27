@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <assignments>
+        <name>Do_Nothing</name>
+        <label>Do Nothing</label>
+        <locationX>217</locationX>
+        <locationY>50</locationY>
+        <assignmentItems>
+            <assignToReference>Do_Nothing_VAR</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>1</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <description>US-3621: A generic Do Nothing flow for doing Null Checks in Process Builder.  Invoke as a Immediate Action when null check criteria are met and you wish to break out of a Process Flow.
+Allows for more defensive development when using Process Builder.</description>
+    <interviewLabel>Do Nothing {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Do Nothing</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <startElementReference>Do_Nothing</startElementReference>
+    <status>Active</status>
+    <variables>
+        <name>Do_Nothing_VAR</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

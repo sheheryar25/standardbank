@@ -1,0 +1,124 @@
+<aura:component controller="StdBank_Ltn_Ecosystem"> 
+	<aura:attribute name="groupNumber" type="String" />
+	<aura:attribute name="type" type="String" />
+	<aura:attribute name="idType" type="String" />
+	<aura:attribute name="ecosystem" type="Ecosystem__c" access="private"/>
+	<aura:attribute name="oldBankedClients" type="DTO_Ecosystem.BankedClient[]" access="private" default="[]"/>
+	<aura:attribute name="bankedClients" type="DTO_Ecosystem.BankedClient[]" access="private" default="[]" />
+	<aura:attribute name="enableDelete" type="Boolean" default="false" access="private" />
+	<aura:attribute name="allSelected" type="Boolean" default="false" access="private" />
+	<aura:attribute name="confirmDelete" type="Boolean" default="false" access="private" />
+	<aura:attribute name="isWaiting" type="Boolean" default="true" access="private" />
+	<aura:attribute name="newEntity" type="Boolean" default="false" access="private" />
+
+	<aura:registerEvent name="entityChange" type="c:ecosystemEntityChange" />
+
+	<aura:handler name="init" action="{!c.doInit}" value="{!this}" />
+	<aura:handler action="{!c.onEntityChange}" event="c:ecosystemEntityChange" />
+
+    <lightning:navigation aura:id="nav_service"/>
+
+	<aura:if isTrue="{!v.confirmDelete}">
+		<c:ModalConfirm header="Delete Entities"
+			text="Are you sure you want to delete selected Entities?"
+			neutralText="Cancel"
+			brandText="Delete"
+			onneutral="{!c.onDeleteClose}"
+			onbrand="{!c.onDeleteConfirm}"
+			onclose="{!c.onDeleteClose}"/>
+	</aura:if>
+
+	<aura:if isTrue="{!v.newEntity}">
+		<c:EcosystemNewEntity recordId="{#v.ecosystem.Id}" type="{#v.type}" oncancel="{!c.onNewCancel}" oncreated="{!c.onCreated}" unbanked="{!false}"/>
+	</aura:if>
+
+	<article class="slds-card">
+		<div class="slds-card__header slds-grid">
+		    <header class="slds-media slds-media_center slds-has-flexi-truncate">
+		      	<div class="slds-media__figure">
+		      		<lightning:icon iconName="standard:account" size="small" alternativeText="Account"/>
+		      	</div>
+		      	<div class="slds-media__body">
+		        	<h2>
+		          		<a href="javascript:void(0);" class="slds-card__header-link slds-truncate" title="[object Object]">
+		            		<span class="slds-text-heading_small">Known Banked Clients</span>
+		          		</a>
+	        		</h2>
+		      	</div>
+		    </header>
+		    <div class="slds-no-flex">
+		      	<ul class="slds-button-group-list">
+			  		<li>
+			    		<button class="slds-button slds-button_neutral" disabled="{!not(v.enableDelete)}" onclick="{!c.onDelete}">Delete</button>
+			  		</li>
+			  		<li>
+			  	  		<button class="slds-button slds-button_neutral" onclick="{!c.onNew}">{!$Label.c.New}</button>
+			  		</li>
+				</ul>
+		    </div>
+	  	</div>
+	  	<div class="slds-card__body slds-card__body_inner slds-is-relative">
+			<aura:if isTrue="{!v.isWaiting}">
+				<div class="slds-spinner_container">
+					<div class="slds-spinner slds-spinner_small">
+						<div class="slds-spinner__dot-a"></div>
+						<div class="slds-spinner__dot-b"></div>
+					</div>
+				</div>
+			</aura:if>
+			<table class="slds-table slds-table_bordered slds-table_cell-buffer">
+				<thead>
+					<tr class="slds-text-title_caps">
+						<th style="width:2rem;">
+							<span class="slds-checkbox">
+						      	<input type="checkbox" name="options" id="{!v.idType + 'banked-checkbox-all'}" checked="{!v.allSelected}" onchange="{!c.onAllChange}" disabled="{!v.bankedClients.length == 0}" />
+						      	<label class="slds-checkbox__label" for="{!v.idType + 'banked-checkbox-all'}">
+						        	<span class="slds-checkbox_faux"></span>
+						      	</label>
+						  	</span>
+                    </th>
+                    <th class="slds-truncate">Client Name</th>
+                    <th class="slds-truncate">Relationship group number</th>
+                    <th class="slds-truncate">CIF / BPID</th>
+                    <th class="slds-truncate">Group Parent Name</th>
+                    <th class="slds-truncate">CIF Active Status</th>
+                </tr>
+                </thead>
+                <tbody>
+                <aura:iteration items="{!v.bankedClients}" var="bankedClient" indexVar="index">
+                    <tr data-index="{!index}">
+                        <td>
+								<span class="slds-checkbox">
+							      	<input type="checkbox" name="options" id="{!v.idType + 'banked-checkbox-' + index}" checked="{!bankedClient.selected}" onchange="{!c.onItemChange}"/>
+							      	<label class="slds-checkbox__label" for="{!v.idType + 'banked-checkbox-' + index}">
+							        	<span class="slds-checkbox_faux"></span>
+							      	</label>
+							  	</span>
+                        </td>
+                        <td>
+                            <lightning:button variant="base" label="{!bankedClient.name}" name="{!bankedClient.entityId}" onclick="{!c.redirectToClient}"/>
+                        </td>
+                        <td>{!bankedClient.groupNo}</td>
+                        <td>{!bankedClient.cif}</td>
+                        <td>{!bankedClient.groupParentName}</td>
+                        <td>
+                            <aura:if isTrue="{!bankedClient.cif_client_status == 'Open'}">
+                                <img src="/img/samples/flag_green.gif" alt="Open"/>
+                                <aura:set attribute="else">
+                                    <aura:if isTrue="{!bankedClient.cif_client_status == 'Closed'}">
+                                        <img src="/img/samples/flag_red.gif" alt="Closed"/>
+                                        <aura:set attribute="else">
+                                            <img src="/img/samples/flag_yellow.gif" alt="Pending"/>
+                                        </aura:set>
+                                    </aura:if>
+                                </aura:set>
+                            </aura:if>
+                        </td>
+                    </tr>
+                </aura:iteration>
+                </tbody>
+            </table>
+        </div>
+    </article>
+
+</aura:component>

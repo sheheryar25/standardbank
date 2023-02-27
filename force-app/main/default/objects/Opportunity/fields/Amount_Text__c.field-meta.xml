@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Amount_Text__c</fullName>
+    <description>This field has been created to store the opportunity amount in a text format for the TPS feed. Using the standard amount field, there were issues in the field format which could not be read by Team Tracker.</description>
+    <externalId>false</externalId>
+    <formula>Text(Amount)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Amount (Text)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,168 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes,force:appHostable" controller="OSB_NewCaseForm_CTRL" access="global">
+    <aura:attribute name="cases" type="Case[]" access="private"/>
+    <aura:attribute name="newCase" type="Case" default="{ 'sobjectType': 'Case' }" access="public"/>
+    <aura:attribute name="optl" type="Boolean" default="false" access="private"/>
+    <aura:attribute name="isUserLoggedIn" type="Boolean" access="private"/>
+    <aura:attribute name="userEmail" type="String" access="private"/>
+    <aura:attribute name="moreAccess" type="Boolean" default="false" access="private"/>
+    <aura:attribute name="industryDict" type="String[]" access="private"/>
+    <aura:attribute name="user" type="User" access="private"/>
+    <aura:attribute name="subject" type="String" default="" access="private"/>
+    <aura:attribute name="description" type="String" default="" access="private"/>
+    <aura:attribute name="fullname" type="String" default="" access="private"/>
+    <aura:attribute name="email" type="String" default="" access="private"/>
+    <aura:attribute name="phoneNumber" type="String" default="" access="private"/>
+    <aura:attribute name="userMap" type="Map" access="private"/>
+    <aura:attribute name="userName" type="String" access="private"/>
+    <aura:attribute name="inputValue" type="String" access="private"/>
+    
+    <aura:attribute name="idNumber" type="String" access="private"/>
+    <aura:attribute name="passportNumber" type="String" access="private"/>
+    <aura:attribute name="subMittingCase" type="Boolean" default="false" access="public"/>
+    <aura:attribute name="userInformationFound" type="Boolean" default="false" access="private"/>
+    <aura:attribute name="dialingCode" type="String" default="South Africa +27" access="private"/>
+    <aura:attribute name="QueryTypes" type="List" default="[
+                                                           {'label': 'Support', 'value': 'Support'},
+                                                           {'label': 'Compliment', 'value': 'Compliment'},
+                                                           {'label': 'Complaint', 'value': 'Complaint'}
+                                                           ]"/>
+    <aura:attribute name="DefaultType" type="String" default="Support" access="private"/>
+    <aura:attribute name="document" type="String" default="idNumber" access="private"/>
+    <aura:attribute name="firstCancelClick" type="Boolean" default="false" access="private"/>
+    <aura:attribute name="showToast" type="Boolean" default="false" access="private"/>
+    <aura:attribute name="showToastFail" type="Boolean" default="false" access="private"/>
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+
+    <aura:handler name="closePopUpEvent" event="c:OSBClosePopUpEvent" action="{!c.handlePopupClose}" />
+        
+    <div aura:id="changeIt" class="newCase-container">
+       <!--Implements the loading screen component--> 
+        <aura:if isTrue="{!v.subMittingCase}">
+            <div>
+                <c:OSBLoadingScreen></c:OSBLoadingScreen>
+            </div>
+        </aura:if> 
+        <!--Shows the success message to the user on case created-->
+        <aura:if isTrue="{!v.showToast}">
+                <c:OSBToastComponent closePopup="{!v.showToast}" toastType="success" top="128px" left="50%"
+                                     toastMessage="Request has been sent successfully. You will receive a confirmation via email."/>
+        </aura:if>
+        <aura:if isTrue="{!v.showToastFail}">
+                <c:OSBToastComponent closePopup="{!v.showToastFail}" toastType="warning" top="128px" left="50%"
+                       toastMessage="Please complete all required fields and check for errors">
+                </c:OSBToastComponent>
+        </aura:if>
+        <!--Contact us cards-->
+        <div class="containerDetails slds-size_6-of-6 slds-small-size_12-of-12 slds-medium-size_12-of-12 slds-large-size_6-of-12">
+            <div class="contactBoxMain slds-grid slds-gutters">
+                <aura:if isTrue="{!!v.moreAccess}">
+                    <div class="setContactBox slds-col slds-size_6-of-6 slds-medium-size_6-of-12 slds-large-size_3-of-6">
+                        <c:OSBContactUsInfoBox optl="{!v.optl}" support="{!true}"/>
+                    </div>
+                    <div class="setContactBox slds-col slds-size_6-of-6 slds-medium-size_6-of-12 slds-large-size_3-of-6">
+                        <c:OSBContactUsInfoBox optl="{!v.optl}" feedback="{!true}"/>
+                    </div>
+                    
+                </aura:if>
+            </div>
+            <div class="newCase newCase--optl">
+                <form class="newCase__form slds-size_6-of-6 slds-medium-size_6-of-6 slds-large-size_4-of-6" aura:id="caseForm">
+                    <div class="newCase__icon">
+                        <i class="ms-icn_send"></i>
+                    </div>
+                    <aura:if isTrue="{!v.moreAccess}">
+                        <!-- Customer support form contact us section -->
+                        <aura:set attribute="else">
+                        
+                            <h1 class="newCase__title">Customer service</h1>
+                            <div class="newCase__subtitle">
+                                We continually strive to deliver great customer service. Thank you for taking the time to share your input with us.
+                            </div>
+                            <div class="rectangle">
+                                <div class="customer-service-for">
+                                    Customer service form
+                                </div>
+                            </div>
+                            <div class="QueryType">
+                                <lightning:radioGroup name="radioGroup"
+                                                    aura:id="queryType"
+                                                    options="{! v.QueryTypes }"
+                                                    value="{! v.DefaultType }"
+                                                    type="radio"
+                                                    class="customRadioCls"/>
+                            </div>
+                            <aura:if isTrue="{!v.isUserLoggedIn == false}">
+                                <lightning:input aura:id="contact" label="full name"
+                                                class="newCase__form--input"
+                                                labelClass="newCase__form--label"
+                                                value="{!v.fullname}"
+                                                placeholder="Enter a full name"
+                                                messageWhenValueMissing="Enter a valid full name"
+                                                required="true"/>
+                                <lightning:input aura:id="email" label="email"
+                                                class="newCase__form--input"
+                                                labelClass="newCase__form--label"
+                                                value="{!v.email}"
+                                                placeholder="Enter an email address"
+                                                messageWhenValueMissing="Enter a valid email"
+                                                required="true"
+                                                messageWhenPatternMismatch="Enter a valid email" 
+                                                pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"/>
+                                <div class="slds-grid cellphone-container">
+                                    <span class="newCase__form--label--span newCase__form--label">CELLPHONE Number</span>
+                                    <div class="slds-col">
+                                        <div class="newCase__form--dialingCode slds-size_2-of-6 slds-medium-size_2-of-8 slds-large-size_1-of-6">
+                                            <c:OSBCountryCodeInput selectedCode="{!v.dialingCode}"/>
+                                        </div>
+                                        <lightning:input aura:id="phone"
+                                                        class="newCase__form--input CellSection slds-size_4-of-6 slds-medium-size_6-of-8 slds-large-size_5-of-6"
+                                                        labelClass="newCase__form--label"
+                                                        label=""
+                                                        placeholder="Enter a cellphone number"
+                                                        messageWhenValueMissing="Enter a valid cellphone number"
+                                                        value="{!v.phoneNumber}"
+                                                        required="true"/>
+                                    </div>
+                                </div>
+                                
+                            <c:osbRecapture aura:id="recaptureChild"/>   
+                            </aura:if>
+                            <lightning:input aura:id="subject" label="message subject"
+                                            class="newCase__form--input"
+                                            labelClass="newCase__form--label"
+                                            placeholder="Enter the subject of your message"
+                                            messageWhenValueMissing="Enter a valid subject"
+                                            value="{!v.subject}" 
+                                            required="true"/>
+                            <lightning:textArea aura:id="description" label="message"
+                                                class="newCase__form--input newCase__form--textarea"
+                                                labelClass="newCase__form--label"
+                                                value="{!v.description}" 
+                                                rows="5"
+                                                placeholder="Enter your message and be as detailed as possible"
+                                                messageWhenValueMissing="Enter detailed message"
+                                                required="true"/>  
+                        </aura:set>
+                    </aura:if>
+                    
+                </form>
+                <div class="newCase__buttons slds-grid slds-gutters_x-small">
+                    <div data-id="uitlink_link" data-text="New Case | Cancel" class="slds-col slds-size_3-of-6 slds-medium-size_1-of-5 slds-large-size_1-of-5">
+                        <lightning:button label="Cancel" 
+                                        class="btnStyle btn--gray newCase__button"
+                                        onclick="{!c.cancel}"/> 
+                    </div>
+                    <div data-id="uitlink_link" data-text="New Case | Submit" class="slds-col slds-size_3-of-6 slds-medium-size_1-of-5 slds-large-size_1-of-5 recaptchaInvisible">
+                        <lightning:button label="SUBMIT" 
+                                        class="btnStyle btn--darkblue newCase__button"
+                                        onclick="{!c.createCase}"/>
+                    </div>
+                </div>
+                <!--Displays modal to the user for accept or cancel thProe contact us form-->
+                <aura:if isTrue="{!v.firstCancelClick}">
+                    <c:OSBMarketGramPopup title="Cancel contact form?" content="By doing so you will clear the form to it's orignal state."/>
+                </aura:if>
+            </div>
+        </div>
+    </div>
+</aura:component>

@@ -1,0 +1,41 @@
+/**
+ * Created by Mykhailo Reznyk on 04.11.2019.
+ */
+
+
+.THIS .YTDrow {
+   overflow-wrap: break-word;
+}
+.THIS .monthRow {
+    overflow-wrap: break-word;
+}
+
+.THIS .testGrid {
+     background: #FFFFFF;
+     border: 1px solid #DDDBDA;
+     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.10);
+     border-radius: 4px;
+     position: relative;
+}
+
+.THIS .testGrid .slds-col {
+     text-align: center;
+}
+
+.THIS .testGrid .layoutColumn {
+     margin-left: 5px;
+     margin-right: 5px;
+     padding: 5px;
+}
+
+.THIS lightning-helptext{
+    line-height: 25px;
+    margin-right: -5px;
+    padding-left: 5px;
+}
+
+.THIS .componentTitle{
+    padding-top: 10px;
+    padding-left: 10px;
+    font-weight: 400;
+}

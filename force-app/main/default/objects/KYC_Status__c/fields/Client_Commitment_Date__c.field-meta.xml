@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Client_Commitment_Date__c</fullName>
+    <description>The date the client agreed to send required documentation</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The date the client agreed to send required documentation</inlineHelpText>
+    <label>Client Commitment Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

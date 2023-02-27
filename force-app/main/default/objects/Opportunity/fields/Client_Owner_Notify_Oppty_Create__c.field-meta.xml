@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Client_Owner_Notify_Oppty_Create__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>EMEA_SOW_StandardBank_009: Requirement to notify (email) the Client owner when an opportunity is created on the Client by a different user (i.e., who does not own the Client). An Apex trigger sets the value of this field ONLY on Opportunity creation. A workflow then uses the value of this field (with other fields) to assess whether or not to notify the Client owner.</description>
+    <externalId>false</externalId>
+    <label>Client Owner Notify Oppty Create</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CIB_Presence__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>CIB presence of the country.</description>
+    <externalId>false</externalId>
+    <label>CIB Presence</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CSI_Project_Country__c</fullName>
+    <description>CSI Project Country (EN-692).</description>
+    <externalId>false</externalId>
+    <label>CSI Project Country</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Angola</fullName>
+                <default>false</default>
+                <label>Angola</label>
+            </value>
+            <value>
+                <fullName>Botswana</fullName>
+                <default>false</default>
+                <label>Botswana</label>
+            </value>
+            <value>
+                <fullName>Cote d&apos;Ivoire</fullName>
+                <default>false</default>
+                <label>Cote d&apos;Ivoire</label>
+            </value>
+            <value>
+                <fullName>Democratic Republic of the Congo</fullName>
+                <default>false</default>
+                <label>Democratic Republic of the Congo</label>
+            </value>
+            <value>
+                <fullName>DRC</fullName>
+                <default>false</default>
+                <label>DRC</label>
+            </value>
+            <value>
+                <fullName>Eswatini</fullName>
+                <default>false</default>
+                <label>Eswatini</label>
+            </value>
+            <value>
+                <fullName>Ghana</fullName>
+                <default>false</default>
+                <label>Ghana</label>
+            </value>
+            <value>
+                <fullName>Kenya</fullName>
+                <default>false</default>
+                <label>Kenya</label>
+            </value>
+            <value>
+                <fullName>Lesotho</fullName>
+                <default>false</default>
+                <label>Lesotho</label>
+            </value>
+            <value>
+                <fullName>Malawi</fullName>
+                <default>false</default>
+                <label>Malawi</label>
+            </value>
+            <value>
+                <fullName>Mauritius</fullName>
+                <default>false</default>
+                <label>Mauritius</label>
+            </value>
+            <value>
+                <fullName>Mozambique</fullName>
+                <default>false</default>
+                <label>Mozambique</label>
+            </value>
+            <value>
+                <fullName>Namibia</fullName>
+                <default>false</default>
+                <label>Namibia</label>
+            </value>
+            <value>
+                <fullName>Nigeria</fullName>
+                <default>false</default>
+                <label>Nigeria</label>
+            </value>
+            <value>
+                <fullName>South Africa</fullName>
+                <default>true</default>
+                <label>South Africa</label>
+            </value>
+            <value>
+                <fullName>South Sudan</fullName>
+                <default>false</default>
+                <label>South Sudan</label>
+            </value>
+            <value>
+                <fullName>Swaziland</fullName>
+                <default>false</default>
+                <label>Swaziland</label>
+            </value>
+            <value>
+                <fullName>Tanzania</fullName>
+                <default>false</default>
+                <label>Tanzania</label>
+            </value>
+            <value>
+                <fullName>Uganda</fullName>
+                <default>false</default>
+                <label>Uganda</label>
+            </value>
+            <value>
+                <fullName>Zambia</fullName>
+                <default>false</default>
+                <label>Zambia</label>
+            </value>
+            <value>
+                <fullName>Zimbabwe</fullName>
+                <default>false</default>
+                <label>Zimbabwe</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

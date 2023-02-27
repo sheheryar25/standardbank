@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deploy_to_MC__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>SFP-5968 - A field to trigger the flow for MC integration email sends.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Once a campaign has completed all necessary due diligence and emails are ready to be deployed, this button can then be activated.</inlineHelpText>
+    <label>Deploy to Marketing Cloud</label>
+    <type>Checkbox</type>
+</CustomField>

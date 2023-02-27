@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PP_Capabilities__c</fullName>
+    <description>SFP-11649 - Represents what business or technology capabilities a partner has.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Represents what business or technology capabilities a partner has.</inlineHelpText>
+    <label>Capabilities</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Accounting</fullName>
+                <default>false</default>
+                <label>Accounting</label>
+            </value>
+            <value>
+                <fullName>APIs</fullName>
+                <default>false</default>
+                <label>APIs</label>
+            </value>
+            <value>
+                <fullName>Architecture</fullName>
+                <default>false</default>
+                <label>Architecture</label>
+            </value>
+            <value>
+                <fullName>Artificial Intelligence</fullName>
+                <default>false</default>
+                <label>Artificial Intelligence</label>
+            </value>
+            <value>
+                <fullName>Automation</fullName>
+                <default>false</default>
+                <label>Automation</label>
+            </value>
+            <value>
+                <fullName>Big Data</fullName>
+                <default>false</default>
+                <label>Big Data</label>
+            </value>
+            <value>
+                <fullName>BlockChain</fullName>
+                <default>false</default>
+                <label>BlockChain</label>
+            </value>
+            <value>
+                <fullName>Business Intelligence</fullName>
+                <default>false</default>
+                <label>Business Intelligence</label>
+            </value>
+            <value>
+                <fullName>Cloud as a Service (CaaS)</fullName>
+                <default>false</default>
+                <label>Cloud as a Service (CaaS)</label>
+            </value>
+            <value>
+                <fullName>Cloud Computing</fullName>
+                <default>false</default>
+                <label>Cloud Computing</label>
+            </value>
+            <value>
+                <fullName>Compliance</fullName>
+                <default>false</default>
+                <label>Compliance</label>
+            </value>
+            <value>
+                <fullName>CRM</fullName>
+                <default>false</default>
+                <label>CRM</label>
+            </value>
+            <value>
+                <fullName>Cybersecurity</fullName>
+                <default>false</default>
+                <label>Cybersecurity</label>
+            </value>
+            <value>
+                <fullName>Data Analytics</fullName>
+                <default>false</default>
+                <label>Data Analytics</label>
+            </value>
+            <value>
+                <fullName>Data Modelling</fullName>
+                <default>false</default>
+                <label>Data Modelling</label>
+            </value>
+            <value>
+                <fullName>Design</fullName>
+                <default>false</default>
+                <label>Design</label>
+            </value>
+            <value>
+                <fullName>DevOps</fullName>
+                <default>false</default>
+                <label>DevOps</label>
+            </value>
+            <value>
+                <fullName>Digital Marketing</fullName>
+                <default>false</default>
+                <label>Digital Marketing</label>
+            </value>
+            <value>
+                <fullName>ERP</fullName>
+                <default>false</default>
+                <label>ERP</label>
+            </value>
+            <value>
+                <fullName>Financial Modelling</fullName>
+                <default>false</default>
+                <label>Financial Modelling</label>
+            </value>
+            <value>
+                <fullName>FOREX</fullName>
+                <default>false</default>
+                <label>FOREX</label>
+            </value>
+            <value>
+                <fullName>Gaming</fullName>
+                <default>false</default>
+                <label>Gaming</label>
+            </value>
+            <value>
+                <fullName>HR</fullName>
+                <default>false</default>
+                <label>HR</label>
+            </value>
+            <value>
+                <fullName>Information Security</fullName>
+                <default>false</default>
+                <label>Information Security</label>
+            </value>
+            <value>
+                <fullName>Infrastructure-as-a-Service (IaaS)</fullName>
+                <default>false</default>
+                <label>Infrastructure-as-a-Service (IaaS)</label>
+            </value>
+            <value>
+                <fullName>Internet of Things</fullName>
+                <default>false</default>
+                <label>Internet of Things</label>
+            </value>
+            <value>
+                <fullName>KYC</fullName>
+                <default>false</default>
+                <label>KYC</label>
+            </value>
+            <value>
+                <fullName>Leadership</fullName>
+                <default>false</default>
+                <label>Leadership</label>
+            </value>
+            <value>
+                <fullName>Legal</fullName>
+                <default>false</default>
+                <label>Legal</label>
+            </value>
+            <value>
+                <fullName>Management Consulting</fullName>
+                <default>false</default>
+                <label>Management Consulting</label>
+            </value>
+            <value>
+                <fullName>Mobile App Development</fullName>
+                <default>false</default>
+                <label>Mobile App Development</label>
+            </value>
+            <value>
+                <fullName>Networking</fullName>
+                <default>false</default>
+                <label>Networking</label>
+            </value>
+            <value>
+                <fullName>Payments</fullName>
+                <default>false</default>
+                <label>Payments</label>
+            </value>
+            <value>
+                <fullName>Platforms</fullName>
+                <default>false</default>
+                <label>Platforms</label>
+            </value>
+            <value>
+                <fullName>Product Management</fullName>
+                <default>false</default>
+                <label>Product Management</label>
+            </value>
+            <value>
+                <fullName>Project Management</fullName>
+                <default>false</default>
+                <label>Project Management</label>
+            </value>
+            <value>
+                <fullName>Real Estate Management</fullName>
+                <default>false</default>
+                <label>Real Estate Management</label>
+            </value>
+            <value>
+                <fullName>Risk</fullName>
+                <default>false</default>
+                <label>Risk</label>
+            </value>
+            <value>
+                <fullName>Robotics</fullName>
+                <default>false</default>
+                <label>Robotics</label>
+            </value>
+            <value>
+                <fullName>Salesforce</fullName>
+                <default>false</default>
+                <label>Salesforce</label>
+            </value>
+            <value>
+                <fullName>Social Media</fullName>
+                <default>false</default>
+                <label>Social Media</label>
+            </value>
+            <value>
+                <fullName>Software as a Service (SaaS)</fullName>
+                <default>false</default>
+                <label>Software as a Service (SaaS)</label>
+            </value>
+            <value>
+                <fullName>Software Development</fullName>
+                <default>false</default>
+                <label>Software Development</label>
+            </value>
+            <value>
+                <fullName>Storage</fullName>
+                <default>false</default>
+                <label>Storage</label>
+            </value>
+            <value>
+                <fullName>Strategy</fullName>
+                <default>false</default>
+                <label>Strategy</label>
+            </value>
+            <value>
+                <fullName>Systems Analysis</fullName>
+                <default>false</default>
+                <label>Systems Analysis</label>
+            </value>
+            <value>
+                <fullName>Testing</fullName>
+                <default>false</default>
+                <label>Testing</label>
+            </value>
+            <value>
+                <fullName>Training</fullName>
+                <default>false</default>
+                <label>Training</label>
+            </value>
+            <value>
+                <fullName>Competitive Intelligence</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Competitive Intelligence</label>
+            </value>
+            <value>
+                <fullName>Creative Services</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Creative Services</label>
+            </value>
+            <value>
+                <fullName>Cyber Security</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Cyber Security</label>
+            </value>
+            <value>
+                <fullName>IT Consulting</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>IT Consulting</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

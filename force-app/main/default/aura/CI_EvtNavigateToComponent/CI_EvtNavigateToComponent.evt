@@ -1,0 +1,4 @@
+<aura:event type="APPLICATION" description="Navigate to component">
+    <aura:attribute name="cmpName" type="String" />
+    <aura:attribute name="cmpData" type="Object" />
+</aura:event>

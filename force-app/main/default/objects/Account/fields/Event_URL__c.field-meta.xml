@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event_URL__c</fullName>
+    <description>When a new event is created for the client, storing the event ID in to this field.This filed is using to trigger a Account work flow whenever task ID is changed .</description>
+    <externalId>false</externalId>
+    <label>Event URL</label>
+    <length>100</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

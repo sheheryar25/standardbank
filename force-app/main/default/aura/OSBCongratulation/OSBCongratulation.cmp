@@ -1,0 +1,34 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes,force:appHostable" controller="OSB_Congratulation_Ctrl"
+                access="global">
+    <aura:attribute name="fullName" type="String" default="" access="public"/>
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    
+    <div aura:id="changeIt" class="congrad-container">
+        <div class="congrad congrad--optl">
+            <form class="congrad__form" aura:id="caseForm"> 
+                        <div class="congrad__icon">
+                            <i class="ms-icn_check_circle"></i>
+                        </div>
+                <div class="congrad__details">
+                    <div class="congrad__title">Congratulations</div>
+                    <div class="format">
+                        We are so happy that you are placing your trust in us. 
+                        We promise we will do our utmost best to provide you with comprehensive services and offerings that will enhance your workflow. 
+                    </div>
+                    <br></br>
+                    <div class="format">
+                        We have set up your profile, and now we need {!v.fullName} to approve your access. 
+                        You will be notified once this is complete. Thanks again and will be in touch.
+                    </div>
+                </div>
+            </form>
+            <div class="congrad__buttons">
+                <div data-id="uitlink_link" data-text="Congratulations | Sign Out">
+                        <lightning:button label="SIGN OUT" 
+                                          class="btnStyle btn--darkblue congrad__button" 
+                                          onclick="{!c.signOut}"/>     
+                </div>                  
+            </div>
+        </div>
+    </div>
+</aura:component>

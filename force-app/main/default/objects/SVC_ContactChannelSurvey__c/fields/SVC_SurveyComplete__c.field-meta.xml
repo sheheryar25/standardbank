@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SVC_SurveyComplete__c</fullName>
+    <description>SFP-10420 The survey is only indicated as complete when all 3 questions (achieved purpose, net promoter score rating and agent rating) have been answered.</description>
+    <externalId>false</externalId>
+    <formula>AND(
+    NOT(ISBLANK(TEXT(SVC_AchievedPurpose__c))),
+    NOT(ISBLANK(TEXT(SVC_NetPromoterScoreRating__c))),
+    NOT(ISBLANK(TEXT(SVC_AgentRating__c)))
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>The survey is only indicated as complete when all 3 questions (achieved purpose, net promoter score rating and agent rating) have been answered.</inlineHelpText>
+    <label>Survey Complete</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Core_Meetings_This_year</fullName>
+    <columns>Date__c</columns>
+    <columns>NAME</columns>
+    <columns>Relate_to_Client__c</columns>
+    <columns>Meeting_Audience__c</columns>
+    <columns>Meeting_Purpose__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>Core_Meeting__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Date__c</field>
+        <operation>equals</operation>
+        <value>THIS_YEAR</value>
+    </filters>
+    <label>My Core Meetings - This year</label>
+    <sharedTo>
+        <roleAndSubordinates>Corporate_Investment_Banking</roleAndSubordinates>
+    </sharedTo>
+</ListView>

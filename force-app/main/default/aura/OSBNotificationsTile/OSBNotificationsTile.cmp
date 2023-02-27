@@ -1,0 +1,41 @@
+<aura:component controller="OSB_Notifications_CTRL">
+    <aura:attribute name="notifications" type="Object[]"/>
+    <aura:attribute name="class" type="String"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="empty" type="Boolean" default="false" />
+	<div class="{!'notifications__container--tile ' + v.class}">
+        <h2 class="tile__header">Notifications</h2>
+        <div class="notifications--tile">
+            <aura:if isTrue="{!v.empty}">
+                <div class="notifications--tile__content">
+                    <img src="{!$Resource.OSB_notificationsEmpty}"/>
+                    <div>You have no new notifications at this time.</div>
+                </div>
+                <a class="tile__link" href="/s/notifications"  data-id="uitlink_link" data-text="Notification Tile | View notification history">
+                    View notification history<i class="insightsItem__link--icon ms-icn_chevron_right"></i>
+                </a>
+            <aura:set attribute="else">
+                <div class="notifications--tile__list">
+                    <aura:iteration items="{!v.notifications}" var="notification" indexVar="index" end="3">
+                        <div class="notification">
+                            <div class="notification__content">
+                                <div class="notification__row">
+                                    <div class="notification__title">
+                                        <a onclick="{!c.navigateToNotifications}" data-index="{!index}" class="link" data-id="uitlink_link" data-text="{!'Notification Tile | ' + notification.Title__c}">{!notification.Title__c}</a>
+                                    </div>
+                                    <div class="notification__date">
+                                        <lightning:formattedDateTime value="{!notification.CreatedDate}" timeZone="UTC" />
+                                    </div>
+                                </div>
+                                <div class="notification__description">
+                                    <ui:outputRichText value="{!notification.Content__c}"></ui:outputRichText>
+                                </div>
+                            </div>
+                        </div>
+                    </aura:iteration>
+                </div>
+            </aura:set>
+            </aura:if>
+        </div>
+    </div>
+</aura:component>

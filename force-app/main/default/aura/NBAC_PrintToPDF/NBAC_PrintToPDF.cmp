@@ -1,0 +1,15 @@
+<aura:component implements="force:lightningQuickAction,flexipage:availableForRecordHome,force:hasRecordId">
+    <aura:handler event="aura:doneRendering" action="{!c.NBAC_PrintToPDF}" />
+    <aura:attribute name="isDoneRendering" type="Boolean" default="false"/>
+    <!-- <aura:attribute name="message" type="String"/> -->
+    
+    <!-- <div class="slds-float-right">
+        <div class="slds-p-top_medium">
+            <div class="slds-p-right_medium">
+    			<lightning:button label="Generate &amp; Attach PDF" 
+        			onclick="{!c.NBAC_PrintToPDF}"/>
+            </div>
+        </div>    
+    </div> -->
+
+</aura:component>

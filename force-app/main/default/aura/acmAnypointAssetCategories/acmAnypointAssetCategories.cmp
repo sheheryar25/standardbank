@@ -1,0 +1,37 @@
+<aura:component controller="ACM_CommunityApiController" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global" >
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="anypointAssetCategories" type="acm_pkg__AnypointAssetCategories__x[]" />
+    <aura:attribute name="anypointAssets" type="acm_pkg__AnypointAssets__x[]" />
+    <aura:attribute name="anypointAssetCategoriesMap" type="Map"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <div class="slds-scope">
+        <div class="slds-grid slds-wrap"> 
+            
+            <aura:if isTrue="{!not(empty(v.anypointAssets))}">            
+                <aura:iteration items="{!v.anypointAssets}" var="anypointAsset">
+                    <div class="slds-col slds-size--1-of-1 slds-small-size--1-of-3 slds-medium-size--1-of-3 slds-p-horizontal_none slds-p-vertical_none">
+                        <lightning:card title="TEAM EMAIL ADDRESS" class="slds-text-align_center">
+                            <p class="slds-align_absolute-center" >
+                                {!anypointAsset.acm_pkg__ContactEmail__c}
+                            </p>
+                        </lightning:card>
+                    </div>
+                </aura:iteration>            
+            </aura:if>        
+            
+            <aura:if isTrue="{!not(empty(v.anypointAssetCategoriesMap))}">            
+                <aura:iteration items="{!v.anypointAssetCategoriesMap}" var="assetCategoriesMap" >
+                    <div class="slds-col slds-size--1-of-1 slds-small-size--1-of-3 slds-medium-size--1-of-3 slds-p-horizontal_none slds-p-vertical_none">
+                        <lightning:card title="{!assetCategoriesMap.key}" class="slds-text-align_center">
+                            <p class="slds-align_absolute-center">
+                                {!assetCategoriesMap.value}
+                            </p>
+                        </lightning:card>
+                    </div>
+                </aura:iteration>            
+            </aura:if>                        
+            
+        </div>    
+    </div>
+</aura:component>

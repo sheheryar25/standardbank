@@ -1,0 +1,3 @@
+<design:component>
+    <design:attribute name="documentDeveloperName" />
+</design:component>

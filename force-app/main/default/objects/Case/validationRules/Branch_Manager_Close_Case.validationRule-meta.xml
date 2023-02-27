@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Branch_Manager_Close_Case</fullName>
+    <active>true</active>
+    <description>US-3505: This validation ensures only a Branch Manager can close a case.  Branch agent will not be allowed to close a case.</description>
+    <errorConditionFormula>AND
+(
+ISPICKVAL($User.Business_Unit__c , &apos;Branch&apos;),
+ISPICKVAL($User.Function__c , &apos;Branch Agent&apos;),
+ISCHANGED(Status), 
+ISPICKVAL(Status , &apos;Closed&apos;)  
+)</errorConditionFormula>
+    <errorMessage>Only a Branch Manager can close this case.</errorMessage>
+</ValidationRule>

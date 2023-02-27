@@ -1,0 +1,44 @@
+<aura:component description="StdBank_Ltn_ApproverRow">
+    <aura:attribute name="data" type="ProcessInstanceWorkitem" description="Data for row"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <aura:registerEvent name="showModal" type="c:StdBank_Ltn_ShowModal" />
+
+    <tr class="slds-hint-parent">
+        <th scope="row">
+            <div class="slds-truncate">
+            {!v.body} &nbsp;
+                <a onclick="{!c.navigateToRecord}" title="{!v.data.ProcessInstance.TargetObject.Name}">{!v.data.ProcessInstance.TargetObject.Name}</a>
+            </div>
+        </th>
+        <td>
+            <ui:outputDateTime value="{!v.data.CreatedDate}"/>
+        </td>
+        <td>
+            <div class="slds-button-group" role="group">
+                <c:StdBank_Ltn_BUTTON class="slds-button slds-button_icon-border" title="Approve"
+                        svgClass="slds-button__icon"
+                        svgCategory="utility" svgType="check"
+                        svgFill="green"
+                        onclick="{!c.doApprove}"
+                />
+                <c:StdBank_Ltn_BUTTON class="slds-button slds-button_icon-border"
+                        svgClass="slds-button__icon"
+                        svgCategory="utility" svgType="close"
+                        svgFill="red"
+                        title="Reject"
+                        onfocus="Reject"              
+                        onclick="{!c.doReject}"
+                />
+                <c:StdBank_Ltn_BUTTON class="slds-button slds-button_icon-border"
+                        svgClass="slds-button__icon"
+                        svgCategory="utility" svgType="forward"
+                        svgFill="black"
+                        title="Reassign"              
+                        onclick="{!c.doReassign}"
+                />
+            </div>
+        </td>
+    </tr>
+</aura:component>

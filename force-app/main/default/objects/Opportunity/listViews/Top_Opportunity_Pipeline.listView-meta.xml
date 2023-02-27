@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Top_Opportunity_Pipeline</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>OPPORTUNITY_SCORE</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>Current_Year_Revenue_Currency__c</columns>
+    <columns>OPPORTUNITY.AMOUNT</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>OPPORTUNITY.PROBABILITY</columns>
+    <columns>Actual_Close_Date__c</columns>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Current_Year_Revenue_Num__c</field>
+        <operation>greaterThan</operation>
+        <value>10000000</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.CLOSED</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.PROBABILITY</field>
+        <operation>greaterThan</operation>
+        <value>50</value>
+    </filters>
+    <label>Top Opportunity Pipeline</label>
+</ListView>

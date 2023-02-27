@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_fields_that_can_be_updated</fullName>
+    <active>false</active>
+    <description>Regression : 14/06/2011 : C Reinecke Removed SA_System_Administrator / NON RSO and added Business Administrator to the criteria
+            19/12/2011 : C Reinecke Regression - Removed Redundant Fields</description>
+    <errorConditionFormula>IF(
+            ($Profile.Name=&quot;System Administrator&quot; ||
+            $Profile.Name=&quot;Business Administrator&quot; ||
+            $Profile.Name=&quot;System Administrator - Premier Support&quot; ||
+            $Profile.Name=&quot;Application Security&quot;),
+            FALSE, (
+            NOT(ISNEW()) &amp;&amp; (
+            ISCHANGED( Alias ) ||
+            ISCHANGED( CommunityNickname ) ||
+            ISCHANGED( CompanyName ) ||
+            ISCHANGED( Department ) ||
+            ISCHANGED( Division ) ||
+            ISCHANGED( Email ) ||
+            ISCHANGED( EmployeeNumber ) ||
+            ISCHANGED( Extension ) ||
+            ISCHANGED( Fax ) ||
+            ISCHANGED( FirstName ) ||
+            ISCHANGED( IsActive ) ||
+            ISCHANGED( LastName ) ||
+            ISCHANGED( ManagerId ) ||
+            ISCHANGED( ProfileId ) ||
+            ISCHANGED( Title ) ||
+            ISCHANGED( Username  ) ||
+            ISCHANGED( UserRoleId ) ||
+            ISCHANGED( UserType ) ||
+            ISCHANGED( CRT_ID__c ) ||
+            ISCHANGED( UserEmail__c ) ||
+            ISCHANGED( AssistantDesk__c ) ||
+            ISCHANGED( Business_Unit__c ) ||
+            ISCHANGED( Force_Owner_to_Add_Opportunity_Product__c ) ||
+            ISCHANGED( Notify_when_Opportunity_created_by_other__c ) ||
+            ISCHANGED( User_Division__c ) ||
+            ISCHANGED( SA_Cost_Centre__c ) ||
+            ISCHANGED( SA_Domain_Name__c ) ||
+            ISCHANGED( User_CIB_Global_Area__c ) ||
+            ISCHANGED( User_Team__c )
+            )))</errorConditionFormula>
+    <errorMessage>You have tried to modify a restricted field.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sought_Facilities__c</fullName>
+    <description>Case#1050 - 05/2011 - Rudolf Niehaus
+Fields that was added to be used as a sought facility related to the current facility and must be displayed on the same like as the current facility on the PDF form</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Sought Facilities. If an Existing Facility is decreasing please add a New Facility (Product) with negative ‘Sought Facilities’ to reflect the decreasing Existing Facility</inlineHelpText>
+    <label>Sought Facilities</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

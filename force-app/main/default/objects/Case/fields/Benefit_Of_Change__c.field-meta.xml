@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Benefit_Of_Change__c</fullName>
+    <description>CRM-Enhanced Cases for Change Request Functionality (C Reinecke 2010/08)</description>
+    <externalId>false</externalId>
+    <label>Change Benefits</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Business Process Improvement</fullName>
+                <default>false</default>
+                <label>Business Process Improvement</label>
+            </value>
+            <value>
+                <fullName>Client Experience</fullName>
+                <default>false</default>
+                <label>Client Experience</label>
+            </value>
+            <value>
+                <fullName>Data Quality Improvement</fullName>
+                <default>false</default>
+                <label>Data Quality Improvement</label>
+            </value>
+            <value>
+                <fullName>Revenue Driver</fullName>
+                <default>false</default>
+                <label>Revenue Driver</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

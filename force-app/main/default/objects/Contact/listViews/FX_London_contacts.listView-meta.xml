@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FX_London_contacts</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CONTACT.TITLE</columns>
+    <columns>CONTACT.PHONE1</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>CORE.USERS.FIRST_NAME</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>equals</operation>
+        <value>PrenC,Floody,prile,vmend,naldi,LeamT,tmina,DaleA</value>
+    </filters>
+    <label>FX London contacts</label>
+    <sharedTo>
+        <roleAndSubordinates>CIB_Flow_FX_MM_GM_SA_BU</roleAndSubordinates>
+    </sharedTo>
+</ListView>

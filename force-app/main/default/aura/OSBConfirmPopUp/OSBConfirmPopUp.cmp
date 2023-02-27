@@ -1,0 +1,29 @@
+<aura:component>
+    <aura:attribute name="title" type="String" access="global" />
+    <aura:attribute name="content" type="String" access="global" />
+    <aura:attribute name="positionElement" type="Object" />
+    <aura:attribute name="Accept" type="String" default="YES"/>
+    <aura:attribute name="Cancel" type="String" default="NO"/>
+    <aura:attribute name="optl" type="Boolean" default="false" access="global"/>
+    <aura:attribute name="displayPopUp" type="Boolean" default="true" />
+    <aura:registerEvent name="closePopUpEvent" type="c:OSBClosePopUpEvent"/>
+
+    <div class="popUp-container">
+        <aura:if isTrue="{!v.displayPopUp}">
+            <div class="popUp-box" aura:id="popUpBox">
+                <div class="topSection">
+                    <div><i class="ms-icn_warning_outline popUp-icon"></i></div>
+                    <div class="popUp-title mb_8">{!v.title}</div>
+                </div>
+                <div class="popUp-content mb_16">{!v.content}</div>
+                    <div class="slds-grid selectBox">
+                        <div class="popUp-start_message slds-col slds-size_1-of-3" onclick="{!c.handleClose}" data-id="uitlink_link" data-text="{!'Popup | ' + v.Cancel}">{!v.Cancel}</div>
+                        <div class="popUp-start_message slds-col slds-size_1-of-3 acceptClass" onclick="{!c.handleAccept}" data-id="uitlink_link" data-text="{!'Popup | ' + v.Accept}">{!v.Accept}</div>
+                    </div>
+            </div>
+            <div class="popUp-overlay popUp-visible" aura:id="visibleOverlay"></div>
+            <div class="popUp-overlay popUp-invisible"></div>
+        </aura:if>
+    </div>
+
+</aura:component>

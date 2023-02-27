@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Enter_Inflow_Outflow</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Enter Inflow/Outflow</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <requireRowSelection>false</requireRowSelection>
+    <url>/a0d/e?CF00N20000001bfJr={!SB_Product__c.Name}&amp;CF00N20000001bfJr_lkid={!SB_Product__c.Id}&amp;CF00N20000001bfJo={!Account.Name}&amp;CF00N20000001bfJo_lkid={!Account.Id}&amp;CF00N20000001bfJq={!Opportunity.Name}&amp;CF00N20000001bfJq_lkid={!Opportunity.Id}&amp;saveURL=%2F{!SB_Product__c.Id}&amp;retURL=%2F{!SB_Product__c.Id}</url>
+</WebLink>

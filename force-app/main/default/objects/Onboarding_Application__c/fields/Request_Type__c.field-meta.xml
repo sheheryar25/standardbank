@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Request_Type__c</fullName>
+    <description>The type of request as determined by the on boarding process in salesforce</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Type of application requested.</inlineHelpText>
+    <label>Request Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Onboarding</fullName>
+                <default>false</default>
+                <label>Onboarding</label>
+            </value>
+            <value>
+                <fullName>Hierarchy</fullName>
+                <default>false</default>
+                <label>Hierarchy</label>
+            </value>
+            <value>
+                <fullName>Migration</fullName>
+                <default>false</default>
+                <label>Migration</label>
+            </value>
+            <value>
+                <fullName>Request Consent</fullName>
+                <default>false</default>
+                <label>Request Consent</label>
+            </value>
+            <value>
+                <fullName>Hierarchy Change</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Hierarchy Change</label>
+            </value>
+            <value>
+                <fullName>New On-boarding</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>New On-boarding</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

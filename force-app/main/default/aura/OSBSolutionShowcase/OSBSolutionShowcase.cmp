@@ -1,0 +1,170 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" controller="OSB_SolutionShowcase_CTRL">
+    <lightning:navigation aura:id="navService"/>
+    <aura:attribute name="solutionShowcaseRows" type="Object[]"/>
+    <aura:attribute name="comingSoonSolutions" type="Object[]"/>
+    <aura:attribute name="full" type="Boolean" default="false" />
+    <aura:attribute name="tile" type="Boolean" default="false" />
+    <aura:attribute name="empty" type="Boolean" default="false" />
+    <aura:attribute name="isOpen" type="boolean" default="false"/>
+    <aura:attribute name="modalIsComingSoon" type="boolean" default="false"/>
+    <aura:attribute name="modalIsSolution" type="boolean" default="false"/>
+    <aura:attribute name="apiDocAvailable" type="boolean" default="false"/>
+    <aura:attribute name="modalLogo" type="String"/>
+    <aura:attribute name="modalType" type="String"/>
+    <aura:attribute name="modalTitle" type="String"/>
+    <aura:attribute name="modalContent" type="String"/>
+    <aura:attribute name="modalSignUpURL" type="String"/>
+    <aura:attribute name="modalWebsiteURL" type="String"/>
+    <aura:attribute name="solutionId" type="String"/>
+    
+    <aura:attribute name="currentTab" type="String" default="Market"/>
+    
+    <aura:attribute name="class" type="String" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler event="c:OSBChangeTabEvent" action="{!c.handleTabChange}"/>
+    <aura:attribute name="searchKeyword" access="public" type="String"/>
+    <aura:attribute name="noSearchResults" type="Boolean" access="public" default="false" />
+    <aura:attribute name="isSearched" type="Boolean" access="public" default="false" />
+    <aura:if isTrue="{!v.isOpen}">
+        <c:OSBModal isOpen="{!v.isOpen}" modalIsComingSoon="{! v.modalIsComingSoon}"
+                    modalType="{! v.modalType}" modalTitle="{! v.modalTitle}" modalLogo="{! v.modalLogo}"
+                    modalContent="{! v.modalContent}" modalIsSolution="{! v.modalIsSolution}"
+                    modalFirstButtonURL="{! v.modalSignUpURL}" modalScndButtonURL="{! v.modalWebsiteURL}"
+                    recordId="{! v.solutionId}" currentTab="{! v.currentTab}"/>
+    </aura:if>
+                                
+    <aura:if isTrue="{!v.tile}">
+        <div class="{!'solutionShowcase-container solutionShowcase-container_tile ' + v.class}">
+            <h2 class="solutionShowcase-container_tile__title">Solutions to enhance your day-to-day</h2>
+            <div class="solutionShowcase_tile">
+                <aura:if isTrue="{!v.empty}">
+                    <div class="solutionShowcase_tile__content">
+                        <img src="{!$Resource.OSB_notificationsEmpty}"/>
+                        <div>No Solutions Showcases.</div>
+                    </div>
+                    <aura:set attribute="else">
+                        <div class="solutionShowcase_tile__items">
+                            
+                                <aura:iteration items="{!v.solutionShowcaseRows}" var="solutionShowcaseItem" end="4">
+                                
+                                <div class="solutionShowcase__item" data-id="uitlink_link" data-text="{!'Solution Tile | ' + solutionShowcaseItem.Title}" onclick="{! c.createModalWindow}" id="{! solutionShowcaseItem.Id + '|' + solutionShowcaseItem.Is_coming_soon__c + '|' + solutionShowcaseItem.Title + '|' + solutionShowcaseItem.Introduction__c + '|' + solutionShowcaseItem.Large_Solution_Logo__c + '|' + solutionShowcaseItem.Solution_URL__c + '|' + solutionShowcaseItem.Sign_Up_URL__c}">
+                                    <div class="solutionShowcase__item__logo" data-id="uitlink_link" data-text="{!'Solution Tile | ' + solutionShowcaseItem.Title}" id="{! solutionShowcaseItem.Id + '|' + solutionShowcaseItem.Is_coming_soon__c + '|' + solutionShowcaseItem.Title + '|' + solutionShowcaseItem.Introduction__c + '|' + solutionShowcaseItem.Large_Solution_Logo__c + '|' + solutionShowcaseItem.Solution_URL__c + '|' + solutionShowcaseItem.Sign_Up_URL__c}">
+                                        <ui:outputRichText aura:id="outputRT" value="{!solutionShowcaseItem.Large_Solution_Logo__c}" />
+                                    </div>
+                                    <div class="solutionShowcase__item__content" data-id="uitlink_link" data-text="{!'Solution Tile | ' + solutionShowcaseItem.Title}" id="{! solutionShowcaseItem.Id + '|' + solutionShowcaseItem.Is_coming_soon__c + '|' + solutionShowcaseItem.Title + '|' + solutionShowcaseItem.Introduction__c + '|' + solutionShowcaseItem.Large_Solution_Logo__c + '|' + solutionShowcaseItem.Solution_URL__c + '|' + solutionShowcaseItem.Sign_Up_URL__c}">
+                                        <aura:if isTrue="{!solutionShowcaseItem.Is_coming_soon__c}">
+                                            <div class="solutionShowcase__comingSoon__row" data-id="uitlink_link" data-text="{!'Solution Tile | ' + solutionShowcaseItem.Title}" id="{! solutionShowcaseItem.Id + '|' + solutionShowcaseItem.Is_coming_soon__c + '|' + solutionShowcaseItem.Title + '|' + solutionShowcaseItem.Introduction__c + '|' + solutionShowcaseItem.Large_Solution_Logo__c + '|' + solutionShowcaseItem.Solution_URL__c + '|' + solutionShowcaseItem.Sign_Up_URL__c}">
+                                                <div class="solutionShowcase__comingSoon__item__title" data-id="uitlink_link" data-text="{!'Solution Tile | ' + solutionShowcaseItem.Title}" id="{! solutionShowcaseItem.Id + '|' + solutionShowcaseItem.Is_coming_soon__c + '|' + solutionShowcaseItem.Title + '|' + solutionShowcaseItem.Introduction__c + '|' + solutionShowcaseItem.Large_Solution_Logo__c + '|' + solutionShowcaseItem.Solution_URL__c + '|' + solutionShowcaseItem.Sign_Up_URL__c}">
+                                                    <a class="link" data-id="uitlink_link" data-text="{!'Solution Tile | ' + solutionShowcaseItem.Title}"
+                                                           id="{! solutionShowcaseItem.Id + '|' + solutionShowcaseItem.Is_coming_soon__c + '|' + solutionShowcaseItem.Title + '|' + solutionShowcaseItem.Introduction__c + '|' + solutionShowcaseItem.Large_Solution_Logo__c + '|' + solutionShowcaseItem.URL__c}">{!solutionShowcaseItem.Title}</a>
+                                                </div>
+                                                <div class="solutionShowcase__comingSoon__label" data-id="uitlink_link" data-text="{!'Solution Tile | ' + solutionShowcaseItem.Title}" id="{! solutionShowcaseItem.Id + '|' + solutionShowcaseItem.Is_coming_soon__c + '|' + solutionShowcaseItem.Title + '|' + solutionShowcaseItem.Introduction__c + '|' + solutionShowcaseItem.Large_Solution_Logo__c + '|' + solutionShowcaseItem.Solution_URL__c + '|' + solutionShowcaseItem.Sign_Up_URL__c}">Coming soon</div>
+                                            </div>
+                                            <aura:set attribute="else">
+
+                                                <aura:if isTrue="{!solutionShowcaseItem.Title == 'African Markets Tracker'}">
+                                                    <div class="solutionShowcase__item__title" data-id="uitlink_link" data-text="{!'Solution Tile | ' + solutionShowcaseItem.Title}" id="{! solutionShowcaseItem.Id + '|' + solutionShowcaseItem.Is_coming_soon__c + '|' + solutionShowcaseItem.Title + '|' + solutionShowcaseItem.Introduction__c + '|' + solutionShowcaseItem.Large_Solution_Logo__c + '|' + solutionShowcaseItem.Solution_URL__c + '|' + solutionShowcaseItem.Sign_Up_URL__c}">
+                                                        <a class="link" data-id="uitlink_link" data-text="{!'Solution Tile | ' + solutionShowcaseItem.Title}"
+                                                           id="{! solutionShowcaseItem.Id + '|' + solutionShowcaseItem.Is_coming_soon__c + '|' + solutionShowcaseItem.Title + '|' + solutionShowcaseItem.Introduction__c + '|' + solutionShowcaseItem.Large_Solution_Logo__c + '|' + solutionShowcaseItem.Solution_URL__c + '|' + solutionShowcaseItem.Sign_Up_URL__c}">{!solutionShowcaseItem.Title}™</a>
+                                                    </div>
+                                                    <aura:set attribute="else">
+                                                        <aura:if isTrue="{!solutionShowcaseItem.Title == 'AUTHENTIFI'}">    
+                                                             
+                                                            <div class="solutionShowcase__item__title" data-id="uitlink_link" data-text="{!'Solution Tile | ' + solutionShowcaseItem.Title}" id="{! solutionShowcaseItem.Id + '|' + solutionShowcaseItem.Is_coming_soon__c + '|' + solutionShowcaseItem.Title + '|' + solutionShowcaseItem.Introduction__c + '|' + solutionShowcaseItem.Large_Solution_Logo__c + '|' + solutionShowcaseItem.Solution_URL__c + '|' + solutionShowcaseItem.Sign_Up_URL__c}">
+                                                                <a class="link" data-id="uitlink_link" data-text="{!'Solution Tile | ' + solutionShowcaseItem.Title}"
+                                                                 id="{! solutionShowcaseItem.Id + '|' + solutionShowcaseItem.Is_coming_soon__c + '|' + solutionShowcaseItem.Title + '|' + solutionShowcaseItem.Introduction__c + '|' + solutionShowcaseItem.Large_Solution_Logo__c + '|' + solutionShowcaseItem.Solution_URL__c + '|' + solutionShowcaseItem.Sign_Up_URL__c}">{!solutionShowcaseItem.Title}<sup>TM</sup></a>
+                                                            </div>
+
+                                                            <aura:set attribute="else">
+                                                                <div class="solutionShowcase__item__title" data-id="uitlink_link" data-text="{!'Solution Tile | ' + solutionShowcaseItem.Title}" id="{! solutionShowcaseItem.Id + '|' + solutionShowcaseItem.Is_coming_soon__c + '|' + solutionShowcaseItem.Title + '|' + solutionShowcaseItem.Introduction__c + '|' + solutionShowcaseItem.Large_Solution_Logo__c + '|' + solutionShowcaseItem.Solution_URL__c + '|' + solutionShowcaseItem.Sign_Up_URL__c}">
+                                                                    <a class="link" data-id="uitlink_link" data-text="{!'Solution Tile | ' + solutionShowcaseItem.Title}"
+                                                                     id="{! solutionShowcaseItem.Id + '|' + solutionShowcaseItem.Is_coming_soon__c + '|' + solutionShowcaseItem.Title + '|' + solutionShowcaseItem.Introduction__c + '|' + solutionShowcaseItem.Large_Solution_Logo__c + '|' + solutionShowcaseItem.Solution_URL__c + '|' + solutionShowcaseItem.Sign_Up_URL__c}">{!solutionShowcaseItem.Title}</a>
+                                                                </div>
+
+                                                            </aura:set>
+                                                     
+                                                    
+                                                        </aura:if>
+                                                    </aura:set>
+                                                </aura:if>
+                                            </aura:set>
+                                        </aura:if>
+                                        <div class="solutionShowcase__item__description"  id="{! solutionShowcaseItem.Id + '|' + solutionShowcaseItem.Is_coming_soon__c + '|' + solutionShowcaseItem.Title + '|' + solutionShowcaseItem.Introduction__c + '|' + solutionShowcaseItem.Large_Solution_Logo__c + '|' + solutionShowcaseItem.Solution_URL__c + '|' + solutionShowcaseItem.Sign_Up_URL__c}">
+                                            {!solutionShowcaseItem.Introduction__c}
+                                        </div>
+                                    </div>
+                                </div>
+                            </aura:iteration>
+                        </div>
+                    </aura:set>
+                </aura:if>
+                <a class="solutionShowcase_tile__items__link" href="javascript:void(0)" onclick="{!c.openSolutionShowcase}" data-id= "uitlink_link" data-text= "Dashboard | Solutions Showcase | View More">View more</a>                
+            </div>
+        </div>
+        <aura:set attribute="else">
+            <div class="solutionShowcase-container">
+                <div class="form">
+                    <form class="slds-form_inline"> 
+                        <div class="slds-form__size_resp"> 
+                            <div class="slds-form-element__control slds-input-has-icon disp_flex">
+                                <span onkeypress="{!c.onCallKeyUp}" class="grow">
+                                <lightning:input type="search" value="{!v.searchKeyword}" onchange="{!c.onClearSearch}" class="search__form_input" placeholder="Search for Solutions"/>
+                                </span>  
+                                <lightning:button type="Button" onclick="{!c.onSearchSolutions}" class="searchBtn">Search</lightning:button>
+                            </div>
+                        </div> 
+                    </form>
+                 </div>   
+                 <aura:if isTrue="{!v.noSearchResults}">
+                    <div class="noSearchResults">
+                        <div>Your search did not match any of our Solutions. 
+                        <br></br>
+                        Please try again.
+                        </div>
+                    </div>
+                </aura:if>
+                <div class="{!v.full ? 'solutionShowcase solutionShowcase_full' : 'solutionShowcase'}">
+                    <aura:if isTrue="{!v.full}">
+                        <aura:if isTrue="{!v.solutionShowcaseRows.length > 0}">
+                            <div class="solutionShowcase__title__full mb_32">Available Solutions</div>
+                            <c:OSBPagination data="{!v.solutionShowcaseRows}" full="{!v.full}" contentComponent="OSBSolutionShowcaseItem" isSearched="{!v.isSearched}"/>
+                        </aura:if>
+                        <aura:if isTrue="{!v.comingSoonSolutions.length > 0}">
+                            <div class="solutionShowcase__comingSoon__title mb_32">Coming soon</div>
+                            <div class="solutionShowcase__items mb_32">
+                                <aura:iteration items="{!v.comingSoonSolutions}" var="ourSolution" end="3">
+                                    <c:OSBSolutionShowcaseItem title="{!ourSolution.Title}"
+                                                               content="{!ourSolution.Introduction__c}"
+                                                               logo="{!ourSolution.Medium_Solution_Logo__c}"
+                                                               largeLogo="{!ourSolution.Large_Solution_Logo__c}"
+                                                               solutionSiteURL="{!ourSolution.Solution_URL__c}"
+                                                               isComingSoon="{!ourSolution.Is_coming_soon__c}"
+                                                               solutionId="{!ourSolution.Id}"/>
+                                </aura:iteration>
+                            </div>
+                        </aura:if>
+                        <aura:set attribute="else">
+                            <h1 class="solutionShowcase__title mb_32">Available solutions</h1>
+                            <div class="solutionShowcase__items mb_32">
+                                <aura:iteration items="{!v.solutionShowcaseRows}" var="solutionShowcaseItem" end="6">
+                                    <c:OSBSolutionShowcaseItem title="{!solutionShowcaseItem.Title}"
+                                                               content="{!solutionShowcaseItem.Introduction__c}"
+                                                               logo="{!solutionShowcaseItem.Medium_Solution_Logo__c}"
+                                                               largeLogo="{!ourSolution.Large_Solution_Logo__c}"
+                                                               link="{!solutionShowcaseItem.Sign_Up_URL__c}"
+                                                               linkLabel="Visit Website"
+                                                               solutionSiteURL="{!solutionShowcaseItem.Solution_URL__c}"
+                                                               isComingSoon="{!solutionShowcaseItem.Is_coming_soon__c}"
+                                                               solutionId="{!solutionShowcaseItem.Id}"/>
+                                </aura:iteration>
+                            </div>
+                        </aura:set>
+                    </aura:if>
+                    <aura:if isTrue="{!v.full == false}">
+                        <a class="btn btn_blue solutionShowcase__button" href="/s/solutions-showcase" target="_top">View more</a>
+                    </aura:if>
+                </div>
+            </div>
+        </aura:set>
+    </aura:if>
+</aura:component>

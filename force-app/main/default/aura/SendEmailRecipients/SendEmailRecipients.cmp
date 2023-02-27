@@ -1,0 +1,47 @@
+<aura:component controller="StdBank_Ltn_SendEmail">
+  <ltng:require scripts="{!$Resource.RxJS410 + '/rx.all.js'}" afterScriptsLoaded="{!c.onRxLoaded}" />
+
+  <aura:attribute name="label" type="String" default="" />
+  <aura:attribute name="recipients" type="String" default="" />
+  <aura:attribute name="addresses" type="Object[]" default="[]" />
+  <aura:attribute name="addUserAddress" type="Boolean" default="false" />
+  <aura:attribute name="suggestions" type="Object[]" default="[]" access="private" />
+  <aura:attribute name="searchSubject" type="Object" access="private" />
+  <aura:attribute name="suggestionsSubscription" type="Object" access="private" />
+
+  <aura:handler name="init" value="{!this}" action="{!c.onInit}" />
+  <aura:handler name="destroy" value="{!this}" action="{!c.onDestroy}" />
+  <aura:handler name="deleteRecipient" event="c:sendEmailDeleteRecipient" action="{!c.onDeleteRecipient}" />
+
+  <div aura:id="search-element" class="slds-form-element ">
+    <label class="slds-form-element__label">{!v.label}</label>
+    <div aura:id="element-control" class="slds-form-element__control slds-lookup">
+      <div aura:id="pill-container" style="overflow-y: scroll; overflow-x: hidden; flex-wrap:wrap; max-height: 3.7rem;" class="slds-pill_container" onfocus="{!c.onFocusContainer}" tabindex="-1" >
+        <aura:iteration items="{!v.addresses}" var="address" indexVar="index">
+          <c:SendEmailRecipient address="{!address}" index="{!index}" />
+        </aura:iteration>
+        <input aura:id="search" class="search-input" oninput="{!c.onInput}" onkeydown="{!c.onKeydown}" onfocus="{!c.onFocus}" onblur="{!c.onBlur}" />
+      </div>
+      <div class="slds-lookup__menu">
+        <ul aura:id="suggestion-list" class="slds-lookup__list slds-has-dividers_bottom" role="listbox" onclick="{!c.onSuggestionListClick}">
+          <aura:iteration items="{!v.suggestions}" var="suggestion" indexVar="index">
+            <li class="slds-item" role="presentation" data-index="{!index}">
+              <span class="slds-lookup__item-action slds-media slds-media_center" role="option">
+                <aura:if isTrue="{!suggestion.entityType == 'Contact'}">
+                  <img src="{!$Resource.SLDS202 + '/assets/icons/standard/contact.svg'}" class="slds-icon slds-icon_small slds-icon-standard-contact" style="border-width: 0;" alt="Contact" title="Contact" />
+                <aura:set attribute="else">
+                  <img src="{!$Resource.SLDS202 + '/assets/icons/standard/user.svg'}" class="slds-icon slds-icon_small slds-icon-standard-user" style="border-width: 0;" alt="User" title="User" />
+                </aura:set>
+                </aura:if>
+                <div class="slds-media__body">
+                  <div class="slds-lookup__result-text">{!suggestion.name}</div>
+                  <span class="slds-lookup__result-meta slds-text-body_small">{!suggestion.email}</span>
+                </div>
+              </span>
+            </li>
+          </aura:iteration>
+        </ul>
+      </div>
+    </div>
+  </div>
+</aura:component>

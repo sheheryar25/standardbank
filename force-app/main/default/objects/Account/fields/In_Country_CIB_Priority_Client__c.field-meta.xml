@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>In_Country_CIB_Priority_Client__c</fullName>
+    <description>This field indicates if the client is an in-country CIB Priority client SFP-5383</description>
+    <externalId>false</externalId>
+    <label>In Country CIB Priority Client</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Countries</valueSetName>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

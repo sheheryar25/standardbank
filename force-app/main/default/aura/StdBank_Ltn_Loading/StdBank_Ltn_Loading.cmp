@@ -1,0 +1,9 @@
+<aura:component >
+	 <article class="slds-card" style="background-color: inherit; height:100%">
+        <div class="slds-card__body slds-grid slds-p-around_small" style="height:100%">
+            <div class="slds-col slds-align-middle">
+                <center><ui:spinner aura:id="spinner"/></center>
+            </div>
+        </div>
+    </article>
+</aura:component>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Contact_c</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>New Contact</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <requireRowSelection>false</requireRowSelection>
+    <url>/003/e?retURL=%2F{!Account.Id}&amp;accid={!Account.Id}&amp;00N20000001bfOf={!URLENCODE(Account.Correspondence_Addr_Line1__c)}&amp;00N20000001bfOg={!URLENCODE(Account.Correspondence_Addr_Line2__c)}&amp;00N20000001bfOh={!URLENCODE(Account.Correspondence_City__c)}&amp;00N20000001bfOk={!URLENCODE(Account.Correspondence_Province_Region__c)}&amp;00N20000001bfOj={!URLENCODE(Account.Correspondence_Postal_Code__c)}&amp;00N20000001bfOi={!Account.Correspondence_Country__c}</url>
+</WebLink>

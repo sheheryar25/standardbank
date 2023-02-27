@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FAIS_Status_Comments__c</fullName>
+    <description>US-3878: Commentary field required for regulatory reporting</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Additional details regarding the FAIS status of the client</inlineHelpText>
+    <label>FAIS Status Comments</label>
+    <length>1000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

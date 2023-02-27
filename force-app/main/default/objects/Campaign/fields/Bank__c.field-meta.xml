@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bank__c</fullName>
+    <externalId>false</externalId>
+    <label>Bank</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Type</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Standard Bank</fullName>
+                <default>false</default>
+                <label>Standard Bank</label>
+            </value>
+            <value>
+                <fullName>Standard Bank also trading as Stanbic</fullName>
+                <default>false</default>
+                <label>Standard Bank also trading as Stanbic</label>
+            </value>
+            <value>
+                <fullName>Stanbic Bank</fullName>
+                <default>false</default>
+                <label>Stanbic Bank</label>
+            </value>
+            <value>
+                <fullName>Standard Lesotho Bank Limited</fullName>
+                <default>false</default>
+                <label>Standard Lesotho Bank Limited</label>
+            </value>
+            <value>
+                <fullName>Stanbic IBTC Bank Plc</fullName>
+                <default>false</default>
+                <label>Stanbic IBTC Bank Plc</label>
+            </value>
+            <value>
+                <fullName>Standard Bank of South Africa Limited</fullName>
+                <default>false</default>
+                <label>Standard Bank of South Africa Limited</label>
+            </value>
+            <value>
+                <fullName>Stanbic Bank Limited</fullName>
+                <default>false</default>
+                <label>Stanbic Bank Limited</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Client Research</controllingFieldValue>
+            <valueName>Standard Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Research</controllingFieldValue>
+            <valueName>Standard Bank also trading as Stanbic</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Research</controllingFieldValue>
+            <valueName>Stanbic Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Research</controllingFieldValue>
+            <valueName>Standard Lesotho Bank Limited</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Research</controllingFieldValue>
+            <valueName>Stanbic IBTC Bank Plc</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Research</controllingFieldValue>
+            <valueName>Standard Bank of South Africa Limited</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Research</controllingFieldValue>
+            <valueName>Stanbic Bank Limited</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

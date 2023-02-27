@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lock_Active_Permission</fullName>
+    <active>true</active>
+    <description>Permission has to be deactivated before update</description>
+    <errorConditionFormula>AND(
+   Active__c = True,
+   OR(
+      ISCHANGED( Authorized_Person__c ),
+      ISCHANGED( Financial_Account__c ),
+      ISCHANGED( Permission__c )
+   )
+)</errorConditionFormula>
+    <errorMessage>Permission has to be deactivated before it can be edited</errorMessage>
+</ValidationRule>

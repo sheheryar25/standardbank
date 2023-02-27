@@ -1,0 +1,124 @@
+.THIS .nav-container {
+    height: 90px;
+    box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.2);
+    background-color: #0033a1 !important;
+}
+
+.THIS .desktop-nav{
+    max-width : 1280px;
+}
+
+.THIS .logo {
+    padding-left: 25px;
+}
+
+.THIS .menu-items{
+    margin: 0 32px 0 0;
+    font-family: BentonSans;
+    font-size: 16px;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    text-align: right;
+    color: #ffffff;
+}
+
+.THIS .menu-items-other{
+    margin-top: revert;
+    padding-top: 9px;
+    color: #ffffff   
+}
+
+.THIS .sign-in {
+    background: #0089ff;
+    padding: 27px 40px 23px 26px;
+    text-align: left;
+}
+
+
+.THIS .anchor{
+    color: #ffffff    
+}
+
+
+@media(max-width: 1024px) {
+    .THIS .desktop-nav {
+        display : none !important;
+    }
+    
+    .THIS .mobile-container {
+        display : block !important; 
+    }
+    
+    .THIS {
+        padding: 0;
+    }
+}
+
+.THIS .mobile-container {
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+    display : none; 
+}
+
+
+
+.THIS .mobile-container a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+    background-color: #0033a1;   
+}
+
+.THIS .mobile-container a.icon {
+    background-color: #0033a1;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.THIS .mobile-container a:hover {
+    color: black;
+}
+
+.THIS .active {
+    color: white;
+}
+
+.THIS .dynamicDisplayBlock{
+    display: block;
+}
+
+.THIS .dynamicDisplayNone{
+    display: none;
+}
+
+.THIS .hamburger{
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+}
+
+
+@media(max-width: 479px){
+    .THIS .nav-container{
+        padding : 0px;
+    }
+}
+
+@media(max-width: 1024px) {
+    .THIS .nav-container {
+        padding : 0px;
+    }
+}
+
+.THIS a {
+    text-decoration : none;
+}

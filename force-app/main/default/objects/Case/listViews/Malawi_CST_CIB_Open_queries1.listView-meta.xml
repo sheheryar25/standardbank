@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Malawi_CST_CIB_Open_queries1</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>Category_Reporting__c</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>equals</operation>
+        <value>Open,New,In Progress</value>
+    </filters>
+    <filters>
+        <field>line_manager_name_for_case_owner__c</field>
+        <operation>equals</operation>
+        <value>Clara Mtambalika</value>
+    </filters>
+    <label>Malawi CST CIB Open queries</label>
+    <sharedTo>
+        <role>CIB_Customer_Contact_Center_Malawi_Team</role>
+    </sharedTo>
+</ListView>

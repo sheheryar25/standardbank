@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Account Amendments - Rollover SI</label>
+    <protected>false</protected>
+    <values>
+        <field>Active__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>CaseRecordType__c</field>
+        <value xsi:type="xsd:string">TPS Client Case</value>
+    </values>
+    <values>
+        <field>CustodyCategory__c</field>
+        <value xsi:type="xsd:string">Account Amendments</value>
+    </values>
+    <values>
+        <field>CustodySubCategory__c</field>
+        <value xsi:type="xsd:string">Rollover SI</value>
+    </values>
+    <values>
+        <field>EntitlementName__c</field>
+        <value xsi:type="xsd:string">TPS IS Tier 5 Support</value>
+    </values>
+</CustomMetadata>

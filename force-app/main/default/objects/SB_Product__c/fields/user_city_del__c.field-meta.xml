@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>user_city_del__c</fullName>
+    <description>Case#626 - 02/2011 - Rudolf Niehaus GSG specific field pulling the User info from the lookup field GSG Assigned</description>
+    <externalId>false</externalId>
+    <formula>&apos;&apos;</formula>
+    <inlineHelpText>The City of the GSG Assigned User</inlineHelpText>
+    <label>User City</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

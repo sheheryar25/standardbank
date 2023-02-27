@@ -1,0 +1,61 @@
+<aura:component extends="c:CI_Base">
+    <aura:attribute name="gems" type="Object[]" />
+    <aura:attribute name="context" type="String" />
+    <aura:attribute name="error" type="String" />
+    <aura:attribute name="heading" type="String" />
+    <aura:attribute name="hideHeadingIfEmpty" type="Boolean" default="false" />
+    <aura:attribute name="showEmptyStatus" type="Boolean" default="false" />
+    <aura:attribute name="statusMessage" type="String" />
+    <aura:attribute name="recordId" type="String" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler name="gemDismissedEvent" event="c:CI_EvtGeneralCmp" action="{!c.handleGemDismissed}" />
+    <aura:handler name="gemDeletedEvent" event="c:CI_EvtGeneralCmp" action="{!c.handleGemDeleted}" />
+
+    <c:CI_GemService aura:id="gemService" />
+
+    <div>{!v.error}</div>
+
+    <aura:if isTrue="{!v.heading}">
+        <div class="slds-text-heading_small bold slds-m-bottom_x-small slds-m-left_small">
+            <aura:if isTrue="{!!and(v.gems.length == 0, v.hideHeadingIfEmpty)}">
+                {!v.heading}
+            </aura:if>
+        </div>
+    </aura:if>
+
+    <aura:if isTrue="{!and(v.showEmptyStatus, v.gems.length == 0)}">
+        <article aura:id="status_msg" class="card_with_shadow slds-m-around_small slds-hide">
+            <div class="slds-p-around_small">
+                <p class="slds-text-heading_small slds-text-align_center">
+                    {!v.statusMessage}
+                </p>
+            </div>
+        </article>
+    </aura:if>
+
+    <aura:if isTrue="{!v.gems.length > 0}">
+
+        <aura:if isTrue="{!or($Browser.isAndroid, $Browser.isIOS)}">
+
+            <aura:iteration items="{!v.gems}" var="gem">
+                <div class="slds-p-horizontal_x-small slds-p-bottom_x-small">
+                    <c:CI_Gem gem="{!gem}" context="{!v.context}" />
+                </div>
+            </aura:iteration>
+
+            <aura:set attribute="else">
+                <div class="slds-p-bottom_large">
+                    <c:CI_Carousel >
+                        <div class="slds-grid">
+                            <aura:iteration items="{!v.gems}" var="gem">
+                                <div class="slds-col slds-p-horizontal_xx-small gem_container">
+                                    <c:CI_Gem gem="{!gem}" context="{!v.context}" />
+                                </div>
+                            </aura:iteration>
+                        </div>
+                    </c:CI_Carousel>
+                </div>
+            </aura:set>
+        </aura:if>
+    </aura:if>
+</aura:component>

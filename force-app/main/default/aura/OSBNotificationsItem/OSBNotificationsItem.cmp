@@ -1,0 +1,36 @@
+<aura:component>
+    <aura:attribute name="index" type="Integer" access="private"/>
+    <aura:attribute name="chosenIndex" type="Integer" access="private"/>
+    <aura:attribute name="id" type="String" access="public"/>
+    <aura:attribute name="title" type="String" access="public"/>
+    <aura:attribute name="subtitle" type="String" access="public"/>
+    <aura:attribute name="date" type="String" access="public"/>
+    <aura:attribute name="content" type="String" access="public"/>
+    <aura:attribute name="isUnread" type="Boolean" access="public"/>
+    <aura:attribute name="isHidden" type="Boolean" default="true" access="private"/>
+
+    <div class="{!v.isHidden ? 'notification-container hidden' : 'notification-container'}" onclick="{!c.toggle}" data-id="uitlink_link" data-text="{!'Notification Item | ' + v.title}">
+        <div class="notification">
+            <aura:if isTrue="{!v.isHidden}">
+                <div class="notification__header slds-medium-size_11-of-12 slds-large-size_11-of-12">
+                    <h1 class="{!v.isUnread ? 'notification__title notification__title--collapsed unread' : 'notification__title notification__title--collapsed'}">{!v.title}</h1>
+                    <div class="notification__date"><lightning:formattedDateTime value="{!v.date}" year="numeric" month="numeric" day="numeric" timeZone="UTC" /></div>
+                </div>
+                <button class="notification__icon slds-medium-size_1-of-12 slds-large-size_1-of-12"><i class="ms-icn_chevron_down"></i></button>
+                <div class="notification__description slds-size_6-of-6">
+                    <lightning:formattedRichText value="{!v.content}"/>
+                </div>
+                <aura:set attribute="else">
+                    <div class="notification__header slds-medium-size_11-of-12 slds-x-large-size_8-of-12">
+                        <h1 class="notification__title">{!v.title}</h1>
+                        <div class="notification__date"><lightning:formattedDateTime value="{!v.date}" year="numeric" month="numeric" day="numeric" timeZone="UTC" /></div>
+                        <div class="notification__description slds-size_6-of-6 slds-x-large-size_12-of-12">
+                            <lightning:formattedRichText value="{!v.content}"/>
+                        </div>
+                    </div>
+                    <button class="notification__icon slds-medium-size_1-of-12 slds-large-size_1-of-12 slds-x-large-size_2-of-12"><i class="ms-icn_chevron_up"></i></button>
+                </aura:set>
+            </aura:if>
+        </div>
+    </div>
+</aura:component>

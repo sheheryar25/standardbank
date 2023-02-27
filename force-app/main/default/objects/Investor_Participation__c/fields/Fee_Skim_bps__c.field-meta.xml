@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fee_Skim_bps__c</fullName>
+    <description>Indicate fee skim in bps if applicable. Fee skim is defined as the fee income on underwritten, arranged and distributed portions of loans net of participation fees, plus insurance skim.  (i.e. equivalent to the value add that Distribution brings to the transaction.).
+SGPRT-3852</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicate fee skim in bps if applicable. Fee skim is defined as the fee income on underwritten, arranged and distributed portions of loans net of participation fees, plus insurance skim.  (i.e. equivalent to the value add that Distribution brings to the transaction).</inlineHelpText>
+    <label>Fee Skim (bps)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

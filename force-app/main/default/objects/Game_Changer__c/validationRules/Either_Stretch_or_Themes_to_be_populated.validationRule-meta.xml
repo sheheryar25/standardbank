@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Either_Stretch_or_Themes_to_be_populated</fullName>
+    <active>true</active>
+    <description>DEF-001991:RTB - OM - Game Changers.
+Only one of either Stretch or Themes Identified needs to be populated.</description>
+    <errorConditionFormula>AND( NOT(ISNULL( Stretch__c )), NOT(ISNULL( Themes_Identified__c )) )</errorConditionFormula>
+    <errorMessage>Please ensure Stretch is cleared and the Themes Identified is populated with the total amount anticipated for that Theme. Additional Stretch needs to be allocated to another Game Changer</errorMessage>
+</ValidationRule>

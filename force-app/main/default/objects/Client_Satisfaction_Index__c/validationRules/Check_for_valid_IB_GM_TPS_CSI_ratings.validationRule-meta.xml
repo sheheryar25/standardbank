@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_for_valid_IB_GM_TPS_CSI_ratings</fullName>
+    <active>true</active>
+    <description>EN-701 CSI - Case automation &amp; data quality control.Validation rule to check the value of IB CSI Rating,GM CSI Rating,TPS CSI Rating is in between 1 and 10 and will trigger only when new CSI record is inserted.</description>
+    <errorConditionFormula>AND (OR(
+(NOT(OR((ISBLANK(TPS_CSI_Rating_Number__c)),
+(TPS_CSI_Rating_Number__c = 1),
+(TPS_CSI_Rating_Number__c = 2),
+(TPS_CSI_Rating_Number__c = 3),
+(TPS_CSI_Rating_Number__c = 4),
+(TPS_CSI_Rating_Number__c = 5),
+(TPS_CSI_Rating_Number__c = 6),
+(TPS_CSI_Rating_Number__c = 7),
+(TPS_CSI_Rating_Number__c = 8),
+(TPS_CSI_Rating_Number__c = 9),
+(TPS_CSI_Rating_Number__c = 10)))),
+
+(NOT(OR((ISBLANK(IB_CSI_Rating_Number__c)),
+(IB_CSI_Rating_Number__c = 1),
+(IB_CSI_Rating_Number__c = 2),
+(IB_CSI_Rating_Number__c = 3),
+(IB_CSI_Rating_Number__c = 4),
+(IB_CSI_Rating_Number__c = 5),
+(IB_CSI_Rating_Number__c = 6),
+(IB_CSI_Rating_Number__c = 7),
+(IB_CSI_Rating_Number__c = 8),
+(IB_CSI_Rating_Number__c = 9),
+(IB_CSI_Rating_Number__c = 10)))),
+
+(NOT(OR((ISBLANK(GM_CSI_Rating_Number__c)),
+(GM_CSI_Rating_Number__c = 1),
+(GM_CSI_Rating_Number__c = 2),
+(GM_CSI_Rating_Number__c = 3),
+(GM_CSI_Rating_Number__c = 4),
+(GM_CSI_Rating_Number__c = 5),
+(GM_CSI_Rating_Number__c = 6),
+(GM_CSI_Rating_Number__c = 7),
+(GM_CSI_Rating_Number__c = 8),
+(GM_CSI_Rating_Number__c = 9),
+(GM_CSI_Rating_Number__c = 10))))
+),
+
+IF( Text(CreatedDate) == null, True, False ) 
+)</errorConditionFormula>
+    <errorMessage>The IB,GM,TPS CSI ratings should be either &apos;Not Rated&apos; or have a value between 1 and 10.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Parts_Of_Banking_At_Risk__c</fullName>
+    <description>Parts of banking at risk  - US3617</description>
+    <externalId>false</externalId>
+    <inlineHelpText>What parts of your banking are you considering moving?</inlineHelpText>
+    <label>Parts of Banking at Risk</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

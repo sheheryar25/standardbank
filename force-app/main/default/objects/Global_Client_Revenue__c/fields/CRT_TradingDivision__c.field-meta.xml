@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CRT_TradingDivision__c</fullName>
+    <description>Field to capture Trade Division (SFP-5166)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Division to which revenue is earned against</inlineHelpText>
+    <label>Trading Division</label>
+    <length>80</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

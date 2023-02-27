@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SingletrackCMS__Has_Address__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <formula>NOT(ISBLANK(SingletrackCMS__Address__c))</formula>
+    <label>Has Address</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

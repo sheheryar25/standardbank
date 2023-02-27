@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Category__c</fullName>
+    <externalId>false</externalId>
+    <label>Case Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Activities</fullName>
+                <default>false</default>
+                <label>Activities</label>
+            </value>
+            <value>
+                <fullName>Campaign Management</fullName>
+                <default>false</default>
+                <label>Campaign Management</label>
+            </value>
+            <value>
+                <fullName>CFX</fullName>
+                <default>false</default>
+                <label>CFX</label>
+            </value>
+            <value>
+                <fullName>Clients</fullName>
+                <default>false</default>
+                <label>Clients</label>
+            </value>
+            <value>
+                <fullName>Client Team</fullName>
+                <default>false</default>
+                <label>Client Team</label>
+            </value>
+            <value>
+                <fullName>Contacts</fullName>
+                <default>false</default>
+                <label>Contacts</label>
+            </value>
+            <value>
+                <fullName>Content Management</fullName>
+                <default>false</default>
+                <label>Content Management</label>
+            </value>
+            <value>
+                <fullName>Data Management</fullName>
+                <default>false</default>
+                <label>Data Management</label>
+            </value>
+            <value>
+                <fullName>General Navigation</fullName>
+                <default>false</default>
+                <label>General Navigation</label>
+            </value>
+            <value>
+                <fullName>IT Infrastructure</fullName>
+                <default>false</default>
+                <label>IT Infrastructure</label>
+            </value>
+            <value>
+                <fullName>Login Issues</fullName>
+                <default>false</default>
+                <label>Login Issues</label>
+            </value>
+            <value>
+                <fullName>Mobile</fullName>
+                <default>false</default>
+                <label>Mobile</label>
+            </value>
+            <value>
+                <fullName>Opportunities</fullName>
+                <default>false</default>
+                <label>Opportunities</label>
+            </value>
+            <value>
+                <fullName>Outlook Sync</fullName>
+                <default>false</default>
+                <label>Outlook Sync</label>
+            </value>
+            <value>
+                <fullName>Password Reset</fullName>
+                <default>false</default>
+                <label>Password Reset</label>
+            </value>
+            <value>
+                <fullName>Production Issue</fullName>
+                <default>false</default>
+                <label>Production Issue</label>
+            </value>
+            <value>
+                <fullName>Reports &amp; Dashboards</fullName>
+                <default>false</default>
+                <label>Reports &amp; Dashboards</label>
+            </value>
+            <value>
+                <fullName>Sales Team</fullName>
+                <default>false</default>
+                <label>Sales Team</label>
+            </value>
+            <value>
+                <fullName>Training</fullName>
+                <default>false</default>
+                <label>Training</label>
+            </value>
+            <value>
+                <fullName>User - New</fullName>
+                <default>false</default>
+                <label>User - New</label>
+            </value>
+            <value>
+                <fullName>User - Off Board</fullName>
+                <default>false</default>
+                <label>User - Off Board</label>
+            </value>
+            <value>
+                <fullName>User - Transfer</fullName>
+                <default>false</default>
+                <label>User - Transfer</label>
+            </value>
+            <value>
+                <fullName>User - Update</fullName>
+                <default>false</default>
+                <label>User - Update</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

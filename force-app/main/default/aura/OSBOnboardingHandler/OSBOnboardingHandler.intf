@@ -1,0 +1,10 @@
+<aura:interface description="OSBOnboardingHandler">
+    <aura:attribute name="popUpCurrentPage" type="Integer" default="1"/>
+    <aura:attribute name="popUpMaxPages" type="Integer"/>
+    <aura:attribute name="popUpElement" type="Object"/>
+    <aura:attribute name="popUpTitle" type="String" />
+    <aura:attribute name="popUpContent" type="String" />
+    <aura:attribute name="popUpPreviousLabel" type="String" />
+    <aura:attribute name="showPopUp" type="Boolean" default="false"/>
+    <aura:attribute name="showPageNumber" type="Boolean" default="true"/>
+</aura:interface>

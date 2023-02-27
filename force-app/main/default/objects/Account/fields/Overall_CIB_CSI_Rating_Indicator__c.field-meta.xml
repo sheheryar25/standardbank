@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Overall_CIB_CSI_Rating_Indicator__c</fullName>
+    <description>This field captures the traffic light based on CIB rating choosed, created as per EN-0690</description>
+    <externalId>false</externalId>
+    <formula>IMAGE(
+CASE(Overall_CIB_CSI_Rating_Number__c,
+8, &quot;/resource/CamProducts/green-small.png&quot;,
+9, &quot;/resource/CamProducts/green-small.png&quot;,
+10,&quot;/resource/CamProducts/green-small.png&quot;,
+7, &quot;/resource/CamProducts/yellow-small.png&quot;,
+1, &quot;/resource/CamProducts/red-small.png&quot;,
+2, &quot;/resource/CamProducts/red-small.png&quot;,
+3, &quot;/resource/CamProducts/red-small.png&quot;,
+4, &quot;/resource/CamProducts/red-small.png&quot;,
+5, &quot;/resource/CamProducts/red-small.png&quot;,
+6, &quot;/resource/CamProducts/red-small.png&quot;,
+NULL,&quot;/resource/CamProducts/grey-small.png&quot;,
+&quot;/s.gif&quot;),
+&quot;status color&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>CIB Rating (CSI): 1-6 Client at Risk | 7 Room for Improvement | 8 Satisfied | 9-10 Extremely Satisfied</inlineHelpText>
+    <label>Overall CIB CSI Rating Indicator</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

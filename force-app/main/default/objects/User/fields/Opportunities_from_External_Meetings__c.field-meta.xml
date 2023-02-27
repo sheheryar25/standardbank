@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunities_from_External_Meetings__c</fullName>
+    <description>EN-0777 – Count of Opportunities that originated from External Meetings attended this year</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Count of Opportunities that originated from External Meetings attended this year</inlineHelpText>
+    <label>Opportunities from External Meetings</label>
+    <precision>4</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

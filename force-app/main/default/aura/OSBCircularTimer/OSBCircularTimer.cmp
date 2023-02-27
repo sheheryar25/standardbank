@@ -1,0 +1,29 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName" access="global">
+
+    <aura:attribute name="qrCodePage" type="Boolean" default="false" access="private" description="Specify if on qrcode page or in link device page" />
+    <aura:attribute name="Legend" type="String" access="private" description="Legend to display" />
+    <aura:attribute name="perText" type="String" default="0" access="public" description="Text to display inside circle. It is auto calculated field and used internally" />
+    <aura:attribute name="cirDeg" type="String" default="0" access="public" description="Degree of Progress to show. It is auto calculated field and used internally" />
+    <aura:attribute name="totalProgress" type="String" default="180" access="public" description="Total progress. It can be number OR API name of field" />
+    <aura:attribute name="actualProgress" type="String" default="180" access="public" description="Actual progress. It can be number OR API name of field" />
+    <aura:attribute name="theme" type="String" default="blue" access="private" description="Theme of Circular Progress Bar. Possible values are blue, green, orange" />
+    <aura:attribute name="size" type="String" default="Large" access="private" description="Size of Circular Progress Bar. Possible values are small, medium, big" />
+    <aura:attribute name="intervalId" type="String" default="0" access="private" description="Size of Circular Progress Bar. Possible values are small, medium, big" />
+
+    <aura:registerEvent name="timerEvent" type="c:OSBTimerEvent"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler event="c:OSBTimerEvent" action="{!c.resetTimer}"/>
+
+    <div class="clearFloats slds-align--absolute-center">
+        <div class="{! ( v.cirDeg > 179) ? 'container p50plus' : 'container' }">
+            <span>{!v.perText}</span>
+            <div class="slice">
+                <div class="bar" style = "{!'-webkit-transform: rotate('+v.cirDeg+'deg); -moz-transform: rotate('+v.cirDeg+'deg); -ms-transform: rotate('+v.cirDeg+'deg); -o-transform: rotate('+v.cirDeg+'deg); transform: rotate('+v.cirDeg+'deg); -ms-transform: rotate('+v.cirDeg+'deg);'}" ></div>
+                <div class="fill"></div>
+            </div>
+        </div>    
+    </div>
+    <div class="clearFloats slds-align--absolute-center legend">
+        {!v.Legend}
+    </div>
+</aura:component>

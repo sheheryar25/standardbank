@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BA_GroupParentClientInformationRight</fullName>
+    <description>BA &quot;Group Parent Client Information&quot; Section Right Column</description>
+    <displayedFields>
+        <field>Group_Parent_CIF_Number__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <displayedFields>
+        <field>Group_Parent_Client_Coordinator__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <displayedFields>
+        <field>Group_Parent_IBC_Target_Client__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <label>BA GroupParentClientInformationRight</label>
+</FieldSet>

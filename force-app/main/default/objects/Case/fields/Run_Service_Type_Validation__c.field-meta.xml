@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Run_Service_Type_Validation__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>SFP-10236 This field is used in conjuction with the Service Type field on the Service Type object to allow cases with inactive Service Types to be opened.</description>
+    <externalId>false</externalId>
+    <label>Run Service Type Validation</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

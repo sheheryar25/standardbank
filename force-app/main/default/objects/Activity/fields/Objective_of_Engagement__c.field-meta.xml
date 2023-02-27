@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Objective_of_Engagement__c</fullName>
+    <description>SFP-10892 [c] Field detailing the reason for communicating with a Client</description>
+    <externalId>false</externalId>
+    <label>Objective of Engagement</label>
+    <required>false</required>
+    <type>TextArea</type>
+</CustomField>

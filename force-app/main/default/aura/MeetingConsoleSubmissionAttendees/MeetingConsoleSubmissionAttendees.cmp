@@ -1,0 +1,145 @@
+<!--
+ - Created by Chibuye Kunda on 2019/11/26.
+ -->
+
+<aura:component controller="SubmissionAttendee_ctrl" access="global"  implements="force:appHostable,flexipage:availableForAllPageTypes" description="MeetingConsole_Task">
+    <aura:attribute name="columns" type="List"/>
+    <aura:attribute name="lookUps" type="List" default="[]"/>
+    <aura:attribute name="error" type="Object" default="{iserror:false,message:''}"/>
+    <aura:attribute name="isEditMode" type="boolean" default="false"/>
+    <aura:attribute name="isLoading" type="boolean" default="false"/>
+    <aura:attribute name="agendaId" type="string" default=""/>
+    <aura:attribute name="ERrecordId" type="string"/>
+    <aura:attribute name="nbacId" type="string"/>
+    <aura:attribute name="access" type="string" />
+    <aura:attribute name="submissionList" type="SubmissionAttendee_ctrl.InternalAttendeeWrappersub[]" />
+    <aura:attribute name="submissionAttendeesStatusOptions" type="String[]"/>
+    <aura:handler name="init" value="{! this }"  action="{!c.init}"/>
+    <aura:method name="dataTableMethodSubmissionAttendees" action="{!c.dataTableMethodSubmissionAttendees}">
+        <aura:attribute name="nbacdata" type="Map"/>
+    </aura:method>
+    <aura:method name="userHasAccess" action="{!c.userHasAccess}">
+        <aura:attribute name="perm" type="Map"/>
+    </aura:method>
+
+    <article class="slds-card" style="background-color: #f3f2f2 !important; min-height: 110px;overflow-x: hidden;">
+        <aura:renderIf isTrue="{!v.isLoading}">
+            <lightning:spinner alternativeText="Loading" size="medium" />
+        </aura:renderIf>
+        <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+
+                <div class="slds-media__body">
+                    <h2 class="slds-card__header-title">
+                        Submission Attendees
+                    </h2>
+                </div>
+                <div class="slds-no-flex">
+
+                        <aura:renderIf isTrue="{!v.isEditMode}">
+                            <aura:set attribute="else">
+
+                                <aura:renderIf isTrue="{!v.agendaId!=''}">
+                                    <lightning:button  label="Update Attendees" title="Update Attendees" onclick="{! c.clickToEdit }"/>
+                                    <aura:set attribute="else">
+                                        <lightning:button  label="Update Attendees" title="Update Attendees" onclick="{! c.clickToEdit }" disabled="true"/>
+                                    </aura:set>
+                                </aura:renderIf>
+                            </aura:set>
+
+                        </aura:renderIf>
+                </div>
+            </header>
+        </div>
+
+        <aura:if isTrue="{!v.isEditMode}">
+
+            <div class="slds-align_absolute-center slds-m-bottom_medium">
+                <lightning:button  label="Cancel" title="Cancel" onclick="{! c.clickToCancel }"/>
+                <lightning:button class="slds-button_brand" label="Save" title="Save" onclick="{! c.clickToSave }"/>
+            </div>
+
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered" style="height:200px">
+                <thead>
+                <tr class="slds-line-height_reset">
+                    <th scope="col">
+                        <div class="slds-truncate" title="Add/Remove">Add/Remove</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="Attendee name">Attendee name</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="Status">Status</div>
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <aura:iteration items="{!v.submissionList}" var="item" indexVar="count_x">
+                    <tr class="slds-hint-parent" >
+                        <td class="slds-text-align_right" role="gridcell">
+                            <div class="slds-checkbox" id="{!item.sobjAttendee.Contact_id__c}">
+                                <lightning:input type="checkbox" name="options" aura:id="{!'checkbox-'+count_x}" value="{!item.count_x}" checked="{!item.bChecked}" tabindex="-1" onchange="{!c.onCheckBoxChange}"/>
+                            </div>
+                        </td>
+                        <td data-label="Attendee name" scope="row">
+
+                            <c:UTL_LookupField   sObjectName="Call_Report_Attendees__c" fieldName="Contact_id__c"
+                                                 assignTo="{!item.sobjAttendee.Contact_id__c}" onchange="{!c.onLookupChange}"/>
+
+                        </td>
+                        <td data-label="Status">
+                            <div class="slds-truncate" title="Cloudhub">
+
+                                <div class="slds-form-element__control">
+
+                                    <div class="slds-select_container">
+                                        <select class="slds-select" id="{!count_x}"  name="submissionAttendeesStatusOptions"  onchange="{!c.onChangeSubmissionAttendeesStatusOptions}">
+                                            <aura:iteration items="{!v.submissionAttendeesStatusOptions}" var="statusOption">
+                                                <aura:renderIf isTrue="{!item.sobjAttendee.Status__c==statusOption.value}">
+                                                    <option value="{!statusOption.value}" selected="selected">{!statusOption.label}</option>
+                                                    <aura:set attribute="else">
+                                                        <option value="{!statusOption.value}">{!statusOption.label}</option>
+                                                    </aura:set>
+                                                </aura:renderIf>
+
+                                            </aura:iteration>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+
+                    </tr>
+                    <aura:renderIf isTrue="{!item.isError}">
+
+                        <tr  >
+                            <td class="slds-text-align_right" role="gridcell">
+                            </td>
+                            <td>
+
+                                <p style="color:#c23934;white-space: pre-wrap;">{!item.errorMessage}
+
+                                </p>
+                            </td>
+                            <td >
+                            </td>
+                        </tr>
+
+                    </aura:renderIf>
+                </aura:iteration>
+                </tbody>
+            </table>
+            <div class="slds-m-left_medium">
+                <lightning:button variant="base" label="Add rows" title="Add rows" onclick="{! c.addRow }"/>
+            </div>
+            <div class="slds-align_absolute-center">
+                <lightning:button  label="Cancel" title="Cancel" onclick="{! c.clickToCancel }"/>
+                <lightning:button class="slds-button_brand" label="Save" title="Save" onclick="{! c.clickToSave }"/>
+            </div>
+            <aura:set attribute="else">
+                <c:DataTable aura:id="child" lookUps="{!v.lookUps}" error="{!v.error}" columns="{!v.columns}" showRowNumberColumn="false"/>
+            </aura:set>
+        </aura:if>
+
+    </article>
+</aura:component>

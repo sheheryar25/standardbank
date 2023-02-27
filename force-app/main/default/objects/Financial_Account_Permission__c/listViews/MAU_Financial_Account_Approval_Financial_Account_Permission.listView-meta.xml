@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MAU_Financial_Account_Approval_Financial_Account_Permission</fullName>
+    <filterScope>Queue</filterScope>
+    <label>MAU Financial Account Approval</label>
+    <queue>MAU_Financial_Account_Approval</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

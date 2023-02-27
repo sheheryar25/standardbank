@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Requires_MFA__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>OneHub: Requires Multi-factor Authentication to access this solution (SFP-8123)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Requires Multi-factor Authentication to access this solution</inlineHelpText>
+    <label>Requires MFA</label>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NoEditTotalRevenueIfProductFacility</fullName>
+    <active>false</active>
+    <description>Deactivating this rule as part of SFP-10050</description>
+    <errorConditionFormula>ISCHANGED(StageName)&amp;&amp; ISPICKVAL(StageName, &apos;1 - Lead&apos;)  &amp;&amp; (Number_of_Facilities_attached__c &gt;0  || 
+ Number_of_Products_attached__c &gt;0)</errorConditionFormula>
+    <errorDisplayField>StageName</errorDisplayField>
+    <errorMessage>A developed opportunity with products or facilities records cannot be moved back to the Lead stage. Please review the related records and amend if applicable.</errorMessage>
+</ValidationRule>

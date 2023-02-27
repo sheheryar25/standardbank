@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Client_Segment__c</fullName>
+    <externalId>false</externalId>
+    <label>Client Segment</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Commercial</fullName>
+                <default>false</default>
+                <label>Commercial</label>
+            </value>
+            <value>
+                <fullName>SME</fullName>
+                <default>false</default>
+                <label>SME</label>
+            </value>
+            <value>
+                <fullName>Personal Markets</fullName>
+                <default>false</default>
+                <label>Personal Markets</label>
+            </value>
+            <value>
+                <fullName>Bancassurance</fullName>
+                <default>false</default>
+                <label>Bancassurance</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

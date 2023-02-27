@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Strengths__c</fullName>
+    <description>SFP-10205 [c] List of the strengths of this competitor at this client.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>List the strengths of this competitor at this client.</inlineHelpText>
+    <label>Strengths</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

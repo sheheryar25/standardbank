@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Average_Cheque_Issuing_Price__c</fullName>
+    <description>The average price of cheques issued</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The average price of cheques issued</inlineHelpText>
+    <label>Average Cheque Issuing Price</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

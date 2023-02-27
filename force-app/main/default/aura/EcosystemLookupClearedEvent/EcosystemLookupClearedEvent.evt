@@ -1,0 +1,7 @@
+<!--
+ - Created by Chibuye Kunda on 2019/08/07.
+ -->
+
+<aura:event type="COMPONENT"
+            description="This event will be used to notify all components that are listening for event that lookup is cleared">
+</aura:event>

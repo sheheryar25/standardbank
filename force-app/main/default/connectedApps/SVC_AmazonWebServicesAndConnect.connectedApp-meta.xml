@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>test@email.com</contactEmail>
+    <description>SFP-11212 - Allows AWS to integrate CTI functionality with Salesforce</description>
+    <label>AWS &amp; Amazon Connect</label>
+    <oauthConfig>
+        <callbackUrl>http://localhost:1717/OauthRedirect</callbackUrl>
+        <certificate>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</certificate>
+        <consumerKey>3MVG9sSN_PMn8tjSodyD28jSJp5u0dmZLuldRrordzm0h3zYZ.V6bByHjdXaCA4S70ZUCRDWNFErUMmMgBvs6</consumerKey>
+        <isAdminApproved>true</isAdminApproved>
+        <isClientCredentialEnabled>false</isClientCredentialEnabled>
+        <isCodeCredentialEnabled>false</isCodeCredentialEnabled>
+        <isCodeCredentialPostOnly>false</isCodeCredentialPostOnly>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isSecretRequiredForRefreshToken>false</isSecretRequiredForRefreshToken>
+        <scopes>Api</scopes>
+        <scopes>RefreshToken</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>ENFORCE</ipRelaxation>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+    <profileName>API Only User</profileName>
+</ConnectedApp>

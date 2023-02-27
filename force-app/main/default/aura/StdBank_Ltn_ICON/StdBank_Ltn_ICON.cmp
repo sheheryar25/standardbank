@@ -1,0 +1,8 @@
+<aura:component description="StdBank_Ltn_ICON">
+    <aura:attribute name="type" type="String"   default="standard"  description="Type of SLDS ICON" />
+    <aura:attribute name="name" type="String"   default=""          description="Name of desired icon" />
+
+    <span class="slds-icon_container slds-icon-standard-account">
+        <c:StdBank_Ltn_SVG ariaHidden="true" class="slds-icon" category="{!v.type}" type="{!v.name}" />
+    </span>
+</aura:component>

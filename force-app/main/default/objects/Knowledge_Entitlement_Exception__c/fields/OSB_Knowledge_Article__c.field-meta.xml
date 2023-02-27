@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OSB_Knowledge_Article__c</fullName>
+    <description>This field is used to link the Knowledge Entitlement Exception record to the specific Knowledge Article it is applicable to. (SGPRT-2974)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select the Knowledge Article this exception is applicable to.</inlineHelpText>
+    <label>Knowledge</label>
+    <referenceTo>Knowledge__kav</referenceTo>
+    <relationshipLabel>Knowledge Entitlement Exceptions</relationshipLabel>
+    <relationshipName>Knowledge_Entitlement_Exceptions</relationshipName>
+    <relationshipOrder>1</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>true</writeRequiresMasterRead>
+</CustomField>

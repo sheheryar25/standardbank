@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ROA_Commercial_Entities</fullName>
+    <columns>NAME</columns>
+    <columns>Parent__c</columns>
+    <columns>ROA_Customer_Number__c</columns>
+    <columns>Status__c</columns>
+    <columns>Relationship_Manager__c</columns>
+    <columns>Telephone_RM__c</columns>
+    <columns>Business_Center__c</columns>
+    <columns>Head__c</columns>
+    <columns>Telephone_BCH__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>PBB_ROA_Entity__c.Commercial_Client</value>
+    </filters>
+    <label>ROA Commercial Entities</label>
+</ListView>

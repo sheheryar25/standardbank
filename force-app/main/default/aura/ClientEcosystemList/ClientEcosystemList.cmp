@@ -1,0 +1,123 @@
+<!--
+ - Created by Emmanuel Mulea Nocks on 2020/02/19.
+ -->
+
+<aura:component description="ClientEcosystemList" implements="flexipage:availableForAllPageTypes,force:hasRecordId" controller="StdBank_Ltn_Ecosystem">
+    <ltng:require scripts="{!$Resource.UTL_JavaScript}" afterScriptsLoaded="{!c.init}"/>
+    <aura:attribute name="recordId" type="string" access="public"/>
+    <aura:attribute name="baseUrl" type="string" access="public"/>
+    <aura:attribute name="iserror" type="boolean"  default="false" access="public"/>
+    <aura:attribute name="errorMsg" type="string"  access="public"/>
+    <aura:attribute name="isWaiting" type="Boolean" default="true" access="public"/>
+    <aura:attribute name="isRGN" type="Boolean" default="false" access="public"/>
+    <aura:attribute name="isParent" type="Boolean" default="false" access="public"/>
+    <aura:attribute name="newEntity" type="Boolean" default="false" access="private" />
+    <aura:attribute name="isPermitted" type="Boolean" default="true" access="private" />
+    <aura:attribute name="showModal" type="boolean" default="false"  access="public" />
+    <aura:attribute name="ecosystem" type="Ecosystem__c" access="public"/>
+    <aura:attribute name="newEcosystem" type="Ecosystem__c" default="{'sobjectType':'Ecosystem__c', 'Relationship_Group_Number__c':'null',Relationship_Group_Name__c:'null',Client_Name__c:'null'}" access="public"/>
+    <lightning:navigation aura:id="navService"/>
+    <aura:handler event="c:ClientEcosystem_Event" name="ClientEcosystemModal_Event" action="{!c.handleClientEcosystemEvent}"/>
+    <aura:handler event="c:ClientEcosystem_Event" name="ClientEcosystem_Event" action="{!c.handleClientEcosystemEvent}"/>
+    <aura:if isTrue="{!v.isPermitted}">
+    <div class="slds" >
+    <article class="slds-card" >
+        <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="slds-media__figure">
+                    <lightning:icon iconName="custom:custom5" size="small" alternativeText="Ecosystem"/>
+                </div>
+                <div class="slds-media__body">
+                    <h2>
+                        <a href="javascript:void(0);" class="slds-card__header-link slds-truncate" title="[object Object]">
+                            <span class="slds-text-heading_small">Client Ecosystem</span>
+                        </a>
+                    </h2>
+                </div>
+            </header>
+            <div class="slds-no-flex">
+                <ul class="slds-button-group-list">
+                    <li>
+                        <aura:if isTrue="{!v.ecosystem.Name}">
+                                <button class="slds-button slds-button_neutral" disabled="disabled" onclick="{!c.onNew}">{!$Label.c.New}</button>
+                            <aura:set attribute="else">
+                                <button class="slds-button slds-button_neutral" onclick="{!c.onNew}">{!$Label.c.New}</button>
+                            </aura:set>
+                        </aura:if>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="slds-card__body slds-card__body_inner slds-is-relative" >
+            <aura:if isTrue="{!v.isWaiting}">
+                <div class="slds-spinner_container">
+                    <div class="slds-spinner slds-spinner_small">
+                        <div class="slds-spinner__dot-a"></div>
+                        <div class="slds-spinner__dot-b"></div>
+                    </div>
+                </div>
+            </aura:if>
+            <table class="slds-table slds-table_bordered slds-no-row-hover slds-table_cell-buffer">
+                <thead>
+                <tr >
+                    <th class="slds-truncate">Ecosystem ID</th>
+                    <th class="slds-truncate">Relationship Group Name</th>
+                    <th class="slds-truncate">Relationship Group Number</th>
+                    <th class="slds-truncate responsiveHide">Owner</th>
+                </tr>
+                </thead>
+                <tbody>
+                <aura:if isTrue="{!v.ecosystem.Name}">
+                    <tr class="slds-hint-parent">
+                        <td class="slds-cell-edit">
+						        <span class="slds-grid slds-grid_align-spread">
+									<a href="{!v.baseUrl+v.ecosystem.Id}" target="_blank">{!v.ecosystem.Name}</a>
+						        </span>
+                        </td>
+                        <td class="slds-cell-edit">
+								<span class="slds-grid slds-grid_align-spread">
+									{! v.ecosystem.Relationship_Group_Name__c}
+								</span>
+                        </td>
+                        <td class="slds-cell-edit">
+								<span class="slds-grid slds-grid_align-spread">
+									{!v.ecosystem.Relationship_Group_Number__c}
+								</span>
+                        </td>
+
+                        <td class="slds-cell-edit responsiveHide">
+								<span class="slds-grid slds-grid_align-spread">
+									{!v.ecosystem.Owner.Name}
+								</span>
+                        </td>
+                    </tr>
+                    </aura:if>
+                </tbody>
+            </table>
+            <aura:if isTrue="{!and( not(v.isWaiting),not(v.ecosystem.Name),not(v.iserror))}">
+            <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_warning" role="alert">
+                <span class="slds-assistive-text">warning</span>
+                <lightning:icon iconName="utility:warning" size="x-small" class="slds-m-right_x-small" alternativeText="warning"/>
+                <h2>No Ecosystem</h2>
+            </div>
+            </aura:if>
+
+            <aura:if isTrue="{!v.iserror}">
+                <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_warning" role="alert">
+                    <span class="slds-assistive-text">warning</span>
+                    <lightning:icon iconName="utility:warning" size="x-small" class="slds-m-right_x-small" alternativeText="warning"/>
+                    <h2>An error has occurred, {!v.errorMsg} </h2>
+                </div>
+            </aura:if>
+        </div>
+        <aura:if isTrue="{!and(v.ecosystem.Name)}">
+        <c:ClientEcosystemChart recordId="{!v.recordId}"/>
+        </aura:if>
+    </article>
+    <aura:if isTrue="{!and(v.showModal, and(v.isParent,v.isRGN))}">
+        <c:EcosystemNewEcosystem isActionOverride="false" clickedFromClientPage="true" ecosystem="{!v.newEcosystem}" />
+    </aura:if>
+        <c:ClientEcosystemModals  baseUrl="{!v.baseUrl}" isRGN="{!v.isRGN}" isParent="{!v.isParent}" />
+    </div>
+    </aura:if>
+</aura:component>

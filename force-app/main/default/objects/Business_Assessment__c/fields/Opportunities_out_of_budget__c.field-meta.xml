@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunities_out_of_budget__c</fullName>
+    <description>Number of the opportunities that are not part of the client budget.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Number of the opportunities that are not part of the client budget.</inlineHelpText>
+    <label>Opportunities out of budget</label>
+    <summaryFilterItems>
+        <field>Assessment_Opportunity__c.Is_Opportunity_part_of_Client_Budget__c</field>
+        <operation>notEqual</operation>
+        <value>Yes</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Assessment_Opportunity__c.Business_Assessment__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

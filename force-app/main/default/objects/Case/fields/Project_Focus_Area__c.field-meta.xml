@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Project_Focus_Area__c</fullName>
+    <description>Is this a tactical or strategic change?
+
+            CRM-Enhanced Cases for Change Request Functionality (C Reinecke 2010/08)</description>
+    <externalId>false</externalId>
+    <label>Project Focus Area</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Tactical</fullName>
+                <default>false</default>
+                <label>Tactical</label>
+            </value>
+            <value>
+                <fullName>Strategic</fullName>
+                <default>false</default>
+                <label>Strategic</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

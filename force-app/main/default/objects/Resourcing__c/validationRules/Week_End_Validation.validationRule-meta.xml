@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Week_End_Validation</fullName>
+    <active>true</active>
+    <description>Week end has to be Friday [SFP-4974]</description>
+    <errorConditionFormula>WEEKDAY( Week_End_Date__c ) &lt;&gt; 6</errorConditionFormula>
+    <errorMessage>Week end has to be Friday</errorMessage>
+</ValidationRule>

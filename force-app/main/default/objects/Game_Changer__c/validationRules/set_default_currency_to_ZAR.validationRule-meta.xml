@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>set_default_currency_to_ZAR</fullName>
+    <active>true</active>
+    <description>US-1214:RTB - OM - Game Changers</description>
+    <errorConditionFormula>NOT( ISPICKVAL( CurrencyIsoCode , &quot;ZAR&quot;))</errorConditionFormula>
+    <errorMessage>All Game Changers are managed in ZAR, please set the currency to ZAR and ensure all your revenue numbers are reflecting ZAR amounts</errorMessage>
+</ValidationRule>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Created_or_Modified_Date__c</fullName>
+    <description>Formula field to store whether the opportunity has been created, or modified by a non-admin user.</description>
+    <externalId>false</externalId>
+    <formula>IF(  
+      AND (
+        $Profile.Name &lt;&gt; &quot;Business Administrator&quot;,
+        $Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+        $Profile.Name &lt;&gt; &quot;Api User&quot;,
+        LastModifiedDate &gt;  CreatedDate
+      ) ,
+LastModifiedDate , CreatedDate )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Created or Modified Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

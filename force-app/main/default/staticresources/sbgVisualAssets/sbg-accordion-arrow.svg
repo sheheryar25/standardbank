@@ -1,0 +1,27 @@
+
+	<!--?xml version="1.0" encoding="UTF-8"?--><svg
+		xmlns="http://www.w3.org/2000/svg"
+		xmlns:xlink="http://www.w3.org/1999/xlink" width="12px" height="7px"
+		viewBox="0 0 12 7" version="1.1">
+		<!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+		<title>icon-arrow-accordian</title>
+		<desc>Created with Sketch.</desc>
+		<defs>
+			<linearGradient xy="100%" id="gradient">
+				<stop stop-color="#fff" offset="0%"></stop>
+				<stop stop-color="#fff" offset="100%"></stop>
+			</linearGradient>
+		</defs>
+		<g id="Standard-Bank---Icon-Setup" stroke="none" stroke-width="1"
+			fill="none" fill-rule="evenodd"
+			transform="translate(-377.000000, -745.000000)">
+			<g id="icon-arrow-accordian"
+				transform="translate(377.000000, 745.000000)" fill="#0089FF"
+				fill-rule="nonzero">
+				<polygon id="flechita-copy-2"
+					transform="translate(6.384615, 3.500000) rotate(90.000000) translate(-6.384615, -3.500000) "
+					points="4.4464665 9.0000005 9.7692305 3.5000005 4.4464665 -1.9999995 2.9999995 -1.60536815 7.9408485 3.5000005 2.9999995 8.6053692">
+				</polygon>
+			</g>
+		</g>
+	</svg>

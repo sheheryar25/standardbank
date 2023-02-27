@@ -1,0 +1,143 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" controller="OSB_ApiDetails_CTRL">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="apiProduct" type="Object" access="private"/>
+    <aura:attribute name="apiProductVersion" type="String" access="private"/>
+    <aura:attribute name="apiProductTitle" type="String" access="private"/>
+    <aura:attribute name="apiProductIntro" type="String" access="private"/>
+    <aura:attribute name="methods" type="Object[]" access="private"/>
+    <aura:attribute name="childApis" type="Object[]" access="private"/>
+    <aura:attribute name="definitions" type="Object[]" access="private"/>
+    <aura:attribute name="isLoading" type="Boolean" default="true" access="private"/>
+    
+    <aura:registerEvent name="breadcrumbEvent" type="c:OSBBreadcrumbEvent"/>
+    
+    <div class="apidetails-container">
+        <div class="apidetails" id="apidetails">
+            <div class="apidetails__content">
+                <div class="apidetails__left slds-large-size_2-of-12">
+                    <nav class="apidetails__navigation hidden-class">
+                        <aura:if isTrue="{!v.childApis.length > 0}">
+                            <div>
+                                <h2>APIs</h2>
+                                <ul class="mb_32">
+                                    <aura:iteration items="{!v.childApis}" var="child" indexVar="index">
+                                        <li class="apidetails__child-container">
+                                            <a onclick="{!c.handleAPINavigation}" aura:id="childApiLink"  data-id="{!index}"
+                                               class="{!index == 0 ? 'apidetails__child apidetails__child__selected' : 'apidetails__child'}"
+                                               data-text="{!'API Details | ' + child.Title__c}" id="{!'btnChild' + index}">
+                                                {!child.Title__c}
+                                            </a>
+                                        </li>
+                                    </aura:iteration>
+                                </ul>
+                            </div>
+                        </aura:if>
+                        <aura:if isTrue="{!v.isLoading}">
+                            <c:OSBLoadingScreen />
+                            <aura:set attribute="else">
+                                <h2>Operations</h2>
+                                <ul class="mb_32">
+                                    <aura:iteration items="{!v.methods}" var="method" indexVar="index">
+                                        <li class="apidetails__method-container">
+                                            <a onclick="{!c.handleNavigation}" aura:id="methodLink" data-href="{!method.path}" data-id="{!index}"
+                                               class="{!index == 0 ? 'apidetails__method apidetails__method__selected' : 'apidetails__method'}"
+                                               data-text="{!'API Details | ' + method.method + ' ' + method.tag}" id="{!'operation' + index}">
+                                                {!method.method + ' ' + method.tag}
+                                            </a>
+                                        </li>
+                                    </aura:iteration>
+                                </ul>
+                                <h2>Definitions</h2>
+                                <ul class="mb_32">
+                                    <aura:iteration items="{!v.definitions}" var="definition" indexVar="index">
+                                        <li class="apidetails__method-container">
+                                            <a class="apidetails__method" onclick="{!c.handleNavigation}" 
+                                               data-href="{!definition.href}" data-id="uitlink_link" data-text="{!'API Details | ' + definition.name}" id="{!'defin' + index}">
+                                                {!definition.name}
+                                            </a>
+                                        </li>
+                                    </aura:iteration>
+                                </ul>
+                            </aura:set> 
+                        </aura:if>
+                    </nav>
+                </div>
+                <aura:if isTrue="{!v.isLoading}">
+                    <c:OSBLoadingScreen />
+                    <aura:set attribute="else">
+                        <div class="apidetails__info slds-size_6-of-6 slds-medium-size_12-of-12 slds-large-size_6-of-12">
+                            <div class="apidetails__header">
+                                <div class="apidetails__header-version">
+                                    <h1 class="apidetails__title">{!v.apiProductTitle}</h1>
+                                    <div class="apidetails__version">V{!v.apiProductVersion}</div>
+                                </div>
+                                <a class="btn btn darkblue apidetails_subscribebtn" target="_blank" href="{!v.apiProduct.Sign_Up_URL__c}" data-id="uitlink_link" data-text="API Details | Sign up to subscribe">Sign up to subscribe</a>
+                            </div>
+                            <div class="apidetails__description">
+                                {!v.apiProductIntro}
+                            </div>
+                            <aura:iteration items="{!v.methods}" var="method">
+                                <div id="{!method.path}" class="apidetails__operation-container">
+                                    <h2  class="apidetails__subtitle">{!method.method + ' ' + method.tag}</h2>
+                                    <div class="apidetails__basic">
+                                        <div class="apidetails__basic--row">
+                                            <div class="apidetails__basic--cell apidetails__bold">Method</div>
+                                            <div class="apidetails__basic--cell apidetails__uppercase">{!method.method}</div>
+                                        </div>
+                                        <div class="apidetails__basic--row">
+                                            <div class="apidetails__basic--cell apidetails__bold">Endpoint</div>
+                                            <div class="apidetails__basic--cell">{!method.path}</div>
+                                        </div>
+                                    </div>
+                                    <aura:if isTrue="{!method.parameters.length > 0}">
+                                        <h3 class="apidetails__subtitle">Parameters</h3>
+                                        <table class="apidetails__parameters">
+                                            <tr class="apidetails__parameters--row">
+                                                <th class="apidetails__parameters--cell">Field</th>
+                                                <th class="apidetails__parameters--cell">Value</th>
+                                                <th class="apidetails__parameters--cell">Description</th>
+                                            </tr>
+                                            <aura:iteration items="{!method.parameters}" var="parameter">
+                                                <tr class="apidetails__parameters--row">
+                                                    <td class="apidetails__parameters--cell">{!parameter.name}</td>
+                                                    <td class="apidetails__parameters--cell">{!parameter.type}</td>
+                                                    <td class="apidetails__parameters--cell">{!parameter.description}</td>
+                                                </tr>
+                                            </aura:iteration>
+                                        </table>
+                                    </aura:if>
+                                    <h3 class="apidetails__subtitle">Responses</h3>
+                                    <table class="apidetails__parameters">
+                                        <tr class="apidetails__parameters--row">
+                                            <th class="apidetails__parameters--cell">Code</th>
+                                            <th class="apidetails__parameters--cell">Output</th>
+                                        </tr>
+                                        <aura:iteration items="{!method.responses}" var="response">
+                                            <tr class="apidetails__parameters--row">
+                                                <td class="apidetails__parameters--cell">{!response.code}</td>
+                                                <td class="apidetails__parameters--cell">
+                                                    {!response.description}
+                                                    <div class="apidetails__link" onclick="{!c.handleNavigation}" data-href="{!response.output}"
+                                                         data-id="uitlink_link" data-text="{!'API Details | ' + response.code}">{!response.output}</div>
+                                                </td>
+                                            </tr>
+                                        </aura:iteration>
+                                    </table>
+                                </div>
+                            </aura:iteration>
+                            <h2 class="apidetails__subtitle">Definitions</h2>
+                            <aura:iteration items="{!v.definitions}" var="definition">
+                                <div id="{!definition.href}">
+                                    <h3 class="apidetails__subtitle">{!definition.name}</h3>
+                                    <div  class="apidetails__parameters--cell code_snipet apidetails__parameters">
+                                        <aura:unescapedHtml value="{!definition.body}"/>
+                                    </div>
+                                </div>
+                            </aura:iteration>
+                        </div>
+                    </aura:set> 
+                </aura:if>
+            </div>
+        </div>
+    </div>
+</aura:component>

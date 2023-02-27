@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Interests__c</fullName>
+    <description>Renamed from &quot;Interested In&quot;</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Renamed from &apos;Interested In&apos;</inlineHelpText>
+    <label>Business Interests</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Africa</fullName>
+                <default>false</default>
+                <label>Africa</label>
+            </value>
+            <value>
+                <fullName>Asia</fullName>
+                <default>false</default>
+                <label>Asia</label>
+            </value>
+            <value>
+                <fullName>CEEMEA</fullName>
+                <default>false</default>
+                <label>CEEMEA</label>
+            </value>
+            <value>
+                <fullName>Latin America</fullName>
+                <default>false</default>
+                <label>Latin America</label>
+            </value>
+            <value>
+                <fullName>Middle East</fullName>
+                <default>false</default>
+                <label>Middle East</label>
+            </value>
+            <value>
+                <fullName>Bonds</fullName>
+                <default>false</default>
+                <label>Bonds</label>
+            </value>
+            <value>
+                <fullName>Commodities</fullName>
+                <default>false</default>
+                <label>Commodities</label>
+            </value>
+            <value>
+                <fullName>Equity</fullName>
+                <default>false</default>
+                <label>Equity</label>
+            </value>
+            <value>
+                <fullName>FX</fullName>
+                <default>false</default>
+                <label>FX</label>
+            </value>
+            <value>
+                <fullName>Repos</fullName>
+                <default>false</default>
+                <label>Repos</label>
+            </value>
+            <value>
+                <fullName>Structured Products</fullName>
+                <default>false</default>
+                <label>Structured Products</label>
+            </value>
+            <value>
+                <fullName>Short-Dated</fullName>
+                <default>false</default>
+                <label>Short-Dated</label>
+            </value>
+            <value>
+                <fullName>Medium-Dated</fullName>
+                <default>false</default>
+                <label>Medium-Dated</label>
+            </value>
+            <value>
+                <fullName>Long-Dated</fullName>
+                <default>false</default>
+                <label>Long-Dated</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>10</visibleLines>
+</CustomField>

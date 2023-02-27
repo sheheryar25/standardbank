@@ -1,0 +1,1135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Unit__c</fullName>
+    <externalId>false</externalId>
+    <label>User Business Unit</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>User_Division__c</controllingField>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Agriculture</fullName>
+                <default>false</default>
+                <label>Agriculture</label>
+            </value>
+            <value>
+                <fullName>Bank Sector</fullName>
+                <default>false</default>
+                <label>Bank Sector</label>
+            </value>
+            <value>
+                <fullName>Base Metals</fullName>
+                <default>false</default>
+                <label>Base Metals</label>
+            </value>
+            <value>
+                <fullName>Br71C Regional Sales</fullName>
+                <default>false</default>
+                <label>Br71C Regional Sales</label>
+            </value>
+            <value>
+                <fullName>Branch</fullName>
+                <default>false</default>
+                <label>Branch</label>
+            </value>
+            <value>
+                <fullName>Business Acquisition</fullName>
+                <default>false</default>
+                <label>Business Acquisition</label>
+            </value>
+            <value>
+                <fullName>Business Banking Channel</fullName>
+                <default>false</default>
+                <label>Business Banking Channel</label>
+            </value>
+            <value>
+                <fullName>Business Banking Channel Head Office</fullName>
+                <default>false</default>
+                <label>Business Banking Channel Head Office</label>
+            </value>
+            <value>
+                <fullName>Business Banking Head Office</fullName>
+                <default>false</default>
+                <label>Business Banking Head Office</label>
+            </value>
+            <value>
+                <fullName>Business Development</fullName>
+                <default>false</default>
+                <label>Business Development</label>
+            </value>
+            <value>
+                <fullName>Buy-Side</fullName>
+                <default>false</default>
+                <label>Buy-Side</label>
+            </value>
+            <value>
+                <fullName>Cape Head</fullName>
+                <default>false</default>
+                <label>Cape Head</label>
+            </value>
+            <value>
+                <fullName>Capital Markets</fullName>
+                <default>false</default>
+                <label>Capital Markets</label>
+            </value>
+            <value>
+                <fullName>Cash</fullName>
+                <default>false</default>
+                <label>Cash</label>
+            </value>
+            <value>
+                <fullName>CDG</fullName>
+                <default>false</default>
+                <label>CDG</label>
+            </value>
+            <value>
+                <fullName>China</fullName>
+                <default>false</default>
+                <label>China</label>
+            </value>
+            <value>
+                <fullName>China/Africa</fullName>
+                <default>false</default>
+                <label>China/Africa</label>
+            </value>
+            <value>
+                <fullName>CIB</fullName>
+                <default>false</default>
+                <label>CIB</label>
+            </value>
+            <value>
+                <fullName>Client Access</fullName>
+                <default>false</default>
+                <label>Client Access</label>
+            </value>
+            <value>
+                <fullName>Client Coverage</fullName>
+                <default>false</default>
+                <label>Client Coverage</label>
+            </value>
+            <value>
+                <fullName>Client Onboarding</fullName>
+                <default>false</default>
+                <label>Client Onboarding</label>
+            </value>
+            <value>
+                <fullName>Client Service</fullName>
+                <default>false</default>
+                <label>Client Service</label>
+            </value>
+            <value>
+                <fullName>Client Services Operation</fullName>
+                <default>false</default>
+                <label>Client Services Operation</label>
+            </value>
+            <value>
+                <fullName>Client Solutions</fullName>
+                <default>false</default>
+                <label>Client Solutions</label>
+            </value>
+            <value>
+                <fullName>Coastal Region</fullName>
+                <default>false</default>
+                <label>Coastal Region</label>
+            </value>
+            <value>
+                <fullName>Commercial Banking Channel</fullName>
+                <default>false</default>
+                <label>Commercial Banking Channel</label>
+            </value>
+            <value>
+                <fullName>Commercial Banking Channel Head Office</fullName>
+                <default>false</default>
+                <label>Commercial Banking Channel Head Office</label>
+            </value>
+            <value>
+                <fullName>Commercial Banking Head Office</fullName>
+                <default>false</default>
+                <label>Commercial Banking Head Office</label>
+            </value>
+            <value>
+                <fullName>Commodities</fullName>
+                <default>false</default>
+                <label>Commodities</label>
+            </value>
+            <value>
+                <fullName>Compliance</fullName>
+                <default>false</default>
+                <label>Compliance</label>
+            </value>
+            <value>
+                <fullName>Conglomerates Commodities &amp; General Commerce</fullName>
+                <default>false</default>
+                <label>Conglomerates Commodities &amp; General Commerce</label>
+            </value>
+            <value>
+                <fullName>Consumer</fullName>
+                <default>false</default>
+                <label>Consumer</label>
+            </value>
+            <value>
+                <fullName>Core Sectors</fullName>
+                <default>false</default>
+                <label>Core Sectors</label>
+            </value>
+            <value>
+                <fullName>Corporate Finance</fullName>
+                <default>false</default>
+                <label>Corporate Finance</label>
+            </value>
+            <value>
+                <fullName>Corporates</fullName>
+                <default>false</default>
+                <label>Corporates</label>
+            </value>
+            <value>
+                <fullName>Credit</fullName>
+                <default>false</default>
+                <label>Credit</label>
+            </value>
+            <value>
+                <fullName>CRM</fullName>
+                <default>false</default>
+                <label>CRM</label>
+            </value>
+            <value>
+                <fullName>Cross-Border Debt &amp; Financial Adv</fullName>
+                <default>false</default>
+                <label>Cross-Border Debt &amp; Financial Adv</label>
+            </value>
+            <value>
+                <fullName>Debt Capital Markets</fullName>
+                <default>false</default>
+                <label>Debt Capital Markets</label>
+            </value>
+            <value>
+                <fullName>Debt Products</fullName>
+                <default>false</default>
+                <label>Debt Products</label>
+            </value>
+            <value>
+                <fullName>Debt Solutions</fullName>
+                <default>false</default>
+                <label>Debt Solutions</label>
+            </value>
+            <value>
+                <fullName>Debt Solutions CFS</fullName>
+                <default>false</default>
+                <label>Debt Solutions CFS</label>
+            </value>
+            <value>
+                <fullName>Debt Solutions E&amp;I Finance</fullName>
+                <default>false</default>
+                <label>Debt Solutions E&amp;I Finance</label>
+            </value>
+            <value>
+                <fullName>Debt Solutions E&amp; I Finance</fullName>
+                <default>false</default>
+                <label>Debt Solutions E&amp; I Finance</label>
+            </value>
+            <value>
+                <fullName>Debt Solutions RE Finance</fullName>
+                <default>false</default>
+                <label>Debt Solutions RE Finance</label>
+            </value>
+            <value>
+                <fullName>Debt Solutions Sustainable Finance</fullName>
+                <default>false</default>
+                <label>Debt Solutions Sustainable Finance</label>
+            </value>
+            <value>
+                <fullName>Digital</fullName>
+                <default>false</default>
+                <label>Digital</label>
+            </value>
+            <value>
+                <fullName>Distribution</fullName>
+                <default>false</default>
+                <label>Distribution</label>
+            </value>
+            <value>
+                <fullName>Diversified Industries</fullName>
+                <default>false</default>
+                <label>Diversified Industries</label>
+            </value>
+            <value>
+                <fullName>Diversified Lending &amp; Leverage</fullName>
+                <default>false</default>
+                <label>Diversified Lending &amp; Leverage</label>
+            </value>
+            <value>
+                <fullName>Durables, Logistics &amp; Services</fullName>
+                <default>false</default>
+                <label>Durables, Logistics &amp; Services</label>
+            </value>
+            <value>
+                <fullName>EB&amp;SI</fullName>
+                <default>false</default>
+                <label>EB&amp;SI</label>
+            </value>
+            <value>
+                <fullName>Energy</fullName>
+                <default>false</default>
+                <label>Energy</label>
+            </value>
+            <value>
+                <fullName>Enterprise Banking Channel</fullName>
+                <default>false</default>
+                <label>Enterprise Banking Channel</label>
+            </value>
+            <value>
+                <fullName>Enterprise Banking Channel Head Office</fullName>
+                <default>false</default>
+                <label>Enterprise Banking Channel Head Office</label>
+            </value>
+            <value>
+                <fullName>Enterprise Banking Head Office</fullName>
+                <default>false</default>
+                <label>Enterprise Banking Head Office</label>
+            </value>
+            <value>
+                <fullName>Enterprise Direct</fullName>
+                <default>false</default>
+                <label>Enterprise Direct</label>
+            </value>
+            <value>
+                <fullName>Entrepreneur Channel</fullName>
+                <default>false</default>
+                <label>Entrepreneur Channel</label>
+            </value>
+            <value>
+                <fullName>Entrepreneur Channel Head Office</fullName>
+                <default>false</default>
+                <label>Entrepreneur Channel Head Office</label>
+            </value>
+            <value>
+                <fullName>Entrepreneur Head Office</fullName>
+                <default>false</default>
+                <label>Entrepreneur Head Office</label>
+            </value>
+            <value>
+                <fullName>Equities</fullName>
+                <default>false</default>
+                <label>Equities</label>
+            </value>
+            <value>
+                <fullName>Equity Derivatives</fullName>
+                <default>false</default>
+                <label>Equity Derivatives</label>
+            </value>
+            <value>
+                <fullName>Exchange Control</fullName>
+                <default>false</default>
+                <label>Exchange Control</label>
+            </value>
+            <value>
+                <fullName>Executive</fullName>
+                <default>false</default>
+                <label>Executive</label>
+            </value>
+            <value>
+                <fullName>Financial Institutions</fullName>
+                <default>false</default>
+                <label>Financial Institutions</label>
+            </value>
+            <value>
+                <fullName>Foreign Exchange</fullName>
+                <default>false</default>
+                <label>Foreign Exchange</label>
+            </value>
+            <value>
+                <fullName>GM Central</fullName>
+                <default>false</default>
+                <label>GM Central</label>
+            </value>
+            <value>
+                <fullName>Industrials</fullName>
+                <default>false</default>
+                <label>Industrials</label>
+            </value>
+            <value>
+                <fullName>Insurance</fullName>
+                <default>false</default>
+                <label>Insurance</label>
+            </value>
+            <value>
+                <fullName>Interest Rates Derivatives</fullName>
+                <default>false</default>
+                <label>Interest Rates Derivatives</label>
+            </value>
+            <value>
+                <fullName>International Banking</fullName>
+                <default>false</default>
+                <label>International Banking</label>
+            </value>
+            <value>
+                <fullName>International Development Group</fullName>
+                <default>false</default>
+                <label>International Development Group</label>
+            </value>
+            <value>
+                <fullName>International Trade Services</fullName>
+                <default>false</default>
+                <label>International Trade Services</label>
+            </value>
+            <value>
+                <fullName>Investment Banking General</fullName>
+                <default>false</default>
+                <label>Investment Banking General</label>
+            </value>
+            <value>
+                <fullName>Investment Banking Sector</fullName>
+                <default>false</default>
+                <label>Investment Banking Sector</label>
+            </value>
+            <value>
+                <fullName>Investor Services</fullName>
+                <default>false</default>
+                <label>Investor Services</label>
+            </value>
+            <value>
+                <fullName>IS</fullName>
+                <default>false</default>
+                <label>IS</label>
+            </value>
+            <value>
+                <fullName>Legal</fullName>
+                <default>false</default>
+                <label>Legal</label>
+            </value>
+            <value>
+                <fullName>Lifestyle</fullName>
+                <default>false</default>
+                <label>Lifestyle</label>
+            </value>
+            <value>
+                <fullName>Loan Syndication</fullName>
+                <default>false</default>
+                <label>Loan Syndication</label>
+            </value>
+            <value>
+                <fullName>Local Corporates</fullName>
+                <default>false</default>
+                <label>Local Corporates</label>
+            </value>
+            <value>
+                <fullName>Management</fullName>
+                <default>false</default>
+                <label>Management</label>
+            </value>
+            <value>
+                <fullName>Manufacturing</fullName>
+                <default>false</default>
+                <label>Manufacturing</label>
+            </value>
+            <value>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+                <label>Marketing</label>
+            </value>
+            <value>
+                <fullName>Mining, Energy &amp; Infrastructure</fullName>
+                <default>false</default>
+                <label>Mining, Energy &amp; Infrastructure</label>
+            </value>
+            <value>
+                <fullName>Mining &amp; Metals</fullName>
+                <default>false</default>
+                <label>Mining &amp; Metals</label>
+            </value>
+            <value>
+                <fullName>Mo40C Oil &amp; Gas</fullName>
+                <default>false</default>
+                <label>Mo40C Oil &amp; Gas</label>
+            </value>
+            <value>
+                <fullName>Mo40C Regional Sales</fullName>
+                <default>false</default>
+                <label>Mo40C Regional Sales</label>
+            </value>
+            <value>
+                <fullName>Money Markets</fullName>
+                <default>false</default>
+                <label>Money Markets</label>
+            </value>
+            <value>
+                <fullName>Multi National Corporates</fullName>
+                <default>false</default>
+                <label>Multi National Corporates</label>
+            </value>
+            <value>
+                <fullName>NBFI</fullName>
+                <default>false</default>
+                <label>NBFI</label>
+            </value>
+            <value>
+                <fullName>New Business</fullName>
+                <default>false</default>
+                <label>New Business</label>
+            </value>
+            <value>
+                <fullName>Non Banking FI</fullName>
+                <default>false</default>
+                <label>Non Banking FI</label>
+            </value>
+            <value>
+                <fullName>NPL</fullName>
+                <default>false</default>
+                <label>NPL</label>
+            </value>
+            <value>
+                <fullName>Oil &amp; Gas</fullName>
+                <default>false</default>
+                <label>Oil &amp; Gas</label>
+            </value>
+            <value>
+                <fullName>P &amp; I Advisory</fullName>
+                <default>false</default>
+                <label>P &amp; I Advisory</label>
+            </value>
+            <value>
+                <fullName>PBB</fullName>
+                <default>false</default>
+                <label>PBB</label>
+            </value>
+            <value>
+                <fullName>Power, Infrastructure &amp; Renewables</fullName>
+                <default>false</default>
+                <label>Power, Infrastructure &amp; Renewables</label>
+            </value>
+            <value>
+                <fullName>Power &amp; Infrastructure</fullName>
+                <default>false</default>
+                <label>Power &amp; Infrastructure</label>
+            </value>
+            <value>
+                <fullName>Power &amp; Infrastructure &amp; Public Sector</fullName>
+                <default>false</default>
+                <label>Power &amp; Infrastructure &amp; Public Sector</label>
+            </value>
+            <value>
+                <fullName>Precious Metals</fullName>
+                <default>false</default>
+                <label>Precious Metals</label>
+            </value>
+            <value>
+                <fullName>Product</fullName>
+                <default>false</default>
+                <label>Product</label>
+            </value>
+            <value>
+                <fullName>Properties</fullName>
+                <default>false</default>
+                <label>Properties</label>
+            </value>
+            <value>
+                <fullName>Property Group</fullName>
+                <default>false</default>
+                <label>Property Group</label>
+            </value>
+            <value>
+                <fullName>Public Sector</fullName>
+                <default>false</default>
+                <label>Public Sector</label>
+            </value>
+            <value>
+                <fullName>Real Estate</fullName>
+                <default>false</default>
+                <label>Real Estate</label>
+            </value>
+            <value>
+                <fullName>Real Estate Africa - BU</fullName>
+                <default>false</default>
+                <label>Real Estate Africa - BU</label>
+            </value>
+            <value>
+                <fullName>Real Estate Finance Africa</fullName>
+                <default>false</default>
+                <label>Real Estate Finance Africa</label>
+            </value>
+            <value>
+                <fullName>Real Estate Finance SA</fullName>
+                <default>false</default>
+                <label>Real Estate Finance SA</label>
+            </value>
+            <value>
+                <fullName>Research</fullName>
+                <default>false</default>
+                <label>Research</label>
+            </value>
+            <value>
+                <fullName>Sales Credit</fullName>
+                <default>false</default>
+                <label>Sales Credit</label>
+            </value>
+            <value>
+                <fullName>Second Line Support</fullName>
+                <default>false</default>
+                <label>Second Line Support</label>
+            </value>
+            <value>
+                <fullName>Service Advisory</fullName>
+                <default>false</default>
+                <label>Service Advisory</label>
+            </value>
+            <value>
+                <fullName>Service Team</fullName>
+                <default>false</default>
+                <label>Service Team</label>
+            </value>
+            <value>
+                <fullName>Specialised Transactions Group</fullName>
+                <default>false</default>
+                <label>Specialised Transactions Group</label>
+            </value>
+            <value>
+                <fullName>Strategic Investments &amp; Special Situations</fullName>
+                <default>false</default>
+                <label>Strategic Investments &amp; Special Situations</label>
+            </value>
+            <value>
+                <fullName>Strategic Sales</fullName>
+                <default>false</default>
+                <label>Strategic Sales</label>
+            </value>
+            <value>
+                <fullName>Structured Finance</fullName>
+                <default>false</default>
+                <label>Structured Finance</label>
+            </value>
+            <value>
+                <fullName>Structured Sales</fullName>
+                <default>false</default>
+                <label>Structured Sales</label>
+            </value>
+            <value>
+                <fullName>Structured Solutions</fullName>
+                <default>false</default>
+                <label>Structured Solutions</label>
+            </value>
+            <value>
+                <fullName>Structured Trade and Commodity Finance</fullName>
+                <default>false</default>
+                <label>Structured Trade and Commodity Finance</label>
+            </value>
+            <value>
+                <fullName>Telecoms &amp; Media</fullName>
+                <default>false</default>
+                <label>Telecoms &amp; Media</label>
+            </value>
+            <value>
+                <fullName>TMT</fullName>
+                <default>false</default>
+                <label>TMT</label>
+            </value>
+            <value>
+                <fullName>TMT, O&amp;G, Real Estate, China</fullName>
+                <default>false</default>
+                <label>TMT, O&amp;G, Real Estate, China</label>
+            </value>
+            <value>
+                <fullName>Top Tier</fullName>
+                <default>false</default>
+                <label>Top Tier</label>
+            </value>
+            <value>
+                <fullName>TPS SA Management</fullName>
+                <default>false</default>
+                <label>TPS SA Management</label>
+            </value>
+            <value>
+                <fullName>Trade Front Office</fullName>
+                <default>false</default>
+                <label>Trade Front Office</label>
+            </value>
+            <value>
+                <fullName>Trade Sales</fullName>
+                <default>false</default>
+                <label>Trade Sales</label>
+            </value>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+                <label>Unknown</label>
+            </value>
+            <value>
+                <fullName>Vehicle Asset Finance</fullName>
+                <default>false</default>
+                <label>Vehicle Asset Finance</label>
+            </value>
+            <value>
+                <fullName>Working Capital</fullName>
+                <default>false</default>
+                <label>Working Capital</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>General Management</controllingFieldValue>
+            <controllingFieldValue>Global Markets</controllingFieldValue>
+            <controllingFieldValue>Transactional Products and Services</controllingFieldValue>
+            <controllingFieldValue>Investment Banking</controllingFieldValue>
+            <controllingFieldValue>Client Coverage</controllingFieldValue>
+            <valueName>Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Services</controllingFieldValue>
+            <valueName>Branch</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Services</controllingFieldValue>
+            <valueName>CIB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Services</controllingFieldValue>
+            <valueName>Enterprise Direct</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Services</controllingFieldValue>
+            <valueName>IS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Services</controllingFieldValue>
+            <valueName>PBB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Services</controllingFieldValue>
+            <valueName>Second Line Support</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Services</controllingFieldValue>
+            <valueName>Service Team</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Digital</controllingFieldValue>
+            <valueName>Digital</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vehicle and Asset Finance</controllingFieldValue>
+            <controllingFieldValue>Global Markets</controllingFieldValue>
+            <controllingFieldValue>Transactional Products and Services</controllingFieldValue>
+            <controllingFieldValue>Client Coverage</controllingFieldValue>
+            <valueName>Corporates</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Real Estate</controllingFieldValue>
+            <valueName>Property Group</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Real Estate</controllingFieldValue>
+            <valueName>Real Estate Africa - BU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Real Estate</controllingFieldValue>
+            <valueName>Real Estate Finance Africa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Real Estate</controllingFieldValue>
+            <valueName>Real Estate Finance SA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Small Enterprise</controllingFieldValue>
+            <valueName>Lifestyle</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Markets</controllingFieldValue>
+            <valueName>Base Metals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Markets</controllingFieldValue>
+            <valueName>Buy-Side</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Markets</controllingFieldValue>
+            <valueName>Commodities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Markets</controllingFieldValue>
+            <controllingFieldValue>Investment Banking</controllingFieldValue>
+            <valueName>Distribution</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Markets</controllingFieldValue>
+            <valueName>Energy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Markets</controllingFieldValue>
+            <valueName>Equities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Markets</controllingFieldValue>
+            <valueName>Equity Derivatives</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Markets</controllingFieldValue>
+            <valueName>Foreign Exchange</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Markets</controllingFieldValue>
+            <valueName>GM Central</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Markets</controllingFieldValue>
+            <valueName>Interest Rates Derivatives</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Markets</controllingFieldValue>
+            <valueName>Loan Syndication</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Markets</controllingFieldValue>
+            <valueName>Money Markets</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Markets</controllingFieldValue>
+            <valueName>Precious Metals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Markets</controllingFieldValue>
+            <controllingFieldValue>Business Enablers</controllingFieldValue>
+            <valueName>Research</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global Markets</controllingFieldValue>
+            <valueName>Sales Credit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transactional Products and Services</controllingFieldValue>
+            <valueName>Bank Sector</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transactional Products and Services</controllingFieldValue>
+            <valueName>Business Acquisition</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transactional Products and Services</controllingFieldValue>
+            <valueName>Cash</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transactional Products and Services</controllingFieldValue>
+            <valueName>China</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transactional Products and Services</controllingFieldValue>
+            <valueName>China/Africa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transactional Products and Services</controllingFieldValue>
+            <valueName>Client Access</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transactional Products and Services</controllingFieldValue>
+            <valueName>Client Service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transactional Products and Services</controllingFieldValue>
+            <controllingFieldValue>Business Enablers</controllingFieldValue>
+            <valueName>Client Services Operation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transactional Products and Services</controllingFieldValue>
+            <valueName>Coastal Region</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transactional Products and Services</controllingFieldValue>
+            <controllingFieldValue>Client Coverage</controllingFieldValue>
+            <valueName>Consumer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transactional Products and Services</controllingFieldValue>
+            <valueName>Diversified Industries</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transactional Products and Services</controllingFieldValue>
+            <controllingFieldValue>Client Coverage</controllingFieldValue>
+            <valueName>Financial Institutions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transactional Products and Services</controllingFieldValue>
+            <controllingFieldValue>Client Coverage</controllingFieldValue>
+            <valueName>Industrials</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transactional Products and Services</controllingFieldValue>
+            <valueName>International Banking</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transactional Products and Services</controllingFieldValue>
+            <controllingFieldValue>Client Coverage</controllingFieldValue>
+            <valueName>International Development Group</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transactional Products and Services</controllingFieldValue>
+            <valueName>International Trade Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transactional Products and Services</controllingFieldValue>
+            <valueName>Investor Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transactional Products and Services</controllingFieldValue>
+            <valueName>Local Corporates</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transactional Products and Services</controllingFieldValue>
+            <valueName>Mining, Energy &amp; Infrastructure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transactional Products and Services</controllingFieldValue>
+            <controllingFieldValue>Client Coverage</controllingFieldValue>
+            <valueName>Mining &amp; Metals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transactional Products and Services</controllingFieldValue>
+            <valueName>Multi National Corporates</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transactional Products and Services</controllingFieldValue>
+            <valueName>NBFI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transactional Products and Services</controllingFieldValue>
+            <valueName>Power &amp; Infrastructure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transactional Products and Services</controllingFieldValue>
+            <valueName>Product</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transactional Products and Services</controllingFieldValue>
+            <controllingFieldValue>Client Coverage</controllingFieldValue>
+            <valueName>Real Estate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transactional Products and Services</controllingFieldValue>
+            <valueName>Service Advisory</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transactional Products and Services</controllingFieldValue>
+            <valueName>Strategic Sales</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transactional Products and Services</controllingFieldValue>
+            <valueName>Structured Solutions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transactional Products and Services</controllingFieldValue>
+            <valueName>TMT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transactional Products and Services</controllingFieldValue>
+            <valueName>Top Tier</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transactional Products and Services</controllingFieldValue>
+            <valueName>Trade Front Office</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transactional Products and Services</controllingFieldValue>
+            <valueName>Trade Sales</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transactional Products and Services</controllingFieldValue>
+            <valueName>Working Capital</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Investment Banking</controllingFieldValue>
+            <controllingFieldValue>Client Coverage</controllingFieldValue>
+            <valueName>Business Development</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Investment Banking</controllingFieldValue>
+            <valueName>Corporate Finance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Investment Banking</controllingFieldValue>
+            <valueName>Debt Capital Markets</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Investment Banking</controllingFieldValue>
+            <valueName>Debt Solutions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Investment Banking</controllingFieldValue>
+            <valueName>Debt Solutions CFS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Investment Banking</controllingFieldValue>
+            <valueName>Debt Solutions E&amp;I Finance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Investment Banking</controllingFieldValue>
+            <valueName>Debt Solutions RE Finance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Investment Banking</controllingFieldValue>
+            <valueName>Debt Solutions Sustainable Finance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Investment Banking</controllingFieldValue>
+            <valueName>Investment Banking General</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Investment Banking</controllingFieldValue>
+            <valueName>Investment Banking Sector</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Investment Banking</controllingFieldValue>
+            <valueName>Specialised Transactions Group</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Investment Banking</controllingFieldValue>
+            <valueName>Structured Finance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Business Enablers</controllingFieldValue>
+            <valueName>Client Onboarding</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Business Enablers</controllingFieldValue>
+            <valueName>Compliance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Business Enablers</controllingFieldValue>
+            <valueName>CRM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Business Enablers</controllingFieldValue>
+            <valueName>Exchange Control</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Business Enablers</controllingFieldValue>
+            <valueName>Executive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Business Enablers</controllingFieldValue>
+            <valueName>Marketing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Legal</controllingFieldValue>
+            <valueName>Legal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Insurance</controllingFieldValue>
+            <valueName>Insurance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Credit</controllingFieldValue>
+            <valueName>Credit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Business Banking</controllingFieldValue>
+            <valueName>Business Banking Channel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Business Banking</controllingFieldValue>
+            <valueName>Business Banking Channel Head Office</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Business Banking</controllingFieldValue>
+            <valueName>Business Banking Head Office</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Coverage</controllingFieldValue>
+            <valueName>Agriculture</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Coverage</controllingFieldValue>
+            <valueName>Cape Head</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Coverage</controllingFieldValue>
+            <valueName>Client Coverage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Coverage</controllingFieldValue>
+            <valueName>Conglomerates Commodities &amp; General Commerce</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Coverage</controllingFieldValue>
+            <valueName>Durables, Logistics &amp; Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Coverage</controllingFieldValue>
+            <valueName>EB&amp;SI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Coverage</controllingFieldValue>
+            <valueName>Manufacturing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Coverage</controllingFieldValue>
+            <valueName>New Business</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Coverage</controllingFieldValue>
+            <valueName>Non Banking FI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Coverage</controllingFieldValue>
+            <valueName>Oil &amp; Gas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Coverage</controllingFieldValue>
+            <valueName>Power, Infrastructure &amp; Renewables</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Coverage</controllingFieldValue>
+            <valueName>Properties</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Coverage</controllingFieldValue>
+            <valueName>Public Sector</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Coverage</controllingFieldValue>
+            <valueName>Telecoms &amp; Media</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Entrepreneur</controllingFieldValue>
+            <valueName>Entrepreneur Channel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Entrepreneur</controllingFieldValue>
+            <valueName>Entrepreneur Channel Head Office</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Entrepreneur</controllingFieldValue>
+            <valueName>Entrepreneur Head Office</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commercial Banking</controllingFieldValue>
+            <valueName>Commercial Banking Channel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commercial Banking</controllingFieldValue>
+            <valueName>Commercial Banking Channel Head Office</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commercial Banking</controllingFieldValue>
+            <valueName>Commercial Banking Head Office</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commercial Banking</controllingFieldValue>
+            <valueName>Core Sectors</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Client Solutions</controllingFieldValue>
+            <valueName>Client Solutions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Enterprise Banking</controllingFieldValue>
+            <valueName>Enterprise Banking Channel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Enterprise Banking</controllingFieldValue>
+            <valueName>Enterprise Banking Channel Head Office</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Enterprise Banking</controllingFieldValue>
+            <valueName>Enterprise Banking Head Office</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

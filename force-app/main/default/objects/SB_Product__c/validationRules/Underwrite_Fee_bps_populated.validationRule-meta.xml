@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Underwrite_Fee_bps_populated</fullName>
+    <active>true</active>
+    <description>Underwrite Fee (bps) field should not be empty if “Bank Role” is “Sole Debt Underwriter” or “Joint DEBT Underwriter” -SGPRT-625</description>
+    <errorConditionFormula>AND(RecordType.DeveloperName = &apos;Lending_Deposits&apos;,
+  ISNULL(Underwrite_Fee_bps__c ),
+ OR(
+  INCLUDES(Bank_Role__c , &quot;Sole Debt Underwriter&quot;) ,
+ INCLUDES(Bank_Role__c , &quot;Joint DEBT Underwriter&quot;)
+)
+)</errorConditionFormula>
+    <errorDisplayField>Underwrite_Fee_bps__c</errorDisplayField>
+    <errorMessage>Underwrite Fee (bps) field should be completed if “Bank Role” is “Sole Debt Underwriter” or “Joint Debt  Underwriter”</errorMessage>
+</ValidationRule>

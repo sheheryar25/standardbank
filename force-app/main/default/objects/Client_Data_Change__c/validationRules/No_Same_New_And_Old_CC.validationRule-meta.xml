@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Same_New_And_Old_CC</fullName>
+    <active>true</active>
+    <errorConditionFormula>New_Client_Coordinator__c ==  Current_Client_Coordinator__c</errorConditionFormula>
+    <errorMessage>You can’t raise a CC change request where current and new Client Coordinator is the same user</errorMessage>
+</ValidationRule>

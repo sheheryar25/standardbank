@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>To_Delete__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Helper field for EN-751 Reject New CIF Client - Invalid CC</description>
+    <externalId>false</externalId>
+    <label>To Delete</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

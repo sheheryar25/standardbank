@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <email>sbapimarketplace@standardbank.co.za</email>
+    <name>API Portal (ACM) Queue</name>
+    <queueMembers>
+        <publicGroups>
+            <publicGroup>API_Portal_ACM</publicGroup>
+        </publicGroups>
+        <users>
+            <user>simon.krap@standardbank.co.za.bcwdev</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>ACM_Subscription__c</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>Call_Report__c</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>Task</sobjectType>
+    </queueSobject>
+</Queue>

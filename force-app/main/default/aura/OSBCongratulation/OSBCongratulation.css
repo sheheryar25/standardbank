@@ -1,0 +1,99 @@
+.THIS {
+    
+}
+
+.THIS .congrad-container{
+    max-height:420px;
+}
+
+.THIS .format{
+  color: #666666;
+  font-family: BentonSans;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+.THIS .congrad__title{
+    color: #222222;
+    font-family: BentonSans;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 0.83px;
+    line-height: 24px;
+    align-self: center;
+    padding-bottom:8px;
+}
+
+.THIS .congrad__icon{
+    padding: 16px;
+    background: #0033AA;
+    border-radius: 50%;
+    align-self: center;
+    margin-bottom: 24px;
+}
+
+.THIS .congrad__icon i {
+    font-size: 48px;
+    color: #fff;
+}
+
+.THIS .congrad.congrad--optl {
+    background: #fff;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.25);
+}
+
+.THIS .congrad {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 172px;
+}
+
+.THIS .congrad__details{
+    text-align: center;
+}
+
+.THIS .congrad__form {
+    padding: 80px 180px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 32px;
+}
+
+.THIS .congrad__buttons {
+    background-color: #F6F6F6;
+    padding: 22px 180px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.THIS  .btnStyle {
+    display: block;
+    height: 50px;
+    padding: 15px 0;
+    border: 0;
+    border-radius: 2px;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 13px;
+    text-transform: uppercase;
+    text-align: center;
+    transition: all .15s ease-in;
+    cursor: pointer;
+}
+
+.THIS .congrad__button {
+    width: 144px;
+    float: right;
+    /*background-color: #33AAFF;*/
+    max-height: 40px;
+    padding: 15px 0;
+}
+
+.THIS .congrad__button.btn--darkblue {
+    background-color: #0033AA;
+    color: #FFFFFF;
+}

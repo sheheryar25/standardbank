@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bank_Contact__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Case#1168 - 11/2011 - Rudolf Niehaus
+Look-up to Bank Contacts</description>
+    <externalId>false</externalId>
+    <label>Bank Contact</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Campaign Hosts</relationshipLabel>
+    <relationshipName>Campaign_Hosts</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

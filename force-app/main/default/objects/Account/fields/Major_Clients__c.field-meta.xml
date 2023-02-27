@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Major_Clients__c</fullName>
+    <description>SFP-9319 [c] Client&apos;s major customers.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Which companies does our client sell/supply to? – list all applicable</inlineHelpText>
+    <label>Major Clients</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Products__c</fullName>
+    <description>This field used to reside on the KYC Request object.</description>
+    <externalId>false</externalId>
+    <label>Products</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>FX</fullName>
+                <default>false</default>
+                <label>FX</label>
+            </value>
+            <value>
+                <fullName>FX - Collaterized</fullName>
+                <default>false</default>
+                <label>FX - Collaterized</label>
+            </value>
+            <value>
+                <fullName>FX - Not collaterized</fullName>
+                <default>false</default>
+                <label>FX - Not collaterized</label>
+            </value>
+            <value>
+                <fullName>FX - Spot</fullName>
+                <default>false</default>
+                <label>FX - Spot</label>
+            </value>
+            <value>
+                <fullName>FX - Forward</fullName>
+                <default>false</default>
+                <label>FX - Forward</label>
+            </value>
+            <value>
+                <fullName>FX - Leverage</fullName>
+                <default>false</default>
+                <label>FX - Leverage</label>
+            </value>
+            <value>
+                <fullName>FX - Dual Currency</fullName>
+                <default>false</default>
+                <label>FX - Dual Currency</label>
+            </value>
+            <value>
+                <fullName>FX - Currency Options</fullName>
+                <default>false</default>
+                <label>FX - Currency Options</label>
+            </value>
+            <value>
+                <fullName>Money Market</fullName>
+                <default>false</default>
+                <label>Money Market</label>
+            </value>
+            <value>
+                <fullName>Money Market - Non Deliverable Forward</fullName>
+                <default>false</default>
+                <label>Money Market - Non Deliverable Forward</label>
+            </value>
+            <value>
+                <fullName>Money Market - Other</fullName>
+                <default>false</default>
+                <label>Money Market - Other</label>
+            </value>
+            <value>
+                <fullName>Credit</fullName>
+                <default>false</default>
+                <label>Credit</label>
+            </value>
+            <value>
+                <fullName>Credit - Credit Linked Notes</fullName>
+                <default>false</default>
+                <label>Credit - Credit Linked Notes</label>
+            </value>
+            <value>
+                <fullName>Credit - Other</fullName>
+                <default>false</default>
+                <label>Credit - Other</label>
+            </value>
+            <value>
+                <fullName>Equities</fullName>
+                <default>false</default>
+                <label>Equities</label>
+            </value>
+            <value>
+                <fullName>Equities - Securities</fullName>
+                <default>false</default>
+                <label>Equities - Securities</label>
+            </value>
+            <value>
+                <fullName>Equities - Equity Indices</fullName>
+                <default>false</default>
+                <label>Equities - Equity Indices</label>
+            </value>
+            <value>
+                <fullName>Equities - Equity Linked Notes</fullName>
+                <default>false</default>
+                <label>Equities - Equity Linked Notes</label>
+            </value>
+            <value>
+                <fullName>Equities - Other</fullName>
+                <default>false</default>
+                <label>Equities - Other</label>
+            </value>
+            <value>
+                <fullName>Derivatives</fullName>
+                <default>false</default>
+                <label>Derivatives</label>
+            </value>
+            <value>
+                <fullName>Derivatives - Interest Rates</fullName>
+                <default>false</default>
+                <label>Derivatives - Interest Rates</label>
+            </value>
+            <value>
+                <fullName>Derivatives - Equities</fullName>
+                <default>false</default>
+                <label>Derivatives - Equities</label>
+            </value>
+            <value>
+                <fullName>Derivatives - Credit</fullName>
+                <default>false</default>
+                <label>Derivatives - Credit</label>
+            </value>
+            <value>
+                <fullName>Derivatives - Options</fullName>
+                <default>false</default>
+                <label>Derivatives - Options</label>
+            </value>
+            <value>
+                <fullName>Derivatives - Currency</fullName>
+                <default>false</default>
+                <label>Derivatives - Currency</label>
+            </value>
+            <value>
+                <fullName>Interest Rates</fullName>
+                <default>false</default>
+                <label>Interest Rates</label>
+            </value>
+            <value>
+                <fullName>Interest Rates - Futures</fullName>
+                <default>false</default>
+                <label>Interest Rates - Futures</label>
+            </value>
+            <value>
+                <fullName>Interest Rates - Options</fullName>
+                <default>false</default>
+                <label>Interest Rates - Options</label>
+            </value>
+            <value>
+                <fullName>Interest Rates - Other</fullName>
+                <default>false</default>
+                <label>Interest Rates - Other</label>
+            </value>
+            <value>
+                <fullName>Structured Solutions</fullName>
+                <default>false</default>
+                <label>Structured Solutions</label>
+            </value>
+            <value>
+                <fullName>Fixed Income</fullName>
+                <default>false</default>
+                <label>Fixed Income</label>
+            </value>
+            <value>
+                <fullName>Fixed Income - FRNs</fullName>
+                <default>false</default>
+                <label>Fixed Income - FRNs</label>
+            </value>
+            <value>
+                <fullName>Fixed Income - Warrant</fullName>
+                <default>false</default>
+                <label>Fixed Income - Warrant</label>
+            </value>
+            <value>
+                <fullName>Fixed Income - Equity Linked Notes</fullName>
+                <default>false</default>
+                <label>Fixed Income - Equity Linked Notes</label>
+            </value>
+            <value>
+                <fullName>Fixed Income - Unit Trust</fullName>
+                <default>false</default>
+                <label>Fixed Income - Unit Trust</label>
+            </value>
+            <value>
+                <fullName>Fixed Income - Mutual Fund</fullName>
+                <default>false</default>
+                <label>Fixed Income - Mutual Fund</label>
+            </value>
+            <value>
+                <fullName>Fixed Income - Other</fullName>
+                <default>false</default>
+                <label>Fixed Income - Other</label>
+            </value>
+            <value>
+                <fullName>Syndicated Lending</fullName>
+                <default>false</default>
+                <label>Syndicated Lending</label>
+            </value>
+            <value>
+                <fullName>Syndicated Lending - Margin Lending</fullName>
+                <default>false</default>
+                <label>Syndicated Lending - Margin Lending</label>
+            </value>
+            <value>
+                <fullName>Syndicated Lending - Arrangement fee</fullName>
+                <default>false</default>
+                <label>Syndicated Lending - Arrangement fee</label>
+            </value>
+            <value>
+                <fullName>Syndicated Lending - Distribution income</fullName>
+                <default>false</default>
+                <label>Syndicated Lending - Distribution income</label>
+            </value>
+            <value>
+                <fullName>Syndicated Lending - Skim</fullName>
+                <default>false</default>
+                <label>Syndicated Lending - Skim</label>
+            </value>
+            <value>
+                <fullName>Syndicated Lending - Other</fullName>
+                <default>false</default>
+                <label>Syndicated Lending - Other</label>
+            </value>
+            <value>
+                <fullName>Bonds - Government Bonds</fullName>
+                <default>false</default>
+                <label>Bonds - Government Bonds</label>
+            </value>
+            <value>
+                <fullName>Bonds - T-Bills</fullName>
+                <default>false</default>
+                <label>Bonds - T-Bills</label>
+            </value>
+            <value>
+                <fullName>Bonds - US Treasury</fullName>
+                <default>false</default>
+                <label>Bonds - US Treasury</label>
+            </value>
+            <value>
+                <fullName>Bonds - Other</fullName>
+                <default>false</default>
+                <label>Bonds - Other</label>
+            </value>
+            <value>
+                <fullName>Swaps</fullName>
+                <default>false</default>
+                <label>Swaps</label>
+            </value>
+            <value>
+                <fullName>Swaps - Credit Derivative Swaps</fullName>
+                <default>false</default>
+                <label>Swaps - Credit Derivative Swaps</label>
+            </value>
+            <value>
+                <fullName>Swaps - Interest Rates</fullName>
+                <default>false</default>
+                <label>Swaps - Interest Rates</label>
+            </value>
+            <value>
+                <fullName>Swaps - Repos</fullName>
+                <default>false</default>
+                <label>Swaps - Repos</label>
+            </value>
+            <value>
+                <fullName>Swaps - Other</fullName>
+                <default>false</default>
+                <label>Swaps - Other</label>
+            </value>
+            <value>
+                <fullName>Equities - Insurance Premium Financing</fullName>
+                <default>false</default>
+                <label>Equities - Insurance Premium Financing</label>
+            </value>
+            <value>
+                <fullName>Services</fullName>
+                <default>false</default>
+                <label>Services</label>
+            </value>
+            <value>
+                <fullName>Services - Security Related</fullName>
+                <default>false</default>
+                <label>Services - Security Related</label>
+            </value>
+            <value>
+                <fullName>Services - Nominee Services</fullName>
+                <default>false</default>
+                <label>Services - Nominee Services</label>
+            </value>
+            <value>
+                <fullName>Services - Custody Services</fullName>
+                <default>false</default>
+                <label>Services - Custody Services</label>
+            </value>
+            <value>
+                <fullName>Services - Other</fullName>
+                <default>false</default>
+                <label>Services - Other</label>
+            </value>
+            <value>
+                <fullName>Base Metals</fullName>
+                <default>false</default>
+                <label>Base Metals</label>
+            </value>
+            <value>
+                <fullName>Precious Metal - Silver</fullName>
+                <default>false</default>
+                <label>Precious Metal - Silver</label>
+            </value>
+            <value>
+                <fullName>Precious Metal - Platinum</fullName>
+                <default>false</default>
+                <label>Precious Metal - Platinum</label>
+            </value>
+            <value>
+                <fullName>Precious Metal - Gold</fullName>
+                <default>false</default>
+                <label>Precious Metal - Gold</label>
+            </value>
+            <value>
+                <fullName>Precious Metal - Other</fullName>
+                <default>false</default>
+                <label>Precious Metal - Other</label>
+            </value>
+            <value>
+                <fullName>Metal Option</fullName>
+                <default>false</default>
+                <label>Metal Option</label>
+            </value>
+            <value>
+                <fullName>Energy</fullName>
+                <default>false</default>
+                <label>Energy</label>
+            </value>
+            <value>
+                <fullName>Energy - Energy Oil OTC Swaps</fullName>
+                <default>false</default>
+                <label>Energy - Energy Oil OTC Swaps</label>
+            </value>
+            <value>
+                <fullName>Energy - Energy Futures</fullName>
+                <default>false</default>
+                <label>Energy - Energy Futures</label>
+            </value>
+            <value>
+                <fullName>Energy - Energy Options</fullName>
+                <default>false</default>
+                <label>Energy - Energy Options</label>
+            </value>
+            <value>
+                <fullName>Energy - Other</fullName>
+                <default>false</default>
+                <label>Energy - Other</label>
+            </value>
+            <value>
+                <fullName>Trade Finance</fullName>
+                <default>false</default>
+                <label>Trade Finance</label>
+            </value>
+            <value>
+                <fullName>Trade Finance - Mining Finance</fullName>
+                <default>false</default>
+                <label>Trade Finance - Mining Finance</label>
+            </value>
+            <value>
+                <fullName>Trade Finance - Other</fullName>
+                <default>false</default>
+                <label>Trade Finance - Other</label>
+            </value>
+            <value>
+                <fullName>Credit - Letters of Credit</fullName>
+                <default>false</default>
+                <label>Credit - Letters of Credit</label>
+            </value>
+            <value>
+                <fullName>Credit - Letters of Guarantee</fullName>
+                <default>false</default>
+                <label>Credit - Letters of Guarantee</label>
+            </value>
+            <value>
+                <fullName>Credit - Overdraft</fullName>
+                <default>false</default>
+                <label>Credit - Overdraft</label>
+            </value>
+            <value>
+                <fullName>Forefaiting</fullName>
+                <default>false</default>
+                <label>Forefaiting</label>
+            </value>
+            <value>
+                <fullName>Loan</fullName>
+                <default>false</default>
+                <label>Loan</label>
+            </value>
+            <value>
+                <fullName>Loan - Commercial</fullName>
+                <default>false</default>
+                <label>Loan - Commercial</label>
+            </value>
+            <value>
+                <fullName>Loan - Other</fullName>
+                <default>false</default>
+                <label>Loan - Other</label>
+            </value>
+            <value>
+                <fullName>Structured Finance</fullName>
+                <default>false</default>
+                <label>Structured Finance</label>
+            </value>
+            <value>
+                <fullName>Deposit Account</fullName>
+                <default>false</default>
+                <label>Deposit Account</label>
+            </value>
+            <value>
+                <fullName>Introducer</fullName>
+                <default>false</default>
+                <label>Introducer</label>
+            </value>
+            <value>
+                <fullName>Intermediary</fullName>
+                <default>false</default>
+                <label>Intermediary</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>10</visibleLines>
+</CustomField>

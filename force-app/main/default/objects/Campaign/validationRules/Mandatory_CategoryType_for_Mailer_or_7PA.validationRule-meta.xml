@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mandatory_CategoryType_for_Mailer_or_7PA</fullName>
+    <active>true</active>
+    <description>SFP-5277/5275 Campaign Category Type is required for the &apos;Operational Mailer&apos; and &apos;7 - PA Event&apos; Campaign Category.</description>
+    <errorConditionFormula>AND(
+  ISBLANK(TEXT( Campaign_Category_Type__c )),
+  OR(
+    ISPICKVAL( Campaign_Category__c , &apos;Operational Mailer&apos;),
+    ISPICKVAL( Campaign_Category__c , &apos;7 - PA Event&apos;)
+  )
+)</errorConditionFormula>
+    <errorDisplayField>Campaign_Category_Type__c</errorDisplayField>
+    <errorMessage>Campaign Category Type is required for the &apos;Operational Mailer&apos; and &apos;7 - PA Event&apos; Campaign Category.</errorMessage>
+</ValidationRule>

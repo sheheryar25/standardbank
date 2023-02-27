@@ -1,0 +1,2004 @@
+{
+  "201207PN-SAINT-U-S14431378": {
+    "messages": [
+      {
+        "amhAmount": 121,
+        "amhCurrency": "ZAR",
+        "orderingAccount": "/23131321374\r\n1/MELCO CONVEYOR",
+        "currency": [
+          "ZAR"
+        ],
+        "fin33Currency": [
+          "ZAR"
+        ],
+        "fin33Amount": [
+          121
+        ],
+        "fin32Currency": [
+          "ZAR"
+        ],
+        "fin57": [
+          "CITIUS30XXX"
+        ],
+        "receiver": "CITIUS30XXX",
+        "transactionReference": "201207PN-SAINT-U-S14431378",
+        "fin50": [
+          "/23131321374"
+        ],
+        "UETR": "b3c159e9-ecd9-4710-bcb6-f4e7c4f23760",
+        "amhAccount": "CITIUS30XXX",
+        "sender": "SBZAZAJ0XXX",
+        "mdate": 1607299200000,
+        "beneficiaryAccount": "//92637884\r\n1/JUDITH A WEST",
+        "fin32Amount": [
+          1312
+        ],
+        "account": [
+          "/92637884"
+        ]
+      }
+    ]
+  },
+  "2020-12-07": {
+    "/23131321374": {
+      "messages": [
+        {
+          "amhAmount": 121,
+          "amhCurrency": "ZAR",
+          "orderingAccount": "/23131321374\r\n1/MELCO CONVEYOR",
+          "currency": [
+            "ZAR"
+          ],
+          "fin33Currency": [
+            "ZAR"
+          ],
+          "fin33Amount": [
+            121
+          ],
+          "fin32Currency": [
+            "ZAR"
+          ],
+          "fin57": [
+            "CITIUS30XXX"
+          ],
+          "receiver": "CITIUS30XXX",
+          "transactionReference": "201207PN-SAINT-U-S14431378",
+          "fin50": [
+            "/23131321374"
+          ],
+          "UETR": "b3c159e9-ecd9-4710-bcb6-f4e7c4f23760",
+          "amhAccount": "CITIUS30XXX",
+          "sender": "SBZAZAJ0XXX",
+          "mdate": 1607299200000,
+          "beneficiaryAccount": "//92637884\r\n1/JUDITH A WEST",
+          "fin32Amount": [
+            1312
+          ],
+          "account": [
+            "/92637884"
+          ]
+        }
+      ]
+    },
+    "/041451230014": {
+      "messages": [
+        {
+          "amhAmount": 121,
+          "amhCurrency": "USD",
+          "orderingAccount": "/041451230014\r\n1/MELCO CONVEYOR",
+          "currency": [
+            "USD"
+          ],
+          "fin33Currency": [
+            "USD"
+          ],
+          "fin33Amount": [
+            121
+          ],
+          "fin32Currency": [
+            "USD"
+          ],
+          "fin57": [
+            "CITIUS30XXX"
+          ],
+          "receiver": "CITIUS30XXX",
+          "transactionReference": "201217PN-SAINT-U-S14473790",
+          "fin50": [
+            "/041451230014"
+          ],
+          "UETR": "194b91f9-e035-47b0-ae57-33c944f60406",
+          "amhAccount": "CITIUS30XXX",
+          "sender": "SBZAZAJ0XXX",
+          "mdate": 1607299200000,
+          "beneficiaryAccount": "//92637884\r\n1/JUDITH A WEST",
+          "fin32Amount": [
+            353
+          ],
+          "account": [
+            "/92637884"
+          ]
+        }
+      ]
+    },
+    "/92544652313": {
+      "messages": [
+        {
+          "amhAmount": 121,
+          "amhCurrency": "CRED",
+          "orderingAccount": "/92544652313\r\n1/MELCO CONVEYOR",
+          "currency": [
+            "CRED"
+          ],
+          "fin33Currency": [
+            "CRED"
+          ],
+          "fin33Amount": [
+            121
+          ],
+          "fin32Currency": [
+            "CRED"
+          ],
+          "fin57": [
+            "CITIUS30XXX"
+          ],
+          "receiver": "CITIUS30XXX",
+          "transactionReference": "201208PN-SAINT-U-S14434281",
+          "fin50": [
+            "/92544652313"
+          ],
+          "UETR": "5ba6c78c-aa94-41ca-af87-dd5b6520cbec",
+          "amhAccount": "CITIUS30XXX",
+          "sender": "SBZAZAJ0XXX",
+          "mdate": 1607299200000,
+          "beneficiaryAccount": "//92637884\r\n1/JUDITH A WEST",
+          "fin32Amount": [
+            35346
+          ],
+          "account": [
+            "/92637884"
+          ]
+        }
+      ]
+    },
+    "/234709263274": {
+      "messages": [
+        {
+          "amhAmount": 121,
+          "amhCurrency": "ZAR",
+          "orderingAccount": "/234709263274\r\n1/MELCO CONVEYOR",
+          "currency": [
+            "ZAR"
+          ],
+          "fin33Currency": [
+            "ZAR"
+          ],
+          "fin33Amount": [
+            121
+          ],
+          "fin32Currency": [
+            "ZAR"
+          ],
+          "fin57": [
+            "CITIUS30XXX"
+          ],
+          "receiver": "CITIUS30XXX",
+          "transactionReference": "201208PN-SAINT-U-S14434196",
+          "fin50": [
+            "/234709263274"
+          ],
+          "UETR": "dd9f2983-b4d9-4593-a56a-8f5b18117f12",
+          "amhAccount": "CITIUS30XXX",
+          "sender": "SBZAZAJ0XXX",
+          "mdate": 1607299200000,
+          "beneficiaryAccount": "//92637884\r\n1/JUDITH A WEST",
+          "fin32Amount": [
+            868
+          ],
+          "account": [
+            "/92637884"
+          ]
+        }
+      ]
+    },
+    "/2643429836446": {
+      "messages": [
+        {
+          "amhAmount": 121,
+          "amhCurrency": "USD",
+          "orderingAccount": "/2643429836446\r\n1/MELCO CONVEYOR",
+          "currency": [
+            "USD"
+          ],
+          "fin33Currency": [
+            "USD"
+          ],
+          "fin33Amount": [
+            121
+          ],
+          "fin32Currency": [
+            "USD"
+          ],
+          "fin57": [
+            "CITIUS30XXX"
+          ],
+          "receiver": "CITIUS30XXX",
+          "transactionReference": "201208PN-SAINT-U-S14434192",
+          "fin50": [
+            "/2643429836446"
+          ],
+          "UETR": "979621a2-9fd3-4829-a634-c5e165de1e75",
+          "amhAccount": "CITIUS30XXX",
+          "sender": "SBZAZAJ0XXX",
+          "mdate": 1607299200000,
+          "beneficiaryAccount": "//92637884\r\n1/JUDITH A WEST",
+          "fin32Amount": [
+            242
+          ],
+          "account": [
+            "/92637884"
+          ]
+        }
+      ]
+    },
+    "/9264236426r565": {
+      "messages": [
+        {
+          "amhAmount": 121,
+          "amhCurrency": "ZAR",
+          "orderingAccount": "/9264236426r565\r\n1/MELCO CONVEYOR",
+          "currency": [
+            "ZAR"
+          ],
+          "fin33Currency": [
+            "ZAR"
+          ],
+          "fin33Amount": [
+            121
+          ],
+          "fin32Currency": [
+            "ZAR"
+          ],
+          "fin57": [
+            "CITIUS30XXX"
+          ],
+          "receiver": "CITIUS30XXX",
+          "transactionReference": "201208PN-SAINT-U-S14434200",
+          "fin50": [
+            "/9264236426r565"
+          ],
+          "UETR": "5022c76c-348c-47ba-89b5-dcef24958d13",
+          "amhAccount": "CITIUS30XXX",
+          "sender": "SBZAZAJ0XXX",
+          "mdate": 1607299200000,
+          "beneficiaryAccount": "//92637884\r\n1/JUDITH A WEST",
+          "fin32Amount": [
+            2425
+          ],
+          "account": [
+            "/92637884"
+          ]
+        }
+      ]
+    },
+    "/5238162361822": {
+      "messages": [
+        {
+          "amhAmount": 121,
+          "amhCurrency": "ZAR",
+          "orderingAccount": "/5238162361822\r\n1/MELCO CONVEYOR",
+          "currency": [
+            "ZAR"
+          ],
+          "fin33Currency": [
+            "ZAR"
+          ],
+          "fin33Amount": [
+            121
+          ],
+          "fin32Currency": [
+            "ZAR"
+          ],
+          "fin57": [
+            "CITIUS30XXX"
+          ],
+          "receiver": "CITIUS30XXX",
+          "transactionReference": "201208PN-SAINT-U-S14434258",
+          "fin50": [
+            "/5238162361822"
+          ],
+          "UETR": "65302aa5-0cb9-4f38-b0c6-88ab26e28858",
+          "amhAccount": "CITIUS30XXX",
+          "sender": "SBZAZAJ0XXX",
+          "mdate": 1607299200000,
+          "beneficiaryAccount": "//92637884\r\n1/JUDITH A WEST",
+          "fin32Amount": [
+            345353
+          ],
+          "account": [
+            "/92637884"
+          ]
+        }
+      ]
+    },
+    "/2894672384923": {
+      "messages": [
+        {
+          "amhAmount": 121,
+          "amhCurrency": "USD",
+          "orderingAccount": "/2894672384923\r\n1/MELCO CONVEYOR",
+          "currency": [
+            "USD"
+          ],
+          "fin33Currency": [
+            "USD"
+          ],
+          "fin33Amount": [
+            121
+          ],
+          "fin32Currency": [
+            "USD"
+          ],
+          "fin57": [
+            "CITIUS30XXX"
+          ],
+          "receiver": "CITIUS30XXX",
+          "transactionReference": "201208PN-SAINT-U-S14433161",
+          "fin50": [
+            "/2894672384923"
+          ],
+          "UETR": "425c1dde-71ee-42aa-acfd-03c80a3f4e99",
+          "amhAccount": "CITIUS30XXX",
+          "sender": "SBZAZAJ0XXX",
+          "mdate": 1607299200000,
+          "beneficiaryAccount": "//92637884\r\n1/JUDITH A WEST",
+          "fin32Amount": [
+            96966
+          ],
+          "account": [
+            "/92637884"
+          ]
+        }
+      ]
+    },
+    "/8642964364234": {
+      "messages": [
+        {
+          "amhAmount": 121,
+          "amhCurrency": "CRED",
+          "orderingAccount": "/8642964364234\r\n1/MELCO CONVEYOR",
+          "currency": [
+            "CRED"
+          ],
+          "fin33Currency": [
+            "CRED"
+          ],
+          "fin33Amount": [
+            121
+          ],
+          "fin32Currency": [
+            "CRED"
+          ],
+          "fin57": [
+            "CITIUS30XXX"
+          ],
+          "receiver": "CITIUS30XXX",
+          "transactionReference": "201209PN-SAINT-U-S14435961",
+          "fin50": [
+            "/8642964364234"
+          ],
+          "UETR": "b67d9981-5310-4489-8895-97cfc63a92c6",
+          "amhAccount": "CITIUS30XXX",
+          "sender": "SBZAZAJ0XXX",
+          "mdate": 1607299200000,
+          "beneficiaryAccount": "//92637884\r\n1/JUDITH A WEST",
+          "fin32Amount": [
+            98
+          ],
+          "account": [
+            "/92637884"
+          ]
+        }
+      ]
+    },
+    "/0285834523465": {
+      "messages": [
+        {
+          "amhAmount": 121,
+          "amhCurrency": "ZAR",
+          "orderingAccount": "/0285834523465\r\n1/MELCO CONVEYOR",
+          "currency": [
+            "ZAR"
+          ],
+          "fin33Currency": [
+            "ZAR"
+          ],
+          "fin33Amount": [
+            121
+          ],
+          "fin32Currency": [
+            "ZAR"
+          ],
+          "fin57": [
+            "CITIUS30XXX"
+          ],
+          "receiver": "CITIUS30XXX",
+          "transactionReference": "201209PN-SAINT-U-S14435936",
+          "fin50": [
+            "/0285834523465"
+          ],
+          "UETR": "5022c76c-348c-47ba-89b5-dcef24958d13",
+          "amhAccount": "CITIUS30XXX",
+          "sender": "SBZAZAJ0XXX",
+          "mdate": 1607299200000,
+          "beneficiaryAccount": "//92637884\r\n1/JUDITH A WEST",
+          "fin32Amount": [
+            353
+          ],
+          "account": [
+            "/92637884"
+          ]
+        }
+      ]
+    },
+    "/0162428349628": {
+      "messages": [
+        {
+          "amhAmount": 121,
+          "amhCurrency": "USD",
+          "orderingAccount": "/0162428349628\r\n1/MELCO CONVEYOR",
+          "currency": [
+            "USD"
+          ],
+          "fin33Currency": [
+            "USD"
+          ],
+          "fin33Amount": [
+            121
+          ],
+          "fin32Currency": [
+            "USD"
+          ],
+          "fin57": [
+            "CITIUS30XXX"
+          ],
+          "receiver": "CITIUS30XXX",
+          "transactionReference": "201209PN-SAINT-U-S14435959",
+          "fin50": [
+            "/0162428349628"
+          ],
+          "UETR": "aa121020-39fb-4a1e-a210-20042818ffff",
+          "amhAccount": "CITIUS30XXX",
+          "sender": "SBZAZAJ0XXX",
+          "mdate": 1607299200000,
+          "beneficiaryAccount": "//92637884\r\n1/JUDITH A WEST",
+          "fin32Amount": [
+            8645
+          ],
+          "account": [
+            "/92637884"
+          ]
+        }
+      ]
+    },
+    "/1538153112675": {
+      "messages": [
+        {
+          "amhAmount": 121,
+          "amhCurrency": "ZAR",
+          "orderingAccount": "/1538153112675\r\n1/MELCO CONVEYOR",
+          "currency": [
+            "ZAR"
+          ],
+          "fin33Currency": [
+            "ZAR"
+          ],
+          "fin33Amount": [
+            121
+          ],
+          "fin32Currency": [
+            "ZAR"
+          ],
+          "fin57": [
+            "CITIUS30XXX"
+          ],
+          "receiver": "CITIUS30XXX",
+          "transactionReference": "201209PN-SAINT-U-S14435967",
+          "fin50": [
+            "/1538153112675"
+          ],
+          "UETR": "1871df4e-78c7-4b74-9c33-9a1b11e88aba",
+          "amhAccount": "CITIUS30XXX",
+          "sender": "SBZAZAJ0XXX",
+          "mdate": 1607299200000,
+          "beneficiaryAccount": "//92637884\r\n1/JUDITH A WEST",
+          "fin32Amount": [
+            2355
+          ],
+          "account": [
+            "/92637884"
+          ]
+        }
+      ]
+    },
+    "/1246864912364": {
+      "messages": [
+        {
+          "amhAmount": 121,
+          "amhCurrency": "ZAR",
+          "orderingAccount": "/1246864912364\r\n1/MELCO CONVEYOR",
+          "currency": [
+            "ZAR"
+          ],
+          "fin33Currency": [
+            "ZAR"
+          ],
+          "fin33Amount": [
+            121
+          ],
+          "fin32Currency": [
+            "ZAR"
+          ],
+          "fin57": [
+            "CITIUS30XXX"
+          ],
+          "receiver": "CITIUS30XXX",
+          "transactionReference": "201209PN-SAINT-U-S14435911",
+          "fin50": [
+            "/1246864912364"
+          ],
+          "UETR": "906dba2b-ea70-4480-910c-028581d08673",
+          "amhAccount": "CITIUS30XXX",
+          "sender": "SBZAZAJ0XXX",
+          "mdate": 1607299200000,
+          "beneficiaryAccount": "//92637884\r\n1/JUDITH A WEST",
+          "fin32Amount": [
+            3433
+          ],
+          "account": [
+            "/92637884"
+          ]
+        }
+      ]
+    },
+    "/1926423498688": {
+      "messages": [
+        {
+          "amhAmount": 121,
+          "amhCurrency": "CRED",
+          "orderingAccount": "/1926423498688\r\n1/MELCO CONVEYOR",
+          "currency": [
+            "CRED"
+          ],
+          "fin33Currency": [
+            "CRED"
+          ],
+          "fin33Amount": [
+            121
+          ],
+          "fin32Currency": [
+            "CRED"
+          ],
+          "fin57": [
+            "CITIUS30XXX"
+          ],
+          "receiver": "CITIUS30XXX",
+          "transactionReference": "201209PN-SAINT-U-S14435906",
+          "fin50": [
+            "/1926423498688"
+          ],
+          "UETR": "68a8b0ce-2d6e-464b-b3f7-6fc4e32de341",
+          "amhAccount": "CITIUS30XXX",
+          "sender": "SBZAZAJ0XXX",
+          "mdate": 1607299200000,
+          "beneficiaryAccount": "//92637884\r\n1/JUDITH A WEST",
+          "fin32Amount": [
+            200
+          ],
+          "account": [
+            "/92637884"
+          ]
+        }
+      ]
+    },
+    "/2938636258346": {
+      "messages": [
+        {
+          "amhAmount": 121,
+          "amhCurrency": "USD",
+          "orderingAccount": "/2938636258346\r\n1/MELCO CONVEYOR",
+          "currency": [
+            "USD"
+          ],
+          "fin33Currency": [
+            "USD"
+          ],
+          "fin33Amount": [
+            121
+          ],
+          "fin32Currency": [
+            "USD"
+          ],
+          "fin57": [
+            "CITIUS30XXX"
+          ],
+          "receiver": "CITIUS30XXX",
+          "transactionReference": "201209PN-SAINT-U-S14435944",
+          "fin50": [
+            "/2938636258346"
+          ],
+          "UETR": "7a3e39e7-06fb-4034-9d16-5904f043ea21",
+          "amhAccount": "CITIUS30XXX",
+          "sender": "SBZAZAJ0XXX",
+          "mdate": 1607299200000,
+          "beneficiaryAccount": "//92637884\r\n1/JUDITH A WEST",
+          "fin32Amount": [
+            244
+          ],
+          "account": [
+            "/92637884"
+          ]
+        }
+      ]
+    },
+    "/1868916931269": {
+      "messages": [
+        {
+          "amhAmount": 121,
+          "amhCurrency": "ZAR",
+          "orderingAccount": "/1868916931269\r\n1/MELCO CONVEYOR",
+          "currency": [
+            "ZAR"
+          ],
+          "fin33Currency": [
+            "ZAR"
+          ],
+          "fin33Amount": [
+            121
+          ],
+          "fin32Currency": [
+            "ZAR"
+          ],
+          "fin57": [
+            "CITIUS30XXX"
+          ],
+          "receiver": "CITIUS30XXX",
+          "transactionReference": "201209PN-SAINT-U-S14435956",
+          "fin50": [
+            "/1868916931269"
+          ],
+          "UETR": "352d8271-c8ff-45a4-8eed-24f353e5b102",
+          "amhAccount": "CITIUS30XXX",
+          "sender": "SBZAZAJ0XXX",
+          "mdate": 1607299200000,
+          "beneficiaryAccount": "//92637884\r\n1/JUDITH A WEST",
+          "fin32Amount": [
+            132
+          ],
+          "account": [
+            "/92637884"
+          ]
+        }
+      ]
+    },
+    "/1963861216986": {
+      "messages": [
+        {
+          "amhAmount": 121,
+          "amhCurrency": "ZAR",
+          "orderingAccount": "/1963861216986\r\n1/MELCO CONVEYOR",
+          "currency": [
+            "ZAR"
+          ],
+          "fin33Currency": [
+            "ZAR"
+          ],
+          "fin33Amount": [
+            121
+          ],
+          "fin32Currency": [
+            "ZAR"
+          ],
+          "fin57": [
+            "CITIUS30XXX"
+          ],
+          "receiver": "CITIUS30XXX",
+          "transactionReference": "201209PN-SAINT-U-S14435932",
+          "fin50": [
+            "/1963861216986"
+          ],
+          "UETR": "e8f85ab0-34da-48a2-9239-6ff0edb8d9cf",
+          "amhAccount": "CITIUS30XXX",
+          "sender": "SBZAZAJ0XXX",
+          "mdate": 1607299200000,
+          "beneficiaryAccount": "//92637884\r\n1/JUDITH A WEST",
+          "fin32Amount": [
+            243
+          ],
+          "account": [
+            "/92637884"
+          ]
+        }
+      ]
+    },
+    "/2963492634929": {
+      "messages": [
+        {
+          "amhAmount": 121,
+          "amhCurrency": "ZAR",
+          "orderingAccount": "/2963492634929\r\n1/MELCO CONVEYOR",
+          "currency": [
+            "ZAR"
+          ],
+          "fin33Currency": [
+            "ZAR"
+          ],
+          "fin33Amount": [
+            121
+          ],
+          "fin32Currency": [
+            "ZAR"
+          ],
+          "fin57": [
+            "CITIUS30XXX"
+          ],
+          "receiver": "CITIUS30XXX",
+          "transactionReference": "201209PN-SAINT-U-S14435929",
+          "fin50": [
+            "/2963492634929"
+          ],
+          "UETR": "21cff743-345a-4965-b26e-e6860acb291f",
+          "amhAccount": "CITIUS30XXX",
+          "sender": "SBZAZAJ0XXX",
+          "mdate": 1607299200000,
+          "beneficiaryAccount": "//92637884\r\n1/JUDITH A WEST",
+          "fin32Amount": [
+            675
+          ],
+          "account": [
+            "/92637884"
+          ]
+        }
+      ]
+    },
+    "/1869163691639": {
+      "messages": [
+        {
+          "amhAmount": 121,
+          "amhCurrency": "CRED",
+          "orderingAccount": "/1869163691639\r\n1/MELCO CONVEYOR",
+          "currency": [
+            "CRED"
+          ],
+          "fin33Currency": [
+            "CRED"
+          ],
+          "fin33Amount": [
+            121
+          ],
+          "fin32Currency": [
+            "CRED"
+          ],
+          "fin57": [
+            "CITIUS30XXX"
+          ],
+          "receiver": "CITIUS30XXX",
+          "transactionReference": "201209PN-SAINT-U-S14435931",
+          "fin50": [
+            "/1869163691639"
+          ],
+          "UETR": "9304f6c1-ae31-4899-9d41-7aaaf4698111",
+          "amhAccount": "CITIUS30XXX",
+          "sender": "SBZAZAJ0XXX",
+          "mdate": 1607299200000,
+          "beneficiaryAccount": "//92637884\r\n1/JUDITH A WEST",
+          "fin32Amount": [
+            866
+          ],
+          "account": [
+            "/92637884"
+          ]
+        }
+      ]
+    },
+    "/1039173012307": {
+      "messages": [
+        {
+          "amhAmount": 121,
+          "amhCurrency": "USD",
+          "orderingAccount": "/1039173012307\r\n1/MELCO CONVEYOR",
+          "currency": [
+            "USD"
+          ],
+          "fin33Currency": [
+            "USD"
+          ],
+          "fin33Amount": [
+            121
+          ],
+          "fin32Currency": [
+            "USD"
+          ],
+          "fin57": [
+            "CITIUS30XXX"
+          ],
+          "receiver": "CITIUS30XXX",
+          "transactionReference": "201209PN-SAINT-U-S14435937",
+          "fin50": [
+            "/1039173012307"
+          ],
+          "UETR": "a2eec6fb-457e-4cd0-b2c1-39fbecf09ed7",
+          "amhAccount": "CITIUS30XXX",
+          "sender": "SBZAZAJ0XXX",
+          "mdate": 1607299200000,
+          "beneficiaryAccount": "//92637884\r\n1/JUDITH A WEST",
+          "fin32Amount": [
+            845
+          ],
+          "account": [
+            "/92637884"
+          ]
+        }
+      ]
+    },
+    "/6864926348682": {
+      "messages": [
+        {
+          "amhAmount": 121,
+          "amhCurrency": "CRED",
+          "orderingAccount": "/6864926348682\r\n1/MELCO CONVEYOR",
+          "currency": [
+            "CRED"
+          ],
+          "fin33Currency": [
+            "CRED"
+          ],
+          "fin33Amount": [
+            121
+          ],
+          "fin32Currency": [
+            "CRED"
+          ],
+          "fin57": [
+            "CITIUS30XXX"
+          ],
+          "receiver": "CITIUS30XXX",
+          "transactionReference": "201209PN-SAINT-U-S14435950",
+          "fin50": [
+            "/6864926348682"
+          ],
+          "UETR": "e37a4ee7-443b-4bb9-92c2-1eedfae05f75",
+          "amhAccount": "CITIUS30XXX",
+          "sender": "SBZAZAJ0XXX",
+          "mdate": 1607299200000,
+          "beneficiaryAccount": "//92637884\r\n1/JUDITH A WEST",
+          "fin32Amount": [
+            143
+          ],
+          "account": [
+            "/92637884"
+          ]
+        }
+      ]
+    },
+    "/9816381688888": {
+      "messages": [
+        {
+          "amhAmount": 121,
+          "amhCurrency": "ZAR",
+          "orderingAccount": "/9816381688888\r\n1/MELCO CONVEYOR",
+          "currency": [
+            "ZAR"
+          ],
+          "fin33Currency": [
+            "ZAR"
+          ],
+          "fin33Amount": [
+            121
+          ],
+          "fin32Currency": [
+            "ZAR"
+          ],
+          "fin57": [
+            "CITIUS30XXX"
+          ],
+          "receiver": "CITIUS30XXX",
+          "transactionReference": "201209PN-SAINT-U-S14435947",
+          "fin50": [
+            "/9816381688888"
+          ],
+          "UETR": "8d9a2a5a-32c1-4388-8601-f6949b93ad4f",
+          "amhAccount": "CITIUS30XXX",
+          "sender": "SBZAZAJ0XXX",
+          "mdate": 1607299200000,
+          "beneficiaryAccount": "//92637884\r\n1/JUDITH A WEST",
+          "fin32Amount": [
+            643
+          ],
+          "account": [
+            "/92637884"
+          ]
+        }
+      ]
+    },
+    "/0900002423482": {
+      "messages": [
+        {
+          "amhAmount": 121,
+          "amhCurrency": "USD",
+          "orderingAccount": "/0900002423482\r\n1/MELCO CONVEYOR",
+          "currency": [
+            "USD"
+          ],
+          "fin33Currency": [
+            "USD"
+          ],
+          "fin33Amount": [
+            121
+          ],
+          "fin32Currency": [
+            "USD"
+          ],
+          "fin57": [
+            "CITIUS30XXX"
+          ],
+          "receiver": "CITIUS30XXX",
+          "transactionReference": "201209PN-SAINT-U-S14436070",
+          "fin50": [
+            "/0900002423482"
+          ],
+          "UETR": "f2260f0a-fa7f-4e88-8414-c5d1f7a712ab",
+          "amhAccount": "CITIUS30XXX",
+          "sender": "SBZAZAJ0XXX",
+          "mdate": 1607299200000,
+          "beneficiaryAccount": "//92637884\r\n1/JUDITH A WEST",
+          "fin32Amount": [
+            665
+          ],
+          "account": [
+            "/92637884"
+          ]
+        }
+      ]
+    },
+    "/1283512357777": {
+      "messages": [
+        {
+          "amhAmount": 121,
+          "amhCurrency": "ZAR",
+          "orderingAccount": "/1283512357777\r\n1/MELCO CONVEYOR",
+          "currency": [
+            "ZAR"
+          ],
+          "fin33Currency": [
+            "ZAR"
+          ],
+          "fin33Amount": [
+            121
+          ],
+          "fin32Currency": [
+            "ZAR"
+          ],
+          "fin57": [
+            "CITIUS30XXX"
+          ],
+          "receiver": "CITIUS30XXX",
+          "transactionReference": "201209PN-SAINT-U-S14436194",
+          "fin50": [
+            "/1283512357777"
+          ],
+          "UETR": "5e5afa51-b868-4f4b-94d4-547430d902d3",
+          "amhAccount": "CITIUS30XXX",
+          "sender": "SBZAZAJ0XXX",
+          "mdate": 1607299200000,
+          "beneficiaryAccount": "//92637884\r\n1/JUDITH A WEST",
+          "fin32Amount": [
+            86
+          ],
+          "account": [
+            "/92637884"
+          ]
+        }
+      ]
+    },
+    "/1785638162381": {
+      "messages": [
+        {
+          "amhAmount": 121,
+          "amhCurrency": "CRED",
+          "orderingAccount": "/1785638162381\r\n1/MELCO CONVEYOR",
+          "currency": [
+            "CRED"
+          ],
+          "fin33Currency": [
+            "CRED"
+          ],
+          "fin33Amount": [
+            121
+          ],
+          "fin32Currency": [
+            "CRED"
+          ],
+          "fin57": [
+            "CITIUS30XXX"
+          ],
+          "receiver": "CITIUS30XXX",
+          "transactionReference": "201209PN-SAINT-U-S14436301",
+          "fin50": [
+            "/1785638162381"
+          ],
+          "UETR": "ee3c2df1-febc-4a81-8ca1-b1374b7ac9b4",
+          "amhAccount": "CITIUS30XXX",
+          "sender": "SBZAZAJ0XXX",
+          "mdate": 1607299200000,
+          "beneficiaryAccount": "//92637884\r\n1/JUDITH A WEST",
+          "fin32Amount": [
+            324
+          ],
+          "account": [
+            "/92637884"
+          ]
+        }
+      ]
+    }
+  },
+  "201217PN-SAINT-U-S14473790": {
+    "messages": [
+      {
+        "amhAmount": 121,
+        "amhCurrency": "USD",
+        "orderingAccount": "/041451230014\r\n1/MELCO CONVEYOR",
+        "currency": [
+          "USD"
+        ],
+        "fin33Currency": [
+          "USD"
+        ],
+        "fin33Amount": [
+          121
+        ],
+        "fin32Currency": [
+          "USD"
+        ],
+        "fin57": [
+          "CITIUS30XXX"
+        ],
+        "receiver": "CITIUS30XXX",
+        "transactionReference": "201217PN-SAINT-U-S14473790",
+        "fin50": [
+          "/041451230014"
+        ],
+        "UETR": "194b91f9-e035-47b0-ae57-33c944f60406",
+        "amhAccount": "CITIUS30XXX",
+        "sender": "SBZAZAJ0XXX",
+        "mdate": 1607299200000,
+        "beneficiaryAccount": "//92637884\r\n1/JUDITH A WEST",
+        "fin32Amount": [
+          353
+        ],
+        "account": [
+          "/92637884"
+        ]
+      }
+    ]
+  },
+  "201208PN-SAINT-U-S14434281": {
+    "messages": [
+      {
+        "amhAmount": 121,
+        "amhCurrency": "CRED",
+        "orderingAccount": "/92544652313\r\n1/MELCO CONVEYOR",
+        "currency": [
+          "CRED"
+        ],
+        "fin33Currency": [
+          "CRED"
+        ],
+        "fin33Amount": [
+          121
+        ],
+        "fin32Currency": [
+          "CRED"
+        ],
+        "fin57": [
+          "CITIUS30XXX"
+        ],
+        "receiver": "CITIUS30XXX",
+        "transactionReference": "201208PN-SAINT-U-S14434281",
+        "fin50": [
+          "/92544652313"
+        ],
+        "UETR": "5ba6c78c-aa94-41ca-af87-dd5b6520cbec",
+        "amhAccount": "CITIUS30XXX",
+        "sender": "SBZAZAJ0XXX",
+        "mdate": 1607299200000,
+        "beneficiaryAccount": "//92637884\r\n1/JUDITH A WEST",
+        "fin32Amount": [
+          35346
+        ],
+        "account": [
+          "/92637884"
+        ]
+      }
+    ]
+  },
+  "201208PN-SAINT-U-S14434196": {
+    "messages": [
+      {
+        "amhAmount": 121,
+        "amhCurrency": "ZAR",
+        "orderingAccount": "/234709263274\r\n1/MELCO CONVEYOR",
+        "currency": [
+          "ZAR"
+        ],
+        "fin33Currency": [
+          "ZAR"
+        ],
+        "fin33Amount": [
+          121
+        ],
+        "fin32Currency": [
+          "ZAR"
+        ],
+        "fin57": [
+          "CITIUS30XXX"
+        ],
+        "receiver": "CITIUS30XXX",
+        "transactionReference": "201208PN-SAINT-U-S14434196",
+        "fin50": [
+          "/234709263274"
+        ],
+        "UETR": "dd9f2983-b4d9-4593-a56a-8f5b18117f12",
+        "amhAccount": "CITIUS30XXX",
+        "sender": "SBZAZAJ0XXX",
+        "mdate": 1607299200000,
+        "beneficiaryAccount": "//92637884\r\n1/JUDITH A WEST",
+        "fin32Amount": [
+          868
+        ],
+        "account": [
+          "/92637884"
+        ]
+      }
+    ]
+  },
+  "201208PN-SAINT-U-S14434192": {
+    "messages": [
+      {
+        "amhAmount": 121,
+        "amhCurrency": "USD",
+        "orderingAccount": "/2643429836446\r\n1/MELCO CONVEYOR",
+        "currency": [
+          "USD"
+        ],
+        "fin33Currency": [
+          "USD"
+        ],
+        "fin33Amount": [
+          121
+        ],
+        "fin32Currency": [
+          "USD"
+        ],
+        "fin57": [
+          "CITIUS30XXX"
+        ],
+        "receiver": "CITIUS30XXX",
+        "transactionReference": "201208PN-SAINT-U-S14434192",
+        "fin50": [
+          "/2643429836446"
+        ],
+        "UETR": "979621a2-9fd3-4829-a634-c5e165de1e75",
+        "amhAccount": "CITIUS30XXX",
+        "sender": "SBZAZAJ0XXX",
+        "mdate": 1607299200000,
+        "beneficiaryAccount": "//92637884\r\n1/JUDITH A WEST",
+        "fin32Amount": [
+          242
+        ],
+        "account": [
+          "/92637884"
+        ]
+      }
+    ]
+  },
+  "201208PN-SAINT-U-S14434200": {
+    "messages": [
+      {
+        "amhAmount": 121,
+        "amhCurrency": "ZAR",
+        "orderingAccount": "/9264236426r565\r\n1/MELCO CONVEYOR",
+        "currency": [
+          "ZAR"
+        ],
+        "fin33Currency": [
+          "ZAR"
+        ],
+        "fin33Amount": [
+          121
+        ],
+        "fin32Currency": [
+          "ZAR"
+        ],
+        "fin57": [
+          "CITIUS30XXX"
+        ],
+        "receiver": "CITIUS30XXX",
+        "transactionReference": "201208PN-SAINT-U-S14434200",
+        "fin50": [
+          "/9264236426r565"
+        ],
+        "UETR": "5022c76c-348c-47ba-89b5-dcef24958d13",
+        "amhAccount": "CITIUS30XXX",
+        "sender": "SBZAZAJ0XXX",
+        "mdate": 1607299200000,
+        "beneficiaryAccount": "//92637884\r\n1/JUDITH A WEST",
+        "fin32Amount": [
+          2425
+        ],
+        "account": [
+          "/92637884"
+        ]
+      }
+    ]
+  },
+  "201208PN-SAINT-U-S14434258": {
+    "messages": [
+      {
+        "amhAmount": 121,
+        "amhCurrency": "ZAR",
+        "orderingAccount": "/5238162361822\r\n1/MELCO CONVEYOR",
+        "currency": [
+          "ZAR"
+        ],
+        "fin33Currency": [
+          "ZAR"
+        ],
+        "fin33Amount": [
+          121
+        ],
+        "fin32Currency": [
+          "ZAR"
+        ],
+        "fin57": [
+          "CITIUS30XXX"
+        ],
+        "receiver": "CITIUS30XXX",
+        "transactionReference": "201208PN-SAINT-U-S14434258",
+        "fin50": [
+          "/5238162361822"
+        ],
+        "UETR": "65302aa5-0cb9-4f38-b0c6-88ab26e28858",
+        "amhAccount": "CITIUS30XXX",
+        "sender": "SBZAZAJ0XXX",
+        "mdate": 1607299200000,
+        "beneficiaryAccount": "//92637884\r\n1/JUDITH A WEST",
+        "fin32Amount": [
+          345353
+        ],
+        "account": [
+          "/92637884"
+        ]
+      }
+    ]
+  },
+  "201208PN-SAINT-U-S14433161": {
+    "messages": [
+      {
+        "amhAmount": 121,
+        "amhCurrency": "USD",
+        "orderingAccount": "/2894672384923\r\n1/MELCO CONVEYOR",
+        "currency": [
+          "USD"
+        ],
+        "fin33Currency": [
+          "USD"
+        ],
+        "fin33Amount": [
+          121
+        ],
+        "fin32Currency": [
+          "USD"
+        ],
+        "fin57": [
+          "CITIUS30XXX"
+        ],
+        "receiver": "CITIUS30XXX",
+        "transactionReference": "201208PN-SAINT-U-S14433161",
+        "fin50": [
+          "/2894672384923"
+        ],
+        "UETR": "425c1dde-71ee-42aa-acfd-03c80a3f4e99",
+        "amhAccount": "CITIUS30XXX",
+        "sender": "SBZAZAJ0XXX",
+        "mdate": 1607299200000,
+        "beneficiaryAccount": "//92637884\r\n1/JUDITH A WEST",
+        "fin32Amount": [
+          96966
+        ],
+        "account": [
+          "/92637884"
+        ]
+      }
+    ]
+  },
+  "201209PN-SAINT-U-S14435961": {
+    "messages": [
+      {
+        "amhAmount": 121,
+        "amhCurrency": "CRED",
+        "orderingAccount": "/8642964364234\r\n1/MELCO CONVEYOR",
+        "currency": [
+          "CRED"
+        ],
+        "fin33Currency": [
+          "CRED"
+        ],
+        "fin33Amount": [
+          121
+        ],
+        "fin32Currency": [
+          "CRED"
+        ],
+        "fin57": [
+          "CITIUS30XXX"
+        ],
+        "receiver": "CITIUS30XXX",
+        "transactionReference": "201209PN-SAINT-U-S14435961",
+        "fin50": [
+          "/8642964364234"
+        ],
+        "UETR": "b67d9981-5310-4489-8895-97cfc63a92c6",
+        "amhAccount": "CITIUS30XXX",
+        "sender": "SBZAZAJ0XXX",
+        "mdate": 1607299200000,
+        "beneficiaryAccount": "//92637884\r\n1/JUDITH A WEST",
+        "fin32Amount": [
+          98
+        ],
+        "account": [
+          "/92637884"
+        ]
+      }
+    ]
+  },
+  "201209PN-SAINT-U-S14435936": {
+    "messages": [
+      {
+        "amhAmount": 121,
+        "amhCurrency": "ZAR",
+        "orderingAccount": "/0285834523465\r\n1/MELCO CONVEYOR",
+        "currency": [
+          "ZAR"
+        ],
+        "fin33Currency": [
+          "ZAR"
+        ],
+        "fin33Amount": [
+          121
+        ],
+        "fin32Currency": [
+          "ZAR"
+        ],
+        "fin57": [
+          "CITIUS30XXX"
+        ],
+        "receiver": "CITIUS30XXX",
+        "transactionReference": "201209PN-SAINT-U-S14435936",
+        "fin50": [
+          "/0285834523465"
+        ],
+        "UETR": "5022c76c-348c-47ba-89b5-dcef24958d13",
+        "amhAccount": "CITIUS30XXX",
+        "sender": "SBZAZAJ0XXX",
+        "mdate": 1607299200000,
+        "beneficiaryAccount": "//92637884\r\n1/JUDITH A WEST",
+        "fin32Amount": [
+          353
+        ],
+        "account": [
+          "/92637884"
+        ]
+      }
+    ]
+  },
+  "201209PN-SAINT-U-S14435959": {
+    "messages": [
+      {
+        "amhAmount": 121,
+        "amhCurrency": "USD",
+        "orderingAccount": "/0162428349628\r\n1/MELCO CONVEYOR",
+        "currency": [
+          "USD"
+        ],
+        "fin33Currency": [
+          "USD"
+        ],
+        "fin33Amount": [
+          121
+        ],
+        "fin32Currency": [
+          "USD"
+        ],
+        "fin57": [
+          "CITIUS30XXX"
+        ],
+        "receiver": "CITIUS30XXX",
+        "transactionReference": "201209PN-SAINT-U-S14435959",
+        "fin50": [
+          "/0162428349628"
+        ],
+        "UETR": "aa121020-39fb-4a1e-a210-20042818ffff",
+        "amhAccount": "CITIUS30XXX",
+        "sender": "SBZAZAJ0XXX",
+        "mdate": 1607299200000,
+        "beneficiaryAccount": "//92637884\r\n1/JUDITH A WEST",
+        "fin32Amount": [
+          8645
+        ],
+        "account": [
+          "/92637884"
+        ]
+      }
+    ]
+  },
+  "201209PN-SAINT-U-S14435967": {
+    "messages": [
+      {
+        "amhAmount": 121,
+        "amhCurrency": "ZAR",
+        "orderingAccount": "/1538153112675\r\n1/MELCO CONVEYOR",
+        "currency": [
+          "ZAR"
+        ],
+        "fin33Currency": [
+          "ZAR"
+        ],
+        "fin33Amount": [
+          121
+        ],
+        "fin32Currency": [
+          "ZAR"
+        ],
+        "fin57": [
+          "CITIUS30XXX"
+        ],
+        "receiver": "CITIUS30XXX",
+        "transactionReference": "201209PN-SAINT-U-S14435967",
+        "fin50": [
+          "/1538153112675"
+        ],
+        "UETR": "1871df4e-78c7-4b74-9c33-9a1b11e88aba",
+        "amhAccount": "CITIUS30XXX",
+        "sender": "SBZAZAJ0XXX",
+        "mdate": 1607299200000,
+        "beneficiaryAccount": "//92637884\r\n1/JUDITH A WEST",
+        "fin32Amount": [
+          2355
+        ],
+        "account": [
+          "/92637884"
+        ]
+      }
+    ]
+  },
+  "201209PN-SAINT-U-S14435911": {
+    "messages": [
+      {
+        "amhAmount": 121,
+        "amhCurrency": "ZAR",
+        "orderingAccount": "/1246864912364\r\n1/MELCO CONVEYOR",
+        "currency": [
+          "ZAR"
+        ],
+        "fin33Currency": [
+          "ZAR"
+        ],
+        "fin33Amount": [
+          121
+        ],
+        "fin32Currency": [
+          "ZAR"
+        ],
+        "fin57": [
+          "CITIUS30XXX"
+        ],
+        "receiver": "CITIUS30XXX",
+        "transactionReference": "201209PN-SAINT-U-S14435911",
+        "fin50": [
+          "/1246864912364"
+        ],
+        "UETR": "906dba2b-ea70-4480-910c-028581d08673",
+        "amhAccount": "CITIUS30XXX",
+        "sender": "SBZAZAJ0XXX",
+        "mdate": 1607299200000,
+        "beneficiaryAccount": "//92637884\r\n1/JUDITH A WEST",
+        "fin32Amount": [
+          3433
+        ],
+        "account": [
+          "/92637884"
+        ]
+      }
+    ]
+  },
+  "201209PN-SAINT-U-S14435906": {
+    "messages": [
+      {
+        "amhAmount": 121,
+        "amhCurrency": "CRED",
+        "orderingAccount": "/1926423498688\r\n1/MELCO CONVEYOR",
+        "currency": [
+          "CRED"
+        ],
+        "fin33Currency": [
+          "CRED"
+        ],
+        "fin33Amount": [
+          121
+        ],
+        "fin32Currency": [
+          "CRED"
+        ],
+        "fin57": [
+          "CITIUS30XXX"
+        ],
+        "receiver": "CITIUS30XXX",
+        "transactionReference": "201209PN-SAINT-U-S14435906",
+        "fin50": [
+          "/1926423498688"
+        ],
+        "UETR": "68a8b0ce-2d6e-464b-b3f7-6fc4e32de341",
+        "amhAccount": "CITIUS30XXX",
+        "sender": "SBZAZAJ0XXX",
+        "mdate": 1607299200000,
+        "beneficiaryAccount": "//92637884\r\n1/JUDITH A WEST",
+        "fin32Amount": [
+          200
+        ],
+        "account": [
+          "/92637884"
+        ]
+      }
+    ]
+  },
+  "201209PN-SAINT-U-S14435944": {
+    "messages": [
+      {
+        "amhAmount": 121,
+        "amhCurrency": "USD",
+        "orderingAccount": "/2938636258346\r\n1/MELCO CONVEYOR",
+        "currency": [
+          "USD"
+        ],
+        "fin33Currency": [
+          "USD"
+        ],
+        "fin33Amount": [
+          121
+        ],
+        "fin32Currency": [
+          "USD"
+        ],
+        "fin57": [
+          "CITIUS30XXX"
+        ],
+        "receiver": "CITIUS30XXX",
+        "transactionReference": "201209PN-SAINT-U-S14435944",
+        "fin50": [
+          "/2938636258346"
+        ],
+        "UETR": "7a3e39e7-06fb-4034-9d16-5904f043ea21",
+        "amhAccount": "CITIUS30XXX",
+        "sender": "SBZAZAJ0XXX",
+        "mdate": 1607299200000,
+        "beneficiaryAccount": "//92637884\r\n1/JUDITH A WEST",
+        "fin32Amount": [
+          244
+        ],
+        "account": [
+          "/92637884"
+        ]
+      }
+    ]
+  },
+  "201209PN-SAINT-U-S14435956": {
+    "messages": [
+      {
+        "amhAmount": 121,
+        "amhCurrency": "ZAR",
+        "orderingAccount": "/1868916931269\r\n1/MELCO CONVEYOR",
+        "currency": [
+          "ZAR"
+        ],
+        "fin33Currency": [
+          "ZAR"
+        ],
+        "fin33Amount": [
+          121
+        ],
+        "fin32Currency": [
+          "ZAR"
+        ],
+        "fin57": [
+          "CITIUS30XXX"
+        ],
+        "receiver": "CITIUS30XXX",
+        "transactionReference": "201209PN-SAINT-U-S14435956",
+        "fin50": [
+          "/1868916931269"
+        ],
+        "UETR": "352d8271-c8ff-45a4-8eed-24f353e5b102",
+        "amhAccount": "CITIUS30XXX",
+        "sender": "SBZAZAJ0XXX",
+        "mdate": 1607299200000,
+        "beneficiaryAccount": "//92637884\r\n1/JUDITH A WEST",
+        "fin32Amount": [
+          132
+        ],
+        "account": [
+          "/92637884"
+        ]
+      }
+    ]
+  },
+  "201209PN-SAINT-U-S14435932": {
+    "messages": [
+      {
+        "amhAmount": 121,
+        "amhCurrency": "ZAR",
+        "orderingAccount": "/1963861216986\r\n1/MELCO CONVEYOR",
+        "currency": [
+          "ZAR"
+        ],
+        "fin33Currency": [
+          "ZAR"
+        ],
+        "fin33Amount": [
+          121
+        ],
+        "fin32Currency": [
+          "ZAR"
+        ],
+        "fin57": [
+          "CITIUS30XXX"
+        ],
+        "receiver": "CITIUS30XXX",
+        "transactionReference": "201209PN-SAINT-U-S14435932",
+        "fin50": [
+          "/1963861216986"
+        ],
+        "UETR": "e8f85ab0-34da-48a2-9239-6ff0edb8d9cf",
+        "amhAccount": "CITIUS30XXX",
+        "sender": "SBZAZAJ0XXX",
+        "mdate": 1607299200000,
+        "beneficiaryAccount": "//92637884\r\n1/JUDITH A WEST",
+        "fin32Amount": [
+          243
+        ],
+        "account": [
+          "/92637884"
+        ]
+      }
+    ]
+  },
+  "201209PN-SAINT-U-S14435929": {
+    "messages": [
+      {
+        "amhAmount": 121,
+        "amhCurrency": "ZAR",
+        "orderingAccount": "/2963492634929\r\n1/MELCO CONVEYOR",
+        "currency": [
+          "ZAR"
+        ],
+        "fin33Currency": [
+          "ZAR"
+        ],
+        "fin33Amount": [
+          121
+        ],
+        "fin32Currency": [
+          "ZAR"
+        ],
+        "fin57": [
+          "CITIUS30XXX"
+        ],
+        "receiver": "CITIUS30XXX",
+        "transactionReference": "201209PN-SAINT-U-S14435929",
+        "fin50": [
+          "/2963492634929"
+        ],
+        "UETR": "21cff743-345a-4965-b26e-e6860acb291f",
+        "amhAccount": "CITIUS30XXX",
+        "sender": "SBZAZAJ0XXX",
+        "mdate": 1607299200000,
+        "beneficiaryAccount": "//92637884\r\n1/JUDITH A WEST",
+        "fin32Amount": [
+          675
+        ],
+        "account": [
+          "/92637884"
+        ]
+      }
+    ]
+  },
+  "201209PN-SAINT-U-S14435931": {
+    "messages": [
+      {
+        "amhAmount": 121,
+        "amhCurrency": "CRED",
+        "orderingAccount": "/1869163691639\r\n1/MELCO CONVEYOR",
+        "currency": [
+          "CRED"
+        ],
+        "fin33Currency": [
+          "CRED"
+        ],
+        "fin33Amount": [
+          121
+        ],
+        "fin32Currency": [
+          "CRED"
+        ],
+        "fin57": [
+          "CITIUS30XXX"
+        ],
+        "receiver": "CITIUS30XXX",
+        "transactionReference": "201209PN-SAINT-U-S14435931",
+        "fin50": [
+          "/1869163691639"
+        ],
+        "UETR": "9304f6c1-ae31-4899-9d41-7aaaf4698111",
+        "amhAccount": "CITIUS30XXX",
+        "sender": "SBZAZAJ0XXX",
+        "mdate": 1607299200000,
+        "beneficiaryAccount": "//92637884\r\n1/JUDITH A WEST",
+        "fin32Amount": [
+          866
+        ],
+        "account": [
+          "/92637884"
+        ]
+      }
+    ]
+  },
+  "201209PN-SAINT-U-S14435937": {
+    "messages": [
+      {
+        "amhAmount": 121,
+        "amhCurrency": "USD",
+        "orderingAccount": "/1039173012307\r\n1/MELCO CONVEYOR",
+        "currency": [
+          "USD"
+        ],
+        "fin33Currency": [
+          "USD"
+        ],
+        "fin33Amount": [
+          121
+        ],
+        "fin32Currency": [
+          "USD"
+        ],
+        "fin57": [
+          "CITIUS30XXX"
+        ],
+        "receiver": "CITIUS30XXX",
+        "transactionReference": "201209PN-SAINT-U-S14435937",
+        "fin50": [
+          "/1039173012307"
+        ],
+        "UETR": "a2eec6fb-457e-4cd0-b2c1-39fbecf09ed7",
+        "amhAccount": "CITIUS30XXX",
+        "sender": "SBZAZAJ0XXX",
+        "mdate": 1607299200000,
+        "beneficiaryAccount": "//92637884\r\n1/JUDITH A WEST",
+        "fin32Amount": [
+          845
+        ],
+        "account": [
+          "/92637884"
+        ]
+      }
+    ]
+  },
+  "201209PN-SAINT-U-S14435950": {
+    "messages": [
+      {
+        "amhAmount": 121,
+        "amhCurrency": "CRED",
+        "orderingAccount": "/6864926348682\r\n1/MELCO CONVEYOR",
+        "currency": [
+          "CRED"
+        ],
+        "fin33Currency": [
+          "CRED"
+        ],
+        "fin33Amount": [
+          121
+        ],
+        "fin32Currency": [
+          "CRED"
+        ],
+        "fin57": [
+          "CITIUS30XXX"
+        ],
+        "receiver": "CITIUS30XXX",
+        "transactionReference": "201209PN-SAINT-U-S14435950",
+        "fin50": [
+          "/6864926348682"
+        ],
+        "UETR": "e37a4ee7-443b-4bb9-92c2-1eedfae05f75",
+        "amhAccount": "CITIUS30XXX",
+        "sender": "SBZAZAJ0XXX",
+        "mdate": 1607299200000,
+        "beneficiaryAccount": "//92637884\r\n1/JUDITH A WEST",
+        "fin32Amount": [
+          143
+        ],
+        "account": [
+          "/92637884"
+        ]
+      }
+    ]
+  },
+  "201209PN-SAINT-U-S14435947": {
+    "messages": [
+      {
+        "amhAmount": 121,
+        "amhCurrency": "ZAR",
+        "orderingAccount": "/9816381688888\r\n1/MELCO CONVEYOR",
+        "currency": [
+          "ZAR"
+        ],
+        "fin33Currency": [
+          "ZAR"
+        ],
+        "fin33Amount": [
+          121
+        ],
+        "fin32Currency": [
+          "ZAR"
+        ],
+        "fin57": [
+          "CITIUS30XXX"
+        ],
+        "receiver": "CITIUS30XXX",
+        "transactionReference": "201209PN-SAINT-U-S14435947",
+        "fin50": [
+          "/9816381688888"
+        ],
+        "UETR": "8d9a2a5a-32c1-4388-8601-f6949b93ad4f",
+        "amhAccount": "CITIUS30XXX",
+        "sender": "SBZAZAJ0XXX",
+        "mdate": 1607299200000,
+        "beneficiaryAccount": "//92637884\r\n1/JUDITH A WEST",
+        "fin32Amount": [
+          643
+        ],
+        "account": [
+          "/92637884"
+        ]
+      }
+    ]
+  },
+  "201209PN-SAINT-U-S14436070": {
+    "messages": [
+      {
+        "amhAmount": 121,
+        "amhCurrency": "USD",
+        "orderingAccount": "/0900002423482\r\n1/MELCO CONVEYOR",
+        "currency": [
+          "USD"
+        ],
+        "fin33Currency": [
+          "USD"
+        ],
+        "fin33Amount": [
+          121
+        ],
+        "fin32Currency": [
+          "USD"
+        ],
+        "fin57": [
+          "CITIUS30XXX"
+        ],
+        "receiver": "CITIUS30XXX",
+        "transactionReference": "201209PN-SAINT-U-S14436070",
+        "fin50": [
+          "/0900002423482"
+        ],
+        "UETR": "f2260f0a-fa7f-4e88-8414-c5d1f7a712ab",
+        "amhAccount": "CITIUS30XXX",
+        "sender": "SBZAZAJ0XXX",
+        "mdate": 1607299200000,
+        "beneficiaryAccount": "//92637884\r\n1/JUDITH A WEST",
+        "fin32Amount": [
+          665
+        ],
+        "account": [
+          "/92637884"
+        ]
+      }
+    ]
+  },
+  "201209PN-SAINT-U-S14436194": {
+    "messages": [
+      {
+        "amhAmount": 121,
+        "amhCurrency": "ZAR",
+        "orderingAccount": "/1283512357777\r\n1/MELCO CONVEYOR",
+        "currency": [
+          "ZAR"
+        ],
+        "fin33Currency": [
+          "ZAR"
+        ],
+        "fin33Amount": [
+          121
+        ],
+        "fin32Currency": [
+          "ZAR"
+        ],
+        "fin57": [
+          "CITIUS30XXX"
+        ],
+        "receiver": "CITIUS30XXX",
+        "transactionReference": "201209PN-SAINT-U-S14436194",
+        "fin50": [
+          "/1283512357777"
+        ],
+        "UETR": "5e5afa51-b868-4f4b-94d4-547430d902d3",
+        "amhAccount": "CITIUS30XXX",
+        "sender": "SBZAZAJ0XXX",
+        "mdate": 1607299200000,
+        "beneficiaryAccount": "//92637884\r\n1/JUDITH A WEST",
+        "fin32Amount": [
+          86
+        ],
+        "account": [
+          "/92637884"
+        ]
+      }
+    ]
+  },
+  "201209PN-SAINT-U-S14436301": {
+    "messages": [
+      {
+        "amhAmount": 121,
+        "amhCurrency": "CRED",
+        "orderingAccount": "/1785638162381\r\n1/MELCO CONVEYOR",
+        "currency": [
+          "CRED"
+        ],
+        "fin33Currency": [
+          "CRED"
+        ],
+        "fin33Amount": [
+          121
+        ],
+        "fin32Currency": [
+          "CRED"
+        ],
+        "fin57": [
+          "CITIUS30XXX"
+        ],
+        "receiver": "CITIUS30XXX",
+        "transactionReference": "201209PN-SAINT-U-S14436301",
+        "fin50": [
+          "/1785638162381"
+        ],
+        "UETR": "ee3c2df1-febc-4a81-8ca1-b1374b7ac9b4",
+        "amhAccount": "CITIUS30XXX",
+        "sender": "SBZAZAJ0XXX",
+        "mdate": 1607299200000,
+        "beneficiaryAccount": "//92637884\r\n1/JUDITH A WEST",
+        "fin32Amount": [
+          324
+        ],
+        "account": [
+          "/92637884"
+        ]
+      }
+    ]
+  }
+}

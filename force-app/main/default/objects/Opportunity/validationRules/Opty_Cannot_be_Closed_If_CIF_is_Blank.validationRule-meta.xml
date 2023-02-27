@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opty_Cannot_be_Closed_If_CIF_is_Blank</fullName>
+    <active>true</active>
+    <description>EN-0832 User cannot change the Status of Opportunity to &apos;Closed-won&apos; if associated Client does not have CIF value or Inactive.
+SFP-9729 - updated requirements.</description>
+    <errorConditionFormula>IF($Profile.Name &lt;&gt; &quot;BCC Custom Std User - Mobile&quot;,AND (
+ISPICKVAL(StageName, &quot;3 - Closed Won&quot;),
+( RecordType.DeveloperName  &lt;&gt; &apos;Africa_Regions_Opportunity&apos;),
+  OR(
+    ISBLANK(Account.CIF__c),
+    NOT(
+      OR(
+        ISPICKVAL( Account.CIF_Client_Active_Code__c , &apos;A&apos;),
+        ISPICKVAL( Account.CIF_Client_Active_Code__c , &apos;Active&apos;)
+      )
+    )
+  ) 
+),false)</errorConditionFormula>
+    <errorDisplayField>AccountId</errorDisplayField>
+    <errorMessage>You will not be able to close an opportunity as “Closed-Won” if the Client does not have a CIF number or is an inactive client. Please onboard or reactivate your client before closing your opportunities as Closed-Won.</errorMessage>
+</ValidationRule>

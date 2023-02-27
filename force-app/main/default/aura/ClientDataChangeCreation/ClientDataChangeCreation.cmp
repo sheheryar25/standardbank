@@ -1,0 +1,78 @@
+<aura:component description="ClientDataChangeCreation"
+                implements="force:lightningQuickActionWithoutHeader,force:hasRecordId,lightning:actionOverride"
+                controller="ClientDataChangeCreationController">
+
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="record" type="Client_Data_Change__c" default="{'sobjectType':'Client_Data_Change__c'}"/>
+    <aura:attribute name="message" type="String" default="Please populate New Coordinator and Role to proceed." />
+    <aura:attribute name="showKeepAndRemove" type="Boolean" default="true" />
+    <aura:attribute name="errorMessage" type="String" default="" />
+    <aura:attribute name="isQuickAction" type="Boolean" default="true" />
+    <aura:attribute name="isLoading" type="Boolean" default="true" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler name="change" value="{!v.record}" action="{!c.handleRoleChange}"/>
+
+    <header class="slds-modal__header">
+        <h2>
+           New Data Change Request <aura:if isTrue="{!v.record}"> for {!v.record.Client_Name__r.Name} </aura:if>
+        </h2>
+    </header>
+
+
+
+    <aura:if isTrue="{!v.isLoading}">
+        <lightning:spinner variant="brand" size="large" alternativeText="Waiting"/>
+    </aura:if>
+
+
+    <div class="{!if(v.isQuickAction, '', 'slds-modal__content slds-p-around_medium')}">
+        <aura:if isTrue="{!v.errorMessage}">
+            <ui:message title="Error" severity="error" closable="false"  >
+                {!v.errorMessage}
+            </ui:message>
+        </aura:if>
+
+        <aura:if isTrue="{!v.message}">
+            <lightning:formattedRichText value="{!v.message}"  />
+        </aura:if>
+        <br/>
+        <aura:if isTrue="{!and(v.record, v.record.Current_Client_Coordinator__c)}">
+            <div aura:id="content">
+                <div aura:id="grid" class="{!'slds-grid slds-wrap slds-p-around_x-small '}">
+                    <div class="{!'slds-col slds-size_1-of-2 slds-p-horizontal_x-small '}">
+                        <c:recordField record="{!v.record}" fieldName="Current_Client_Coordinator__c" customLabel="Current CC"
+                                       showLabel="true"  showHelptext="false" editMode="false" skipFls="true" readOnly="true" />
+                        <c:recordField record="{!v.record}" fieldName="Current_Client_Coordinator_Role__c" customLabel="Current CC Role"
+                                       showLabel="true"  showHelptext="false" editMode="false" skipFls="true" readOnly="true" />
+                    </div>
+                    <div class="{!'slds-col slds-size_1-of-2 slds-p-horizontal_x-small '}">
+                        <c:recordField record="{!v.record}" fieldName="New_Client_Coordinator__c" customLabel="New CC"
+                                       showLabel="true"  showHelptext="false" editMode="true" skipFls="true" />
+                        <c:recordField record="{!v.record}" fieldName="New_Client_Coordinator_Role__c" customLabel="New CC Role"
+                                       showLabel="true"  showHelptext="false" editMode="true" skipFls="true" />
+                    </div>
+                </div>
+            </div>
+        </aura:if>
+
+
+
+        <div class="slds-align_absolute-center">
+            <aura:if isTrue="{!and(v.record.New_Client_Coordinator_Role__c, v.record.New_Client_Coordinator__c)}" >
+                <aura:if isTrue="{!v.showKeepAndRemove}" >
+                    <lightning:button variant="brand" label="Remove" onclick="{! c.remove}" />
+                    <lightning:button variant="brand" label="Keep" onclick="{! c.keep}" />
+
+                    <aura:set attribute="else">
+                        <lightning:button variant="brand" label="Proceed" onclick="{! c.proceed}" />
+                    </aura:set>
+                </aura:if>
+            </aura:if>
+
+
+            <lightning:button variant="brand" label="Cancel" onclick="{!c.doCancel}" />
+        </div>
+    </div>
+
+</aura:component>

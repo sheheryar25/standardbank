@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Curr_update_on_Closed_case_Not_Allowed</fullName>
+    <active>true</active>
+    <description>Users shall not be allowed to udpate the Currency field of the Closed Cases.</description>
+    <errorConditionFormula>AND(ISPICKVAL(Status, &apos;Closed&apos;),  ISCHANGED( CurrencyIsoCode) )</errorConditionFormula>
+    <errorDisplayField>CurrencyIsoCode</errorDisplayField>
+    <errorMessage>The Case Currency cannot be chnaged once the Case is Closed.</errorMessage>
+</ValidationRule>

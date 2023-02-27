@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Please_Provide_Declined_Reason</fullName>
+    <active>true</active>
+    <description>When the status Abandoned Make Abandoned Reason Field Required.</description>
+    <errorConditionFormula>AND(ISPICKVAL( PP_ApplicationStatus__c ,&quot;Declined&quot;),  PP_DeclinedReason__c = &apos;&apos;)</errorConditionFormula>
+    <errorDisplayField>PP_DeclinedReason__c</errorDisplayField>
+    <errorMessage>Please Provide Declined Reason.</errorMessage>
+</ValidationRule>

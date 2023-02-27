@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Insight_Status__c</fullName>
+    <description>SFP-6642 - Indicates whether an Insight has actioned or not</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select if any of the following has is applicable to the Insight:
+
+Insight actioned
+Insight previously actioned
+Insight needed no action</inlineHelpText>
+    <label>Insight Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Insight actioned</fullName>
+                <default>false</default>
+                <label>Insight actioned</label>
+            </value>
+            <value>
+                <fullName>Insight previously actioned</fullName>
+                <default>false</default>
+                <label>Insight previously actioned</label>
+            </value>
+            <value>
+                <fullName>Insight needed no action</fullName>
+                <default>false</default>
+                <label>Insight needed no action</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

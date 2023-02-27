@@ -1,0 +1,5 @@
+<design:component>
+    <design:attribute name="caseRecordId" label="Case Record Id" />
+    <design:attribute name="accountRecordId" label="Account Record Id" />
+    <design:attribute name="calledFrom" label="Called From" />
+</design:component>

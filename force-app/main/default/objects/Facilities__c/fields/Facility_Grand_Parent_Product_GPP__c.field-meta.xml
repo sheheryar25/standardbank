@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Facility_Grand_Parent_Product_GPP__c</fullName>
+    <externalId>false</externalId>
+    <label>Facility Grand Parent Product (GPP)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bonds</fullName>
+                <default>false</default>
+                <label>Bonds</label>
+            </value>
+            <value>
+                <fullName>Credit</fullName>
+                <default>false</default>
+                <label>Credit</label>
+            </value>
+            <value>
+                <fullName>Electronic Payments &amp; Collections</fullName>
+                <default>false</default>
+                <label>Electronic Payments &amp; Collections</label>
+            </value>
+            <value>
+                <fullName>Equity</fullName>
+                <default>false</default>
+                <label>Equity</label>
+            </value>
+            <value>
+                <fullName>Equity Derivatives</fullName>
+                <default>false</default>
+                <label>Equity Derivatives</label>
+            </value>
+            <value>
+                <fullName>FX</fullName>
+                <default>false</default>
+                <label>FX</label>
+            </value>
+            <value>
+                <fullName>International Trade Products</fullName>
+                <default>false</default>
+                <label>International Trade Products</label>
+            </value>
+            <value>
+                <fullName>Liquidity Management</fullName>
+                <default>false</default>
+                <label>Liquidity Management</label>
+            </value>
+            <value>
+                <fullName>Loans</fullName>
+                <default>false</default>
+                <label>Loans</label>
+            </value>
+            <value>
+                <fullName>Physical Payments &amp; Collections</fullName>
+                <default>false</default>
+                <label>Physical Payments &amp; Collections</label>
+            </value>
+            <value>
+                <fullName>VAF</fullName>
+                <default>false</default>
+                <label>VAF</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Date_can_not_be_empty</fullName>
+    <active>true</active>
+    <description>It is an error if the Date field is empty. This rule enforces records being created/updated through the API and Apex.</description>
+    <errorConditionFormula>ISNULL(Date__c)</errorConditionFormula>
+    <errorDisplayField>Date__c</errorDisplayField>
+    <errorMessage>Date can not be empty</errorMessage>
+</ValidationRule>

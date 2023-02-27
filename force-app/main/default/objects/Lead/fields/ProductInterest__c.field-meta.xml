@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ProductInterest__c</fullName>
+    <externalId>false</externalId>
+    <label>Product Interest</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Merchant Services</fullName>
+                <default>false</default>
+                <label>Merchant Services</label>
+            </value>
+            <value>
+                <fullName>ATM &amp; Telephone Banking</fullName>
+                <default>false</default>
+                <label>ATM &amp; Telephone Banking</label>
+            </value>
+            <value>
+                <fullName>Credit Solutions</fullName>
+                <default>false</default>
+                <label>Credit Solutions</label>
+            </value>
+            <value>
+                <fullName>Payroll Services</fullName>
+                <default>false</default>
+                <label>Payroll Services</label>
+            </value>
+            <value>
+                <fullName>Cash Management</fullName>
+                <default>false</default>
+                <label>Cash Management</label>
+            </value>
+            <value>
+                <fullName>Checking &amp; Money Market Savings</fullName>
+                <default>false</default>
+                <label>Checking &amp; Money Market Savings</label>
+            </value>
+            <value>
+                <fullName>Retirement Plans &amp; Investment</fullName>
+                <default>false</default>
+                <label>Retirement Plans &amp; Investment</label>
+            </value>
+            <value>
+                <fullName>Insurance and Employee Benefits</fullName>
+                <default>false</default>
+                <label>Insurance and Employee Benefits</label>
+            </value>
+            <value>
+                <fullName>International Services</fullName>
+                <default>false</default>
+                <label>International Services</label>
+            </value>
+            <value>
+                <fullName>Online Servives</fullName>
+                <default>false</default>
+                <label>Online Servives</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

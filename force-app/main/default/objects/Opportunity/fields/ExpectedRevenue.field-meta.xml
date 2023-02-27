@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ExpectedRevenue</fullName>
+    <inlineHelpText>Total estimated Revenue based on all Products added to the Opportunity weighted by the probability of winning the Opportunity. This value is reflected in ZAR with your currency displayed in brackets.</inlineHelpText>
+    <trackTrending>false</trackTrending>
+</CustomField>

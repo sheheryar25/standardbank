@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Milestone__c</fullName>
+    <description>SFP-9031: Milestone field that displays the next Action Plan tasks subject line based on the earliest due date and where the status does not equal Completed or Cancelled</description>
+    <externalId>false</externalId>
+    <label>Milestone</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

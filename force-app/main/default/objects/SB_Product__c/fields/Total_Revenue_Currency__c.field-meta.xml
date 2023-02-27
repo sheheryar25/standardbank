@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Revenue_Currency__c</fullName>
+    <description>Sum of Total_Fees__c + Total_Margin__c + Total_Other__c  + total_revenue_amount__c + Total_Commission__c 
+ without Probability weighting.</description>
+    <externalId>false</externalId>
+    <formula>Total_Fees__c + Total_Margin__c + Total_Other__c + total_revenue_amount__c + Total_Commission__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Sum of Total Fees, Total Margin, Total Other, Total Revenue (Amount)</inlineHelpText>
+    <label>Total Product Revenue</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

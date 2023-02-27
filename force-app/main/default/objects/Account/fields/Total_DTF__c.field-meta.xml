@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_DTF__c</fullName>
+    <description>The total exposure that this client has in terms of delivering the firm (DTB) based on the product grouping.
+This field is updated when a new product holding record is added or deleted</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The total product exposure that this client has in terms of delivering the firm (DTB) based on the product grouping</inlineHelpText>
+    <label>Total DTB</label>
+    <precision>3</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_ComplaintLTNB</fullName>
+    <availability>online</availability>
+    <displayType>link</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>New ComplaintLTNB</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/34.0/connection.js&quot;)}
+
+
+
+function openNewCasePage(){
+
+var url =
+&quot;/setup/ui/recordtypeselect.jsp?ent=Case&quot; +
+&quot;&amp;retURL=/{!Account.Id}&quot; +
+&quot;&amp;save_new_url=%2F500%2Fe%3FretURL%3D%2F{!Account.Id}%26cas4_lkid%3D{!Case.AccountId}%26cas4%3D{!Case.Account}&quot;
+
+window.top.location.href = url;
+}
+
+openNewCasePage();</url>
+</WebLink>

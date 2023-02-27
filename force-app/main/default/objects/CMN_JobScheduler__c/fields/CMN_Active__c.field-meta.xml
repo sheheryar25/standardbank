@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CMN_Active__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>Set this flag too true to ensure the scheduled job is initiated. If an error occurs this flag will be reset too false. In addition when a scheduled job is terminated this flag will also be set to false.</description>
+    <externalId>false</externalId>
+    <label>Active</label>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

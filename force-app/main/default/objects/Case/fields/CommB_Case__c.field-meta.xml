@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CommB_Case__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>US-1123: CommB - updating support cases for Helpdesk.New field created to distinguish CommB Case.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Commercial Banking Case</inlineHelpText>
+    <label>CommB Case</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

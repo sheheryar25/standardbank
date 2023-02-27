@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CIF_Update_Error__c</fullName>
+    <description>This field Store error that occurred during propagation of changes in account hierarchy (CIF Numbers, its related to US-1842)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This error prevent update of this contact CIF values</inlineHelpText>
+    <label>CIF Update Error</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>TextArea</type>
+</CustomField>

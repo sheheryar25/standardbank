@@ -1,0 +1,114 @@
+<aura:component controller="NBAC_OpportunitySelectionController">
+	<aura:attribute name="opportunities" type="Opportunity[]" access="private" default="null"/>
+	<aura:attribute name="selectionFieldsLabels" type="String[]" access="private" default="null"/>
+	<aura:attribute name="checkedOpportunities" type="String[]" access="private"/>
+	<aura:attribute name="saveEnabled" type="boolean" default="false"/>
+	<aura:attribute name="message" type="String" access="private"/>
+	<aura:attribute name="messageSeverity" type="String" access="private"/>
+	<aura:attribute name="isLoading" type="Boolean" access="private" default="true"/>
+	<aura:attribute name="client" type="Object"/>
+    <aura:attribute name="clientFields" type="Object"/>
+    <aura:attribute name="clientError" type="String"/>
+    <aura:attribute name="recordId" type="String" />
+    <force:recordData aura:id="clientRecordLoader"
+        recordId="{!v.recordId}"
+        fields="Name"
+        targetRecord="{!v.client}"
+        targetFields="{!v.clientFields}"
+        targetError="{!v.clientError}"
+    />
+
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+	<aura:registerEvent name="componentAction" type="c:ComponentAction" />
+	<style>
+		.slds-modal__container{
+		    width: auto;
+		    max-width: 70%;
+		    height: auto; 
+			max-height: 70%;
+		}
+		
+	</style>
+		<section aura:id="savingModal" role="dialog" tabindex="-1" aria-hidden="true" aria-labelledby="modal-content-id-2" aria-describedby="modal-content-id-2" class="slds-modal slds-fade-in-open slds-hide">
+	        <lightning:spinner variant="brand" size="large"/>
+	    </section>
+		<div class="modal-header slds-modal__header">
+			<h2 class="title slds-text-heading_medium">Business Assessment</h2>
+			<h2 class="title slds-text-heading_small">Select Opportunities to include for {!v.clientFields.Name}</h2>
+		</div>	
+		<aura:if isTrue="{!v.isLoading}">
+	        <div class="slds-spinner_container" style="position: relative; height: 4em;">
+	            <div class="slds-spinner_brand slds-spinner slds-spinner_small" aria-hidden="false" role="alert">
+	                <div class="slds-spinner__dot-a"></div>
+	                <div class="slds-spinner__dot-b"></div>
+	            </div>
+	        </div>
+
+	        <aura:set attribute="else">
+
+	        	<aura:if isTrue="{!and(v.message!=null, v.message.length>0)}">
+	        		<ui:message severity="{!v.messageSeverity}" >
+	        			<ui:outputText value="{!v.message}"/>
+	        		</ui:message>
+	        	<aura:set attribute="else">
+					<div aura:id="content" class="modal-body slds-modal__content modal_content slds-p-around_medium">
+						<table class="slds-table slds-table_bordered slds-table_cell-buffer">
+						  	<thead>
+						    	<tr class="slds-text-title_caps">
+						    		<th scope="col">
+						        		<div class="slds-truncate" title="{!$Label.c.Add_Remove}">{!$Label.c.Add_Remove}</div>
+						      		</th>
+						      		<th scope="col">
+						        		<div class="slds-truncate" title="CLIENT NAME">CLIENT NAME</div>
+						      		</th>
+						      		<th scope="col">
+						        		<div class="slds-truncate" title="OPPORTUNITY NAME">OPPORTUNITY NAME</div>
+						      		</th>
+						      		<th scope="col">
+						        		<div class="slds-truncate" title="OPPORTUNITY OWNER NAME">OPPORTUNITY OWNER NAME</div>
+						      		</th>
+						      		<th scope="col">
+						        		<div class="slds-truncate" title="NOTIONAL VALUE">NOTIONAL VALUE</div>
+						      		</th>
+						      		<th scope="col">
+						        		<div class="slds-truncate" title="ESTIMATED CLOSE DATE">ESTIMATED CLOSE DATE</div>
+						      		</th>
+						  		</tr>
+							</thead>
+							<tbody>
+								<aura:iteration items="{!v.opportunities}" var="opp">
+									<tr>
+										<td data-label="Select">
+								        	<ui:inputcheckbox text="{!opp.Id}" change="{!c.updateCheckboxes}" />
+								      	</td>
+								      	<td scope="row" data-label="{!opp.Account.Name}">
+								        	<div class="slds-truncate" title="{!opp.Account.Name}">{!opp.Account.Name}</div>
+								      	</td>
+										<td scope="row" data-label="{!opp.Name}">
+								        	<div class="slds-truncate" title="{!opp.Name}">{!opp.Name}</div>
+								      	</td>
+								      	<td scope="row" data-label="{!opp.Owner.Name}">
+								        	<div class="slds-truncate" title="{!opp.Owner.Name}">{!opp.Owner.Name}</div>
+								      	</td>
+								      	<td scope="row" data-label="{!opp.Total_SB_Gross_Participation__c}">
+								        	<div class="slds-truncate" title="{!opp.Total_SB_Gross_Participation__c}"> {!opp.CurrencyIsoCode+' '}<ui:outputCurrency value="{!opp.Total_SB_Gross_Participation__c}" format="###,##0.00"/></div>
+								      	</td>
+								      	<td scope="row" data-label="{!opp.CloseDate}">
+								        	<div class="slds-truncate" title="{!opp.CloseDate}">{!opp.CloseDate}</div>
+								      	</td>
+									</tr>
+								</aura:iteration>
+							</tbody>
+						</table>
+					</div>
+				</aura:set>
+				</aura:if>
+			</aura:set>
+		</aura:if>
+		<div class="modal-footer cust-footer">	
+			<lightning:button label="{!$Label.c.Cancel}" onclick="{!c.cancel}"/>
+			<lightning:button aura:id="saveButton" class="slds-button_brand" label="{!$Label.c.Continue}" onclick="{!c.createAssessment}" disabled="{!!v.saveEnabled}"/>
+			
+		</div>
+</aura:component>

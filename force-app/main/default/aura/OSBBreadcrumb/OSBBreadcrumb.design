@@ -1,0 +1,5 @@
+<design:component>
+    <design:attribute name="link" />
+    <design:attribute name="linkLabel" />
+    <design:attribute name="withOverlay" />
+</design:component>

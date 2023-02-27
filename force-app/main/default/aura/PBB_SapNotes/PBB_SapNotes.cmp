@@ -1,0 +1,111 @@
+<aura:component
+    implements="flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName,lightning:isUrlAddressable"
+    controller="PBB_SapNotes_Controller">
+
+    <aura:attribute access="public" type="String" name="recordId" />
+
+    <aura:attribute access="private" type="Object[]" name="notes" />
+    <aura:attribute access="private" type="Object[]" name="filteredNotes" />
+    <aura:attribute access="private" type="Integer" name="notesLength" default="0" />
+    <aura:attribute access="private" type="List" name="columns" />
+    <aura:attribute access="private" type="Boolean" name="isLoading" default="false" />
+    <aura:attribute access="private" type="Boolean" name="showAll" default="false" />
+    <aura:attribute access="private" type="Object" name="modalPromise" />
+
+    <aura:attribute access="private" type="String" name="category" />
+    <aura:attribute access="private" type="String" name="noteBody" />
+    <aura:attribute access="private" type="Object" name="categories" />
+
+    <aura:attribute access="public" type="Boolean" name="isInViewMode" default="false"/>
+    <aura:attribute access="private" type="List" name="allCategories"/>
+    <aura:attribute access="private" type="List" name="selectedCategories" default="['ALL']"/>
+    <aura:attribute access="private" type="List" name="options"/>
+    <aura:attribute access="private" type="List" name="filteredBy"/>
+    <aura:attribute access="private" name="showFilters"	type="Boolean" default="false" />
+    <aura:attribute access="private" name="isAllOptionSelected"	type="Boolean" default="false" />
+
+    <aura:attribute access="private" name="currentPageNumber" type="Integer" default="1" />
+    <aura:attribute access="private" name="pageSize" type="Integer" default="10" />
+    <aura:attribute access="private" name="isThereNextPage" type="Boolean" default="false" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler name="change" value="{!v.pageReference}" action="{!c.doInit}" />
+    <aura:handler event="c:PBB_SapNotes_Event" action="{!c.handleSapNotesEvent}"/>
+
+    <lightning:overlayLibrary aura:id="overlayLib" />
+    <lightning:workspaceAPI aura:id="workspace" />
+    <div style="position:relative;" class="{! v.showAll ? '' : 'card-border'}">
+
+        <lightning:card variant="base" iconName="standard:note" class="">
+            <aura:set attribute="title"> 
+                <aura:if isTrue="{!v.showAll}">
+                    <span class="slds-text-heading_small">History Notes </span>
+                    <lightning:buttonIcon iconName="utility:filterList" variant="border-filled" alternativeText="Filter" onclick="{!c.handleToggleFilters}" />
+                    <aura:set attribute="else">
+                        <a onclick="{!c.showFullList}">
+                            <span class="slds-text-heading_small">History notes ({! v.notesLength > 6 ? '6+' : v.notesLength}) </span>
+                        </a>
+                    </aura:set>
+                </aura:if>
+            </aura:set>
+            <aura:set attribute="actions">
+                <lightning:button label="New" aura:id="newNoteAction" onclick="{!c.openCreationModal}" />
+            </aura:set>
+            <aura:set attribute="footer">
+                <aura:if isTrue="{!!v.showAll}">
+                    <lightning:button variant="base" onclick="{!c.showFullList}">
+                        View all
+                    </lightning:button>
+                    <aura:set attribute="else"> 
+                        <div class="slds-is-relative">
+                            <p class="page-number-label slds-text-heading_medium">Page: {!((v.currentPageNumber - 1) / v.pageSize)+1}</p>
+                            <lightning:icon aura:id="chevronleftId" iconName="utility:chevronleft" onclick="{!c.goToPage}"/>
+                                <lightning:select aura:id="pageSizeSelect" name="selectPageSize" label="Page size" class="short-select" onchange="{!c.changePageSize}">
+                                    <option value="5">5</option>
+                                    <option value="10" selected="true">10</option>
+                                    <option value="15">15</option>
+                                    <option value="20">20</option>
+                                    <option value="25">25</option>
+                                </lightning:select>
+                            <lightning:icon aura:id="chevronrightId" iconName="utility:chevronright" onclick="{!c.goToPage}"/>
+                        </div>
+                    </aura:set>
+                </aura:if>
+            </aura:set>
+            <aura:if isTrue="{!v.isLoading}">
+                <lightning:spinner size="medium" />
+            </aura:if>
+            <div>
+
+                <aura:if isTrue="{!v.showFilters}" >
+                    <div class="slds-box checkbox-group-style">
+                        <p class="slds-p-horizontal_small">
+                            <div>
+                                <lightning:button label="Apply Filters" variant="brand" onclick="{!c.applyFilters}"/>
+                                <lightning:checkboxGroup name="radioGroup"
+                                 aura:id="noteTypesFilter"
+                                 label="Category Filter"
+                                 options="{! v.options }"
+                                 value="{! v.filteredBy }"
+                                 onchange="{! c.handleFilterChange }"
+                                 type="radio"/>
+                            </div>
+                        </p>
+                    </div>
+                </aura:if>
+
+
+                <lightning:datatable
+					class="min-width: 4rem;"
+                    columns="{! v.columns }"
+                    data="{! v.filteredNotes }"
+                    keyField="id"
+					showRowNumberColumn = "false"
+                    hideCheckboxColumn="true"
+                    onrowaction="{! c.openCreationModal }" />
+
+            </div>
+
+        </lightning:card>
+    </div>
+</aura:component>

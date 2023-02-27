@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Migration_Process_Step__c</fullName>
+    <description>This field is created to display the process step of the PBB Migration</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Stage of Migration</inlineHelpText>
+    <label>Migration Process Step</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Sub_Category__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Request Submitted</fullName>
+                <default>false</default>
+                <label>Request Submitted</label>
+            </value>
+            <value>
+                <fullName>Logged on Migration Tracking Log</fullName>
+                <default>false</default>
+                <label>Logged on Migration Tracking Log</label>
+            </value>
+            <value>
+                <fullName>Internal Review</fullName>
+                <default>false</default>
+                <label>Internal Review</label>
+            </value>
+            <value>
+                <fullName>Preparation</fullName>
+                <default>false</default>
+                <label>Preparation</label>
+            </value>
+            <value>
+                <fullName>PBB Acceptance</fullName>
+                <default>false</default>
+                <label>PBB Acceptance</label>
+            </value>
+            <value>
+                <fullName>Client Migration Forum</fullName>
+                <default>false</default>
+                <label>Client Migration Forum</label>
+            </value>
+            <value>
+                <fullName>PBB Acquisition</fullName>
+                <default>false</default>
+                <label>PBB Acquisition</label>
+            </value>
+            <value>
+                <fullName>System Changes</fullName>
+                <default>false</default>
+                <label>System Changes</label>
+            </value>
+            <value>
+                <fullName>KYC Legal and Collateral Management</fullName>
+                <default>false</default>
+                <label>KYC Legal and Collateral Management</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>CIB to PBB Migration</controllingFieldValue>
+            <controllingFieldValue>PBB to CIB Migration</controllingFieldValue>
+            <valueName>Request Submitted</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIB to PBB Migration</controllingFieldValue>
+            <controllingFieldValue>PBB to CIB Migration</controllingFieldValue>
+            <valueName>Logged on Migration Tracking Log</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIB to PBB Migration</controllingFieldValue>
+            <controllingFieldValue>PBB to CIB Migration</controllingFieldValue>
+            <valueName>Internal Review</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIB to PBB Migration</controllingFieldValue>
+            <controllingFieldValue>PBB to CIB Migration</controllingFieldValue>
+            <valueName>Preparation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIB to PBB Migration</controllingFieldValue>
+            <controllingFieldValue>PBB to CIB Migration</controllingFieldValue>
+            <valueName>PBB Acceptance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIB to PBB Migration</controllingFieldValue>
+            <controllingFieldValue>PBB to CIB Migration</controllingFieldValue>
+            <valueName>Client Migration Forum</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIB to PBB Migration</controllingFieldValue>
+            <controllingFieldValue>PBB to CIB Migration</controllingFieldValue>
+            <valueName>PBB Acquisition</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIB to PBB Migration</controllingFieldValue>
+            <controllingFieldValue>PBB to CIB Migration</controllingFieldValue>
+            <valueName>System Changes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CIB to PBB Migration</controllingFieldValue>
+            <controllingFieldValue>PBB to CIB Migration</controllingFieldValue>
+            <valueName>KYC Legal and Collateral Management</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

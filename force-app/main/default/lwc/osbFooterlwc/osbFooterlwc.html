@@ -1,0 +1,91 @@
+<template>
+  <div class="footer-component">
+    <div class="footer__container fixed-height">
+      <div style="background: #f3f3f4 !important">
+        <div
+          class="footer footer__top slds-grid container slds-small-order_1 slds-size_6-of-6 slds-medium-size_10-of-12 slds-large-size_7-of-8">
+          <div class="slds-col name-container slds-size_1-of-6 slds-medium-size_4-of-12 slds-large-size_2-of-8">
+            <span>Standard Bank App</span>
+          </div>
+          <div class="slds-col image slds-size_1-of-6 slds-medium-size_4-of-12 slds-large-size_2-of-8">
+            <a href="https://play.google.com/store/apps/details?id=com.sbg.mobile.phone" target="_blank" data-id="googlePlay" data-text="Footer | Google Play">
+              <img src={google} data-id="google"></img>
+            </a>
+          </div>
+          <div class="slds-col image slds-size_1-of-6 slds-medium-size_4-of-12 slds-large-size_2-of-8">
+            <a href="https://itunes.apple.com/za/app/standard-bank-stanbic-bank/id528239110?mt=8" target="_blank" data-id="Appstore" data-text="Footer | Application Store">
+              <img src={appStore} data-id="appStore"></img>
+            </a>
+          </div>
+          <div
+            class="slds-col ipad-container slds-size_2-of-6 slds-medium-size_4-of-12 slds-large-size_3-of-7 footer__right">
+            <img src={ipads} data-id="Ipads"></img>
+          </div>
+        </div>
+      </div>
+      <div class="footerNavigation slds-grid" style="margin: auto;">
+        <div class="footer__left">
+          <div class="footer__nav">
+            <ul class="footer__menu slds-col slds-order_2 slds-small-order_1 slds-size_6-of-6 slds-medium-size_7-of-12 slds-large-size_8-of-8">
+              <li class="footer__menuitem slds-col slds-size_6-of-6 slds-medium-size_2-of-12 slds-large-size_1-of-8">
+                <a href={terms} target="_blank" data-id="footer_nav_terms" data-text="Footer | Terms and Conditions">Terms and
+                  Conditions</a>
+              </li>
+              <li class="footer__menuitem slds-col slds-size_6-of-6 slds-medium-size_2-of-12 slds-large-size_1-of-8">
+                <a href={legal} target="_blank" data-id="footer_nav_legal" data-text="Footer | Legal">Legal</a>
+              </li>
+              <li class="footer__menuitem slds-col slds-size_6-of-6 slds-medium-size_3-of-12 slds-large-size_1-of-8">
+                <a href={notices} target="_blank" data-id="footer_nav_notices"
+                  data-text="Footer | Important notices">Important Notices</a>
+              </li>
+              <li class="footer__menuitem slds-col slds-size_6-of-6 slds-medium-size_3-of-12 slds-large-size_2-of-8">
+                <a href={certification} target="_blank" data-id="footer_nav_act"
+                  data-text="Footer | USA Patriot Act Certification">USA Patriot Act
+                  Certification</a>
+              </li>
+              <li
+                class="footer__menuitem slds-col slds-size_6-of-6 slds-medium-size_2-of-12 slds-large-size_2-of-8">
+                <a href={questionnaire} target="_blank" data-id="footer_nav_questionnaire"
+                  data-text="Footer | Wolfsberg Questionnaire">Wolfsberg
+                  Questionnaire</a>
+              </li>
+              <div
+                class="footer__right slds-col slds-order_3 slds-small-order_3 slds-size_6-of-6 slds-medium-size_4-of-12 slds-large-size_1-of-8 mobile-view slds-align_absolute-center">
+                <ul>
+                  <li>
+                    <a href="https://www.linkedin.com/company/standard-bank-group" target="_blank"
+                      data-id="footer_nav_linkedin" data-text="Footer | LinkedIn">
+                      <i class="ms-icn_linkedIn"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.youtube.com/user/StandardBankGroup" target="_blank" data-id="footer_nav_youtube"
+                      data-text="Footer | YouTube">
+                      <i class="ms-icn_youtube"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.facebook.com/standardbankgrp/" target="_blank" data-id="footer_nav_face"
+                      data-text="Footer | Facebook">
+                      <i class="ms-icn_facebook"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://twitter.com/SBGroup" target="_blank" data-id="footer_nav_twitter"
+                      data-text="Footer | Twitter">
+                      <i class="ms-icn_twitter"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </ul>
+          </div>
+          <div class="slds-col footer__copyright">
+            <lightning-formatted-rich-text value="Standard Bank is a licensed financial services provider in terms of the Financial Advisory and Intermediary Services Act </br>and a registered credit provider in terms of the National Credit Act,registration number NCRCP15">
+            </lightning-formatted-rich-text>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

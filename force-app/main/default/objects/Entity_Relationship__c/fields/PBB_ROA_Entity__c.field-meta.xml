@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PBB_ROA_Entity__c</fullName>
+    <deleteConstraint>Cascade</deleteConstraint>
+    <description>PBB ROA Entity to which CommB clients records are associated(1388).</description>
+    <externalId>false</externalId>
+    <inlineHelpText>PBB ROA Entity to which CommB clients records are associated.</inlineHelpText>
+    <label>PBB ROA Entity</label>
+    <referenceTo>PBB_ROA_Entity__c</referenceTo>
+    <relationshipLabel>Clients</relationshipLabel>
+    <relationshipName>Related_Clients_and_Entities</relationshipName>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,9 @@
+<design:component label="New Opportunity">
+    <sfdc:objects >
+        <sfdc:object >Contact</sfdc:object>
+        <sfdc:object >Opportunity</sfdc:object>
+        <sfdc:object >Account</sfdc:object>
+        <sfdc:object >Call_Report__c</sfdc:object>
+        <sfdc:object >Game_Changer__c</sfdc:object>
+    </sfdc:objects>
+</design:component>

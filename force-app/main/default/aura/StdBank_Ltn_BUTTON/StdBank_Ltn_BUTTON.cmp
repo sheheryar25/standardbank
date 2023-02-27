@@ -1,0 +1,24 @@
+<aura:component description="Custom Button">
+    <!-- Attributes for the button -->
+    <aura:attribute name="label"        type="String"       description="This is the button label"/>
+    <aura:attribute name="class"        type="String"       description="SLDS class"/>
+    <aura:attribute name="onclick"      type="Aura.Action"  description="This allows handling onClick events"/>
+    <aura:attribute name="data"         type="String"       description="Any data to be passed via html5 data- attribute"/>
+    <aura:attribute name="disabled"     type="Boolean"      default="false" />
+    <aura:attribute name="onfocus"      type="Aura.Action"  description="This allows handling onFocus events"/>
+    <aura:attribute name="title"        type="String"       description="Displays tooltip text when the mouse moves over the button"/>                     
+    <!-- Attributes for SVG -->
+    <aura:attribute name="svgCategory"  type="String"       description="svgIcon's category"/>
+    <aura:attribute name="svgType"      type="String"       description="svgIcon's type"/>
+    <aura:attribute name="svgClass"     type="String"       description="svgIcon CSS classname"/>
+    <aura:attribute name="svgFill"      type="String"       description="svgIcon CSS Fill"/>
+    
+    <!-- Handler -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <button class="{!v.class}" onclick="{!v.onclick}" data-data="{!v.data}" disabled="{!v.disabled}" title="{!v.title}">
+        {!v.body}
+        {!v.label}
+             
+    </button>
+</aura:component>

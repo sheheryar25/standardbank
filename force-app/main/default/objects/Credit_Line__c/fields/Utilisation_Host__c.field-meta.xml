@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Utilisation_Host__c</fullName>
+    <description>Standard Bank balance sheet to which the limit has been booked</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Standard Bank balance sheet to which the limit has been booked</inlineHelpText>
+    <label>Utilisation Host</label>
+    <length>20</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

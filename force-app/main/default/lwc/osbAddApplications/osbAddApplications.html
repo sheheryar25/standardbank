@@ -1,0 +1,49 @@
+<template>
+  <div class="myApplication">
+    <p class="header">MY APPLICATIONS</p>
+    <template if:true={isDeleting}>
+      <div class="spinnerContainer">
+        <span class="spinnerGif"><img src={deleter} /></span>
+      </div>
+    </template>
+    <template if:true={isLoading}>
+      <c-osb-loading-screenlwc></c-osb-loading-screenlwc>
+    </template>
+    <template if:true={myAppsDisplay}>
+      <template if:true={isDeleting}>
+        <div class="spinnerContainer">
+          <span class="spinnerGif"><img src={deleter} /></span>
+        </div>
+      </template>
+      <div class="slds-grid slds-wrap myAppsContainer">
+        <lightning-layout multiple-rows="true">
+          <lightning-layout-item class="testPadding addApplicationTile ">
+            <div class="custom-box_1">
+              <a onclick={navigatetoApplicationGallery} class="slds-carousel__panel-action slds-text-link_reset" data-id="nav_app_gallery" data-text="Dashboard | Add applications"
+                tabindex="0">
+                <div class="content">
+                  <p><img src={OSBAddAppIcon} class="addAppSolution" /></p>
+                  <p class="addApplication">Add application</p>
+                </div>
+              </a>
+            </div>
+          </lightning-layout-item>
+          <template for:each={registeredApplications} for:item="registeredApplicationItem">
+            <lightning-layout-item class="testPadding" key={registeredApplicationItem}>
+              <div class="custom-box">
+                <c-osb-my-applications-tile title={registeredApplicationItem.Solution__r.Title}
+                  logo={registeredApplicationItem.Solution__r.Large_Solution_Logo__c}
+                  solutionid={registeredApplicationItem.Id}
+                  mediumlogo={registeredApplicationItem.Solution__r.Medium_Solution_Logo__c}
+                  onappsolutionid={onAppSolutionId}
+                  applicationowner={registeredApplicationItem.Solution__r.Application_Owner__c}
+                  ssoredirecturl={registeredApplicationItem.Solution__r.SSO_Redirect_URL__c}>
+                </c-osb-my-applications-tile>
+              </div>
+            </lightning-layout-item>
+          </template>
+        </lightning-layout>
+      </div>
+    </template>
+  </div>
+</template>

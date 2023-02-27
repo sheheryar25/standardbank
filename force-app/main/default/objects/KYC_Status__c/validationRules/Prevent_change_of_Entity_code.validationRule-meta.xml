@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_change_of_Entity_code</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISCHANGED(Entity_Code__c)</errorConditionFormula>
+    <errorDisplayField>Entity_Code__c</errorDisplayField>
+    <errorMessage>You cannot change the entity of an existing KYC record. Please start a new KYC.</errorMessage>
+</ValidationRule>

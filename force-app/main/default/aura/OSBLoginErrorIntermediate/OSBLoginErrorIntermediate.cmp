@@ -1,0 +1,4 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes" access="global" controller="OSB_LoginErrorIntermediate_CTRL">
+    <lightning:navigation aura:id="navService"/>
+	<aura:handler name="init" value="{!this}" action="{!c.init}"/>
+</aura:component>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Review_Conducted_By__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Case#220 - The person that reviewed this CAM report.</description>
+    <externalId>false</externalId>
+    <label>Review Conducted By</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>CAM_Selections</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

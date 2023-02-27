@@ -1,0 +1,87 @@
+<!-- 2017-11-02 - Rudolf Niehaus - CloudSmiths -->
+<aura:component implements="force:lightningQuickAction,force:hasRecordId" controller="invCaseMergeExt">
+    <style>
+        div#pop{
+            font-family:Verdana, 
+            Arial, Helvetica, 
+            sans-serif; 
+            font-size:11px;
+            z-index:99;
+        }
+        a:hover {
+            background:#ffffff; 
+            text-decoration:none;
+        }
+        a.tooltip div#pop {
+            display:none; 
+            padding:2px 3px; 
+            top: -20px;
+            right: 110%; 
+            width:350px;
+        }
+        a.tooltip:hover div#pop{
+            display:inline; 
+            position:absolute; 
+            border:1px solid #66b3ff;
+            border-radius: 13px;
+            box-shadow: -4px -5px 8px #36A1AD;
+            background:#ffffff; 
+            color:#6c6c6c;
+            z-index:99;
+        }
+    </style>
+    <ltng:require styles="{!$Resource.LDS2 + 'assets/styles/salesforce-lightning-design-system.min.css'}"/> 
+    <lightning:workspaceAPI aura:id="workspace"/>
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="relatedCaseId" type="String" />
+    <aura:attribute name="relatedCaseList" type="Object[]" />
+    <aura:handler event="aura:waiting" action="{!c.showSpinner}"/>
+    <aura:handler event="aura:doneWaiting" action="{!c.hideSpinner}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <center style="z-index:99">
+        <lightning:spinner aura:id="TheSpinner" class="slds-hide" variant="brand" size="large"/>
+    </center>
+     <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+        <tr class="slds-text-title_caps">
+            <th><div class="slds-truncate" title="Subject">Action</div></th>
+            <th></th>
+            <th>
+                <div class="slds-truncate" title="Subject">Subject</div>
+            </th>
+            <th>
+                <div class="slds-truncate" title="Status">Status</div>
+            </th>
+        </tr>
+        <aura:iteration var="ca" items="{!v.relatedCaseList}" >
+            <tr>
+                <td>
+                    <a href="#" style="cursor:pointer">  
+                        <ui:outputText value="Open" title="{!ca.Id}" click="{!c.openNewTab}" />
+                    </a>
+                </td>
+                <td>
+                    <ui:inputRadio text="{!ca.Id}" name="relc" change="{!c.logId}"/>
+                </td>
+                <td>
+                    <a href="#" class="tooltip" style="cursor: help;">{!ca.Subject}
+                        <div id="pop">
+                            <table width="50%">
+                                <tr><td width="50%" style="font-size:10pt;font-weight:bold">{!ca.CaseNumber}</td><td  width="50%" >&nbsp;</td></tr>
+                                <tr><td width="50%" style="font-size:8pt;font-weight:bold">Account</td><td style="font-size:8pt;" width="50%">{!ca.Account.Name}</td></tr>
+                                <tr><td width="50%" style="font-size:8pt;font-weight:bold">Contact</td><td style="font-size:8pt;" width="50%">{!ca.Contact.Name}</td></tr>
+                                <tr><td width="50%" style="font-size:8pt;font-weight:bold">Owner</td><td style="font-size:8pt;" width="50%">{!ca.Owner.Name}</td></tr>
+                                <tr><td width="50%" style="font-size:8pt;font-weight:bold">Category</td><td style="font-size:8pt;" width="50%">{!ca.Custody_Category__c}</td></tr>
+                                <tr><td width="50%" style="font-size:8pt;font-weight:bold">Sub Category</td><td style="font-size:8pt;" width="50%">{!ca.Custody_Sub_Category__c}</td></tr>
+                                <tr><td width="50%" style="font-size:8pt;font-weight:bold">Origin</td><td style="font-size:8pt;" width="50%">{!ca.Origin}</td></tr>
+                            </table>
+                        </div>
+                    </a>
+                </td> 
+                <td>
+                    <ui:outputText value="{!ca.Status}" />
+                </td>
+            </tr>
+        </aura:iteration>
+    </table>
+    <lightning:button label="Merge Now" onclick="{!c.mergeCaseNow}" variant="brand" class="slds-m-top_medium"/>
+</aura:component>

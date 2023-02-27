@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CMN_Jobscheduler</fullName>
+    <fields>Name</fields>
+    <fields>CMN_SchedulerName__c</fields>
+    <fields>CMN_ScheduleClassName__c</fields>
+    <fields>CMN_CronExpression__c</fields>
+    <fields>CMN_Active__c</fields>
+    <fields>CMN_ScheduledJobId__c</fields>
+    <label>CMN_Jobscheduler</label>
+</CompactLayout>

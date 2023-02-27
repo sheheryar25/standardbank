@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>CIBSA GM TPS&amp;IPS Live Chat Queue</name>
+    <queueMembers>
+        <users>
+            <user>adela.komape@standardbank.co.za</user>
+            <user>carmen.cannell@standardbank.co.za</user>
+            <user>itumeleng.mahoa@standardbank.co.za</user>
+            <user>usula.ayob2@standardbank.co.za</user>
+        </users>
+    </queueMembers>
+    <queueRoutingConfig>CIBSA_GM_TPS_Live_Chat</queueRoutingConfig>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>LiveChatTranscript</sobjectType>
+    </queueSobject>
+</Queue>

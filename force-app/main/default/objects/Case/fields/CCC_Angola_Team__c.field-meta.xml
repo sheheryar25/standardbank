@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCC_Angola_Team__c</fullName>
+    <description>This picklist value, drives the category and sub-category selection for Angola Cases</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This picklist value, drives the category and sub-category selection for Angola Cases</inlineHelpText>
+    <label>Team</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CIB CCC Angola</fullName>
+                <default>false</default>
+                <label>CIB CCC Angola</label>
+            </value>
+            <value>
+                <fullName>PBB CCC Angola</fullName>
+                <default>false</default>
+                <label>PBB CCC Angola</label>
+            </value>
+            <value>
+                <fullName>ED CCC Angola</fullName>
+                <default>false</default>
+                <label>ED CCC Angola</label>
+            </value>
+            <value>
+                <fullName>ST CCC Angola</fullName>
+                <default>false</default>
+                <label>ST CCC Angola</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

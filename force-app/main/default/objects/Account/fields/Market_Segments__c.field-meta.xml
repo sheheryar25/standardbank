@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Market_Segments__c</fullName>
+    <description>(EN-0983) This field identifies the type of market segment that the client falls into</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field identifies the type of market segment that the client falls into</inlineHelpText>
+    <label>Market Segment</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>412 - Commercial Banking</fullName>
+                <default>false</default>
+                <label>412 - Commercial Banking</label>
+            </value>
+            <value>
+                <fullName>422 - Commercial Agric</fullName>
+                <default>false</default>
+                <label>422 - Commercial Agric</label>
+            </value>
+            <value>
+                <fullName>532 - Commercial Agric</fullName>
+                <default>false</default>
+                <label>532 - Commercial Agric</label>
+            </value>
+            <value>
+                <fullName>533 - Commercial Bank Agricultural Co-Operatives</fullName>
+                <default>false</default>
+                <label>533 - Commercial Bank Agricultural Co-Operatives</label>
+            </value>
+            <value>
+                <fullName>554 - Commercial Banking</fullName>
+                <default>false</default>
+                <label>554 - Commercial Banking</label>
+            </value>
+            <value>
+                <fullName>400 - Lifestyle</fullName>
+                <default>false</default>
+                <label>400 - Lifestyle</label>
+            </value>
+            <value>
+                <fullName>401 - Entrepreneur</fullName>
+                <default>false</default>
+                <label>401 - Entrepreneur</label>
+            </value>
+            <value>
+                <fullName>429 - Agric BEE (Business)</fullName>
+                <default>false</default>
+                <label>429 - Agric BEE (Business)</label>
+            </value>
+            <value>
+                <fullName>421 - Agric Medium</fullName>
+                <default>false</default>
+                <label>421 - Agric Medium</label>
+            </value>
+            <value>
+                <fullName>419 - Agric Small (Lifestyle)</fullName>
+                <default>false</default>
+                <label>419 - Agric Small (Lifestyle)</label>
+            </value>
+            <value>
+                <fullName>422 - Agric Large</fullName>
+                <default>false</default>
+                <label>422 - Agric Large</label>
+            </value>
+            <value>
+                <fullName>552 - Business</fullName>
+                <default>false</default>
+                <label>552 - Business</label>
+            </value>
+            <value>
+                <fullName>420 - Agric Small (Entrepreneur)</fullName>
+                <default>false</default>
+                <label>420 - Agric Small (Entrepreneur)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

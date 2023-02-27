@@ -1,0 +1,11 @@
+<aura:component controller="StdBank_Ltn_RevBdgtPipelnChartController" implements="flexipage:availableForAllPageTypes">
+	<aura:attribute name="pipelineByMonth" type="List" access="private" />
+	<aura:attribute name="revenueByMonth" type="List" access="private" />
+	<aura:attribute name="budgetByMonth" type="List" access="private" />
+	<aura:attribute name="wonOppByMonth" type="List" access="private" />
+	<aura:attribute name="totalPipeline" type="Integer" access="private" />
+	<aura:attribute name="isoCode" type="String" />
+	<div class="chart-container">
+		<iframe id="chartFrame" src="/apex/StdBank_Ltn_RevenueBudgetPipelineChart" frameBorder="0"/>
+	</div>
+</aura:component>

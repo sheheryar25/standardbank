@@ -1,0 +1,555 @@
+.THIS {
+    position: relative;
+    min-height: 100%;
+    background: #f6f6f6;
+}
+
+.THIS .forceCommunityEmbeddedServiceHelpButton .flatButton {
+    bottom: 0;
+}
+
+.THIS .forceCommunityEmbeddedServiceHelpButton .flatButton .helpButtonLabel {
+    flex-grow:0;
+}
+
+@media(max-width: 1919px){
+    .THIS .embeddedServiceIcon {
+        position: absolute;
+        left: 40%;
+    }
+
+    .THIS .helpButtonLabel {
+        content-visibility: hidden;
+    }
+}
+
+.THIS .flex_align_center {
+    display: flex;
+    align-items: center;
+}
+
+.THIS .pt_20{
+    padding-top: 20px;
+}
+
+.THIS .pt_10{
+    padding-top: 10px;
+}
+
+.THIS .mb_8 {
+    margin-bottom: 8px;
+}
+
+.THIS .mb_16 {
+    margin-bottom: 16px;
+}
+
+.THIS .mb_20 {
+    margin-bottom: 20px;
+}
+
+.THIS .mb_24 {
+    margin-bottom: 24px;
+}
+
+.THIS .mb_32 {
+    margin-bottom: 32px;
+}
+
+.THIS .mb_70 {
+    margin-bottom: 70px;
+}
+
+.THIS .mb_72 {
+    margin-bottom: 72px;
+}
+
+.THIS .mt_72 {
+    margin-top: 72px;
+}
+
+.THIS .mt_24 {
+    margin-top: 24px;
+}
+
+.THIS .mt_32 {
+    margin-top: 32px;
+}
+
+@media(min-width: 1280px) {
+    .THIS .slds-x-large-size_1-of-12 {
+        width: calc(100%/12);
+    }
+
+    .THIS .slds-x-large-size_2-of-12 {
+        width: calc(200%/12);
+    }
+
+    .THIS .slds-x-large-size_3-of-12 {
+        width: calc(300%/12);
+    }
+
+    .THIS .slds-x-large-size_4-of-12 {
+        width: calc(400%/12);
+    }
+
+    .THIS .slds-x-large-size_5-of-12 {
+        width: calc(500%/12);
+    }
+
+    .THIS .slds-x-large-size_6-of-12 {
+        width: calc(600%/12);
+    }
+
+    .THIS .slds-x-large-size_7-of-12 {
+        width: calc(700%/12);
+    }
+
+    .THIS .slds-x-large-size_8-of-12 {
+        width: calc(800%/12);
+    }
+
+    .THIS .slds-x-large-size_9-of-12 {
+        width: calc(900%/12);
+    }
+
+    .THIS .slds-x-large-size_10-of-12 {
+        width: calc(1000%/12);
+    }
+
+    .THIS .slds-x-large-size_11-of-12 {
+        width: calc(1100%/12);
+    }
+
+    .THIS .slds-x-large-size_12-of-12 {
+        width: calc(1200%/12);
+    }
+}
+
+.THIS a:hover,
+.THIS a:focus {
+    text-decoration: none;
+}
+
+.THIS a,
+.THIS a {
+    text-decoration: none;
+    color: unset;
+}
+
+.THIS .btn {
+    display: block;
+    height: 50px;
+    padding: 18px 0;
+    border: 0;
+    border-radius: 2px;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 13px;
+    text-transform: uppercase;
+    text-align: center;
+    transition: all .15s ease-in;
+    cursor: pointer;
+}
+
+.THIS .btn.btn--white {
+    border: 1px solid #0089FF;
+    color: #0089FF;
+}
+
+.THIS .btn.btn--white:hover,
+.THIS .btn.btn--white:focus {
+    background: #0089FF;
+    color: #fff;
+}
+
+.THIS .btn.btn--blue {
+    background-color: #0089FF;
+    color: #FFFFFF;
+}
+
+.THIS .btn.btn--blue:hover,
+.THIS .btn.btn--blue:focus {
+    background: #0069c4;
+    color: #fff;
+}
+
+.THIS .btn.btn--darkblue {
+    background-color: #0033AA;
+    color: #FFFFFF;
+}
+
+.THIS .btn.btn--darkblue:hover,
+.THIS .btn.btn--darkblue:focus {
+    background: #0069c4;
+    color: #fff;
+}
+
+.THIS .btn.btn--whitenoborder {
+    background-color: #FFFFFF;
+    color: #0089FF;
+}
+
+.THIS .btn.btn--whitenoborder:hover,
+.THIS .btn.btn--whitenoborder:focus {
+    background: #0089ff;
+    color: #fff;
+}
+
+.THIS .btn.btn--gray {
+    background-color: #ededed;
+    color: #0033AA;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.3);
+}
+
+.THIS .btn.btn--gray:hover,
+.THIS .btn.btn--gray:focus {
+    background: #0089ff;
+    color: #fff;
+}
+
+.THIS a.link {
+    color: #0089FF;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+}
+
+.THIS a.link i {
+    margin-left: 8px;
+}
+
+.THIS a.link:hover i {
+    transform: translateX(5px);
+}
+
+.THIS a.link i {
+    transition: all .15s ease-in;
+}
+
+.THIS h1 {
+    text-transform: uppercase;
+}
+
+.THIS .slds-backdrop {
+    background: #fff !important;
+    opacity: 0.8 !important;
+}
+
+.THIS .contentRegion>div>div>div.stretch:not(.fixed-height) {
+    min-height: calc(100vh - 261px);
+}
+
+.THIS .forceCommunityEmbeddedServiceHelpButton {
+    z-index: 45 !important;
+}
+
+.THIS .pointer {
+    cursor: pointer;
+}
+
+.THIS .highlighted-tile {
+    z-index: 120 !important;
+}
+
+/*** forceChatter:feed related styles ***/
+.THIS .uiContainerManager {
+    display: flex;
+}
+
+.THIS .feedActions:after {
+    border-bottom: 2px solid #EDEDED;
+    content: "";
+    height: 1px;
+    position: absolute;
+    top: 80px;
+    left: 0px;
+    width: 100%;
+    border-bottom: 1px solid rgb(212, 212, 212);
+}
+
+.THIS .feedActions {
+    margin-bottom: 40px;
+}
+
+.THIS .forceChatterAbstractFeedItem .isBookmarked,
+.THIS .cuf-feedItemActionTrigger>button,
+.THIS .tabs__content {
+    border: unset;
+}
+
+.THIS div.slds-grid.dummyControlsContainer {
+    align-items: center;
+}
+
+.THIS .forceChatterBasePublisher.baseDefault .slds-button_brand,
+.THIS .dummyButtonSubmitAction {
+    color: #fff;
+    height: 48px;
+    width: 166px;
+    border-radius: 2px;
+    background-color: #0033AA;
+    text-transform: uppercase;
+}
+
+.THIS .cuf-submit .slds-button_brand {
+    color: #fff;
+    border-radius: 2px;
+    background-color: #0033AA;
+    text-transform: uppercase;
+}
+
+.THIS .cuf-submit .slds-button_brand:disabled,
+.THIS .forceChatterBasePublisher.baseDefault .slds-button_brand:disabled {
+    background-color: rgb(201, 199, 197);
+}
+
+.THIS .slds-rich-text-editor__toolbar {
+    background-color: #F5F7FA;
+}
+
+.THIS .forceChatterMessageBodyInputRichTextEditor.lightningInputRichText .ql-editor.ql-blank:before,
+.THIS .dummyButtonCallToAction>span.label.bBody:before {
+    content: 'Let us know what you think about this solution and anything else you feel is valuable to know.';
+    color: #767676;
+    font-size: 15px;
+    text-align: left;
+    font-weight: 300;
+}
+
+.THIS .dummyButtonCallToAction>span.label.bBody {
+    color: #fff;
+}
+
+.THIS .cuf-refresh .slds-button__icon {
+    fill: #0033AA;
+    width: 24px;
+    height: 24px;
+}
+
+.THIS .cuf-refresh {
+    border: unset;
+}
+
+.THIS .forceChatterSearchInFeed {
+    width: 100%;
+    max-width: unset;
+}
+
+.THIS .searchInFeedInput .slds-input {
+    height: 48px;
+    font-size: 15px;
+    color: #0A2240;
+}
+
+.THIS .feedActions>div {
+    justify-content: start;
+}
+
+.THIS .cuf-body,
+.THIS .cuf-entityLink,
+.THIS article {
+    color: #0A2240;
+    font-size: 15px;
+}
+
+.THIS .slds-text-color_weak.cuf-timestamp {
+    color: #767676;
+    font-size: 12px;
+    font-weight: 200;
+}
+
+.THIS .cuf-body,
+.THIS .interactions-wrap {
+    padding-left: 44px;
+}
+
+.THIS .forceChatterFeedItem .feed__item-comments--threadedCommunity {
+    background-color: #fff;
+}
+
+.THIS .cuf-commentTrigger  svg.slds-icon-text-default,
+.THIS .likeIconAnchor  svg.slds-icon-text-default {
+    fill: #DBDBDB;
+}
+
+.THIS svg.cuf-likeIcon.selected {
+    fill: #0033AA;
+}
+
+.THIS .cuf-timestamp,
+.THIS .slds-list_horizontal.slds-has-dividers_right.slds-text-title.slds-post__footer-meta-list,
+.THIS .forceChatterEntityLink,
+.THIS .cuf-entityLink {
+    pointer-events: none;
+}
+
+.THIS .comment__footer {
+    display: flex;
+}
+
+.THIS .cuf-preamble>p:after,
+.THIS .isBookmarked:before,
+.THIS .slds-button.slds-button_stateful.slds-is-selected:before,
+.THIS .slds-button.slds-button_stateful.slds-not-selected:before,
+.THIS .slds-button.slds-button_stateful.slds-is-selected-clicked:before {
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    color: #dbdbdb;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 1rem;
+    margin-right: 0.25rem;
+}
+
+.THIS .slds-button.slds-button_stateful.slds-is-selected:before,
+.THIS .slds-button.slds-button_stateful.slds-is-selected-clicked:before,
+.THIS .slds-button.slds-button_stateful.slds-not-selected:before {
+    content: "\e902";
+}
+
+.THIS .cuf-preamble>p:after,
+.THIS .isBookmarked:before,
+.THIS .slds-button.slds-button_stateful.slds-is-selected:before,
+.THIS .slds-button.slds-button_stateful.slds-is-selected-clicked:before {
+    color: #0033aa;
+}
+
+.THIS .isBookmarked:before {
+    position: absolute;
+    left: -73px;
+    top: 9px;
+    font-size: 1.5rem;
+    content: "\e900";
+}
+
+.THIS .slds-button.slds-button_stateful.slds-is-selected,
+.THIS .slds-button.slds-button_stateful.slds-is-selected-clicked {
+    color: rgb(19, 95, 144);
+}
+
+.THIS .cuf-feedItemActionTrigger .slds-button__icon,
+.THIS .cuf-commentActionButton .slds-button__icon {
+    fill: #0033aa;
+    width: .875rem;
+    height: .875rem;
+}
+
+.THIS .tabs__nav,
+.THIS p>span.forceChatterEntityLink.uiOutputText,
+.THIS .cuf-publisherTopics.input-field,
+.THIS .shouldDisplay .visibilitySwitcher,
+.THIS .cuf-bookmarkIcon.slds-icon-utility-favorite.slds-icon_container,
+.THIS .actionSection.cuf-simpleFeedItemTopics,
+.THIS li.cuf-actionItem:last-child {
+    display: none;
+}
+
+.THIS .slds-feed__item-comments {
+    border-top: unset;
+    padding-bottom: 16px;
+}
+
+.THIS .slds-feed__item {
+    padding: 16px 0 0;
+}
+
+.THIS .forceChatterFeedback--default .commentInputArea {
+    padding-bottom: 0;
+}
+
+.THIS .forceChatterStyle--default .cuf-feedElement.cuf-feedElement {
+    padding-top: 0;
+}
+/*** forceChatter:feed related styles ***/
+
+
+
+
+/* Local breadcrumb settings */
+
+.THIS .breadcrumbs__container {
+    width: 100%;
+    height: 40px;
+    background: #fff;
+    box-shadow: 0px 2px 2px 0 #B9B9B9;
+    padding: 8px 32px;
+    display: flex !important;
+}
+
+.THIS .cOSBBreadcrumb {
+    padding: 0 !important;
+    position: fixed;
+    width: 100% !important;
+    background: 0 !important;
+    box-shadow: 0 0 black !important;
+    height: 80px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+}
+
+@media(min-width: 1280px){
+    .THIS .cOSBBreadcrumb {
+        margin-top: 0;
+    }
+}
+
+.THIS .breadcrumb_productpage {
+    height: 40px;
+    margin-top: 1px;
+    background: #fff;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2);
+    width: 100%;
+    padding-left: 32px;
+}
+
+/*** forceChatter:feed related styles ***/
+
+/* Local breadcrumb settings */
+
+.THIS .breadcrumbs__container {
+    width: 100%;
+    height: 40px;
+    background: #fff;
+    box-shadow: 0px 2px 2px 0 #B9B9B9;
+    padding: 8px 32px;
+    display: flex !important;
+}
+
+.THIS .cOSBBreadcrumb {
+    padding: 0 !important;
+    position: fixed;
+    width: 100% !important;
+    background: 0 !important;
+    box-shadow: 0 0 black !important;
+    height: 80px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+}
+
+@media(min-width: 1280px){
+    .THIS .cOSBBreadcrumb {
+        margin-top: 0;
+    }
+}
+
+.THIS .breadcrumb_productpage {
+    height: 40px;
+    margin-top: 1px;
+    background: #fff;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2);
+    width: 100%;
+    padding-left: 32px;
+}
+
+.THIS .breadcrumbs__item {
+    padding-top: 12px;
+}

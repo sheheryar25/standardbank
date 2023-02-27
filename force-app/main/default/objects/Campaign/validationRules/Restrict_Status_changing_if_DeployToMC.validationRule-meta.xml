@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_Status_changing_if_DeployToMC</fullName>
+    <active>true</active>
+    <description>SFP-5968 No one can change Status if Deploy_to_MC__c = TRUE</description>
+    <errorConditionFormula>AND(
+  Deploy_to_MC__c,
+  ISCHANGED( Status )
+)</errorConditionFormula>
+    <errorDisplayField>Status</errorDisplayField>
+    <errorMessage>No one can change Campaign Status if the &apos;Deploy to MC&apos; field is checked.
+Please uncheck &apos;Deploy to MC&apos; before changing Status.</errorMessage>
+</ValidationRule>

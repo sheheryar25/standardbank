@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>C_Suite_Attendance__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Used to indicate a C-Suite client contact that is invited or attended the meeting (SPGRT-1374)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>An indicator that shows if at least one client contact with a c-suite contact category attended the meeting</inlineHelpText>
+    <label>C-Suite Attendance</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Medium_Solution_Logo__c</fullName>
+    <description>OneHub: This field is to store the medium logo (72px by 72px) of the solution. (US-3979)</description>
+    <externalId>false</externalId>
+    <label>Medium Solution Logo</label>
+    <length>32768</length>
+    <type>Html</type>
+    <visibleLines>25</visibleLines>
+</CustomField>

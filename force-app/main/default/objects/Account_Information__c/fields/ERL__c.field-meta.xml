@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ERL__c</fullName>
+    <description>&quot;Maximum limit the bank is willing to lend without supporting documents if the entity falls within the scope of lending
+US-4409
+US-4425
+US-4291&quot;</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the maximum limit the bank is willing to lend without supporting documents if the entity falls within the scope of lending</inlineHelpText>
+    <label>ERL</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

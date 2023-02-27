@@ -1,0 +1,75 @@
+/**
+ * Created by yibrahim on 06.04.2020.
+ */
+.THIS .help-text{
+    vertical-align: super;
+}
+.THIS .treeContainer{
+    max-height:14rem;
+}
+.THIS .scrollerSize {
+    max-height: 200px;
+    overflow: visible;
+    position: relative;
+    z-index:2 !important;
+}
+
+.THIS .helptextRegion {
+    margin-left: -38%;
+}
+.THIS .helptextCountry {
+    margin-left: -36%;
+}
+.THIS .customIcon div{
+    vertical-align: top !important;
+}
+
+.THIS.customIcon div{
+    vertical-align: top !important;
+}
+.THIS .bottomPadding {
+    padding-bottom: 9px;
+    padding-top: 1px;
+}
+.THIS .autoMargin {
+    margin: auto;
+}
+@media only screen and (min-width: 1025px) {
+.THIS .regions {
+     margin-left:3%;
+     margin-right:7%;
+  }
+}
+@media only screen and (min-width: 1025px) {
+.THIS .leftSide {
+     float:left;
+     width:49%
+  }
+}
+@media only screen and (min-width: 1025px) {
+.THIS .rightSide {
+     float:right;
+     width:49%
+  }
+}
+@media only screen and (min-width: 1025px) {
+.THIS .resetPadding {
+     padding-right:3px;
+     width:50%;
+  }
+}
+@media only screen and (min-width: 1025px) {
+.THIS .desktopPadding {
+     padding-left: var(--lwc-spacingXxLarge,3rem);
+  }
+}
+@media only screen and (min-width: 641px) {
+.THIS .desktopButton {
+     margin:1rem;
+  }
+}
+.THIS .slds-dropdown-trigger .slds-dropdown {
+    max-height: 120px;
+    overflow: auto;
+    z-index: 10002 !important;
+}

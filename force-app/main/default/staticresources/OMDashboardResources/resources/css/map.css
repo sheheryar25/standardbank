@@ -1,0 +1,82 @@
+.country{
+  stroke: #fff;
+  stroke-width: 0.2px;
+  fill : #eee;
+}
+.text{
+  font-size:12px;
+  text-transform:capitalize;
+}
+#container {
+  margin:10px 10%;
+  border: 1px solid #cacaca;
+  height:100%;
+  overflow:hidden;
+  background: #fff;
+}
+.hidden {
+  display: none;
+}
+div.tooltip {
+  color: #222;
+  background: #fff;
+  padding: .5em;
+  text-shadow: #f5f5f5 0 1px 0;
+  border-radius: 2px;
+  box-shadow: 0px 0px 2px 0px #a6a6a6;
+  opacity: 0.9;
+  position: absolute;
+}
+
+.south_africa {
+    fill:#1F497B !important;
+}
+
+.asia {
+   fill:#B2A2C7 !important;
+}
+
+.brazil {
+   fill:#8064A1 !important;
+}
+
+.middle_east {
+   fill:#00AF50;
+}
+
+.south_central_africa {
+   fill:#95B3D7 !important;
+}
+
+.east_africa {
+   fill:#4C82BE !important;
+}
+
+.maurituis {
+   fill:#9E93F4 !important;
+}
+
+.developed_markets {
+   fill:#BFBFBF !important;
+}
+
+.non_presence_west_africa {
+   fill:#BB4E47 !important;
+}
+
+.presence_west_africa {
+   fill:#DEE4F0 !important;
+}
+
+.angola {
+   fill:#A4CEE4 !important;
+}
+
+.country:hover {
+    fill: #dadada !important;
+}
+
+.hover {
+    fill: #dadada !important;
+}
+

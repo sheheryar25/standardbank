@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>High_Risk_Reason__c</fullName>
+    <description>High Risk Classification Reason</description>
+    <externalId>false</externalId>
+    <inlineHelpText>High Risk Classification Reason</inlineHelpText>
+    <label>High Risk Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Antique Dealer</fullName>
+                <default>false</default>
+                <label>Antique Dealer</label>
+            </value>
+            <value>
+                <fullName>Arms Manfacturer/Dealer/Intermediary</fullName>
+                <default>false</default>
+                <label>Arms Manfacturer/Dealer/Intermediary</label>
+            </value>
+            <value>
+                <fullName>Art Dealer</fullName>
+                <default>false</default>
+                <label>Art Dealer</label>
+            </value>
+            <value>
+                <fullName>Auction House</fullName>
+                <default>false</default>
+                <label>Auction House</label>
+            </value>
+            <value>
+                <fullName>Bureau de Change</fullName>
+                <default>false</default>
+                <label>Bureau de Change</label>
+            </value>
+            <value>
+                <fullName>Cash (or equity) Intensive Business</fullName>
+                <default>false</default>
+                <label>Cash (or equity) Intensive Business</label>
+            </value>
+            <value>
+                <fullName>Casino</fullName>
+                <default>false</default>
+                <label>Casino</label>
+            </value>
+            <value>
+                <fullName>Cheque Cashing/Payday Advance Services</fullName>
+                <default>false</default>
+                <label>Cheque Cashing/Payday Advance Services</label>
+            </value>
+            <value>
+                <fullName>Exchange Traded Cardon Credit</fullName>
+                <default>false</default>
+                <label>Exchange Traded Cardon Credit</label>
+            </value>
+            <value>
+                <fullName>Gem/Jewel Dealer</fullName>
+                <default>false</default>
+                <label>Gem/Jewel Dealer</label>
+            </value>
+            <value>
+                <fullName>Money Service Business</fullName>
+                <default>false</default>
+                <label>Money Service Business</label>
+            </value>
+            <value>
+                <fullName>Online Gambling Related Activities</fullName>
+                <default>false</default>
+                <label>Online Gambling Related Activities</label>
+            </value>
+            <value>
+                <fullName>Other Gambling Activities</fullName>
+                <default>false</default>
+                <label>Other Gambling Activities</label>
+            </value>
+            <value>
+                <fullName>Other High Value/precious Goods Dealer</fullName>
+                <default>false</default>
+                <label>Other High Value/precious Goods Dealer</label>
+            </value>
+            <value>
+                <fullName>Pawnbroking</fullName>
+                <default>false</default>
+                <label>Pawnbroking</label>
+            </value>
+            <value>
+                <fullName>Precious Metal Dealer</fullName>
+                <default>false</default>
+                <label>Precious Metal Dealer</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

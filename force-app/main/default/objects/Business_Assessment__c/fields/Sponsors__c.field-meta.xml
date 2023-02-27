@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sponsors__c</fullName>
+    <description>US-3690 Key directors of the Group Parent (i.e.: Chairman, CEO, CFO, Treasurer)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates the level of complexity of the deal/transaction. Standardised, i.e.: Vanilla product commonly issued and understood.Structured, i.e.: Complex product with customised/bespoke issues.</inlineHelpText>
+    <label>Sponsors</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

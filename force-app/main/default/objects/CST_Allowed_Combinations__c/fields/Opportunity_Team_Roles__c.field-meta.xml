@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Team_Roles__c</fullName>
+    <description>These roles have to be use with given User global area. The name of roles are separated by comma.</description>
+    <externalId>false</externalId>
+    <label>Opportunity Team Roles</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

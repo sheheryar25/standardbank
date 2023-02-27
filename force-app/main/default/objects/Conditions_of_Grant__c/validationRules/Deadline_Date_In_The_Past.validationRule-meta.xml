@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deadline_Date_In_The_Past</fullName>
+    <active>true</active>
+    <description>DEF-002164 only allow deadine date to be a current or future date.</description>
+    <errorConditionFormula>Deadline__c &lt; Today()</errorConditionFormula>
+    <errorDisplayField>Deadline__c</errorDisplayField>
+    <errorMessage>Date cannot be in the past. Please enter a future date.</errorMessage>
+</ValidationRule>

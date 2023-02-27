@@ -1,0 +1,36 @@
+<aura:component controller="StdBank_Ltn_ClientsNoOfMeetingsCtrl" extends="c:CI_Base" implements="flexipage:availableForAllPageTypes,force:hasRecordId">
+	<aura:attribute name="numberOfExternalMeetings" type="Integer" />
+	<aura:attribute name="numberOfInternalMeetings" type="Integer" />
+	<aura:attribute name="recordId" type="String" />
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+	<article class="card_with_shadow">
+		<div class="slds-p-around_small">
+			<p class="slds-text-heading_small">Meetings</p>
+
+			<table>
+				<tr>
+					<td style="width:1%">
+						<div class="slds-m-top_x-small slds-text-heading_medium slds-p-right_medium slds-border_right">
+							<ui:outputnumber value="{!v.numberOfExternalMeetings}" />
+						</div>
+					</td>
+					<td>
+						<div class="slds-m-top_x-small slds-text-heading_medium slds-p-left_medium">
+							<ui:outputnumber value="{!v.numberOfInternalMeetings}" />
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p class="slds-text-body_regular slds-p-right_medium">External</p>
+					</td>
+					<td>
+						<p class="slds-text-body_regular slds-p-left_medium">Internal</p>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<lightning:helptext class="slds-is-absolute dock_right dock_bottom slds-p-around_xx-small" content="{!$Label.c.Help_text_Meetings}" />
+	</article>
+</aura:component>

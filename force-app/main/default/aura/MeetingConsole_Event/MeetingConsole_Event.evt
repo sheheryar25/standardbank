@@ -1,0 +1,7 @@
+<!--
+ - Created by Chibuye Kunda on 2019/12/03.
+ -->
+
+<aura:event type="COMPONENT" description="MeetingConsole_Event">
+    <aura:attribute name="data" type="string"/>
+</aura:event>

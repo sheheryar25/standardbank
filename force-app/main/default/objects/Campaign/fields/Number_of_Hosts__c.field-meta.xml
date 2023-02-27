@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_of_Hosts__c</fullName>
+    <defaultValue>0</defaultValue>
+    <description>Case#6220 - Rudolf Niehaus
+            This field holds the number of ALL the hosts linked to the member of a Campaign. As there could be multiple of the same host for different members the count do not reflect the duplicates.</description>
+    <externalId>false</externalId>
+    <label>Number of Hosts</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

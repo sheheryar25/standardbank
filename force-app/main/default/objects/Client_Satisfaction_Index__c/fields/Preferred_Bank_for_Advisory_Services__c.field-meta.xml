@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Preferred_Bank_for_Advisory_Services__c</fullName>
+    <description>Field to capture Preferred Bank for Advisory Services survey response (SFP-4619)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Who is your preferred bank for Advisory Services?</inlineHelpText>
+    <label>Preferred Bank for Advisory Services</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

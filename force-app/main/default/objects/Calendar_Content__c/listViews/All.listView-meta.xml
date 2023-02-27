@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>Calendar_Type__c</columns>
+    <columns>Event_Object_Name__c</columns>
+    <columns>Event_Legend_Field__c</columns>
+    <columns>Event_Title_Field__c</columns>
+    <columns>Event_Start_Field__c</columns>
+    <columns>Event_End_Field__c</columns>
+    <columns>Event_Description_Field__c</columns>
+    <columns>Hierarchy_Classification_Field__c</columns>
+    <columns>Hierarchy_Object_Name__c</columns>
+    <columns>Hierarchy_Relation_Field__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+</ListView>

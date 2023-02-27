@@ -1,0 +1,52 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" controller="OSB_Notifications_CTRL">
+	<aura:attribute name="notifications" type="Object[]" />
+	<aura:attribute name="pages" type="Object[]" />
+    <aura:attribute name="currentPage" type="Object[]" />
+    <aura:attribute name="empty" type="Boolean" default="false" />
+    <aura:attribute name="currentPageNumber" type="Integer" default="0" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler event="c:OSBNotificationReadEvent" action="{!c.handleReadNotification}"/>
+
+    <div class="notifications__container stretch">
+        <div class="notifications slds-size_6-of-6">
+            <aura:if isTrue="{!v.empty}">
+                <div class="notifications__empty">
+                    <img src="{!$Resource.OSB_notificationsEmpty}"/>
+                    <div>You have no new notifications at this time.</div>
+                </div>
+            <aura:set attribute="else">
+                <c:OSBNotificationsPage notifications="{!v.currentPage}"/>
+                <aura:if isTrue="{!v.pages.length > 1}">
+                    <div class="notifications__controls">
+                        <div class="notifications__prevBtns">
+                            <aura:if isTrue="{!v.currentPageNumber == 0}">
+                        		<button class="notifications__rotate"><i class="ms-icn_skip inactive"></i></button>
+                            	<button onclick="{!c.setPreviousPage}"><i class="ms-icn_chevron_left inactive"></i></button>
+                                <aura:set attribute="else">
+                                	<button class="notifications__rotate" onclick="{!c.setFirstPage}" data-id="uitlink_link" data-text="Notifications | First Page"><i class="ms-icn_skip  active"></i></button>
+                            		<button onclick="{!c.setPreviousPage}" data-id="uitlink_link" data-text="Notifications | Previous page"><i class="ms-icn_chevron_left active"></i></button>
+                                </aura:set>
+                            </aura:if>
+                        </div>
+                        <div class="notifications__pageBtns">
+                            <aura:iteration items="{!v.pages}" var="page" indexVar="index">
+                                <button class="{!index == v.currentPageNumber ? 'pageBtn pageBtn--active' : 'pageBtn'}" onclick="{!c.setPage}" data-id="uitlink_link" data-text="{!'Notifications | Index - ' + index}">{!index}</button>
+                            </aura:iteration>
+                        </div>
+                        <div class="notifications__nextBtns">
+                        	<aura:if isTrue="{!v.currentPageNumber == v.pages.length - 1}">
+                            	<button onclick="{!c.setNextPage}" data-id="uitlink_link" data-text="Notifications | Next Page"><i class="ms-icn_active-next inactive"></i></button>
+                        		<button><i class="ms-icn_skip inactive"></i></button>
+                                <aura:set attribute="else">
+                            		<button onclick="{!c.setNextPage}" data-id="uitlink_link" data-text="Notifications | Next Page"><i class="ms-icn_active-next active"></i></button>
+                                	<button onclick="{!c.setLastPage}" data-id="uitlink_link" data-text="Notifications | Last Page"><i class="ms-icn_skip active"></i></button>
+                                </aura:set>
+                            </aura:if>
+                        </div>
+                    </div>
+                </aura:if>
+            </aura:set>
+            </aura:if>
+        </div>
+    </div>
+</aura:component>

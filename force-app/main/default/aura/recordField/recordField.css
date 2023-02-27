@@ -1,0 +1,28 @@
+.THIS .hover svg{
+	fill: rgb(112, 110, 107);
+}
+
+.THIS .unhover svg{
+	fill: rgb(236, 235, 234);
+}
+.THIS .hidden {
+    display: none;
+}
+.THIS .block div {
+    display: block;
+}
+.THIS .block label {
+    display: block;
+}
+
+.THIS .greyFill svg {
+    fill: rgb(176,173,171);
+}
+
+.THIS .inputfield-element .slds-form-element__label {
+    display: none;
+}
+
+.THIS .inputfield-element .slds-form-element__icon {
+    display: none;
+}

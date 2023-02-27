@@ -1,0 +1,492 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes,force:appHostable" access="global" controller="OSB_LightningSelfRegisterController">
+    <aura:attribute name="newContact" type="Contact" default="{ 'sobjectType': 'Contact' }" access="public"/>
+    <aura:attribute name="industryDict" type="String[]" access="public"/>
+    <aura:attribute name="phoneCodes" type="String[]" access="public"/>
+    <aura:attribute name="showPassword" type="Boolean" default="false" access="private"/>
+    <aura:attribute name="passValue" type="String" access="private"/>
+    <aura:attribute name="passIsTyped" type="Boolean" default="false" access="private"/>
+    <aura:attribute name="passValidations" type="Boolean[]" access="private"/>    
+    <aura:attribute name="genericError" type="String" access="private"/>
+    <aura:attribute name="SSOUrl" type="String" access="private"/>
+    <aura:attribute name="baseURL" type="String" access="private"/>
+    <aura:attribute name="loading" type="Boolean" default="False" access="private"/>
+    <aura:attribute name="documentType" type="List" default="[
+                                                             {'label': 'ID Number', 'value': 'idNumber'},
+                                                             {'label': 'Passport number', 'value': 'passport'}
+                                                             ]" access="public"/>
+    <aura:attribute name="optionsCountry" type="List" access="public"/>
+    <aura:attribute name="document" type="String" default="idNumber" access="private"/>
+    <aura:attribute name="firstCancelClick" type="Boolean" default="false" access="private"/>
+    <aura:attribute name="firstCancelClickAp" type="Boolean" default="false" access="private"/>
+    <aura:attribute name="contactId" type="String" access="public"/>
+    <aura:attribute name="contact" type="Contact" access="public"/>
+    <aura:handler name="closePopUpEvent" event="c:OSBClosePopUpEvent" action="{!c.handlePopupClose}" access="public"/>
+    <aura:attribute name="showInformation" type="Boolean" default="false" access="private"/>
+    <aura:attribute name="showFirstSec" type="Boolean" default="false" access="private"/>
+    <aura:attribute name="UserName" type="String" access="public"/>
+    <aura:attribute name="UserEmail" type="String" access="public"/>
+    <aura:attribute name="UserId" type="String" access="public"/>
+    <aura:attribute name="passport" type="String" access="public"/>
+    <aura:attribute name="idNumber" type="String" access="public"/>
+    <aura:attribute name="userMap" type="object[]" access="public"/>
+    <aura:attribute name="Authorisation" type="Boolean" default="false" access="private"/>
+    <aura:attribute name="contect" type="String" default="OPTL" access="private"/>
+    <aura:attribute name="errorCount" type="Decimal" default="1" access="private"/>
+    <aura:attribute name="DoctypeChecked" type="Boolean" default="true" access="private"/>
+    <aura:attribute name="termsConditionsURL" type="String" access="private"/>
+    <aura:attribute name="showToastFail" type="Boolean" default="false" access="private"/>
+    <aura:attribute name="showPingErrorToast" type="Boolean" default="false" access="private"/>
+    <aura:attribute name="errorMessage" type="String" access="private"/>
+    <aura:attribute name="foundOldUser" type="Boolean" default="false" access="public"/>
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    
+    <lightning:navigation aura:id="navService"/> 
+    <aura:if isTrue="{!v.showPingErrorToast}">
+        <div class="generic-error">
+            <c:OSBGenericError title="Hmm… well this is awkward" subtitle="It seems there was an error when submitting your sign up form. We apologise for this. We have let the OneHub support team know that you are experiencing this problem, and we hope to get back to you as soon as possible. Alternatively, you can try again a bit later by closing this browser window and pasting the invite URL again in a new browser window. Again, apologies for the inconvenience."
+                               context="signUp" showMultiButtons="false" primaryButtonText="Close browser window" primaryButtonLink="close"/>
+        </div>
+        <aura:set attribute="else">
+            <div class="signUp-container" onclick="{!c.resetError}">
+                <aura:if isTrue="{!v.loading}">
+                    <c:OSBLoadingScreen />
+                </aura:if>
+                <aura:if isTrue="{!v.showToastFail}">
+                    <c:OSBToastComponent closePopup="{!v.showToastFail}" toastType="warning" top="160px" left="50%"
+                                         toastMessage="Please complete all required fields and check for errors">
+                    </c:OSBToastComponent>
+                </aura:if>
+                <div class="signUp">
+                    <div class="IdSearch">
+                        <div class="Sign__icon">
+                            <i class="ms-icn_shield_lock"></i>
+                        </div>
+                    </div>     
+                    <div class="signUp__title">Welcome to OneHub {!v.UserName}</div>
+                    <aura:if isTrue="{!v.Authorisation}">
+                        <div class="format signUp__subtitle slds-size_8-of-12">
+                            Before we can give you access to OneHub, we would like to ask that you provide us with some information and confirm the details that are then presented to you.
+                            The process will take you less than two minutes to complete. Once done, 
+                            <aura:if isTrue="{!v.showInformation}">
+                                we will create your profile.
+                                <aura:set attribute="else">
+                                    we will create your profile using the email
+                                </aura:set>
+                            </aura:if>
+                        </div>
+                    </aura:if>
+                    <aura:if isTrue="{!!v.Authorisation}">
+                        <div class="format signUp__subtitle slds-size_8-of-12">
+                            Before we can give you access to OneHub, we would like to ask that you provide us with some information which will take less than two minutes to complete.
+                            Once done, we will create your profile.
+                        </div>
+                    </aura:if>
+                    <form class="newCase__form" aura:id="caseForm" onsubmit="{!c.formSubmitted}"> 
+                        <aura:if isTrue="{!v.Authorisation}">
+                            <aura:if isTrue="{!v.showFirstSec}">
+                                <div class="format signUp_name">
+                                    {!v.UserEmail}
+                                </div>
+                                <div class="rectangle Padding slds-size_8-of-12">
+                                    <div class="lets_get_started">
+                                        Let's get started
+                                    </div>
+                                </div>
+                                <div class="InputSection pt_20 slds-size_8-of-12">
+                                    <lightning:radioGroup aura:id="docTypeAp"
+                                                          name="documentTypeGroup"
+                                                          label="Document type"
+                                                          options="{! v.documentType }"
+                                                          value="{! v.document }"
+                                                          type="radio"
+                                                          class="signUp__form--input signUp__form--documentTypeGroup customRadioCls slds-size_8-of-12"
+                                                          onclick="{!c.changeInputAp}"
+                                                          />
+                                    <lightning:input aura:id="idNumberAp" label="{!v.DoctypeChecked ? 'ID Number' : 'Passport number'}"
+                                                     class="signUp__form--input slds-size_8-of-12 signUp__form--input--Add padding__bottom"
+                                                     labelClass="signUp__form--label"
+                                                     placeholder="{!v.DoctypeChecked ? 'Enter your ID number' : 'Enter your Passport Number'}"
+                                                     messageWhenValueMissing="{!v.DoctypeChecked ? 'Enter a valid ID number' : 'Enter a valid Passport Number'}"
+                                                     value=""
+                                                     required="true"/>
+                                    <aura:if isTrue="">
+                                        <lightning:input aura:id="idNumberAp" label="ID Number"
+                                                         class="signUp__form--input slds-size_8-of-12 signUp__form--input--Add "
+                                                         labelClass="signUp__form--label"
+                                                         placeholder="Enter your ID number"
+                                                         messageWhenValueMissing="Enter a valid ID number"
+                                                         value=""
+                                                         required="true"
+                                                         />    
+                                    </aura:if>
+                                </div>
+                                <div class="signUp_greyArea">  
+                                    <div class="signUp_container slds-size_8-of-12">
+                                        <div class="signUp__button_alone">
+                                            <lightning:button label="SUBMIT" 
+                                                              class="btnStyle btn--darkblue signUp__button"
+                                                              onclick="{!c.proceed}"/>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </aura:if>
+                            <aura:set attribute="else">
+                                <div class="rectangle Padding slds-size_8-of-12">
+                                    <div class="lets_get_started">
+                                        Personal details
+                                    </div>
+                                </div>
+                                <div class="signUp__label Padding slds-size_8-of-12">
+                                    <label>Name</label>
+                                    <br></br>
+                                    <div class="signUp__value">
+                                        {!v.contact.FirstName}
+                                    </div>
+                                    
+                                    <label>Surname</label>
+                                    <br></br>
+                                    <div class="signUp__value">
+                                        {!v.contact.LastName}
+                                    </div>
+                                </div>
+                            </aura:set>
+                        </aura:if>
+                        
+                        <aura:if isTrue="{!v.showInformation}">
+                            <div class="signUp__secondSection">
+                                <div class="{!v.genericError ? 'signUp__form signUp__form--error' : 'signUp__form'}">
+                                    <div class="signUp__details slds-size_8-of-12">
+                                        <div class="rectangle personal slds-size_8-of-12">
+                                            <div class="lets_get_started">
+                                                Personal details
+                                            </div>
+                                        </div>
+                                        <div class="signUp__label slds-size_8-of-12">
+                                            
+                                            <aura:if isTrue="{!v.DoctypeChecked}">
+                                                <label>ID number</label>
+                                                <br></br>
+                                                <div class="signUp__value">
+                                                    {!v.userMap[0].Identity_Number__c}
+                                                </div>
+                                                <aura:set attribute="else">
+                                                    <label>Passport Number</label>
+                                                    <br></br>
+                                                    <div class="signUp__value">
+                                                        {!v.userMap[0].OSB_Passport_Number__c}
+                                                    </div>
+                                                </aura:set>
+                                            </aura:if>
+                                            <label>Name</label>
+                                            <br></br>
+                                            <div class="signUp__value">
+                                                {!v.userMap[0].FirstName}
+                                            </div>
+                                            
+                                            <label>Surname</label>
+                                            <br></br>
+                                            <div class="signUp__value">
+                                                {!v.userMap[0].LastName}
+                                            </div>
+                                            
+                                            <label>Cellphone number</label>
+                                            <br></br>
+                                            <div class="signUp__value">
+                                                {!v.userMap[0].Phone}
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="rectangle personal slds-size_8-of-12">
+                                            <div class="lets_get_started">
+                                                Work details
+                                            </div>
+                                        </div>
+                                        <div class="signUp__label slds-size_8-of-12">
+                                            
+                                            <label>Job title</label>
+                                            <br></br>
+                                            <div class="signUp__value">
+                                                {!v.userMap[0].Title}
+                                            </div>
+                                            
+                                            <label>Company name</label>
+                                            <br></br>
+                                            <div class="signUp__value">
+                                                {!v.userMap[0].OSB_Company_name__c}
+                                            </div>
+                                            
+                                            <label>Company industry</label>
+                                            <br></br>
+                                            <div class="signUp__value">
+                                                {!v.userMap[0].Company_Industry__c}
+                                            </div>
+                                            
+                                            <label>Operating country</label>
+                                            <br></br>
+                                            <div class="signUp__value">
+                                                {!v.userMap[0].OSB_Operating_Country__c}
+                                            </div>
+                                        </div>
+                                        <div class="rectangle personal slds-size_8-of-12">
+                                            <div class="lets_get_started">
+                                                Sign in credentials
+                                            </div>
+                                        </div>
+                                        <div class="signUp__label slds-size_8-of-12">
+                                            
+                                            <label>Work email</label>
+                                            <br></br>
+                                            <div class="signUp__value">
+                                                {!v.userMap[0].Email} 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <aura:if isTrue="{!!v.foundOldUser}">
+                                        <aura:if isTrue="{!v.passIsTyped}">
+                                            <div id="password_Info" class="password_info InputSection slds-size_8-of-12">Make sure to include at least:
+                                                <div class ="pass_feature mt_12"><i class="{!v.passValidations[0] ? 'fulfilled' : 'unfulfilled'}"></i>1 UPPERCASE</div>
+                                                <div class ="pass_feature"><i class="{!v.passValidations[1] ? 'fulfilled' : 'unfulfilled'}"></i>1 lowercase</div>
+                                                <div class ="pass_feature"><i class="{!v.passValidations[2] ? 'fulfilled' : 'unfulfilled'}"></i>1 special character</div>
+                                                <div class ="pass_feature"><i class="{!v.passValidations[3] ? 'fulfilled' : 'unfulfilled'}"></i>2 numbers</div>
+                                                <div class ="pass_feature"><i class="{!v.passValidations[4] ? 'fulfilled' : 'unfulfilled'}"></i>Please remove any white spaces</div>
+                                                <div class ="pass_feature"><i class="{!v.passValidations[5] ? 'fulfilled' : 'unfulfilled'}"></i>minimum of 8 alphanumeric characters</div>
+                                            </div>
+                                        </aura:if>
+                                        <div class="signUp__passwordContainer InputSection slds-size_8-of-12">
+                                            <lightning:input type="{!v.showPassword ? 'text' : 'password'}"
+                                                             name="password"
+                                                             aura:id="passwordAp" label="Password"
+                                                             class="signUp__form--input slds-size_8-of-12"
+                                                             labelClass="signUp__form--label"
+                                                             placeholder="Enter password"
+                                                             messageWhenValueMissing="Enter a valid password"
+                                                             required="true"
+                                                             autocomplete="off"
+                                                             tabindex="0" 
+                                                             onfocus="{!c.activatePassMenu}"
+                                                             value="{!v.passValue}"
+                                                             onchange="{!c.handlePassEntered}"/>
+                                            <div onclick="{!c.togglePassword}" class="signUp__togglePassword_Password toggleable_icon_position">
+                                                <i class="{!v.showPassword ? 'ms-icn_eye_open' : 'ms-icn_eye_closed'}"></i>
+                                            </div>
+                                        </div>
+                                        <div class="signUp__subLabel slds-size_8-of-12">Must contain at least 1 UPPERCASE, 1 lowercase, 2 numbers, 1 special character and a minimum of 8 alphanumeric characters and cannot be first name, last name or username</div>
+                                        <div class="signUp__passwordContainer confirmPassword InputSection slds-size_8-of-12">
+                                            <lightning:input type="{!v.showPassword ? 'text' : 'password'}"
+                                                             name="confirmPassword"
+                                                             aura:id="confirmPasswordAp" label="Confirm password"
+                                                             class="signUp__form--input slds-size_8-of-12"
+                                                             labelClass="signUp__form--label mt_24"
+                                                             placeholder="Confirm entered password"
+                                                             messageWhenValueMissing="Enter a valid password"
+                                                             required="true"
+                                                             autocomplete="off"/>
+                                            <div onclick="{!c.togglePassword}" class="signUp__togglePassword_Confirm toggleable_icon_position">
+                                                <i class="{!v.showPassword ? 'ms-icn_eye_open' : 'ms-icn_eye_closed'}"></i>
+                                            </div>
+                                        </div>
+                                        <aura:set attribute="else">
+                                            <div class="align_center slds-size_8-of-12 rectangle">
+                                                <p class="blurb">Please note: We have identified that you already have an existing Standard Bank Internet Banking profile. Please continue to sign into OneHub using your Internet Banking password.</p>
+                                            </div>
+                                        </aura:set>
+                                    </aura:if>
+                                    <div class="signUp__tnc slds-size_8-of-12">
+                                        By signing up, you agree to the following <a class="signUp--tnc--link" target="_blank" href="{!v.termsConditionsURL}">T&amp;Cs.</a>
+                                    </div> 
+                                    <aura:if isTrue="{!v.genericError}">
+                                        <div class="signUp__genericError">{!v.genericError}</div>
+                                    </aura:if>
+                                    <div class="signUp_greyAreaBtn">  
+                                        <div class="buttons__container slds-size_8-of-12">
+                                            <div class="left_bottomButton" data-id="uitlink_link" data-text="Registration | Cancel">
+                                                <lightning:button label="Cancel" 
+                                                                  class="btnStyle btn--gray signUp__button" 
+                                                                  onclick="{!c.cancel}"/>
+                                            </div>
+                                            <div class="right_bottomButton" data-id="uitlink_link" data-text="Registration | Sign up">
+                                                <lightning:button label="Sign up"
+                                                                  class="btnStyle btn--darkblue signUp__button" 
+                                                                  onclick="{!c.validateAp}"/> 
+                                            </div>
+                                        </div>          
+                                        <aura:if isTrue="{!v.firstCancelClick}">
+                                            <c:OSBMarketGramPopup  userMap="{!v.userMap}" subTitle="Before you do, we would like to know, why did you cancel? " signUp="true" title="Cancel sign up?" content="You are about to cancel your application to sign up. Do you want to continue?"/>
+                                        </aura:if>
+                                        
+                                    </div>  
+                                </div> 
+                            </div>           
+                        </aura:if>
+                        <aura:if isTrue="{!!v.Authorisation}">
+                            <label class="signUp__form--label_code slds-size_8-of-12" id="cellphoneLabel">Cellphone number</label>
+                            <div class="slds-grid signUp__cellPhone--aligner align_center slds-size_8-of-12">
+                                <div class="newCase__form--dialingCode">
+                                    <i class="ms-icn_arrow_solid_down signUp__dialingCode"></i>
+                                    <lightning:select aura:id="dialingCode"
+                                                      label=""
+                                                      class="newCase__form--input remove_padding"
+                                                      required="true"
+                                                      messageWhenValueMissing="Enter a valid dialing code"
+                                                      name="phoneCodes">
+                                        <aura:iteration items="{!v.phoneCodes}" var="codes">
+                                            <option class="signUp__form--input" value="{!codes}" text="{!codes}"></option>
+                                        </aura:iteration>
+                                    </lightning:select>
+                                </div>
+                                <div class="phoneFont remove_padding" style="margin-top: -2px;">
+                                    <lightning:input aura:id="phoneDpNp" 
+                                                     class="signUp__form--input slds-size_8-of-12 signUp__form--input--Add CellSection"
+                                                     labelClass="signUp__form--label"
+                                                     label=""
+                                                     placeholder="Enter a cellphone number"
+                                                     messageWhenValueMissing="Enter a valid cellphone number"
+                                                     value=""
+                                                     required="true"/>   
+                                </div>
+                            </div>
+                            <div class="InputSection pt_10 slds-size_8-of-12">
+                                <lightning:radioGroup aura:id="docTypeDp"
+                                                      name="documentTypeGroup"
+                                                      label="Document type"
+                                                      options="{! v.documentType }"
+                                                      value="{! v.document }"
+                                                      type="radio"
+                                                      class="signUp__form--input slds-size_8-of-12 signUp__form--documentTypeGroup customRadioCls"
+                                                      onclick="{!c.changeInputDp}"
+                                                      />
+                                <lightning:input aura:id="idNumberDP" label="{!v.DoctypeChecked ? 'ID Number' : 'Passport number'}"
+                                                 class="signUp__form--input slds-size_8-of-12 pt_10 signUp__form--input--Add"
+                                                 labelClass="signUp__form--label"
+                                                 placeholder="{!v.DoctypeChecked ? 'Enter your ID number' : 'Enter your Passport Number'}"
+                                                 messageWhenValueMissing="{!v.DoctypeChecked ? 'Enter a valid ID number' : 'Enter a valid Passport Number'}"
+                                                 value=""
+                                                 />
+                            </div>
+                            <div class="rectangle Padding slds-size_8-of-12">
+                                <div class="lets_get_started">
+                                    Work details
+                                </div>
+                            </div>
+                            <div class="InputSection slds-size_8-of-12">
+                                <lightning:input aura:id="jobTitle" label="Job Title"
+                                                 class="signUp__form--input Padding "
+                                                 labelClass="signUp__form--label"
+                                                 placeholder="Enter current job title"
+                                                 messageWhenValueMissing="Enter a valid job title"
+                                                 required="true"/>
+                                <lightning:input aura:id="companyName" label="Company name"
+                                                 class="signUp__form--input "
+                                                 labelClass="signUp__form--label"
+                                                 placeholder="Enter Company Name"
+                                                 messageWhenValueMissing="Enter a valid company name"
+                                                 required="true"/>
+                                <div class="signUp__industryContainer">
+                                    <lightning:select aura:id="industry" 
+                                                      label="Industry" onchange="{!c.handleSelectChange}"
+                                                      class="signUp__form--input  signUp__form__industry-placeholder"
+                                                      required="true" 
+                                                      messageWhenValueMissing="Enter a valid industry">
+                                        <option class="signUp__form__industry-placeholder" value="">Enter the industry you are in</option>
+                                        <aura:iteration items="{!v.industryDict}" var="industry">
+                                            <option class="signUp__form--input " value="{!industry}" text="{!industry}"></option>
+                                        </aura:iteration>
+                                    </lightning:select>
+                                    <i class="ms-icn_arrow_solid_down signUp__industryIcon"></i>
+                                </div>
+                                <c:OSBMultiSelect aura:id="operatingMS" mslabel="Operating country" msoptions="{!v.optionsCountry}" maxSelectedShow="3"/>
+                            </div>
+                            <div class="rectangle Padding slds-size_8-of-12">
+                                <div class="lets_get_started">
+                                    Sign in credentials
+                                </div>
+                            </div>
+                            <div class="signUp__label Padding slds-size_8-of-12">
+                                <label>Work email</label>
+                                <br></br>
+                                <div class="signUp__value">
+                                    {!v.contact.Email} 
+                                </div>
+                            </div>
+                            <aura:if isTrue="{!!v.foundOldUser}">
+                                <aura:if isTrue="{!v.passIsTyped}">
+                                    <div id="password_Info" class="password_info InputSection slds-size_8-of-12">Make sure to include at least:
+                                        <div class ="pass_feature mt_12"><i class="{!v.passValidations[0] ? 'fulfilled' : 'unfulfilled'}"></i>1 UPPERCASE</div>
+                                        <div class ="pass_feature"><i class="{!v.passValidations[1] ? 'fulfilled' : 'unfulfilled'}"></i>1 lowercase</div>
+                                        <div class ="pass_feature"><i class="{!v.passValidations[2] ? 'fulfilled' : 'unfulfilled'}"></i>1 special character</div>
+                                        <div class ="pass_feature"><i class="{!v.passValidations[3] ? 'fulfilled' : 'unfulfilled'}"></i>2 numbers</div>
+                                        <div class ="pass_feature"><i class="{!v.passValidations[4] ? 'fulfilled' : 'unfulfilled'}"></i>Please remove any white spaces</div>
+                                        <div class ="pass_feature"><i class="{!v.passValidations[5] ? 'fulfilled' : 'unfulfilled'}"></i>minimum of 8 alphanumeric characters</div>
+                                    </div>
+                                </aura:if>
+                                <div class="signUp__passwordContainer InputSection slds-size_8-of-12">
+                                    <lightning:input type="{!v.showPassword ? 'text' : 'password'}"
+                                                     name="password"
+                                                     aura:id="password" label="Password"
+                                                     class="signUp__form--input slds-size_8-of-12"
+                                                     labelClass="signUp__form--label"
+                                                     placeholder="Enter password"
+                                                     messageWhenValueMissing="Enter a valid password"
+                                                     required="true"
+                                                     autocomplete="cc-password"
+                                                     value="{!v.passValue}"
+                                                     tabindex="0" 
+                                                     onfocus="{!c.activatePassMenu}"
+                                                     onchange="{!c.handlePassEntered}"/>
+                                    <div onclick="{!c.togglePassword}" class="signUp__togglePassword_Password toggleable_icon_position">
+                                        <i class="{!v.showPassword ? 'ms-icn_eye_open' : 'ms-icn_eye_closed'}"></i>
+                                    </div>
+                                </div>
+                                <div class="signUp__subLabel slds-size_8-of-12">Must contain at least 1 UPPERCASE, 1 lowercase, 2 numbers, 1 special character and a minimum of 8 alphanumeric characters and cannot be first name, last name or username</div>
+                                <div class="signUp__passwordContainer confirmPassword InputSection slds-size_8-of-12">
+                                    <lightning:input type="{!v.showPassword ? 'text' : 'password'}"
+                                                     name="confirmPassword"
+                                                     aura:id="confirmPassword" label="Confirm password"
+                                                     class="signUp__form--input slds-size_8-of-12"
+                                                     labelClass="signUp__form--label mt_24"
+                                                     placeholder="Confirm entered password"
+                                                     messageWhenValueMissing="Enter a valid password"
+                                                     required="true"
+                                                     autocomplete="cc-passwordCheck"/>
+                                    <div onclick="{!c.togglePassword}" class="signUp__togglePassword_Confirm toggleable_icon_position">
+                                        <i class="{!v.showPassword ? 'ms-icn_eye_open' : 'ms-icn_eye_closed'}"></i>
+                                    </div>
+                                </div>
+                                <aura:set attribute="else">
+                                    <div class="align_center slds-size_8-of-12 rectangle">
+                                        <p class="blurb">Please note: We have identified that you already have an existing Standard Bank Internet Banking profile. Please continue to sign into OneHub using your Internet Banking password.</p>
+                                    </div>
+                                </aura:set>
+                            </aura:if>
+                        </aura:if>
+                    </form>
+                    <aura:if isTrue="{!!v.Authorisation}">
+                        <div class="signUp__tnc slds-size_8-of-12">
+                            By signing up, you agree to the following <a class="signUp--tnc--link" target="_blank" href="{!v.termsConditionsURL}">T&amp;Cs.</a>
+                        </div> 
+                        <aura:if isTrue="{!v.genericError}">
+                            <div class="signUp__genericError">{!v.genericError}</div>
+                        </aura:if>
+                        <div class="signUp_greyAreaBtn">
+                            <div class="buttons__container slds-size_8-of-12">
+                                <div class="left_bottomButton" data-id="uitlink_link" data-text="Registration | Cancel">
+                                    <lightning:button label="Cancel" 
+                                                      class="btnStyle btn--gray signUp__button" 
+                                                      onclick="{!c.cancel}"/>
+                                </div>
+                                <div class="right_bottomButton" data-id="uitlink_link" data-text="Registration | Sign up">
+                                    <lightning:button label="Sign up"
+                                                      class="btnStyle btn--darkblue signUp__button" 
+                                                      onclick="{!c.validateDpNp}"/>
+                                </div>
+                            </div>
+                        </div>
+                        <aura:if isTrue="{!v.firstCancelClick}">
+                            <c:OSBMarketGramPopup icon="QuestionMark" title="Cancel Sign up?" content="You are about to cancel your application to sign up. Do you want to continue?"/>
+                        </aura:if>
+                    </aura:if>
+                </div>
+            </div>
+        </aura:set>
+    </aura:if>
+</aura:component>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Target_Client_Sector__c</fullName>
+    <description>Case#1168 - 11/2011 - Rudolf Niehaus
+            Standard Bank Client Sectors</description>
+    <externalId>false</externalId>
+    <label>Target Client Sector</label>
+    <required>false</required>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Agri Business</fullName>
+                <default>false</default>
+                <label>Agri Business</label>
+            </value>
+            <value>
+                <fullName>Asset Managers</fullName>
+                <default>false</default>
+                <label>Asset Managers</label>
+            </value>
+            <value>
+                <fullName>Automotives</fullName>
+                <default>false</default>
+                <label>Automotives</label>
+            </value>
+            <value>
+                <fullName>Banks</fullName>
+                <default>false</default>
+                <label>Banks</label>
+            </value>
+            <value>
+                <fullName>Central Banks</fullName>
+                <default>false</default>
+                <label>Central Banks</label>
+            </value>
+            <value>
+                <fullName>Development Financial Institutions</fullName>
+                <default>false</default>
+                <label>Development Financial Institutions</label>
+            </value>
+            <value>
+                <fullName>Diversified Industries</fullName>
+                <default>false</default>
+                <label>Diversified Industries</label>
+            </value>
+            <value>
+                <fullName>EB &amp; SI</fullName>
+                <default>false</default>
+                <label>EB &amp; SI</label>
+            </value>
+            <value>
+                <fullName>Family Conglomerates</fullName>
+                <default>false</default>
+                <label>Family Conglomerates</label>
+            </value>
+            <value>
+                <fullName>Insurance Companies</fullName>
+                <default>false</default>
+                <label>Insurance Companies</label>
+            </value>
+            <value>
+                <fullName>International Organisations</fullName>
+                <default>false</default>
+                <label>International Organisations</label>
+            </value>
+            <value>
+                <fullName>Mining &amp; Metals</fullName>
+                <default>false</default>
+                <label>Mining &amp; Metals</label>
+            </value>
+            <value>
+                <fullName>National Treasuries</fullName>
+                <default>false</default>
+                <label>National Treasuries</label>
+            </value>
+            <value>
+                <fullName>Oil, Gas &amp; Renewables</fullName>
+                <default>false</default>
+                <label>Oil, Gas &amp; Renewables</label>
+            </value>
+            <value>
+                <fullName>Pension Funds</fullName>
+                <default>false</default>
+                <label>Pension Funds</label>
+            </value>
+            <value>
+                <fullName>Power &amp; Infrastructure</fullName>
+                <default>false</default>
+                <label>Power &amp; Infrastructure</label>
+            </value>
+            <value>
+                <fullName>Public Sector</fullName>
+                <default>false</default>
+                <label>Public Sector</label>
+            </value>
+            <value>
+                <fullName>Retailers</fullName>
+                <default>false</default>
+                <label>Retailers</label>
+            </value>
+            <value>
+                <fullName>Standard Bank</fullName>
+                <default>false</default>
+                <label>Standard Bank</label>
+            </value>
+            <value>
+                <fullName>Telecoms &amp; Media</fullName>
+                <default>false</default>
+                <label>Telecoms &amp; Media</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

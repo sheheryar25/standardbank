@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Start_KYC_CIBI_Only</fullName>
+    <availability>online</availability>
+    <description>Initial KYC process for prospects. Currently only available to CIBI. Using User CIB Global Area field on the user object for conditional check 
+CReinecke / Regression / Add Contional check to limit functionality to CIBI only</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Start KYC - CIBI Only</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>var cibIUser=&quot;NONCIBI&quot;;if ({!ISPICKVAL($User.User_CIB_Global_Area__c, &quot;CIBI&quot;)}) {cibIUser=&quot;CIBI&quot;;} 
+if ( cibIUser != &quot;CIBI&quot; ) {alert(&quot;Please note that KYC integration is currently only available to CIB International users.&quot;);}else{ 
+window.parent.location.href=&quot;/a0H/e?CF00N20000001EiOh={!Account.Name}&amp;CF00N20000001EiOh_lkid={!Account.Id}&amp;00N20000001EiR0=SBL&amp;00N20000001EiP6=R&amp;retURL=%2F{!Account.Id}&quot;;}</url>
+</WebLink>

@@ -1,0 +1,7 @@
+<design:component>
+    <design:attribute name="withMenu" />
+    <design:attribute name="withUserName" />
+    <design:attribute name="noOverlay" />
+    <design:attribute name="showBannerMessage" />
+    <design:attribute name="withMenuStyle" />
+</design:component>

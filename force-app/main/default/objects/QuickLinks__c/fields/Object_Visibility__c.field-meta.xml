@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Object_Visibility__c</fullName>
+    <description>Used to filter the object that the links will appear on.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please specify the object that these links need to appear on. (use commas to separate the values if multiple are specified eg. Home Page,Opportunity)</inlineHelpText>
+    <label>Object Visibility</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Snapshot_Date__c</fullName>
+    <description>Enh#119 Client Overview: The date when the snapshot in business objects was taken.
+
+            EN 391 : The label changed due to Client Plan Dashboard requirement. The API name was not changed due to the dependency on other components.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is not the date at which snapshot is taken but rather the month end date to which the snapshot applies to (eg 31/03/2014)</inlineHelpText>
+    <label>Month End Snapshot Date</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_of_KYC_Docs_with_Status_Received__c</fullName>
+    <description>US-1205: KYC - Document Status to reflect on the KYC Review</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Field identifies no. of Required KYC docs with status as Received or Introductory Certificate</inlineHelpText>
+    <label>No. of KYC Docs with Status-Received</label>
+    <summaryFilterItems>
+        <field>KYC_Required_Documents__c.Status__c</field>
+        <operation>equals</operation>
+        <value>Received, Introductory Certificate</value>
+    </summaryFilterItems>
+    <summaryForeignKey>KYC_Required_Documents__c.KYC_Review_Status__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

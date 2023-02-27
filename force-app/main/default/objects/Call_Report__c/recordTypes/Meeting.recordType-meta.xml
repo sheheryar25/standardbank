@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Meeting</fullName>
+    <active>true</active>
+    <description>Select to create a meeting where a client is attending (External) or a client is being discussed (Internal)</description>
+    <label>Meeting</label>
+    <picklistValues>
+        <picklist>Attendee_Reminder_Required__c</picklist>
+        <values>
+            <fullName>HAS_REMINDER_NEED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HAS_REMINDER_NO_NEED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NEED_REMINDER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NOT_REQUIRED</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NO_NEED</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Event_Priority__c</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Instigated_By__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Meeting_Audience__c</picklist>
+        <values>
+            <fullName>External</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Meeting_Format__c</picklist>
+        <values>
+            <fullName>Conference Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entertainment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Site Visit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Meeting_Purpose__c</picklist>
+        <values>
+            <fullName>Client Discussion%2FInsights</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client Execution</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client Pitch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client Road Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client Training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Core Client Team Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Day To Day Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Market Research Update</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NBAC Meeting</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Meeting_Type_del__c</picklist>
+        <values>
+            <fullName>Client Conference Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client Entertainment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client Pitch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client Road Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client Service Discussion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client Site Visit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client Social</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client Training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Core Client Team Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Day To Day Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Market Research Update</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NBAC Meeting</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>NBAC_Committee__c</picklist>
+        <values>
+            <fullName>Angola NBAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Botswana NBAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cote D%27Ivoire NBAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DRC NBAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>East Africa NBAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ghana NBAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Global NBAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kenya NBAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lesotho NBAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Malawi NBAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mauritius NBAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mozambique NBAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nambia NBAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nigeria NBAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Real Estate Regional NBAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South %26 Central Africa NBAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South Africa NBAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Swaziland NBAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tanzania NBAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uganda NBAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>West Africa NBAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zambia NBAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zimbabwe NBAC</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Report_Show_Time_As__c</picklist>
+        <values>
+            <fullName>Busy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Free</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OutOfOffice</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Report_Type__c</picklist>
+        <values>
+            <fullName>Client Entertainment Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client Team Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Market Research Update</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Road Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telephone Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Topics__c</picklist>
+        <values>
+            <fullName>Advisory</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Africa Focus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brainstorming</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>China Focus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commodities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consolidations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E-Channels</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Equity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exchange Control</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Structuring</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Forex</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Funding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interest Rate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>International Payment Systems</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mergers and Acquisitions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Money Markets</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reference Rate Reform</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Relationship</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Research</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Special Initiatives</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

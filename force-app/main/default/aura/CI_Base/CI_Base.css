@@ -1,0 +1,98 @@
+.THIS .card_heading {
+    font-size: 13pt;
+    color: #16325c;
+}
+
+.THIS .card_value_primary {
+    font-size: 15pt;
+    color: #16325c;
+    font-weight: bold;
+}
+
+.THIS .card_value_secondary {
+    font-size: 15pt;
+    color: #16325c;
+    font-weight: 300;
+}
+
+.THIS .card_value_primary_descrip {
+    font-size: 12pt;
+    color: #16325c;
+    font-weight: bold;
+}
+
+.THIS .card_value_secondary_descrip {
+    font-size: 12pt;
+    color: #16325c;
+}
+
+.THIS .card_footer {
+    font-size: 10pt;
+    color: #54698d;
+}
+
+.THIS .red {
+    color: token(SBRedNegative);
+}
+
+.THIS .yellow {
+    color: token(SBYellowAttention);
+}
+
+.THIS .green {
+    color: token(SBGreenPositive);
+}
+
+.THIS .light_grey {
+    color: #b6b3b1;
+} 
+
+.THIS .bold {
+    font-weight: bold !important;
+}
+
+.THIS .cursor_pointer:hover {
+    cursor:pointer;
+}
+
+.THIS .card_with_shadow {
+    position: relative;
+    padding: 0;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(221, 219, 218);
+    border-radius: .25rem;
+    background-clip: padding-box;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+    height: 100%;
+}
+
+.THIS .line_break_bottom {
+    border-bottom: 1px solid #DADADA;
+}
+
+.THIS .display_none{
+    height: 0px;
+    overflow-y: hidden;
+}
+
+.THIS .back_button{
+    color: blue;
+    cursor: pointer;
+}
+.THIS .dock_right {
+    right: 0px;
+}
+
+.THIS .dock_bottom {
+    bottom: 0px;
+}
+.THIS .background_light_grey{
+    background: #f3f2f2;
+}
+
+.THIS .clickable {
+    cursor: pointer;
+}
+.THIS .background_white {
+    background-color: #ffffff;
+}

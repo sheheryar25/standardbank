@@ -1,0 +1,656 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Grand_Parent_Product__c</fullName>
+    <description>Grand Parent Product</description>
+    <externalId>false</externalId>
+    <label>Grand Parent Product (GPP)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Account Management</fullName>
+                <default>false</default>
+                <label>Account Management</label>
+            </value>
+            <value>
+                <fullName>Acquisition</fullName>
+                <default>false</default>
+                <label>Acquisition</label>
+            </value>
+            <value>
+                <fullName>Advisory Fees</fullName>
+                <default>false</default>
+                <label>Advisory Fees</label>
+            </value>
+            <value>
+                <fullName>Agricultural Products</fullName>
+                <default>false</default>
+                <label>Agricultural Products</label>
+            </value>
+            <value>
+                <fullName>Banks</fullName>
+                <default>false</default>
+                <label>Banks</label>
+            </value>
+            <value>
+                <fullName>Bank Sector Services</fullName>
+                <default>false</default>
+                <label>Bank Sector Services</label>
+            </value>
+            <value>
+                <fullName>Base Metals</fullName>
+                <default>false</default>
+                <label>Base Metals</label>
+            </value>
+            <value>
+                <fullName>Bills of exchange discounted</fullName>
+                <default>false</default>
+                <label>Bills of exchange discounted</label>
+            </value>
+            <value>
+                <fullName>Bonds</fullName>
+                <default>false</default>
+                <label>Bonds</label>
+            </value>
+            <value>
+                <fullName>Bulk and Steel</fullName>
+                <default>false</default>
+                <label>Bulk and Steel</label>
+            </value>
+            <value>
+                <fullName>Card</fullName>
+                <default>false</default>
+                <label>Card</label>
+            </value>
+            <value>
+                <fullName>Cash Management</fullName>
+                <default>false</default>
+                <label>Cash Management</label>
+            </value>
+            <value>
+                <fullName>Channel</fullName>
+                <default>false</default>
+                <label>Channel</label>
+            </value>
+            <value>
+                <fullName>Commitments</fullName>
+                <default>false</default>
+                <label>Commitments</label>
+            </value>
+            <value>
+                <fullName>Commodities</fullName>
+                <default>false</default>
+                <label>Commodities</label>
+            </value>
+            <value>
+                <fullName>Core Custody</fullName>
+                <default>false</default>
+                <label>Core Custody</label>
+            </value>
+            <value>
+                <fullName>Cost Overrun Facility</fullName>
+                <default>false</default>
+                <label>Cost Overrun Facility</label>
+            </value>
+            <value>
+                <fullName>Credit</fullName>
+                <default>false</default>
+                <label>Credit</label>
+            </value>
+            <value>
+                <fullName>Credit Finance &amp; Leverage</fullName>
+                <default>false</default>
+                <label>Credit Finance &amp; Leverage</label>
+            </value>
+            <value>
+                <fullName>Credit Linked Notes &amp; Depo</fullName>
+                <default>false</default>
+                <label>Credit Linked Notes &amp; Depo</label>
+            </value>
+            <value>
+                <fullName>Cross Border Finance</fullName>
+                <default>false</default>
+                <label>Cross Border Finance</label>
+            </value>
+            <value>
+                <fullName>Custody Services</fullName>
+                <default>false</default>
+                <label>Custody Services</label>
+            </value>
+            <value>
+                <fullName>Customer foreign currency accounts (CFC)</fullName>
+                <default>false</default>
+                <label>Customer foreign currency accounts (CFC)</label>
+            </value>
+            <value>
+                <fullName>Debt Capital Markets</fullName>
+                <default>false</default>
+                <label>Debt Capital Markets</label>
+            </value>
+            <value>
+                <fullName>Debtor Finance</fullName>
+                <default>false</default>
+                <label>Debtor Finance</label>
+            </value>
+            <value>
+                <fullName>Debt Structuring</fullName>
+                <default>false</default>
+                <label>Debt Structuring</label>
+            </value>
+            <value>
+                <fullName>Deposits</fullName>
+                <default>false</default>
+                <label>Deposits</label>
+            </value>
+            <value>
+                <fullName>Distribution</fullName>
+                <default>false</default>
+                <label>Distribution</label>
+            </value>
+            <value>
+                <fullName>Drafts issues</fullName>
+                <default>false</default>
+                <label>Drafts issues</label>
+            </value>
+            <value>
+                <fullName>Energy</fullName>
+                <default>false</default>
+                <label>Energy</label>
+            </value>
+            <value>
+                <fullName>Equipment Financing</fullName>
+                <default>false</default>
+                <label>Equipment Financing</label>
+            </value>
+            <value>
+                <fullName>Equity</fullName>
+                <default>false</default>
+                <label>Equity</label>
+            </value>
+            <value>
+                <fullName>Equity Capital Markets</fullName>
+                <default>false</default>
+                <label>Equity Capital Markets</label>
+            </value>
+            <value>
+                <fullName>Equity Deposit Term</fullName>
+                <default>false</default>
+                <label>Equity Deposit Term</label>
+            </value>
+            <value>
+                <fullName>Equity Derivatives</fullName>
+                <default>false</default>
+                <label>Equity Derivatives</label>
+            </value>
+            <value>
+                <fullName>Equity Finance</fullName>
+                <default>false</default>
+                <label>Equity Finance</label>
+            </value>
+            <value>
+                <fullName>Equity Investments</fullName>
+                <default>false</default>
+                <label>Equity Investments</label>
+            </value>
+            <value>
+                <fullName>F178</fullName>
+                <default>false</default>
+                <label>F178</label>
+            </value>
+            <value>
+                <fullName>FECs</fullName>
+                <default>false</default>
+                <label>FECs</label>
+            </value>
+            <value>
+                <fullName>FEES</fullName>
+                <default>false</default>
+                <label>FEES</label>
+            </value>
+            <value>
+                <fullName>Foreign notes (Exports)</fullName>
+                <default>false</default>
+                <label>Foreign notes (Exports)</label>
+            </value>
+            <value>
+                <fullName>Foreign notes (Imports)</fullName>
+                <default>false</default>
+                <label>Foreign notes (Imports)</label>
+            </value>
+            <value>
+                <fullName>Funding Associate Income</fullName>
+                <default>false</default>
+                <label>Funding Associate Income</label>
+            </value>
+            <value>
+                <fullName>Funding Investment Income</fullName>
+                <default>false</default>
+                <label>Funding Investment Income</label>
+            </value>
+            <value>
+                <fullName>Future Flow Financing</fullName>
+                <default>false</default>
+                <label>Future Flow Financing</label>
+            </value>
+            <value>
+                <fullName>FX</fullName>
+                <default>false</default>
+                <label>FX</label>
+            </value>
+            <value>
+                <fullName>Group Funding</fullName>
+                <default>false</default>
+                <label>Group Funding</label>
+            </value>
+            <value>
+                <fullName>Hedging</fullName>
+                <default>false</default>
+                <label>Hedging</label>
+            </value>
+            <value>
+                <fullName>Hybrid Finance</fullName>
+                <default>false</default>
+                <label>Hybrid Finance</label>
+            </value>
+            <value>
+                <fullName>Infrastructure Opportunity</fullName>
+                <default>false</default>
+                <label>Infrastructure Opportunity</label>
+            </value>
+            <value>
+                <fullName>Interest Rates</fullName>
+                <default>false</default>
+                <label>Interest Rates</label>
+            </value>
+            <value>
+                <fullName>International Trade Products</fullName>
+                <default>false</default>
+                <label>International Trade Products</label>
+            </value>
+            <value>
+                <fullName>Investment Income</fullName>
+                <default>false</default>
+                <label>Investment Income</label>
+            </value>
+            <value>
+                <fullName>Investments</fullName>
+                <default>false</default>
+                <label>Investments</label>
+            </value>
+            <value>
+                <fullName>Investor Products</fullName>
+                <default>false</default>
+                <label>Investor Products</label>
+            </value>
+            <value>
+                <fullName>Investor Services</fullName>
+                <default>false</default>
+                <label>Investor Services</label>
+            </value>
+            <value>
+                <fullName>Joint Marketing Agreement</fullName>
+                <default>false</default>
+                <label>Joint Marketing Agreement</label>
+            </value>
+            <value>
+                <fullName>Letters of credit (Export)</fullName>
+                <default>false</default>
+                <label>Letters of credit (Export)</label>
+            </value>
+            <value>
+                <fullName>Letters of credit (Import)</fullName>
+                <default>false</default>
+                <label>Letters of credit (Import)</label>
+            </value>
+            <value>
+                <fullName>Liability Management</fullName>
+                <default>false</default>
+                <label>Liability Management</label>
+            </value>
+            <value>
+                <fullName>Loan Facility</fullName>
+                <default>false</default>
+                <label>Loan Facility</label>
+            </value>
+            <value>
+                <fullName>Loans</fullName>
+                <default>false</default>
+                <label>Loans</label>
+            </value>
+            <value>
+                <fullName>Loans Term Funding</fullName>
+                <default>false</default>
+                <label>Loans Term Funding</label>
+            </value>
+            <value>
+                <fullName>Mezzanine Loan</fullName>
+                <default>false</default>
+                <label>Mezzanine Loan</label>
+            </value>
+            <value>
+                <fullName>NCD&apos;s - Structured</fullName>
+                <default>false</default>
+                <label>NCD&apos;s - Structured</label>
+            </value>
+            <value>
+                <fullName>Net Interest Income</fullName>
+                <default>false</default>
+                <label>Net Interest Income</label>
+            </value>
+            <value>
+                <fullName>Offtake</fullName>
+                <default>false</default>
+                <label>Offtake</label>
+            </value>
+            <value>
+                <fullName>Options</fullName>
+                <default>false</default>
+                <label>Options</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Payments</fullName>
+                <default>false</default>
+                <label>Payments</label>
+            </value>
+            <value>
+                <fullName>Precious Metals</fullName>
+                <default>false</default>
+                <label>Precious Metals</label>
+            </value>
+            <value>
+                <fullName>Prepayment</fullName>
+                <default>false</default>
+                <label>Prepayment</label>
+            </value>
+            <value>
+                <fullName>Primary Arranging/Advisory</fullName>
+                <default>false</default>
+                <label>Primary Arranging/Advisory</label>
+            </value>
+            <value>
+                <fullName>Profit Sharing Agreement</fullName>
+                <default>false</default>
+                <label>Profit Sharing Agreement</label>
+            </value>
+            <value>
+                <fullName>Project Advisory</fullName>
+                <default>false</default>
+                <label>Project Advisory</label>
+            </value>
+            <value>
+                <fullName>Refinancing</fullName>
+                <default>false</default>
+                <label>Refinancing</label>
+            </value>
+            <value>
+                <fullName>Sale and Leaseback</fullName>
+                <default>false</default>
+                <label>Sale and Leaseback</label>
+            </value>
+            <value>
+                <fullName>Securitisation</fullName>
+                <default>false</default>
+                <label>Securitisation</label>
+            </value>
+            <value>
+                <fullName>Share Investment</fullName>
+                <default>false</default>
+                <label>Share Investment</label>
+            </value>
+            <value>
+                <fullName>Streaming</fullName>
+                <default>false</default>
+                <label>Streaming</label>
+            </value>
+            <value>
+                <fullName>Structured Credit</fullName>
+                <default>false</default>
+                <label>Structured Credit</label>
+            </value>
+            <value>
+                <fullName>Structured Equity</fullName>
+                <default>false</default>
+                <label>Structured Equity</label>
+            </value>
+            <value>
+                <fullName>Structured Finance</fullName>
+                <default>false</default>
+                <label>Structured Finance</label>
+            </value>
+            <value>
+                <fullName>Structured FX</fullName>
+                <default>false</default>
+                <label>Structured FX</label>
+            </value>
+            <value>
+                <fullName>Structured Hedging</fullName>
+                <default>false</default>
+                <label>Structured Hedging</label>
+            </value>
+            <value>
+                <fullName>Structured Investment Product</fullName>
+                <default>false</default>
+                <label>Structured Investment Product</label>
+            </value>
+            <value>
+                <fullName>Structured Investments</fullName>
+                <default>false</default>
+                <label>Structured Investments</label>
+            </value>
+            <value>
+                <fullName>Structured Leasing</fullName>
+                <default>false</default>
+                <label>Structured Leasing</label>
+            </value>
+            <value>
+                <fullName>Structured Lending</fullName>
+                <default>false</default>
+                <label>Structured Lending</label>
+            </value>
+            <value>
+                <fullName>Structured Products</fullName>
+                <default>false</default>
+                <label>Structured Products</label>
+            </value>
+            <value>
+                <fullName>Structured Tolling</fullName>
+                <default>false</default>
+                <label>Structured Tolling</label>
+            </value>
+            <value>
+                <fullName>Structures Repo</fullName>
+                <default>false</default>
+                <label>Structures Repo</label>
+            </value>
+            <value>
+                <fullName>TBC</fullName>
+                <default>false</default>
+                <label>TBC</label>
+            </value>
+            <value>
+                <fullName>Telegraphic transfer (Inward)</fullName>
+                <default>false</default>
+                <label>Telegraphic transfer (Inward)</label>
+            </value>
+            <value>
+                <fullName>Telegraphic transfers (Outward)</fullName>
+                <default>false</default>
+                <label>Telegraphic transfers (Outward)</label>
+            </value>
+            <value>
+                <fullName>TPS Cash</fullName>
+                <default>false</default>
+                <label>TPS Cash</label>
+            </value>
+            <value>
+                <fullName>TPS Cash Management</fullName>
+                <default>false</default>
+                <label>TPS Cash Management</label>
+            </value>
+            <value>
+                <fullName>TPS Company Deposit Identifier</fullName>
+                <default>false</default>
+                <label>TPS Company Deposit Identifier</label>
+            </value>
+            <value>
+                <fullName>TPS Current accounts</fullName>
+                <default>false</default>
+                <label>TPS Current accounts</label>
+            </value>
+            <value>
+                <fullName>TPS Domestic banking</fullName>
+                <default>false</default>
+                <label>TPS Domestic banking</label>
+            </value>
+            <value>
+                <fullName>TPS Electronic funds transfer service</fullName>
+                <default>false</default>
+                <label>TPS Electronic funds transfer service</label>
+            </value>
+            <value>
+                <fullName>TPS Host to Host</fullName>
+                <default>false</default>
+                <label>TPS Host to Host</label>
+            </value>
+            <value>
+                <fullName>TPS Naedos</fullName>
+                <default>false</default>
+                <label>TPS Naedos</label>
+            </value>
+            <value>
+                <fullName>TPS Receipt Reference Service</fullName>
+                <default>false</default>
+                <label>TPS Receipt Reference Service</label>
+            </value>
+            <value>
+                <fullName>TPS Sweeping</fullName>
+                <default>false</default>
+                <label>TPS Sweeping</label>
+            </value>
+            <value>
+                <fullName>TRADE</fullName>
+                <default>false</default>
+                <label>Trade</label>
+            </value>
+            <value>
+                <fullName>Trade and Forex</fullName>
+                <default>false</default>
+                <label>Trade and Forex</label>
+            </value>
+            <value>
+                <fullName>Trade Finance</fullName>
+                <default>false</default>
+                <label>Trade Finance</label>
+            </value>
+            <value>
+                <fullName>Transaction Accounts</fullName>
+                <default>false</default>
+                <label>Transaction Accounts</label>
+            </value>
+            <value>
+                <fullName>VAF</fullName>
+                <default>false</default>
+                <label>VAF</label>
+            </value>
+            <value>
+                <fullName>Wealth and Insurance</fullName>
+                <default>false</default>
+                <label>Wealth and Insurance</label>
+            </value>
+            <value>
+                <fullName>Working Capital Facility</fullName>
+                <default>false</default>
+                <label>Working Capital Facility</label>
+            </value>
+            <value>
+                <fullName>Working Capital</fullName>
+                <default>false</default>
+                <label>Working Capital</label>
+            </value>
+            <value>
+                <fullName>Accident &amp; Health</fullName>
+                <default>false</default>
+                <label>Accident &amp; Health</label>
+            </value>
+            <value>
+                <fullName>Credit Life</fullName>
+                <default>false</default>
+                <label>Credit Life</label>
+            </value>
+            <value>
+                <fullName>Hybrid</fullName>
+                <default>false</default>
+                <label>Hybrid</label>
+            </value>
+            <value>
+                <fullName>Insurance of the Person</fullName>
+                <default>false</default>
+                <label>Insurance of the Person</label>
+            </value>
+            <value>
+                <fullName>Liability</fullName>
+                <default>false</default>
+                <label>Liability</label>
+            </value>
+            <value>
+                <fullName>Motor (lending)</fullName>
+                <default>false</default>
+                <label>Motor (lending)</label>
+            </value>
+            <value>
+                <fullName>Motor (non lending linked)</fullName>
+                <default>false</default>
+                <label>Motor (non lending linked)</label>
+            </value>
+            <value>
+                <fullName>Property (lending)</fullName>
+                <default>false</default>
+                <label>Property (lending)</label>
+            </value>
+            <value>
+                <fullName>Property (non lending linked)</fullName>
+                <default>false</default>
+                <label>Property (non lending linked)</label>
+            </value>
+            <value>
+                <fullName>SME Group Life</fullName>
+                <default>false</default>
+                <label>SME Group Life</label>
+            </value>
+            <value>
+                <fullName>SME Life insurance</fullName>
+                <default>false</default>
+                <label>SME Life insurance</label>
+            </value>
+            <value>
+                <fullName>SME Short term</fullName>
+                <default>false</default>
+                <label>SME Short term</label>
+            </value>
+            <value>
+                <fullName>Surety</fullName>
+                <default>false</default>
+                <label>Surety</label>
+            </value>
+            <value>
+                <fullName>Partnership</fullName>
+                <default>false</default>
+                <label>Partnership</label>
+            </value>
+            <value>
+                <fullName>Wealth</fullName>
+                <default>false</default>
+                <label>Wealth</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

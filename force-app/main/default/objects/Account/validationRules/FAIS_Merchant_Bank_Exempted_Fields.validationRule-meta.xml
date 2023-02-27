@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FAIS_Merchant_Bank_Exempted_Fields</fullName>
+    <active>true</active>
+    <description>Net Asset Value (NAV) or Assets Under Management (AUM) information should be populated for &apos;Merchant Bank Exempted&apos; FAIS status</description>
+    <errorConditionFormula>AND(
+CASE($Profile.Name,
+&quot;Api User&quot;, 1,
+&quot;System Administrator&quot;, 1,
+&quot;Business Administrator&quot;, 1,
+&quot;Custom KYC User&quot;, 1,
+&quot;Custom KYC User Mobile&quot;, 1,
+0) = 0 ,
+AND( ISPICKVAL(FAIS_Status__c , &apos;Merchant Bank Exempted&apos;),ISBLANK(NAV__c), ISBLANK(AUM__c)))</errorConditionFormula>
+    <errorMessage>As this client is Merchant Bank Exempted, please provide either Net Asset Value (NAV) or Assets Under Management (AUM) information.</errorMessage>
+</ValidationRule>

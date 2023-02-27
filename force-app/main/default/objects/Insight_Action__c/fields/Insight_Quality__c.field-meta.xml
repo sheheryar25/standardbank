@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Insight_Quality__c</fullName>
+    <description>SFP-6642 - The rating a user will give based on how much quality is provided by the Insight</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select a rating for the quality provided by the Insight</inlineHelpText>
+    <label>Insight Quality</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>I would like to see less of these</fullName>
+                <default>false</default>
+                <label>I would like to see less of these</label>
+            </value>
+            <value>
+                <fullName>I am indifferent</fullName>
+                <default>false</default>
+                <label>I am indifferent</label>
+            </value>
+            <value>
+                <fullName>Please give me more</fullName>
+                <default>false</default>
+                <label>Please give me more</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

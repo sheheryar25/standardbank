@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Type__c</fullName>
+    <description>List of transaction type values that bankers can choose from:
+
+BEE
+Buy Side
+Equity Capital Raise
+IPO
+Merger
+Sell Side
+
+[SFP-4974]</description>
+    <externalId>false</externalId>
+    <label>Opportunity Type</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Buy Side - Public</fullName>
+                <default>false</default>
+                <label>Buy Side - Public</label>
+            </value>
+            <value>
+                <fullName>Buy Side - Private</fullName>
+                <default>false</default>
+                <label>Buy Side - Private</label>
+            </value>
+            <value>
+                <fullName>Sell Side - Public</fullName>
+                <default>false</default>
+                <label>Sell Side - Public</label>
+            </value>
+            <value>
+                <fullName>Sell Side - Private</fullName>
+                <default>false</default>
+                <label>Sell Side - Private</label>
+            </value>
+            <value>
+                <fullName>Merger - Public</fullName>
+                <default>false</default>
+                <label>Merger - Public</label>
+            </value>
+            <value>
+                <fullName>Merger - Private</fullName>
+                <default>false</default>
+                <label>Merger - Private</label>
+            </value>
+            <value>
+                <fullName>BEE</fullName>
+                <default>false</default>
+                <label>BEE</label>
+            </value>
+            <value>
+                <fullName>IPO</fullName>
+                <default>false</default>
+                <label>IPO</label>
+            </value>
+            <value>
+                <fullName>ABB</fullName>
+                <default>false</default>
+                <label>ABB</label>
+            </value>
+            <value>
+                <fullName>Rights Offer</fullName>
+                <default>false</default>
+                <label>Rights Offer</label>
+            </value>
+            <value>
+                <fullName>Strategic review</fullName>
+                <default>false</default>
+                <label>Strategic review</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Buy Side</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Buy Side</label>
+            </value>
+            <value>
+                <fullName>Equity Capital Raise</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Equity Capital Raise</label>
+            </value>
+            <value>
+                <fullName>Merger</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Merger</label>
+            </value>
+            <value>
+                <fullName>Sell Side</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sell Side</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

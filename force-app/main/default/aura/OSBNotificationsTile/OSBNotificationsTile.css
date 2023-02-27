@@ -1,0 +1,61 @@
+.THIS {
+    display: flex;
+    flex-direction: column;
+}
+
+.THIS .notifications--tile {
+    height: 100%;
+    padding: 16px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.THIS .notifications--tile .tile__link {
+    margin-top: auto;
+}
+
+.THIS .notifications--tile__content {
+    color: #999999;
+    font-size: 15px;
+    line-height: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.THIS .notification__row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.THIS .notification__date {
+    color: #767676;
+    font-size: 12px;
+    font-weight: 200;
+    line-height: 24px;
+}
+
+.THIS .notification__description {
+    color: #444444;
+    font-size: 15px;
+    font-weight: 200;
+    line-height: 24px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.THIS .notification {
+    margin-bottom: 8px;
+}
+
+.THIS .notification__title a.link {
+    font-weight: normal;
+}

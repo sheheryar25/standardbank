@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Valid_Relationship_role_for_SAAL</fullName>
+    <active>true</active>
+    <description>US-1390: Validation to check for China and Asia KYC location,Relationship Role can only be Potential Clients</description>
+    <errorConditionFormula>AND(
+(ISPICKVAL(KYC_Location__c, &quot;NONE - Asia (for Asia User Only)&quot;)),
+IF(OR(INCLUDES(Relationship_Roles__c, &quot;Agent&quot;),
+INCLUDES(Relationship_Roles__c, &quot;Broker&quot;),
+INCLUDES(Relationship_Roles__c, &quot;Clearing House&quot;),
+INCLUDES(Relationship_Roles__c, &quot;Client&quot;),
+INCLUDES(Relationship_Roles__c, &quot;Club Participant/Syndicate Loan&quot;),
+INCLUDES(Relationship_Roles__c, &quot;Corresponding Bank&quot;),
+INCLUDES(Relationship_Roles__c, &quot;Exchange&quot;),
+INCLUDES(Relationship_Roles__c, &quot;Fund&quot;),
+INCLUDES(Relationship_Roles__c, &quot;Guaranteeing Bank&quot;),
+INCLUDES(Relationship_Roles__c, &quot;Issuer&quot;),
+INCLUDES(Relationship_Roles__c, &quot;Managed Fund&quot;),
+INCLUDES(Relationship_Roles__c, &quot;Nostro Agent&quot;),
+INCLUDES(Relationship_Roles__c, &quot;Processing Organisation&quot;),
+INCLUDES(Relationship_Roles__c, &quot;Professional Service Provider&quot;),
+INCLUDES(Relationship_Roles__c, &quot;Reference Asset&quot;),
+INCLUDES(Relationship_Roles__c, &quot;Settlement Bank&quot;),
+INCLUDES(Relationship_Roles__c, &quot;Warehouse&quot;)
+
+),true,false)
+
+
+)</errorConditionFormula>
+    <errorMessage>For this KYC Location you can only select Potential Client as a Relationship Role</errorMessage>
+</ValidationRule>

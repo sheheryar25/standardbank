@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Angola_CCC_Transfers</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Notification__c</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CASES.ORIGIN</field>
+        <operation>equals</operation>
+        <value>Client Email</value>
+    </filters>
+    <label>Angola CCC Transferencias</label>
+    <queue>Angola_CCC_Transferencias_Queue</queue>
+    <sharedTo>
+        <roleAndSubordinates>CIB_Customer_Contact_Centre_Angola_Division</roleAndSubordinates>
+        <roleAndSubordinates>PBB_Customer_Contact_Centre_Angola_Business_Unit</roleAndSubordinates>
+        <roleAndSubordinates>PBB_Customer_Contact_Centre_Angola_Division</roleAndSubordinates>
+        <roleAndSubordinates>Service_Team_Customer_Contact_Centre_Angola_Business_Unit</roleAndSubordinates>
+        <roleAndSubordinates>Service_Team_Customer_Contact_Centre_Angola_Division</roleAndSubordinates>
+    </sharedTo>
+</ListView>

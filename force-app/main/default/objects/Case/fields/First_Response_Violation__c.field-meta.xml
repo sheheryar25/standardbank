@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>First_Response_Violation__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Is TRUE when a Case violates the First Response Milestone.</description>
+    <externalId>false</externalId>
+    <label>First Response Violation</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

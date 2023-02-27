@@ -1,0 +1,12 @@
+<!-- **
+* @description  : SBG Common Theme Layout.
+*/ -->
+<aura:component implements="forceCommunity:themeLayout" access="global">
+  <aura:attribute name="body" type="Aura.Component[]" access="public" />
+
+  <div class="theme-page">
+    <header></header>
+    <div role="main" class="theme-container">{!v.body}</div>
+  </div>
+
+</aura:component>

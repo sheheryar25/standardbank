@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Involved_Division__c</fullName>
+    <description>Case#1168 - 11/2011 - Rudolf Niehaus
+            The Division(s) who is/are hosting the campaign</description>
+    <externalId>false</externalId>
+    <label>Involved Division</label>
+    <required>false</required>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Client Coverage</fullName>
+                <default>false</default>
+                <label>Client Coverage</label>
+            </value>
+            <value>
+                <fullName>Exco</fullName>
+                <default>false</default>
+                <label>Exco</label>
+            </value>
+            <value>
+                <fullName>Global Markets</fullName>
+                <default>false</default>
+                <label>Global Markets</label>
+            </value>
+            <value>
+                <fullName>Investment Banking</fullName>
+                <default>false</default>
+                <label>Investment Banking</label>
+            </value>
+            <value>
+                <fullName>Property Group</fullName>
+                <default>false</default>
+                <label>Property Group</label>
+            </value>
+            <value>
+                <fullName>Transactional Products and Services</fullName>
+                <default>false</default>
+                <label>Transactional Products and Services</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

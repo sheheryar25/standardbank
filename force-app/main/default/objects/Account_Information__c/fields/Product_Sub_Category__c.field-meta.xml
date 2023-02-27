@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Sub_Category__c</fullName>
+    <description>&quot;Name of the product the client purchased
+US-4409
+US-4425
+US-4291&quot;</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field identifies the sub-level product category that the client holds
+This is the name of the account that the client holds</inlineHelpText>
+    <label>Product Sub Category</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Product_Category__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>BOL</fullName>
+                <default>false</default>
+                <label>BOL</label>
+            </value>
+            <value>
+                <fullName>Merchant Acquiring</fullName>
+                <default>false</default>
+                <label>Merchant Acquiring</label>
+            </value>
+            <value>
+                <fullName>Cash</fullName>
+                <default>false</default>
+                <label>Cash</label>
+            </value>
+            <value>
+                <fullName>Debtors Finance</fullName>
+                <default>false</default>
+                <label>Debtors Finance</label>
+            </value>
+            <value>
+                <fullName>Overdraft</fullName>
+                <default>false</default>
+                <label>Overdraft</label>
+            </value>
+            <value>
+                <fullName>Investments - Call</fullName>
+                <default>false</default>
+                <label>Investments - Call</label>
+            </value>
+            <value>
+                <fullName>Investments - Fixed</fullName>
+                <default>false</default>
+                <label>Investments - Fixed</label>
+            </value>
+            <value>
+                <fullName>Investments</fullName>
+                <default>false</default>
+                <label>Investments</label>
+            </value>
+            <value>
+                <fullName>Investments - Notice</fullName>
+                <default>false</default>
+                <label>Investments - Notice</label>
+            </value>
+            <value>
+                <fullName>Fleet</fullName>
+                <default>false</default>
+                <label>Fleet</label>
+            </value>
+            <value>
+                <fullName>VAF</fullName>
+                <default>false</default>
+                <label>VAF</label>
+            </value>
+            <value>
+                <fullName>Commercial Property Finance</fullName>
+                <default>false</default>
+                <label>Commercial Property Finance</label>
+            </value>
+            <value>
+                <fullName>Revolving Loans</fullName>
+                <default>false</default>
+                <label>Revolving Loans</label>
+            </value>
+            <value>
+                <fullName>Term Loans</fullName>
+                <default>false</default>
+                <label>Term Loans</label>
+            </value>
+            <value>
+                <fullName>Wealth</fullName>
+                <default>false</default>
+                <label>Wealth</label>
+            </value>
+            <value>
+                <fullName>Insurance</fullName>
+                <default>false</default>
+                <label>Insurance</label>
+            </value>
+            <value>
+                <fullName>TPFA</fullName>
+                <default>false</default>
+                <label>TPFA</label>
+            </value>
+            <value>
+                <fullName>Current Accounts</fullName>
+                <default>false</default>
+                <label>Current Accounts</label>
+            </value>
+            <value>
+                <fullName>Trade</fullName>
+                <default>false</default>
+                <label>Trade</label>
+            </value>
+            <value>
+                <fullName>Payments</fullName>
+                <default>false</default>
+                <label>Payments</label>
+            </value>
+            <value>
+                <fullName>Corporate Card</fullName>
+                <default>false</default>
+                <label>Corporate Card</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Payments</controllingFieldValue>
+            <valueName>BOL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payments</controllingFieldValue>
+            <valueName>Merchant Acquiring</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payments</controllingFieldValue>
+            <valueName>Cash</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Working Capital</controllingFieldValue>
+            <valueName>Debtors Finance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Working Capital</controllingFieldValue>
+            <valueName>Overdraft</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Investments</controllingFieldValue>
+            <valueName>Investments - Call</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Investments</controllingFieldValue>
+            <valueName>Investments - Fixed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Investments</controllingFieldValue>
+            <valueName>Investments</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Investments</controllingFieldValue>
+            <valueName>Investments - Notice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Loans</controllingFieldValue>
+            <valueName>Fleet</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Loans</controllingFieldValue>
+            <valueName>VAF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Loans</controllingFieldValue>
+            <valueName>Commercial Property Finance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Loans</controllingFieldValue>
+            <valueName>Revolving Loans</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Loans</controllingFieldValue>
+            <valueName>Term Loans</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wealth and Insurance</controllingFieldValue>
+            <valueName>Wealth</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wealth and Insurance</controllingFieldValue>
+            <valueName>Insurance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transaction Accounts</controllingFieldValue>
+            <valueName>TPFA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Transaction Accounts</controllingFieldValue>
+            <valueName>Current Accounts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade and Forex</controllingFieldValue>
+            <valueName>Trade</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade and Forex</controllingFieldValue>
+            <valueName>Payments</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Card</controllingFieldValue>
+            <valueName>Corporate Card</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

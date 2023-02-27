@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Related_NBAC__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>US-2607 Phase 2: DM NBAC - Meeting Console - Update Agenda Section for NBAC</description>
+    <externalId>false</externalId>
+    <label>Related NBAC</label>
+    <referenceTo>Business_Assessment__c</referenceTo>
+    <relationshipLabel>Agenda</relationshipLabel>
+    <relationshipName>Agenda</relationshipName>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,28 @@
+<aura:component >
+  <aura:attribute name="address" type="Object" default=""/>
+  <aura:attribute name="index" type="Integer" />
+  <aura:registerEvent name="deleteRecipient" type="c:sendEmailDeleteRecipient" />
+
+  <span class="slds-pill">
+    <aura:if isTrue="{!v.address.entityType == 'Contact'}">
+      <span class="slds-icon_container slds-icon-standard-contact slds-pill__icon_container">
+        <c:svgIcon svgPath="{!$Resource.SLDS202 + '/assets/icons/standard-sprite/svg/symbols.svg#contact'}" class="slds-icon"/>
+      </span>
+      <a href="javascript:void(0);" class="slds-pill__label" title="{!v.address.email}" draggable="">{!v.address.name}</a>
+    <aura:set attribute="else">
+    <aura:if isTrue="{!v.address.entityType == 'User'}">
+      <span class="slds-icon_container slds-icon-standard-user slds-pill__icon_container">
+        <c:svgIcon svgPath="{!$Resource.SLDS202 + '/assets/icons/standard-sprite/svg/symbols.svg#user'}" class="slds-icon"/>
+      </span>
+      <a href="javascript:void(0);" class="slds-pill__label" title="{!v.address.email}" draggable="">{!v.address.name}</a>
+    <aura:set attribute="else">
+      <a href="javascript:void(0);" class="slds-pill__label" title="{!v.address.email}" draggable="">{!v.address.email}</a>
+    </aura:set>
+    </aura:if>
+    </aura:set>
+    </aura:if>
+    <button class="slds-button slds-button_icon slds-pill__remove" onclick="{!c.onDelete}" title="Remove">
+      <c:svgIcon svgPath="{!$Resource.SLDS202 + '/assets/icons/action-sprite/svg/symbols.svg#close'}" class="slds-button__icon"/>
+    </button>
+  </span>
+</aura:component>

@@ -1,0 +1,45 @@
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(MaterialIcons-Regular.eot?orgId=00D9E0000000gVz&orgId=00D6E000000CyeO);
+  src: local('Material Icons'), local('MaterialIcons-Regular'), url(MaterialIcons-Regular.woff2?orgId=00D9E0000000gVz&orgId=00D6E000000CyeO) format('woff2'), url(MaterialIcons-Regular.woff?orgId=00D9E0000000gVz&orgId=00D6E000000CyeO) format('woff'), url(MaterialIcons-Regular.ttf?orgId=00D9E0000000gVz&orgId=00D6E000000CyeO) format('truetype');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+}
+
+.material-icons.md-14 {
+  font-size: 14px;
+}
+
+.material-icons.md-18 {
+  font-size: 18px;
+}
+
+.material-icons.md-24 {
+  font-size: 24px;
+}
+
+.material-icons.md-36 {
+  font-size: 36px;
+}
+
+.material-icons.md-48 {
+  font-size: 48px;
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SVC_NewManualServiceCase</fullName>
+    <availability>online</availability>
+    <description>New manual service case creation launcher</description>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>New Manual Service Case</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <requireRowSelection>false</requireRowSelection>
+    <url>/lightning/cmp/c__SVC_NewManualCaseLauncher?c__accountId={!Account.Id}&amp;SVC_VAR_CalledFrom=NewCase</url>
+</WebLink>

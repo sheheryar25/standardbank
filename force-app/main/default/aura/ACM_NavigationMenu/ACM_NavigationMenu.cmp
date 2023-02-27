@@ -1,0 +1,93 @@
+<!--
+  @description       : TO show custom header items 
+  @author            : Pradeep Jangid
+  @last modified on  : 27-05-2022
+-->
+<aura:component extends="forceCommunity:navigationMenuBase" implements="forceCommunity:availableForAllPageTypes"
+  access="global" description="Navigation Menu Component">
+
+    <aura:attribute name="navigationLinkSetId" type="String" default="" />
+    <aura:attribute name="showProfileMenu" type="Boolean" default="true" access="private" />
+    <aura:attribute name="hideCountrySelection" type="Boolean" default="false" access="public" />
+    <aura:attribute name="homepage" type="String" default="" access="private" />
+    <aura:attribute name="isSearchBoxVisible" type="Boolean" default="false" access="private" />
+    <aura:attribute name="profileMenu" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="search" type="Aura.Component[]" required="false" access="public" />
+    <aura:attribute name="apiCountryUrl" type="String" default="/countries" access="public" />
+    <aura:attribute name="adobeAnalyticsUrl" type="String" default="https://assets.adobedtm.com/45b28ee1a4af/49c2f428e3e9/launch-cb5dac3d7cfe-development.min.js" access="public" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}" />
+    <c:acm_AdobeAnalytics aura:id="analyticsintegration" adobeAnalyticsUrl="{!v.adobeAnalyticsUrl}" style="display: none;"></c:acm_AdobeAnalytics>	
+    
+    <div class="acm-header-container">
+        <div class="acm-header">
+            <a class="sbglogo" href="{!v.homepage}" data-id="header_nav_link" data-text="Header | Logo">
+                <div class="sbglogo-image"></div>
+            </a>    
+            
+            <div aura:id="mobilenavid" class="mobileNavOverlay"> 
+                <nav class="acm-navbar" aura:id="hamburgerid">
+                    <ul class="nav-links">
+                        <aura:if isTrue="{!!v.isSearchBoxVisible}">
+                            <aura:iteration items="{!v.menuItems}" var="item" >
+                                <li class="{! equals(item.active, true) ? 'menu-items-active' : ''}" >
+                                    <aura:if isTrue="{!item.subMenu}">
+                                        <a href="javascript:void(0);" class="slds-button showSubMenu" onclick="{! c.showSubMenu }">
+                                            {!item.label}
+                                            <lightning:icon aura:id="rotateicon" iconName="utility:chevrondown" iconPosition="right" size="xx-small" class="rotate"/>
+                                        </a>
+                                        <ul aura:id="submenuid" class="acm-submenu" >
+                                            <aura:iteration items="{!item.subMenu}" var="subItem">
+                                                <li class="{!equals(item.active, true) ? 'menu-items-active' : ''}">
+                                                    <a class="slds-truncate" data-menu-item-id="{!subItem.id}" href="javascript:void(0);" data-intent="navigational" data-scope="ACM Navigation Menu" data-id="link_content" data-text="{!item.label}" onclick="{!c.navigateToMenu}">{!subItem.label}</a>
+                                                </li>
+                                            </aura:iteration>
+                                        </ul>
+                                        <aura:set attribute="else">
+                                            <a class="slds-truncate" href="javascript:void(0);" data-menu-item-id="{!item.id}" data-intent="navigational" data-scope="ACM Navigation Menu" data-id="link_content" data-text="{!item.label}" onclick="{!c.navigateToMenu}">
+                                                {!item.label}
+                                            </a>
+                                        </aura:set>
+                                    </aura:if>
+                                </li>
+                            </aura:iteration>
+                        </aura:if>
+                    </ul>
+                </nav>
+            </div>
+            <div class="padding-horizontal searchRegion" style="display: flex;">
+                <span aura:id="showsearchbar">
+                    <lightning:buttonIcon iconName="utility:search" variant="bare" iconClass="utilityicon" onclick="{! c.showSearch }" alternativeText="Expand search" tooltip="Expand search" />
+                </span>
+                <aura:if isTrue="{!v.isSearchBoxVisible}">
+                    <span class="searchRegion" onkeypress="{!c.searchKeyCheck}">
+                        {!v.search}
+                    </span>
+                    <span >
+                        <lightning:buttonIcon iconName="utility:close" variant="bare" iconClass="utilityicon cross" onclick="{! c.closeSearch }" alternativeText="Close Search" tooltip="Close Search" />
+                    </span>
+                </aura:if>
+            </div>
+            <div class="padding-horizontal notifications" >
+                <forceCommunity:notifications/>
+            </div>
+
+            <div class="profileMenuRegion">
+                {!v.profileMenu}
+            </div>
+            <aura:if isTrue="{!!v.hideCountrySelection}">
+                <div class="apicountryRegion">
+                    <a class="api-countries" onclick="{!c.navigateToCountries}" data-intent="informational" data-scope="ACM Navigation Menu" data-id="link_content" data-text="API Countries">
+                        <img src="/sfsites/c/file-asset/globeiconpng?v=1" /><span>API countries</span> 
+                    </a>
+                </div>
+            </aura:if>
+            <a href="javascript:void(0);" aura:id="naviconid" class="navicon" onclick="{!c.handleMobileMenuClick}">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+    </div>
+</aura:component>

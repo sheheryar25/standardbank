@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Religion__c</fullName>
+    <externalId>false</externalId>
+    <label>Religion</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Christian</fullName>
+                <default>false</default>
+                <label>Christian</label>
+            </value>
+            <value>
+                <fullName>Muslim</fullName>
+                <default>false</default>
+                <label>Muslim</label>
+            </value>
+            <value>
+                <fullName>Traditional</fullName>
+                <default>false</default>
+                <label>Traditional</label>
+            </value>
+            <value>
+                <fullName>Hindu</fullName>
+                <default>false</default>
+                <label>Hindu</label>
+            </value>
+            <value>
+                <fullName>Bahá&apos;í</fullName>
+                <default>false</default>
+                <label>Bahá&apos;í</label>
+            </value>
+            <value>
+                <fullName>Jewish</fullName>
+                <default>false</default>
+                <label>Jewish</label>
+            </value>
+            <value>
+                <fullName>No Religion</fullName>
+                <default>false</default>
+                <label>No Religion</label>
+            </value>
+            <value>
+                <fullName>Atheist</fullName>
+                <default>false</default>
+                <label>Atheist</label>
+            </value>
+            <value>
+                <fullName>Values to be provided by SA</fullName>
+                <default>false</default>
+                <label>Values to be provided by SA</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

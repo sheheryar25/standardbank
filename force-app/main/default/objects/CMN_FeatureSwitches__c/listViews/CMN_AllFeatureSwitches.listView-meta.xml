@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CMN_AllFeatureSwitches</fullName>
+    <columns>SETUP_OWNER_NAME</columns>
+    <columns>NAME</columns>
+    <columns>SETUP_TYPE</columns>
+    <columns>CMN_DisableAllOutboundAPICalls__c</columns>
+    <columns>CMN_APIsToDisableList1__c</columns>
+    <columns>CMN_APIsToDisableList2__c</columns>
+    <columns>CMN_APIsToDisableList3__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All Feature Switches</label>
+</ListView>

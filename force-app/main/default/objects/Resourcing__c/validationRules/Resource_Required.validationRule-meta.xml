@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Resource_Required</fullName>
+    <active>true</active>
+    <description>Resource (User lookup) field can not be left blank [SFP-4974]</description>
+    <errorConditionFormula>ISBLANK(Resource__c)</errorConditionFormula>
+    <errorDisplayField>Resource__c</errorDisplayField>
+    <errorMessage>Select Resource</errorMessage>
+</ValidationRule>

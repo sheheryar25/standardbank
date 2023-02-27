@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RecieveBirthdayReminderTasks__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field is set to indicate if a user wants to receive a birthday reminder for those contacts that they have an interest in as recorded on the SA Contact Team Member object.
+
+            (CRM Birthday Reminder Case# 207 C Reinecke 2010/09)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicate if you would like to receive birthday reminders for contacts that you are the owner or client owner of or that you are on the client contact team.</inlineHelpText>
+    <label>Birthday Reminders</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

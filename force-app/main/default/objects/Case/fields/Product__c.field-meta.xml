@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product__c</fullName>
+    <description>Category of Product, based on the Parent Product, for which this case has been opened</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Category of Product, based on the Parent Product, for which this case has been opened</inlineHelpText>
+    <label>Product</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Parent_Product__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Product</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>International Banking</controllingFieldValue>
+            <valueName>CFC&apos;s (Customer Foreign Currency Account)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Banking</controllingFieldValue>
+            <valueName>Inward Telegraphic Transfer (ITT)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International Banking</controllingFieldValue>
+            <valueName>Outward Telegraphic Transfer (OTT)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Investments (CIB)</controllingFieldValue>
+            <valueName>Call Deposit Corporate Finance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Investments (CIB)</controllingFieldValue>
+            <valueName>Notice Deposit - CAPM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Savings</controllingFieldValue>
+            <valueName>Business Saving Account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Merges and Acquisitions</controllingFieldValue>
+            <valueName>BEE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Merges and Acquisitions</controllingFieldValue>
+            <valueName>Buy-side</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Merges and Acquisitions</controllingFieldValue>
+            <valueName>Capital Raise</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Merges and Acquisitions</controllingFieldValue>
+            <valueName>Sell-side</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SBFC</controllingFieldValue>
+            <valueName>Wills</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Investments - Fixed</controllingFieldValue>
+            <valueName>Fixed Deposit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Investments - Notice</controllingFieldValue>
+            <valueName>Notice Deposit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Merchant Acquiring</controllingFieldValue>
+            <valueName>Cash Secure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Merchant Acquiring</controllingFieldValue>
+            <valueName>Merchant Acquiring Solutions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Merchant Acquiring</controllingFieldValue>
+            <valueName>Merchant Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Revolving Loans</controllingFieldValue>
+            <valueName>Business Revolving Credit Plan Loan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Term Loans</controllingFieldValue>
+            <valueName>Agricultural Production Loan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Term Loans</controllingFieldValue>
+            <valueName>Business Advance Account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Term Loans</controllingFieldValue>
+            <valueName>Business Term Loan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Term Loans</controllingFieldValue>
+            <valueName>Fixed Rate Option - Enterprise</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Term Loans</controllingFieldValue>
+            <valueName>Home Loans</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Term Loans</controllingFieldValue>
+            <valueName>Medium Term Loan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TPFA</controllingFieldValue>
+            <valueName>Attorneys Trust Account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TPFA</controllingFieldValue>
+            <valueName>Executors Current Account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TPFA</controllingFieldValue>
+            <valueName>Third Party Fund Administration Account (TPFA)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade</controllingFieldValue>
+            <valueName>Export Collections</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade</controllingFieldValue>
+            <valueName>Export LC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade</controllingFieldValue>
+            <valueName>Forward Exchange Contract (FEC)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade</controllingFieldValue>
+            <valueName>Guarantee By Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade</controllingFieldValue>
+            <valueName>Guarantee By Bank (GBB) - Lending (Foreign)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade</controllingFieldValue>
+            <valueName>Guarantee By Bank (GBB) - Lending (Local)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade</controllingFieldValue>
+            <valueName>Guarantee By Bank (GBB) - Performance (Foreign)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade</controllingFieldValue>
+            <valueName>Guarantee By Bank (GBB) - Performance (Local)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade</controllingFieldValue>
+            <valueName>Import Collections</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade</controllingFieldValue>
+            <valueName>Import FBC Finance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade</controllingFieldValue>
+            <valueName>Import LC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade</controllingFieldValue>
+            <valueName>Import LC Finance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade</controllingFieldValue>
+            <valueName>Letter Of Credit (LC)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade</controllingFieldValue>
+            <valueName>Pre-Shipment Financing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade</controllingFieldValue>
+            <valueName>Receivables Discounting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade</controllingFieldValue>
+            <valueName>Supplier Financing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade</controllingFieldValue>
+            <valueName>Trade Suite</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VAF</controllingFieldValue>
+            <valueName>Access Finance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VAF</controllingFieldValue>
+            <valueName>Installment Sale</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VAF</controllingFieldValue>
+            <valueName>Vehicle And Asset Finance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VAF</controllingFieldValue>
+            <valueName>Wholesale Finance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wealth</controllingFieldValue>
+            <valueName>Global Markets</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wealth</controllingFieldValue>
+            <valueName>Liberty Corporate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wealth</controllingFieldValue>
+            <valueName>Money Market</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Wealth</controllingFieldValue>
+            <valueName>SBFC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BOL</controllingFieldValue>
+            <valueName>Business Online (BOL)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BOL</controllingFieldValue>
+            <valueName>Domestic</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BOL</controllingFieldValue>
+            <valueName>Domestic International</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BOL</controllingFieldValue>
+            <valueName>EFT Debit Order Collection Facility</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cash</controllingFieldValue>
+            <valueName>Cash</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commercial Property Finance</controllingFieldValue>
+            <valueName>Commercial Property Finance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Corporate Card</controllingFieldValue>
+            <valueName>Business Card</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Corporate Card</controllingFieldValue>
+            <valueName>Commercial Card</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Current Accounts</controllingFieldValue>
+            <valueName>Business Current Account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Current Accounts</controllingFieldValue>
+            <valueName>BusinessLink Current Account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fleet</controllingFieldValue>
+            <valueName>Fleet Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Insurance</controllingFieldValue>
+            <valueName>Commercial Insurance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Investments</controllingFieldValue>
+            <valueName>MarketLink</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Investments - Call</controllingFieldValue>
+            <valueName>MoneyMarket Call Account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Investments - Call</controllingFieldValue>
+            <valueName>Retail/Wholesale Call Deposit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Investments - Call</controllingFieldValue>
+            <valueName>Short Term Wholesale Deposit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Investments - Call</controllingFieldValue>
+            <valueName>Tiered Rate Call Deposit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Working Capital</controllingFieldValue>
+            <valueName>Debtor&apos;s Finance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Working Capital</controllingFieldValue>
+            <valueName>Overdraft (Business Current Account)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Forex</controllingFieldValue>
+            <valueName>Foreign Notes and Coins</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Forex</controllingFieldValue>
+            <valueName>Traveller&apos;s Cheques</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Forex</controllingFieldValue>
+            <valueName>Travel Wallet (FX)</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

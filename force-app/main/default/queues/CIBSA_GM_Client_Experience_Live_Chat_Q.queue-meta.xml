@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>CIBSA GM Client Experience Live Chat Q</name>
+    <queueMembers>
+        <users>
+            <user>boitumelo.halo@standardbank.co.za</user>
+            <user>bonani.nakani@standardbank.co.za</user>
+            <user>carmen.cannell@standardbank.co.za</user>
+            <user>david.manana@standardbank.co.za</user>
+            <user>dumisani.majiyezi@standardbank.co.za</user>
+            <user>merice.adams@standardbank.co.za</user>
+            <user>michelle.desousa@standardbank.co.za</user>
+            <user>mmatema.letsoalo1@standardbank.co.za</user>
+            <user>nadine.ramawthar@standardbank.co.za</user>
+            <user>phakamani.mbatha@standardbank.co.za</user>
+            <user>sharon.mhlanga2@standardbank.co.za</user>
+            <user>tracy-lee.ford@standardbank.co.za</user>
+        </users>
+    </queueMembers>
+    <queueRoutingConfig>CIBSA_GM_TPS_Live_Chat</queueRoutingConfig>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>LiveChatTranscript</sobjectType>
+    </queueSobject>
+</Queue>

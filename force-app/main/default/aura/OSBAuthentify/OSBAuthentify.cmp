@@ -1,0 +1,48 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+        <aura:attribute name="actionLink" type="String" access="public" default="authentifi-request-page" />
+    <div class="splash-container" >
+        <div class="slds-align_absolute-center slds-m-right_large slds-m-left_large splashBanner-secondSec">
+            <div class="SubContent slds-col slds-size_7-of-12" style="background-color: #E8E8E8;">
+                <p class="midTitle slds-m-top_xx-large">AUTHENTIFI<sup>TM</sup> gives you the confidence of knowing your customer</p>
+            </div>
+        </div>
+        <div class="ThridSection slds-grid slds-align_absolute-center slds-m-top_xx-large " id="ThridSection">
+            <div class="slds-m-right_none  ">
+                <img class="Image" src="{!$Resource.OSB_Images + '/Authentifi.png'}"/>
+            </div>
+            <div class="Image-content slds-align_absolute-center slds-p-left_large slds-p-right_small slds-p-bottom_x-small slds-p-top_x-small slds-col  slds-medium-size--5-of-12 slds-small-size--7-of-12  slds-large-size--7-of-12">
+                <div class="slds-grid slds-grid_vertical" >
+                    <p class="Content-bold slds-col slds-p-top_small slds-p-bottom_small" >At Standard Bank, we understand that, with the risk of fraud ever prevalent and cash flow challenges from creditor non-performance, executing successful collection and payment strategies are becoming as difficult as they are essential. We’re here to help.</p>
+                    <p class="Content-plain slds-col  slds-p-bottom_small">One of the biggest obstacles to overcome is a lack of actionable client data. While sourcing accurate information about creditors can be a problem in itself, with incomplete data coming from a variety of different sources, consolidation and accuracy of the information are the real challenges.</p>
+                    <p class="Content-plain slds-col  slds-p-bottom_small">Standard Bank has collaborated with Transaction Capital Credit Health, a market leader in proprietary data collection and analytics, to bring you a unique, single source of all the information needed to verify your customers, a simple solution that also eliminates the need to integrate new technology into your business.</p>
+                    <p class="Content-plain slds-col  slds-p-bottom_small">Utilising best-in-class technology, in collaboration with Transaction Capital Credit Health and delivered via OneHub, AUTHENTIFI<sup>TM</sup> combines big data and business intelligence capabilities to empower smarter decision-making processes, which drive informed and agile payment and collection strategies.</p>
+                </div>
+            </div>
+        </div>
+        <div class="slds-grid  slds-align_absolute-center slds-m-top_xx-large slds-m-bottom_xx-large " >
+            <h1 class="Image-title slds-m-bottom_xx-large slds-m-top_xx-large">THE BENEFITS OF ENHANCED DIGITAL BUSINESS INTELLIGENCE:</h1>
+        </div>
+        <div class="benefits slds-grid slds-align_absolute-center">
+            <div class="slds-grid slds-small-size--4-of-8 sub-benefits " style="height: inherit;" >
+                <div class="odd-col slds-col slds-size--2-of-4 "><img class= "shield slds-grid slds-gutters slds-align_absolute-center"  src="{!$Resource.OSB_Images + '/Optimise.png'}" /><p class="benefits-content slds-align_absolute-center " >Optimised cost and efficiencies</p></div>
+                <div class="even-col slds-col slds-size--2-of-4 "><img class= "shield slds-grid slds-gutters slds-align_absolute-center"  src="{!$Resource.OSB_Images + '/Collection.png'}" /><p class="benefits-content slds-align_absolute-center " >Improved collection success</p></div>
+            </div>
+            <div class="slds-grid slds-small-size--4-of-8 sub-benefits" style="height: inherit;">
+                <div class="odd-col slds-col slds-size--2-of-4 "><img class= "shield slds-grid slds-gutters slds-align_absolute-center"  src="{!$Resource.OSB_Images + '/Cash.png'}" /><p class="benefits-content slds-align_absolute-center" >Improved cash flow</p></div>
+                <div class="even-col slds-col slds-size--2-of-4 "><img class= "shield slds-grid slds-gutters slds-align_absolute-center"  src="{!$Resource.OSB_Images + '/enhanced.png'}" /><p class="benefits-content slds-align_absolute-center " >Enhanced risk management</p></div>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters slds-align_absolute-center sign-up-section slds-wrap slds-p-top_xx-large  " style="background-color: #404040;">
+            <p class="slds-col sign-up-content">
+                Enhance your business’ capabilities   
+            </p> 
+            <p class="slds-col sign-up-subcontent">
+                Find out more about the value of having access to AUTHENTIFI as well as a growing range of specialised digital solutions tailored to the needs of your business.
+            </p>
+            <div class="slds-align_absolute-center btnSection">
+                <a class="slds-col slds-size_1-of-8 btn signUpBtn splashBanner__button slds-m-top_large" href="{!v.actionLink}" data-id= "uitlink_link" data-text= "{!'Splash Page | Authentifi'}">ACCESS AUTHENTIFI VIA ONEHUB</a>
+            </div>
+        </div>
+        
+    </div>
+</aura:component>

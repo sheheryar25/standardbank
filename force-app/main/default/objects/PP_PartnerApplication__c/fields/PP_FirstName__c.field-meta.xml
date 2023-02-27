@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PP_FirstName__c</fullName>
+    <description>SFP-11649 - First name provided during registration process.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>First name provided during registration process.</inlineHelpText>
+    <label>First Name</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

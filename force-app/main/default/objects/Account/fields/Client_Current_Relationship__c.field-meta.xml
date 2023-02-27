@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Client_Current_Relationship__c</fullName>
+    <description>Case#1263 - Rudolf Niehaus
+Current interactions, Recent successes, Issues we are facing and plans to address, Credit Exposure per product</description>
+    <externalId>false</externalId>
+    <inlineHelpText>A summary of current product activity, recent successes, issues we are facing and plans to address with the Client (2100 characters or less)</inlineHelpText>
+    <label>Client Current Relationship</label>
+    <length>2111</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

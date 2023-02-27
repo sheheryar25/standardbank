@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Running_Approval</fullName>
+    <active>true</active>
+    <label>Running Approval</label>
+    <picklistValues>
+        <picklist>Current_Client_Coordinator_New_Role__c</picklist>
+        <values>
+            <fullName>Analyst</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Development Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client Analyst</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Officer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Risk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Executive Sponsor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GM Champion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GM Client Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GM Execution Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IB Champion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Investor Services Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manager Client Coverage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Specialist</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales%2FCell Head</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sector%2FClient Coverage Head</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Advisor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Advisory Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Structurer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TPS Champion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade Finance Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade Service Advisory Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trader</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Current_Client_Coordinator_Role__c</picklist>
+        <values>
+            <fullName>Analyst</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Development Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client Analyst</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Officer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Risk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Executive Sponsor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GM Champion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GM Client Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GM Execution Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IB Champion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Country RM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Investor Services Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manager Client Coverage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Specialist</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales%2FCell Head</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sector%2FClient Coverage Head</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Advisor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Advisory Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Structurer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TPS Champion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade Finance Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade Service Advisory Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trader</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>New_Client_Coordinator_Role__c</picklist>
+        <values>
+            <fullName>Analyst</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Development Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client Analyst</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Officer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Risk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Executive Sponsor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GM Champion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GM Client Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GM Execution Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IB Champion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Investor Services Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manager Client Coverage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Specialist</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales%2FCell Head</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sector%2FClient Coverage Head</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Advisor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Advisory Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Structurer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TPS Champion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade Finance Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade Service Advisory Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trader</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Approval Step Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approved %E2%80%93 Awaiting Execution</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data Update Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data Update Not Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted For Approval</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Commercial_Strategic_Portfolio__c</fullName>
+    <description>This field indicates whether or not the client resides in a strategic portfolio of Commercial Banking that is supported by specialist teams i.e. Franchising, Agriculture, Public Sector and Natural Resources (US-1117).</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field indicates whether or not the client resides in a strategic portfolio of Commercial Banking that is supported by specialist teams i.e. Franchising, Agriculture, Public Sector and Natural Resources.</inlineHelpText>
+    <label>Commercial Strategic Portfolio</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Agriculture</fullName>
+                <default>false</default>
+                <label>Agriculture</label>
+            </value>
+            <value>
+                <fullName>Enterprise Development</fullName>
+                <default>false</default>
+                <label>Enterprise Development</label>
+            </value>
+            <value>
+                <fullName>Franchising</fullName>
+                <default>false</default>
+                <label>Franchising</label>
+            </value>
+            <value>
+                <fullName>Natural Resources</fullName>
+                <default>false</default>
+                <label>Natural Resources</label>
+            </value>
+            <value>
+                <fullName>Other (Commercial)</fullName>
+                <default>false</default>
+                <label>Other (Commercial)</label>
+            </value>
+            <value>
+                <fullName>Public Sector</fullName>
+                <default>false</default>
+                <label>Public Sector</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

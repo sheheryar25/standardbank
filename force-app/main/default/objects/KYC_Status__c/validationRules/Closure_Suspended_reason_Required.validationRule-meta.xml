@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Closure_Suspended_reason_Required</fullName>
+    <active>true</active>
+    <description>If the KYC Review Status is Closed or Suspended then the Closure/Suspended Reason is required</description>
+    <errorConditionFormula>AND(
+	OR(
+		ISPICKVAL( KYC_Review_Status__c , &apos;Closed&apos;),
+		ISPICKVAL( KYC_Review_Status__c , &apos;Suspended&apos;)		
+	),
+	ISPICKVAL(Closure_Suspended_Reason__c, &apos;&apos;),
+	NOT($Setup.Environment_Variable__c.Ignore_Validation_Rule__c)
+)</errorConditionFormula>
+    <errorMessage>Please select a Closure/Suspended reason</errorMessage>
+</ValidationRule>

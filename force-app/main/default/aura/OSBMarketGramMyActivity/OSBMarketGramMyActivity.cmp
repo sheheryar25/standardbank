@@ -1,0 +1,36 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes,force:appHostable" controller="OSB_MarketgramMyActivity_CTRL">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="lastModDate" type="String" default="No activity"/>
+    <aura:attribute name="likes" type="String" default="0"/>
+    <aura:attribute name="Comments" type="String" default="0"/>
+    
+    <div class="feed">
+        <div class="myActivity_title">Activity highlights</div>
+        <div class="feed-container">        
+            <div class="feed__header-items">
+                <div class="feed__product-details">
+                    <div class="myActivity__container">
+                        <aura:if isTrue="{!v.lastModDate == 'No activity'}">
+                            <div class="Value">{!v.lastModDate}</div>
+                            <aura:set attribute="else">
+                                <lightning:formattedDateTime class="Value" value="{!v.lastModDate}" year="numeric" month="numeric" day="numeric" />
+                            </aura:set>
+                        </aura:if>
+                        <div class="last_Label Label">Last Activity</div>
+                    </div>
+                    <div class="myActivity__container">
+                        <div class="like_count Value padding">{!v.likes}</div>
+                        <div class="comment_Label Label">Likes</div>
+                    </div>
+                    <div class="myActivity__container">
+                        <div class="comment_count Value">{!v.Comments}</div>
+                        <div class="like_Label Label">Comments</div>
+                    </div>
+                </div>
+            </div>
+            <div class="feed__chatter">
+                <forceChatter:feed type="userProfile" feedDesign="DEFAULT"/>
+            </div>
+        </div>
+    </div>
+</aura:component>

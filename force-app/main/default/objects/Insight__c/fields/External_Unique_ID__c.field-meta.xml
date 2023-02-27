@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>External_Unique_ID__c</fullName>
+    <description>This field refers to the unique ID of the external system</description>
+    <displayFormat>IBM-Akili {00000000}</displayFormat>
+    <externalId>false</externalId>
+    <inlineHelpText>External System Unique ID</inlineHelpText>
+    <label>External Unique ID</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>AutoNumber</type>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Description__c</fullName>
+    <description>US-3400 - Field is visible to all users who have access to the related parent record within Salesforce. Information is to be limited to Agenda detail. Field is synced with the Description field on the standard Event.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Agenda items to be discussed at the meeting. Commentary added here will be included in the notification email.</inlineHelpText>
+    <label>Agenda</label>
+    <length>32000</length>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>6</visibleLines>
+</CustomField>

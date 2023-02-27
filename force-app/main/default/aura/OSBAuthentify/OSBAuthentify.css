@@ -1,0 +1,493 @@
+.THIS{
+    
+  margin-top: -48px !important;
+  left: 0px;
+  background-color: #E8E8E8;
+  height: 1417px;
+}
+
+.THIS .splash-container{
+  height: 1533px;
+  width: 100%;
+  background-color: #0033A1;
+}
+
+.THIS .splashBanner-container{
+  padding-top: -32px !important;
+}
+
+.THIS .btn{
+  display: block;
+  height: 50px;
+  padding: 18px 0;
+  border: 0;
+  border-radius: 2px;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 13px;
+  text-align: center;
+  transition: all .15s ease-in;
+  cursor: pointer;
+  width: 283px;
+  color: #0089FF;
+}
+
+.THIS .tm_Class{
+  font-weight: normal;
+  font-size: 26px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  line-height: 20px;
+  margin-top: 45px;
+  padding-right:10px;
+}
+
+.THIS .topTitle{
+  color: #FFFFFF;
+  font-size: 36px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 20px;
+}
+
+.THIS .SubContent{
+  color: #545567;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 20px;
+  text-align: center;
+  height:241px;
+}
+
+.THIS .midTitle sup{
+  font-size: 15px;
+  vertical-align: super;
+}
+
+.THIS .midTitle{
+  height: 88px;
+  width: 100%;
+  color: #3C4B6C;
+  padding-top: 120px;
+  font-size: 47px;
+  letter-spacing: 0;
+  line-height: 47px;
+  text-align: center;
+}
+
+.THIS .title{
+  color: #121DFF;
+  font-size: 36px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 43px;
+  background-color: #FFFFFF;
+}
+
+.THIS .subContent{
+  color: #FFFFFF;
+  font-size: 21px;
+  letter-spacing: 0;
+  line-height: 25px;
+}
+
+.THIS .LogoSubContent{
+  color: #FFFFFF;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 25px;
+  padding-right: 5px;
+}
+
+.THIS .mainContent{
+  color: #FFFFFF;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 20px;
+}
+
+.THIS .ThridSection{
+  position:relative;
+  background-color: #E8E8E8;
+  max-width:1200px;
+}
+
+.THIS .Image-content{
+  float:right;
+  font-size: 17px;
+  letter-spacing: 0;
+  line-height: 18px;  
+  background-color:  #FFFFFF; 
+  color: #858D9D;
+  height: 463px!important;
+}
+
+.THIS .Content-bold{
+  color: #858D9D;
+  font-family: BentonSans;
+  font-size: 23px;
+  letter-spacing: 0;
+  line-height: 25px;
+}
+.THIS .Content-plain sup{
+  font-size: 6px;
+  vertical-align: super;
+}
+
+.THIS .Image{
+  float:right;
+  min-height:463px !important;
+}
+
+.THIS .Image-title{
+  height: 19px;
+  width: 1205px;
+  color: #222222;
+  font-family: BentonSans;
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 20px;
+  
+}
+
+.THIS .benefits{
+  height: 177px;
+  max-width: 1200px;
+}
+
+.THIS .odd-col{
+  height:100%;
+  border-radius: 2px;
+  background: linear-gradient(311.11deg, #15437A 0%, #0C2644 99.97%);
+}
+
+.THIS .odd-col>.benefits-content{
+  color:#FFFFFF;
+}
+
+.THIS .even-col>.benefits-content{
+  color:#0033AA;
+}
+
+.THIS .even-col{
+  height: 100%;
+  border-radius: 2px;
+  background: #FFFFFF;
+}
+
+.THIS .shield{
+  margin-top: -64px;
+}
+.THIS .benefits-content{
+  font-family: BentonSans;
+  font-size: 28px;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 29px;
+  text-align: center;
+  vertical-align: middle;
+  
+}
+.THIS .sign-up-content{
+  color: #FFFFFF;
+  font-size: 28px;
+  letter-spacing: 0;
+  line-height: 29px;
+  text-align: center;
+  width:100%;
+  font-family: BentonSans;
+  margin:20px;
+}
+
+
+
+.THIS .sign-up-subcontent{
+  
+  color: #ffffff;
+  font-family: BentonSans;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 17px;
+  text-align: center;
+  max-width: 544px;
+}
+
+.THIS .signUpBtn{
+  margin-bottom:50px !important;
+}
+
+@media(min-width:1280px){
+  .THIS .Image {
+      min-height:463px !important;
+  }
+}
+
+@media(min-width:1280px){
+  .THIS .video{
+      min-height:700px !important; 
+  }
+}
+
+@media(max-width:1200px){
+  .THIS .box{
+      display:none !important; 
+  }
+}
+
+@media(max-width:960px){
+  .THIS .box{
+      display:none !important; 
+  }
+  .THIS .splashContent{
+      width:100% !important;
+      padding-right:25px;
+      margin-left:10px !important;
+  }
+  .THIS .SubContent{
+      width:100%;
+  }
+  .THIS .Image-content{
+      width:100%;
+      font-size:15px;
+      line-height: 17px;
+      
+  }
+  .THIS .Content-bold{
+      font-size:25px;
+      line-height: 26px;
+  }
+  
+  .THIS .Image{
+      min-width: 100% !important;
+      min-height:150px !important;
+  }
+  
+  .THIS .Image-self{
+      width:100%;
+      padding: 10px 10px 10px 10px;
+  }
+  
+  .THIS .video{
+      width:100%;
+  }
+  
+  
+}
+
+.THIS .splashBanner{
+  letter-spacing:15px;
+}
+
+.THIS .splashBanner__button{
+  background-color: #FFFFFF;
+  float:left;
+  border-radius:0px !important;
+  margin-bottom: 110px;
+}
+
+.THIS .splashBanner-secondSec{
+  background-color: #E8E8E8 !important;
+  margin-bottom: 100px;
+  margin-top: 18px;
+}
+
+.THIS .sec-heading{
+  font-weight: bold;
+}
+
+.THIS .list-section{
+  margin-left:5em; 
+}
+
+.THIS .splashContent{
+  margin-left:144px;
+}
+
+.THIS .rectangle-black {
+  height: 38px;
+  background-color: #000000;
+  display:block;
+  position: absolute;
+  top: 82px;
+  right:0px;
+}
+
+.THIS .rectangle-turquoise {
+  height: 38px;
+  background-color: #00D0D4;
+  display:block;
+  position: absolute;
+  top: 120px;
+  right:0px;
+}
+
+.THIS .titleLogo{
+  color: #121DFF;
+  font-size: 36px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 43px;
+  background-color: #FFFFFF;
+}
+
+.THIS .titleLogoR{
+  color: #121DFF;
+  letter-spacing: 0;
+  line-height: 26px;
+  background-color: #FFFFFF;
+  font-size: 20px;
+  padding-right: 5px;
+}
+
+.THIS .titleClass{
+  display:flex;
+}
+
+.THIS .sign-up-section{
+  height: 284px;
+  margin-top:90px;
+  display:relative;
+  background: linear-gradient(311.11deg, #15437A 0%, #0C2644 99.97%);
+}
+.THIS .title sup{
+  font-size: smaller;
+  vertical-align: super;
+}
+
+.THIS .signUpBtn{
+  display:block;
+  border-radius:0px !important;
+}
+
+.THIS .btnSection{
+  width: -webkit-fill-available;
+}
+
+.THIS .LogoImageSection{
+  display:block;
+  position: absolute;
+  top: 275px;
+  right:120px;
+}
+
+.THIS .footerImage{
+  float:left;
+}
+
+ed.THIS .btn-Logo{
+  display:inline-block;
+}
+
+.THIS .signUpBtn:hover{
+  color: white;
+  background-color:#0089FF;
+}
+
+.THIS .signUpBtn:hover:before{			
+  top: 0;
+  left: 0;
+}
+@media(max-width:985px){
+  .THIS .Image-content{
+      width:100%;
+      font-size:15px;
+      line-height: 17px;
+      
+  }
+  .THIS .Content-bold{
+      font-size:25px;
+      line-height: 26px;
+  }
+}
+@media(max-width:1075px){
+  .THIS .Image-content{
+      height: 679px!important;
+      max-width: 419px;
+  }
+  .THIS .Image{
+      height: 679px!important;
+  }
+  
+  .THIS .ThridSection, .THIS .benefits, .THIS .Image-title {
+      margin: 15px;
+  }
+  .THIS{
+      height: 100%;
+  }
+  .THIS .cOSBAuthentifi .benefits-content{
+      max-width: min-content;
+  }
+  .THIS .odd-col, .THIS .even-col {
+      background: none;
+  }
+  .THIS .shield{
+      margin-top: -30px;
+  }
+  .THIS .even-col>.benefits-content, .THIS .odd-col>.benefits-content{
+      color: #586581;
+      max-width: min-content;
+  }
+  
+  .THIS .Image-title{
+      font-size:19px;
+  }
+}
+@media(max-width:720px){
+  .THIS .ThridSection{
+      flex-wrap: wrap;
+  }
+  
+  .THIS .benefits-content{
+      font-size: 25px;
+  }
+  .THIS .Image-content{
+      min-width:100%;
+      min-height:420px;
+      max-height:680px;
+  }
+  .THIS .midTitle{
+      font-size: 45px;
+  }
+  .THIS .benefits{
+      flex-wrap: wrap;
+  }
+  
+}
+@media(max-width:540px){   
+  
+  .THIS .midTitle{
+      font-size: 35px;
+      line-height: 35px;
+  }
+  
+  .THIS .sub-benefits {
+      height: inherit;
+      width: -webkit-fill-available;
+  }
+  .THIS .benefits {
+      height: inherit;
+  }
+  
+  .THIS .benefits-content{
+      margin-bottom: 42px;
+  }
+}
+@media(max-width:400px){   
+  
+  .THIS .Content-bold{
+      font-size: 15px;
+      line-height: 17px;
+      font-weight: bold;
+  }
+  
+  .THIS .Image-title {
+      font-size: 16px;
+  }
+  
+  .THIS .benefits {
+      height: inherit;
+  }
+  
+}

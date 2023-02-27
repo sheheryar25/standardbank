@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validate_Oppo_Product_DrawDate</fullName>
+    <active>true</active>
+    <description>Case#141: Draw Down Dates - Rudolf Niehaus
+Any of the draw down dates on any product can not be before the estimated close date of the opportunity</description>
+    <errorConditionFormula>IF(($Profile.Name=&quot;System Administrator&quot;||$Profile.Name=&quot;Business Administrator&quot;), False,Opportunity__r.CloseDate &gt;  Earliest_Draw_Date_Rollup__c  &amp;&amp; NOT( Opportunity__r.IsClosed))</errorConditionFormula>
+    <errorDisplayField>SA_Amount__c</errorDisplayField>
+    <errorMessage>The Opportunity Estimated Close Date cannot be after the Draw Down Profile Draw Date(s). Please Select an Estimated Close Date before the Draw Date(s).</errorMessage>
+</ValidationRule>

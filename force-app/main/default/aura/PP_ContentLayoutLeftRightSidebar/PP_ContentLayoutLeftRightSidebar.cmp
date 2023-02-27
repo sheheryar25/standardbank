@@ -1,0 +1,17 @@
+<aura:component implements="forceCommunity:layout" description="3 Column Layout (Left Sidebar, Content and Right Sidebar)" access="global">
+    <aura:attribute name="column1" type="Aura.Component[]" required="false" access="public"></aura:attribute>
+    <aura:attribute name="column2" type="Aura.Component[]" required="false" access="public"></aura:attribute>
+    <aura:attribute name="column3" type="Aura.Component[]" required="false" access="public"></aura:attribute>
+    
+    <div class="slds-grid slds-wrap container">
+        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_3-of-12 col-1">
+             {!v.column1}
+        </div>
+        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_6-of-12 col-2">
+             {!v.column2}
+        </div>
+        <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_3-of-12  col-3">
+             {!v.column3}
+        </div>
+    </div>
+</aura:component>

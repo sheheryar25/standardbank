@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_OD_Limit__c</fullName>
+    <description>&quot;The limit on the client&apos;s account for the said period
+US-4409
+US-4456
+US-4425&quot;</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the  limit on the client&apos;s account for the said period</inlineHelpText>
+    <label>Account OD Limit</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

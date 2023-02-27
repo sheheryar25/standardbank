@@ -1,0 +1,95 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId" controller="Ltn_NBAC_FinancialAnalysis">
+    <aura:attribute name="recordId" type="String" access="global" />
+    <aura:attribute name="relationName"  type="String" access="global" required="true"/>
+    <aura:attribute name="parent" type="String" access="global" />
+    <aura:attribute name="fieldset" type="String" access="global" required="true" />
+    <aura:attribute name="columnString" type="String" access="global" required="true" />
+	<aura:attribute name="filters" type="String" access="global" />
+	<aura:attribute name="title" type="String" access="global" />
+	<aura:attribute name="customLabels" type="String" access="global" />
+	<aura:attribute name="defaults" type="String" access="global" />
+   
+	<aura:attribute name="border" type="Boolean" default="false" access="global" />
+	<aura:attribute name="edit" type="Boolean" default="true" access="global" />
+	<aura:attribute name="delete" type="Boolean" default="true" access="global" />
+
+	<aura:attribute name="records" type="SObject[]" access="public" />
+    <aura:attribute name="fieldNames" type="Object[]" access="public"  />
+
+	
+	<aura:attribute name="columnFieldObject" type="Object[]" access="private" />
+	<aura:attribute name="objectApiName" type="String" access="private" />
+	<aura:attribute name="objectLabel" type="String" access="private" />
+	<aura:attribute name="removeAtIndex" type="Integer" access="private" default="null" />
+	<aura:attribute name="defaultFieldValuesMap" type="Map" access="private" />	
+	<aura:attribute name="isLoading" type="Boolean" default="true" />
+	<aura:attribute name="editMode" type="Boolean" default="false" />
+
+	<aura:attribute name="tableHeaderMockup" type="NBAC_Financial_Analysis__c" default="{'sobjectType':'NBAC_Financial_Analysis__c'}" access="private" />
+
+
+	<aura:registerEvent name="componentAction" type="c:ComponentAction" />
+
+	<aura:handler name="change" value="{!v.records}" action="{!c.handleRecodsChange}"/>	
+
+	<aura:handler name="change" value="{!v.customLabels}" action="{!c.handleLabelsChange}"/>
+	<aura:handler event="c:ComponentAction" action="{!c.handleComponentAction}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+	
+	
+		{!v.body}
+	<aura:if isTrue="{!v.edit}">
+			<lightning:buttonGroup class="slds-float_right slds-p-horizontal_small">
+				<lightning:button label="Add" onclick="{!c.handleAddAction}" />
+			</lightning:buttonGroup>
+		</aura:if>	
+		<div class="{!'slds-section slds-is-open ' + if(v.border, 'border' )}">
+				<aura:if isTrue="{!v.title}">
+					<h3 class="slds-section__title slds-theme_shade">
+						<span class="slds-truncate slds-p-horizontal_small" title="{!v.title}">{!v.title}</span>								
+					</h3>
+				</aura:if>
+			<div aria-hidden="false" class="slds-section__content" style="padding-top:0px;">
+				<table class="slds-table slds-table_bordered slds-table_cell-buffer slds-no-row-hover">
+					<thead>
+						<tr class="slds-text-title_caps">
+							<aura:if isTrue="{!v.delete}">
+								<th scope="col" style="width: 0.1rem;"></th>
+							</aura:if>
+							<th scope="col" class="">
+									<div class="slds-truncate" title="{!v.fieldNames[0].label}">
+										{!v.fieldNames[0].label}
+									</div>
+								</th>	
+							<aura:iteration items="{!v.columnFieldObject}" var="columnName">
+								<th scope="col" class="">
+									<div class="slds-truncate" title="{!columnName.label}">
+										<c:recordField record="{!v.tableHeaderMockup}" fieldName="{!columnName.apiName}" showLabel="false" showHelptext="false" editMode="{!v.editMode}"/>
+									</div>
+								</th>
+							</aura:iteration>
+						</tr>
+					</thead>
+					<tbody>
+						<aura:iteration indexVar="recordIter" items="{!v.records}" var="record">
+								<tr>
+									<aura:if isTrue="{!v.delete}">
+										<td class="slds-cell-edit" role="gridcell">
+										  <span class="slds-checkbox">
+											<lightning:buttonIcon name="{!recordIter}" onclick="{!c.handleRemoveAction}" iconName="utility:close" variant="bare" title="Remove" size="small" alternativeText="Remove"/>
+										  </span>
+										</td>
+									</aura:if>
+									<aura:iteration items="{!v.fieldNames}" var="fieldName">
+										<td class="">
+											<c:recordField record="{!record}" fieldName="{#fieldName.apiName}" showLabel="false" showHelptext="false" editMode="{!v.editMode}"/>
+										</td>                            
+									</aura:iteration>
+								</tr>
+						</aura:iteration>        
+					</tbody>
+				</table>
+			</div>
+		</div>    
+
+</aura:component>

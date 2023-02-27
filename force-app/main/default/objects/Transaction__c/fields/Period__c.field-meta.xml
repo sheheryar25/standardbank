@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Period__c</fullName>
+    <description>Last day of month for the period
+&quot;The 12-month period that is being reported on
+US-4409
+US-4456
+US-4425&quot;</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Last day of month for the period
+The 12-month period that is being reported on</inlineHelpText>
+    <label>Period</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

@@ -1,0 +1,95 @@
+<aura:component extends="c:CI_Base" implements="flexipage:availableForAllPageTypes">
+    <aura:attribute name="id" type="String" />
+    <aura:attribute name="title" type="String" />
+    <aura:attribute name="snippet" type="String" />
+    <aura:attribute name="index" type="String" />
+    <aura:attribute name="publisherName" type="String" />
+    <aura:attribute name="publicationDate" type="String" />
+    <aura:attribute name="isLead" type="Boolean" />
+    <aura:attribute name="showingSaved" type="Boolean" default="false" />
+    <aura:attribute name="isLiked" type="Boolean" default="false" />
+    <aura:attribute name="isDisliked" type="Boolean" default="false" />
+    <aura:attribute name="isSaved" type="Boolean" default="false" />
+    <aura:attribute name="relatedClientNames" type="String" />
+    <aura:attribute name="sectors" type="String" />
+    <aura:attribute name="subSectors" type="String" />
+    <aura:attribute name="regions" type="String" />
+    <aura:attribute name="articleBody" type="String" />
+    <aura:attribute name="isFullArticle" type="Boolean" />
+    <aura:attribute name="clientId" type="String" />
+    <aura:attribute name="moreNewsPage" type="Boolean" default="false" access="global"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:registerEvent name="navToComponent" type="c:CI_EvtNavigateToComponent" />
+    <aura:registerEvent name="articleSavedEvent" type="c:CI_EvtGeneralCmp" />
+
+    <ui:scrollerWrapper class="scrollerSize">
+        <div class="innerDivWrapper">
+
+            <c:CI_NewsService aura:id="newsService"/>
+
+            <article aura:id="article_card">
+                <div aura:id="article_upper" class="slds-p-around_small" onclick="{!c.navToArticle}">
+                    <div class="{! if(and(!v.isFullArticle, $Browser.isPhone == false), ' cliped_title ')}">
+                        <p aura:id="title"  class="{!'slds-text-heading_small bold' }">
+                            <aura:unescapedHtml value="{!v.title}" />
+                        </p>
+                    </div>
+                    <aura:if isTrue="{!and(and(v.snippet, not(v.isFullArticle)), not(or($Browser.isAndroid, $Browser.isIOS)))}">
+                        <p aura:id="snippet" class="slds-text-body_regular">
+                            <aura:unescapedHtml value="{!v.snippet}" />
+                        </p>
+                    </aura:if>
+
+                    <aura:if isTrue="{!and(v.articleBody,v.isFullArticle)}">
+                        <p class="slds-text-body_regular slds-m-bottom_small">
+                            <aura:unescapedHtml value="{!v.articleBody}" />
+                        </p>
+                    </aura:if>
+
+                    <aura:if isTrue="{!and(v.relatedClientNames,v.isFullArticle)}">
+                        <p class="slds-text-body_small slds-m-bottom_xx-small light_grey">{!v.relatedClientNames}</p>
+                    </aura:if>
+
+                    <aura:if isTrue="{!and(v.isFullArticle,v.sectors)}">
+                        <p class="slds-text-body_small bold slds-m-bottom_xx-small">{!v.sectors}</p>
+                    </aura:if>
+
+                    <aura:if isTrue="{!and(v.isFullArticle,v.subSectors)}">
+                        <p class="slds-text-body_small bold slds-m-bottom_small">{!v.subSectors}</p>
+                    </aura:if>
+
+                </div>
+
+                <footer class="news_footer">
+                    <div class="slds-text-body_small slds-text-align_right slds-m-top_xx-small slds-p-bottom_small slds-p-horizontal_small publish_info">
+                        <div class="slds-truncate">{!v.publisherName} | {!v.publicationDate}</div>
+                    </div>
+
+                    <div class="line_break_bottom"></div>
+
+                    <div class="slds-grid slds-p-around_xx-small">
+                        <div class="slds-col slds-size_1-of-4">
+                            <aura:if isTrue="{!v.isLead}">
+                                <lightning:button iconName="utility:fallback" onclick="{!c.createOpportunity}" variant="base" class="slds-align-middle green icon_green icon_m-xsmall" label="Lead" />
+                            </aura:if>
+                            <aura:if isTrue="{!and(v.isFullArticle,not(v.isLead))}">
+                                <lightning:button iconName="utility:fallback" onclick="{!c.createOpportunity}" variant="base" class="slds-align-middle green icon_green icon_m-xsmall" label="Convert" />
+                            </aura:if>
+                        </div>
+                        <div class="slds-col slds-size_3-of-4 slds-text-align_right text_blue slds-p-right_xx-small">
+
+                            <lightning:button iconName="utility:bookmark" onclick="{!c.saveArticle}" variant="base" class="{! 'slds-align-middle icon_blue icon_m-xsmall cursor_pointer ' + if(v.isSaved, ' text_bold ') + if(v.showingSaved, 'slds-hidden') }"
+                                label="Save" disabled="{!v.isSaved}"/>
+                            <lightning:button iconName="utility:like" onclick="{!c.likeArticle}" variant="base" class="{! 'slds-align-middle icon_blue icon_m-xsmall cursor_pointer ' + if(v.isLiked, ' text_bold ') + if(v.showingSaved, ' slds-hidden') }"
+                                              label="Like" disabled="{!v.isLiked}"/>
+                            <lightning:button iconName="utility:dislike" onclick="{!c.dislikeArticle}" variant="base" class="{! 'slds-align-middle icon_blue icon_m-xsmall cursor_pointer ' + if(v.isDisliked, ' text_bold ') + if(v.showingSaved, ' slds-hidden') }"
+                                              label="Dislike" disabled="{!v.isDisliked}"/>
+
+
+                        </div>
+                    </div>
+                </footer>
+            </article>
+        </div>
+    </ui:scrollerWrapper>
+</aura:component>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Core__c</fullName>
+    <description>Does this Client Team Member play a Core Role?</description>
+    <externalId>false</externalId>
+    <formula>IF((
+	ISPICKVAL(Client_Role__c, &apos;BCC Relationship Manager&apos;) ||
+	ISPICKVAL(Client_Role__c, &apos;Credit Risk&apos;) ||
+	ISPICKVAL(Client_Role__c, &apos;Executive Sponsor&apos;) ||
+	ISPICKVAL(Client_Role__c, &apos;GM Champion&apos;) ||
+	ISPICKVAL(Client_Role__c, &apos;IB Champion&apos;) ||
+	ISPICKVAL(Client_Role__c, &apos;Manager Client Coverage&apos;) ||
+	ISPICKVAL(Client_Role__c, &apos;Sector/Client Coverage Head&apos;) ||
+	ISPICKVAL(Client_Role__c, &apos;TPS Champion&apos;) ||
+        (Client_Coordinator__c)
+	), True, False)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Does this Client Team Member play a Core Role?</inlineHelpText>
+    <label>Core</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

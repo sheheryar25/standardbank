@@ -1,0 +1,23 @@
+/**
+ * Created by zwalczewska on 29.11.2019.
+ */
+
+.THIS {
+}
+
+.THIS .pagination-options {
+    align-items: center;
+    display:flex;
+    padding-left: 8px;
+    margin-left: 10px;
+}
+
+.THIS .pagination-options .select {
+    width: fit-content;
+    padding-left: 8px;
+    margin-left: 10px;
+}
+
+.THIS .slds-line-height_reset .slds-button__icon {
+    display: none;
+}

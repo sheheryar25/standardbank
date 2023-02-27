@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Segment__c</fullName>
+    <externalId>false</externalId>
+    <label>Segment</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Consumer &amp; HNW Clients</fullName>
+                <default>false</default>
+                <label>Consumer &amp; HNW Clients</label>
+            </value>
+            <value>
+                <fullName>Business &amp; Commercial Clients</fullName>
+                <default>false</default>
+                <label>Business &amp; Commercial Clients</label>
+            </value>
+            <value>
+                <fullName>Insurance</fullName>
+                <default>false</default>
+                <label>Insurance</label>
+            </value>
+            <value>
+                <fullName>Corporate &amp; Investment Banking</fullName>
+                <default>false</default>
+                <label>Corporate &amp; Investment Banking</label>
+            </value>
+            <value>
+                <fullName>Wealth &amp; Investment Clients</fullName>
+                <default>false</default>
+                <label>Wealth &amp; Investment Clients</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

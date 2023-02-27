@@ -1,0 +1,44 @@
+<aura:tokens extends="force:base">
+    <aura:token name="SBRedNegative" value="#E70011" />
+    <aura:token name="SBYellowAttention" value="#FFB822" />
+    <aura:token name="SBGreenPositive" value="#30AA22" />
+    <aura:token name="SBWhite" value="rgb(255,255,255)" />
+    <aura:token name="SBboxBorder" value="0px 2px 0px 0px rgba(0, 0, 0, 0.10)" />
+    <!--Client Insights-->
+    <aura:token name="SBPrimaryBlue" value="#007aff"/>
+    <aura:token name="SBPrimaryBlue20" value="#CCD6EE"/>
+    <aura:token name="SBPrimaryBlue10" value="#E5EAF6"/>
+    <aura:token name="SBSecondaryBlue" value="#3366CC"/>
+    <aura:token name="SBTertiaryBlue" value="#00AADD"/>
+    <aura:token name="SBGreenSuccess" value="#30AA22"/>
+    <aura:token name="SBRedError" value="#E70011"/>
+    <aura:token name="SBOrangeAccent" value="#FF6611"/>
+    <aura:token name="SBDarkGrey" value="#333333"/>
+    <aura:token name="SBMediumGrey" value="#666666"/>
+    <aura:token name="SBLightGrey" value="#999999"/>
+    <aura:token name="SBPaleGrey" value="#DBDBDB"/>
+	<aura:token name="SBPaleGrey50" value="#EDEDED"/>
+	<aura:token name="SBPaleGrey25" value="#F6F6F6"/>
+    <!--Font-->
+    <aura:token name="SBFontFamily" value="'Roboto', -apple-system, BlinkMacSystemFont, sans-serif"/>
+    <!--Font sizes-->
+    <aura:token name="SBFontSizeXSmall" value="12pt"/>
+    <aura:token name="SBFontSizeSmall" value="14pt"/>
+    <aura:token name="SBFontSizeMedium" value="16pt"/>
+    <aura:token name="SBFontSizeLarge" value="18pt"/>
+    <aura:token name="SBFontSizeXLarge" value="20pt"/>
+    <aura:token name="SBFontSizeXXLarge" value="24pt"/>
+    <aura:token name="SBFontSizeXXXLarge" value="32pt"/>
+    <!--Font weight-->
+    <aura:token name="SBFontWeightThin" value="100"/>
+    <aura:token name="SBFontWeightLight" value="300"/>
+    <aura:token name="SBFontWeightRegular" value="400"/>
+    <aura:token name="SBFontWeightMedium" value="500"/>
+    <aura:token name="SBFontWeightBold" value="700"/>
+    <aura:token name="SBFontWeightBlack" value="900"/>
+    <aura:token name="brandLogoImage" value="" />
+
+    <!--OneHub Community-->
+    <aura:token name="OSBLightBlue" value="#0089FF"/>
+    <aura:token name="OSBMediumGrey" value="#444444"/>
+</aura:tokens>

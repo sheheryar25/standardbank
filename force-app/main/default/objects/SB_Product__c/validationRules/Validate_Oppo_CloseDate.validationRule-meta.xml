@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validate_Oppo_CloseDate</fullName>
+    <active>true</active>
+    <description>Case#141: Draw Down Dates - Rudolf Niehaus
+Oppo estimates close date cannot be in the past</description>
+    <errorConditionFormula>IF(($Profile.Name=&quot;System Administrator&quot;||$Profile.Name=&quot;Business Administrator&quot;||$Profile.Name=&quot;Api User&quot;), False,Opportunity__r.CloseDate &lt; TODAY() &amp;&amp; NOT( Opportunity__r.IsClosed))</errorConditionFormula>
+    <errorDisplayField>SA_Amount__c</errorDisplayField>
+    <errorMessage>The Opportunity Estimated Close Date cannot be in the past . Please Select a future date and try again.</errorMessage>
+</ValidationRule>

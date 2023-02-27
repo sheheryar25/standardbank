@@ -1,0 +1,9 @@
+<aura:component description="Custom SVG">
+    <aura:attribute name="class"        type="String"   description="CSS classname for the SVG element" />
+    <aura:attribute name="category"     type="String"   description="SVG category" />
+    <aura:attribute name="type"         type="String"   description="SVG type" />
+    <aura:attribute name="ariaHidden"   type="String"   default="true"  description="aria-hidden true or false. defaults to true" />
+    <aura:attribute name="fill"         type="String"   default="white" description="Color of SVG, default nothing" />
+    
+    <img style="height: 14px;" src="{!'/resource/SLDS221ICONs/' + v.category + '/' + v.type + '_120.png'}" />
+</aura:component>

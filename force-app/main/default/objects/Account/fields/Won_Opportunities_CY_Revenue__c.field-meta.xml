@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Won_Opportunities_CY_Revenue__c</fullName>
+    <description>EN-0695-Total Reveue of Closed Won Opportunities (This Year, Year) in ZAR</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The total Revenue of the Closed Won Opportunities (This year, Including Subsidiary Clients)</inlineHelpText>
+    <label>Won Opportunities CY Revenue</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

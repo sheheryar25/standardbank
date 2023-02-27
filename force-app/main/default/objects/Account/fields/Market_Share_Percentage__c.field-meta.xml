@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Market_Share_Percentage__c</fullName>
+    <description>SFP-9319 [c] This field is introduced for CVCA feature to allow printable view of the Client Page similar to the CVCA Template.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the approximate market share of the client (%).</inlineHelpText>
+    <label>Market Share %</label>
+    <precision>3</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Percent</type>
+</CustomField>

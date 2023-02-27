@@ -1,0 +1,67 @@
+.THIS .tab input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.THIS .title-column:hover > button {
+    visibility: visible !important;
+}
+
+/* Accordion styles */
+.THIS .tabs {
+  overflow: hidden;
+}
+
+.THIS .center_custom {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.THIS .tab {
+  width: 100%;
+  overflow: hidden;
+}
+.THIS .tab-label {
+  display: flex;
+  cursor: pointer; 
+}
+.THIS .tab-label::before {
+  content: "\276F";
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  transition: all 0.35s;
+}
+.THIS .tab-content {
+  max-height: 0;
+  padding: 0 1em;
+  transition: all 0.35s;
+}
+.THIS .tab input:checked + .tab-label::before {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+.THIS .tab input:checked ~ .tab-content {
+  max-height: 100vh;
+  padding: 1em;
+}
+
+.THIS .sm2-filters{
+    right:0px;
+    top:0px; 
+    position:absolute;
+    z-index:1000000;
+    min-width:21rem;
+    background:rgb(255, 255, 255) ;
+
+}
+
+.THIS .hidden{
+    display: none;
+}
+
+.THIS .slds-p-right_x-small {
+    padding-right: 0; 
+}

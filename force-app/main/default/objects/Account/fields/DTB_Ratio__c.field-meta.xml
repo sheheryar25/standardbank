@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DTB_Ratio__c</fullName>
+    <description>SFP-9319 [c] The DTB ratio is a measure of the diversity of a customer’s product holding within the bank</description>
+    <externalId>false</externalId>
+    <label>DTB Ratio</label>
+    <precision>7</precision>
+    <required>false</required>
+    <scale>3</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

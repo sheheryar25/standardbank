@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TermTenor_Greater_Than_Zero</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+OR(ISBLANK(Term_Tenor__c), Term_Tenor__c &lt; 1),
+OR(
+$RecordType.Name = &quot;Transactional&quot;,
+$RecordType.Name = &quot;Capital Markets&quot;,
+$RecordType.Name = &quot;Lending and Commitments&quot;,
+$RecordType.Name = &quot;Trading (Flow)&quot;,
+$RecordType.Name = &quot;Trading (Structure)&quot;,
+$RecordType.Name = &quot;Transactional 2014&quot;,
+$RecordType.Name = &quot;TPS 2022&quot;))</errorConditionFormula>
+    <errorMessage>Please enter Term/Tenor greater than zero. If product revenue is immediate please input term of 1 month.</errorMessage>
+</ValidationRule>

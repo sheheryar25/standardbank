@@ -1,0 +1,13 @@
+/**
+ * Created by Chibuye Kunda on 2020/10/15.
+ */
+.THIS input::-webkit-outer-spin-button,
+.THIS input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+.THIS input[type=number] {
+    -moz-appearance: textfield;
+}

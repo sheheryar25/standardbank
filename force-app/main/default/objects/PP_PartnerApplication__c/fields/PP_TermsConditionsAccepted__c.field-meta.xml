@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PP_TermsConditionsAccepted__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>SFP-11649 - Indicates that the partner accepted T&amp;C&apos;s at registration.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates that the partner accepted T&amp;C&apos;s at registration.</inlineHelpText>
+    <label>Terms &amp; Conditions Accepted</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

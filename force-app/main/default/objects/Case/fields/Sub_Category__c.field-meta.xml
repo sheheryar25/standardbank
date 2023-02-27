@@ -1,0 +1,1192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Category__c</fullName>
+    <description>The Secondary category by which the case is classified (Kele 2013/12)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Case Sub Category for the segmentation of the support queries</inlineHelpText>
+    <label>Sub Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Main_Category__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Activities Management</fullName>
+                <default>false</default>
+                <label>Activities Management</label>
+            </value>
+            <value>
+                <fullName>Background Checks</fullName>
+                <default>false</default>
+                <label>Background Checks</label>
+            </value>
+            <value>
+                <fullName>BCNR</fullName>
+                <default>false</default>
+                <label>BCNR</label>
+            </value>
+            <value>
+                <fullName>Beneficiary Bank Unable to Apply</fullName>
+                <default>false</default>
+                <label>Beneficiary Bank Unable to Apply</label>
+            </value>
+            <value>
+                <fullName>Billing</fullName>
+                <default>false</default>
+                <label>Billing</label>
+            </value>
+            <value>
+                <fullName>Campaign Management</fullName>
+                <default>false</default>
+                <label>Campaign Management</label>
+            </value>
+            <value>
+                <fullName>CC &amp; CCBM</fullName>
+                <default>false</default>
+                <label>CC &amp; CCBM</label>
+            </value>
+            <value>
+                <fullName>Cheque Receipt</fullName>
+                <default>false</default>
+                <label>Cheque Receipt</label>
+            </value>
+            <value>
+                <fullName>CIB to PBB Migration</fullName>
+                <default>false</default>
+                <label>CIB to PBB Migration</label>
+            </value>
+            <value>
+                <fullName>CIF Rejection</fullName>
+                <default>false</default>
+                <label>CIF Rejection</label>
+            </value>
+            <value>
+                <fullName>Client Closure</fullName>
+                <default>false</default>
+                <label>Client Closure</label>
+            </value>
+            <value>
+                <fullName>Client Hierarchy</fullName>
+                <default>false</default>
+                <label>Client Hierarchy</label>
+            </value>
+            <value>
+                <fullName>Client Management</fullName>
+                <default>false</default>
+                <label>Client Management</label>
+            </value>
+            <value>
+                <fullName>Client Merging</fullName>
+                <default>false</default>
+                <label>Client Merging</label>
+            </value>
+            <value>
+                <fullName>Client Plan</fullName>
+                <default>false</default>
+                <label>Client Plan</label>
+            </value>
+            <value>
+                <fullName>Client Plan Dashboard</fullName>
+                <default>false</default>
+                <label>Client Plan Dashboard</label>
+            </value>
+            <value>
+                <fullName>Client Sector</fullName>
+                <default>false</default>
+                <label>Client Sector</label>
+            </value>
+            <value>
+                <fullName>Client Unsubscribe/Re-subscribe</fullName>
+                <default>false</default>
+                <label>Client Unsubscribe/Re-subscribe</label>
+            </value>
+            <value>
+                <fullName>Closing</fullName>
+                <default>false</default>
+                <label>Closing</label>
+            </value>
+            <value>
+                <fullName>Confirmations</fullName>
+                <default>false</default>
+                <label>Confirmations</label>
+            </value>
+            <value>
+                <fullName>Contact Management</fullName>
+                <default>false</default>
+                <label>Contact Management</label>
+            </value>
+            <value>
+                <fullName>Contacts</fullName>
+                <default>false</default>
+                <label>Contacts</label>
+            </value>
+            <value>
+                <fullName>Core CST Update</fullName>
+                <default>false</default>
+                <label>Core CST Update</label>
+            </value>
+            <value>
+                <fullName>CST Update</fullName>
+                <default>false</default>
+                <label>CST Update</label>
+            </value>
+            <value>
+                <fullName>Delay</fullName>
+                <default>false</default>
+                <label>Delay</label>
+            </value>
+            <value>
+                <fullName>Direct Debits</fullName>
+                <default>false</default>
+                <label>Direct Debits</label>
+            </value>
+            <value>
+                <fullName>Discounting</fullName>
+                <default>false</default>
+                <label>Discounting</label>
+            </value>
+            <value>
+                <fullName>Documentation</fullName>
+                <default>false</default>
+                <label>Documentation</label>
+            </value>
+            <value>
+                <fullName>Documentation Collections</fullName>
+                <default>false</default>
+                <label>Documentation Collections</label>
+            </value>
+            <value>
+                <fullName>Documentation Credits</fullName>
+                <default>false</default>
+                <label>Documentation Credits</label>
+            </value>
+            <value>
+                <fullName>Entries</fullName>
+                <default>false</default>
+                <label>Entries</label>
+            </value>
+            <value>
+                <fullName>Event Reports</fullName>
+                <default>false</default>
+                <label>Event Reports</label>
+            </value>
+            <value>
+                <fullName>Excesses</fullName>
+                <default>false</default>
+                <label>Excesses</label>
+            </value>
+            <value>
+                <fullName>For Information - No Action Required</fullName>
+                <default>false</default>
+                <label>For Information - No Action Required</label>
+            </value>
+            <value>
+                <fullName>Formatting Error</fullName>
+                <default>false</default>
+                <label>Formatting Error</label>
+            </value>
+            <value>
+                <fullName>Guarantees</fullName>
+                <default>false</default>
+                <label>Guarantees</label>
+            </value>
+            <value>
+                <fullName>Insufficient Funds</fullName>
+                <default>false</default>
+                <label>Insufficient Funds</label>
+            </value>
+            <value>
+                <fullName>KYC</fullName>
+                <default>false</default>
+                <label>KYC</label>
+            </value>
+            <value>
+                <fullName>Lightning</fullName>
+                <default>false</default>
+                <label>Lightning</label>
+            </value>
+            <value>
+                <fullName>Login Issue</fullName>
+                <default>false</default>
+                <label>Login Issue</label>
+            </value>
+            <value>
+                <fullName>Mandates</fullName>
+                <default>false</default>
+                <label>Mandates</label>
+            </value>
+            <value>
+                <fullName>Manual Payment Submission</fullName>
+                <default>false</default>
+                <label>Manual Payment Submission</label>
+            </value>
+            <value>
+                <fullName>Manual Processing Error</fullName>
+                <default>false</default>
+                <label>Manual Processing Error</label>
+            </value>
+            <value>
+                <fullName>Marketing Update</fullName>
+                <default>false</default>
+                <label>Marketing Update</label>
+            </value>
+            <value>
+                <fullName>NBAC</fullName>
+                <default>false</default>
+                <label>NBAC</label>
+            </value>
+            <value>
+                <fullName>­New Profile</fullName>
+                <default>false</default>
+                <label>­New Profile</label>
+            </value>
+            <value>
+                <fullName>New User</fullName>
+                <default>false</default>
+                <label>New User</label>
+            </value>
+            <value>
+                <fullName>Office 365</fullName>
+                <default>false</default>
+                <label>Office 365</label>
+            </value>
+            <value>
+                <fullName>Opening</fullName>
+                <default>false</default>
+                <label>Opening</label>
+            </value>
+            <value>
+                <fullName>Opportunities Management</fullName>
+                <default>false</default>
+                <label>Opportunity Management</label>
+            </value>
+            <value>
+                <fullName>Outlook Sync</fullName>
+                <default>false</default>
+                <label>Outlook Sync</label>
+            </value>
+            <value>
+                <fullName>P3</fullName>
+                <default>false</default>
+                <label>P3</label>
+            </value>
+            <value>
+                <fullName>Password Reset</fullName>
+                <default>false</default>
+                <label>Password Reset</label>
+            </value>
+            <value>
+                <fullName>PBB to CIB Migration</fullName>
+                <default>false</default>
+                <label>PBB to CIB Migration</label>
+            </value>
+            <value>
+                <fullName>Portfolio Project</fullName>
+                <default>false</default>
+                <label>Portfolio Project</label>
+            </value>
+            <value>
+                <fullName>Profile Amendment</fullName>
+                <default>false</default>
+                <label>Profile Amendment</label>
+            </value>
+            <value>
+                <fullName>Recall of Funds</fullName>
+                <default>false</default>
+                <label>Recall of Funds</label>
+            </value>
+            <value>
+                <fullName>Remote Access</fullName>
+                <default>false</default>
+                <label>Remote Access</label>
+            </value>
+            <value>
+                <fullName>Replacement Token</fullName>
+                <default>false</default>
+                <label>Replacement Token</label>
+            </value>
+            <value>
+                <fullName>Reports and Dashboards</fullName>
+                <default>false</default>
+                <label>Reports and Dashboards</label>
+            </value>
+            <value>
+                <fullName>Returned Transaction</fullName>
+                <default>false</default>
+                <label>Returned Transaction</label>
+            </value>
+            <value>
+                <fullName>RM Change</fullName>
+                <default>false</default>
+                <label>RM Change</label>
+            </value>
+            <value>
+                <fullName>Salesforce1</fullName>
+                <default>false</default>
+                <label>Salesforce1</label>
+            </value>
+            <value>
+                <fullName>Settlement/Formatting Assistance</fullName>
+                <default>false</default>
+                <label>Settlement/Formatting Assistance</label>
+            </value>
+            <value>
+                <fullName>Single Sign-On</fullName>
+                <default>false</default>
+                <label>Single Sign-On</label>
+            </value>
+            <value>
+                <fullName>Standing orders</fullName>
+                <default>false</default>
+                <label>Standing orders</label>
+            </value>
+            <value>
+                <fullName>Statements</fullName>
+                <default>false</default>
+                <label>Statements</label>
+            </value>
+            <value>
+                <fullName>­Static Data</fullName>
+                <default>false</default>
+                <label>­Static Data</label>
+            </value>
+            <value>
+                <fullName>Swift Copy</fullName>
+                <default>false</default>
+                <label>Swift Copy</label>
+            </value>
+            <value>
+                <fullName>System Outage</fullName>
+                <default>false</default>
+                <label>System Outage</label>
+            </value>
+            <value>
+                <fullName>Trailhead</fullName>
+                <default>false</default>
+                <label>Trailhead</label>
+            </value>
+            <value>
+                <fullName>Usage Issues</fullName>
+                <default>false</default>
+                <label>Usage Issues</label>
+            </value>
+            <value>
+                <fullName>User New</fullName>
+                <default>false</default>
+                <label>User New</label>
+            </value>
+            <value>
+                <fullName>User Off boarding</fullName>
+                <default>false</default>
+                <label>User Offboarding</label>
+            </value>
+            <value>
+                <fullName>User Update</fullName>
+                <default>false</default>
+                <label>User Update</label>
+            </value>
+            <value>
+                <fullName>Bonus Calculation</fullName>
+                <default>false</default>
+                <label>Bonus Calculation</label>
+            </value>
+            <value>
+                <fullName>Browser</fullName>
+                <default>false</default>
+                <label>Browser</label>
+            </value>
+            <value>
+                <fullName>Issues</fullName>
+                <default>false</default>
+                <label>Issues</label>
+            </value>
+            <value>
+                <fullName>Call Report</fullName>
+                <default>false</default>
+                <label>Call Report</label>
+            </value>
+            <value>
+                <fullName>Campaigns</fullName>
+                <default>false</default>
+                <label>Campaigns</label>
+            </value>
+            <value>
+                <fullName>Cases</fullName>
+                <default>false</default>
+                <label>Case Management</label>
+            </value>
+            <value>
+                <fullName>Casino Upload</fullName>
+                <default>false</default>
+                <label>Casino Upload</label>
+            </value>
+            <value>
+                <fullName>Chatter</fullName>
+                <default>false</default>
+                <label>Chatter</label>
+            </value>
+            <value>
+                <fullName>Client Portfolio Transfer</fullName>
+                <default>false</default>
+                <label>Client Portfolio Transfer</label>
+            </value>
+            <value>
+                <fullName>Clients</fullName>
+                <default>false</default>
+                <label>Account Management</label>
+            </value>
+            <value>
+                <fullName>CMP Update</fullName>
+                <default>false</default>
+                <label>CMP Update</label>
+            </value>
+            <value>
+                <fullName>Contact Portfolio Transfer</fullName>
+                <default>false</default>
+                <label>Contact Portfolio Transfer</label>
+            </value>
+            <value>
+                <fullName>Create New User Account</fullName>
+                <default>false</default>
+                <label>Create New User Account</label>
+            </value>
+            <value>
+                <fullName>Dashboard</fullName>
+                <default>false</default>
+                <label>Dashboard</label>
+            </value>
+            <value>
+                <fullName>Delete VIP Gaming Client</fullName>
+                <default>false</default>
+                <label>Delete VIP Gaming Client</label>
+            </value>
+            <value>
+                <fullName>Disable User Account</fullName>
+                <default>false</default>
+                <label>Disable User Account</label>
+            </value>
+            <value>
+                <fullName>Documents</fullName>
+                <default>false</default>
+                <label>Documents</label>
+            </value>
+            <value>
+                <fullName>Internet Connection</fullName>
+                <default>false</default>
+                <label>Internet Connection</label>
+            </value>
+            <value>
+                <fullName>Leads</fullName>
+                <default>false</default>
+                <label>Leads</label>
+            </value>
+            <value>
+                <fullName>List Views</fullName>
+                <default>false</default>
+                <label>List Views</label>
+            </value>
+            <value>
+                <fullName>Nomination / Approval Process</fullName>
+                <default>false</default>
+                <label>Nomination / Approval Process</label>
+            </value>
+            <value>
+                <fullName>Offboard User</fullName>
+                <default>false</default>
+                <label>Offboard User</label>
+            </value>
+            <value>
+                <fullName>Onboard User</fullName>
+                <default>false</default>
+                <label>Onboard User</label>
+            </value>
+            <value>
+                <fullName>Opportunities</fullName>
+                <default>false</default>
+                <label>Opportunities</label>
+            </value>
+            <value>
+                <fullName>Opportunity Portfolio Transfer</fullName>
+                <default>false</default>
+                <label>Opportunity Portfolio Transfer</label>
+            </value>
+            <value>
+                <fullName>Play Detail</fullName>
+                <default>false</default>
+                <label>Play Detail</label>
+            </value>
+            <value>
+                <fullName>Play Detail Delete</fullName>
+                <default>false</default>
+                <label>Play Detail Delete</label>
+            </value>
+            <value>
+                <fullName>Play Detail Transfer</fullName>
+                <default>false</default>
+                <label>Play Detail Transfer</label>
+            </value>
+            <value>
+                <fullName>Play Detail Update</fullName>
+                <default>false</default>
+                <label>Play Detail Update</label>
+            </value>
+            <value>
+                <fullName>Play Detail Upload</fullName>
+                <default>false</default>
+                <label>Play Detail Upload</label>
+            </value>
+            <value>
+                <fullName>Qlikview Connection</fullName>
+                <default>false</default>
+                <label>Qlikview Connection</label>
+            </value>
+            <value>
+                <fullName>Reports</fullName>
+                <default>false</default>
+                <label>Reports</label>
+            </value>
+            <value>
+                <fullName>Reports / Dashboard</fullName>
+                <default>false</default>
+                <label>Reports / Dashboard</label>
+            </value>
+            <value>
+                <fullName>Salesforce 1</fullName>
+                <default>false</default>
+                <label>Salesforce 1</label>
+            </value>
+            <value>
+                <fullName>Salesforce Connection</fullName>
+                <default>false</default>
+                <label>Salesforce Connection</label>
+            </value>
+            <value>
+                <fullName>Task</fullName>
+                <default>false</default>
+                <label>Task</label>
+            </value>
+            <value>
+                <fullName>Update User Account</fullName>
+                <default>false</default>
+                <label>Update User Account</label>
+            </value>
+            <value>
+                <fullName>VIP Gaming Client</fullName>
+                <default>false</default>
+                <label>VIP Gaming Client</label>
+            </value>
+            <value>
+                <fullName>VIP Gaming Client Delete</fullName>
+                <default>false</default>
+                <label>VIP Gaming Client Delete</label>
+            </value>
+            <value>
+                <fullName>VIP Gaming Client Portfolio Transfer</fullName>
+                <default>false</default>
+                <label>VIP Gaming Client Portfolio Transfer</label>
+            </value>
+            <value>
+                <fullName>VIP Gaming Client Portfolio Upload</fullName>
+                <default>false</default>
+                <label>VIP Gaming Client Portfolio Upload</label>
+            </value>
+            <value>
+                <fullName>VIP Gaming Client Update</fullName>
+                <default>false</default>
+                <label>VIP Gaming Client Update</label>
+            </value>
+            <value>
+                <fullName>New License Request</fullName>
+                <default>false</default>
+                <label>New License Request</label>
+            </value>
+            <value>
+                <fullName>General Enquiry</fullName>
+                <default>false</default>
+                <label>General Enquiry</label>
+            </value>
+            <value>
+                <fullName>Production Incident</fullName>
+                <default>false</default>
+                <label>Production Incident</label>
+            </value>
+            <value>
+                <fullName>Support</fullName>
+                <default>false</default>
+                <label>Support</label>
+            </value>
+            <value>
+                <fullName>New Record</fullName>
+                <default>false</default>
+                <label>New Record</label>
+            </value>
+            <value>
+                <fullName>Data Migration</fullName>
+                <default>false</default>
+                <label>Data Migration</label>
+            </value>
+            <value>
+                <fullName>Data Validation</fullName>
+                <default>false</default>
+                <label>Data Validation</label>
+            </value>
+            <value>
+                <fullName>Reports &amp; Dashboards</fullName>
+                <default>false</default>
+                <label>Reports &amp; Dashboards</label>
+            </value>
+            <value>
+                <fullName>Deactivate User(s)</fullName>
+                <default>false</default>
+                <label>Deactivate User(s)</label>
+            </value>
+            <value>
+                <fullName>User Onboarding</fullName>
+                <default>false</default>
+                <label>User Onboarding</label>
+            </value>
+            <value>
+                <fullName>User Transfer</fullName>
+                <default>false</default>
+                <label>User Transfer</label>
+            </value>
+            <value>
+                <fullName>Partner Portal Queries</fullName>
+                <default>false</default>
+                <label>Partner Portal Queries</label>
+            </value>
+            <value>
+                <fullName>Account Link/Registration</fullName>
+                <default>false</default>
+                <label>Account Link/Registration</label>
+            </value>
+            <value>
+                <fullName>Account New</fullName>
+                <default>false</default>
+                <label>Account New</label>
+            </value>
+            <value>
+                <fullName>Account Update</fullName>
+                <default>false</default>
+                <label>Account Update</label>
+            </value>
+            <value>
+                <fullName>Module Guidance</fullName>
+                <default>false</default>
+                <label>Module Guidance</label>
+            </value>
+            <value>
+                <fullName>Points &amp; Badges Management</fullName>
+                <default>false</default>
+                <label>Points &amp; Badges Management</label>
+            </value>
+            <value>
+                <fullName>Hoodie Query</fullName>
+                <default>false</default>
+                <label>Hoodie Query</label>
+            </value>
+            <value>
+                <fullName>Login Issues</fullName>
+                <default>false</default>
+                <label>Login Issues</label>
+            </value>
+            <value>
+                <fullName>Degreed</fullName>
+                <default>false</default>
+                <label>Degreed</label>
+            </value>
+            <value>
+                <fullName>Report &amp; Dashboard Assistance</fullName>
+                <default>false</default>
+                <label>Report &amp; Dashboard Assistance</label>
+            </value>
+            <value>
+                <fullName>Single Sign On</fullName>
+                <default>false</default>
+                <label>Single Sign On</label>
+            </value>
+            <value>
+                <fullName>myTrailhead</fullName>
+                <default>false</default>
+                <label>myTrailhead</label>
+            </value>
+            <value>
+                <fullName>Salesforce Hub</fullName>
+                <default>false</default>
+                <label>Salesforce Hub</label>
+            </value>
+            <value>
+                <fullName>Business Continuity Management</fullName>
+                <default>false</default>
+                <label>Business Continuity Management</label>
+            </value>
+            <value>
+                <fullName>Working Backwards Champion</fullName>
+                <default>false</default>
+                <label>Working Backwards Champion</label>
+            </value>
+            <value>
+                <fullName>Nabpps</fullName>
+                <default>false</default>
+                <label>Nabpps</label>
+            </value>
+            <value>
+                <fullName>Africa Regions Client Tax Reporting</fullName>
+                <default>false</default>
+                <label>Africa Regions Client Tax Reporting</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Client On boarding</controllingFieldValue>
+            <valueName>CIF Rejection</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trailhead</controllingFieldValue>
+            <valueName>Account Link/Registration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trailhead</controllingFieldValue>
+            <valueName>Account New</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trailhead</controllingFieldValue>
+            <valueName>Account Update</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trailhead</controllingFieldValue>
+            <valueName>Module Guidance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trailhead</controllingFieldValue>
+            <valueName>Points &amp; Badges Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trailhead</controllingFieldValue>
+            <valueName>Hoodie Query</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trailhead</controllingFieldValue>
+            <valueName>Login Issues</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trailhead</controllingFieldValue>
+            <valueName>Degreed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trailhead</controllingFieldValue>
+            <valueName>Report &amp; Dashboard Assistance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trailhead</controllingFieldValue>
+            <valueName>Single Sign On</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trailhead</controllingFieldValue>
+            <valueName>myTrailhead</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trailhead</controllingFieldValue>
+            <controllingFieldValue>Internal Org</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Internal Org</controllingFieldValue>
+            <valueName>Salesforce Hub</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Internal Org</controllingFieldValue>
+            <valueName>Business Continuity Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Internal Org</controllingFieldValue>
+            <valueName>Working Backwards Champion</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Internal Org</controllingFieldValue>
+            <valueName>Nabpps</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Internal Org</controllingFieldValue>
+            <valueName>Africa Regions Client Tax Reporting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accounts</controllingFieldValue>
+            <valueName>Billing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accounts</controllingFieldValue>
+            <valueName>Closing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accounts</controllingFieldValue>
+            <valueName>Confirmations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accounts</controllingFieldValue>
+            <valueName>Entries</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accounts</controllingFieldValue>
+            <valueName>Excesses</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accounts</controllingFieldValue>
+            <valueName>Opening</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accounts</controllingFieldValue>
+            <valueName>Statements</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accounts</controllingFieldValue>
+            <valueName>­Static Data</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Channel</controllingFieldValue>
+            <valueName>­New Profile</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Channel</controllingFieldValue>
+            <valueName>New User</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Channel</controllingFieldValue>
+            <controllingFieldValue>User Management</controllingFieldValue>
+            <valueName>Password Reset</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Channel</controllingFieldValue>
+            <valueName>Profile Amendment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Channel</controllingFieldValue>
+            <valueName>Replacement Token</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Channel</controllingFieldValue>
+            <valueName>System Outage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Channel</controllingFieldValue>
+            <valueName>Usage Issues</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compliance</controllingFieldValue>
+            <valueName>Background Checks</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compliance</controllingFieldValue>
+            <valueName>KYC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compliance</controllingFieldValue>
+            <valueName>Mandates</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compliance</controllingFieldValue>
+            <valueName>P3</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payments</controllingFieldValue>
+            <valueName>BCNR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payments</controllingFieldValue>
+            <valueName>Beneficiary Bank Unable to Apply</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payments</controllingFieldValue>
+            <valueName>Cheque Receipt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payments</controllingFieldValue>
+            <valueName>Delay</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payments</controllingFieldValue>
+            <valueName>Direct Debits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payments</controllingFieldValue>
+            <valueName>Formatting Error</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payments</controllingFieldValue>
+            <valueName>Insufficient Funds</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payments</controllingFieldValue>
+            <valueName>Manual Payment Submission</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payments</controllingFieldValue>
+            <valueName>Manual Processing Error</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payments</controllingFieldValue>
+            <valueName>Recall of Funds</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payments</controllingFieldValue>
+            <valueName>Returned Transaction</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payments</controllingFieldValue>
+            <valueName>Settlement/Formatting Assistance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payments</controllingFieldValue>
+            <valueName>Standing orders</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payments</controllingFieldValue>
+            <valueName>Swift Copy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade Finance</controllingFieldValue>
+            <valueName>Discounting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade Finance</controllingFieldValue>
+            <controllingFieldValue>Data Management</controllingFieldValue>
+            <valueName>Documentation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade Finance</controllingFieldValue>
+            <valueName>Documentation Collections</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade Finance</controllingFieldValue>
+            <valueName>Documentation Credits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Trade Finance</controllingFieldValue>
+            <valueName>Guarantees</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Data Management</controllingFieldValue>
+            <valueName>CC &amp; CCBM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Data Management</controllingFieldValue>
+            <valueName>CIB to PBB Migration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Data Management</controllingFieldValue>
+            <valueName>Client Hierarchy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Data Management</controllingFieldValue>
+            <valueName>Client Merging</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Data Management</controllingFieldValue>
+            <valueName>Client Sector</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Data Management</controllingFieldValue>
+            <valueName>Core CST Update</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Data Management</controllingFieldValue>
+            <valueName>CST Update</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Data Management</controllingFieldValue>
+            <valueName>Marketing Update</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Data Management</controllingFieldValue>
+            <valueName>PBB to CIB Migration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Data Management</controllingFieldValue>
+            <valueName>Portfolio Project</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Data Management</controllingFieldValue>
+            <valueName>RM Change</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Data Management</controllingFieldValue>
+            <valueName>Cases</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Data Management</controllingFieldValue>
+            <valueName>Clients</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Data Management</controllingFieldValue>
+            <valueName>Leads</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Data Management</controllingFieldValue>
+            <valueName>List Views</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Data Management</controllingFieldValue>
+            <valueName>Nomination / Approval Process</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Data Management</controllingFieldValue>
+            <valueName>New Record</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Data Management</controllingFieldValue>
+            <valueName>Data Migration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Data Management</controllingFieldValue>
+            <valueName>Data Validation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Management</controllingFieldValue>
+            <valueName>Activities Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Management</controllingFieldValue>
+            <valueName>Campaign Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Management</controllingFieldValue>
+            <valueName>Client Closure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Management</controllingFieldValue>
+            <valueName>Client Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Management</controllingFieldValue>
+            <valueName>Client Unsubscribe/Re-subscribe</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Management</controllingFieldValue>
+            <valueName>Contact Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Management</controllingFieldValue>
+            <valueName>Event Reports</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Management</controllingFieldValue>
+            <valueName>For Information - No Action Required</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Management</controllingFieldValue>
+            <valueName>Lightning</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Management</controllingFieldValue>
+            <valueName>Login Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Management</controllingFieldValue>
+            <valueName>NBAC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Management</controllingFieldValue>
+            <valueName>Office 365</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Management</controllingFieldValue>
+            <valueName>Opportunities Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Management</controllingFieldValue>
+            <valueName>Outlook Sync</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Management</controllingFieldValue>
+            <valueName>Reports and Dashboards</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Management</controllingFieldValue>
+            <valueName>Salesforce1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Management</controllingFieldValue>
+            <valueName>Trailhead</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Management</controllingFieldValue>
+            <valueName>Chatter</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Management</controllingFieldValue>
+            <valueName>Internet Connection</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Management</controllingFieldValue>
+            <valueName>Qlikview Connection</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Management</controllingFieldValue>
+            <valueName>Salesforce 1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Management</controllingFieldValue>
+            <valueName>General Enquiry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Management</controllingFieldValue>
+            <valueName>Production Incident</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Management</controllingFieldValue>
+            <valueName>Support</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>General Management</controllingFieldValue>
+            <valueName>Partner Portal Queries</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>User Management</controllingFieldValue>
+            <valueName>Remote Access</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>User Management</controllingFieldValue>
+            <valueName>Single Sign-On</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>User Management</controllingFieldValue>
+            <valueName>User New</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>User Management</controllingFieldValue>
+            <valueName>User Off boarding</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>User Management</controllingFieldValue>
+            <valueName>User Update</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>User Management</controllingFieldValue>
+            <valueName>Disable User Account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>User Management</controllingFieldValue>
+            <valueName>New License Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>User Management</controllingFieldValue>
+            <valueName>Deactivate User(s)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>User Management</controllingFieldValue>
+            <valueName>User Onboarding</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>User Management</controllingFieldValue>
+            <valueName>User Transfer</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

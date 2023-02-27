@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PBB_Users_cannot_edit_Client</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( NOT( ISCHANGED(PBB_Account_Info_Last_Refresh__c) ) , $Profile.Name = &apos;Personal Business Banking Custom Std User - Mobile&apos; )</errorConditionFormula>
+    <errorMessage>Personal Business Banking users cannot edit client records</errorMessage>
+</ValidationRule>

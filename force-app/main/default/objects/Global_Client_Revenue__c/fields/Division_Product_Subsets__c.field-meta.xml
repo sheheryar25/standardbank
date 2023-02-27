@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Division_Product_Subsets__c</fullName>
+    <description>Product belonging to different divisions</description>
+    <externalId>false</externalId>
+    <label>Division Product Subsets</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Trading_Division__c</controllingField>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Advisory</fullName>
+                <default>false</default>
+                <label>Advisory</label>
+            </value>
+            <value>
+                <fullName>Capital Markets</fullName>
+                <default>false</default>
+                <label>Capital Markets</label>
+            </value>
+            <value>
+                <fullName>Cash Equity</fullName>
+                <default>false</default>
+                <label>Cash Equity</label>
+            </value>
+            <value>
+                <fullName>Cash Management</fullName>
+                <default>false</default>
+                <label>Cash Management</label>
+            </value>
+            <value>
+                <fullName>Cash Management and Lending</fullName>
+                <default>false</default>
+                <label>Cash Management and Lending</label>
+            </value>
+            <value>
+                <fullName>Commodities</fullName>
+                <default>false</default>
+                <label>Commodities</label>
+            </value>
+            <value>
+                <fullName>Corporate Finance</fullName>
+                <default>false</default>
+                <label>Corporate Finance</label>
+            </value>
+            <value>
+                <fullName>Coverage</fullName>
+                <default>false</default>
+                <label>Coverage</label>
+            </value>
+            <value>
+                <fullName>Credit</fullName>
+                <default>false</default>
+                <label>Credit</label>
+            </value>
+            <value>
+                <fullName>Debt Capital Markets</fullName>
+                <default>false</default>
+                <label>Debt Capital Markets</label>
+            </value>
+            <value>
+                <fullName>Debt Products</fullName>
+                <default>false</default>
+                <label>Debt Products</label>
+            </value>
+            <value>
+                <fullName>Debt Solutions</fullName>
+                <default>false</default>
+                <label>Debt Solutions</label>
+            </value>
+            <value>
+                <fullName>E-Commerce</fullName>
+                <default>false</default>
+                <label>E-Commerce</label>
+            </value>
+            <value>
+                <fullName>Equities</fullName>
+                <default>false</default>
+                <label>Equities</label>
+            </value>
+            <value>
+                <fullName>Equity Derivatives</fullName>
+                <default>false</default>
+                <label>Equity Derivatives</label>
+            </value>
+            <value>
+                <fullName>Executive and Support</fullName>
+                <default>false</default>
+                <label>Executive and Support</label>
+            </value>
+            <value>
+                <fullName>Foreign Exchange</fullName>
+                <default>false</default>
+                <label>Foreign Exchange</label>
+            </value>
+            <value>
+                <fullName>GM ROA</fullName>
+                <default>false</default>
+                <label>GM ROA</label>
+            </value>
+            <value>
+                <fullName>Group Operations</fullName>
+                <default>false</default>
+                <label>Group Operations</label>
+            </value>
+            <value>
+                <fullName>IB Enablers &amp; Management</fullName>
+                <default>false</default>
+                <label>IB Enablers &amp; Management</label>
+            </value>
+            <value>
+                <fullName>IB ROA</fullName>
+                <default>false</default>
+                <label>IB ROA</label>
+            </value>
+            <value>
+                <fullName>Instalment Sale VAF</fullName>
+                <default>false</default>
+                <label>Instalment Sale VAF</label>
+            </value>
+            <value>
+                <fullName>Investment Banking - OTHER</fullName>
+                <default>false</default>
+                <label>Investment Banking - OTHER</label>
+            </value>
+            <value>
+                <fullName>Investor Services</fullName>
+                <default>false</default>
+                <label>Investor Services</label>
+            </value>
+            <value>
+                <fullName>LC African Product</fullName>
+                <default>false</default>
+                <label>LC African Product</label>
+            </value>
+            <value>
+                <fullName>Lease Capital VAF</fullName>
+                <default>false</default>
+                <label>Lease Capital VAF</label>
+            </value>
+            <value>
+                <fullName>Local Markets and IRT</fullName>
+                <default>false</default>
+                <label>Local Markets and IRT</label>
+            </value>
+            <value>
+                <fullName>Management and Enablers</fullName>
+                <default>false</default>
+                <label>Management and Enablers</label>
+            </value>
+            <value>
+                <fullName>Money Markets</fullName>
+                <default>false</default>
+                <label>Money Markets</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Other CIB</fullName>
+                <default>false</default>
+                <label>Other CIB</label>
+            </value>
+            <value>
+                <fullName>Other Debtors VAF</fullName>
+                <default>false</default>
+                <label>Other Debtors VAF</label>
+            </value>
+            <value>
+                <fullName>Other GM</fullName>
+                <default>false</default>
+                <label>Other GM</label>
+            </value>
+            <value>
+                <fullName>Prime Service</fullName>
+                <default>false</default>
+                <label>Prime Service</label>
+            </value>
+            <value>
+                <fullName>Principal &amp; Structured Finance</fullName>
+                <default>false</default>
+                <label>Principal &amp; Structured Finance</label>
+            </value>
+            <value>
+                <fullName>Principal Trading</fullName>
+                <default>false</default>
+                <label>Principal Trading</label>
+            </value>
+            <value>
+                <fullName>Rental Capital VAF</fullName>
+                <default>false</default>
+                <label>Rental Capital VAF</label>
+            </value>
+            <value>
+                <fullName>Sales</fullName>
+                <default>false</default>
+                <label>Sales</label>
+            </value>
+            <value>
+                <fullName>Specialised Transactions</fullName>
+                <default>false</default>
+                <label>Specialised Transactions</label>
+            </value>
+            <value>
+                <fullName>Strategic Investments</fullName>
+                <default>false</default>
+                <label>Strategic Investments</label>
+            </value>
+            <value>
+                <fullName>Structured Finance</fullName>
+                <default>false</default>
+                <label>Structured Finance</label>
+            </value>
+            <value>
+                <fullName>T.P.S. OTHER</fullName>
+                <default>false</default>
+                <label>T.P.S. OTHER</label>
+            </value>
+            <value>
+                <fullName>TPS ROA</fullName>
+                <default>false</default>
+                <label>TPS ROA</label>
+            </value>
+            <value>
+                <fullName>Trade</fullName>
+                <default>false</default>
+                <label>Trade</label>
+            </value>
+            <value>
+                <fullName>Unknown Business Area</fullName>
+                <default>false</default>
+                <label>Unknown Business Area</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>GM</controllingFieldValue>
+            <valueName>Cash Equity</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GM</controllingFieldValue>
+            <valueName>Commodities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GM</controllingFieldValue>
+            <valueName>Credit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GM</controllingFieldValue>
+            <valueName>Equity Derivatives</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GM</controllingFieldValue>
+            <valueName>Foreign Exchange</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GM</controllingFieldValue>
+            <valueName>LC African Product</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GM</controllingFieldValue>
+            <valueName>Local Markets and IRT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GM</controllingFieldValue>
+            <valueName>Money Markets</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GM</controllingFieldValue>
+            <valueName>Other GM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GM</controllingFieldValue>
+            <valueName>Principal Trading</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IB</controllingFieldValue>
+            <valueName>Advisory</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IB</controllingFieldValue>
+            <valueName>Capital Markets</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IB</controllingFieldValue>
+            <valueName>Coverage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IB</controllingFieldValue>
+            <valueName>Debt Products</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IB</controllingFieldValue>
+            <valueName>Debt Solutions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IB</controllingFieldValue>
+            <valueName>IB Enablers &amp; Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IB</controllingFieldValue>
+            <valueName>IB ROA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IB</controllingFieldValue>
+            <valueName>Investment Banking - OTHER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IB</controllingFieldValue>
+            <valueName>Management and Enablers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IB</controllingFieldValue>
+            <valueName>Strategic Investments</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OTHER</controllingFieldValue>
+            <valueName>Group Operations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OTHER</controllingFieldValue>
+            <valueName>Other CIB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TPS</controllingFieldValue>
+            <valueName>Cash Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TPS</controllingFieldValue>
+            <valueName>Cash Management and Lending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TPS</controllingFieldValue>
+            <valueName>Investor Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TPS</controllingFieldValue>
+            <valueName>T.P.S. OTHER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TPS</controllingFieldValue>
+            <valueName>TPS ROA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TPS</controllingFieldValue>
+            <valueName>Trade</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VAF</controllingFieldValue>
+            <valueName>Instalment Sale VAF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VAF</controllingFieldValue>
+            <valueName>Lease Capital VAF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VAF</controllingFieldValue>
+            <valueName>Other Debtors VAF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VAF</controllingFieldValue>
+            <valueName>Rental Capital VAF</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

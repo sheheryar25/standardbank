@@ -1,0 +1,104 @@
+.THIS {
+}
+
+.THIS .feed__back-button {
+    color: #0089FF;
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.THIS .feed__icon {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.THIS .feed__back-label {
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 8px;
+}
+
+.THIS .feed__back-button,
+.THIS .feed__header-items {
+    background-color: #fff;
+}
+
+.THIS .feed__header-items:after,
+.THIS .feed__header-items:before,
+.THIS .feed__back-button:after,
+.THIS .feed__back-button:before {
+    position: absolute;
+}
+
+.THIS .feed__header-items:before,
+.THIS .feed__back-button:before {
+    top: -56px;
+    left: -28px;
+    background-color: #f6f6f6;
+    height: 32px;
+    width: 110%;
+}
+
+.THIS .feed__header-items:after,
+.THIS .feed__back-button:after {
+    top: -24px;
+    background-color: #fff;
+    height: 24px;
+    width: 100%;
+}
+
+.THIS .feed__underline {
+    border-bottom: 2px solid #EDEDED;
+}
+
+.THIS .feed__chatter {
+    padding: 0 96px;
+}
+
+.THIS .label.bBody {
+    line-height: 20px;
+}
+
+.THIS .dummyControlsContainer .dummyButtonCallToAction {
+    height: 48px;
+}
+
+@media(max-width: 767px) {
+    .THIS .feed__back-button {
+        position: sticky;
+        margin-bottom: unset;
+        padding-bottom: 16px;
+        z-index: 7001;
+        top: 98px;
+    }
+
+    .THIS .feed__back-button .feed__underline:nth-child(1) {
+        position: sticky;
+        top: 138px;
+    }
+
+    .THIS .feed__back-button:after,
+    .THIS .feed__back-button:before {
+        content: '';
+    }
+}
+
+@media(min-width: 768px) {
+    .THIS .feed__header-items {
+        position: sticky;
+        z-index: 7001;
+        top: 155px;
+    }
+
+    .THIS .feed__header-items:after,
+    .THIS .feed__header-items:before {
+        content: '';
+    }
+}
+
+@media(max-width: 1024px) {
+    .THIS .feed__chatter {
+        padding: unset;
+    }
+}

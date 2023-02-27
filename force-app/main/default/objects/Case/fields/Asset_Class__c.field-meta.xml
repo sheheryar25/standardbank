@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Asset_Class__c</fullName>
+    <externalId>false</externalId>
+    <label>Asset Class</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>FMA_Discrepancy__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bonds</fullName>
+                <default>false</default>
+                <label>Bonds</label>
+            </value>
+            <value>
+                <fullName>Cash Equities (Institutional)</fullName>
+                <default>false</default>
+                <label>Cash Equities (Institutional)</label>
+            </value>
+            <value>
+                <fullName>Cash Equities (Retail)</fullName>
+                <default>false</default>
+                <label>Cash Equities (Retail)</label>
+            </value>
+            <value>
+                <fullName>Commodities (FMA Derivatives)</fullName>
+                <default>false</default>
+                <label>Commodities (FMA Derivatives)</label>
+            </value>
+            <value>
+                <fullName>Commodities (Non FMA Physically Settled)</fullName>
+                <default>false</default>
+                <label>Commodities (Non FMA Physically Settled)</label>
+            </value>
+            <value>
+                <fullName>Credit Derivatives</fullName>
+                <default>false</default>
+                <label>Credit Derivatives</label>
+            </value>
+            <value>
+                <fullName>Equity Derivatives (Retail)</fullName>
+                <default>false</default>
+                <label>Equity Derivatives (Retail)</label>
+            </value>
+            <value>
+                <fullName>Equity Derivatives (Wholesale)</fullName>
+                <default>false</default>
+                <label>Equity Derivatives (Wholesale)</label>
+            </value>
+            <value>
+                <fullName>Foreign Exchange (FMA)</fullName>
+                <default>false</default>
+                <label>Foreign Exchange (FMA)</label>
+            </value>
+            <value>
+                <fullName>Foreign Exchange (Non FMA)</fullName>
+                <default>false</default>
+                <label>Foreign Exchange (Non FMA)</label>
+            </value>
+            <value>
+                <fullName>Interest Rate Derivatives</fullName>
+                <default>false</default>
+                <label>Interest Rate Derivatives</label>
+            </value>
+            <value>
+                <fullName>Money Markets</fullName>
+                <default>false</default>
+                <label>Money Markets</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Bonds</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Cash Equities (Institutional)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Cash Equities (Retail)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Commodities (FMA Derivatives)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Commodities (Non FMA Physically Settled)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Credit Derivatives</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Equity Derivatives (Retail)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Equity Derivatives (Wholesale)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Foreign Exchange (FMA)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Foreign Exchange (Non FMA)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Interest Rate Derivatives</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Money Markets</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

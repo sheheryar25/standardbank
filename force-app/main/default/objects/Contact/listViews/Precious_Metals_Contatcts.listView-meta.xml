@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Precious_Metals_Contatcts</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CONTACT.TITLE</columns>
+    <columns>FULL_NAME</columns>
+    <columns>CONTACT.PHONE1</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>CORE.USERS.FIRST_NAME</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>CONTACT.CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>equals</operation>
+        <value>ABurn,AndrI,BaoD,ChuE,FabiL,GFrit,GrudS,iharr,IkemB,KohM,KTeo,LoR,NaokK,NgC,Spec</value>
+    </filters>
+    <label>Precious Metals Contacts</label>
+    <sharedTo>
+        <roleAndSubordinates>CIB_Precious_Metals_GM_England_Team</roleAndSubordinates>
+    </sharedTo>
+</ListView>

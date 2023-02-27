@@ -1,0 +1,118 @@
+.embeddedServiceLiveAgentStateChatMessage .uiOutputRichText {
+    /*color: #444444;*/
+    font-family: BentonSans;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 16px;
+	width: 137px;
+	}
+	
+/*.embeddedServiceLiveAgentStateChatMenuMessage ul.rich-menu-items {
+	width: 137px;	
+	border-radius: 4px;	
+	background-color: #0089FF;	
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.3);
+}*/
+
+.rich-menu-items li {
+    margin: 7px;
+    width: 137px !important;
+    border-radius: 4px !important;
+    background-color: #0089FF;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.3);
+	border-style: none !important;
+}
+
+.embeddedServiceLiveAgentStateChatMenuMessage .rich-menu-itemOptionIsClicked {
+	display : none !important;
+	width: 137px;	
+	color: #FFFFFF;	
+	font-family: BentonSans !important;	
+	font-size: 10px;	
+	font-weight: 500 !important;	
+	line-height: 10px;	
+	text-align: center;
+}
+
+.embeddedServiceLiveAgentStateChatItem.chatMessage button{
+		width: 137px;	
+		color: #FFFFFF;	
+		font-family: BentonSans !important;	
+		font-size: 10px;	
+		line-height: 14px;	
+		text-align: center;
+}
+
+/*.embeddedServiceLiveAgentStateChatMenuMessage .rich-menu-item{
+	width: 137px;	
+		color: #FFFFFF;	
+		font-family: BentonSans !important;	
+		font-size: 10px;	
+		font-weight: 500 !important;	
+		line-height: 10px;	
+		text-align: center;
+	
+}*/
+
+.embeddedServiceLiveAgentStateChatPlaintextMessageDefaultUI.chasitor.plaintextContent{
+	height: 30px;	
+	width: auto;	
+	border-radius: 8px 8px 0 8px;	
+	background-color: #3366CC !important;
+	color: #FFFFFF;
+}
+
+.embeddedServiceLiveAgentStateChatButtonItem {
+	width: auto !important;
+}
+
+.embeddedServiceLiveAgentStateChatPlaintextMessageDefaultUI.agent.plaintextContent {
+	width: auto;	
+	color: #444444 !important;	
+	font-family: BentonSans;	
+	font-size: 14px;	
+	background-color: #F4F4F4 !important;
+	line-height: 14px;
+}
+
+.embeddedServiceLiveAgentStateChatAvatar{
+	display: none;
+}
+
+.embeddedServiceLiveAgentStateChatPlaintextMessageDefaultUI.plaintextContent{
+	margin-left: 20px !important;
+}
+
+/*.chasitorInputWrapper {
+	display: none;
+}*/
+
+/*.embeddedServiceLiveAgentStateChatHeader .content{
+	display: none !important;
+}*/
+
+.dialog-button-0{
+	background-color: #0089FF !important;
+}
+
+.endChatButton{
+	background-color: #0089FF !important;
+}
+
+.embeddedServiceLiveAgentStateChatItem.agent .nameAndTimeContent {
+    display: none !important;
+}
+
+.embeddedServiceLiveAgentStateChatPlaintextMessageDefaultUI.chasitor.plaintextContent {
+	    height: auto !important;
+}
+
+
+.embeddedServiceLiveAgentStateChatPlaintextMessageDefaultUI.agent.plaintextContent a {
+    color: #0089ff !important;
+}
+.embeddedServiceSidebarMinimizedDefaultUI .minimizedText>.message{
+color:white;
+text-decoration-line: underline;
+  text-decoration-color: white !important;
+}

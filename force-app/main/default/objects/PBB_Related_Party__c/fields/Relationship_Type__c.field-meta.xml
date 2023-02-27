@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Relationship_Type__c</fullName>
+    <description>Relationship between the client and the contact/related party, US-4334</description>
+    <externalId>false</externalId>
+    <label>Relationship Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Member</fullName>
+                <default>false</default>
+                <label>Member</label>
+            </value>
+            <value>
+                <fullName>Contact Person</fullName>
+                <default>false</default>
+                <label>Contact Person</label>
+            </value>
+            <value>
+                <fullName>Spouse</fullName>
+                <default>false</default>
+                <label>Spouse</label>
+            </value>
+            <value>
+                <fullName>Business Representative</fullName>
+                <default>false</default>
+                <label>Business Representative</label>
+            </value>
+            <value>
+                <fullName>Sole Proprietor</fullName>
+                <default>false</default>
+                <label>Sole Proprietor</label>
+            </value>
+            <value>
+                <fullName>Joint Participant</fullName>
+                <default>false</default>
+                <label>Joint Participant</label>
+            </value>
+            <value>
+                <fullName>Agent</fullName>
+                <default>false</default>
+                <label>Agent</label>
+            </value>
+            <value>
+                <fullName>Financial Planner</fullName>
+                <default>false</default>
+                <label>Financial Planner</label>
+            </value>
+            <value>
+                <fullName>Accounting Officer</fullName>
+                <default>false</default>
+                <label>Accounting Officer</label>
+            </value>
+            <value>
+                <fullName>Company Secretary</fullName>
+                <default>false</default>
+                <label>Company Secretary</label>
+            </value>
+            <value>
+                <fullName>Treasurer</fullName>
+                <default>false</default>
+                <label>Treasurer</label>
+            </value>
+            <value>
+                <fullName>Office Bearer</fullName>
+                <default>false</default>
+                <label>Office Bearer</label>
+            </value>
+            <value>
+                <fullName>Shareholder</fullName>
+                <default>false</default>
+                <label>Shareholder</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

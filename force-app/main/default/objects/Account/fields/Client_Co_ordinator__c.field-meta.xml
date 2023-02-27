@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Client_Co_ordinator__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>New CC field created to be used for onboarding purposes (EN-0731)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The suggested Client Coordinator responsible for the Bank’s relationship with the Client. Must be part of the division selected as the Primary Relationship Holder. This can only be changed by the CRM Helpdesk once approved.</inlineHelpText>
+    <label>Proposed Client Coordinator</label>
+    <lookupFilter>
+        <active>false</active>
+        <errorMessage>Only active users and users within the following User Divisions: Corporate Banking, Global Markets, Investment Banking, Transactional Products and Services, General Management, Real Estate can be searched.</errorMessage>
+        <filterItems>
+            <field>User.IsActive</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </filterItems>
+        <filterItems>
+            <field>User.User_Division__c</field>
+            <operation>contains</operation>
+            <value>Corporate Banking, Global Markets, Investment Banking, Transactional Products and Services, General Management, Real Estate</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Accounts</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

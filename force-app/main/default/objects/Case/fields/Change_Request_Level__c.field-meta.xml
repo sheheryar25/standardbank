@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Change_Request_Level__c</fullName>
+    <description>CRM-Enhanced Cases for Change Request Functionality (C Reinecke 2010/08)</description>
+    <externalId>false</externalId>
+    <label>Change Request Level</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Level 1</fullName>
+                <default>false</default>
+                <label>Level 1</label>
+            </value>
+            <value>
+                <fullName>Level 2</fullName>
+                <default>false</default>
+                <label>Level 2</label>
+            </value>
+            <value>
+                <fullName>Level 3</fullName>
+                <default>false</default>
+                <label>Level 3</label>
+            </value>
+            <value>
+                <fullName>1. Minor - Look &amp; Feel</fullName>
+                <default>false</default>
+                <label>1. Minor - Look &amp; Feel</label>
+            </value>
+            <value>
+                <fullName>2. Minor - Business Development</fullName>
+                <default>false</default>
+                <label>2. Minor - Business Development</label>
+            </value>
+            <value>
+                <fullName>3. Minor - IT Development</fullName>
+                <default>false</default>
+                <label>3. Minor - IT Development</label>
+            </value>
+            <value>
+                <fullName>4. Major - IT Development</fullName>
+                <default>false</default>
+                <label>4. Major - IT Development</label>
+            </value>
+            <value>
+                <fullName>Production Incident</fullName>
+                <default>false</default>
+                <label>Production Incident</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Campaign_Cancelled_Status</fullName>
+    <active>true</active>
+    <description>Case#1168 - 11/2011 - Rudolf Niehaus</description>
+    <errorConditionFormula>AND( ISPICKVAL( Cancelled_Reason__c ,&quot;&quot;), ISPICKVAL( Status , &quot;Cancelled&quot;) )</errorConditionFormula>
+    <errorMessage>You must select a Cancelled Reason when the Status is Cancelled</errorMessage>
+</ValidationRule>

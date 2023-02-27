@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Economic_Group_Parent_Client_Name__c</fullName>
+    <description>Group parent client for the economic group client hierarchy as represented in credit risk (Source: Adaptiv)</description>
+    <externalId>false</externalId>
+    <formula>Account__r.Economic_Group_Parent_Client_Name__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Group parent client for the economic group client hierarchy as represented in credit risk</inlineHelpText>
+    <label>Economic Group Parent Client Name</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

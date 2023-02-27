@@ -1,0 +1,4 @@
+<aura:event type="APPLICATION" description="Event template">
+    <aura:attribute name="isQrCode" type="Boolean" default="false" access="public"/>
+    <aura:attribute name="timerState" type="String" default="" access="public"/>
+</aura:event>

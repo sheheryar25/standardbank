@@ -1,0 +1,10 @@
+<design:component label="404 page">
+    <design:attribute name="title" label="Title" />
+    <design:attribute name="subtitle" />
+    <design:attribute name="linkLabel" />
+    <design:attribute name="link" />
+    <design:attribute name="mtitle" label="Title" />
+    <design:attribute name="msubtitle" />
+    <design:attribute name="mlinkLabel" />
+    <design:attribute name="mlink" />
+</design:component>

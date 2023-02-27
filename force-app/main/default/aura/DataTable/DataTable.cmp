@@ -1,0 +1,49 @@
+<!--
+ - Created by Emmanuel Nocks on 2019/11/20.
+ -->
+<aura:component  access="global">
+
+    <!-- attributes -->
+    <aura:attribute name="tempData" type="Object"/>
+    <aura:attribute name="data" type="Object"/>
+    <aura:attribute name="columns" type="List"/>
+    <aura:attribute name="lookUps" type="List"/>
+    <aura:attribute name="showRowNumberColumn" type="boolean" default="false"/>
+    <aura:attribute name="error" type="Object" default="{iserror:false,message:''}"/>
+    <aura:attribute name="dates" type="List" default="[]"/>
+    <aura:attribute name="tableHeight" type="string" default="40px"/>
+    <aura:attribute name="numOfRows" type="integer" default="0"/>
+    <aura:registerEvent name="MeetingEvent" type="c:MeetingConsole_Event"/>
+    <aura:method name="dataTableMethod" action="{!c.dataTableEventEmit}">
+        <aura:attribute name="recordList" type="Object"/>
+    </aura:method>
+
+                <aura:if isTrue="{!v.numOfRows==0}">
+                    <div style="{! 'min-height:'+ v.tableHeight +'; padding-bottom: 8px; text-align: center;'}">
+                        <lightning:datatable
+                                columns="{! v.columns }"
+                                data="{! v.data }"
+                                keyField="id"
+                                hideCheckboxColumn="true"
+                                showRowNumberColumn ="{!v.showRowNumberColumn}"
+                                onrowaction="{! c.handleRowAction }"
+
+                        />
+                        <span>No records to display</span>
+                    </div>
+                    <aura:set attribute="else">
+                        <div style="{! 'min-height:'+ v.tableHeight}">
+                        <lightning:datatable
+                                columns="{! v.columns }"
+                                data="{! v.data }"
+                                keyField="id"
+                                hideCheckboxColumn="true"
+                                showRowNumberColumn ="{!v.showRowNumberColumn}"
+                                onrowaction="{! c.handleRowAction }"
+
+                        />
+                        </div>
+                    </aura:set>
+                </aura:if>
+
+</aura:component>

@@ -1,0 +1,56 @@
+<template>
+    <template if:false={isMobile}>
+        <template if:true={isLoading}>
+            <c-osb-loading-screenlwc></c-osb-loading-screenlwc>
+            loadingscreen
+        </template>
+        <template if:true={showDashboard}>
+            <div class="DashboardSection">
+                <template if:true={showToast}>
+                    toastMessage="Your password has been changed successfully.
+                </template>
+                <template if:true={showToastFail}>
+                    toastMessage="An unexpected error occured.
+                </template>
+                <template if:true={deviceNotRegistered}>
+                    <c-osb-new-device-modal-lwc onupdatedeviceregistered={handleDeviceRegistered} indashboard="true"></c-osb-new-device-modal-lwc>
+                </template>
+                <lightning-layout multiple-rows="true">
+                    <lightning-layout-item size="12">
+                        <c-osb-add-applications onapplication={handleEventAdd}></c-osb-add-applications>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12">
+                        <div class="whiteBackground">
+                            <c-osb-may-be-interested-in-solutions></c-osb-may-be-interested-in-solutions>
+                        </div>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12">
+                        <c-osb-coming-soon-solution></c-osb-coming-soon-solution>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </div>
+        </template>
+        <template if:true={showApplicationMarketPlace}>
+            <div class="ApplicationMarketPlaceSection">
+                <lightning-layout multiple-rows="true">
+                    <lightning-layout-item size="12">
+                        <c-osb-categories-lwc show-mini-mall-filter={showMiniMall} onshowbelow={handleDisplay}></c-osb-categories-lwc>
+                    </lightning-layout-item>
+                    <div if:true={showFeature}>
+                    <lightning-layout-item size="12">
+                        <div class="whiteBackground">
+                            <c-osb-may-be-interested-in-solutions></c-osb-may-be-interested-in-solutions>
+                        </div>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12">
+                        <c-osb-coming-soon-solution></c-osb-coming-soon-solution>
+                    </lightning-layout-item>
+                    </div>
+                </lightning-layout>
+            </div>
+        </template>
+        <template if:true={showInsights}>
+            <c-osb-insights-tab-lwc></c-osb-insights-tab-lwc>
+        </template>
+    </template>
+</template>

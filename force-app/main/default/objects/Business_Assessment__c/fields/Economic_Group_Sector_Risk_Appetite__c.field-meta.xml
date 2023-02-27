@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Economic_Group_Sector_Risk_Appetite__c</fullName>
+    <description>Risk Appetite Status of the Sector from the monthly PMRC process</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Status shows current credit appetite for the given Sector  for the Economic Group. Add – Add exposure, Add ST – Add exposure, subject to certain specific criteria defined by PRMC, Hold – Keep exposure at current levels, Reduce – Reduce exposure.</inlineHelpText>
+    <label>Economic Group Sector Risk Appetite</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Add</fullName>
+                <default>false</default>
+                <label>Add</label>
+            </value>
+            <value>
+                <fullName>Add ST</fullName>
+                <default>false</default>
+                <label>Add ST</label>
+            </value>
+            <value>
+                <fullName>Hold</fullName>
+                <default>false</default>
+                <label>Hold</label>
+            </value>
+            <value>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+                <label>Not Applicable</label>
+            </value>
+            <value>
+                <fullName>Reduce</fullName>
+                <default>false</default>
+                <label>Reduce</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

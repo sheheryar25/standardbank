@@ -1,0 +1,9 @@
+<design:component >
+    <design:attribute name="title" label="Section title" />
+	<design:attribute name="fieldSetIndicator" label="Indicator fieldset name" />
+    <design:attribute name="indicatiorRTName" label="Indicator Record Type developer name" />
+
+    <design:attribute name="fieldSetMetric" label="Metric fieldset name" />
+    <design:attribute name="metricRTName" label="Metric Record Type developer name" />
+
+</design:component>

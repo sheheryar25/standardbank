@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_Change_Client_on_Insight</fullName>
+    <active>true</active>
+    <description>SFP-6394, SFP-6899 - The client cannot be edited or changed on an insight received from Akili</description>
+    <errorConditionFormula>AND(
+NOT(ISNEW()),
+ISCHANGED( Client__c )
+)</errorConditionFormula>
+    <errorMessage>You cannot change the Client of this insight as this is received from the Akili engine</errorMessage>
+</ValidationRule>

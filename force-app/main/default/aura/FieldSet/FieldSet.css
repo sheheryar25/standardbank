@@ -1,0 +1,7 @@
+.THIS.custom_card{
+	border: 1px solid rgb(221, 219, 218);
+	border-radius: .25rem;
+	background-clip: padding-box;
+	box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.10);
+    height:100%;
+}

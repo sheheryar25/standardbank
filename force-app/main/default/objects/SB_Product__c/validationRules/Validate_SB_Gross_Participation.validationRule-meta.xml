@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validate_SB_Gross_Participation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(RecordType.DeveloperName = &apos;Lending_Deposits&apos;,
+ (OR((NOT(ISBLANK(SB_Hold__c))),(NOT(ISBLANK(SB_Sell_Down__c ))))),
+ SB_Gross_Participation__c &lt;&gt;
+ (IF( ISBLANK(SB_Hold__c ) , 0, SB_Hold__c ))
+
++ (IF( ISBLANK(SB_Sell_Down__c ) , 0, SB_Sell_Down__c ))
+)</errorConditionFormula>
+    <errorDisplayField>SB_Gross_Participation__c</errorDisplayField>
+    <errorMessage>SB Gross Participation should be the sum of SB Hold and SB Sell Down</errorMessage>
+</ValidationRule>

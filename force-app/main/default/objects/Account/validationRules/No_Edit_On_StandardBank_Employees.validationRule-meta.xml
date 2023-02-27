@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Edit_On_StandardBank_Employees</fullName>
+    <active>true</active>
+    <description>This validation rule is created to prevent user from editing the Standardbank Employees Client Name</description>
+    <errorConditionFormula>AND( ISCHANGED(Name) ,PRIORVALUE(Name) = &apos;Standard Bank Employees&apos;)</errorConditionFormula>
+    <errorDisplayField>Name</errorDisplayField>
+    <errorMessage>Cannot Change Record Name, Contact your company&apos;s Administrator</errorMessage>
+</ValidationRule>

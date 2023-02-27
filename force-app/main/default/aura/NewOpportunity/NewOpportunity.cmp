@@ -1,0 +1,221 @@
+<aura:component implements="force:LightningQuickActionWithoutHeader,lightning:actionOverride,force:hasSObjectName,force:hasRecordId" controller="NewOpportunity_Ctrlr">
+
+    <aura:attribute name="sObjectName" type="String" access="public"/>
+    <aura:attribute name="recordId" type="String" access="public"/>
+    <aura:attribute name="isQuickAction" type="Boolean" access="public" default="true"/>
+
+    <aura:attribute name="oppRecord" type="Opportunity" access="private" default="{'sobjectType' : 'Opportunity'}"/>
+    <aura:attribute name="isCommBUser" type="Boolean" access="private" default="false"/>
+    <aura:attribute name="stages" type="DTO_SelectOption[]" access="private"/>
+    <aura:attribute name="showAdditionalInformation" type="Boolean" access="private" default="false"/>
+    <aura:attribute name="isLoading" type="Boolean" access="private" default="true"/>
+    <aura:attribute name="requiredFields" type="String[]" access="private" default="Name,AccountId,Lead_Source__c,Description,StageName,Start_Date__c,Probability,CloseDate"/>
+    <aura:attribute name="commBRequiredFields" type="String[]" access="private" default="Name,AccountId,Lead_Source__c,Description,StageName,Start_Date__c,Probability,CloseDate"/>
+    <aura:attribute name="errorMessage" type="String" access="private"/>
+
+    <ltng:require scripts="{!$Resource.UTL_JavaScript}" afterScriptsLoaded="{!c.doInit}"/>
+
+    <aura:handler name="change" value="errorMessage" action="{!c.handleErrorChange}"/>
+
+    <aura:if isTrue="{!v.isLoading}">
+        <lightning:spinner size="medium"/>
+    </aura:if>
+
+    <header class="slds-modal__header">
+        <!-- <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close">
+            <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close" />
+            </svg>
+            <span class="slds-assistive-text">Close</span>
+        </button> -->
+        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">New Opportunity</h2>
+    </header>
+
+    <div class="{!if(v.isQuickAction, '', 'slds-modal__content slds-p-around_medium')}">
+
+        <aura:if isTrue="{! !empty(v.errorMessage)}">
+            <div class="slds-has-divider_bottom">
+                <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_error" role="alert" style="-webkit-justify-content: left; border-radius: 4px;">
+                    <span class="slds-assistive-text">error</span>
+                    <h2 class="slds-text-heading_small slds-p-around_x-small">Review the errors on this page.</h2>
+                </div>
+                <p class="slds-text-color_error slds-p-around_x-small slds-m-bottom_x-small">{!v.errorMessage}</p>
+            </div>
+        </aura:if>
+
+        <div class="slds-form slds-form_compound">
+
+            <aura:if isTrue="{!v.isCommBUser}">
+
+                <div class="slds-section slds-is-open slds-size_1-of-1">
+                    <h3 class="slds-section__title slds-theme_shade">
+                        <span class="slds-truncate slds-p-horizontal_small" title="Opportunity Information">Opportunity Information</span>
+                    </h3>
+
+                    <div aria-hidden="false" class="slds-section__content slds-size_1-of-1">
+
+                        <div class="slds-grid slds-wrap slds-p-around_x-small">
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_x-small">
+                                <c:recordField record="{!v.oppRecord}" fieldName="Name" editMode="true" required="true" aura:id="Name"/>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_x-small">
+                                <c:recordField record="{!v.oppRecord}" fieldName="IsPrivate" editMode="true" aura:id="IsPrivate"/>
+                            </div>
+                        </div>
+
+                        <div class="slds-grid slds-wrap slds-p-around_x-small">
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_x-small">
+                                <c:recordField record="{!v.oppRecord}" fieldName="AccountId" editMode="true" required="true" aura:id="AccountId"/>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_x-small">
+                                <c:recordField record="{!v.oppRecord}" fieldName="Price_Sensitive__c" editMode="true" aura:id="Price_Sensitive__c"/>
+                            </div>
+                        </div>
+
+                        <div class="slds-grid slds-wrap slds-p-around_x-small">
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_x-small">
+                                <c:recordField record="{!v.oppRecord}" fieldName="Lead_Source__c" editMode="true" required="true" aura:id="Lead_Source__c"/>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_x-small">
+                            </div>
+                        </div>
+
+                        <div class="slds-grid slds-wrap slds-p-around_x-small">
+                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                <c:recordField record="{!v.oppRecord}" fieldName="Description" editMode="true" required="true" aura:id="Description"/>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="slds-section slds-is-open">
+                    <h3 class="slds-section__title slds-theme_shade">
+                        <span class="slds-truncate slds-p-horizontal_small" title="Stage Information">Stage Information</span>
+                    </h3>
+
+                    <div aria-hidden="false" class="slds-section__content">
+
+                        <div class="slds-grid slds-wrap slds-p-around_x-small">
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_x-small">
+                                <lightning:select label="Stage" value="{!v.oppRecord.StageName}">
+                                    <aura:iteration var="stage" items="{!v.stages}">
+                                        <option value="{!stage.value}" label="{!stage.label}"/>
+                                    </aura:iteration>
+                                </lightning:select>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_x-small">
+                                <c:recordField record="{!v.oppRecord}" fieldName="Start_Date__c" editMode="true" required="true" aura:id="Start_Date__c"/>
+                            </div>
+                        </div>
+
+                        <div class="slds-grid slds-wrap slds-p-around_x-small">
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_x-small">
+                                <c:recordField record="{!v.oppRecord}" fieldName="Probability" editMode="true" required="true" aura:id="Probability"/>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_x-small">
+                                <c:recordField record="{!v.oppRecord}" fieldName="CloseDate" editMode="true" required="true" aura:id="CloseDate"/>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            <aura:set attribute="else">
+
+                <div class="slds-section slds-is-open slds-size_1-of-1">
+                    <h3 class="slds-section__title slds-theme_shade">
+                        <span class="slds-truncate slds-p-horizontal_small" title="Opportunity Information">Opportunity Information</span>
+                    </h3>
+
+                    <div aria-hidden="false" class="slds-section__content slds-size_1-of-1">
+
+                        <div class="slds-grid slds-wrap slds-p-around_x-small">
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_x-small">
+                                <c:recordField record="{!v.oppRecord}" fieldName="Name" editMode="true" required="true" aura:id="Name"/>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_x-small">
+                            </div>
+                        </div>
+
+                        <div class="slds-grid slds-wrap slds-p-around_x-small">
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_x-small">
+                                <c:recordField record="{!v.oppRecord}" fieldName="AccountId" editMode="true" required="true" aura:id="AccountId"/>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_x-small">
+                                <c:recordField record="{!v.oppRecord}" fieldName="Price_Sensitive__c" editMode="true" aura:id="Price_Sensitive__c"/>
+                            </div>
+                        </div>
+
+                        <div class="slds-grid slds-wrap slds-p-around_x-small">
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_x-small">
+                                <c:recordField record="{!v.oppRecord}" fieldName="Lead_Source__c" editMode="true" required="true" aura:id="Lead_Source__c"/>
+                            </div>
+                        </div>
+
+                        <div class="slds-grid slds-wrap slds-p-around_x-small">
+                            <div class="slds-col slds-size_1-of-1 slds-p-horizontal_x-small">
+                                <c:recordField record="{!v.oppRecord}" fieldName="Description" editMode="true" required="true" aura:id="Description"/>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="slds-section slds-is-open">
+                    <h3 class="slds-section__title slds-theme_shade">
+                        <span class="slds-truncate slds-p-horizontal_small" title="Stage Information">Stage Information</span>
+                    </h3>
+
+                    <div aria-hidden="false" class="slds-section__content">
+
+                        <div class="slds-grid slds-wrap slds-p-around_x-small">
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_x-small">
+                                <lightning:select label="Stage" value="{!v.oppRecord.StageName}" required="true">
+                                    <aura:iteration var="stage" items="{!v.stages}">
+                                        <option value="{!stage.value}" label="{!stage.label}"/>
+                                    </aura:iteration>
+                                </lightning:select>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_x-small">
+                                <c:recordField record="{!v.oppRecord}" fieldName="Start_Date__c" editMode="true" required="true" aura:id="Start_Date__c"/>
+                            </div>
+                        </div>
+
+                        <div class="slds-grid slds-wrap slds-p-around_x-small">
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_x-small">
+                                <c:recordField record="{!v.oppRecord}" fieldName="Probability" editMode="true" required="true" aura:id="Probability"/>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-2 slds-p-horizontal_x-small">
+                                <c:recordField record="{!v.oppRecord}" fieldName="CloseDate" editMode="true" required="true" aura:id="CloseDate"/>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </aura:set>
+
+            </aura:if>
+
+            <aura:if isTrue="{! v.showAdditionalInformation}">
+                <div class="slds-section slds-is-open">
+                    <h3 class="slds-section__title slds-theme_shade">
+                        <span class="slds-truncate slds-p-horizontal_small" title="Additional Information">Additional Information</span>
+                    </h3>
+
+                    <div aria-hidden="false" class="slds-section__content" aura:id="additionalSection">
+
+                    </div>
+
+                </div>
+            </aura:if>
+
+            <footer class="slds-align_absolute-center">
+                <lightning:button variant="neutral" label="Cancel" onclick="{!c.onCancel}"/>
+                <lightning:button variant="brand" type="submit" label="Save" onclick="{!c.onSave}"/>
+            </footer>
+
+        </div>
+    </div>
+</aura:component>

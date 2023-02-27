@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Strategy__c</fullName>
+    <description>SFP-9319 [c] This field is introduced for CVCA feature to allow printable view of the Client Page similar to the CVCA Template</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the frequency with which the client must be contacted, the designated manner of contact and the appropriate purpose (should there be a predefined frequency and set objectives)</inlineHelpText>
+    <label>Contact Strategy</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

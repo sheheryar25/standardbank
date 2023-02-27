@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ensure_Service_Type_is_selected_on_Case</fullName>
+    <active>true</active>
+    <description>Ensure that a Service Type record is selected when the Case is closed</description>
+    <errorConditionFormula>ISPICKVAL(Status, &quot;Resolved&quot;) &amp;&amp; ISBLANK(Service_Type_Name__c )</errorConditionFormula>
+    <errorMessage>Please select a Service Type Name before Resolving the Case.</errorMessage>
+</ValidationRule>

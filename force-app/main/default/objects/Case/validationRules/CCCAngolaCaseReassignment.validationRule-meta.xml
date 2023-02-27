@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCCAngolaCaseReassignment</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF(
+            AND(RecordType.DeveloperName=&apos;CCC_Angola&apos;,
+            ISCHANGED( OwnerId ),
+            AND(
+            TEXT(Owner:User.Business_Unit__c) &lt;&gt; &apos;Second Line Support&apos;,
+            TEXT(Owner:User.Business_Unit__c) &lt;&gt; &apos;Branch&apos;,
+            Owner:User.UserRole.DeveloperName &lt;&gt; &apos;Personal_Business_Banking&apos;,
+            Owner:User.UserRole.DeveloperName &lt;&gt; &apos;PBB_Angola_Country&apos; ,
+            Owner:User.UserRole.DeveloperName &lt;&gt; &apos;PBB_Customer_Contact_Centre_Angola_Division&apos;,
+            Owner:User.UserRole.DeveloperName &lt;&gt; &apos;PBB_Customer_Contact_Centre_Angola_Business_Unit&apos;,
+            Owner:User.UserRole.DeveloperName &lt;&gt; &apos;PBB_Customer_Contact_Centre_Angola_Team&apos;,
+            Owner:User.UserRole.DeveloperName &lt;&gt; &apos;CIB_Customer_Contact_Centre_Angola_Division&apos; ,
+            Owner:User.UserRole.DeveloperName &lt;&gt; &apos;CIB_Customer_Contact_Centre_Angola_Business_Unit&apos; ,
+            Owner:User.UserRole.DeveloperName &lt;&gt; &apos;CIB_Customer_Contact_Centre_Angola_Team&apos;,
+            Owner:User.UserRole.DeveloperName &lt;&gt; &apos;Enterprise_Direct_Customer_Contact_Centre_Angola_Division&apos; ,
+            Owner:User.UserRole.DeveloperName &lt;&gt; &apos;Enterprise_Direct_Customer_Contact_Centre_Angola_Business_Unit&apos; ,
+            Owner:User.UserRole.DeveloperName &lt;&gt; &apos;Enterprise_Direct_Customer_Contact_Centre_Angola_Team&apos; ,
+            Owner:User.UserRole.DeveloperName &lt;&gt; &apos;Service_Team_Customer_Contact_Centre_Angola_Division&apos;,
+            Owner:User.UserRole.DeveloperName &lt;&gt; &apos;Service_Team_Customer_Contact_Centre_Angola_Business_Unit&apos;,
+            Owner:User.UserRole.DeveloperName &lt;&gt; &apos;Service_Team_Customer_Contact_Centre_Angola_Team&apos;,
+            IF((CONTAINS(Owner:Queue.DeveloperName,&quot;Angola&quot;)), false, true),
+            IF((CONTAINS(Owner:Queue.DeveloperName,&quot;Escalated_Angola&quot;)), false, true)
+            )
+            )
+            ,true
+            , false)</errorConditionFormula>
+    <errorMessage>You can transfer this case to Angola CCC team members only.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,7 @@
+.THIS .red-negative{
+    color: token(SBRedNegative);
+}
+
+.THIS {
+    height: 100%;
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Company_Code__c</fullName>
+    <description>SGPRT- 3817 Field used to capture Company Code.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Values found in FMI file mapped to the Legal Entity of Booking values.</inlineHelpText>
+    <label>Company Code</label>
+    <precision>4</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

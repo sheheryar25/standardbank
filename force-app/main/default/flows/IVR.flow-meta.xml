@@ -1,0 +1,2285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <choices>
+        <name>Category1</name>
+        <choiceText>&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;&lt;B&gt;Início&lt;/B&gt;&lt;/FONT&gt;&lt;/DIV&gt;</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Início</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>Category2</name>
+        <choiceText>&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;&lt;B&gt;Encerramento&lt;/B&gt;&lt;/FONT&gt;&lt;/DIV&gt;</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Encerramento</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>Category3</name>
+        <choiceText>&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;&lt;B&gt;Aplicação indisponível&lt;/B&gt;&lt;/FONT&gt;&lt;/DIV&gt;</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Aplicação indisponível</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>Category4</name>
+        <choiceText>&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:12px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;Chamada sem acção&lt;/FONT&gt;&lt;/DIV&gt;</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Chamada sem acção</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Category 4</description>
+        <name>CCC_Call_that_cannot_proceed_further</name>
+        <choiceText>Call that cannot proceed further</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Call that cannot proceed further</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Category 2</description>
+        <name>CCC_Ending_a_call</name>
+        <choiceText>Ending a call</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Ending a call</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Category 1</description>
+        <name>CCC_Reception</name>
+        <choiceText>Reception</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Reception</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Category 3</description>
+        <name>CCC_System_downtime</name>
+        <choiceText>System downtime</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>System downtime</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>English Language</description>
+        <name>Lang_English</name>
+        <choiceText>English</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>English</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Mandarin Language</description>
+        <name>Lang_Mandarin</name>
+        <choiceText>Mandarin</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Mandarin</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <description>Portuguese Language</description>
+        <name>Lang_Portuguese</name>
+        <choiceText>Portuguese</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Portuguese</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>No</name>
+        <choiceText>No</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>No</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>Yes</name>
+        <choiceText>Yes</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Yes</stringValue>
+        </value>
+    </choices>
+    <decisions>
+        <description>Prompt user to select the Category &amp; language of CCC Scripts</description>
+        <name>CCC_Category_Choice</name>
+        <label>Category</label>
+        <locationX>789</locationX>
+        <locationY>1143</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Chosen_Category_CCC_Reception_english</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>CCC_Category_picklist</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>CCC_Reception</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>LanguageChoice_CCC</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Lang_English</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CCC_Reception_Eng</targetReference>
+            </connector>
+            <label>Chosen Category CCC = Reception &amp; english</label>
+        </rules>
+        <rules>
+            <name>CCC_eng_chosen_category_ending_a_call</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>CCC_Category_picklist</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>CCC_Ending_a_call</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>LanguageChoice_CCC</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Lang_English</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CCC_Eng_Ending_a_call</targetReference>
+            </connector>
+            <label>Chosen Category = Ending a call</label>
+        </rules>
+        <rules>
+            <name>CCC_eng_chosen_category_system_downtime</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>CCC_Category_picklist</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>CCC_System_downtime</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>LanguageChoice_CCC</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Lang_English</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CCC_Eng_System_downtime</targetReference>
+            </connector>
+            <label>Chosen Category = System downtime</label>
+        </rules>
+        <rules>
+            <name>CCC_eng_chosen_category_call_that_cannot_proceed_further</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>CCC_Category_picklist</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>CCC_Call_that_cannot_proceed_further</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>LanguageChoice_CCC</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Lang_English</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CCC_Eng_Call_that_cannot_proceed_further</targetReference>
+            </connector>
+            <label>Chosen Category = Call that cannot proceed further</label>
+        </rules>
+        <rules>
+            <name>Chosen_Category_Reception_mandarin</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>CCC_Category_picklist</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>CCC_Reception</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>LanguageChoice_CCC</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Lang_Mandarin</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CCC_Reception_Mandarin</targetReference>
+            </connector>
+            <label>Chosen Category = Reception &amp; mandarin</label>
+        </rules>
+        <rules>
+            <name>Chosen_Category_Ending_a_call_mandarin</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>CCC_Category_picklist</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>CCC_Ending_a_call</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>LanguageChoice_CCC</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Lang_Mandarin</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CCC_Ending_a_call_Mandarin</targetReference>
+            </connector>
+            <label>Chosen Category = Ending a call &amp; mandarin</label>
+        </rules>
+        <rules>
+            <name>Chosen_Category_System_downtime_mandarin</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>CCC_Category_picklist</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>CCC_System_downtime</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>LanguageChoice_CCC</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Lang_Mandarin</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CCC_System_downtime_Mandarin</targetReference>
+            </connector>
+            <label>Chosen Category = System downtime &amp; mandarin</label>
+        </rules>
+        <rules>
+            <name>Chosen_Category_Call_that_cannot_proceed_further_mandarin</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>CCC_Category_picklist</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>CCC_Call_that_cannot_proceed_further</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>LanguageChoice_CCC</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Lang_Mandarin</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CCC_Call_that_cannot_proceed_further_Mandarin</targetReference>
+            </connector>
+            <label>Chosen Category = Call that cannot proceed further &amp; mandarin</label>
+        </rules>
+        <rules>
+            <name>Chosen_Category_Reception_portuguese</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>CCC_Category_picklist</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>CCC_Reception</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>LanguageChoice_CCC</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Lang_Portuguese</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CCC_Reception_portuguese</targetReference>
+            </connector>
+            <label>Chosen Category = Reception &amp; portuguese</label>
+        </rules>
+        <rules>
+            <name>Chosen_Category_Ending_a_call_portuguese</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>CCC_Category_picklist</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>CCC_Ending_a_call</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>LanguageChoice_CCC</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Lang_Portuguese</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CCC_Ending_a_call_portuguese</targetReference>
+            </connector>
+            <label>Chosen Category = Ending a call &amp; portuguese</label>
+        </rules>
+        <rules>
+            <name>Chosen_Category_System_downtime_portuguese</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>CCC_Category_picklist</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>CCC_System_downtime</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>LanguageChoice_CCC</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Lang_Portuguese</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CCC_System_Downtime_portuguese</targetReference>
+            </connector>
+            <label>Chosen Category = System downtime &amp; portuguese</label>
+        </rules>
+        <rules>
+            <name>Chosen_Category_Call_that_cannot_proceed_further_portuguese</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>CCC_Category_picklist</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>CCC_Call_that_cannot_proceed_further</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>LanguageChoice_CCC</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Lang_Portuguese</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CCC_Call_that_cannot_proceed_further_portuguese</targetReference>
+            </connector>
+            <label>Chosen Category = Call that cannot proceed further &amp; portuguese</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>CIB_Category_Choice</name>
+        <label>Category</label>
+        <locationX>2078</locationX>
+        <locationY>1087</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Chosen_Category_CIB_Client_Access_Reception_english</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>LanguageChoice_CIB_Client_Access</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Lang_English</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>CIB_Client_Access_Category_picklist</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>CCC_Reception</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CIB_Client_Access_Reception_Eng</targetReference>
+            </connector>
+            <label>Chosen Category CIB/Client Access = Reception &amp; english</label>
+        </rules>
+        <rules>
+            <name>Chosen_Category_CIB_Client_Access_Ending_a_call_english</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>LanguageChoice_CIB_Client_Access</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Lang_English</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>CIB_Client_Access_Category_picklist</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>CCC_Ending_a_call</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CIB_Client_Access_Ending_a_call_Eng</targetReference>
+            </connector>
+            <label>Chosen Category CIB/Client Access = Ending a call &amp; english</label>
+        </rules>
+        <rules>
+            <name>Chosen_Category_CIB_Client_Access_System_downtime_english</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>LanguageChoice_CIB_Client_Access</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Lang_English</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>CIB_Client_Access_Category_picklist</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>CCC_System_downtime</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CIB_Client_Access_System_downtime_Eng</targetReference>
+            </connector>
+            <label>Chosen Category CIB/Client Access = System downtime &amp; english</label>
+        </rules>
+        <rules>
+            <name>Chosen_Category_CIB_Client_Access_Call_that_cannot_proceed_further_english</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>LanguageChoice_CIB_Client_Access</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Lang_English</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>CIB_Client_Access_Category_picklist</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>CCC_Call_that_cannot_proceed_further</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CIB_Client_Access_Call_that_cannot_proceed_further_Eng</targetReference>
+            </connector>
+            <label>Chosen Category CIB/Client Access = Call that cannot proceed further &amp; english</label>
+        </rules>
+        <rules>
+            <name>Chosen_Category_CIB_Client_Access_Reception_portuguese</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>LanguageChoice_CIB_Client_Access</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Lang_Portuguese</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>CIB_Client_Access_Category_picklist</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>CCC_Reception</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CIB_Client_Access_Reception_Portuguese</targetReference>
+            </connector>
+            <label>Chosen Category CIB/Client Access = Reception &amp; portuguese</label>
+        </rules>
+        <rules>
+            <name>Chosen_Category_CIB_Client_Access_Ending_a_call_portuguese</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>LanguageChoice_CIB_Client_Access</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Lang_Portuguese</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>CIB_Client_Access_Category_picklist</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>CCC_Ending_a_call</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CIB_Client_Access_Ending_a_call_Portuguese</targetReference>
+            </connector>
+            <label>Chosen Category CIB/Client Access = Ending a call &amp; portuguese</label>
+        </rules>
+        <rules>
+            <name>Chosen_Category_CIB_Client_Access_System_downtime_portuguese</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>LanguageChoice_CIB_Client_Access</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Lang_Portuguese</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>CIB_Client_Access_Category_picklist</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>CCC_System_downtime</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CIB_Client_Access_System_downtime_Portuguese</targetReference>
+            </connector>
+            <label>Chosen Category CIB/Client Access = System downtime &amp; portuguese</label>
+        </rules>
+        <rules>
+            <name>Chosen_Category_CIB_Client_Access_Call_that_cannot_proceed_further_portuguese</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>LanguageChoice_CIB_Client_Access</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Lang_Portuguese</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>CIB_Client_Access_Category_picklist</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>CCC_Call_that_cannot_proceed_further</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CIB_Client_Access_Call_that_cannot_proceed_further_Portuguese</targetReference>
+            </connector>
+            <label>Chosen Category CIB/Client Access = Call that cannot proceed further &amp; portuguese</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Prompt user to select the Category &amp; language of ED Scripts</description>
+        <name>ED_Category_Choice</name>
+        <label>Category</label>
+        <locationX>1360</locationX>
+        <locationY>1128</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Chosen_Category_ED_Reception_english</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ED_Category_picklist</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>CCC_Reception</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>LanguageChoice_ED</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Lang_English</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ED_Reception_Eng</targetReference>
+            </connector>
+            <label>Chosen Category ED = Reception &amp; english</label>
+        </rules>
+        <rules>
+            <name>Chosen_Category_ED_Ending_a_call_english</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ED_Category_picklist</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>CCC_Ending_a_call</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>LanguageChoice_ED</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Lang_English</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ED_Eng_Ending_a_call</targetReference>
+            </connector>
+            <label>Chosen Category ED = Ending a call &amp; english</label>
+        </rules>
+        <rules>
+            <name>Chosen_Category_ED_System_downtime_english</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ED_Category_picklist</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>CCC_System_downtime</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>LanguageChoice_ED</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Lang_English</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ED_Eng_System_downtime</targetReference>
+            </connector>
+            <label>Chosen Category ED = System downtime &amp; english</label>
+        </rules>
+        <rules>
+            <name>Chosen_Category_ED_Call_that_cannot_proceed_further_english</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ED_Category_picklist</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>CCC_Call_that_cannot_proceed_further</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>LanguageChoice_ED</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Lang_English</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ED_Eng_Call_that_cannot_proceed_further</targetReference>
+            </connector>
+            <label>Chosen Category ED = Call that cannot proceed further &amp; english</label>
+        </rules>
+        <rules>
+            <name>Chosen_Category_ED_Reception_mandarin</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ED_Category_picklist</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>CCC_Reception</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>LanguageChoice_ED</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Lang_Mandarin</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ED_Reception_Mandarin</targetReference>
+            </connector>
+            <label>Chosen Category ED = Reception &amp; mandarin</label>
+        </rules>
+        <rules>
+            <name>Chosen_Category_ED_Ending_a_call_mandarin</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ED_Category_picklist</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>CCC_Ending_a_call</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>LanguageChoice_ED</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Lang_Mandarin</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ED_Ending_a_call_Mandarin</targetReference>
+            </connector>
+            <label>Chosen Category ED = Ending a call &amp; mandarin</label>
+        </rules>
+        <rules>
+            <name>Chosen_Category_ED_System_downtime_mandarin</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ED_Category_picklist</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>CCC_System_downtime</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>LanguageChoice_ED</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Lang_Mandarin</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ED_System_downtime_Mandarin</targetReference>
+            </connector>
+            <label>Chosen Category ED = System downtime &amp; mandarin</label>
+        </rules>
+        <rules>
+            <name>Chosen_Category_ED_Call_that_cannot_proceed_further_mandarin</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ED_Category_picklist</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>CCC_Call_that_cannot_proceed_further</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>LanguageChoice_ED</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Lang_Mandarin</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ED_Call_that_cannot_proceed_further_Mandarin</targetReference>
+            </connector>
+            <label>Chosen Category ED = Call that cannot proceed further &amp; mandarin</label>
+        </rules>
+        <rules>
+            <name>Chosen_Category_ED_Reception_portuguese</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ED_Category_picklist</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>CCC_Reception</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>LanguageChoice_ED</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Lang_Portuguese</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ED_Reception_portuguese</targetReference>
+            </connector>
+            <label>Chosen Category ED = Reception &amp; portuguese</label>
+        </rules>
+        <rules>
+            <name>Chosen_Category_ED_Ending_a_call_portuguese</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ED_Category_picklist</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>CCC_Ending_a_call</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>LanguageChoice_ED</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Lang_Portuguese</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ED_Ending_a_call_portuguese</targetReference>
+            </connector>
+            <label>Chosen Category ED = Ending a call &amp; portuguese</label>
+        </rules>
+        <rules>
+            <name>Chosen_Category_ED_System_downtime_portuguese</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ED_Category_picklist</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>CCC_System_downtime</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>LanguageChoice_ED</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Lang_Portuguese</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ED_System_Downtime_portuguese</targetReference>
+            </connector>
+            <label>Chosen Category ED = System downtime &amp; portuguese</label>
+        </rules>
+        <rules>
+            <name>Chosen_Category_ED_Call_that_cannot_proceed_further_portuguese</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ED_Category_picklist</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>CCC_Call_that_cannot_proceed_further</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>LanguageChoice_ED</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Lang_Portuguese</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ED_Call_that_cannot_proceed_further_portuguese</targetReference>
+            </connector>
+            <label>Chosen Category ED = Call that cannot proceed further &amp; portuguese</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Route logged in user to the correct Call Script section (CCC, ED, CIB/Client Access)</description>
+        <name>Route_User</name>
+        <label>Route User</label>
+        <locationX>1340</locationX>
+        <locationY>297</locationY>
+        <defaultConnectorLabel>[Default Outcome]</defaultConnectorLabel>
+        <rules>
+            <name>User_CCC</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>UserRoleDevName</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>PBB_Customer_Contact_Centre_Angola</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Select_Language_Screen_CCC</targetReference>
+            </connector>
+            <label>User = CCC</label>
+        </rules>
+        <rules>
+            <name>User_ED</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>UserRoleDevName</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Enterprise_Direct_Customer_Contact_Centre_Angola</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Select_Language_Screen_ED</targetReference>
+            </connector>
+            <label>User = ED</label>
+        </rules>
+        <rules>
+            <name>User_CIB_Client_Access</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>UserRoleDevName</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>CIB_Customer_Contact_Centre_Angola</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Select_Language_Screen_CIB_Client_Access</targetReference>
+            </connector>
+            <label>User = CIB/Client Access</label>
+        </rules>
+        <rules>
+            <name>User_Not_Permitted</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>UserRoleDevName</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>PBB_Customer_Contact_Centre_Angola_Division</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>UserRoleDevName</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>PBB_Customer_Contact_Centre_Angola_Business_Unit</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>UserRoleDevName</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Enterprise_Direct_Customer_Contact_Centre_Angola_Business_Unit</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>UserRoleDevName</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Enterprise_Direct_Customer_Contact_Centre_Angola_Division</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>UserRoleDevName</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>CIB_Customer_Contact_Centre_Angola_Division</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>UserRoleDevName</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>CIB_Customer_Contact_Centre_Angola_Business_Unit</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Not_Permitted</targetReference>
+            </connector>
+            <label>User = Not Permitted</label>
+        </rules>
+    </decisions>
+    <formulas>
+        <description>Country of current user</description>
+        <name>UserCountry</name>
+        <dataType>String</dataType>
+        <expression>{!$User.Country}</expression>
+    </formulas>
+    <formulas>
+        <description>Full Name of logged in user</description>
+        <name>UserFullName</name>
+        <dataType>String</dataType>
+        <expression>{!$User.FirstName} + &quot; &quot; + {!$User.LastName}</expression>
+    </formulas>
+    <formulas>
+        <description>Developer Name of the role of the User currently logged in to Flow.</description>
+        <name>UserRoleDevName</name>
+        <dataType>String</dataType>
+        <expression>{!$UserRole.DeveloperName}</expression>
+    </formulas>
+    <interviewLabel>IVR {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Call Script</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <screens>
+        <name>CCC_Call_that_cannot_proceed_further_Mandarin</name>
+        <label>Call that cannot proceed further</label>
+        <locationX>479</locationX>
+        <locationY>2232</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>CCC_Call_that_cannot_proceed_further_Mandarin_text</name>
+            <fieldText>&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div align=&quot;LEFT&quot;&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Call that cannot proceed&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;&lt;u&gt;呼叫无法&lt;/u&gt;&lt;u&gt;继续进行&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;很抱歉，我们无法为您提供进一步的服务.&amp;nbsp;我们将结束此通话，祝您有美好的一天/晚安.&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>CCC_Call_that_cannot_proceed_further_portuguese</name>
+        <label>Chamada sem acção</label>
+        <locationX>713</locationX>
+        <locationY>2811</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>Category4_Heading</name>
+            <fieldText>&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:14px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;&lt;B&gt;Chamada sem acção&lt;/B&gt;&lt;/FONT&gt;&lt;/DIV&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Category4_Blank</name>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Category4_Script</name>
+            <fieldText>&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div align=&quot;LEFT&quot;&gt;
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Uma vez não é possível dar seguimento à sua solicitação, informamos que concluir a ligação.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Agradecemos o seu contacto e desejamos-lhe a continuação de uma excelente tarde!&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>CCC_Category</name>
+        <label>Category</label>
+        <locationX>795</locationX>
+        <locationY>971</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>CCC_Category_Choice</targetReference>
+        </connector>
+        <fields>
+            <name>CCC_Category_picklist</name>
+            <choiceReferences>CCC_Reception</choiceReferences>
+            <choiceReferences>CCC_Ending_a_call</choiceReferences>
+            <choiceReferences>CCC_System_downtime</choiceReferences>
+            <choiceReferences>CCC_Call_that_cannot_proceed_further</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Category</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>CCC_Ending_a_call_Mandarin</name>
+        <label>Ending a call</label>
+        <locationX>345</locationX>
+        <locationY>2000</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>CCC_System_downtime_Mandarin</targetReference>
+        </connector>
+        <fields>
+            <name>CCC_Ending_a_call_Mandarin_text</name>
+            <fieldText>&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div align=&quot;LEFT&quot;&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Ending a call&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;&lt;u&gt;结&lt;/u&gt;&lt;u&gt;束通&lt;/u&gt;&lt;u&gt;话&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;请问您还需要其他帮助吗？&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;是的 相应地帮助客户&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;不：&amp;ldquo;X&amp;rdquo;先生/小姐，感谢您致电安哥拉标准银行。请保持在线评价我的&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;祝您有美好的一天/晚安.再见服务.&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>CCC_Ending_a_call_portuguese</name>
+        <label>Encerramento</label>
+        <locationX>598</locationX>
+        <locationY>2560</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>CCC_System_Downtime_portuguese</targetReference>
+        </connector>
+        <fields>
+            <name>Category2_Heading</name>
+            <fieldText>&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:14px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;&lt;B&gt;Encerramento&lt;/B&gt;&lt;/FONT&gt;&lt;/DIV&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Category2_Blank</name>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Category2_Script</name>
+            <fieldText>&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div align=&quot;LEFT&quot;&gt;
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Sr.(a) X, Tem mais alguma quest&amp;atilde;o em que podemos ser uteis?&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Sim: Dar resolu&amp;ccedil;&amp;atilde;o ao novo tema;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;N&amp;atilde;o: &amp;ldquo;Sr. /Sra &amp;rdquo;X&amp;ldquo;, o Standard Bank agradece o seu contacto e prefer&amp;ecirc;ncia, por favor pedimos que se mantenha em linha para responder a uma breve quest&amp;atilde;o sobre o meu atendimento. A sua opini&amp;atilde;o &amp;eacute; muito importante para n&amp;oacute;s, desejamos-ihe a continua&amp;ccedil;&amp;atilde;o de um(a) excelente tarde.&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>CCC_Eng_Call_that_cannot_proceed_further</name>
+        <label>Call that cannot proceed further</label>
+        <locationX>184</locationX>
+        <locationY>1483</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>CCC_Eng_Call_that_cannot_proceed_further_text</name>
+            <fieldText>&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p&gt;&lt;strong&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;&lt;span style=&quot;font-size: 11pt;&quot;&gt;Call that cannot proceed further&lt;/span&gt;&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;&lt;span style=&quot;font-size: 11pt;&quot;&gt;Unfortunately we are not able to help you further.&amp;nbsp; We will end this call, please have a good day&lt;/span&gt;&lt;span style=&quot;font-size: 11pt;&quot;&gt; / evening&lt;/span&gt;&lt;span style=&quot;font-size: 11pt;&quot;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>CCC_Eng_Ending_a_call</name>
+        <label>Ending a call</label>
+        <locationX>184</locationX>
+        <locationY>1232</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>CCC_Eng_System_downtime</targetReference>
+        </connector>
+        <fields>
+            <name>CCC_Eng_Ending_a_call_text</name>
+            <fieldText>&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p&gt;&lt;strong&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Ending a call&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Is there any other question we can help you with?&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;&lt;strong&gt;Yes&lt;/strong&gt;: help the customer accordingly &amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;&lt;strong&gt;No: &lt;/strong&gt;Mr./Mrs. &amp;ldquo;X&amp;rdquo; Thank you very much for calling Standard Bank Angola. Kindly stay on the line to rate my service.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Have a nice day / good night.&lt;/span&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>CCC_Eng_System_downtime</name>
+        <label>System downtime</label>
+        <locationX>184</locationX>
+        <locationY>1359</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>CCC_Eng_Call_that_cannot_proceed_further</targetReference>
+        </connector>
+        <fields>
+            <name>CCC_Eng_System_downtime_text</name>
+            <fieldText>&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p&gt;&lt;strong&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;System downtime&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Thank you for calling. The service you requested is temporarily unavailable due to technical difficulties. Please call later!&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Alternatively, please leave your phone number and our agents will call you back.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Apologies for any inconvenience.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Have a nice day / good night.&lt;/span&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>CCC_Reception_Eng</name>
+        <label>Reception</label>
+        <locationX>180</locationX>
+        <locationY>1104</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>CCC_Eng_Ending_a_call</targetReference>
+        </connector>
+        <fields>
+            <name>CCC_Reception_Eng_Text</name>
+            <fieldText>&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div align=&quot;LEFT&quot;&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Reception&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Good morning/ afternoon/ evening, my name is {!UserFullName}, how can I help you?&lt;/span&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;&lt;strong&gt;&lt;u&gt;Caller authentication &lt;/u&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Can I have your name please?&lt;/span&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;For security reasons can you please give us:&lt;/span&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Your account number&lt;/span&gt;&lt;/li&gt;
+	&lt;li style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Your date of birth&lt;/span&gt;&lt;/li&gt;
+	&lt;li style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Your ID number&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Additionally one of the following:&lt;/span&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Your father&amp;acute;s name&lt;/span&gt;&lt;/li&gt;
+	&lt;li style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Your mother&amp;acute;s name&lt;/span&gt;&lt;/li&gt;
+	&lt;li style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Your tax ID number&lt;/span&gt;&lt;/li&gt;
+	&lt;li style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;What is your debit card (multicaixa) number (can be three any positions)&lt;/span&gt;&lt;/li&gt;
+	&lt;li style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;What is your phone number registered in the Bank (complete number)&lt;/span&gt;&lt;/li&gt;
+	&lt;li style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;What is your fiscal number (can be three any positions)&lt;/span&gt;&lt;/li&gt;
+	&lt;li style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;What is your number of client (can be three any positions)&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Always help the customer by addressing him/her by his/her name.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Use Mr./MRs. accordingly&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>CCC_Reception_Mandarin</name>
+        <label>Reception</label>
+        <locationX>297</locationX>
+        <locationY>1890</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>CCC_Ending_a_call_Mandarin</targetReference>
+        </connector>
+        <fields>
+            <name>CCC_Reception_Mandarin_text</name>
+            <fieldText>&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div align=&quot;LEFT&quot;&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Reception&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;u&gt;前台&lt;/u&gt;&lt;/p&gt;
+
+&lt;p&gt;早上好 / 下午好 / 晚上好，我的名字是 &amp;ldquo;名称和姓氏&amp;rdquo;，请问有什么可以帮助您？&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;&lt;u&gt;&lt;span style=&quot;font-size: 12pt; font-family: Calibri, sans-serif;&quot;&gt;Caller authentication&amp;nbsp;&lt;/span&gt;&lt;/u&gt;&lt;/b&gt;&lt;/p&gt;
+
+&lt;p&gt;身份核实&lt;/p&gt;
+
+&lt;p&gt;请告知您的姓名？&lt;/p&gt;
+
+&lt;p&gt;出于安全考虑，请告知：&lt;/p&gt;
+
+&lt;p&gt;&amp;bull;您的账户号码&lt;/p&gt;
+
+&lt;p&gt;&amp;bull;您的出生日期&lt;/p&gt;
+
+&lt;p&gt;&amp;bull;您的身份证号码&lt;/p&gt;
+
+&lt;p&gt;附加信息：&lt;/p&gt;
+
+&lt;p&gt;&amp;bull;您父亲的名字&lt;/p&gt;
+
+&lt;p&gt;&amp;bull;您母亲的名字&lt;/p&gt;
+
+&lt;p&gt;&amp;bull;您的税号&lt;/p&gt;
+
+&lt;p&gt;在通话过程中，始终称呼客户 用他/她的姓 加上相对应的 先生/女士&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>CCC_Reception_portuguese</name>
+        <label>Início</label>
+        <locationX>560</locationX>
+        <locationY>2435</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>CCC_Ending_a_call_portuguese</targetReference>
+        </connector>
+        <fields>
+            <name>Category1_Heading</name>
+            <fieldText>&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:14px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;&lt;B&gt;Início&lt;/B&gt;&lt;/FONT&gt;&lt;/DIV&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Category1_Blank</name>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Category1_Script</name>
+            <fieldText>&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div align=&quot;LEFT&quot;&gt;
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Boa tarde o meu nome &amp;eacute; {!UserFullName} , em que posso ser &amp;uacute;til?&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Com quem tenho o prazer de falar?&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Sr (a) , por motivos de seguran&amp;ccedil;a pode facultar-nos:&lt;/span&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;O seu No de conta&lt;/span&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Data se Nascimento&lt;/span&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;No de BI?&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Adicionalmente uma das alternativas:&lt;/span&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Nome do pai&lt;/span&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Nome da m&amp;atilde;e&lt;/span&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;NIF ou N&amp;uacute;mero de identifica&amp;ccedil;&amp;atilde;o fiscal&lt;/span&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;N&amp;uacute;mero do cart&amp;atilde;o de d&amp;eacute;bito multicaixa (quaisquer tr&amp;ecirc;s posi&amp;ccedil;&amp;otilde;es)&lt;/span&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;N&amp;uacute;mero de telefone partilhado com o Banco (n&amp;uacute;mero completo)&lt;/span&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;N&amp;uacute;mero de Identifica&amp;ccedil;&amp;atilde;o Fiscal (quaisquer tr&amp;ecirc;s posi&amp;ccedil;&amp;otilde;es)&lt;/span&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;N&amp;uacute;mero de Cliente (quaisquer tr&amp;ecirc;s posi&amp;ccedil;&amp;otilde;es)&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>CCC_System_downtime_Mandarin</name>
+        <label>System downtime</label>
+        <locationX>409</locationX>
+        <locationY>2109</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>CCC_Call_that_cannot_proceed_further_Mandarin</targetReference>
+        </connector>
+        <fields>
+            <name>CCC_System_downtime_Mandarin_text</name>
+            <fieldText>&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div align=&quot;LEFT&quot;&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;System downtime&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;&lt;u&gt;系&lt;/u&gt;&lt;u&gt;统&lt;/u&gt;&lt;u&gt;故障&lt;/u&gt;&lt;u&gt;时间&lt;/u&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;感谢您的来电。因系统临时故障无法提供服务， 请您稍候再拨！&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;或者，请您留下电话号码，稍后我们的服务专员将致电给您.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;由此带来的任何不便深表歉意.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;祝您有美好的一天/晚安.&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>CCC_System_Downtime_portuguese</name>
+        <label>Aplicação indisponível</label>
+        <locationX>651</locationX>
+        <locationY>2683</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>CCC_Call_that_cannot_proceed_further_portuguese</targetReference>
+        </connector>
+        <fields>
+            <name>Category3_Heading</name>
+            <fieldText>&lt;DIV ALIGN=&quot;LEFT&quot;&gt;&lt;FONT FACE=&quot;Arial&quot; STYLE=&quot;font-size:14px&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;&gt;&lt;B&gt;Aplicação indisponível&lt;/B&gt;&lt;/FONT&gt;&lt;/DIV&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Category3_Blank</name>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Category3_Script</name>
+            <fieldText>&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div align=&quot;LEFT&quot;&gt;
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Caro sr(a)., informamos que a nossa aplica&amp;ccedil;&amp;atilde;o encontra-se temporariamente indispon&amp;iacute;vel. Desta forma sugerimos que nos contacte mais tarde para que possamos dar o seguimento &amp;agrave; sua solicita&amp;ccedil;&amp;atilde;o.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Em alternativa poder&amp;aacute; deixar o seu contacto para o contactarmos assim que poss&amp;iacute;vel.&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Blank_2</name>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Category3_Question</name>
+            <choiceReferences>Yes</choiceReferences>
+            <choiceReferences>No</choiceReferences>
+            <dataType>String</dataType>
+            <fieldType>RadioButtons</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>CIB_Category</name>
+        <label>Category</label>
+        <locationX>2081</locationX>
+        <locationY>939</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>CIB_Category_Choice</targetReference>
+        </connector>
+        <fields>
+            <name>CIB_Client_Access_Category_picklist</name>
+            <choiceReferences>CCC_Reception</choiceReferences>
+            <choiceReferences>CCC_Ending_a_call</choiceReferences>
+            <choiceReferences>CCC_System_downtime</choiceReferences>
+            <choiceReferences>CCC_Call_that_cannot_proceed_further</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Category</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>CIB_Client_Access_Call_that_cannot_proceed_further_Eng</name>
+        <label>Call that cannot proceed further</label>
+        <locationX>2031</locationX>
+        <locationY>1529</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>CIB_Client_Access_Call_that_cannot_proceed_further_Eng_text</name>
+            <fieldText>&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div align=&quot;LEFT&quot;&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Call that cannot proceed further&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Unfortunately we are not able to help you further.&amp;nbsp; We will end this call, please have a good day / evening.&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>CIB_Client_Access_Call_that_cannot_proceed_further_Portuguese</name>
+        <label>Chamada sem acção</label>
+        <locationX>2713</locationX>
+        <locationY>2118</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>CIB_Client_Access_Call_that_cannot_proceed_further_Portuguese_text</name>
+            <fieldText>&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div align=&quot;LEFT&quot;&gt;
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Visto que n&amp;atilde;o &amp;eacute; poss&amp;iacute;vel dar seguimento &amp;agrave; sua solicita&amp;ccedil;&amp;atilde;o, informamos que iremos concluir a sua liga&amp;ccedil;&amp;atilde;o. Agradecemos o seu contacto e desejamos-lhe a continua&amp;ccedil;&amp;atilde;o de um(a) bom dia / boa tarde / boa noite.&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>CIB_Client_Access_Ending_a_call_Eng</name>
+        <label>Ending a call</label>
+        <locationX>1807</locationX>
+        <locationY>1242</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>CIB_Client_Access_System_downtime_Eng</targetReference>
+        </connector>
+        <fields>
+            <name>CIB_Client_Access_Ending_a_call_Eng_text</name>
+            <fieldText>&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div align=&quot;LEFT&quot;&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Ending a call&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Is there any other question we can help you with?&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;&lt;strong&gt;Yes&lt;/strong&gt;: help the customer accordingly&lt;em&gt;.&lt;/em&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;&lt;strong&gt;No: &lt;/strong&gt;Mr./Mrs. &amp;ldquo;X&amp;rdquo; Thank you very much for calling Standard Bank Angola. Kindly stay on the line to rate my service.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Have a nice day / good night.&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>CIB_Client_Access_Ending_a_call_Portuguese</name>
+        <label>Encerramento</label>
+        <locationX>2454</locationX>
+        <locationY>1878</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>CIB_Client_Access_System_downtime_Portuguese</targetReference>
+        </connector>
+        <fields>
+            <name>CIB_Client_Access_Ending_a_call_Portuguese_text</name>
+            <fieldText>&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div align=&quot;LEFT&quot;&gt;
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Tem mais alguma quest&amp;atilde;o em que podemos ser &amp;uacute;teis?&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;&lt;strong&gt;Sim&lt;/strong&gt;: Dar resolu&amp;ccedil;&amp;atilde;o ao novo tema.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;&lt;strong&gt;N&amp;atilde;o: &lt;/strong&gt;&amp;ldquo;Sr(a) &amp;ldquo;X&amp;rdquo;, o Standard Bank agradece o seu contacto e prefer&amp;ecirc;ncia, por favor pedimos que se mantenha em linha para responder a uma quest&amp;atilde;o sobre o meu atendimento. A sua opini&amp;atilde;o &amp;eacute; muito importante para n&amp;oacute;s. Desejamos-lhe a continua&amp;ccedil;&amp;atilde;o de um(a) excelente dia / tarde / noite.&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>CIB_Client_Access_Reception_Eng</name>
+        <label>Reception</label>
+        <locationX>1719</locationX>
+        <locationY>1098</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>CIB_Client_Access_Ending_a_call_Eng</targetReference>
+        </connector>
+        <fields>
+            <name>CIB_Client_Access_Reception_Eng_text</name>
+            <fieldText>&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div align=&quot;LEFT&quot;&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Reception&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Good morning/ afternoon/ evening, my name is {!UserFullName}, how can I help you?&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;(There is no authentication to apply)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Always help the customer by addressing him/her by his/her name.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Use Mr./MRs. accordingly&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>CIB_Client_Access_Reception_Portuguese</name>
+        <label>Início</label>
+        <locationX>2323</locationX>
+        <locationY>1760</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>CIB_Client_Access_Ending_a_call_Portuguese</targetReference>
+        </connector>
+        <fields>
+            <name>CIB_Client_Access_Reception_Portuguese_text</name>
+            <fieldText>&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div align=&quot;LEFT&quot;&gt;
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Boa tarde, o meu nome &amp;eacute; &amp;ldquo;Primeiro e &amp;uacute;ltimo nome&amp;rdquo;, em que posso ser &amp;uacute;til?&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;(N&amp;atilde;o se aplica qualquer tipo de autentica&amp;ccedil;&amp;atilde;o)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Prestar a devida assist&amp;ecirc;ncia ao cliente, tratando-o sempre pelo nome antecedido de Sr. /Sra.&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>CIB_Client_Access_System_downtime_Eng</name>
+        <label>System downtime</label>
+        <locationX>1910</locationX>
+        <locationY>1397</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>CIB_Client_Access_Call_that_cannot_proceed_further_Eng</targetReference>
+        </connector>
+        <fields>
+            <name>CIB_Client_Access_System_downtime_Eng_text</name>
+            <fieldText>&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div align=&quot;LEFT&quot;&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;System downtime&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Thank you for calling. The service you requested is temporarily unavailable due to technical difficulties. Please call later!&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Alternatively, please leave your phone number and our agents will call you back.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Apologies for any inconvenience.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Have a nice day / good night.&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>CIB_Client_Access_System_downtime_Portuguese</name>
+        <label>Aplicação indisponível</label>
+        <locationX>2599</locationX>
+        <locationY>1997</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>CIB_Client_Access_Call_that_cannot_proceed_further_Portuguese</targetReference>
+        </connector>
+        <fields>
+            <name>CIB_Client_Access_System_downtime_Portuguese_text</name>
+            <fieldText>&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div align=&quot;LEFT&quot;&gt;
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;&amp;nbsp;&amp;ldquo;Caro sr. &amp;ldquo;X&amp;rdquo;, informamos que a nossa aplica&amp;ccedil;&amp;atilde;o encontra-se temporariamente indispon&amp;iacute;vel. Desta forma sugerimos que nos contacte mais tarde, para que possamos dar seguimento &amp;agrave; sua solicita&amp;ccedil;&amp;atilde;o. Em alternativa, poder&amp;aacute; deixar o seu contacto para o contactarmos assim que poss&amp;iacute;vel.&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>ED_Call_that_cannot_proceed_further_Mandarin</name>
+        <label>Call that cannot proceed further</label>
+        <locationX>1517</locationX>
+        <locationY>2226</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>ED_Call_that_cannot_proceed_further_Mandarin_text</name>
+            <fieldText>&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div align=&quot;LEFT&quot;&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Call that cannot proceed further&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Not yet available&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>ED_Call_that_cannot_proceed_further_portuguese</name>
+        <label>Chamada sem acção</label>
+        <locationX>1882</locationX>
+        <locationY>2774</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>ED_Call_that_cannot_proceed_further_portuguese_text</name>
+            <fieldText>&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div align=&quot;LEFT&quot;&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Call that cannot proceed further&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Uma vez não é possível dar seguimento à sua solicitação, informamos que concluir a ligação.&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>ED_Category</name>
+        <label>Category</label>
+        <locationX>1358</locationX>
+        <locationY>964</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>ED_Category_Choice</targetReference>
+        </connector>
+        <fields>
+            <name>ED_Category_picklist</name>
+            <choiceReferences>CCC_Reception</choiceReferences>
+            <choiceReferences>CCC_Ending_a_call</choiceReferences>
+            <choiceReferences>CCC_System_downtime</choiceReferences>
+            <choiceReferences>CCC_Call_that_cannot_proceed_further</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Category</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>ED_Ending_a_call_Mandarin</name>
+        <label>Ending a call</label>
+        <locationX>1370</locationX>
+        <locationY>1970</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>ED_System_downtime_Mandarin</targetReference>
+        </connector>
+        <fields>
+            <name>ED_Ending_a_call_Mandarin_text</name>
+            <fieldText>&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div align=&quot;LEFT&quot;&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Ending a call&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Not yet available&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>ED_Ending_a_call_portuguese</name>
+        <label>Encerramento</label>
+        <locationX>1680</locationX>
+        <locationY>2538</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>ED_System_Downtime_portuguese</targetReference>
+        </connector>
+        <fields>
+            <name>ED_Ending_a_call_portuguese_text</name>
+            <fieldText>&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div align=&quot;LEFT&quot;&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Ending a call&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Sr.(a) X, Tem mais alguma quest&amp;atilde;o em que podemos ser uteis?&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Sim: Dar resolu&amp;ccedil;&amp;atilde;o ao novo tema;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;N&amp;atilde;o: &amp;ldquo;Sr. /Sra &amp;rdquo;X&amp;ldquo;, o Standard Bank agradece o seu contacto e prefer&amp;ecirc;ncia, por favor pedimos que se mantenha em linha para responder a uma breve quest&amp;atilde;o.&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>ED_Eng_Call_that_cannot_proceed_further</name>
+        <label>Call that cannot proceed further</label>
+        <locationX>1236</locationX>
+        <locationY>1561</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>ED_Eng_Call_that_cannot_proceed_further_text</name>
+            <fieldText>&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div align=&quot;LEFT&quot;&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Call that cannot proceed further&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Unfortunately we are not able to help you further.&amp;nbsp; We will end this call, please have a good day / evening&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>ED_Eng_Ending_a_call</name>
+        <label>Ending a call</label>
+        <locationX>1080</locationX>
+        <locationY>1257</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>ED_Eng_System_downtime</targetReference>
+        </connector>
+        <fields>
+            <name>ED_Eng_Ending_a_call_text</name>
+            <fieldText>&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div align=&quot;LEFT&quot;&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Ending a call&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Is there any other question we can help you with?&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;&lt;strong&gt;Yes&lt;/strong&gt;: help the customer accordingly&lt;em&gt;,&lt;/em&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;&lt;strong&gt;No: &lt;/strong&gt;Mr./Mrs. &amp;ldquo;X&amp;rdquo; Thank you very much for calling Standard Bank Angola. Kindly stay on the line to rate my service.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Have a nice day / good night.&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>ED_Eng_System_downtime</name>
+        <label>System downtime</label>
+        <locationX>1161</locationX>
+        <locationY>1389</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>ED_Eng_Call_that_cannot_proceed_further</targetReference>
+        </connector>
+        <fields>
+            <name>ED_Eng_System_downtime_text</name>
+            <fieldText>&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div align=&quot;LEFT&quot;&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;System downtime&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Thank you for calling PME Online. The service you requested is temporarily unavailable due to technical difficulties. Please call later!&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Alternatively, please leave your phone number and our agents will call you back.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Apologies for any inconvenience.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Have a nice day / good night.&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>ED_Reception_Eng</name>
+        <label>Reception</label>
+        <locationX>1026</locationX>
+        <locationY>1117</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>ED_Eng_Ending_a_call</targetReference>
+        </connector>
+        <fields>
+            <name>ED_Reception_Eng_text</name>
+            <fieldText>&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div align=&quot;LEFT&quot;&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Reception&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Good morning/ afternoon/ evening, my name is {!UserFullName}, how can I help you?&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;&lt;strong&gt;&lt;u&gt;Caller authentication &lt;/u&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Can I have your name please?&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;For security reasons can you please give us:&lt;/span&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;The account number of the company&lt;/span&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Your Business email&lt;/span&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Your registered business number phone&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Additionally one of the following:&lt;/span&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Name of the account signatories&lt;/span&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Business address&lt;/span&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Last 3 transactions on the account&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Always help the customer by addressing him/her by his/her name.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Use Mr./MRs. accordingly&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>ED_Reception_Mandarin</name>
+        <label>Reception</label>
+        <locationX>1291</locationX>
+        <locationY>1858</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>ED_Ending_a_call_Mandarin</targetReference>
+        </connector>
+        <fields>
+            <name>ED_Reception_Mandarin_text</name>
+            <fieldText>&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div align=&quot;LEFT&quot;&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Reception&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Not yet available&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>ED_Reception_portuguese</name>
+        <label>Início</label>
+        <locationX>1603</locationX>
+        <locationY>2424</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>ED_Ending_a_call_portuguese</targetReference>
+        </connector>
+        <fields>
+            <name>ED_Reception_portuguese_text</name>
+            <fieldText>&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div align=&quot;LEFT&quot;&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Reception&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Boa tarde o meu nome &amp;eacute; {!UserFullName} , em que posso ser &amp;uacute;til?&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Com quem tenho o prazer de falar?&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Sr (a) , por motivos de seguran&amp;ccedil;a pode facultar-nos:&lt;/span&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;No de Conta de empresa&lt;/span&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Email registado na conta&lt;/span&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;No de telefone registado na conta&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Adicionalmente uma das alternativas:&lt;/span&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Nome do pai&lt;/span&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Nome da m&amp;atilde;e&lt;/span&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;NIF ou N&amp;uacute;mero de identifica&amp;ccedil;&amp;atilde;o fiscal&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>ED_System_downtime_Mandarin</name>
+        <label>System downtime</label>
+        <locationX>1434</locationX>
+        <locationY>2101</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>ED_Call_that_cannot_proceed_further_Mandarin</targetReference>
+        </connector>
+        <fields>
+            <name>ED_System_downtime_Mandarin_text</name>
+            <fieldText>&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div align=&quot;LEFT&quot;&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;System downtime&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Not yet available&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>ED_System_Downtime_portuguese</name>
+        <label>Aplicação indisponível</label>
+        <locationX>1769</locationX>
+        <locationY>2647</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>ED_Call_that_cannot_proceed_further_portuguese</targetReference>
+        </connector>
+        <fields>
+            <name>ED_System_Downtime_portuguese_text</name>
+            <fieldText>&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div align=&quot;LEFT&quot;&gt;
+&lt;p style=&quot;text-align: left;&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;System downtime&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;Caro sr(a)., informamos que a nossa aplica&amp;ccedil;&amp;atilde;o encontra-se temporariamente indispon&amp;iacute;vel. Desta forma sugerimos que nos contacte mais tarde para que possamos dar o seguimento &amp;agrave; sua solicita&amp;ccedil;&amp;atilde;o.&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Not_Permitted</name>
+        <label>Not Permitted</label>
+        <locationX>1346</locationX>
+        <locationY>98</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>Not_Permitted_text</name>
+            <fieldText>&lt;html&gt;
+&lt;head&gt;
+	&lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div align=&quot;LEFT&quot;&gt;
+&lt;p&gt;&lt;font face=&quot;verdana, geneva, sans-serif&quot;&gt;Hi {!UserFullName}&lt;/font&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;font face=&quot;verdana, geneva, sans-serif&quot;&gt;Call script is not applicable to your Role, please contact an Salesforce administrator for more information.&lt;/font&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <description>Select language screen</description>
+        <name>Select_Language_Screen_CCC</name>
+        <label>Select Language Screen CCC</label>
+        <locationX>796</locationX>
+        <locationY>828</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>CCC_Category</targetReference>
+        </connector>
+        <fields>
+            <name>LanguageChoice_CCC</name>
+            <choiceReferences>Lang_English</choiceReferences>
+            <choiceReferences>Lang_Portuguese</choiceReferences>
+            <choiceReferences>Lang_Mandarin</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Select language for CCC script</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Select_Language_Screen_CIB_Client_Access</name>
+        <label>Select Language Screen CIB/Client Access</label>
+        <locationX>2080</locationX>
+        <locationY>807</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>CIB_Category</targetReference>
+        </connector>
+        <fields>
+            <name>LanguageChoice_CIB_Client_Access</name>
+            <choiceReferences>Lang_English</choiceReferences>
+            <choiceReferences>Lang_Portuguese</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Select language for CIB/Client Access Script</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Select_Language_Screen_ED</name>
+        <label>Select Language Screen ED</label>
+        <locationX>1354</locationX>
+        <locationY>825</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>ED_Category</targetReference>
+        </connector>
+        <fields>
+            <name>LanguageChoice_ED</name>
+            <choiceReferences>Lang_English</choiceReferences>
+            <choiceReferences>Lang_Portuguese</choiceReferences>
+            <choiceReferences>Lang_Mandarin</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Select language for ED Script</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <startElementReference>Route_User</startElementReference>
+    <status>Draft</status>
+</Flow>

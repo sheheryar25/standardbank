@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EstimatedAmount</fullName>
+    <description>SFP-12613 - An estimate of the claim amount.</description>
+    <inlineHelpText>An estimate of the claim amount, This field cant be edited once a value is saved.</inlineHelpText>
+    <trackHistory>false</trackHistory>
+</CustomField>

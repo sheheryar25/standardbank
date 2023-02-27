@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>First_Amount_Payable__c</fullName>
+    <description>SFP-12613 - The excess amount customer agrees to pay.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Excess payable.</inlineHelpText>
+    <label>First Amount Payable</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SA_Opportunity_Dashboard_Name__c</fullName>
+    <description>Combination of Client Name and Opportunity Name &amp; Create Date to provide more meaningfull dashboard information</description>
+    <externalId>false</externalId>
+    <formula>Account.Name  &amp; &apos; - &apos; &amp;  Name &amp; &apos; (&apos; &amp; Left(Text(CreatedDate),10) &amp; &apos;)&apos;</formula>
+    <label>Opportunity Dashboard Name</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Project_Workstream__c</fullName>
+    <description>Agreed Project Workstreams
+
+            CRM-Enhanced Cases for Change Request Functionality Case #597 (C Reinecke 2010/09)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Depends on &apos;Project Focus Area&apos;</inlineHelpText>
+    <label>Project Workstream</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Project_Focus_Area__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>SFDC Account Management</fullName>
+                <default>false</default>
+                <label>SFDC Account Management</label>
+            </value>
+            <value>
+                <fullName>SFDC Adaptiv Integration</fullName>
+                <default>false</default>
+                <label>SFDC Adaptiv Integration</label>
+            </value>
+            <value>
+                <fullName>SFDC Alignment &amp; Feeds for Core Reference Data (CRT)</fullName>
+                <default>false</default>
+                <label>SFDC Alignment &amp; Feeds for Core Reference Data (CRT)</label>
+            </value>
+            <value>
+                <fullName>SFDC Americas Roll Out</fullName>
+                <default>false</default>
+                <label>SFDC Americas Roll Out</label>
+            </value>
+            <value>
+                <fullName>SFDC Approve CRT into SFDC</fullName>
+                <default>false</default>
+                <label>SFDC Approve CRT into SFDC</label>
+            </value>
+            <value>
+                <fullName>SFDC Argentina Roll Out</fullName>
+                <default>false</default>
+                <label>SFDC Argentina Roll Out</label>
+            </value>
+            <value>
+                <fullName>SFDC Campaign Management</fullName>
+                <default>false</default>
+                <label>SFDC Campaign Management</label>
+            </value>
+            <value>
+                <fullName>SFDC Chatter</fullName>
+                <default>false</default>
+                <label>SFDC Chatter</label>
+            </value>
+            <value>
+                <fullName>SFDC Client Service Team Definition</fullName>
+                <default>false</default>
+                <label>SFDC Client Service Team Definition</label>
+            </value>
+            <value>
+                <fullName>SFDC Client Summary Templates (CAM)</fullName>
+                <default>false</default>
+                <label>SFDC Client Summary Templates (CAM)</label>
+            </value>
+            <value>
+                <fullName>SFDC Content Management</fullName>
+                <default>false</default>
+                <label>SFDC Content Management</label>
+            </value>
+            <value>
+                <fullName>SFDC Event Management</fullName>
+                <default>false</default>
+                <label>SFDC Event Management</label>
+            </value>
+            <value>
+                <fullName>SFDC FAIS</fullName>
+                <default>false</default>
+                <label>SFDC FAIS</label>
+            </value>
+            <value>
+                <fullName>SFDC Gift Logs</fullName>
+                <default>false</default>
+                <label>SFDC Gift Logs</label>
+            </value>
+            <value>
+                <fullName>SFDC Global Conflicts Clearing Room (GCCR)</fullName>
+                <default>false</default>
+                <label>SFDC Global Conflicts Clearing Room (GCCR)</label>
+            </value>
+            <value>
+                <fullName>SFDC Global Legal Database Feed</fullName>
+                <default>false</default>
+                <label>SFDC Global Legal Database Feed</label>
+            </value>
+            <value>
+                <fullName>SFDC Global Sector</fullName>
+                <default>false</default>
+                <label>SFDC Global Sector</label>
+            </value>
+            <value>
+                <fullName>SFDC Global Structuring Group (GSG)</fullName>
+                <default>false</default>
+                <label>SFDC Global Structuring Group (GSG)</label>
+            </value>
+            <value>
+                <fullName>SFDC GM Feed</fullName>
+                <default>false</default>
+                <label>SFDC GM Feed</label>
+            </value>
+            <value>
+                <fullName>SFDC IB Roll Out</fullName>
+                <default>false</default>
+                <label>SFDC IB Roll Out</label>
+            </value>
+            <value>
+                <fullName>SFDC Implement CRT into SFDC</fullName>
+                <default>false</default>
+                <label>SFDC Implement CRT into SFDC</label>
+            </value>
+            <value>
+                <fullName>SFDC Internal Enhancement</fullName>
+                <default>false</default>
+                <label>SFDC Internal Enhancement</label>
+            </value>
+            <value>
+                <fullName>SFDC KYC First Phase</fullName>
+                <default>false</default>
+                <label>SFDC KYC First Phase</label>
+            </value>
+            <value>
+                <fullName>SFDC Liquidity &amp; Capital Management</fullName>
+                <default>false</default>
+                <label>SFDC Liquidity &amp; Capital Management</label>
+            </value>
+            <value>
+                <fullName>SFDC Mobile Integration</fullName>
+                <default>false</default>
+                <label>SFDC Mobile Integration</label>
+            </value>
+            <value>
+                <fullName>SFDC Production Incident</fullName>
+                <default>false</default>
+                <label>SFDC Production Incident</label>
+            </value>
+            <value>
+                <fullName>SFDC Regression Analysis</fullName>
+                <default>false</default>
+                <label>SFDC Regression Analysis</label>
+            </value>
+            <value>
+                <fullName>SFDC ROA Roll Out</fullName>
+                <default>false</default>
+                <label>SFDC ROA Roll Out</label>
+            </value>
+            <value>
+                <fullName>SFDC Single Sign On (SSO)</fullName>
+                <default>false</default>
+                <label>SFDC Single Sign On (SSO)</label>
+            </value>
+            <value>
+                <fullName>SFDC Standardisation</fullName>
+                <default>false</default>
+                <label>SFDC Standardisation</label>
+            </value>
+            <value>
+                <fullName>SFDC Standardise MIS</fullName>
+                <default>false</default>
+                <label>SFDC Standardise MIS</label>
+            </value>
+            <value>
+                <fullName>SFDC Territory Management</fullName>
+                <default>false</default>
+                <label>SFDC Territory Management</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Tactical</controllingFieldValue>
+            <valueName>SFDC Alignment &amp; Feeds for Core Reference Data (CRT)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tactical</controllingFieldValue>
+            <valueName>SFDC Client Service Team Definition</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tactical</controllingFieldValue>
+            <controllingFieldValue>Strategic</controllingFieldValue>
+            <valueName>SFDC Gift Logs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tactical</controllingFieldValue>
+            <valueName>SFDC Internal Enhancement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tactical</controllingFieldValue>
+            <valueName>SFDC Production Incident</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tactical</controllingFieldValue>
+            <valueName>SFDC Standardise MIS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Strategic</controllingFieldValue>
+            <valueName>SFDC Account Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Strategic</controllingFieldValue>
+            <valueName>SFDC Adaptiv Integration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Strategic</controllingFieldValue>
+            <valueName>SFDC Americas Roll Out</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Strategic</controllingFieldValue>
+            <valueName>SFDC Approve CRT into SFDC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Strategic</controllingFieldValue>
+            <valueName>SFDC Argentina Roll Out</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Strategic</controllingFieldValue>
+            <valueName>SFDC Campaign Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Strategic</controllingFieldValue>
+            <valueName>SFDC Chatter</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Strategic</controllingFieldValue>
+            <valueName>SFDC Client Summary Templates (CAM)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Strategic</controllingFieldValue>
+            <valueName>SFDC Content Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Strategic</controllingFieldValue>
+            <valueName>SFDC Event Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Strategic</controllingFieldValue>
+            <valueName>SFDC FAIS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Strategic</controllingFieldValue>
+            <valueName>SFDC Global Conflicts Clearing Room (GCCR)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Strategic</controllingFieldValue>
+            <valueName>SFDC Global Legal Database Feed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Strategic</controllingFieldValue>
+            <valueName>SFDC Global Sector</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Strategic</controllingFieldValue>
+            <valueName>SFDC Global Structuring Group (GSG)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Strategic</controllingFieldValue>
+            <valueName>SFDC GM Feed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Strategic</controllingFieldValue>
+            <valueName>SFDC IB Roll Out</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Strategic</controllingFieldValue>
+            <valueName>SFDC Implement CRT into SFDC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Strategic</controllingFieldValue>
+            <valueName>SFDC KYC First Phase</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Strategic</controllingFieldValue>
+            <valueName>SFDC Liquidity &amp; Capital Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Strategic</controllingFieldValue>
+            <valueName>SFDC Mobile Integration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Strategic</controllingFieldValue>
+            <valueName>SFDC Regression Analysis</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Strategic</controllingFieldValue>
+            <valueName>SFDC ROA Roll Out</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Strategic</controllingFieldValue>
+            <valueName>SFDC Single Sign On (SSO)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Strategic</controllingFieldValue>
+            <valueName>SFDC Standardisation</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

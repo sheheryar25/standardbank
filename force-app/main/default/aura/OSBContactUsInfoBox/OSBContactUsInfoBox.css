@@ -1,0 +1,66 @@
+.THIS {
+    box-shadow: 0 6px 25px 0 rgba(0,0,0,0.1);
+    padding: 24px;
+    background-color: #FFFFFF;
+    color: #1A1A1A;
+}
+
+.THIS .EmailSection{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.THIS .contactBox{
+    display:inline-block;
+}
+
+.THIS .contactBox__title {	
+    /*padding-top: 24px;*/
+    color: #3C4B6C;	
+    font-family: BentonSans;	
+    font-size: 28px;	
+    font-weight: 200;	
+    line-height: 29px;
+}
+
+.THIS .oneplacetola {
+	height: 25px;
+	color: #0089FF;
+	font-family: BentonSans;
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 25px;
+	float: right;
+}
+
+.THIS .email-us {
+	height: 25px;
+	max-width: 65px;
+	color: #212529;
+	font-family: BentonSans;
+	font-size: 15px;
+	font-weight: 300;
+	line-height: 25px;
+    display: inline;
+}
+
+.THIS .our-operating-hours {
+	max-width: 204px;
+	color: #3C4B6C;
+	font-family: BentonSans;
+	font-size: 15px;
+	font-weight: 300;
+	line-height: 25px;
+    padding-bottom: 24px;
+    padding-top: 24px;
+}
+
+.THIS .contactBox__link a {
+    display: flex;
+    align-items: center;
+}
+
+.THIS .contactBox__link--icon {
+    margin-left: 8px;
+}

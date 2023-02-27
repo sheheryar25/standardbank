@@ -1,0 +1,10 @@
+<aura:component description="OSBAdobeAnalyticsWrapper" controller="OSB_AdobeAnalyticsWrapper_CTRL">
+    <aura:attribute name="iFrameLoaded" type="Boolean"  access="public" description="Indicates whether iFrame is loaded" default="false" />
+    <aura:attribute name="messageQueue" type="Object[]" access="public" description="Private queue used to hold on to messages untill the iframe is ready"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler event="c:OSBNavigationEvent" action="{!c.handleNavigation}" />
+    <aura:handler name="change" value="{!v.iFrameLoaded}" action="{!c.setInitialWebAnalytics}"/>
+
+    <!--Hidden iframe on the page to load the adobe analytics scripts -->
+    <iframe sandbox="allow-same-origin allow-scripts allow-forms" aura:id="vfFrame" src="/OSBAdobeScriptWrapper" frameborder="0"/>
+</aura:component>

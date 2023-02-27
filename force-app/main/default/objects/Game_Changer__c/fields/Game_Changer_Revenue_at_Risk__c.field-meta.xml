@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Game_Changer_Revenue_at_Risk__c</fullName>
+    <externalId>false</externalId>
+    <formula>VALUE(IF
+(
+(
+(Game_Changer_Revenue__c - (Deferred__c + Cancelled__c)) - Opportunity_Current_Year_Won_Revenue__c ) &gt; 0, 
+
+(TEXT
+(
+(
+(
+(Game_Changer_Revenue__c - Opportunity_Current_Year_Won_Revenue__c -(Deferred__c + Cancelled__c))*(1-Probability__c)
+)
+)
+)) 
+, &quot;&quot;) )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>The outstanding revenue amount weighted by the game changer probability</inlineHelpText>
+    <label>Game Changer Revenue at Risk</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

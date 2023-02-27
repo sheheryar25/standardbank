@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Distribution_Party_Appetite__c</fullName>
+    <description>US-4609/ SGPRT-623Indicative appetite levels provided by the investors with whom the trade is explored</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter the indicative appetite levels provided by the investors with whom the trade is explored, for the portion of the sell down that relates to the specific distribution method OR enter the indicative amount seller wishes to sell.</inlineHelpText>
+    <label>Distribution Party Appetite</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

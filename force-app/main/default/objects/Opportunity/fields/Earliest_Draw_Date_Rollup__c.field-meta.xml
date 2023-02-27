@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Earliest_Draw_Date_Rollup__c</fullName>
+    <description>Case#141 - Rudolf Niehaus
+Rollup earliest draw date of all the products</description>
+    <externalId>false</externalId>
+    <label>Earliest Draw Date</label>
+    <summarizedField>SB_Product__c.Earliest_Draw_Date_Rollup__c</summarizedField>
+    <summaryForeignKey>SB_Product__c.Opportunity__c</summaryForeignKey>
+    <summaryOperation>min</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

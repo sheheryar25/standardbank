@@ -1,0 +1,30 @@
+<template>
+  <div class="header">
+    <div class="src-components-commons-searchBox-searchBox__searchInputContainer--3CwYD search-box-input-container search-bar">
+      <div class="src-components-commons-searchBox-searchBox__iconContainer--3JXkx">
+        <img src={searchIconUrl} alt="">
+      </div>
+    <input type="text" class="src-components-commons-searchBox-searchBox__searchInput--192k- src-components-commons-searchBox-searchBox__input--2d3mf search-box-input" placeholder="What are you searching for?" id="searchbox" value="" autocomplete="off" onchange={handleSearch}>
+  </div>
+  </div>
+  <div class="main">
+    <div class="menu">
+      <a onclick={onDeveloperTabSelect} class={developerTabClassList}>Developer Resources</a>
+      <a onclick={onBusinessTabSelect} class={businessTabClassList}>Business Resources</a>
+    </div>
+    <div class="resources">
+
+    <div class="scroll grid-container">
+      <template for:each={currentResourcesList} for:item="resource">
+        <div key={resource.id} class="grid-item">
+          <a href={resource.targetUrl} class="item">
+            <img src={resource.imageUrl} alt="" />
+            <h1>{resource.heading}</h1>
+            <p>{resource.description}</p>
+          </a>
+        </div>
+      </template>
+    </div>
+    </div>
+  </div>
+</template>

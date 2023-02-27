@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_coming_soon__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>OneHub: This field indicates whether the Solution or API Product is Available or Coming Soon. (US-3979)</description>
+    <externalId>false</externalId>
+    <label>Coming Soon</label>
+    <type>Checkbox</type>
+</CustomField>

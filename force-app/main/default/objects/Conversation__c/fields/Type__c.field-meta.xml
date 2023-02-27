@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <description>&quot;US-4454
+            A finer detail value of the Category and Sub Category. It isn&apos;t visible in frontend, and it is used for measurement on the backend&quot;</description>
+    <externalId>false</externalId>
+    <label>Type</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

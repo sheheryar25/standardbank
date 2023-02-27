@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Potential__c</fullName>
+    <externalId>false</externalId>
+    <label>Product Potential</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Medium on Track</fullName>
+                <default>false</default>
+                <label>Medium on Track</label>
+            </value>
+            <value>
+                <fullName>Not on Track</fullName>
+                <default>false</default>
+                <label>Not on Track</label>
+            </value>
+            <value>
+                <fullName>On Track</fullName>
+                <default>false</default>
+                <label>On Track</label>
+            </value>
+            <value>
+                <fullName>Not Applicable</fullName>
+                <default>true</default>
+                <label>Not Applicable</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

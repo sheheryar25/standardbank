@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_of_Core_Team_Members__c</fullName>
+    <description>EN-0695-Amount of Core Client Team members on this Client</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The number of Client Team Members performing a Core Role on this Client</inlineHelpText>
+    <label>Number of Core Team Members</label>
+    <summaryFilterItems>
+        <field>Custom_Client_Team__c.Core__c</field>
+        <operation>equals</operation>
+        <value>True</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Custom_Client_Team__c.Account__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Add_to_Outlook</fullName>
+    <availability>online</availability>
+    <description>Custom button to sync event to outlook</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Add to Outlook</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>var rndnr=Math.floor(Math.random()*9999999999999);
+            location.replace(&apos;/servlet/servlet.OutlookEvent?rnd=&apos; + rndnr + &apos;&amp;id={!Call_Report__c.EventId__c}&apos;);</url>
+</WebLink>

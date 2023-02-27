@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NAM_CIB_P_I</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>NAME</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>CIB_Service_Tier__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Case_Owner_Team__c</field>
+        <operation>equals</operation>
+        <value>Africa Regions-Client Services-CIB-CS-Namibia</value>
+    </filters>
+    <filters>
+        <field>ClientSector__c</field>
+        <operation>equals</operation>
+        <value>Power and Infrastructure</value>
+    </filters>
+    <filters>
+        <field>CASES.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Closed,Resolved,Spam,Duplicate</value>
+    </filters>
+    <label>NAM-CIB-P&amp;I</label>
+    <sharedTo>
+        <roleAndSubordinatesInternal>CIB_Customer_Contact_Centre_Namibia_Division</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

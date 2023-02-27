@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Initiative_Resourcing_Last_week</fullName>
+    <columns>NAME</columns>
+    <columns>Resource__c</columns>
+    <columns>Week_Start_Date__c</columns>
+    <columns>Week_End_Date__c</columns>
+    <columns>Time_Spent__c</columns>
+    <columns>Previous_Week_Time_Spent__c</columns>
+    <columns>Initiative__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Week_End_Date__c</field>
+        <operation>equals</operation>
+        <value>LAST_WEEK</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Resourcing__c.Initiative_Resourcing</value>
+    </filters>
+    <label>Initiative Resourcing Last week</label>
+    <sharedTo>
+        <group>Corporate_Finance_Resourcing_Admins</group>
+    </sharedTo>
+</ListView>

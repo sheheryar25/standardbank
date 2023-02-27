@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Facility_Product__c</fullName>
+    <externalId>false</externalId>
+    <label>Facility Product</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Facility_Parent_Product_PP__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Back-to-Back Guarantee</fullName>
+                <default>false</default>
+                <label>Back-to-Back Guarantee</label>
+            </value>
+            <value>
+                <fullName>Back-to-Back LC</fullName>
+                <default>false</default>
+                <label>Back-to-Back LC</label>
+            </value>
+            <value>
+                <fullName>Call Loan</fullName>
+                <default>false</default>
+                <label>Call Loan</label>
+            </value>
+            <value>
+                <fullName>Corp Banking Pref Shares</fullName>
+                <default>false</default>
+                <label>Corp Banking Pref Shares</label>
+            </value>
+            <value>
+                <fullName>Discount LC&apos;s - Non-SB Customer</fullName>
+                <default>false</default>
+                <label>Discount LC&apos;s - Non-SB Customer</label>
+            </value>
+            <value>
+                <fullName>Discount LC&apos;s - SB Customer</fullName>
+                <default>false</default>
+                <label>Discount LC&apos;s - SB Customer</label>
+            </value>
+            <value>
+                <fullName>Export LC&apos;s</fullName>
+                <default>false</default>
+                <label>Export LC&apos;s</label>
+            </value>
+            <value>
+                <fullName>Import LC&apos;s</fullName>
+                <default>false</default>
+                <label>Import LC&apos;s</label>
+            </value>
+            <value>
+                <fullName>Inward Foreign Guarantee</fullName>
+                <default>false</default>
+                <label>Inward Foreign Guarantee</label>
+            </value>
+            <value>
+                <fullName>Local Guarantee</fullName>
+                <default>false</default>
+                <label>Local Guarantee</label>
+            </value>
+            <value>
+                <fullName>Other Advances</fullName>
+                <default>false</default>
+                <label>Other Advances</label>
+            </value>
+            <value>
+                <fullName>Outward Foreign Guarantee</fullName>
+                <default>false</default>
+                <label>Outward Foreign Guarantee</label>
+            </value>
+            <value>
+                <fullName>Overdraft</fullName>
+                <default>false</default>
+                <label>Overdraft</label>
+            </value>
+            <value>
+                <fullName>PF - Property Loan</fullName>
+                <default>false</default>
+                <label>PF - Property Loan</label>
+            </value>
+            <value>
+                <fullName>Shipping Guarantee</fullName>
+                <default>false</default>
+                <label>Shipping Guarantee</label>
+            </value>
+            <value>
+                <fullName>Term Lending</fullName>
+                <default>false</default>
+                <label>Term Lending</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Lending Guarantees</controllingFieldValue>
+            <controllingFieldValue>Performance Guarantees</controllingFieldValue>
+            <valueName>Back-to-Back Guarantee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lending Guarantees</controllingFieldValue>
+            <controllingFieldValue>Performance Guarantees</controllingFieldValue>
+            <valueName>Inward Foreign Guarantee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lending Guarantees</controllingFieldValue>
+            <controllingFieldValue>Performance Guarantees</controllingFieldValue>
+            <valueName>Local Guarantee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lending Guarantees</controllingFieldValue>
+            <controllingFieldValue>Performance Guarantees</controllingFieldValue>
+            <valueName>Outward Foreign Guarantee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lending Guarantees</controllingFieldValue>
+            <controllingFieldValue>Performance Guarantees</controllingFieldValue>
+            <valueName>Shipping Guarantee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Letters of Credit</controllingFieldValue>
+            <valueName>Back-to-Back LC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Letters of Credit</controllingFieldValue>
+            <valueName>Discount LC&apos;s - Non-SB Customer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Letters of Credit</controllingFieldValue>
+            <valueName>Discount LC&apos;s - SB Customer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Letters of Credit</controllingFieldValue>
+            <valueName>Export LC&apos;s</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Letters of Credit</controllingFieldValue>
+            <valueName>Import LC&apos;s</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Loans Term</controllingFieldValue>
+            <valueName>Corp Banking Pref Shares</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Loans Term</controllingFieldValue>
+            <valueName>Other Advances</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Loans Term</controllingFieldValue>
+            <valueName>PF - Property Loan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Loans Term</controllingFieldValue>
+            <valueName>Term Lending</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GSTBF</controllingFieldValue>
+            <valueName>Call Loan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>GSTBF</controllingFieldValue>
+            <controllingFieldValue>Cashman Account</controllingFieldValue>
+            <controllingFieldValue>CFC Accounts</controllingFieldValue>
+            <controllingFieldValue>Current Account (Not Linked to Cashman)</controllingFieldValue>
+            <valueName>Overdraft</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

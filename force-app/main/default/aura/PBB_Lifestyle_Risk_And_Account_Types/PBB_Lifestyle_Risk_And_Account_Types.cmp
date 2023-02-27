@@ -1,0 +1,24 @@
+<!--
+ - Created by Mykhailo Reznyk on 25.11.2019.
+ -->
+
+<aura:component description="PBB_Lifestyle_Risk_And_Account_Types" implements="force:hasRecordId,flexipage:availableForAllPageTypes" access="global">
+
+    <aura:attribute access="public" name="financialRiskData" type="Object" />
+    <aura:attribute access="public" name="recordId" type="Id" />
+
+    <div class="c-container">
+        <div class="componentGrid slds-grid slds-wrap slds-grid_vertical-stretch">
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_8-of-12 ">
+                <c:PBB_Lifestyle_Financial_Risk
+                        recordId="{!v.recordId}"  
+                        data="{!v.financialRiskData}"/>
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_4-of-12 ">
+                <c:PBB_Lifestyle_Account_Types
+                        recordId="{!v.recordId}"/>
+            </div>
+        </div>
+    </div>
+
+</aura:component>

@@ -1,0 +1,3518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>ACM_BankContactRecordType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ACM_BankContactRecordType</shortDescription>
+        <value>Bank Contact Record Type</value>
+    </labels>
+    <labels>
+        <fullName>ACM_InternalMarketplaceAccount</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ACM_InternalMarketplaceAccount</shortDescription>
+        <value>Standard Bank Employees</value>
+    </labels>
+    <labels>
+        <fullName>ACM_InternalMarketplacePermissionSet</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ACM_InternalMarketplacePermissionSet</shortDescription>
+        <value>API Marketplace - Internal Member</value>
+    </labels>
+    <labels>
+        <fullName>ACM_InternalMarketplaceProfile</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ACM_InternalMarketplaceProfile</shortDescription>
+        <value>Internal API Marketplace Member</value>
+    </labels>
+    <labels>
+        <fullName>ACM_InternalUserNameExtension</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ACM_InternalUserNameExtension</shortDescription>
+        <value>bcwexperience</value>
+    </labels>
+    <labels>
+        <fullName>AKI_CLIENT_URL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AKI CLIENT URL</shortDescription>
+        <value>00O7R0000092sJAUAY</value>
+    </labels>
+    <labels>
+        <fullName>AKI_OPP_URL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AKI OPP URL</shortDescription>
+        <value>00O7R0000092sJIUAY</value>
+    </labels>
+    <labels>
+        <fullName>AKI_SNOOZE_URL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AKI SNOOZE URL</shortDescription>
+        <value>00O7R0000092sJKUAY</value>
+    </labels>
+    <labels>
+        <fullName>AKI_VAL_URL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AKI VAL URL</shortDescription>
+        <value>00O7R0000092sJNUAY</value>
+    </labels>
+    <labels>
+        <fullName>AOB_10Min</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_10Min</shortDescription>
+        <value>IT SHOULD TAKE YOU ABOUT 10 MINUTES</value>
+    </labels>
+    <labels>
+        <fullName>AOB_AppComplete</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_AppComplete</shortDescription>
+        <value>Once your application is complete</value>
+    </labels>
+    <labels>
+        <fullName>AOB_AutoSave</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_AutoSave</shortDescription>
+        <value>THIS APPLICATION WILL BE SAVED AUTOMATICALLY</value>
+    </labels>
+    <labels>
+        <fullName>AOB_BeforeWeBeginSubTitle</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_BeforeWeBeginSubTitle</shortDescription>
+        <value>Hi, {####} :). You’re signed in. The application process is quick and easy.</value>
+    </labels>
+    <labels>
+        <fullName>AOB_BeforeWeBeginTitle</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_BeforeWeBeginTitle</shortDescription>
+        <value>MyMoBiz Business Account</value>
+    </labels>
+    <labels>
+        <fullName>AOB_CITIZENSHIP</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_CITIZENSHIP</shortDescription>
+        <value>CITIZENSHIP</value>
+    </labels>
+    <labels>
+        <fullName>AOB_Citizenship_HelpText</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_Citizenship_HelpText</shortDescription>
+        <value>Please choose your country of citizenship.</value>
+    </labels>
+    <labels>
+        <fullName>AOB_Citizenship_Message_Value_Missing</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_Citizenship_Message_Value_Missing</shortDescription>
+        <value>Please enter country of Citizenship</value>
+    </labels>
+    <labels>
+        <fullName>AOB_Citizenship_Placeholder</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_Citizenship_Placeholder</shortDescription>
+        <value>eg. Ghana</value>
+    </labels>
+    <labels>
+        <fullName>AOB_CityTown_Message_Value_Missing</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_CityTown_Message_Value_Missing</shortDescription>
+        <value>Please enter your City or Town.</value>
+    </labels>
+    <labels>
+        <fullName>AOB_City_Town</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_City_Town</shortDescription>
+        <value>CITY/TOWN</value>
+    </labels>
+    <labels>
+        <fullName>AOB_City_Town_Message_Value_Missing</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_City_Town_Message_Value_Missing</shortDescription>
+        <value>Please enter your City or Town.</value>
+    </labels>
+    <labels>
+        <fullName>AOB_City_Town_Placeholder</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_City_Town_Placeholder</shortDescription>
+        <value>Please select</value>
+    </labels>
+    <labels>
+        <fullName>AOB_CompanyTradingAddress_DifferentAddress</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_CompanyTradingAddress_DifferentAddress</shortDescription>
+        <value>Different Address</value>
+    </labels>
+    <labels>
+        <fullName>AOB_CompanyTradingAddress_SameAddress</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_CompanyTradingAddress_SameAddress</shortDescription>
+        <value>Same as residential address</value>
+    </labels>
+    <labels>
+        <fullName>AOB_CompanyTradingAddress_Subtitle</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_CompanyTradingAddress_Subtitle</shortDescription>
+        <value>Enter the information below</value>
+    </labels>
+    <labels>
+        <fullName>AOB_CompanyTradingAddress_Title</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_CompanyTradingAddress_Title</shortDescription>
+        <value>Company trading address</value>
+    </labels>
+    <labels>
+        <fullName>AOB_ComplexBuildingName</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_ComplexBuildingName</shortDescription>
+        <value>COMPLEX/BUILDING NAME</value>
+    </labels>
+    <labels>
+        <fullName>AOB_ComplexBuildingName_Message_Pattern_Mismatch</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_ComplexBuildingName_Message_Pattern_Mismatch</shortDescription>
+        <value>An Invalid Complex/Building Name has been Added.</value>
+    </labels>
+    <labels>
+        <fullName>AOB_ComplexBuildingName_Placeholder</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_ComplexBuildingName_Placeholder</shortDescription>
+        <value>e.g. Eye Of Africa Estate</value>
+    </labels>
+    <labels>
+        <fullName>AOB_ConfirmMissingMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_ConfirmMissingMsg</shortDescription>
+        <value>Missing COUNTRY OF TAX RESIDENCY</value>
+    </labels>
+    <labels>
+        <fullName>AOB_Continue</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_Continue</shortDescription>
+        <value>Continue</value>
+    </labels>
+    <labels>
+        <fullName>AOB_EmptyFieldErrorMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_EmptyFieldErrorMsg</shortDescription>
+        <value>Please fill this field</value>
+    </labels>
+    <labels>
+        <fullName>AOB_NATIONALITY</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_NATIONALITY</shortDescription>
+        <value>NATIONALITY</value>
+    </labels>
+    <labels>
+        <fullName>AOB_NameSurnameAssociation</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_NameSurnameAssociation</shortDescription>
+        <value>NAME AND SURNAME OF THE INDIVIDUAL</value>
+    </labels>
+    <labels>
+        <fullName>AOB_Nationality_Helptext</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_Nationality_Helptext</shortDescription>
+        <value>Please choose country of nationality</value>
+    </labels>
+    <labels>
+        <fullName>AOB_Nationality_Message_Value_Missing</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_Nationality_Message_Value_Missing</shortDescription>
+        <value>Please enter Nationality</value>
+    </labels>
+    <labels>
+        <fullName>AOB_Nationality_Placeholder</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_Nationality_Placeholder</shortDescription>
+        <value>eg. South Africa</value>
+    </labels>
+    <labels>
+        <fullName>AOB_NatureAssociation</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_NatureAssociation</shortDescription>
+        <value>WHAT IS THE NATURE OF YOUR RELATIONSHIP OR ASSOCIATION?</value>
+    </labels>
+    <labels>
+        <fullName>AOB_NatureAssociation_Message_Value_Missing</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_NatureAssociation_Message_Value_Missing</shortDescription>
+        <value>Please enter the nature of your association.</value>
+    </labels>
+    <labels>
+        <fullName>AOB_NatureAssociation_Placeholder</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_NatureAssociation_Placeholder</shortDescription>
+        <value>eg. Spouse</value>
+    </labels>
+    <labels>
+        <fullName>AOB_NatureOfRelationHelpText</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_NatureOfRelationHelpText</shortDescription>
+        <value>Include business partner or close associates, parent, siblings, son/daughter or spouse/partner</value>
+    </labels>
+    <labels>
+        <fullName>AOB_No</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_No</shortDescription>
+        <value>No</value>
+    </labels>
+    <labels>
+        <fullName>AOB_PersonalDetails_subTitle</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_PersonalDetails_subTitle</shortDescription>
+        <value>{####}, please enter the following information.</value>
+    </labels>
+    <labels>
+        <fullName>AOB_PersonalDetails_title</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_PersonalDetails_title</shortDescription>
+        <value>PERSONAL DETAILS</value>
+    </labels>
+    <labels>
+        <fullName>AOB_PostalCode</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_PostalCode</shortDescription>
+        <value>POSTAL CODE</value>
+    </labels>
+    <labels>
+        <fullName>AOB_PostalCode_Message_Min_Value</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_PostalCode_Message_Min_Value</shortDescription>
+        <value>Please enter a 4-digit Postal Code.</value>
+    </labels>
+    <labels>
+        <fullName>AOB_PostalCode_Message_Pattern_Mismatch</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_PostalCode_Message_Pattern_Mismatch</shortDescription>
+        <value>A valid South African Postal Code contains only numbers.</value>
+    </labels>
+    <labels>
+        <fullName>AOB_PostalCode_Message_Value_Missing</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_PostalCode_Message_Value_Missing</shortDescription>
+        <value>Please enter your Postal Code.</value>
+    </labels>
+    <labels>
+        <fullName>AOB_PostalCode_Placeholder</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_PostalCode_Placeholder</shortDescription>
+        <value>e.g. PO Box 50</value>
+    </labels>
+    <labels>
+        <fullName>AOB_Province</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_Province</shortDescription>
+        <value>PROVINCE</value>
+    </labels>
+    <labels>
+        <fullName>AOB_Province_Message_Value_Missing</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_Province_Message_Value_Missing</shortDescription>
+        <value>Please enter your Province.</value>
+    </labels>
+    <labels>
+        <fullName>AOB_Province_Placeholder</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_Province_Placeholder</shortDescription>
+        <value>Please select</value>
+    </labels>
+    <labels>
+        <fullName>AOB_PublicAuthority</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_PublicAuthority</shortDescription>
+        <value>ARE YOU A PUBLIC OFFICIAL IN A POSITION OF AUTHORITY?</value>
+    </labels>
+    <labels>
+        <fullName>AOB_RelatedPublicAuthority</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_RelatedPublicAuthority</shortDescription>
+        <value>ARE YOU RELATED TO OR ASSOCIATED WITH A PUBLIC OFFICIAL IN A POSITION OF AUTHORITY?</value>
+    </labels>
+    <labels>
+        <fullName>AOB_RelatedToAuthorityHelpText</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_RelatedToAuthorityHelpText</shortDescription>
+        <value>Individuals who work in prominent public functions (domestically or abroad). Examples: heads of state of government, government ministers, key political party officials, labour union officials, key military officials, or state-owned enterprise (SOE) senior executives.
+Excluding: nurses, police officers, teachers etc.</value>
+    </labels>
+    <labels>
+        <fullName>AOB_ResidentialAddress</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_ResidentialAddress_UnitNumber</shortDescription>
+        <value>UNIT NUMBER (OPTIONAL)</value>
+    </labels>
+    <labels>
+        <fullName>AOB_ResidentialAddress_City_Town</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_ResidentialAddress_City/Town</shortDescription>
+        <value>City/Town</value>
+    </labels>
+    <labels>
+        <fullName>AOB_ResidentialAddress_ComplexBuildingName</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_ResidentialAddress_ComplexBuildingName</shortDescription>
+        <value>COMPLEX/BUILDING NAME (OPTIONAL)</value>
+    </labels>
+    <labels>
+        <fullName>AOB_ResidentialAddress_Postal</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_ResidentialAddress_PostalCode</shortDescription>
+        <value>Postal Code</value>
+    </labels>
+    <labels>
+        <fullName>AOB_ResidentialAddress_Province</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_ResidentialAddress_Province</shortDescription>
+        <value>PROVINCE</value>
+    </labels>
+    <labels>
+        <fullName>AOB_ResidentialAddress_StreetNumber_Name</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_ResidentialAddress_StreetNumber_Name</shortDescription>
+        <value>STREET NUMBER AND NAME</value>
+    </labels>
+    <labels>
+        <fullName>AOB_ResidentialAddress_Subtitle</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_ResidentialAddress_Subtitle</shortDescription>
+        <value>Enter your home address below</value>
+    </labels>
+    <labels>
+        <fullName>AOB_ResidentialAddress_Suburb</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_ResidentialAddress_Suburb</shortDescription>
+        <value>SUBURB</value>
+    </labels>
+    <labels>
+        <fullName>AOB_ResidentialAddress_title</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_ResidentialAddress_title</shortDescription>
+        <value>RESIDENTIAL ADDRESS</value>
+    </labels>
+    <labels>
+        <fullName>AOB_SaveForLater</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_SaveForLater</shortDescription>
+        <value>save for later</value>
+    </labels>
+    <labels>
+        <fullName>AOB_SaveForLater_ApplicationNo</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_SaveForLater_ApplicationNo</shortDescription>
+        <value>Application number: {####}</value>
+    </labels>
+    <labels>
+        <fullName>AOB_SaveForLater_Content</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_SaveForLater_Content</shortDescription>
+        <value>You can go to “View your profile” within the next 7 days to complete your application.</value>
+    </labels>
+    <labels>
+        <fullName>AOB_SaveForLater_SubTitle</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_SaveForLater_SubTitle</shortDescription>
+        <value>Select SAVE to continue later</value>
+    </labels>
+    <labels>
+        <fullName>AOB_SaveForLater_Title</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_SaveForLater_Title</shortDescription>
+        <value>Save MyMoBiz application</value>
+    </labels>
+    <labels>
+        <fullName>AOB_SelectPlaceHolder</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_SelectPlaceHolder</shortDescription>
+        <value>Please select</value>
+    </labels>
+    <labels>
+        <fullName>AOB_StreetNumberAndName_Message_Pattern_Mismatch</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_StreetNumberAndName_Message_Pattern_Mismatch</shortDescription>
+        <value>An Invalid Street Number and Name has been Added.</value>
+    </labels>
+    <labels>
+        <fullName>AOB_StreetNumberAndName_Message_Value_Missing</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_StreetNumberAndName_Message_Value_Missing</shortDescription>
+        <value>Please enter your Street Number and Name.</value>
+    </labels>
+    <labels>
+        <fullName>AOB_StreetNumber_Name</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_StreetNumber_Name</shortDescription>
+        <value>STREET NUMBER AND NAME</value>
+    </labels>
+    <labels>
+        <fullName>AOB_StreetNumber_Name_Placeholder</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_StreetNumber_Name_Placeholder</shortDescription>
+        <value>e.g. 134 Raglan Street</value>
+    </labels>
+    <labels>
+        <fullName>AOB_Suburb</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_Suburb</shortDescription>
+        <value>SUBURB</value>
+    </labels>
+    <labels>
+        <fullName>AOB_Suburb_Message_Value_Missing</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_Suburb_Message_Value_Missing</shortDescription>
+        <value>Please enter your Suburb</value>
+    </labels>
+    <labels>
+        <fullName>AOB_Suburb_Placeholder</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_Suburb_Placeholder</shortDescription>
+        <value>e.g. Sandton</value>
+    </labels>
+    <labels>
+        <fullName>AOB_TaxNumberValidationError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_TaxNumberValidationError</shortDescription>
+        <value>Wrong Tax Number</value>
+    </labels>
+    <labels>
+        <fullName>AOB_UnitNumber</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_UnitNumber</shortDescription>
+        <value>UNIT NUMBER</value>
+    </labels>
+    <labels>
+        <fullName>AOB_UnitNumber_Message_Pattern_Mismatch</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_UnitNumber_Message_Pattern_Mismatch</shortDescription>
+        <value>An Invalid Unit Number has been Added</value>
+    </labels>
+    <labels>
+        <fullName>AOB_UnitNumber_Placeholder</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_UnitNumber_Placeholder</shortDescription>
+        <value>e.g. 12</value>
+    </labels>
+    <labels>
+        <fullName>AOB_Yes</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_Yes</shortDescription>
+        <value>Yes</value>
+    </labels>
+    <labels>
+        <fullName>AOB_disclaimer</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_disclaimer</shortDescription>
+        <value>We’ll keep your information safe and confidential. It won’t be shared with any third parties.</value>
+    </labels>
+    <labels>
+        <fullName>AOB_whatNext</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AOB_whatNext</shortDescription>
+        <value>What happens next?</value>
+    </labels>
+    <labels>
+        <fullName>Add_Remove</fullName>
+        <categories>LABEL</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Add / Remove</shortDescription>
+        <value>Add / Remove</value>
+    </labels>
+    <labels>
+        <fullName>Archived_Clients</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Archived_Clients</shortDescription>
+        <value>Archived Clients</value>
+    </labels>
+    <labels>
+        <fullName>Atleast_One_Record</fullName>
+        <categories>Product Search Screen</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Atleast One Record</shortDescription>
+        <value>Please select at least one product before clicking Next.</value>
+    </labels>
+    <labels>
+        <fullName>Bad_Response_Structure</fullName>
+        <categories>ERROR_MESSAGE</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Bad Response Structure</shortDescription>
+        <value>Bad Response Structure.</value>
+    </labels>
+    <labels>
+        <fullName>Budget_YTD</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Budget YTD</shortDescription>
+        <value>Budget YTD</value>
+    </labels>
+    <labels>
+        <fullName>Business_Assessment_Insufficient_Privileges</fullName>
+        <categories>ERROR_MESSAGE</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Business Assessment Insufficient Privileges</shortDescription>
+        <value>There are other opportunities in the client hierarchy that qualify for the Business Assessment. Please contact the CC or CCBM of the Ultimate Group Parent or Economic Group Parent Client to proceed.</value>
+    </labels>
+    <labels>
+        <fullName>Business_Assessment_Not_Available</fullName>
+        <categories>ERROR_MESSAGE</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Business Assessment Is Not Available</shortDescription>
+        <value>Business Assessment can only be created on Ultimate Group Parent or Economic Group Parent Client.</value>
+    </labels>
+    <labels>
+        <fullName>Business_Assessment_Not_Available_Clients</fullName>
+        <categories>ERROR_MESSAGE</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Business Assessment Is Not Available Clients</shortDescription>
+        <value>Business Assessment for CIB Clients can only be created on Ultimate Group Parent or Economic Group Parent Client.</value>
+    </labels>
+    <labels>
+        <fullName>Business_Assessment_Spv_Insufficient_Privileges</fullName>
+        <categories>ERROR_MESSAGE</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Business Assessment Spv Insufficient Privileges</shortDescription>
+        <value>Business Assessment can only be created on a client with a CIF number. Please onboard a “Potential” client to obtain a CIF number.</value>
+    </labels>
+    <labels>
+        <fullName>Button_Label_Save</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Button Label Save</shortDescription>
+        <value>Save</value>
+    </labels>
+    <labels>
+        <fullName>CC_Division_Scenario</fullName>
+        <categories>Scenarios</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Client Coverage User Scenario</shortDescription>
+        <value>CC</value>
+    </labels>
+    <labels>
+        <fullName>CDC_Message_ActiveDivisionsClientTeam</fullName>
+        <categories>Client Data Change</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CDC Message Active Divisions ClientTeam</shortDescription>
+        <value>Only active users with the following divisions: Client Coverage, Global Markets, Investment Banking, Transactional Products and Services, General Management, Real Estate can be added to client team.</value>
+    </labels>
+    <labels>
+        <fullName>CDC_Message_AddVisibility</fullName>
+        <categories>Client Data Change</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CDC Message Add visibility to client</shortDescription>
+        <value>Make visible to client</value>
+    </labels>
+    <labels>
+        <fullName>CDC_Message_CCActiveDivisions</fullName>
+        <categories>Client Data Change</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CDC Message CC Active Divisions</shortDescription>
+        <value>Only active users with the following divisions: Client Coverage, Global Markets, Investment Banking, Transactional Products and Services, General Management, Real Estate can be added as a CC.</value>
+    </labels>
+    <labels>
+        <fullName>CDC_Message_CCBMActiveDivisions</fullName>
+        <categories>Client Data Change</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CDC Message CCBM Active Divisions</shortDescription>
+        <value>Only active users with the following divisions: Client Coverage, Global Markets, Investment Banking, Transactional Products and Services, General Management, Real Estate can be added as a CCBM to client team.</value>
+    </labels>
+    <labels>
+        <fullName>CDC_Message_CCBMChange</fullName>
+        <categories>Client Data Change</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CDC Message CCBM Change</shortDescription>
+        <value>CCBM Change:</value>
+    </labels>
+    <labels>
+        <fullName>CDC_Message_CCBMWillChange</fullName>
+        <categories>Client Data Change</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CDC Message CCBM Will Change</shortDescription>
+        <value>The CCBM for this entity will be changed to {0} with {1} role.</value>
+    </labels>
+    <labels>
+        <fullName>CDC_Message_CCBMWillChangeFrom</fullName>
+        <categories>Client Data Change</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CDC Message CCBM Will Change From</shortDescription>
+        <value>The CCBM for this entity will be changed from {0} to {1} with {2} role.</value>
+    </labels>
+    <labels>
+        <fullName>CDC_Message_CCChange</fullName>
+        <categories>Client Data Change</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CDC Message CC Change</shortDescription>
+        <value>CC Change:</value>
+    </labels>
+    <labels>
+        <fullName>CDC_Message_CCMustBeAdministrator</fullName>
+        <categories>Client Data Change</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CDC_Message_CC Must Be Administrator</shortDescription>
+        <value>Please note that only CC Change request will be processed for a client where Client Coordinator is Salesforce Administration.</value>
+    </labels>
+    <labels>
+        <fullName>CDC_Message_CCNotFlagged</fullName>
+        <categories>Client Data Change</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CDC Message CC Not Flagged</shortDescription>
+        <value>There must be a CC present in a team, which is not flagged as to be deleted, while submitting the request.</value>
+    </labels>
+    <labels>
+        <fullName>CDC_Message_CCRequired</fullName>
+        <categories>Client Data Change</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CDC Message CC Required</shortDescription>
+        <value>There must be a CC present in a team, which is not flagged as to be deleted, while submitting the request.</value>
+    </labels>
+    <labels>
+        <fullName>CDC_Message_CCWillChange</fullName>
+        <categories>Client Data Change</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CDC_Message_CCWillChange</shortDescription>
+        <value>The CC for this entity will be changed from {0} to {1} with {2} role.</value>
+    </labels>
+    <labels>
+        <fullName>CDC_Message_CSTChanges</fullName>
+        <categories>Client Data Change</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CDC Message CST Changes</shortDescription>
+        <value>CST Changes:</value>
+    </labels>
+    <labels>
+        <fullName>CDC_Message_CannotSelectCommB</fullName>
+        <categories>Client Data Change</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CDC Message Cannot Select BCC</shortDescription>
+        <value>You cannot select BCC role. Please select a CIB team role (no BCC prefix).</value>
+    </labels>
+    <labels>
+        <fullName>CDC_Message_CantDeleteCC</fullName>
+        <categories>Client Data Change</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CDC Message Cant Delete CC</shortDescription>
+        <value>You can&apos;t delete CC team member. If you want to remove this member from the team, please uncheck the CC flag for the member.</value>
+    </labels>
+    <labels>
+        <fullName>CDC_Message_CantMakeDeletedCC</fullName>
+        <categories>Client Data Change</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CDC Message Cant Make Deleted CC</shortDescription>
+        <value>You can&apos;t make a team member CC where delete flag is set.</value>
+    </labels>
+    <labels>
+        <fullName>CDC_Message_CantRaiseCDC</fullName>
+        <categories>Client Data Change</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CDC Message Cant Raise CDC</shortDescription>
+        <value>You can’t raise a client data change request for a client where Client Coordinator is Archived Clients or PBB Clients.</value>
+    </labels>
+    <labels>
+        <fullName>CDC_Message_CantUndelete</fullName>
+        <categories>Client Data Change</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CDC Message Cant Undelete</shortDescription>
+        <value>&quot;You can&apos;t undelete because {0} holds the same team role.</value>
+    </labels>
+    <labels>
+        <fullName>CDC_Message_ChangesNotRequested</fullName>
+        <categories>Client Data Change</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CDC Message Changes Not Requested</shortDescription>
+        <value>You haven&apos;t requested any changes in the team.</value>
+    </labels>
+    <labels>
+        <fullName>CDC_Message_CoreRoleAllocated</fullName>
+        <categories>Client Data Change</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CDC Message Core Role Allocated</shortDescription>
+        <value>This core role is currently allocated to {0} in the client team. In order to make this role available, please request to remove or change the member’s role, on this change request.</value>
+    </labels>
+    <labels>
+        <fullName>CDC_Message_NoLongerCCBM</fullName>
+        <categories>Clien Data Change</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CDC Message No Longer CCBM</shortDescription>
+        <value>{0} will no longer be the CCBM for this entity.</value>
+    </labels>
+    <labels>
+        <fullName>CDC_Message_OnlyCIBUsers</fullName>
+        <categories>Client Data Change</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CDC Message Only CIB Users</shortDescription>
+        <value>Only CIB users can create the change request.</value>
+    </labels>
+    <labels>
+        <fullName>CDC_Message_ProvideDetailsOrRole</fullName>
+        <categories>ClientDataChange</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CDC Message Provide Details Or Role</shortDescription>
+        <value>Please provide the details of new team member/s that you want to add OR the team role name for existing team member/s that you want to change.</value>
+    </labels>
+    <labels>
+        <fullName>CDC_Message_RemoveVisibility</fullName>
+        <categories>Client Data Change</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CDC Message remove visibility to client</shortDescription>
+        <value>Make NOT visible to client</value>
+    </labels>
+    <labels>
+        <fullName>CDC_Message_RequestSubmitted</fullName>
+        <categories>Client Data Change</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CDC Message Request Submitted</shortDescription>
+        <value>Your request has been submitted.</value>
+    </labels>
+    <labels>
+        <fullName>CDC_Message_RequestSubmittedWithNumber</fullName>
+        <categories>Client Data Change</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CDC Message Request Submitted With Number</shortDescription>
+        <value>Your request has been submitted with case number :{0}. You will receive this case number in a notification email.</value>
+    </labels>
+    <labels>
+        <fullName>CDC_Message_RequestSummary</fullName>
+        <categories>Client Data Change</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CDC Message Request Summary</shortDescription>
+        <value>- Client Coordinator (CC) changes are automated. These changes will take effect after approval is received from the two/relevant affected parties.
+            &lt;br/&gt;
+            - Client Coordinator Business Manager (CCBM) and Client Service Team (CST) change requests will be submitted to the CRM Helpdesk. You will receive an email with a case number shortly.
+            Please note that changes can only take effect once all relevant approvals have been received.</value>
+    </labels>
+    <labels>
+        <fullName>CDC_Message_RequestSummary_2</fullName>
+        <categories>Client Data Change</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CDC Message Request Summary - optional part</shortDescription>
+        <value>&lt;br/&gt;
+            - Changes to visibility to client will get applied right away, no approval is required.</value>
+    </labels>
+    <labels>
+        <fullName>CDC_Message_UpdateFailure</fullName>
+        <categories>Client Data Change</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CDC Message visible to client update failure</shortDescription>
+        <value>Update of Visible to Client field has failed for some of the records. If the issue persists forward below details to the Support Team:</value>
+    </labels>
+    <labels>
+        <fullName>CDC_Message_UserAlreadyPresent</fullName>
+        <categories>Client Data Change</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CDC Message User Already Present</shortDescription>
+        <value>This user is already present in the proposed team.</value>
+    </labels>
+    <labels>
+        <fullName>CDC_Message_VisibilityChangesApplied</fullName>
+        <categories>Client Data Change</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CDC Message visibility changes applied</shortDescription>
+        <value>Changes to visibility to client have been applied.</value>
+    </labels>
+    <labels>
+        <fullName>CDC_Message_WhatAfterSubmission</fullName>
+        <categories>Client Data Change</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CDC Message What After Submission</shortDescription>
+        <value>What will happen after submission?</value>
+    </labels>
+    <labels>
+        <fullName>CIB_CRM_Production_Support_email_for_Onboarding</fullName>
+        <categories>CIB CRM Production Support email for Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CIB CRM Production Support email for Onboarding</shortDescription>
+        <value>cibsacrmitproductionsuppo@standardbank.co.za</value>
+    </labels>
+    <labels>
+        <fullName>CI_ClientsCYPipline_HelpText</fullName>
+        <categories>Help Text</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Help Text for Clients CY Pipline</shortDescription>
+        <value>Portfolio view: Total Current Year Pipeline for all entities that you are a team member of. Client View: Total Current Year Pipeline for entities within this group</value>
+    </labels>
+    <labels>
+        <fullName>CROC</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CROC</shortDescription>
+        <value>CROC (%)</value>
+    </labels>
+    <labels>
+        <fullName>CSI_Case_reminder_subject</fullName>
+        <categories>Item to Action</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CSI Case reminder subject</shortDescription>
+        <value>There is an unresolved CSI Case that needs your action</value>
+    </labels>
+    <labels>
+        <fullName>CSI_Score</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CSI Score</shortDescription>
+        <value>CIB Rating (CSI)</value>
+    </labels>
+    <labels>
+        <fullName>CSI_rating_note</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CSI rating note</shortDescription>
+        <value>The Overall CIB Rating, is independent of the respective GM, IB, TPS and Credit Turnaround ratings. As a result it should not be taken as an average.</value>
+    </labels>
+    <labels>
+        <fullName>CY_Pipeline</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CY Pipeline</shortDescription>
+        <value>CY Pipeline</value>
+    </labels>
+    <labels>
+        <fullName>Cancel</fullName>
+        <categories>BUTTON LABEL</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Cancel</shortDescription>
+        <value>Cancel</value>
+    </labels>
+    <labels>
+        <fullName>ChatterNotificationForAgent60</fullName>
+        <categories>Chatter</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Chatter Notification for Agent &gt; 60</shortDescription>
+        <value>Dear {!$Record.User.FirstName}
+
+We have noticed that you have been unavailable for 60 minutes, kindly review your current status and update accordingly.</value>
+    </labels>
+    <labels>
+        <fullName>ChatterNotificationForAgent90</fullName>
+        <categories>Chatter</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Chatter Notification for Agent &gt; 90</shortDescription>
+        <value>Dear {!$Record.User.FirstName}
+
+We have noticed that you have been unavailable for 90 minutes, kindly review your current status and update accordingly.</value>
+    </labels>
+    <labels>
+        <fullName>ChatterNotificationForManager60</fullName>
+        <categories>Chatter</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Chatter Notification for Account Manager related to User Presence 60 mins</shortDescription>
+        <value>Dear {!$Record.Agent_Manager__r.FirstName},
+We have noticed that {!$Record.User.FirstName} have been unavailable for 60 minutes, kindly get in touch with the user.</value>
+    </labels>
+    <labels>
+        <fullName>ChatterNotificationForManager90</fullName>
+        <categories>Chatter</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Chatter Notification for Account Manager related to User Presence 90 mins</shortDescription>
+        <value>Dear {!$Record.Agent_Manager__r.FirstName},
+We have noticed that {!$Record.User.FirstName} have been unavailable for 90 minutes, kindly get in touch with the user.</value>
+    </labels>
+    <labels>
+        <fullName>Child_Record_Type_Id</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Child Record Type Id</shortDescription>
+        <value>012200000004ais</value>
+    </labels>
+    <labels>
+        <fullName>ClientCYOpportunities</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Client&apos;s CY Opportunities Header</shortDescription>
+        <value>Total CY Won Opportunities</value>
+    </labels>
+    <labels>
+        <fullName>ClientCaseRTID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ClientCaseRTID</shortDescription>
+        <value>01220000000chAO</value>
+    </labels>
+    <labels>
+        <fullName>ClientSearchInputTextLabel</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ClientSearchInputTextLabel</shortDescription>
+        <value>Client Name/Client Registration Number</value>
+    </labels>
+    <labels>
+        <fullName>ClientSearchTitle</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ClientSearchTitle</shortDescription>
+        <value>Please search for an existing Client Or Client Registration Number to prevent creating duplicates</value>
+    </labels>
+    <labels>
+        <fullName>Client_Credit_Limit_and_Utilisation</fullName>
+        <categories>LABEL</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Client Credit Limit and Utilisation</shortDescription>
+        <value>Client Credit Limit and Utilisation</value>
+    </labels>
+    <labels>
+        <fullName>Client_Hierarchy_Id</fullName>
+        <categories>KYCClient Hierarchy Link Formula Field</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Client Hierarchy Id</shortDescription>
+        <value>00Ow0000007DNz8</value>
+    </labels>
+    <labels>
+        <fullName>Client_Plan_Credit_Lines</fullName>
+        <categories>LABEL</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Client Plan Credit Lines</shortDescription>
+        <value>Credit Lines (&apos;000)</value>
+    </labels>
+    <labels>
+        <fullName>Client_Revenue_YTD</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Client Revenue YTD</shortDescription>
+        <value>Client Revenue YTD</value>
+    </labels>
+    <labels>
+        <fullName>Client_Team_Visible_to_Client_Validation_Error</fullName>
+        <categories>Client Data Change</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Not allowed to edit Visible to Client field</shortDescription>
+        <value>Only Client Coordinator or Client Coordinator&apos;s Business Manager can change Visible to Client field&apos;s value</value>
+    </labels>
+    <labels>
+        <fullName>Closed_Opportunity_Hover</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Closed Opportunity Hover</shortDescription>
+        <value>You will be able to:
+            - Select Won/Lost Reason</value>
+    </labels>
+    <labels>
+        <fullName>Coming_Soon</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Coming Soon</shortDescription>
+        <value>Coming Soon</value>
+    </labels>
+    <labels>
+        <fullName>CommB_Entitlement_ID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CommB Entitlement ID</shortDescription>
+        <value>5507R000001Jx9vQAC</value>
+    </labels>
+    <labels>
+        <fullName>Committee_already_a_Submission</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Committee_already_a_Submission</shortDescription>
+        <value>The Committee Attendee could not be added as they already exist as a Submission Attendee.</value>
+    </labels>
+    <labels>
+        <fullName>Complaint_Case_RecType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Complaint Case RecType</shortDescription>
+        <value>CIB Client Case</value>
+    </labels>
+    <labels>
+        <fullName>Complaint_Case_Subject</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Complaint Case Subject</shortDescription>
+        <value>Client Complaint</value>
+    </labels>
+    <labels>
+        <fullName>Complaint_Case_Type</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Complaint Case Type</shortDescription>
+        <value>Complaint</value>
+    </labels>
+    <labels>
+        <fullName>Console_Event_fields_missing</fullName>
+        <categories>DEF:1888 - Error message to show when Event Report fields are missing in console</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Console_Event_fields_missing</shortDescription>
+        <value>One or more of the following fields require a value: Subject, NBAC Committee, Start and/or End. Please enter a value.</value>
+    </labels>
+    <labels>
+        <fullName>Console_Manage_No_Access</fullName>
+        <categories>US:1258 - Error message when Submission attendees try to Click on Manage without access</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Console_Manage_No_Access</shortDescription>
+        <value>You do not have access to view this record</value>
+    </labels>
+    <labels>
+        <fullName>Contact_Role_Error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Contact Role Error</shortDescription>
+        <value>Contact Role is not created for this opportunity because of below error. We would recommend you to add manually.</value>
+    </labels>
+    <labels>
+        <fullName>Continue</fullName>
+        <categories>BUTTON LABEL</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Continue</shortDescription>
+        <value>Continue</value>
+    </labels>
+    <labels>
+        <fullName>CoreRoleInsertDeleteError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CoreRoleInsertDeleteError</shortDescription>
+        <value>Insufficient Privileges - You do not have the level of access necessary to Add or Delete a Core Client Team Member on this Client. Please contact the CRM Helpdesk (CRMSalesforce@standardbank.co.za) for assistance.</value>
+    </labels>
+    <labels>
+        <fullName>Core_Team_Members_Msg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Core Team Members Msg</shortDescription>
+        <value>This meeting is a core client team meeting. Please remember to add at least two core client team members as internal attendees.</value>
+    </labels>
+    <labels>
+        <fullName>CotedIvoireemailaddress</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CotedIvoireemailaddress</shortDescription>
+        <value>clientinformationfile@standardbank.co.za</value>
+    </labels>
+    <labels>
+        <fullName>Credit_Utilisation_vs_Limit</fullName>
+        <categories>LABEL</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Credit Utilisation vs Limit</shortDescription>
+        <value>Credit Utilisation vs Limit</value>
+    </labels>
+    <labels>
+        <fullName>Cross_Sell_Opportunity</fullName>
+        <categories>Opportunity Cross Sell</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Cross Sell Opportunity</shortDescription>
+        <value>CF00N20000001bgJj</value>
+    </labels>
+    <labels>
+        <fullName>Delegated_Approver_Error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delegated_Approver_Error</shortDescription>
+        <value>Please contact the CRM Helpdesk on CRMSalesforce.com@standardbank.co.za to update the Delegated Approver</value>
+    </labels>
+    <labels>
+        <fullName>Delete_Confirmation_MeetingConsole</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delete_Confirmation_MeetingConsole</shortDescription>
+        <value>Are you sure you want to delete this record?</value>
+    </labels>
+    <labels>
+        <fullName>Delete_null_EventReport_MeetingConsole</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delete_null_EventReport_MeetingConsole</shortDescription>
+        <value>Please associate an Event Report before deleting</value>
+    </labels>
+    <labels>
+        <fullName>Develop_Opportunity_Green</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Develop Opportunity Green</shortDescription>
+        <value>Have you completed the following:
+            - Transfered the Opportunity to the correct product owner
+            - Added additional Opportunity Team Members
+            - Added the Product(s) to reflect estimated Opportunity Revenue
+            - Updated the Draw Down Date Profile on all Loan Products</value>
+    </labels>
+    <labels>
+        <fullName>Develop_Opportunity_Hover</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Develop Opportunity Hover</shortDescription>
+        <value>You will be able to do the following:
+            - Transfer the Opportunity to the correct product owner
+            - Add additional Opportunity Team Members
+            - Add the Product(s) to reflect estimated Opportunity Revenue
+            - Update the Draw Down Date Profile on all Loan Products</value>
+    </labels>
+    <labels>
+        <fullName>Disclaimer_to_indicate_private_opportunities</fullName>
+        <categories>Disclaimer to indicate private opportunities</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Disclaimer to indicate private opportunities</shortDescription>
+        <value>All Private Opportunities are not displayed in the above table(s) for compliance purposes</value>
+    </labels>
+    <labels>
+        <fullName>Drag_and_Drop_Info_Message</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Custom Info Message on COC Drag and Drop</shortDescription>
+        <value>This screen allows you to transfer client operating countries between the applicable statuses. Drag and drop countries according to the status required.</value>
+    </labels>
+    <labels>
+        <fullName>DueDiligenceHover</fullName>
+        <categories>OnboardingTracker</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DueDiligenceHover</shortDescription>
+        <value>Remember to complete the additional KYC Information and select the Submit for Onboarding button once CC approval has been received. Remember to add a KYC contact. This will begin the CIF Number creation process.</value>
+    </labels>
+    <labels>
+        <fullName>Duplicate_Banked_Client</fullName>
+        <categories>Error message</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Duplicate Banked Client</shortDescription>
+        <value>A client with this Name and/or Relationship Group Number already exists. Please go back to add it to your Known Banked Clients.</value>
+    </labels>
+    <labels>
+        <fullName>Duplicate_Relationship_Group_Number_on_Ecosystem</fullName>
+        <categories>Error message</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Duplicate Relationship Group Number on Ecosystem</shortDescription>
+        <value>An Ecosystem with this Relationship Group Number already exists.</value>
+    </labels>
+    <labels>
+        <fullName>Economic_Group</fullName>
+        <categories>LABEL</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Economic Group</shortDescription>
+        <value>Economic Group</value>
+    </labels>
+    <labels>
+        <fullName>Economic_Group_Credit_Limit_and_Utilisation</fullName>
+        <categories>LABEL</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Economic Group Credit Limit and Utilisation</shortDescription>
+        <value>Economic Group Credit Limit and Utilisation</value>
+    </labels>
+    <labels>
+        <fullName>Email_Body_Onboarding_form</fullName>
+        <categories>Email Body Onboarding form</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Email Body Onboarding form</shortDescription>
+        <value>Test</value>
+    </labels>
+    <labels>
+        <fullName>EnterDifferentValue</fullName>
+        <categories>Product Search Screen</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EnterDifferentValue</shortDescription>
+        <value>The value you entered does not match any existing products. Please try a different value to improve your search results</value>
+    </labels>
+    <labels>
+        <fullName>EventReportDefaultName</fullName>
+        <categories>NewEventReportRedirectCtrl</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EventReportDefaultName</shortDescription>
+        <value>Will be Auto Populated</value>
+    </labels>
+    <labels>
+        <fullName>Event_Report_RT_missing</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Event Report RT missing</shortDescription>
+        <value>Please select a Record type to continue</value>
+    </labels>
+    <labels>
+        <fullName>Exec_User_Scenario</fullName>
+        <categories>Scenarios</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Exec User Scenario</shortDescription>
+        <value>EXEC</value>
+    </labels>
+    <labels>
+        <fullName>FAIS_reminder_subject</fullName>
+        <categories>Item to Action</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FAIS reminder subject</shortDescription>
+        <value>Update FAIS Information of</value>
+    </labels>
+    <labels>
+        <fullName>Field_Label_CC</fullName>
+        <categories>Field Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Field Label CC</shortDescription>
+        <value>CC</value>
+    </labels>
+    <labels>
+        <fullName>Field_Label_CCBM</fullName>
+        <categories>Field Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Field Label CCBM</shortDescription>
+        <value>CCBM</value>
+    </labels>
+    <labels>
+        <fullName>Field_Label_Core</fullName>
+        <categories>Field Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Field Label Core</shortDescription>
+        <value>Core</value>
+    </labels>
+    <labels>
+        <fullName>Field_Label_Remove</fullName>
+        <categories>Field Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Field Label Remove</shortDescription>
+        <value>Remove</value>
+    </labels>
+    <labels>
+        <fullName>Field_Label_TeamMember</fullName>
+        <categories>Field Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Field_Label_TeamMember</shortDescription>
+        <value>Team Member</value>
+    </labels>
+    <labels>
+        <fullName>Field_Label_TeamRole</fullName>
+        <categories>Field Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Field Label Team Role</shortDescription>
+        <value>Team Role</value>
+    </labels>
+    <labels>
+        <fullName>Field_Label_UserCountry</fullName>
+        <categories>Field Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Field Label User Country</shortDescription>
+        <value>User Country</value>
+    </labels>
+    <labels>
+        <fullName>Field_Label_UserDivision</fullName>
+        <categories>Field Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Field Label User Division</shortDescription>
+        <value>User Division</value>
+    </labels>
+    <labels>
+        <fullName>Field_Label_VisibleToClient</fullName>
+        <categories>Field Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Field Label Visible to Client</shortDescription>
+        <value>Visible to Client</value>
+    </labels>
+    <labels>
+        <fullName>GameChangerCommentsId</fullName>
+        <categories>OpportunityNewRedirect_Vf_Ext</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GameChangerCommentsId</shortDescription>
+        <value>00N2000000109rp</value>
+    </labels>
+    <labels>
+        <fullName>GameChangerCustomFieldId</fullName>
+        <categories>OpportunityNewRedirect_Vf_Ext</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GameChangerCustomFieldId</shortDescription>
+        <value>CF00Nw0000008k6kN</value>
+    </labels>
+    <labels>
+        <fullName>GameChangerLeadSourceId</fullName>
+        <categories>OpportunityNewRedirect_Vf_Ext</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>GameChangerLeadSourceId</shortDescription>
+        <value>00Nw0000004GqLi</value>
+    </labels>
+    <labels>
+        <fullName>HTTP_Request_Failed</fullName>
+        <categories>ERROR_MESSAGE</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HTTP Request Failed</shortDescription>
+        <value>Failed sending HTTP Request. HTTP Code = {0}. Message: {1}. Response Body: {2}</value>
+    </labels>
+    <labels>
+        <fullName>Help_Text_CROC</fullName>
+        <categories>Help Text</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Help Text CROC</shortDescription>
+        <value>Client Revenue over Capital</value>
+    </labels>
+    <labels>
+        <fullName>Help_Text_CSI_Score</fullName>
+        <categories>Help Text</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Help Text CSI Score</shortDescription>
+        <value>CIB Rating (CSI): 1-6 Client at Risk | 7 Room for Improvement | 8 Satisfied | 9-10 Extremely Satisfied</value>
+    </labels>
+    <labels>
+        <fullName>Help_Text_Client_Revenue_YTD_Child</fullName>
+        <categories>Help Text</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Help Text Client Revenue YTD Child</shortDescription>
+        <value>YTD revenue for this client</value>
+    </labels>
+    <labels>
+        <fullName>Help_Text_Client_Revenue_YTD_None</fullName>
+        <categories>Help Text</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Help Text Client Revenue YTD  None</shortDescription>
+        <value>YTD revenue for this client</value>
+    </labels>
+    <labels>
+        <fullName>Help_Text_Client_Revenue_YTD_UGP_or_IM</fullName>
+        <categories>Help Text</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Help Text Client Revenue YTD UGP or IM</shortDescription>
+        <value>Total YTD revenue of all subsidiaries in this client hierarchy</value>
+    </labels>
+    <labels>
+        <fullName>Help_Text_Client_credit_limit_and_utilisation</fullName>
+        <categories>Help Text</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Client credit limit and utilisation</shortDescription>
+        <value>Client credit limit and utilisation</value>
+    </labels>
+    <labels>
+        <fullName>Help_Text_Credit_Utilisation_vs_Limit</fullName>
+        <categories>Help Text</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Help Text  Credit Utilisation vs Limit</shortDescription>
+        <value>A view of this client’s credit product(s) total limit amount and utilisation thereof</value>
+    </labels>
+    <labels>
+        <fullName>Help_Text_EGP_Credit_Lines_Warning</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Help Text EGP Credit Lines Warning</shortDescription>
+        <value>If this client is the economic group parent, then the total credit limits and utilisation will be displayed. Including all entities part of the economic group but not including the legal and risk taking view.
+            If this client is a subsidiary of the economic group, then only the credit limits and utilisation that are applicable to the entity will be displayed.</value>
+    </labels>
+    <labels>
+        <fullName>Help_Text_Economic_group_credit_limit_and_utilisation</fullName>
+        <categories>Help Text</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Help Text Economic group credit limit and utilisation</shortDescription>
+        <value>Economic group credit limit and utilisation (not including legal and risk-taking view)</value>
+    </labels>
+    <labels>
+        <fullName>Help_Text_PRMC</fullName>
+        <categories>Help Text</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Help Text PRMC</shortDescription>
+        <value>Risk appetite determined by client’s country of risk and sector/sub-sector</value>
+    </labels>
+    <labels>
+        <fullName>Help_Text_Total_CY_Pipeline_Child</fullName>
+        <categories>Help Text</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Help Text Total CY Pipeline Child</shortDescription>
+        <value>Current Year Revenue of this client&apos;s open opportunities (that you have access to)</value>
+    </labels>
+    <labels>
+        <fullName>Help_Text_Total_CY_Pipeline_None</fullName>
+        <categories>Help Text</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Help Text Total CY Pipeline None</shortDescription>
+        <value>Current Year Revenue of this client&apos;s open opportunities (that you have access to)</value>
+    </labels>
+    <labels>
+        <fullName>Help_Text_Total_CY_Pipeline_UGP_or_IP</fullName>
+        <categories>Help Text</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Help Text Total CY Pipeline UGP or IP</shortDescription>
+        <value>Current Year Revenue of open opportunities (that you have access to) for subsidiaries in this client hierarchy</value>
+    </labels>
+    <labels>
+        <fullName>Help_Text_Total_CY_Won_Opp</fullName>
+        <categories>HELP TEXT</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Help Text Total CY Won Opp</shortDescription>
+        <value>Current Year Revenue of won opportunities (that you have access to) for all subsidiaries in this client hierarchy</value>
+    </labels>
+    <labels>
+        <fullName>Help_Text_Total_CY_Won_Opp_Child</fullName>
+        <categories>HELP TEXT</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Help Text Total CY Won Opp Child</shortDescription>
+        <value>Current Year Revenue of this client&apos;s won opportunities (that you have access to)</value>
+    </labels>
+    <labels>
+        <fullName>Help_Text_Total_CY_Won_Opp_None</fullName>
+        <categories>HELP TEXT</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Help Text Total CY Won Opp None</shortDescription>
+        <value>Current Year Revenue of this client&apos;s won opportunities (that you have access to)</value>
+    </labels>
+    <labels>
+        <fullName>Help_text_Meetings</fullName>
+        <categories>Help Text</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Help text Meetings</shortDescription>
+        <value>Number of YTD Internal and External meetings for this client</value>
+    </labels>
+    <labels>
+        <fullName>HierarchyRegexError</fullName>
+        <categories>Error Message for Hierarchy org Chart</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HierarchyRegexError</shortDescription>
+        <value>This client has a particularly large hierarchy it is therefore best viewed using the tabular view.</value>
+    </labels>
+    <labels>
+        <fullName>IB_Division_Scenario</fullName>
+        <categories>Scenarios</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>IB Division Scenario</shortDescription>
+        <value>IB</value>
+    </labels>
+    <labels>
+        <fullName>Immediate_Parent_Record_Type_Id</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Immediate Parent Record Type Id</shortDescription>
+        <value>0122000000053qE</value>
+    </labels>
+    <labels>
+        <fullName>Inactive_Record_Type_Id</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Inactive Record Type Id</shortDescription>
+        <value>0122000000053qJ</value>
+    </labels>
+    <labels>
+        <fullName>Insufficient_Privileges</fullName>
+        <categories>ERROR_MESSAGE</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Insufficient Privileges</shortDescription>
+        <value>Insufficient Privileges to perform the action.</value>
+    </labels>
+    <labels>
+        <fullName>InsurancePolisies_owned_by_another_User</fullName>
+        <categories>ERROR_MESSAGE</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>InsurancePolisies owned by another User</shortDescription>
+        <value>You can not update the Product because there are linked Insurance Policies owned by another user</value>
+    </labels>
+    <labels>
+        <fullName>Invalid_InsurancePolicy_Access</fullName>
+        <categories>ERROR_MESSAGE</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Incorrect InsurancePolicy object access</shortDescription>
+        <value>This product is linked with an Insurance Policy. You do not have the correct access to the Insurance Policy Object.</value>
+    </labels>
+    <labels>
+        <fullName>KYCTaskDescription</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>KYCTaskDescription</shortDescription>
+        <value>This email confirms that an escalation to the Client Coordinator and the Client Coordinator Business Manager has been sent. The Client has not been forthcoming with the documents required to complete the KYC review for the Client and is now outside the 30 days from initial contact.
+
+            Please can you assist us by contacting the client. Once completed, please add in the date under &quot;Client Commitment Date&quot;.</value>
+    </labels>
+    <labels>
+        <fullName>KYC_Contacts_Report_Id</fullName>
+        <categories>KYC Contact Report Link Formula Field</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>KYC Contacts Report Id</shortDescription>
+        <value>00Ow0000006VzBfEAK</value>
+    </labels>
+    <labels>
+        <fullName>LA_Chat_Body_AgentTypingUpdate_04I1X0000008OR7_8138270</fullName>
+        <categories>Snap-ins</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LA_Chat_Body_AgentTypingUpdate_04I1X0000008OR7_8138270</shortDescription>
+        <value>Stan is Typing</value>
+    </labels>
+    <labels>
+        <fullName>LA_Chat_Body_ChatWindowAgent_04I1X0000008OR7_7658089</fullName>
+        <categories>Snap-ins</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LA_Chat_Body_ChatWindowAgent_04I1X0000008OR7_7658089</shortDescription>
+        <value>Stan</value>
+    </labels>
+    <labels>
+        <fullName>LA_Chat_CloseConfirmation_ChatStateBody_04I1X0000008POx_9349538</fullName>
+        <categories>Snap-ins</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LA_Chat_CloseConfirmation_ChatStateBody_04I1X0000008POx_9349538</shortDescription>
+        <value>Saving Chat...</value>
+    </labels>
+    <labels>
+        <fullName>LA_Chat_Ended_ChatEndChatbot_04I1X0000008OR7_2825645</fullName>
+        <categories>Snap-ins</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LA_Chat_Ended_ChatEndChatbot_04I1X0000008OR7_2825645</shortDescription>
+        <value>Conversation Ended by Stan</value>
+    </labels>
+    <labels>
+        <fullName>LA_Waiting_WithQueuePos_WaitingQueuePosMaxMessageSecondL_04I1X0000008OR7_6541143</fullName>
+        <categories>Snap-ins</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LA_Waiting_WithQueuePos_WaitingQueuePosMaxMessageSecondL_04I1X0000008OR7_6541143</shortDescription>
+        <value>Stan is on his way</value>
+    </labels>
+    <labels>
+        <fullName>LA_Waiting_WithoutQueuePos_WaitingGreeting_04I1X0000008OR7_9832401</fullName>
+        <categories>Snap-ins</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LA_Waiting_WithoutQueuePos_WaitingGreeting_04I1X0000008OR7_9832401</shortDescription>
+        <value>Hello</value>
+    </labels>
+    <labels>
+        <fullName>LA_Waiting_WithoutQueuePos_WaitingMessage_04I1X0000008OR7_7055728</fullName>
+        <categories>Snap-ins</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LA_Waiting_WithoutQueuePos_WaitingMessage_04I1X0000008OR7_7055728</shortDescription>
+        <value>Stan is on his way</value>
+    </labels>
+    <labels>
+        <fullName>LA_Waiting_WithoutQueuePos_WaitingMessage_04I1X0000008POJ_4054783</fullName>
+        <categories>Snap-ins</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LA_Waiting_WithoutQueuePos_WaitingMessage_04I1X0000008POJ_4054783</shortDescription>
+        <value>Stan is on his way!</value>
+    </labels>
+    <labels>
+        <fullName>Lead_Opportunity_Hover</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lead Opportunity Hover</shortDescription>
+        <value>Have you completed the following:
+            - Transfered the Opportunity to the correct product owner
+            - Added additional Opportunity Team Members
+            - Added a primary Contact person at the Client</value>
+    </labels>
+    <labels>
+        <fullName>Limited_to_client_team</fullName>
+        <categories>LABEL</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Limited to client team</shortDescription>
+        <value>Limited to client team</value>
+    </labels>
+    <labels>
+        <fullName>Locked_Potential_CIF_Record_Type_ID</fullName>
+        <categories>Recordtype ID of Locked Potential (CIF) Record Type</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Locked Potential (CIF) Record Type ID</shortDescription>
+        <value>012w0000000AnvX</value>
+    </labels>
+    <labels>
+        <fullName>Locked_Potential_Goldtier_Record_Type_ID</fullName>
+        <categories>Recordtype ID of Locked Potential (Goldtier) Record Type</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Locked Potential (Goldtier) Record Type ID</shortDescription>
+        <value>012w0000000AnvY</value>
+    </labels>
+    <labels>
+        <fullName>MCCClientRole</fullName>
+        <categories>CustomClientTeamUtility</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MCCClientRole</shortDescription>
+        <value>Manager Client Coverage</value>
+    </labels>
+    <labels>
+        <fullName>MeetingConsole_Tasks_Required_Fields_Error</fullName>
+        <categories>MeetingConsole,ErrorMessage</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MeetingConsole Tasks Required Fields Error</shortDescription>
+        <value>One or more of the following fields require a value: Subject, Assigned To, Task Priority, Status, Type. Please enter a value.</value>
+    </labels>
+    <labels>
+        <fullName>More_than_one_product_error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>More than one product error</shortDescription>
+        <value>Only one Product per Opportunity is allowed.</value>
+    </labels>
+    <labels>
+        <fullName>More_than_one_record_error</fullName>
+        <categories>Product Search Screen</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>More than one record error message</shortDescription>
+        <value>You can only add one product at a time. Please select one product, click next and use the &quot;Save &amp; New&quot; button on the product page to add additional products.</value>
+    </labels>
+    <labels>
+        <fullName>MyEventsReportDashboardId</fullName>
+        <categories>My Event Reports Custom link</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MyEventsReportDashboardId</shortDescription>
+        <value>01Zw0000000YDB7</value>
+    </labels>
+    <labels>
+        <fullName>My_IBC_Team_Clients</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>My IBC Team Clients</shortDescription>
+        <value>IBC Clients where I am a team member</value>
+    </labels>
+    <labels>
+        <fullName>My_NBAC_record_is_locked</fullName>
+        <categories>WARNING MESSAGE</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>My NBAC record is locked</shortDescription>
+        <value>Your NBAC session is now locked for 60 minutes and no other user will be able to make updates during this time.
+            Please ensure that you save any changes before the NBAC session unlocks and other users are able to update this NBAC.</value>
+    </labels>
+    <labels>
+        <fullName>My_Team_Clients</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>My Team Clients</shortDescription>
+        <value>Clients where I&apos;m a team member</value>
+    </labels>
+    <labels>
+        <fullName>NBAC_Group_Current_YTD_CROC_to_ROE_ratio</fullName>
+        <categories>NBAC</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NBAC Group Current YTD CROC to ROE ratio (%)</shortDescription>
+        <value>40</value>
+    </labels>
+    <labels>
+        <fullName>NBAC_record_is_locked</fullName>
+        <categories>WARNING MESSAGE</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NBAC record is locked</shortDescription>
+        <value>NBAC is currently being updated by {0} and is not available for updating.</value>
+    </labels>
+    <labels>
+        <fullName>New</fullName>
+        <categories>General</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>New</shortDescription>
+        <value>New</value>
+    </labels>
+    <labels>
+        <fullName>New_Contact</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>New Contact</shortDescription>
+        <value>New Contact</value>
+    </labels>
+    <labels>
+        <fullName>New_Opportunity_LDS_Req_fields</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>New_Opportunity_LDS_Req_fields</shortDescription>
+        <value>Please fill all the required fields</value>
+    </labels>
+    <labels>
+        <fullName>NoOfExternalMeetings</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NoOfExternalMeetings</shortDescription>
+        <value># External Meetings</value>
+    </labels>
+    <labels>
+        <fullName>NoOfInternalMeetings</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NoOfInternalMeetings</shortDescription>
+        <value># Internal Meetings</value>
+    </labels>
+    <labels>
+        <fullName>No_input_parameter_defined</fullName>
+        <categories>ERROR_MESSAGE</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No input parameter defined.</shortDescription>
+        <value>No input parameter defined.</value>
+    </labels>
+    <labels>
+        <fullName>No_of_Top_CLosed_Lost_Opp</fullName>
+        <categories>Number of Top Closed Lost Opp to be displayed in OM Dashboard</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No_of_Top_CLosed_Lost_Opp</shortDescription>
+        <value>5</value>
+    </labels>
+    <labels>
+        <fullName>No_of_Top_CLosed_Won_Opp</fullName>
+        <categories>Number of Top Closed Won Opp to be displayed in OM Dashboard</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No_of_Top_CLosed_Won_Opp</shortDescription>
+        <value>5</value>
+    </labels>
+    <labels>
+        <fullName>No_of_Top_Opp</fullName>
+        <categories>Number of Top Opp to be displayed in OM Dashboard</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No_of_Top_Opp</shortDescription>
+        <value>10</value>
+    </labels>
+    <labels>
+        <fullName>No_record_found</fullName>
+        <categories>ERROR_MESSAGE</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No record found.</shortDescription>
+        <value>No record found for {0}.</value>
+    </labels>
+    <labels>
+        <fullName>Not_Available</fullName>
+        <categories>LABEL</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Not Available</shortDescription>
+        <value>Not Available</value>
+    </labels>
+    <labels>
+        <fullName>OSB_Api_Portal_Url</fullName>
+        <categories>OPTL, OneSpace</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OSB Api Portal Url</shortDescription>
+        <value>https://onedevelopernp.standardbank.co.za</value>
+    </labels>
+    <labels>
+        <fullName>OSB_Auth_Provider_Name</fullName>
+        <categories>OPTL</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OSB Auth Provider Name</shortDescription>
+        <value>Ping_Authentication</value>
+    </labels>
+    <labels>
+        <fullName>OSB_Code_of_Conduct</fullName>
+        <categories>OSB</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OSB Code of Conduct</shortDescription>
+        <value>servlet/servlet.ImageServer?id=0159E0000002sez &amp;oid=00D9E0000001yu1</value>
+    </labels>
+    <labels>
+        <fullName>OSB_Community_Profile</fullName>
+        <categories>OPTL</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OSB Community Profile</shortDescription>
+        <value>OneHub Community User</value>
+    </labels>
+    <labels>
+        <fullName>OSB_Congratulations_url</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OSB_Congratulations_url</shortDescription>
+        <value>https://op2l-digital.cs88.force.com/OneStandardBank/s/congratulations-page</value>
+    </labels>
+    <labels>
+        <fullName>OSB_Email_Address</fullName>
+        <categories>OSB</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OSB_Email_Address</shortDescription>
+        <value>onespace@standardbank.com</value>
+    </labels>
+    <labels>
+        <fullName>OSB_Email_Banner_URL</fullName>
+        <categories>OSB</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OSB_Email_Banner_URL</shortDescription>
+        <value>https://standardbank--op2l--c.cs88.content.force.com/servlet/servlet.ImageServer?id=0159E000000hx7B&amp;oid=00D9E0000001yu1&amp;lastMod=1575973183000</value>
+    </labels>
+    <labels>
+        <fullName>OSB_FA_Duplicates_FA_Permissions</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OSB FA Duplicates FA Permissions</shortDescription>
+        <value>Financial Account Permission with this Financial Account, Authorized Person and Service type already exists.</value>
+    </labels>
+    <labels>
+        <fullName>OSB_Get_Started</fullName>
+        <categories>OSB, Dashboard, Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OSB Get Started</shortDescription>
+        <value>Let&apos;s get started</value>
+    </labels>
+    <labels>
+        <fullName>OSB_Lets_Go</fullName>
+        <categories>OSB, Dashboard, Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OSB Lets Go</shortDescription>
+        <value>Yes, let&apos;s go</value>
+    </labels>
+    <labels>
+        <fullName>OSB_News_Title</fullName>
+        <categories>OSB, Dashboard, News</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OSB News Title</shortDescription>
+        <value>News is made available in relation to your industry that is sourced by external news providers.</value>
+    </labels>
+    <labels>
+        <fullName>OSB_No_Payment_Found</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Transaction reference invalid message</shortDescription>
+        <value>Payment data has not been found.</value>
+    </labels>
+    <labels>
+        <fullName>OSB_Notification_Content</fullName>
+        <categories>OSB Notification</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OSB Notification Content</shortDescription>
+        <value>Hi {0}
+
+            We are so excited to have you onboard and looking forward to assisting you every step of the way.
+            OneHub is a Standard Bank Corporate and Investment Banking platform that holds all the digital solutions and offerings into a single place for ease of use with a single sign-on to gain access to all information, solutions and offerings.
+
+            Enjoy and let us know if we can assist you in anyway.
+
+            Regards,
+            OneHub team</value>
+    </labels>
+    <labels>
+        <fullName>OSB_Notification_Title</fullName>
+        <categories>OSB Notification</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OSB Notification Title</shortDescription>
+        <value>Welcome to OneHub!</value>
+    </labels>
+    <labels>
+        <fullName>OSB_Onboarding_Content_1</fullName>
+        <categories>OSB, Dashboard, Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OSB Onboarding Content 1</shortDescription>
+        <value>The above tabs will allow you to access different sections of OneHub. Take some time to explore the sections. Will be worth your while.</value>
+    </labels>
+    <labels>
+        <fullName>OSB_Onboarding_Content_2</fullName>
+        <categories>OSB, Dashboard, Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OSB Onboarding Content 2</shortDescription>
+        <value>Access all Solutions that are tailored for you and the work you need to perform. All signed-up Solutions will appear as their own tile on your dashboard. &lt;br/&gt;&lt;br/&gt; If you have a thought about any of the Solutions, you can share it in our MarketPlace community.</value>
+    </labels>
+    <labels>
+        <fullName>OSB_Onboarding_Content_3</fullName>
+        <categories>OSB, Dashboard, Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OSB Onboarding Content 3</shortDescription>
+        <value>View all API Products and access the swagger documentation or subscribe to an API Product. &lt;br/&gt;&lt;br/&gt; If you have an opinion or point of view in regards to any of our API Products, you can add your thoughts in our MarketPlace community.</value>
+    </labels>
+    <labels>
+        <fullName>OSB_Onboarding_Content_4</fullName>
+        <categories>OSB, Dashboard, Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OSB Onboarding Content 4</shortDescription>
+        <value>Get the latest insights in relation to your industry. Here you can watch and read or view all available insights that have been provided just for you from Standard Bank industry experts. Happy reading.</value>
+    </labels>
+    <labels>
+        <fullName>OSB_Onboarding_Content_5</fullName>
+        <categories>OSB, Dashboard, Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OSB Onboarding Content 5</shortDescription>
+        <value>You can interact with Stan the helpful service bot who will assist the best way he can to solve any of your issues or concerns. All good?</value>
+    </labels>
+    <labels>
+        <fullName>OSB_Onboarding_Content_6</fullName>
+        <categories>OSB, Dashboard, Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OSB Onboarding Content 6</shortDescription>
+        <value>Okay, now that you have an idea of OneHub and what you can do, you can invite team members.&lt;br/&gt;&lt;br/&gt;If you don&apos;t want to invite team members right now, no problem, you can always use the &quot;Team Profile&quot; section under the dashboard main menu.</value>
+    </labels>
+    <labels>
+        <fullName>OSB_Onboarding_Content_7</fullName>
+        <categories>OSB, Dashboard, Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OSB Onboarding Content 7</shortDescription>
+        <value>Okay, now that you have an idea of OneHub and what you can do. You can invite others.
+            &lt;br/&gt;&lt;br/&gt;
+            If you don&apos;t want to invite others right now, no problem, you can always use the &quot;Team profile&quot; section under the main menu.</value>
+    </labels>
+    <labels>
+        <fullName>OSB_Onboarding_Title_1</fullName>
+        <categories>OSB, Dashboard, Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OSB Onboarding Title 1</shortDescription>
+        <value>Sections to explore</value>
+    </labels>
+    <labels>
+        <fullName>OSB_Onboarding_Title_2</fullName>
+        <categories>OSB, Dashboard, Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OSB Onboarding Title 2</shortDescription>
+        <value>Solutions to enhance your &lt;br/&gt; day-to-day</value>
+    </labels>
+    <labels>
+        <fullName>OSB_Onboarding_Title_3</fullName>
+        <categories>OSB, Dashboard, Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OSB Onboarding Title 3</shortDescription>
+        <value>API Products</value>
+    </labels>
+    <labels>
+        <fullName>OSB_Onboarding_Title_4</fullName>
+        <categories>OSB, Dashboard, Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OSB Onboarding Title 4</shortDescription>
+        <value>Insights</value>
+    </labels>
+    <labels>
+        <fullName>OSB_Onboarding_Title_5</fullName>
+        <categories>OSB, Dashboard, Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OSB Onboarding Title 5</shortDescription>
+        <value>Need help?</value>
+    </labels>
+    <labels>
+        <fullName>OSB_Onboarding_Title_6</fullName>
+        <categories>OSB, Dashboard, Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OSB Onboarding Title 6</shortDescription>
+        <value>Invite others</value>
+    </labels>
+    <labels>
+        <fullName>OSB_Onboarding_Welcome_Content</fullName>
+        <categories>OSB, Dashboard, Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OSB Onboarding Welcome Content</shortDescription>
+        <value>Here you can do many things that will enhance your day to day. Let&apos;s have a look around. Ready to get started?</value>
+    </labels>
+    <labels>
+        <fullName>OSB_Onboarding_Welcome_Title</fullName>
+        <categories>OSB, Dashboard, Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OSB Onboarding Welcome Title</shortDescription>
+        <value>Welcome to OneHub</value>
+    </labels>
+    <labels>
+        <fullName>OSB_OneSpace_Invite_Url</fullName>
+        <categories>OSB</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OSB OneSpace Invite Url</shortDescription>
+        <value>op2l-digital.cs88.force.com/OneStandardBank/s/sign-up?record=</value>
+    </labels>
+    <labels>
+        <fullName>OSB_Privacy_Policy_URL</fullName>
+        <categories>OSB</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OSB Privacy Policy URL</shortDescription>
+        <value>https://www.standardbank.com/sbg/standard-bank-group/legal/privacy-statement</value>
+    </labels>
+    <labels>
+        <fullName>OSB_Team_Onboarding_Content_1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OSB Team Onboarding Content 1</shortDescription>
+        <value>Here you are able to do a couple of things that we would like to take the time to explain to you.</value>
+    </labels>
+    <labels>
+        <fullName>OSB_Team_Onboarding_Content_2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OSB Team Onboarding Content 2</shortDescription>
+        <value>Here you can invite team members to join you in OneHub. As an authorised person, you can toggle who is able to send further invites to their respective teams. You are responsible for managing the access of every person you invite.</value>
+    </labels>
+    <labels>
+        <fullName>OSB_Team_Onboarding_Content_2_DP</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OSB Team Onboarding Content 2 DP</shortDescription>
+        <value>Here you can invite your team members to join you in OneHub. You are responsible for managing the access of every person you invite.</value>
+    </labels>
+    <labels>
+        <fullName>OSB_Team_Onboarding_Content_3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OSB Team Onboarding Content 3</shortDescription>
+        <value>Here you can manage previously sent invites to remind team members that have not yet signed up to sign up. Once they have signed up, you can either Decline or Approve their access.</value>
+    </labels>
+    <labels>
+        <fullName>OSB_Team_Onboarding_Content_4</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OSB Team Onboarding Content 4</shortDescription>
+        <value>Once you approve a team members access in the Pending approval section, they will then move to your Team details. Here you can manage their access. If you deactivate a team member, they are not able to access OneHub nor any of the solutions they are signed up for.</value>
+    </labels>
+    <labels>
+        <fullName>OSB_Team_Onboarding_Content_5</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OSB Team Onboarding Content 5</shortDescription>
+        <value>Great! Now that you know what you can do, you can go ahead and start inviting team members to access OneHub. If you need anything, let us know using our Contact us section.</value>
+    </labels>
+    <labels>
+        <fullName>OSB_Team_Onboarding_Title_1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OSB Team Onboarding Title 1</shortDescription>
+        <value>Welcome to your Team Profile</value>
+    </labels>
+    <labels>
+        <fullName>OSB_Team_Onboarding_Title_2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OSB Team Onboarding Title 2</shortDescription>
+        <value>Invite team members</value>
+    </labels>
+    <labels>
+        <fullName>OSB_Team_Onboarding_Title_3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OSB Team Onboarding Title 3</shortDescription>
+        <value>Pending approvals</value>
+    </labels>
+    <labels>
+        <fullName>OSB_Team_Onboarding_Title_4</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OSB Team Onboarding Title 4</shortDescription>
+        <value>Team details</value>
+    </labels>
+    <labels>
+        <fullName>OSB_Team_Onboarding_Title_5</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OSB Team Onboarding Title 5</shortDescription>
+        <value>You are now all set</value>
+    </labels>
+    <labels>
+        <fullName>OSB_Ts_Cs_URL</fullName>
+        <categories>OSB</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OSB Ts&amp;Cs URL</shortDescription>
+        <value>servlet/servlet.ImageServer?id=0159E0000002pQ1&amp;oid=00D9E0000001yu1</value>
+    </labels>
+    <labels>
+        <fullName>OSB_Url</fullName>
+        <categories>OSB</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OSB_OneSpace_Url</shortDescription>
+        <value>op2l-digital.cs88.force.com/OneStandardBank/s/</value>
+    </labels>
+    <labels>
+        <fullName>OSB_VA_Account_Not_Listed</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Payment not listed message message</shortDescription>
+        <value>My account number is not listed above. I would like to search again</value>
+    </labels>
+    <labels>
+        <fullName>OSB_VA_BA_BalanceInfo</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Balance details message message</shortDescription>
+        <value>For account no: {0} the available balance is {1} and the book balance is {2}</value>
+    </labels>
+    <labels>
+        <fullName>OSB_VA_BA_NoAccountsFound</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No accounts found message message</shortDescription>
+        <value>I can&apos;t find any accounts for the account type that you have provided me.</value>
+    </labels>
+    <labels>
+        <fullName>OSB_VA_BA_TechnicalErrorSingle</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Http error message</shortDescription>
+        <value>Due to a technical error, I am unable to retrieve the information that you are requesting.</value>
+    </labels>
+    <labels>
+        <fullName>OSB_VA_NoAccountsFound</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No transactions found message</shortDescription>
+        <value>I can&apos;t seem to find any accounts for your inputs</value>
+    </labels>
+    <labels>
+        <fullName>OSB_VA_NoBalanceFound</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No balance info found</shortDescription>
+        <value>I can not seem to find the balance information for the selected accounts.</value>
+    </labels>
+    <labels>
+        <fullName>OSB_VA_PT_ConnectionError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OSB_VA_PT_ConnectionError</shortDescription>
+        <value>Due to a technical error, I am unable to retrieve the information that you are requesting</value>
+    </labels>
+    <labels>
+        <fullName>OSB_VA_PT_InvalidAmount</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No permission on account payment tracking message</shortDescription>
+        <value>The amount range you have provided is invalid.</value>
+    </labels>
+    <labels>
+        <fullName>OSB_VA_PT_NoPermissionOnAccount</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No permission on account payment tracking message</shortDescription>
+        <value>You currently don&apos;t have access to the selected account. Please contact your team administrator to grant you access.</value>
+    </labels>
+    <labels>
+        <fullName>OSB_VA_PT_NoTRAccountAccess</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No payment tracking access message</shortDescription>
+        <value>You currently don&apos;t have access to this account information. Please contact your team owner to grant you access.</value>
+    </labels>
+    <labels>
+        <fullName>OSB_VA_PT_NoTransactionsFound</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No transactions found message</shortDescription>
+        <value>I can&apos;t seem to find any transactions for your inputs</value>
+    </labels>
+    <labels>
+        <fullName>OSB_VA_PT_SWIFTConnectionError</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Http error message</shortDescription>
+        <value>I am unable to retrieve the detail of the transaction that you have chosen.</value>
+    </labels>
+    <labels>
+        <fullName>OSB_VA_PT_TRInvalid</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Transaction reference invalid message</shortDescription>
+        <value>The transaction reference number is invalid.</value>
+    </labels>
+    <labels>
+        <fullName>OSB_VA_PT_TechnicalErrorMultiple</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Http error message</shortDescription>
+        <value>Due to a technical error, I am unable to retrieve the transactions details.</value>
+    </labels>
+    <labels>
+        <fullName>OSB_VA_PT_TechnicalErrorSingle</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Http error message</shortDescription>
+        <value>Due to a technical error, I am unable to retrieve the detail of the transaction that you have chosen.</value>
+    </labels>
+    <labels>
+        <fullName>OSB_VA_Payment_Details</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Payment details message</shortDescription>
+        <value>Your payment {0} status is {1} arrived at {2} on {3}</value>
+    </labels>
+    <labels>
+        <fullName>OSB_VA_Payment_Details_Rejected</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Payment details message</shortDescription>
+        <value>Your payment {0} status is rejected</value>
+    </labels>
+    <labels>
+        <fullName>OSB_VA_Payment_Not_Listed</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Payment not listed message message</shortDescription>
+        <value>My transaction reference number is not listed above. I would like to search again</value>
+    </labels>
+    <labels>
+        <fullName>OSB_VA_ST_StatementDetails</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Statements details message</shortDescription>
+        <value>Your statement for account no: {0} for the period of {1} will be emailed shortly to the registered email address associated with this account.</value>
+    </labels>
+    <labels>
+        <fullName>OSB_VA_ST_TechnicalErrorSingle</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Http error message</shortDescription>
+        <value>Due to a technical error, I am unable to retrieve the statement details of the account that you have chosen.</value>
+    </labels>
+    <labels>
+        <fullName>OSB_sso</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OSB_sso</shortDescription>
+        <value>https://op2l-digital.cs88.force.com/OneStandardBank/services/auth/sso/Ping_Authentication</value>
+    </labels>
+    <labels>
+        <fullName>OSB_urlLabel</fullName>
+        <categories>OSB_urlLink</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OSB_urlLabel</shortDescription>
+        <value>&lt;span&gt;&lt;/span&gt;op2l&lt;span&gt;&lt;/span&gt;-digital.cs88.&lt;span&gt;&lt;/span&gt;force.&lt;span&gt;&lt;/span&gt;com&lt;span&gt;&lt;/span&gt;/OneStandardBank/s/sign-up?record=</value>
+    </labels>
+    <labels>
+        <fullName>OTM_CIB_Roles_Error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OTM CIB Roles Error</shortDescription>
+        <value>You cannot add a CIB user with a BCC Team role, please select a CIB team role (no BCC prefix)</value>
+    </labels>
+    <labels>
+        <fullName>OTM_CommB_Roles_Error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OTM CommB Roles Error</shortDescription>
+        <value>You cannot add a BCC user with a CIB Team role, please select a BCC role (BCC prefix)</value>
+    </labels>
+    <labels>
+        <fullName>OTM_Unique_Role_Error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OTM Unique Role Error</shortDescription>
+        <value>There is already an Opportunity Team Member with the same Team Role on the Opportunity Team. Please select an alternative Team Role to Add the Opportunity Team Member to the Opportunity Team.</value>
+    </labels>
+    <labels>
+        <fullName>ObjectPermissionMissing</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ObjectPermissionMissing</shortDescription>
+        <value>Required permissions missing on {ObjectName}</value>
+    </labels>
+    <labels>
+        <fullName>Onboarding_Attachment_name</fullName>
+        <categories>Onboarding Attachment name</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Onboarding Attachment name</shortDescription>
+        <value>New Client Onboarding Request.pdf</value>
+    </labels>
+    <labels>
+        <fullName>Onboarding_Callout_Failure</fullName>
+        <categories>ERROR_MESSAGE</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Onboarding Callout Failure</shortDescription>
+        <value>Please note that your onboarding request for the client was not successfully submitted. A support case has been created and sent to CRMHelpdesk to resolve. Do not attempt to resubmit this client unless requested by CRMHelpdesk.</value>
+    </labels>
+    <labels>
+        <fullName>Onboarding_Status_Value_Send_for_Onboarding</fullName>
+        <categories>Onboarding Status Value - Submitted for Onboarding</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Onboarding Status Value - Submitted for Onboarding</shortDescription>
+        <value>Submitted for Onboarding</value>
+    </labels>
+    <labels>
+        <fullName>Onboarding_XML_Attachment_name</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Onboarding XML Attachment name</shortDescription>
+        <value>New Client Onboarding Request Body.xml</value>
+    </labels>
+    <labels>
+        <fullName>OppTeam_Committee</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OppTeam_Committee</shortDescription>
+        <value>The following opportunity team member(s) and/or signatory(ies) could not be added as a Submission Attendee as they have already been added as a Committee Attendee:</value>
+    </labels>
+    <labels>
+        <fullName>OppTeam_noBankContact</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OppTeam_noBankContact</shortDescription>
+        <value>The following opportunity team member(s) could not be added as Submission Attendees as there are no Bank Contact existing in the system:</value>
+    </labels>
+    <labels>
+        <fullName>OppTransferScreenMessage</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OppTransferScreenMessage</shortDescription>
+        <value>Please remember that all Opportunity Team Members must be included in your initial Conflicts check. Any Public Side deal team members must be formally Wall Crossed before being added to the Opportunity Team.</value>
+    </labels>
+    <labels>
+        <fullName>Opportunity_CampaignId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Opportunity_CampaignId</shortDescription>
+        <value>Primary Campaign Source</value>
+    </labels>
+    <labels>
+        <fullName>Opportunity_Create_Type</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Opportunity Create Type</shortDescription>
+        <value>Opportunity Path</value>
+    </labels>
+    <labels>
+        <fullName>Opportunity_Expired_Hover</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Opportunity Expired Hover</shortDescription>
+        <value>Opportunity Expired: Please update the Estimated Closed Date.</value>
+    </labels>
+    <labels>
+        <fullName>Orange_Opportunity_Hover</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Orange Opportunity Hover</shortDescription>
+        <value>Have you completed the following:
+            - Transfered the Opportunity to the correct product owner
+            - Added additional Opportunity Team Members
+            - Added the Product(s) to reflect estimated Opportunity Revenue
+            - Created a NBAC (where applicable)
+            - Updated the Draw Down Date Profile on all Loan Products
+            Please note:
+            Sum of the Estimated Product Revenue on this Opportunity is zero, please update this on the Product page.</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Account_Information_Details_Component_Account_Age_Helptext</fullName>
+        <categories>PBB, PBB MVP, Account Information Details, Component, Helptext</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB Account Information Details Component Account Age Helptext</shortDescription>
+        <value>Age of the account based on the month when the account was originally opened</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Account_Information_Details_Component_Average_Credit_Turnover_L12M_Helptext</fullName>
+        <categories>PBB, PBB MVP, Account Information Details, Component, Helptext</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB Account Information Details Component Average Credit Turnover L12M Helptext</shortDescription>
+        <value>Credit turnover in the last 12 months</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Account_Information_Details_Component_Average_Credit_Turnover_L3M_Helptext</fullName>
+        <categories>PBB, PBB MVP, Account Information Details, Component, Helptext</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB Account Information Details Component Average Credit Turnover L3M Helptext</shortDescription>
+        <value>Credit turnover in the last 3 months</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Account_Information_Details_Component_Current_Balance_Helptext</fullName>
+        <categories>PBB, PBB MVP, Account Information Details, Component, Helptext</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB Account Information Details Component Current Balance Helptext</shortDescription>
+        <value>This field identifies the current balance on the specified account (either in debit or credit balance)
+            Value of all the client&apos;s facilities with the bank</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Account_Information_Details_Component_ERI_Helptext</fullName>
+        <categories>PBB, PBB MVP, Account Information Details, Component, Helptext</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB Account Information Details Component ERI Helptext</shortDescription>
+        <value>This is the risk grading of the client based on various factors such as industry, credit turnover, account conduct etc.</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Account_Information_Details_Component_ERL_Helptext</fullName>
+        <categories>PBB, PBB MVP, Account Information Details, Component, Helptext</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB Account Information Details Component ERL Helptext</shortDescription>
+        <value>This is the maximum limit the bank is willing to lend without supporting documents if the entity falls within the scope of lending</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Account_Information_Details_Component_End_of_Month_Limit_Helptext</fullName>
+        <categories>PBB, PBB MVP, Account Information Details, Component, Helptext</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB Account Information Details Component End of Month Limit Helptext</shortDescription>
+        <value>Total credit lent to the entity</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Account_Types_Component_Title</fullName>
+        <categories>PBB, PBB MVP, Account Types, Title</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB  Account Types Component Title</shortDescription>
+        <value>Products</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Account_Types_Component_Total_Limit_Helptext</fullName>
+        <categories>PBB, PBB MVP, Financial Information</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB  Account Types Component Total Limit Helptext</shortDescription>
+        <value>Total credit lent to the entity</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Client_Revenue_Component_Credit_Balance</fullName>
+        <categories>PBB, PBB MVP, Client Revenue</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB Client Revenue Component Credit Balance</shortDescription>
+        <value>Credit Balance</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Client_Revenue_Component_Credit_Balance_Helptext</fullName>
+        <categories>PBB, PBB MVP, Client Revenue</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB Client Revenue Component Credit Balance Helptext</shortDescription>
+        <value>Total saving/investment balance held</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Client_Revenue_Component_Debit_Balance</fullName>
+        <categories>PBB, PBB MVP, Client Revenue</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB Client Revenue Component Debit Balance</shortDescription>
+        <value>Debit Balance</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Client_Revenue_Component_Debit_Balance_Helptext</fullName>
+        <categories>PBB, PBB MVP, Client Revenue</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB Client Revenue Component Debit Balance Helptext</shortDescription>
+        <value>Total lending products</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Client_Revenue_Component_Impairments</fullName>
+        <categories>PBB, PBB MVP, Client Revenue</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB Client Revenue Component Impairments</shortDescription>
+        <value>Impairments</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Client_Revenue_Component_Impairments_Helptext</fullName>
+        <categories>PBB, PBB MVP, Client Revenue</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB Client Revenue Component Impairments Helptext</shortDescription>
+        <value>This depicts the decrease in book value of an asset and/or debt written off</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Client_Revenue_Component_NII</fullName>
+        <categories>PBB, PBB MVP, Client Revenue</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB Client Revenue Component NII</shortDescription>
+        <value>Net Interest Income</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Client_Revenue_Component_NII_Helptext</fullName>
+        <categories>PBB, PBB MVP, Client Revenue</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB Client Revenue Component NII Helptext</shortDescription>
+        <value>This is the difference between the interest earned through lending products vs the interest paid on investments</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Client_Revenue_Component_NIR</fullName>
+        <categories>PBB, PBB MVP, Client Revenue</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB Client Revenue Component NIR</shortDescription>
+        <value>Non Interest Revenue</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Client_Revenue_Component_NIR_Helptext</fullName>
+        <categories>PBB, PBB MVP, Client Revenue</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB Client Revenue Component NIR Helptext</shortDescription>
+        <value>This is a depiction of all the associated bank service fees that the client is charged, for transacting</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Client_Revenue_Component_OI</fullName>
+        <categories>PBB, PBB MVP, Client Revenue</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB Client Revenue Component OI</shortDescription>
+        <value>Operating Income</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Client_Revenue_Component_OI_Helptext</fullName>
+        <categories>PBB, PBB MVP, Client Revenue</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB Client Revenue Component OI Helptext</shortDescription>
+        <value>This is the resulting profit that is deduced from the total revenue less all direct and indirect costs</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Client_Revenue_Component_Title</fullName>
+        <categories>PBB, PBB MVP, Client Revenue</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB Client Revenue Component Title</shortDescription>
+        <value>Client Revenue</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Client_Revenue_Component_YTD</fullName>
+        <categories>PBB, PBB MVP, Client Revenue</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB Client Revenue Component YTD</shortDescription>
+        <value>YTD (ZAR)</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Client_Username</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SFP-10278: Used to house PBB Client Username</shortDescription>
+        <value>pbb.clients@standardbank.co.za</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Clients</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB Clients</shortDescription>
+        <value>PBB Clients</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Currency</fullName>
+        <categories>Currency, PBB</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB Currency</shortDescription>
+        <value>ZAR</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Currency_Helptext</fullName>
+        <categories>PBB, PBB MVP, Currency</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB Currency Helptext</shortDescription>
+        <value>Currency in which data is presented</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Currency_Word</fullName>
+        <categories>PBB, PBB MVP, Currency</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB Currency Word</shortDescription>
+        <value>Currency</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Financial_Information_Component_ECTO</fullName>
+        <categories>PBB, PBB MVP, Financial Information</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB Financial Information Component ECTO</shortDescription>
+        <value>ECTO</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Financial_Information_Component_ECTO_Helptext</fullName>
+        <categories>PBB, PBB MVP, Financial Information</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB Financial Information Component ECTO Helptext</shortDescription>
+        <value>Average credit value based on the credits received in the account</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Financial_Information_Component_ERL</fullName>
+        <categories>PBB, PBB MVP, Financial Information</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB Financial Information Component ERL</shortDescription>
+        <value>ERL</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Financial_Information_Component_ERL_Helptext</fullName>
+        <categories>PBB, PBB MVP, Financial Information</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB Financial Information Component ERL Helptext</shortDescription>
+        <value>This is the maximum limit the bank is willing to lend without supporting documents if the entity falls within the scope of lending</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Financial_Information_Component_Headroom</fullName>
+        <categories>PBB, PBB MVP, Financial Information</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB Financial Information Component Headroom</shortDescription>
+        <value>Headroom</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Financial_Information_Component_Headroom_Helptext</fullName>
+        <categories>PBB, PBB MVP, Financial Information</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB Financial Information Component Headroom Helptext</shortDescription>
+        <value>Maximum amount that the bank can lend to the client, based on turnover</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Financial_Information_Component_Title</fullName>
+        <categories>PBB, PBB MVP, Financial Information</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB Financial Information Component Title</shortDescription>
+        <value>Facilities Profile</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Financial_Information_Component_Total_Exposure</fullName>
+        <categories>PBB, PBB MVP, Financial Information</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB Financial Information Component Total Exposure</shortDescription>
+        <value>Total Exposure</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Financial_Information_Component_Total_Exposure_Helptext</fullName>
+        <categories>PBB, PBB MVP, Financial Information</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB Financial Information Component Total Exposure Helptext</shortDescription>
+        <value>Total value of client&apos;s facilities or credit agreements that they have with the bank</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Financial_Information_Component_Total_Limit</fullName>
+        <categories>PBB, PBB MVP, Financial Information</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB Financial Information Component Total Limit</shortDescription>
+        <value>Total Limit</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Financial_Information_Total_Limit_Helptext</fullName>
+        <categories>PBB, PBB MVP, Financial Information</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB Financial Information Total Limit Helptext</shortDescription>
+        <value>Total credit lent to the entity</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Financial_Risk_Component_Days_In_Dishonour_L6M</fullName>
+        <categories>PBB, PBB MVP, Financial Risk, Component</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB Financial Risk Component Days In Dishonour L6M</shortDescription>
+        <value>Days In Dishonour L6M</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Financial_Risk_Component_Days_In_Dishonour_L6M_Helptext</fullName>
+        <categories>PBB, PBB MVP, Financial Risk, Component</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB Financial Risk Component Days In Dishonour L6M Helptext</shortDescription>
+        <value>This is the number of days that there was an outstanding amount on the account.</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Financial_Risk_Component_Days_In_Excess_L6M</fullName>
+        <categories>PBB, PBB MVP, Financial Risk, Component</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB Financial Risk Component Days In Excess L6M</shortDescription>
+        <value>Days In Excess L6M</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Financial_Risk_Component_Days_In_Excess_L6M_Helptext</fullName>
+        <categories>PBB, PBB MVP, Financial Risk, Component</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB Financial Risk Component Days In Excess L6M Helptext</shortDescription>
+        <value>This is the number of days that the account was overdrawn.</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Financial_Risk_Component_ERI</fullName>
+        <categories>PBB, PBB MVP,  ERI, Financial Risk, Component</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB Financial Risk Component ERI</shortDescription>
+        <value>ERI</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Financial_Risk_Component_ERI_Helptext</fullName>
+        <categories>PBB, PBB MVP, Helptext ERI, Financial Risk, Component</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB Financial Risk Component ERI Helptext</shortDescription>
+        <value>This is the risk grading of the client based on various factors such as industry, credit turnover, account conduct etc.</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Financial_Risk_Component_Entity_Judgements_Helptext</fullName>
+        <categories>PBB, PBB MVP,  Entity Judgments, Financial Risk, Component, Helptext</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB Financial Risk Component Entity Judgements Helptext</shortDescription>
+        <value>This is an indication of whether there is a judgement issued against the entity</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Financial_Risk_Component_Entity_Judgments</fullName>
+        <categories>PBB, PBB MVP,  Entity Judgments, Financial Risk, Component</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB Financial Risk Component Entity Judgements</shortDescription>
+        <value>Entity Judgements</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Financial_Risk_Component_Principle_Judgments</fullName>
+        <categories>PBB, PBB MVP,  Principle Judgments, Financial Risk, Component</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB Financial Risk Component Principle Judgments</shortDescription>
+        <value>Principle Judgments</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Financial_Risk_Component_Principle_Judgments_Helptext</fullName>
+        <categories>PBB, PBB MVP,  Principle Judgments, Financial Risk, Component</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB Financial Risk Component Principle Judgments Helptext</shortDescription>
+        <value>An indication of a judgement against the entity directors</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Financial_Risk_Component_Title</fullName>
+        <categories>PBB, PBB MVP, Title, Financial Risk, Component</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Financial Risk component title (PBB MVP)</shortDescription>
+        <value>Risk Indicators</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Financial_Risk_Component_Watchlist_Flag</fullName>
+        <categories>PBB, PBB MVP,  Watchlist Flag, Financial Risk, Component</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB Financial Risk Component Watchlist Flag</shortDescription>
+        <value>Watchlist Flag</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Financial_Risk_Component_Watchlist_Flag_Helptext</fullName>
+        <categories>PBB, PBB MVP,  Entity Judgments, Watchlist Flag, Component, Helptext</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB Financial Risk Component Watchlist Flag Helptext</shortDescription>
+        <value>An indication of credit warnings that have been issued to the client</value>
+    </labels>
+    <labels>
+        <fullName>PBB_Record_Type_Id</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PBB Record Type Id</shortDescription>
+        <value>01220000000cZr1</value>
+    </labels>
+    <labels>
+        <fullName>PRMC</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PRMC</shortDescription>
+        <value>Sector / Country Risk Appetite</value>
+    </labels>
+    <labels>
+        <fullName>Populate_Draw_Down_Dates</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Populate Draw Down Dates</shortDescription>
+        <value>Populate Draw Dates</value>
+    </labels>
+    <labels>
+        <fullName>PotentialClientRTID</fullName>
+        <categories>QualifyClient button</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PotentialClientRTID</shortDescription>
+        <value>012w0000000Anva</value>
+    </labels>
+    <labels>
+        <fullName>PotentialHover</fullName>
+        <categories>OnboardingTracker</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PotentialHover</shortDescription>
+        <value>If you are not the Proposed Client Coordinator for this Client, please submit this Client for approval.
+
+            If you are the client coordinator you may proceed with “Start Onboarding”</value>
+    </labels>
+    <labels>
+        <fullName>PowerBi_Config</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PowerBi_Config</shortDescription>
+        <value>eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLW5vcnRoLWV1cm9wZS1lLXByaW1hcnktcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQvIn0%3D</value>
+    </labels>
+    <labels>
+        <fullName>Prh_Required</fullName>
+        <categories>ERROR_MESSAGE</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Prh_Required</shortDescription>
+        <value>Develop this client to create a Business Assessment.</value>
+    </labels>
+    <labels>
+        <fullName>PrimaryEventReportCustomFieldId</fullName>
+        <categories>OpportunityNewRedirect_Vf_Ext</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PrimaryEventReportCustomFieldId</shortDescription>
+        <value>CF00Nw0000008mheC</value>
+    </labels>
+    <labels>
+        <fullName>Product_Search_Message</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Product Search Message</shortDescription>
+        <value>Please type in at least three letters to search.</value>
+    </labels>
+    <labels>
+        <fullName>ProspectHover</fullName>
+        <categories>OnboardingTracker</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ProspectHover</shortDescription>
+        <value>Have you completed the following:
+            -Company Registered Address information
+
+            Remember to select the Develop Prospect button to move to the Potential status</value>
+    </labels>
+    <labels>
+        <fullName>Prospect_Record_Type_Id</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Prospect Record Type Id</shortDescription>
+        <value>012200000004aj2</value>
+    </labels>
+    <labels>
+        <fullName>Record_Type_Selection_Msg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Record Type Selection Msg</shortDescription>
+        <value>Select a record type for the new event report. To skip this page in the future, change your record type settings on your personal setup page.</value>
+    </labels>
+    <labels>
+        <fullName>Refresh</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Refresh</shortDescription>
+        <value>Refresh</value>
+    </labels>
+    <labels>
+        <fullName>Resend_Request_Consent</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Resend Request Consent</shortDescription>
+        <value>Resend</value>
+    </labels>
+    <labels>
+        <fullName>Resourcing_NotManagementMember</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>User is not management group member msg</shortDescription>
+        <value>Only members of management group are permitted to create resourcing records for other users</value>
+    </labels>
+    <labels>
+        <fullName>Resourcing_NotOppTeamMember</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>User is not opp team member msg</shortDescription>
+        <value>Selected resource is not present in the opportunity team members</value>
+    </labels>
+    <labels>
+        <fullName>Revenue_YTD</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Revenue YTD</shortDescription>
+        <value>Revenue YTD</value>
+    </labels>
+    <labels>
+        <fullName>SCHClientRole</fullName>
+        <categories>CustomClientTeamUtility</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SCHClientRole</shortDescription>
+        <value>Sector/Client Coverage Head</value>
+    </labels>
+    <labels>
+        <fullName>Salesforce_Administration</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Salesforce Administration</shortDescription>
+        <value>Salesforce Administration</value>
+    </labels>
+    <labels>
+        <fullName>Salesforce_Support</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Salesforce Support Name</shortDescription>
+        <value>Salesforce Support</value>
+    </labels>
+    <labels>
+        <fullName>Send_Request_Consent</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Send Request Consent</shortDescription>
+        <value>Send</value>
+    </labels>
+    <labels>
+        <fullName>Server_Url</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Server_Url</shortDescription>
+        <value>https://eu3.salesforce.com/</value>
+    </labels>
+    <labels>
+        <fullName>Subject_Onboarding_form</fullName>
+        <categories>Subject Onboarding form</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Subject Onboarding form</shortDescription>
+        <value>New Client Onboarding request from Salesforce.com:</value>
+    </labels>
+    <labels>
+        <fullName>Submission_already_a_Committee</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Submission_already_a_Committee</shortDescription>
+        <value>The Submission Attendee could not be added as they already exist as a Committee Attendee.</value>
+    </labels>
+    <labels>
+        <fullName>TPS_Division_Scenario</fullName>
+        <categories>Scenarios</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TPS Division Scenario</shortDescription>
+        <value>TPS</value>
+    </labels>
+    <labels>
+        <fullName>TaskDeletionErrorMsg</fullName>
+        <categories>Error Message when non admins try to delete Tasks</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TaskDeletionErrorMsg</shortDescription>
+        <value>You are unable to delete tasks. Please cancel task if no longer valid.</value>
+    </labels>
+    <labels>
+        <fullName>To_Address_Onboarding_form</fullName>
+        <categories>To Address Onboarding form</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>To Address Onboarding form</shortDescription>
+        <value>clientinformationfile@standardbank.co.za.fake</value>
+    </labels>
+    <labels>
+        <fullName>Top_Opportunity_Message</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Top Opportunity Message</shortDescription>
+        <value>Top 10 Pipeline Opportunities for</value>
+    </labels>
+    <labels>
+        <fullName>Total_CY_Pipeline</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Total CY Pipeline</shortDescription>
+        <value>Total CY Pipeline</value>
+    </labels>
+    <labels>
+        <fullName>Total_CY_Won_Opportunities</fullName>
+        <categories>LABEL</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Total CY Won Opportunities</shortDescription>
+        <value>Total CY Won Opportunities</value>
+    </labels>
+    <labels>
+        <fullName>Total_Client_Revenue_vs_Budget</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Total Client Revenue vs. Budget</shortDescription>
+        <value>Total Client Revenue vs. Budget</value>
+    </labels>
+    <labels>
+        <fullName>Total_IBC_CY_Pipeline</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Total IBC CY Pipeline</shortDescription>
+        <value>Total IBC CY Pipeline</value>
+    </labels>
+    <labels>
+        <fullName>Total_IBC_Client_Revenue_Budget</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Total IBC Client Revenue vs Budget</shortDescription>
+        <value>Total IBC Client Revenue vs Budget</value>
+    </labels>
+    <labels>
+        <fullName>Transfer_Opportunity_Ownership_1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Transfer Opportunity Ownership 1</shortDescription>
+        <value>This screen allows you to transfer an opportunity from one user to another. When you transfer ownership of an opportunity, the new user will own:</value>
+    </labels>
+    <labels>
+        <fullName>Transfer_Opportunity_Ownership_2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Transfer Opportunity Ownership 2</shortDescription>
+        <value>all notes that were recorded for this opportunity owned by</value>
+    </labels>
+    <labels>
+        <fullName>Transfer_Opportunity_Ownership_3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Transfer Opportunity Ownership 3</shortDescription>
+        <value>all activities (tasks and events) that were recorded for this opportunity owned by</value>
+    </labels>
+    <labels>
+        <fullName>Transfer_Opportunity_Ownership_4</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Transfer Opportunity Ownership 4</shortDescription>
+        <value>Note that completed activities will not be transferred. Opportunity Teams will be maintained for closed opportunities.</value>
+    </labels>
+    <labels>
+        <fullName>Transfer_Opportunity_Ownership_5</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Transfer Opportunity Ownership 5</shortDescription>
+        <value>Please remember that all Opportunity Team Members must be included in your initial Conflicts check. Any Public Side deal team members must be formally Wall Crossed before being added to the Opportunity Team.</value>
+    </labels>
+    <labels>
+        <fullName>UGP_Record_Type_Id</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>UGP Record Type Id</shortDescription>
+        <value>012200000004aix</value>
+    </labels>
+    <labels>
+        <fullName>Users_noContactSync</fullName>
+        <categories>US - 1260: Error message if users&apos; Contact Sync ID does not exist</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Users_noContactSync</shortDescription>
+        <value>The following member(s) could not be added as Committee Attendees as there are no Bank Contact existing in the system:</value>
+    </labels>
+    <labels>
+        <fullName>View_Report</fullName>
+        <categories>LABEL</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>View Report</shortDescription>
+        <value>View Report</value>
+    </labels>
+    <labels>
+        <fullName>Won_Opportunities_YTD</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Won Opportunities YTD</shortDescription>
+        <value>Won Opportunities YTD</value>
+    </labels>
+    <labels>
+        <fullName>aki_TrackMyOpportunities</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>aki_TrackMyOpportunities</shortDescription>
+        <value>https://standardbank.lightning.force.com/lightning/r/Dashboard/01Z7R0000012otIUAQ/view?queryScope=userFolders</value>
+    </labels>
+    <labels>
+        <fullName>fflib_QueryFactory_crossobject_fieldsets_not_allowed_error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error when selecting a cross-object fieldsset is not allowed and attempted.</shortDescription>
+        <value>Cross-object fields not allowed and field &quot;{0}&quot; is a cross-object field.</value>
+    </labels>
+    <labels>
+        <fullName>fflib_QueryFactory_fieldset_wrong_sobject_error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error when selecting a field set for a different sobject type.</shortDescription>
+        <value>Field set &quot;{0}&quot; is not for SObject type &quot;{1}&quot;</value>
+    </labels>
+    <labels>
+        <fullName>fflib_QueryFactory_recursive_subquery_error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Presented when attempting to nest subqueries.</shortDescription>
+        <value>Invalid call to subselectQuery.  You may not add a subselect query to a subselect query.</value>
+    </labels>
+    <labels>
+        <fullName>fflib_QueryFactory_subquery_invalid_relationship</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Presented when attempting to create a subquery from an invalid relationship.</shortDescription>
+        <value>Invalid call to subselectQuery.  Invalid relationship for table.</value>
+    </labels>
+    <labels>
+        <fullName>fflib_security_error_field_not_insertable</fullName>
+        <categories>security,error</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>fflib_security_error_field_not_insertable</shortDescription>
+        <value>You do not have permission to insert field {1} on {0}</value>
+    </labels>
+    <labels>
+        <fullName>fflib_security_error_field_not_readable</fullName>
+        <categories>security,error</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>fflib_security_error_field_not_readable</shortDescription>
+        <value>You do not have permission to read the field {1} on {0}</value>
+    </labels>
+    <labels>
+        <fullName>fflib_security_error_field_not_updateable</fullName>
+        <categories>security,error</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>fflib_security_error_field_not_updateable</shortDescription>
+        <value>You do not have permission to update the field {1} on {0}</value>
+    </labels>
+    <labels>
+        <fullName>fflib_security_error_object_not_deletable</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>fflib_security_error_object_not_deletable</shortDescription>
+        <value>You do not have permission to delete {0}</value>
+    </labels>
+    <labels>
+        <fullName>fflib_security_error_object_not_insertable</fullName>
+        <categories>security,error</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>fflib_security_error_object_not_insertable</shortDescription>
+        <value>You do not have permission to insert {0}</value>
+    </labels>
+    <labels>
+        <fullName>fflib_security_error_object_not_readable</fullName>
+        <categories>security,error</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>fflib_security_error_object_not_readable.</shortDescription>
+        <value>You do not have permission to read {0}</value>
+    </labels>
+    <labels>
+        <fullName>fflib_security_error_object_not_updateable</fullName>
+        <categories>security,error</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>fflib_security_error_object_not_updateable</shortDescription>
+        <value>You do not have permission to update {0}</value>
+    </labels>
+    <labels>
+        <fullName>fscbot_bot_data_setup_complete</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>fscbot_bot_data_setup_complete</shortDescription>
+        <value>Bot data setup completed.</value>
+    </labels>
+    <labels>
+        <fullName>fscbot_bot_permset_complete</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>fscbot_bot_permset_complete</shortDescription>
+        <value>Bot PermSet assignment completed.</value>
+    </labels>
+    <labels>
+        <fullName>fscbot_live_agent_setup_complete</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>fscbot_live_agent_setup_complete</shortDescription>
+        <value>LiveAgent setup completed.</value>
+    </labels>
+    <labels>
+        <fullName>fscbot_live_agent_setup_exist</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>fscbot_live_agent_setup_exist</shortDescription>
+        <value>Looks like you have already completed this setup.</value>
+    </labels>
+    <labels>
+        <fullName>fscbot_permset_assignnment_revoke</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>fscbot_permset_assignnment_revoke</shortDescription>
+        <value>PermSet assignment has been revoked.</value>
+    </labels>
+    <labels>
+        <fullName>ibot_active_travel_requests</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ibot_active_travel_requests</shortDescription>
+        <value>You have registered the following travel plan</value>
+    </labels>
+    <labels>
+        <fullName>ibot_case_submit_message</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ibot_case_submit_message</shortDescription>
+        <value>Your request has been submitted, and your reference number is</value>
+    </labels>
+    <labels>
+        <fullName>ibot_could_find_the_info</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ibot_could_find_the_info</shortDescription>
+        <value>I couldn&apos;t find a match with the information you provided.</value>
+    </labels>
+    <labels>
+        <fullName>ibot_exceeded_max_attempts</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ibot_exceeded_max_attempts</shortDescription>
+        <value>You have exceeded the maximum no of attempts.</value>
+    </labels>
+    <labels>
+        <fullName>ibot_field_not_editable</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ibot_field_not_editable</shortDescription>
+        <value>Field is not editable.</value>
+    </labels>
+    <labels>
+        <fullName>ibot_field_not_readable</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ibot_field_not_readable</shortDescription>
+        <value>Field is not readable.</value>
+    </labels>
+    <labels>
+        <fullName>ibot_lost_card_case_subject</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ibot_lost_card_case_subject</shortDescription>
+        <value>Lost Card ending with</value>
+    </labels>
+    <labels>
+        <fullName>ibot_obj_not_createable</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ibot_obj_not_createable</shortDescription>
+        <value>Object is not createable.</value>
+    </labels>
+    <labels>
+        <fullName>ibot_obj_not_deleteable</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ibot_obj_not_deleteable</shortDescription>
+        <value>Object is not Deleteable.</value>
+    </labels>
+    <labels>
+        <fullName>ibot_obj_not_readable</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ibot_obj_not_readable</shortDescription>
+        <value>Object is not readable.</value>
+    </labels>
+    <labels>
+        <fullName>ibot_obj_not_updateable</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ibot_obj_not_updateable</shortDescription>
+        <value>Object is not updateable.</value>
+    </labels>
+    <labels>
+        <fullName>ibot_travel_request_case_subject</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ibot_travel_request_case_subject</shortDescription>
+        <value>Travel Request for the Card ending with</value>
+    </labels>
+    <labels>
+        <fullName>ibot_verification_code_desc</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ibot_verification_code_desc</shortDescription>
+        <value>Your Verification code is :</value>
+    </labels>
+    <labels>
+        <fullName>ibot_verification_code_subject</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ibot_verification_code_subject</shortDescription>
+        <value>Verification Code</value>
+    </labels>
+    <labels>
+        <fullName>productSearchStrings</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Product two letter exceptions separated by semi-colon</shortDescription>
+        <value>FX;LC</value>
+    </labels>
+</CustomLabels>

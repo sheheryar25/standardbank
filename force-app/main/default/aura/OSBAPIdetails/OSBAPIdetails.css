@@ -1,0 +1,293 @@
+.THIS {
+    background: #f4f4f4;
+}
+
+.THIS .hidden-class{
+   visibility: hidden;
+}
+
+.THIS .apidetails {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    color: #1A1A1A;
+    padding: 116px 0;
+}
+
+.THIS .apidetails__header {
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-end;
+}
+
+.THIS .apidetails__header-version {
+    display: flex;
+    justify-content: space-between;
+}
+
+.THIS .apidetails__title {
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.THIS .apidetails__version {
+    font-size: 14px;
+    font-weight: 500;
+    align-self: center;
+    margin-left: 8px;
+}
+
+.THIS .apidetails_subscribebtn {
+    width: 224px;
+    background-color: #0033AA;
+    color: #FFFFFF;
+}
+
+.THIS .apidetails__content {
+    display: flex;
+    justify-content: center;
+}
+
+.THIS .apidetails__left h2 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25px;
+    text-transform: uppercase;
+}
+
+.THIS .apidetails__navigation {
+    position: sticky;
+    top: 156px;
+}
+
+.THIS .apidetails__method {
+    font-size: 16px;
+    font-weight: 300;
+    color: #0089FF;
+    position: relative;
+}
+
+.THIS .apidetails__child {
+    font-size: 16px;
+    font-weight: 300;
+    color: #0089FF;
+    position: relative;
+}
+
+.THIS .apidetails__child__selected {
+    font-weight: 400;
+}
+
+.THIS .apidetails__method__selected {
+    font-weight: 400;
+}
+
+.THIS .apidetails__method-container {
+    line-height: 25px;
+    margin-top: 8px;
+}
+
+.THIS .apidetails__child-container {
+    line-height: 25px;
+    margin-top: 16px;
+}
+
+.THIS .apidetails__method-lowercase {
+    text-transform: lowercase;
+}
+
+.THIS .apidetails__link {
+    color: #0089FF;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.THIS .apidetails__method__selected::before {
+    content: '';
+    position: absolute;
+    height: 24px;
+    width: 8px;
+    border-radius: 3px;
+    background-color: #00AADD;
+    left: -24px;
+}
+
+.THIS .apidetails__child__selected::before {
+    content: '';
+    position: absolute;
+    height: 24px;
+    width: 8px;
+    border-radius: 3px;
+    background-color: #00AADD;
+    left: -24px;
+}
+
+.THIS .apidetails__operation-container {
+    margin-bottom: 72px;
+}
+
+.THIS .apidetails__info h2 {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px;
+    margin-bottom: 8px;
+    width: 80%;
+}
+
+.THIS .apidetails__info h3 {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 25px;
+    margin-bottom: 5px;
+    width: 80%;
+}
+
+.THIS .apidetails__description {
+    font-size: 15px;
+    font-weight: 200;
+    line-height: 25px;
+    margin-bottom: 25px;
+}
+
+.THIS .apidetails__basic {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 25px;
+    margin-bottom: 32px;
+}
+
+.THIS .apidetails__basic--row {
+    display: flex;
+}
+
+.THIS .apidetails__basic--row:not(:last-child) {
+    border-bottom: 1px solid #ccc;
+}
+
+.THIS .apidetails__basic--cell {
+    padding: 17px 15px;
+}
+
+.THIS .apidetails__basic--cell:nth-child(1) {
+    font-weight: 400;
+    width: 20%;
+}
+
+.THIS .apidetails__basic--cell:nth-child(2) {
+    width: 80%;
+}
+
+.THIS .apidetails__parameters {
+    background: #fff;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 25px;
+    color: #1A1A1A;
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 25px;
+    margin-bottom: 32px;
+}
+
+.THIS .apidetails__parameters--row {
+    border-bottom: 1px solid #ccc;
+}
+
+.THIS .apidetails__parameters--cell:first-child {
+    white-space: nowrap;
+}
+
+.THIS .apidetails__parameters--cell {
+    padding: 17px 15px;
+}
+
+.THIS .apidetails__subtitle {
+    text-transform: uppercase;
+}
+
+.THIS .breadcrumbs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    font-size: 13px;
+    line-height: 25px;
+}
+
+.THIS .breadcrumbs a {
+    color: #0089FF;
+}
+
+.THIS .breadcrumbs i {
+    margin: 0 8px;
+}
+
+.THIS .code_snipet {
+    font-family: BentonSans;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.THIS .apidetails__bold {
+    font-weight: bold;
+}
+
+.THIS .apidetails__uppercase {
+    text-transform: uppercase;
+}
+
+.THIS .json-key     { color: #4A4A4A; }
+.THIS .json-value   { color: #4A4A4A; }
+.THIS .json-boolean { color: #3366CC; }
+.THIS .json-string  { color: #0E8A00; }
+.THIS .json-level-1 { margin-left: 16px; }
+.THIS .json-level-2 { margin-left: 32px; }
+.THIS .json-level-3 { margin-left: 48px; }
+.THIS .json-level-4 { margin-left: 60px; }
+.THIS .json-tab { margin-left: 16px; }
+
+.THIS pre {
+    font-family: BentonSans;
+    font-size: 14px;
+}
+
+@media(max-width: 767px) {
+    .THIS .apidetails__header {
+        margin-bottom: 32px;
+    }
+
+    .THIS .apidetails_subscribebtn {
+        display: none;
+    }
+}
+
+@media(max-width: 1023px) {
+    .THIS .apidetails__left {
+        display: none;
+    }
+
+    .THIS .apidetails {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .THIS .apidetails__header {
+        margin-bottom: 24px;
+    }
+}
+
+@media(min-width: 1024px) and (max-width: 1280px) {
+    .THIS .apidetails {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .THIS .apidetails__info {
+        width: calc(1000%/12);
+    }
+}

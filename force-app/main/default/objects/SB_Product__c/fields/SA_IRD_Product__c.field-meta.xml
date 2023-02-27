@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SA_IRD_Product__c</fullName>
+    <description>IRD product list used in IRD Product capture vf page. Must be maintained in conjuction with records from SA IRD Product Hierarchy object whenever a new Product is added or any amendments are made to IRD products.</description>
+    <externalId>false</externalId>
+    <label>IRD Product</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bond Forward</fullName>
+                <default>false</default>
+                <label>Bond Forward</label>
+            </value>
+            <value>
+                <fullName>Bond Option</fullName>
+                <default>false</default>
+                <label>Bond Option</label>
+            </value>
+            <value>
+                <fullName>Bond Repo</fullName>
+                <default>false</default>
+                <label>Bond Repo</label>
+            </value>
+            <value>
+                <fullName>Cancellable Swap</fullName>
+                <default>false</default>
+                <label>Cancellable Swap</label>
+            </value>
+            <value>
+                <fullName>Cap</fullName>
+                <default>false</default>
+                <label>Cap</label>
+            </value>
+            <value>
+                <fullName>Collar</fullName>
+                <default>false</default>
+                <label>Collar</label>
+            </value>
+            <value>
+                <fullName>Convertible Note</fullName>
+                <default>false</default>
+                <label>Convertible Note</label>
+            </value>
+            <value>
+                <fullName>CPI Annuity</fullName>
+                <default>false</default>
+                <label>CPI Annuity</label>
+            </value>
+            <value>
+                <fullName>CPI Swap</fullName>
+                <default>false</default>
+                <label>CPI Swap</label>
+            </value>
+            <value>
+                <fullName>Credit Default Swap</fullName>
+                <default>false</default>
+                <label>Credit Default Swap</label>
+            </value>
+            <value>
+                <fullName>Credit Linked Note</fullName>
+                <default>false</default>
+                <label>Credit Linked Note</label>
+            </value>
+            <value>
+                <fullName>Cross Currency Interest Rate Swap</fullName>
+                <default>false</default>
+                <label>Cross Currency Interest Rate Swap</label>
+            </value>
+            <value>
+                <fullName>Exotic Structured Product</fullName>
+                <default>false</default>
+                <label>Exotic Structured Product</label>
+            </value>
+            <value>
+                <fullName>Extendible Note</fullName>
+                <default>false</default>
+                <label>Extendible Note</label>
+            </value>
+            <value>
+                <fullName>Extendible Swap</fullName>
+                <default>false</default>
+                <label>Extendible Swap</label>
+            </value>
+            <value>
+                <fullName>Extinguishable Cross Currency Interest Rate Swap</fullName>
+                <default>false</default>
+                <label>Extinguishable Cross Currency Interest Rate Swap</label>
+            </value>
+            <value>
+                <fullName>Fixed Rate Note</fullName>
+                <default>false</default>
+                <label>Fixed Rate Note</label>
+            </value>
+            <value>
+                <fullName>Floating Rate Structure</fullName>
+                <default>false</default>
+                <label>Floating Rate Structure</label>
+            </value>
+            <value>
+                <fullName>Floor</fullName>
+                <default>false</default>
+                <label>Floor</label>
+            </value>
+            <value>
+                <fullName>Forward Rate Agreement (Fra)</fullName>
+                <default>false</default>
+                <label>Forward Rate Agreement (Fra)</label>
+            </value>
+            <value>
+                <fullName>Interest Rate Swap</fullName>
+                <default>false</default>
+                <label>Interest Rate Swap</label>
+            </value>
+            <value>
+                <fullName>Long Dated Annuity</fullName>
+                <default>false</default>
+                <label>Long Dated Annuity</label>
+            </value>
+            <value>
+                <fullName>Long Dated Forward</fullName>
+                <default>false</default>
+                <label>Long Dated Forward</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Other Credit Derivatives</fullName>
+                <default>false</default>
+                <label>Other Credit Derivatives</label>
+            </value>
+            <value>
+                <fullName>Prime Swap</fullName>
+                <default>false</default>
+                <label>Prime Swap</label>
+            </value>
+            <value>
+                <fullName>Range Accrual</fullName>
+                <default>false</default>
+                <label>Range Accrual</label>
+            </value>
+            <value>
+                <fullName>Replica Note</fullName>
+                <default>false</default>
+                <label>Replica Note</label>
+            </value>
+            <value>
+                <fullName>Restructured Note</fullName>
+                <default>false</default>
+                <label>Restructured Note</label>
+            </value>
+            <value>
+                <fullName>Reverse Annuity</fullName>
+                <default>false</default>
+                <label>Reverse Annuity</label>
+            </value>
+            <value>
+                <fullName>Swaption</fullName>
+                <default>false</default>
+                <label>Swaption</label>
+            </value>
+            <value>
+                <fullName>Unwind Structure</fullName>
+                <default>false</default>
+                <label>Unwind Structure</label>
+            </value>
+            <value>
+                <fullName>Variable Rate Swap</fullName>
+                <default>false</default>
+                <label>Variable Rate Swap</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

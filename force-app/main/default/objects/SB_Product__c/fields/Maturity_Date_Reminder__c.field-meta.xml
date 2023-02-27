@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Maturity_Date_Reminder__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>When a user creates a Lost Opportunity with a trading product and ticks the “Maturity Date Reminder” tick box, a task will be created immediately for the owner of the Opportunity and the due date of the task will be set to one day before the Maturity Date on the Trading Product CReinecke / Regression / 10-06-2011 / Globalising Trading Maturity Date Reminder on Lost deals</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This will create a task as a reminder one day before the Maturity Date on all Lost Opportunities</inlineHelpText>
+    <label>Maturity Date Reminder</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

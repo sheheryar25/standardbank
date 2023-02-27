@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Closed_Opportunity_Score__c</fullName>
+    <description>SGRPT-3422: This field stores the Opportunity score of an Opportunity before it is closed.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indication of Opportunity score prior to the Opportunity closing</inlineHelpText>
+    <label>Closed Opportunity Score</label>
+    <precision>9</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,32 @@
+<aura:component controller="LTN_RecordLockerController" implements="flexipage:availableForRecordHome,force:hasRecordId">
+	<aura:attribute name="recordId" type="String" /> 
+	<aura:attribute name="error" type="String" access="private" /> 
+	<aura:attribute name="record" type="SObject" access="private"/>
+	<aura:attribute name="simpleRecord" type="SObject" access="private"/>
+	<aura:attribute name="userId" type="Id" access="private"/>
+	<aura:attribute name="message" type="String" access="private"/>
+	<aura:attribute name="messageSeverity" type="String" access="private" default="warning"/>
+	<aura:attribute name="inProgress" type="Boolean" access="private" default="false"/>
+
+	<aura:handler event="c:ComponentAction" action="{!c.handleComponentAction}"/>
+
+	<aura:if isTrue="{!and(v.message!=null, v.message.length>0)}">
+		<ui:message  aura:id='outputMessage' severity="{!v.messageSeverity}" >
+			<ui:outputText value="{!v.message}"/>
+		</ui:message>
+	</aura:if>
+
+	<aura:if isTrue="{!v.inProgress}">
+		<!--<lightning:spinner size="medium" />-->
+		<div class="slds-backdrop slds-backdrop_open"></div>
+	</aura:if>
+
+	<force:recordData aura:id="forceRecord" 
+		recordId="{!v.recordId}" 
+		layoutType="FULL"
+		mode="EDIT" 
+		targetRecord="{!v.record}" 
+		targetFields="{!v.simpleRecord}" 
+		targetError="{!v.error}"
+		recordUpdated="{!c.handleRecordUpdated}" />
+</aura:component>

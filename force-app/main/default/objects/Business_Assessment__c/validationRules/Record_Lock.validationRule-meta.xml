@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Record_Lock</fullName>
+    <active>true</active>
+    <description>Checks if record is locked for editing by another user.</description>
+    <errorConditionFormula>AND(NOT(ISBLANK( LockedBy__c ) ),  LockedBy__r.Id &lt;&gt; $User.Id )</errorConditionFormula>
+    <errorMessage>NBAC is currently being updated and is not available for updating.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CIB_Service_Tier__c</fullName>
+    <description>SGPRT-1375 - This field reflects the CIB Service Tier assigned to this case and it&apos;s related Client.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Defines the assigned client service level as per the client service model.</inlineHelpText>
+    <label>CIB Service Tier</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>CIB_Service_Tier</valueSetName>
+    </valueSet>
+</CustomField>

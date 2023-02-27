@@ -1,0 +1,7 @@
+<aura:event type="APPLICATION" description="OSBNavigationEvent">
+    <aura:attribute name="pageUrl" type="String"/>
+    <aura:attribute name="isSinglePageApp" type="Boolean" default="false"/>
+    <aura:attribute name="productName" type="String"/>
+    <aura:attribute name="userRegistrationSuccess" type="Boolean"/>
+    <aura:attribute name="userLoginSuccess" type="Boolean"/>
+</aura:event>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMT_extract_date__c</fullName>
+    <description>This field identifies the date when the data was extracted from PMT (EN-927).</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field identifies the date when the data was extracted from PMT.</inlineHelpText>
+    <label>PMT Extract Date</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

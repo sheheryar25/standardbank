@@ -1,0 +1,346 @@
+.icn svg {
+  fill: #d4af37;
+  height: 22px;
+  width: 22px;
+  margin-left: 5px;
+  margin-top: 4px;
+  float: right;
+  flex-direction: row;
+}
+
+.yourSolution--tile__header {
+  height: 40px;
+}
+
+.yourSolution--tile {
+  background-color: #001648;
+  height: 227px;
+  padding: 5px;
+  width: 227px;
+}
+
+.yourSolution--tile_3rd {
+  background-color: #ffffff;
+  height: 227px;
+  width: 227px;
+  padding: 5px;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+}
+
+.uiOutputRichText > img {
+  border-radius: 50%;
+}
+
+.yourSolution--tile__app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.yourSolution--tile:not(:first-child) {
+  margin-left: 24px;
+}
+
+.yourSolution--tile .tile__link {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  text-transform: uppercase;
+}
+
+.yourSolution--tile__app__icon {
+  text-align: center;
+  width: 72px;
+  height: 72px;
+}
+
+.yourSolution--tile__app__title {
+  color: #ffffff;
+  font-family: "BentonSans";
+  font-size: 20.69px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24.83px;
+  text-align: center;
+  margin: auto;
+}
+.tmClass {
+  position: relative;
+  font-size: 40%;
+  line-height: 0;
+  vertical-align: baseline;
+  top: -1.2em;
+}
+
+.yourSolution--tile__app__title_3rd {
+  color: #032d5e;
+  font-family: "BentonSans";
+  font-size: 20.69px;
+  letter-spacing: 0;
+  line-height: 24.83px;
+  text-align: center;
+  font-weight: 300;
+  padding: 5px;
+  margin: auto;
+  padding-top: 20px;
+}
+
+.solutionShowcaseItem__link {
+  float: right;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.deleteIcon {
+  --sds-c-icon-color-foreground-default: white;
+}
+
+.deleteIcon_3rd {
+  --sds-c-icon-color-foreground-default: #032d5e;
+}
+
+.card {
+  min-height: 195px;
+}
+
+.logoSolution {
+  height: 60px;
+  width: 72px;
+  margin: 0 auto;
+}
+
+.testPadding {
+  padding-bottom: 20px;
+}
+
+.inner-tile {
+  height: 166px;
+}
+
+.container {
+  margin: auto 0;
+  min-width: 280px;
+  max-width: 320px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .tile-container {
+    margin: 0 auto;
+  }
+
+  .inner-tile {
+    height: 100px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .yourSolution--tile {
+    height: 100px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .yourSolution--tile_3rd {
+    height: 100px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .yourSolution--tile__header {
+    height: 10px;
+    min-width: 227px;
+  }
+
+  .logoSolution {
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    margin: auto;
+    padding-top: 10px;
+  }
+
+  .yourSolution--tile__app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+
+  .yourSolution--tile__app__title {
+    color: #ffffff;
+    font-family: "BentonSans";
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 20px;
+    text-align: center;
+    height: 20px;
+    width: auto;
+  }
+
+  .yourSolution--tile__app__icon {
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    padding-bottom: 45px;
+  }
+
+  .yourSolution--tile__app__title_3rd {
+    color: #032d5e;
+    font-family: "BentonSans";
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 20px;
+    text-align: center;
+    height: 20px;
+    font-weight: 300;
+    padding-top: 10px;
+  }
+
+  .solutionShowcaseItem__link {
+    float: right;
+    cursor: pointer;
+    margin-right: 5px;
+    margin-top: 5px;
+  }
+}
+
+@media only screen and (min-width: 350px) and (max-width: 480px) {
+  .tile-container {
+    margin: 0 auto;
+  }
+
+  .yourSolution--tile {
+    height: 100px;
+    width: 100%;
+  }
+
+  .yourSolution--tile_3rd {
+    height: 100px;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 768px) {
+  .yourSolution--tile {
+    width: 176px;
+    height: 176px;
+    margin: auto;
+    padding: 5px;
+  }
+
+  .yourSolution--tile_3rd {
+    width: 176px;
+    height: 176px;
+    margin: auto;
+    padding: 5px;
+  }
+
+  .yourSolution--tile__app__title {
+    width: auto;
+    color: #ffffff;
+    font-family: BentonSans;
+    letter-spacing: 0;
+    line-height: 20px;
+    text-align: center;
+    font-weight: 300;
+    padding-top: 10px;
+  }
+
+  .yourSolution--tile__app__icon {
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    padding-bottom: 45px;
+  }
+
+  .yourSolution--tile__app__title_3rd {
+    width: auto;
+    color: #032d5e;
+    font-family: BentonSans;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: 24px;
+    text-align: center;
+    font-weight: 300;
+    padding-top: 10px;
+  }
+}
+
+@media only screen and (min-device-width: 769px) and (max-device-width: 1402px) and (-webkit-min-device-pixel-ratio: 1) {
+  .yourSolution--tile {
+    width: 227px;
+    height: 227px;
+  }
+
+  .yourSolution--tile_3rd {
+    width: 227px;
+    height: 227px;
+  }
+
+  .yourSolution--tile__header {
+    height: 10px;
+  }
+
+  .logoSolution {
+    height: 46px;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 70px;
+    padding-top: 40px;
+  }
+
+  .yourSolution--tile__app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .yourSolution--tile__app__title {
+    color: #ffffff;
+    font-family: "BentonSans";
+    font-size: 20.6px;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 20px;
+    text-align: center;
+    height: 20px;
+    width: auto;
+  }
+
+  .yourSolution--tile__app__icon {
+    text-align: center;
+    width: 51.5px;
+    height: 51.5px;
+    padding-bottom: 70px;
+    padding-top: 40px;
+    margin: auto;
+  }
+
+  .yourSolution--tile__app__title_3rd {
+    color: #032d5e;
+    font-family: "BentonSans";
+    font-size: 20.6px;
+    letter-spacing: 0;
+    line-height: 20px;
+    text-align: center;
+    height: 20px;
+    font-weight: 300;
+    padding-top: 20px;
+    margin: auto;
+  }
+
+  .solutionShowcaseItem__link {
+    float: right;
+    cursor: pointer;
+    margin-right: 5px;
+    margin-top: 5px;
+  }
+}

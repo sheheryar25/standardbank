@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Image__c</fullName>
+    <description>This field is used to store the article image and display it on the dashboard</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Insert the article image that is displayed on the OneHub Insights widget.</inlineHelpText>
+    <label>Image</label>
+    <length>32768</length>
+    <type>Html</type>
+    <visibleLines>25</visibleLines>
+</CustomField>

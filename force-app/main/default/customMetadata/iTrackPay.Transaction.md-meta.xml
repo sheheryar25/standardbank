@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Transaction</label>
+    <protected>false</protected>
+    <values>
+        <field>Named_Credential__c</field>
+        <value xsi:type="xsd:string">callout:iTrackPay</value>
+    </values>
+    <values>
+        <field>Path__c</field>
+        <value xsi:type="xsd:string">/sbsa/prod/transactions/findTransactionsByReferenceF20</value>
+    </values>
+    <values>
+        <field>X_IBM_Client_Id__c</field>
+        <value xsi:type="xsd:string">e28f089bec3a37ec1f0f5095b8d5f72b</value>
+    </values>
+    <values>
+        <field>X_IBM_Client_Secret__c</field>
+        <value xsi:type="xsd:string">0ee93a9efb280ebdde205211088bbf35</value>
+    </values>
+</CustomMetadata>

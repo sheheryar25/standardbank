@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CommB_ImmP_Hierarchy_Check</fullName>
+    <active>true</active>
+    <description>This Validation checks when the Client Relationship Hierarchy level is &apos;Immediate Parent&apos; for a Commercial Banking client, then the Parent Client field should only allow clients of certain CRT Client Type (US-1271).</description>
+    <errorConditionFormula>ISPICKVAL(Primary_Relationship_Holder__c, &quot;Commercial Banking&quot;)
+&amp;&amp; CASE(RecordType.DeveloperName, &quot;Potential_CIF&quot;, 1, &quot;Potential_Client&quot;, 1, &quot;Potential_Goldtier&quot;, 1, 0) = 1
+&amp;&amp; ISPICKVAL(Client_Relationship_Hierarchy__c, &quot;Immediate Parent&quot;)
+&amp;&amp; !ISBLANK(ParentId)
+&amp;&amp; CASE(Parent.CRT_Client_Types__c,
+&quot;CRT Immediate Parent&quot;, 1,
+&quot;CRT Child&quot;, 1,
+&quot;PBB Client&quot;, 1,
+&quot;Legacy&quot;, 1,
+&quot;Prospect&quot;, 1,
+&quot;Non CRT Account&quot;, 0 /*change to 1 after data clean-up process finished*/,
+&quot;&quot;, 0 /*change to 1 after data clean-up process finished*/,
+0) = 1</errorConditionFormula>
+    <errorMessage>You are trying to create an Immediate Parent Client. Ensure that you complete the Parent Client field with an existing Group Parent Client, that has an appropriate &apos;Client Hierarchy&apos; value.</errorMessage>
+</ValidationRule>

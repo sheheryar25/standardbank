@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NBAC_CommB_Process_Left</fullName>
+    <description>This will be used to hold the transaction details on the NBAC CommB</description>
+    <displayedFields>
+        <field>Transaction_Description__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <label>NBAC CommB Process Left</label>
+</FieldSet>

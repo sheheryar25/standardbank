@@ -1,0 +1,9 @@
+<aura:component description="ContactQuickActions" implements="flexipage:availableForRecordHome,force:hasRecordId">
+    <aura:attribute name="recordId" type="Id" />
+    <div class="slds-p-bottom_medium">
+        <lightning:buttonGroup class="slds-float_right">
+            <lightning:button onclick="{!c.openSmailDialog}" label="Send Email"/>
+            <lightning:button onclick="{!c.openLogActivityDialog}" label="Log Activity"/>
+        </lightning:buttonGroup>
+    </div>
+</aura:component>

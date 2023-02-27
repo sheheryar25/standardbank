@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>49.0</apiVersion>
+    <assignments>
+        <description>Assign new ecosystem entity</description>
+        <name>Assig_Ecosystem_Entity</name>
+        <label>Assig Ecosystem Entity</label>
+        <locationX>693</locationX>
+        <locationY>3167</locationY>
+        <assignmentItems>
+            <assignToReference>newEcosystemEntity.Entity__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>newEcosystemEntity.Entity_Type__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Subsidiary</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>newEcosystemEntity.Primary_Relationship_Holder__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Primary_Relationship_Holder__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>newEcosystemEntity.Ecosystem__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Linked_Ecosystem_after.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Create_new_Ecosystem_Entity</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_data_to_an_old_ecosystem1</name>
+        <label>Assign data to an old ecosystem1</label>
+        <locationX>842</locationX>
+        <locationY>1271</locationY>
+        <assignmentItems>
+            <assignToReference>Get_Linked_Ecosystem_before.Client_Name__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Linked_Ecosystem_before.Relationship_Group_Number__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Relationship_Group_Number__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>is_the_new_group_number_linked_to_existing_ecosystem_1</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_data_to_an_old_ecosystem1_0_0</name>
+        <label>Assign data to an old ecosystem1</label>
+        <locationX>578</locationX>
+        <locationY>2183</locationY>
+        <assignmentItems>
+            <assignToReference>Get_Linked_Ecosystem_before.Client_Name__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Get_Linked_Ecosystem_before.Relationship_Group_Number__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Relationship_Group_Number__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>is_the_new_group_number_linked_to_existing_ecosystem_1</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_data_to_an_old_ecosystem_0</name>
+        <label>Assign data to an old ecosystem</label>
+        <locationX>50</locationX>
+        <locationY>2303</locationY>
+        <assignmentItems>
+            <assignToReference>Get_Linked_Ecosystem_before.Client_Name__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>get_subsidiaries_of_the_old_group_number_0.Entity__r.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>is_the_new_group_number_linked_to_existing_ecosystem_1</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>assign_entities</name>
+        <label>assign entities</label>
+        <locationX>336</locationX>
+        <locationY>1511</locationY>
+        <assignmentItems>
+            <assignToReference>allsubsidiarieswithfullyonboardedclients</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>find_banked_clients</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>find_banked_clients</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>count number of records</description>
+        <name>count</name>
+        <label>count</label>
+        <locationX>545</locationX>
+        <locationY>911</locationY>
+        <assignmentItems>
+            <assignToReference>oldEntityCount</assignToReference>
+            <operator>AssignCount</operator>
+            <value>
+                <elementReference>get_all_subsidiaries_of_the_old_group_number</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>get_default_subsidiary</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>count number of records</description>
+        <name>count_0</name>
+        <label>count</label>
+        <locationX>248</locationX>
+        <locationY>1823</locationY>
+        <assignmentItems>
+            <assignToReference>oldEntityCount</assignToReference>
+            <operator>AssignCount</operator>
+            <value>
+                <elementReference>allsubsidiarieswithfullyonboardedclients</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>existing_old_onboarded_entities_more_than_one</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>existing_old_entities_more_than_one</name>
+        <label>existing old entities more than one</label>
+        <locationX>545</locationX>
+        <locationY>1151</locationY>
+        <defaultConnector>
+            <targetReference>Assign_data_to_an_old_ecosystem1</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>is_greater_than_one</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>oldEntityCount</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>1.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>find_banked_clients</targetReference>
+            </connector>
+            <label>is greater than one</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>existing_old_onboarded_entities_more_than_one</name>
+        <label>existing old onboarded entities more than one</label>
+        <locationX>248</locationX>
+        <locationY>1943</locationY>
+        <defaultConnector>
+            <targetReference>is_the_hierarchy_removed</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>is_greater_than_one_0</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>oldEntityCount</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>1.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>delete_Ecosystem_Entity_0</targetReference>
+            </connector>
+            <label>is greater than one</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>filter_ecosystem_entities_linked_to_fully_onboarded_client</name>
+        <label>filter ecosystem entities linked to fully onboarded client</label>
+        <locationX>468</locationX>
+        <locationY>1391</locationY>
+        <defaultConnector>
+            <targetReference>find_banked_clients</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>check_entity_recordType</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>find_banked_clients.Entity__r.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Commercial_Banking_Client</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>assign_entities</targetReference>
+            </connector>
+            <label>check entity recordType</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>is_the_hierarchy_removed</name>
+        <label>is the hierarchy removed</label>
+        <locationX>446</locationX>
+        <locationY>2063</locationY>
+        <defaultConnector>
+            <targetReference>Assign_data_to_an_old_ecosystem1_0_0</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>is_group_number_and_parent_filled</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Relationship_Group_Number__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>delete_Ecosystem_Entity_0_0</targetReference>
+            </connector>
+            <label>is group number and parent filled</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>check if the  new group number  is linked to an existing ecosystem</description>
+        <name>is_the_new_group_number_linked_to_existing_ecosystem</name>
+        <label>is the new group number  linked to existing ecosystem</label>
+        <locationX>825</locationX>
+        <locationY>3047</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>is_new_group_number_Linked</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Linked_Ecosystem_after</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assig_Ecosystem_Entity</targetReference>
+            </connector>
+            <label>is new group number Linked</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>check if the  new group number  is linked to an existing ecosystem</description>
+        <name>is_the_new_group_number_linked_to_existing_ecosystem_1</name>
+        <label>is the new group number  linked to existing ecosystem 1</label>
+        <locationX>545</locationX>
+        <locationY>2615</locationY>
+        <defaultConnector>
+            <targetReference>update_old_ecosystem_0</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>is_Linked_0</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Linked_Ecosystem_after</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>oldEntityCount</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>1.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Delete_old_ecosystem</targetReference>
+            </connector>
+            <label>is Linked</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>check if the  old group number  is linked to an existing ecosystem</description>
+        <name>is_the_old_group_number_linked_to_existing_ecosystem</name>
+        <label>is the old group number  linked to existing ecosystem</label>
+        <locationX>825</locationX>
+        <locationY>671</locationY>
+        <defaultConnector>
+            <targetReference>is_the_new_group_number_linked_to_existing_ecosystem</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>is_Linked</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Linked_Ecosystem_before</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>get_all_subsidiaries_of_the_old_group_number</targetReference>
+            </connector>
+            <label>is Linked</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check if the relationship group number has changed</description>
+        <name>iSGroupNumber_Changed</name>
+        <label>iSGroupNumber Changed</label>
+        <locationX>1053</locationX>
+        <locationY>311</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Is_Changed</name>
+            <conditionLogic>1 AND (2 OR 3 OR 4)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Relationship_Group_Number__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record__Prior.Relationship_Group_Number__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$User.User_Division__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>CommBUserDivision</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$User.User_Division__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>busBUserDivision</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$User.User_Division__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>entrepreneur</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Linked_Ecosystem_before</targetReference>
+            </connector>
+            <label>Is Changed</label>
+        </rules>
+    </decisions>
+    <description>This flow will synchronize the group number from client to ecosystem and ecosystem entities</description>
+    <interviewLabel>CommB Group Number Changed {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>CommB Group Number Changed</label>
+    <loops>
+        <name>find_banked_clients</name>
+        <label>find banked clients</label>
+        <locationX>248</locationX>
+        <locationY>1271</locationY>
+        <collectionReference>get_all_subsidiaries_of_the_old_group_number</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>filter_ecosystem_entities_linked_to_fully_onboarded_client</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>count_0</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <description>Create new Ecosystem Entity</description>
+        <name>Create_new_Ecosystem_Entity</name>
+        <label>Create new Ecosystem Entity</label>
+        <locationX>693</locationX>
+        <locationY>3287</locationY>
+        <inputReference>newEcosystemEntity</inputReference>
+    </recordCreates>
+    <recordDeletes>
+        <name>delete_Ecosystem_Entity_0</name>
+        <label>delete Ecosystem Entity</label>
+        <locationX>50</locationX>
+        <locationY>2063</locationY>
+        <connector>
+            <targetReference>get_subsidiaries_of_the_old_group_number_0</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>get_subsidiaries_of_the_old_group_number_0</targetReference>
+        </faultConnector>
+        <inputReference>get_default_subsidiary</inputReference>
+    </recordDeletes>
+    <recordDeletes>
+        <name>delete_Ecosystem_Entity_0_0</name>
+        <label>delete Ecosystem Entity</label>
+        <locationX>314</locationX>
+        <locationY>2183</locationY>
+        <connector>
+            <targetReference>is_the_new_group_number_linked_to_existing_ecosystem_1</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>is_the_new_group_number_linked_to_existing_ecosystem_1</targetReference>
+        </faultConnector>
+        <inputReference>get_default_subsidiary</inputReference>
+    </recordDeletes>
+    <recordDeletes>
+        <description>This will delete the old ecosystem provided that the client that is been updated is the only client that is linked to the ecosystem and the new group number is having an existing ecosystem</description>
+        <name>Delete_old_ecosystem</name>
+        <label>Delete old ecosystem</label>
+        <locationX>413</locationX>
+        <locationY>2735</locationY>
+        <connector>
+            <targetReference>is_the_new_group_number_linked_to_existing_ecosystem</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>is_the_new_group_number_linked_to_existing_ecosystem</targetReference>
+        </faultConnector>
+        <inputReference>Get_Linked_Ecosystem_before</inputReference>
+    </recordDeletes>
+    <recordLookups>
+        <description>query all ecosystem entity</description>
+        <name>get_all_subsidiaries_of_the_old_group_number</name>
+        <label>get all subsidiaries of the old group number</label>
+        <locationX>545</locationX>
+        <locationY>791</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>count</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Entity_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Subsidiary</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Ecosystem__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Linked_Ecosystem_before.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Entity__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Ecosystem_Entity__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>get the subsidiary of the old group number(Client)</description>
+        <name>get_default_subsidiary</name>
+        <label>get default subsidiary</label>
+        <locationX>545</locationX>
+        <locationY>1031</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>existing_old_entities_more_than_one</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Entity_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Subsidiary</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Entity__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Ecosystem_Entity__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>find an ecosystem that is linked to the new group number</description>
+        <name>Get_Linked_Ecosystem_after</name>
+        <label>Get Linked Ecosystem after</label>
+        <locationX>825</locationX>
+        <locationY>551</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>is_the_old_group_number_linked_to_existing_ecosystem</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Relationship_Group_Number__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Relationship_Group_Number__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Ecosystem__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>find an ecosystem that is linked to the old group number</description>
+        <name>Get_Linked_Ecosystem_before</name>
+        <label>Get Linked Ecosystem before</label>
+        <locationX>825</locationX>
+        <locationY>431</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Linked_Ecosystem_after</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Relationship_Group_Number__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record__Prior.Relationship_Group_Number__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Ecosystem__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>query the remaining ecosystem entity</description>
+        <name>get_subsidiaries_of_the_old_group_number_0</name>
+        <label>get subsidiaries of the old group number</label>
+        <locationX>50</locationX>
+        <locationY>2183</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Assign_data_to_an_old_ecosystem_0</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Entity_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Subsidiary</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Ecosystem__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Linked_Ecosystem_before.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Entity__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Ecosystem_Entity__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <description>we going to update the old linked ecosystem with one of the remaining subsidiaries</description>
+        <name>update_old_ecosystem_0</name>
+        <label>update old ecosystem</label>
+        <locationX>677</locationX>
+        <locationY>2735</locationY>
+        <connector>
+            <targetReference>is_the_new_group_number_linked_to_existing_ecosystem</targetReference>
+        </connector>
+        <inputReference>Get_Linked_Ecosystem_before</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>927</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>iSGroupNumber_Changed</targetReference>
+        </connector>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>Primary_Relationship_Holder__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Commercial Banking</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Primary_Relationship_Holder__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Business Banking</stringValue>
+            </value>
+        </filters>
+        <object>Account</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>allsubsidiarieswithfullyonboardedclients</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Ecosystem_Entity__c</objectType>
+    </variables>
+    <variables>
+        <description>This will house the business banking user division</description>
+        <name>busBUserDivision</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <stringValue>Business Banking</stringValue>
+        </value>
+    </variables>
+    <variables>
+        <description>houses the commB user division  value</description>
+        <name>CommBUserDivision</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <stringValue>Commercial Banking</stringValue>
+        </value>
+    </variables>
+    <variables>
+        <description>This is used to identify an entrepreneur user by user division</description>
+        <name>entrepreneur</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <stringValue>Entrepreneur</stringValue>
+        </value>
+    </variables>
+    <variables>
+        <description>house new data for creating new Ecosystem Entity</description>
+        <name>newEcosystemEntity</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Ecosystem_Entity__c</objectType>
+    </variables>
+    <variables>
+        <description>house number of record</description>
+        <name>oldEntityCount</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+</Flow>

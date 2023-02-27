@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Interactions_due_this_week_AR</fullName>
+    <columns>Name</columns>
+    <columns>Account</columns>
+    <columns>Location</columns>
+    <columns>InteractionType</columns>
+    <columns>StartTime</columns>
+    <columns>EndTime</columns>
+    <filterScope>Mine</filterScope>
+    <label>My Interactions due this week (AR)</label>
+    <sharedTo>
+        <roleAndSubordinatesInternal>BCC_AR_Uganda</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

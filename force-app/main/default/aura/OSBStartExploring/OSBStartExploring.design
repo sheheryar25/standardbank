@@ -1,0 +1,7 @@
+<design:component>
+	<design:attribute name="title" />
+    <design:attribute name="linkLabel1" />
+    <design:attribute name="link1" />
+    <design:attribute name="linkLabel2" />
+    <design:attribute name="link2" />
+</design:component>

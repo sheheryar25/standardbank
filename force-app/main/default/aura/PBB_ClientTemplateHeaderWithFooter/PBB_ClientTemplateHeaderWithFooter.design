@@ -1,0 +1,22 @@
+<design:component label="Two Region Custom App Page Template">
+    <flexipage:template >
+        <!-- The default width for the "left" region is "MEDIUM". In tablets,
+        the width is "SMALL" -->
+            <flexipage:region name="header" label="Header Region" defaultWidth="MEDIUM">
+                <flexipage:formfactor type="MEDIUM" width="SMALL" />
+            </flexipage:region>
+            <flexipage:region name="contentLeft" label="Content left Region" defaultWidth="MEDIUM">
+                <flexipage:formfactor type="MEDIUM" width="SMALL" />
+            </flexipage:region>
+            <flexipage:region name="contentRight" label="Content right Region" defaultWidth="MEDIUM">
+                <flexipage:formfactor type="MEDIUM" width="SMALL" />
+            </flexipage:region>
+            <flexipage:region name="contentFooter" label="Header Region" defaultWidth="MEDIUM">
+                <flexipage:formfactor type="MEDIUM" width="SMALL" />
+            </flexipage:region>
+            <flexipage:region name="right" label="Side bar Region" defaultWidth="MEDIUM">
+                <flexipage:formfactor type="MEDIUM" width="SMALL" />
+            </flexipage:region> 
+           
+       </flexipage:template>
+</design:component>

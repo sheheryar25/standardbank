@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_change_currency_if_Products_exist</fullName>
+    <active>true</active>
+    <description>Prevent change of currency on the Opportunity if Products exist</description>
+    <errorConditionFormula>AND( No_of_Products__c &gt; 0, ISCHANGED( CurrencyIsoCode ))</errorConditionFormula>
+    <errorDisplayField>CurrencyIsoCode</errorDisplayField>
+    <errorMessage>The Opportunity currency cannot be changed if there are Products associated with the Opportunity</errorMessage>
+</ValidationRule>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Force_Owner_to_Add_Opportunity_Product__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>EMEA_SOW_StandardBank_009: Requirement 159: Navigate Owner To Create Product After Opportunity Creation</description>
+    <externalId>false</externalId>
+    <inlineHelpText>After I create an Opportunity, redirect me (the Owner) to create the first Product.</inlineHelpText>
+    <label>Force Owner to Add Opportunity Product</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

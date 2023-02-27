@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Condition_Product__c</fullName>
+    <externalId>false</externalId>
+    <label>Condition Product</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Condition_Measure__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ANA Cash Deposits (Automatic Notes Acceptor)</fullName>
+                <default>false</default>
+                <label>ANA Cash Deposits (Automatic Notes Acceptor)</label>
+            </value>
+            <value>
+                <fullName>Autosafe Cash Deposits</fullName>
+                <default>false</default>
+                <label>Autosafe Cash Deposits</label>
+            </value>
+            <value>
+                <fullName>Branch Cash Deposits</fullName>
+                <default>false</default>
+                <label>Branch Cash Deposits</label>
+            </value>
+            <value>
+                <fullName>Business Online Collections</fullName>
+                <default>false</default>
+                <label>Business Online Collections</label>
+            </value>
+            <value>
+                <fullName>Business Online Payments</fullName>
+                <default>false</default>
+                <label>Business Online Payments</label>
+            </value>
+            <value>
+                <fullName>Call Account</fullName>
+                <default>false</default>
+                <label>Call Account</label>
+            </value>
+            <value>
+                <fullName>Cash, BOL, Merchant Acquiring</fullName>
+                <default>false</default>
+                <label>Cash, BOL, Merchant Acquiring</label>
+            </value>
+            <value>
+                <fullName>Cash and BOL</fullName>
+                <default>false</default>
+                <label>Cash and BOL</label>
+            </value>
+            <value>
+                <fullName>Cash and Merchant Acquiring</fullName>
+                <default>false</default>
+                <label>Cash and Merchant Acquiring</label>
+            </value>
+            <value>
+                <fullName>Current Account</fullName>
+                <default>false</default>
+                <label>Current Account</label>
+            </value>
+            <value>
+                <fullName>Forex</fullName>
+                <default>false</default>
+                <label>Forex</label>
+            </value>
+            <value>
+                <fullName>Investment Account</fullName>
+                <default>false</default>
+                <label>Investment Account</label>
+            </value>
+            <value>
+                <fullName>Liquidity Management</fullName>
+                <default>false</default>
+                <label>Liquidity Management</label>
+            </value>
+            <value>
+                <fullName>Merchant Acquiring</fullName>
+                <default>false</default>
+                <label>Merchant Acquiring</label>
+            </value>
+            <value>
+                <fullName>Merchant Acquiring and BOL</fullName>
+                <default>false</default>
+                <label>Merchant Acquiring and BOL</label>
+            </value>
+            <value>
+                <fullName>Total Cash Deposits</fullName>
+                <default>false</default>
+                <label>Total Cash Deposits</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Full Transactional Banking</controllingFieldValue>
+            <valueName>Cash, BOL, Merchant Acquiring</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Full Transactional Banking</controllingFieldValue>
+            <valueName>Cash and BOL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Full Transactional Banking</controllingFieldValue>
+            <valueName>Cash and Merchant Acquiring</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Full Transactional Banking</controllingFieldValue>
+            <valueName>Merchant Acquiring and BOL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Minimum Average Credit Balance</controllingFieldValue>
+            <valueName>Call Account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Minimum Average Credit Balance</controllingFieldValue>
+            <valueName>Current Account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Minimum Average Credit Balance</controllingFieldValue>
+            <valueName>Investment Account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Minimum Average Credit Balance</controllingFieldValue>
+            <valueName>Liquidity Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Minimum Turnover</controllingFieldValue>
+            <valueName>ANA Cash Deposits (Automatic Notes Acceptor)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Minimum Turnover</controllingFieldValue>
+            <valueName>Autosafe Cash Deposits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Minimum Turnover</controllingFieldValue>
+            <valueName>Branch Cash Deposits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Minimum Turnover</controllingFieldValue>
+            <valueName>Business Online Collections</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Minimum Turnover</controllingFieldValue>
+            <valueName>Business Online Payments</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Minimum Turnover</controllingFieldValue>
+            <valueName>Forex</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Minimum Turnover</controllingFieldValue>
+            <valueName>Merchant Acquiring</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Minimum Turnover</controllingFieldValue>
+            <valueName>Total Cash Deposits</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

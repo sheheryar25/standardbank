@@ -1,0 +1,297 @@
+<apex:page sidebar="false" showheader="false" StandardController="Opportunity" extensions="OpportunityProgressTrackerExt">
+<apex:stylesheet value="{!URLFOR($Resource.slds_standalone, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+
+   <apex:outputPanel rendered="{!isClassic}">
+  
+   <!--Lead Stage-->
+  <apex:outputpanel rendered="{!boolLeadStage}">
+  <table cellspacing="0" cellpadding="0" style="border-spacing: 0;" align="center">
+  <tr>
+  <td align="center">  
+  <apex:image value="{!URLFOR($Resource.OpportunityTrackerProgress,'/LeadStage/1-Lead.png')}" title="{!$Label.Lead_Opportunity_Hover}" height="50"/>
+  </td>
+  <td align="center">
+  <div style="padding-top:.3px;">
+  <apex:image value="{!URLFOR($Resource.OpportunityTrackerProgress,'/LeadStage/2-Develop.png')}"  title="{!$Label.Develop_Opportunity_Hover}" height="50"/>  
+  </div>
+  </td>
+  <td align="center">  
+  <apex:image value="{!URLFOR($Resource.OpportunityTrackerProgress,'/LeadStage/3-Closed.png')}" title="{!$Label.Closed_Opportunity_Hover}"  height="50"/>
+   </td>   
+  </tr>
+  </table>
+  </apex:outputpanel>
+  
+  <!--Lead with MileStone-->
+  <apex:outputpanel rendered="{!boolLeadWithMileStone}">
+  <table cellspacing="0" cellpadding="0" style="border-spacing: 0;" align="center">
+  <tr>
+  <td align="center">
+  <!--<img src="{!URLFOR($Resource.OpportunityTrackerProgress,'/LeadCircleGreen.png')}" />-->
+  <apex:image value="{!URLFOR($Resource.OpportunityTrackerProgress,'/LeadWithMileStone/1-Lead.png')}" title="{!$Label.Lead_Opportunity_Hover}" height="50"/>
+  </td>
+  <td align="center">
+  <div style="padding-top:.3px;">
+  <apex:image value="{!URLFOR($Resource.OpportunityTrackerProgress,'/LeadWithMileStone/2-Develop.png')}" title="{!$Label.Develop_Opportunity_Hover}" height="50"/>  
+  </div>
+  </td>
+  <td align="center">
+  <div style="padding-bottom:1.5px;">
+  <apex:image value="{!URLFOR($Resource.OpportunityTrackerProgress,'/DevelopStage/3-Closed.png')}" title="{!$Label.Closed_Opportunity_Hover}"  height="50"/>
+  </div>
+   </td>   
+  </tr>
+  </table>
+  </apex:outputpanel>
+  
+  <!--Develop Stage-->
+  <apex:outputPanel rendered="{!boolDevelopStage}">
+  <table cellspacing="0" cellpadding="0" style="border-spacing: 0;" align="center">
+  <tr>
+  <td align="center">
+  <!--<img src="{!URLFOR($Resource.OpportunityTrackerProgress,'/LeadCircleGreen.png')}" />-->
+  <apex:image value="{!URLFOR($Resource.OpportunityTrackerProgress,'/DevelopStage/1-Lead.png')}"  height="50"/><!-- title="{!$Label.Lead_Opportunity_Hover}" -->
+  </td>
+  <td align="center">
+  <div style="padding-top:.3px;">
+  <apex:image value="{!URLFOR($Resource.OpportunityTrackerProgress,'/DevelopStage/2-Develop.png')}" title="{!$Label.Develop_Opportunity_Green}" height="50"/>  
+  </div>
+  </td>
+  <td align="center">
+  <!--<img src="{!URLFOR($Resource.OpportunityTrackerProgress,'/GreyDevelopCircleLeadStage.png')}" />-->
+  <apex:image value="{!URLFOR($Resource.OpportunityTrackerProgress,'/DevelopStage/3-Closed.png')}" title="{!$Label.Closed_Opportunity_Hover}" height="50"/>
+   </td>   
+  </tr>
+  </table>
+  </apex:outputpanel>
+  
+  <!--Develop with MileStone Stage-->
+  <apex:outputPanel rendered="{!boolDevelopWithMileStone}">
+  <table cellspacing="0" cellpadding="0" style="border-spacing: 0;" align="center">
+  <tr>
+  <td align="center">  
+  <div style="padding-top:2px;">
+  <apex:image value="{!URLFOR($Resource.OpportunityTrackerProgress,'/DevelopWithMileStone/1-Lead.png')}"  height="50"/> <!-- title="{!$Label.Lead_Opportunity_Hover}" -->
+  </div>
+  </td>
+  <td align="center">
+  <div style="padding-top:.3px;">
+  <apex:image value="{!URLFOR($Resource.OpportunityTrackerProgress,'/DevelopWithMileStone/2-Develop.png')}" title="{!$Label.Develop_Opportunity_Green}" height="50"/>  
+  </div>
+  </td>
+  <td align="center">  
+  <apex:image value="{!URLFOR($Resource.OpportunityTrackerProgress,'/DevelopWithMileStone/3-Closed.png')}" title="{!$Label.Closed_Opportunity_Hover}" height="50"/>
+   </td>   
+  </tr>
+  </table>
+  </apex:outputpanel>
+  
+  <!--Closed Stage-->
+  <apex:outputPanel rendered="{!boolClosedStage}">
+  <table cellspacing="0" cellpadding="0" style="border-spacing: 0;" align="center">
+  <tr>
+  <td align="center">  
+  <apex:image value="{!URLFOR($Resource.OpportunityTrackerProgress,'/ClosedStage/1-Lead.png')}"  height="50"/><!-- title="{!$Label.Lead_Opportunity_Hover}" -->
+  </td>
+  <td align="center">
+  <div style="padding-top:.3px;">
+  <apex:image value="{!URLFOR($Resource.OpportunityTrackerProgress,'/ClosedStage/2-Develop.png')}"  height="50"/>  <!-- title="{!$Label.Develop_Opportunity_Green}" -->
+  </div>
+  </td>
+  <td align="center">  
+  <apex:image value="{!URLFOR($Resource.OpportunityTrackerProgress,'/ClosedStage/3-Closed.png')}" title="{!$Label.Closed_Opportunity_Hover}" height="50"/>
+   </td>   
+  </tr>
+  </table>
+  </apex:outputpanel>
+  
+  <!--Lead Stage Expired-->
+  <apex:outputPanel rendered="{!boolLeadStageExpired}">
+  <table cellspacing="0" cellpadding="0" style="border-spacing: 0;" align="center">
+  <tr>
+  <td align="center">  
+  <apex:image value="{!URLFOR($Resource.OpportunityTrackerProgress,'/LeadStageExpired/1-Lead.png')}" title="{!$Label.Opportunity_Expired_Hover}" height="50"/>
+  </td>
+  <td align="center">
+  <div style="padding-top:.3px;">
+  <apex:image value="{!URLFOR($Resource.OpportunityTrackerProgress,'/LeadStageExpired/2-Develop.png')}" title="{!$Label.Develop_Opportunity_Hover}" height="50"/>  
+  </div>
+  </td>
+  <td align="center">  
+  <apex:image value="{!URLFOR($Resource.OpportunityTrackerProgress,'/LeadStageExpired/3-Closed.png')}" title="{!$Label.Closed_Opportunity_Hover}" height="50"/>
+   </td>   
+  </tr>
+  </table>
+  </apex:outputpanel>
+  
+  <!--Lead with MileStone Expired-->
+  <apex:outputPanel rendered="{!boolLeadWithMileStoneExpired}">
+  <table cellspacing="0" cellpadding="0" style="border-spacing: 0;" align="center">
+  <tr>
+  <td align="center">  
+  <apex:image value="{!URLFOR($Resource.OpportunityTrackerProgress,'/LeadWithMileStoneExpired/1-Lead.png')}" title="{!$Label.Opportunity_Expired_Hover}" height="50"/>
+  </td>
+  <td align="center">
+  <div style="padding-top:.3px;">
+  <apex:image value="{!URLFOR($Resource.OpportunityTrackerProgress,'/LeadWithMileStoneExpired/2-Develop.png')}" title="{!$Label.Develop_Opportunity_Hover}" height="50"/>  
+  </div>
+  </td>
+  <td align="center">  
+  <apex:image value="{!URLFOR($Resource.OpportunityTrackerProgress,'/LeadWithMileStoneExpired/3-Closed.png')}" title="{!$Label.Closed_Opportunity_Hover}" height="50"/>
+   </td>   
+  </tr>
+  </table>
+  </apex:outputpanel>
+  
+  <!--Develop Stage Expired-->
+  <apex:outputPanel rendered="{!boolDevelopStageExpired}">
+  <table cellspacing="0" cellpadding="0" style="border-spacing: 0;" align="center">
+  <tr>
+  <td align="center">  
+  <apex:image value="{!URLFOR($Resource.OpportunityTrackerProgress,'/DevelopStageExpired/1-Lead.png')}"  height="50"/><!-- title="{!$Label.Lead_Opportunity_Hover}" -->
+  </td>
+  <td align="center">
+  <div style="padding-top:.3px;">
+  <apex:image value="{!URLFOR($Resource.OpportunityTrackerProgress,'/DevelopStageExpired/2-Develop.png')}" title="{!$Label.Opportunity_Expired_Hover}" height="50"/>  
+  </div>
+  </td>
+  <td align="center">  
+  <apex:image value="{!URLFOR($Resource.OpportunityTrackerProgress,'/DevelopStageExpired/3-Closed.png')}" title="{!$Label.Closed_Opportunity_Hover}" height="50"/>
+   </td>   
+  </tr>
+  </table>
+  </apex:outputpanel>
+  
+  <!--Develop with MileStone Expired-->
+  <apex:outputPanel rendered="{!boolDevelopWithMileStoneExpired}">
+  <table cellspacing="0" cellpadding="0" style="border-spacing: 0;" align="center">
+  <tr>
+  <td align="center">  
+  <apex:image value="{!URLFOR($Resource.OpportunityTrackerProgress,'/DevelopWithMileStoneExpired/1-Lead.png')}"  height="50"/><!-- title="{!$Label.Lead_Opportunity_Hover}" -->
+  </td>
+  <td align="center">
+  <div style="padding-top:.3px;">
+  <apex:image value="{!URLFOR($Resource.OpportunityTrackerProgress,'/DevelopWithMileStoneExpired/2-Develop.png')}" title="{!$Label.Opportunity_Expired_Hover}" height="50"/>  
+  </div>
+  </td>
+  <td align="center">  
+  <apex:image value="{!URLFOR($Resource.OpportunityTrackerProgress,'/DevelopWithMileStoneExpired/3-Closed.png')}" title="{!$Label.Closed_Opportunity_Hover}" height="50"/>
+   </td>   
+  </tr>
+  </table>
+  </apex:outputpanel>
+  
+  <!--Orange Opportunity-->
+  <apex:outputPanel rendered="{!boolOrangeOpp}">
+  <table cellspacing="0" cellpadding="0" style="border-spacing: 0;" align="center">
+  <tr>
+  <td align="center">  
+  <apex:image value="{!URLFOR($Resource.OpportunityTrackerProgress,'/OpportunityOrange/1-Lead.png')}"  height="50"/><!-- title="{!$Label.Lead_Opportunity_Hover}" -->
+  </td>
+  <td align="center">
+  <div style="padding-top:.3px;">
+  <apex:image value="{!URLFOR($Resource.OpportunityTrackerProgress,'/OpportunityOrange/2-Develop.png')}" title="{!$Label.Orange_Opportunity_Hover}" height="50"/>  
+  </div>
+  </td>
+  <td align="center">  
+  <apex:image value="{!URLFOR($Resource.OpportunityTrackerProgress,'/OpportunityOrange/3-Closed.png')}" title="{!$Label.Closed_Opportunity_Hover}" height="50"/>
+   </td>   
+  </tr>
+  </table>
+  </apex:outputpanel>
+  </apex:outputPanel>
+  <apex:outputPanel styleClass="slds" rendered="{!isLightning}">
+        <style>
+            .slds .slds-tabs--path__stage {
+                top: 60%;
+            }
+            .slds-tabs--path__item.slds-is-warning {
+                background-color: gold;
+            }
+        
+            .slds-tabs--path__item+.slds-is-complete:before,.slds-tabs--path__item+.slds-is-warning:before {
+                background-color: #4bca81;
+            }
+            .slds-tabs--path .slds-is-warning:hover {
+                background-color: goldenrod;
+            }
+        
+            .slds-tabs--path__item:hover+.slds-is-complete:before, .slds-tabs--path__item:hover+.slds-is-warning:before {
+                background-color: #04844b;
+            }
+        
+            .slds-tabs--path .slds-is-warning + .slds-is-incomplete::before {
+                background-color: gold;
+            }
+        
+            .slds-tabs--path .slds-is-warning:hover+.slds-is-incomplete:before {
+                background-color: goldenrod;
+            }
+        
+            .slds-tabs--path .slds-is-warning .slds-tabs--path__link {
+                color: #fff;
+            }
+            .slds .slds-tabs--path__item:hover + .slds-is-lost:before {
+              background-color: #04844b; 
+            }
+          .slds .slds-tabs--path__item + .slds-is-lost:before {
+              background-color: #4bca81;
+            }
+        </style>
+         <div class="slds-grid">
+            <div class="slds-tabs--path" role="application">
+                <ul class="slds-tabs--path__nav" role="tablist">
+                    <li class="{!'slds-tabs--path__item slds-is-'+ naviLead}"
+                        role="presentation">
+                        <a class="slds-tabs--path__link" id="tabs-path-1"
+                           aria-controls="content-path-1"
+                           aria-selected="false" tabindex="-1" role="tab" href="javascript:void(0);"
+                           aria-live="assertive">
+                            <span class="slds-tabs--path__stage">
+                                <svg aria-hidden="true" class="slds-icon slds-icon--x-small">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/resource/sldsICONs/utility-sprite/svg/symbols.svg#check"></use>
+                                </svg>
+                                <span class="slds-assistive-text">Stage Complete</span>
+                            </span>
+                            <span class="slds-tabs--path__title">Lead</span>
+                        </a>
+                    </li>
+                    <li class="{!'slds-tabs--path__item slds-is-'+ naviDevelop}"
+                        role="presentation">
+                        <a class="slds-tabs--path__link" id="tabs-path-1"
+                           aria-controls="content-path-1"
+                           aria-selected="false" tabindex="-1" role="tab" href="javascript:void(0);"
+                           aria-live="assertive"
+                           title="{!$Label.Develop_Opportunity_Green}">
+                            <span class="slds-tabs--path__stage">
+                                <svg aria-hidden="true" class="slds-icon slds-icon--x-small">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/resource/sldsICONs/utility-sprite/svg/symbols.svg#check"></use>
+                                </svg>
+                                <span class="slds-assistive-text">Stage Complete</span>
+                            </span>
+                            <span class="slds-tabs--path__title">Develop</span>
+                        </a>
+                    </li>
+                    <li class="{!'slds-tabs--path__item slds-is-'+ naviClosed}"
+                        role="presentation">
+                        <a class="slds-tabs--path__link" id="tabs-path-1"
+                           aria-controls="content-path-1"
+                           aria-selected="false" tabindex="-1" role="tab" href="javascript:void(0);"
+                           aria-live="assertive"
+                           title="{!$Label.Closed_Opportunity_Hover}">
+                            <span class="slds-tabs--path__stage">
+                                <svg aria-hidden="true" class="slds-icon slds-icon--x-small">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/resource/sldsICONs/utility-sprite/svg/symbols.svg#check"></use>
+                                </svg>
+                                <span class="slds-assistive-text">Stage Complete</span>
+                            </span>
+                            <span class="slds-tabs--path__title">Closed</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+  </apex:outputpanel>
+  
+</apex:page>

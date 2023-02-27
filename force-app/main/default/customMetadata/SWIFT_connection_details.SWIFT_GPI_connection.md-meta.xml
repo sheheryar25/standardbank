@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>SWIFT GPI connection</label>
+    <protected>true</protected>
+    <values>
+        <field>Application_Name__c</field>
+        <value xsi:type="xsd:string">PaymentTracker</value>
+    </values>
+    <values>
+        <field>Host_SWIFT__c</field>
+        <value xsi:type="xsd:string">https://pswiftmgw1v.standardbank.co.za</value>
+    </values>
+    <values>
+        <field>JWT_Header__c</field>
+        <value xsi:type="xsd:string">{&quot;alg&quot;:&quot;HS256&quot;,&quot;typ&quot;:&quot;JWT&quot;}</value>
+    </values>
+    <values>
+        <field>Named_Credential__c</field>
+        <value xsi:type="xsd:string">callout:SWIFT</value>
+    </values>
+    <values>
+        <field>Path__c</field>
+        <value xsi:type="xsd:string">/swift/mgw/swift-apitracker/v5/payments/:uetr/transactions</value>
+    </values>
+    <values>
+        <field>Profile_Id_Tracker__c</field>
+        <value xsi:type="xsd:string">gpiTracker-P1</value>
+    </values>
+    <values>
+        <field>Shared_Secret__c</field>
+        <value xsi:type="xsd:string">wsf0r+4qDZNv\]DN:/+k63;Y&lt;H+R(x:?</value>
+    </values>
+</CustomMetadata>

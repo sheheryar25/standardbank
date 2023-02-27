@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Expiry_Date__c</fullName>
+    <description>This field represents the Expiry Date of an insight i.e when an insight becomes invalid.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The date this insight expires.</inlineHelpText>
+    <label>Expiry Date</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

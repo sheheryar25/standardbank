@@ -1,0 +1,2 @@
+<aura:event type="APPLICATION" description="CI_NewsLoaded">
+</aura:event>
